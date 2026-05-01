@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Konihaus — Bald verfügbar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -198,7 +200,10 @@ border: 1px solid var(–amber);
 border-radius: 0 7px 7px 0;
 padding: 13px 22px;
 cursor: pointer; letter-spacing: .03em;
-white-space: nowrap; -webkit-appearance: none;
+white-space: nowrap;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 transition: background .2s;
 }
 .signup-btn:hover { background: var(–amber-warm); }
@@ -237,7 +242,7 @@ main { padding: 28px 24px 36px; }
 .cd-label { font-size: 9px; margin-top: 6px; }
 .signup-row { flex-direction: column; max-width: 100%; gap: 8px; }
 .signup-input { border-right: 1px solid rgba(247,244,237,.2); border-radius: 7px; width: 100%; }
-.signup-btn { border-radius: 7px; width: 100%; text-align: center; padding: 14px; }
+.signup-btn { border-radius: 7px; width: 100%; text-align: center; padding: 14px; -webkit-appearance: none; appearance: none; }
 .bottom { flex-direction: column; align-items: flex-start; gap: 20px; }
 .progress-wrap { align-items: flex-start; }
 .progress-track { width: 120px; }
@@ -283,12 +288,14 @@ main { padding: 22px 18px 28px; }
 <main>
 
   <div class="logo">
-    <svg width="148" height="32" viewBox="0 0 220 48" fill="none">
-      <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
-      <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
-      <circle cx="24" cy="5" r="2.5" fill="#e8c06a"/>
-      <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="400" fill="rgba(247,244,237,0.9)" letter-spacing="-0.4">Konihaus</text>
-    </svg>
+    <a href="/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
+      <svg width="44" height="36" viewBox="0 0 44 36" fill="none">
+        <path d="M22 2 L40 14 L40 34 L4 34 L4 14 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
+        <rect x="15" y="24" width="14" height="10" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
+        <circle cx="22" cy="2" r="2.5" fill="#e8c06a"/>
+      </svg>
+      <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:400;color:rgba(247,244,237,0.9);letter-spacing:-0.3px;line-height:1;">Konihaus</span>
+    </a>
   </div>
 
   <div class="center">
