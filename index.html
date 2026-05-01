@@ -1,1016 +1,392 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0VZ3EBY1JT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0VZ3EBY1JT');
-</script>
+<html lang="de" style="background:#2a4a35;">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konihaus — Ihr smartes Zuhause, persönlich betreut</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Konihaus — Bald verfügbar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+background: #2a4a35 !important;
+background-color: #2a4a35 !important;
+min-height: 100%;
+}
+
+body {
+font-family: ‘Outfit’, system-ui, sans-serif;
+background: #2a4a35 !important;
+background-color: #2a4a35 !important;
+color: #f7f4ed;
+min-height: 100vh;
+min-height: 100dvh;
+display: flex;
+flex-direction: column;
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+}
+
+/* Full-screen green floor — catches anything that leaks through */
+#bg {
+position: fixed;
+inset: 0;
+background: #2a4a35;
+z-index: -1;
+}
+
 :root {
-  --forest:      #2a4a35;
-  --forest-mid:  #3d6b4f;
-  --forest-deep: #1e3628;
-  --forest-tint: #e8f0eb;
-  --amber:       #c47c2b;
-  --amber-warm:  #e8c06a;
-  --amber-tint:  #faebd5;
-  --stone:       #8a7f6e;
-  --parchment:   #f7f4ed;
-  --cream:       #ede9df;
-  --warm-mid:    #d6cfc0;
-  --ink:         #1a1916;
-  --ink-2:       #3a3830;
-  --ink-3:       #6a6860;
-  --ink-4:       #9a9890;
-  --rule:        rgba(26,25,22,0.10);
-  --rule-inv:    rgba(247,244,237,0.10);
-  --serif:       'Cormorant Garamond', Georgia, serif;
-  --sans:        'Outfit', system-ui, sans-serif;
-  --ease:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: var(--sans); background: var(--parchment); color: var(--ink); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-a { color: inherit; text-decoration: none; }
-button { font-family: var(--sans); cursor: pointer; border: none; background: none; }
-
-.container { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
-
-@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; } .d5 { transition-delay: .5s; }
-
-/* NAV */
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 22px 0; transition: background .4s, padding .4s, box-shadow .4s; }
-.nav.scrolled { background: var(--forest-deep); padding: 14px 0; box-shadow: 0 1px 0 rgba(255,255,255,.05); }
-.nav__inner { display: flex; align-items: center; justify-content: space-between; }
-.nav__links { display: flex; gap: 36px; list-style: none; }
-.nav__links a { font-size: 13px; color: rgba(247,244,237,.6); letter-spacing: .02em; transition: color .2s; position: relative; }
-.nav__links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 100%; height: 1px; background: var(--amber-warm); transition: right .25s var(--ease); }
-.nav__links a:hover { color: var(--parchment); }
-.nav__links a:hover::after { right: 0; }
-.nav__cta { font-size: 12px; font-weight: 500; color: var(--ink); background: var(--amber); padding: 10px 22px; border-radius: 5px; transition: background .2s, transform .2s; }
-.nav__cta:hover { background: var(--amber-warm); transform: translateY(-1px); }
-
-/* HERO */
-.hero { background: var(--forest); min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 65% 40%, rgba(61,107,79,.45) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 10% 80%, rgba(30,54,40,.6) 0%, transparent 60%); pointer-events: none; }
-.hero__deco { position: absolute; right: -60px; top: 50%; transform: translateY(-52%); width: 560px; height: 560px; opacity: .05; pointer-events: none; }
-.hero__content { position: relative; z-index: 2; padding: 140px 0 72px; }
-.hero__eye { font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: rgba(232,192,106,.65); margin-bottom: 24px; animation: fadeUp .9s var(--ease) both; }
-.hero__h1 { font-family: var(--serif); font-size: clamp(56px, 7.5vw, 100px); font-weight: 300; line-height: 1.02; letter-spacing: -.03em; color: var(--parchment); margin-bottom: 28px; animation: fadeUp .9s var(--ease) .12s both; }
-.hero__h1 em { font-style: italic; color: var(--amber-warm); }
-.hero__sub { font-size: 17px; font-weight: 300; color: rgba(247,244,237,.52); max-width: 480px; line-height: 1.72; margin-bottom: 44px; animation: fadeUp .9s var(--ease) .22s both; }
-.hero__actions { display: flex; gap: 16px; animation: fadeUp .9s var(--ease) .32s both; }
-.btn { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; padding: 14px 28px; border-radius: 6px; letter-spacing: .03em; transition: all .2s var(--ease); cursor: pointer; }
-.btn-primary { background: var(--amber); color: var(--ink); }
-.btn-primary:hover { background: var(--amber-warm); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(196,124,43,.3); }
-.btn-ghost { background: rgba(247,244,237,.08); color: var(--parchment); border: 1px solid rgba(247,244,237,.2); }
-.btn-ghost:hover { background: rgba(247,244,237,.14); transform: translateY(-2px); }
-.hero__bar { position: relative; z-index: 2; display: flex; align-items: center; gap: 14px; padding: 28px 0; border-top: 1px solid rgba(247,244,237,.07); animation: fadeIn 1.2s var(--ease) .8s both; }
-.hero__bar-line { width: 40px; height: 1px; background: var(--amber-warm); opacity: .45; }
-.hero__bar-text { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,244,237,.3); }
-
-/* TRUST */
-.trust { background: var(--forest-deep); padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
-.trust__inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
-.trust__item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(247,244,237,.42); }
-.trust__dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(247,244,237,.18); }
-
-/* SECTION SHARED */
-.sec-eye { font-size: 10px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; }
-.sec-h { font-family: var(--serif); font-weight: 300; letter-spacing: -.02em; line-height: 1.12; }
-.sec-h em { font-style: italic; }
-.sec-center { text-align: center; margin-bottom: 60px; }
-.sec-center .sec-eye { color: var(--stone); margin-bottom: 10px; }
-.sec-center .sec-h { font-size: clamp(32px, 3vw, 48px); color: var(--ink); margin-bottom: 14px; }
-.sec-center .sec-h em { color: var(--forest-mid); }
-.sec-center p { font-size: 15px; font-weight: 300; color: var(--ink-3); max-width: 500px; margin: 0 auto; line-height: 1.72; }
-
-/* INTRO */
-.intro { padding: 112px 0; background: var(--parchment); }
-.intro__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; }
-.intro__eye { color: var(--amber); margin-bottom: 14px; }
-.intro__h { font-family: var(--serif); font-size: clamp(36px, 3.5vw, 52px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 22px; color: var(--ink); }
-.intro__h em { font-style: italic; color: var(--forest-mid); }
-.intro__p { font-size: 15px; font-weight: 300; color: var(--ink-3); line-height: 1.78; margin-bottom: 16px; }
-.intro__link { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 500; color: var(--forest); margin-top: 16px; transition: gap .2s; }
-.intro__link:hover { gap: 16px; }
-.cards-stack { position: relative; height: 360px; }
-.fcard { position: absolute; background: var(--cream); border-radius: 14px; border: 1px solid var(--warm-mid); padding: 22px 24px; box-shadow: 0 8px 32px rgba(26,25,22,.08); }
-.fcard-1 { width: 250px; top: 0; left: 10px; transform: rotate(-2deg); }
-.fcard-2 { width: 270px; top: 80px; right: 0; transform: rotate(1.5deg); z-index: 1; box-shadow: 0 12px 40px rgba(26,25,22,.10); }
-.fcard-3 { width: 230px; bottom: 0; left: 30px; transform: rotate(-1deg); }
-.fcard__icon { width: 34px; height: 34px; background: var(--forest-tint); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 17px; }
-.fcard__t { font-family: var(--serif); font-size: 16px; font-weight: 400; margin-bottom: 4px; }
-.fcard__b { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
-
-/* PACKAGES */
-.packages { padding: 112px 0; background: var(--cream); }
-.pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
-.pkg { background: var(--parchment); border-radius: 16px; border: 1px solid var(--warm-mid); overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s; }
-.pkg:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(26,25,22,.09); }
-.pkg-featured { background: var(--forest); border-color: var(--forest); transform: scale(1.03); }
-.pkg-featured:hover { transform: scale(1.03) translateY(-6px); box-shadow: 0 24px 64px rgba(42,74,53,.3); }
-.pkg__top { padding: 26px 26px 18px; border-bottom: 1px solid var(--rule); }
-.pkg-featured .pkg__top { border-color: var(--rule-inv); }
-.pkg__badge { display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; }
-.badge-d { background: var(--forest-tint); color: var(--forest); }
-.badge-f { background: var(--amber); color: var(--ink); }
-.pkg__name { font-family: var(--serif); font-size: 21px; font-weight: 400; margin-bottom: 4px; color: var(--ink); }
-.pkg-featured .pkg__name { color: var(--parchment); }
-.pkg__tag { font-size: 12px; color: var(--ink-3); }
-.pkg-featured .pkg__tag { color: rgba(247,244,237,.5); }
-.pkg__pr { display: flex; align-items: baseline; gap: 3px; margin-top: 14px; }
-.pkg__cur { font-size: 16px; color: var(--ink-3); align-self: flex-start; padding-top: 5px; }
-.pkg-featured .pkg__cur { color: rgba(232,192,106,.6); }
-.pkg__num { font-family: var(--serif); font-size: 40px; font-weight: 300; letter-spacing: -.03em; color: var(--ink); line-height: 1; }
-.pkg-featured .pkg__num { color: var(--amber-warm); }
-.pkg__mo { font-size: 12px; color: var(--ink-3); }
-.pkg-featured .pkg__mo { color: rgba(247,244,237,.4); }
-.pkg__body { padding: 22px 26px 26px; }
-.pkg__list { list-style: none; margin-bottom: 24px; }
-.pkg__list li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--ink-2); padding: 6px 0; border-bottom: 1px solid var(--rule); line-height: 1.45; }
-.pkg-featured .pkg__list li { color: rgba(247,244,237,.72); border-color: var(--rule-inv); }
-.pkg__list li:last-child { border-bottom: none; }
-.chk { width: 15px; height: 15px; border-radius: 50%; background: var(--forest-tint); color: var(--forest); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 8px; }
-.pkg-featured .chk { background: rgba(232,192,106,.2); color: var(--amber-warm); }
-.pkg__btn { width: 100%; padding: 13px; border-radius: 7px; font-size: 13px; font-weight: 500; text-align: center; transition: all .2s var(--ease); letter-spacing: .03em; }
-.btn-pkg-d { background: var(--cream); color: var(--forest); border: 1.5px solid var(--forest); }
-.btn-pkg-d:hover { background: var(--forest); color: var(--parchment); }
-.btn-pkg-f { background: var(--amber); color: var(--ink); }
-.btn-pkg-f:hover { background: var(--amber-warm); transform: translateY(-1px); }
-.pkg__note { font-size: 11px; color: var(--ink-4); text-align: center; margin-top: 10px; }
-.pkg-featured .pkg__note { color: rgba(247,244,237,.28); }
-
-/* PROCESS */
-.process { padding: 112px 0; background: var(--parchment); }
-.process__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 96px; }
-.proc-eye { color: var(--amber); margin-bottom: 14px; }
-.proc-h { font-family: var(--serif); font-size: clamp(30px, 2.8vw, 44px); font-weight: 300; line-height: 1.1; letter-spacing: -.02em; margin-bottom: 20px; }
-.proc-h em { font-style: italic; color: var(--forest-mid); }
-.proc-p { font-size: 14px; font-weight: 300; color: var(--ink-3); line-height: 1.75; }
-.steps { display: flex; flex-direction: column; }
-.step { display: grid; grid-template-columns: 52px 1fr; gap: 22px; padding: 28px 0; border-bottom: 1px solid var(--rule); }
-.step:last-child { border-bottom: none; }
-.step__nc { display: flex; flex-direction: column; align-items: center; }
-.step__n { width: 44px; height: 44px; border-radius: 50%; background: var(--forest-tint); color: var(--forest); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 19px; font-weight: 400; flex-shrink: 0; }
-.step__ln { width: 1px; flex: 1; background: var(--warm-mid); margin-top: 8px; }
-.step:last-child .step__ln { display: none; }
-.step__c { padding-top: 8px; }
-.step__t { font-family: var(--serif); font-size: 21px; font-weight: 400; margin-bottom: 7px; color: var(--ink); }
-.step__b { font-size: 13px; font-weight: 300; color: var(--ink-3); line-height: 1.7; }
-.step__tags { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
-.step__tag { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 20px; background: var(--forest-tint); color: var(--forest); }
-
-/* WHY */
-.why { background: var(--forest); padding: 112px 0; position: relative; overflow: hidden; }
-.why::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(61,107,79,.4) 0%, transparent 70%); pointer-events: none; }
-.why__head { text-align: center; margin-bottom: 64px; position: relative; z-index: 1; }
-.why__eye { font-size: 10px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: rgba(232,192,106,.55); margin-bottom: 12px; }
-.why__h { font-family: var(--serif); font-size: clamp(32px, 3vw, 48px); font-weight: 300; color: var(--parchment); letter-spacing: -.02em; }
-.why__h em { font-style: italic; color: var(--amber-warm); }
-.why__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; position: relative; z-index: 1; background: rgba(247,244,237,.05); border-radius: 16px; overflow: hidden; }
-.why__item { background: rgba(42,74,53,.5); padding: 34px 30px; transition: background .3s; }
-.why__item:hover { background: rgba(61,107,79,.5); }
-.why__icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(196,124,43,.14); display: flex; align-items: center; justify-content: center; font-size: 21px; margin-bottom: 18px; }
-.why__t { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--parchment); margin-bottom: 9px; }
-.why__b { font-size: 13px; font-weight: 300; color: rgba(247,244,237,.52); line-height: 1.7; }
-
-/* DEVICES */
-.devices { padding: 112px 0; background: var(--cream); }
-.devices__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.dev-h { font-family: var(--serif); font-size: clamp(30px, 2.8vw, 44px); font-weight: 300; letter-spacing: -.02em; margin-bottom: 18px; }
-.dev-h em { font-style: italic; color: var(--forest-mid); }
-.dev-p { font-size: 14px; font-weight: 300; color: var(--ink-3); line-height: 1.75; margin-bottom: 24px; }
-.dev-tags { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.dev-tag { display: flex; align-items: center; gap: 8px; background: var(--parchment); border: 1px solid var(--warm-mid); border-radius: 7px; padding: 9px 12px; font-size: 12px; color: var(--ink-2); transition: all .2s; }
-.dev-tag:hover { background: var(--forest-tint); border-color: var(--forest-mid); color: var(--forest); }
-.dev-tag__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest-mid); flex-shrink: 0; }
-.hub-box { background: var(--forest); border-radius: 18px; padding: 32px; position: relative; overflow: hidden; }
-.hub-box::before { content: ''; position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; border-radius: 50%; border: 1px solid rgba(255,255,255,.06); }
-.hub-lbl { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,244,237,.38); margin-bottom: 16px; }
-.hub-name { font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--parchment); margin-bottom: 4px; }
-.hub-sub { font-size: 12px; color: rgba(247,244,237,.4); margin-bottom: 22px; }
-.hub-rows { display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; }
-.hub-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid rgba(247,244,237,.06); font-size: 13px; }
-.hub-row:last-child { border-bottom: none; }
-.hub-row .hl { color: rgba(247,244,237,.42); }
-.hub-row .hv { color: rgba(247,244,237,.78); font-weight: 500; }
-.hub-note { font-size: 11px; color: rgba(232,192,106,.5); background: rgba(196,124,43,.1); padding: 10px 14px; border-radius: 8px; line-height: 1.55; }
-
-/* ABOUT */
-.about { padding: 112px 0; background: var(--parchment); }
-.about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; }
-.about__frame { position: relative; }
-.about__pic { width: 100%; aspect-ratio: 3/4; background: var(--forest); border-radius: 18px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
-.about__pic::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(30,54,40,.8)); }
-.about__init { font-family: var(--serif); font-size: 96px; font-weight: 300; color: rgba(247,244,237,.1); letter-spacing: -.05em; user-select: none; }
-.about__tag { position: absolute; bottom: 24px; left: 24px; z-index: 1; background: rgba(42,74,53,.7); backdrop-filter: blur(8px); border: 1px solid rgba(247,244,237,.1); border-radius: 10px; padding: 12px 16px; }
-.about__tag .aname { font-family: var(--serif); font-size: 17px; font-weight: 400; color: var(--parchment); margin-bottom: 2px; }
-.about__tag .arole { font-size: 11px; color: rgba(247,244,237,.42); }
-.about__badge { position: absolute; top: -18px; right: -18px; background: var(--amber); color: var(--ink); border-radius: 50%; width: 84px; height: 84px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 8px 24px rgba(196,124,43,.3); }
-.about__badge .bnum { font-family: var(--serif); font-size: 24px; font-weight: 400; line-height: 1; }
-.about__badge .blbl { font-size: 10px; font-weight: 500; line-height: 1.3; }
-.about-eye { color: var(--amber); margin-bottom: 12px; }
-.about-h { font-family: var(--serif); font-size: clamp(30px, 2.8vw, 44px); font-weight: 300; letter-spacing: -.02em; margin-bottom: 20px; }
-.about-h em { font-style: italic; color: var(--forest-mid); }
-.about-p { font-size: 14px; font-weight: 300; color: var(--ink-3); line-height: 1.8; margin-bottom: 14px; }
-.about-q { border-left: 3px solid var(--amber); padding-left: 18px; margin: 24px 0; font-family: var(--serif); font-size: 18px; font-weight: 300; font-style: italic; color: var(--ink-2); line-height: 1.55; }
-.about-chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 20px; }
-.about-chip { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; background: var(--forest-tint); color: var(--forest); }
-
-/* TESTIMONIALS */
-.testi { padding: 112px 0; background: var(--cream); }
-.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 52px; }
-.tcard { background: var(--parchment); border-radius: 14px; border: 1px solid var(--warm-mid); padding: 26px; transition: transform .3s var(--ease), box-shadow .3s; }
-.tcard:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(26,25,22,.07); }
-.tcard__stars { color: var(--amber); margin-bottom: 14px; font-size: 13px; letter-spacing: 2px; }
-.tcard__q { font-family: var(--serif); font-size: 16px; font-weight: 300; font-style: italic; color: var(--ink-2); line-height: 1.6; margin-bottom: 18px; }
-.tcard__author { display: flex; align-items: center; gap: 11px; padding-top: 14px; border-top: 1px solid var(--rule); }
-.tcard__av { width: 34px; height: 34px; border-radius: 50%; background: var(--forest-tint); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 14px; color: var(--forest); flex-shrink: 0; }
-.tcard__name { font-size: 13px; font-weight: 500; color: var(--ink-2); }
-.tcard__meta { font-size: 11px; color: var(--ink-4); }
-
-/* CTA SECTION */
-.cta-sec { background: var(--forest); padding: 96px 0; text-align: center; position: relative; overflow: hidden; }
-.cta-sec::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(30,54,40,.8) 0%, transparent 70%); }
-.cta-sec > .container { position: relative; z-index: 1; }
-.cta-eye { font-size: 10px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: rgba(232,192,106,.55); margin-bottom: 14px; }
-.cta-h { font-family: var(--serif); font-size: clamp(36px, 4vw, 60px); font-weight: 300; color: var(--parchment); letter-spacing: -.03em; line-height: 1.08; margin-bottom: 18px; }
-.cta-h em { font-style: italic; color: var(--amber-warm); }
-.cta-sub { font-size: 16px; font-weight: 300; color: rgba(247,244,237,.48); max-width: 440px; margin: 0 auto 40px; line-height: 1.7; }
-.cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
-.cta-note { font-size: 12px; color: rgba(247,244,237,.27); margin-top: 20px; letter-spacing: .04em; }
-
-/* CONTACT */
-.contact { padding: 112px 0; background: var(--parchment); }
-.contact__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start; }
-.con-h { font-family: var(--serif); font-size: clamp(30px, 2.8vw, 44px); font-weight: 300; letter-spacing: -.02em; margin-bottom: 18px; }
-.con-h em { font-style: italic; color: var(--forest-mid); }
-.con-p { font-size: 14px; font-weight: 300; color: var(--ink-3); line-height: 1.75; margin-bottom: 28px; }
-.con-details { display: flex; flex-direction: column; gap: 14px; }
-.con-detail { display: flex; align-items: center; gap: 13px; font-size: 14px; color: var(--ink-2); }
-.con-icon { width: 38px; height: 38px; border-radius: 9px; background: var(--forest-tint); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
-.cform { display: flex; flex-direction: column; gap: 14px; }
-.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.fg { display: flex; flex-direction: column; gap: 5px; }
-.fg label { font-size: 11px; font-weight: 500; color: var(--ink-3); letter-spacing: .05em; text-transform: uppercase; }
-.fg input, .fg select, .fg textarea { font-family: var(--sans); font-size: 14px; font-weight: 300; color: var(--ink); background: var(--cream); border: 1.5px solid var(--warm-mid); border-radius: 7px; padding: 12px 15px; transition: border-color .2s, background .2s; resize: none; appearance: none; }
-.fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--forest-mid); background: var(--parchment); }
-.fg input::placeholder, .fg textarea::placeholder { color: var(--ink-4); }
-.fsub { background: var(--forest); color: var(--parchment); padding: 15px; border-radius: 7px; font-size: 13px; font-weight: 500; letter-spacing: .04em; cursor: pointer; border: none; font-family: var(--sans); transition: background .2s, transform .2s; width: 100%; }
-.fsub:hover { background: var(--forest-mid); transform: translateY(-2px); }
-
-/* FOOTER */
-.footer { background: var(--forest-deep); padding: 60px 0 28px; }
-.footer__top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(247,244,237,.06); margin-bottom: 28px; }
-.footer__tagline { font-size: 13px; font-weight: 300; color: rgba(247,244,237,.38); line-height: 1.65; margin-top: 14px; max-width: 230px; }
-.fcol-title { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,244,237,.32); margin-bottom: 14px; }
-.flinks { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.flinks a { font-size: 13px; color: rgba(247,244,237,.48); transition: color .2s; }
-.flinks a:hover { color: var(--parchment); }
-.footer__bottom { display: flex; align-items: center; justify-content: space-between; }
-.footer__copy { font-size: 12px; color: rgba(247,244,237,.23); }
-.flegal { display: flex; gap: 20px; }
-.flegal a { font-size: 12px; color: rgba(247,244,237,.23); transition: color .2s; }
-.flegal a:hover { color: rgba(247,244,237,.6); }
-.fch { font-size: 11px; color: rgba(247,244,237,.2); }
-
-/* ─────────────────────────────────────────
-   HAMBURGER MENU
-───────────────────────────────────────── */
-.nav__hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  padding: 4px;
-  background: none;
-  border: none;
-}
-.nav__hamburger span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: rgba(247,244,237,.75);
-  border-radius: 2px;
-  transition: transform .3s var(--ease), opacity .3s;
-  transform-origin: center;
-}
-.nav__hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.nav__hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-.nav__hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-/* Mobile drawer */
-.nav__drawer {
-  display: none;
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: var(--forest-deep);
-  z-index: 99;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .3s var(--ease);
-}
-.nav__drawer.open {
-  opacity: 1;
-  pointer-events: all;
-}
-.nav__drawer ul {
-  list-style: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-}
-.nav__drawer ul li a {
-  display: block;
-  font-family: var(--serif);
-  font-size: 32px;
-  font-weight: 300;
-  color: rgba(247,244,237,.75);
-  padding: 16px 24px;
-  letter-spacing: -.01em;
-  transition: color .2s;
-  border-bottom: 1px solid rgba(247,244,237,.06);
-}
-.nav__drawer ul li a:hover { color: var(--parchment); }
-.nav__drawer .drawer-cta {
-  margin-top: 32px;
-  background: var(--amber);
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 500;
-  padding: 15px 40px;
-  border-radius: 6px;
-  letter-spacing: .03em;
+–amber:      #c47c2b;
+–amber-warm: #e8c06a;
+–forest-mid: #3d6b4f;
+–parchment:  #f7f4ed;
+–ink:        #1a1916;
+–serif: ‘Cormorant Garamond’, Georgia, serif;
+–ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ─────────────────────────────────────────
-   TABLET  ≤ 900px
-───────────────────────────────────────── */
-@media (max-width: 900px) {
-  .container { padding: 0 32px; }
-
-  .nav__links { display: none; }
-  .nav__cta { display: none; }
-  .nav__hamburger { display: flex; }
-  .nav__drawer { display: flex; }
-
-  .intro__grid { grid-template-columns: 1fr; gap: 56px; }
-  .cards-stack { height: 320px; }
-  .fcard-1 { width: 220px; }
-  .fcard-2 { width: 240px; }
-  .fcard-3 { width: 210px; }
-
-  .pkg-grid { grid-template-columns: 1fr; gap: 14px; max-width: 480px; margin: 0 auto; }
-  .pkg-featured { transform: none; }
-  .pkg-featured:hover { transform: translateY(-6px); }
-
-  .process__grid { grid-template-columns: 1fr; gap: 48px; }
-
-  .why__grid { grid-template-columns: 1fr 1fr; }
-
-  .devices__grid { grid-template-columns: 1fr; gap: 48px; }
-
-  .about__grid { grid-template-columns: 1fr; gap: 48px; }
-  .about__frame { max-width: 340px; }
-  .about__pic { aspect-ratio: 4/3; }
-
-  .testi-grid { grid-template-columns: 1fr 1fr; }
-
-  .contact__grid { grid-template-columns: 1fr; gap: 48px; }
-
-  .footer__top { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .footer__bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .fch { display: none; }
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(20px); }
+to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes progressGrow {
+from { width: 0; }
+to   { width: 68%; }
+}
+@keyframes bounce {
+0%  { transform: translateY(0); }
+40% { transform: translateY(-5px); }
+100%{ transform: translateY(0); }
 }
 
-/* ─────────────────────────────────────────
-   MOBILE  ≤ 600px
-───────────────────────────────────────── */
+.house-deco {
+position: fixed;
+bottom: -60px; right: -60px;
+width: 420px; height: 420px;
+opacity: .06;
+pointer-events: none;
+z-index: 0;
+}
+
+.lang-toggle {
+position: fixed;
+top: 36px; right: 48px;
+display: flex; gap: 2px;
+z-index: 20;
+animation: fadeUp .6s var(–ease) 1s both;
+}
+.lang-btn {
+font-family: ‘Outfit’, sans-serif;
+font-size: 11px; font-weight: 500;
+letter-spacing: .08em;
+padding: 5px 10px;
+border-radius: 4px; border: none; background: none;
+color: rgba(247,244,237,.35);
+cursor: pointer;
+transition: color .2s, background .2s;
+}
+.lang-btn.active {
+background: rgba(247,244,237,.12);
+color: rgba(247,244,237,.8);
+}
+
+main {
+position: relative;
+z-index: 1;
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding: 40px 56px 48px;
+min-height: 100vh;
+min-height: 100dvh;
+}
+
+.logo { animation: fadeUp .7s var(–ease) .1s both; }
+
+.center {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 48px 0;
+}
+
+.eyebrow {
+font-size: 11px; font-weight: 500;
+letter-spacing: .18em; text-transform: uppercase;
+color: rgba(232,192,106,.75);
+margin-bottom: 24px;
+animation: fadeUp .7s var(–ease) .2s both;
+}
+
+.headline {
+font-family: var(–serif);
+font-size: clamp(56px, 8vw, 96px);
+font-weight: 300;
+line-height: 1.02; letter-spacing: -.03em;
+color: #f7f4ed;
+margin-bottom: 24px;
+animation: fadeUp .7s var(–ease) .32s both;
+}
+.headline em { font-style: italic; color: var(–amber-warm); }
+
+.subline {
+font-size: 16px; font-weight: 300;
+color: rgba(247,244,237,.6);
+line-height: 1.72; max-width: 460px;
+margin-bottom: 48px;
+animation: fadeUp .7s var(–ease) .44s both;
+}
+
+.countdown {
+display: flex;
+margin-bottom: 48px;
+animation: fadeUp .7s var(–ease) .56s both;
+}
+.cd-unit {
+display: flex; flex-direction: column; align-items: center;
+padding-right: 28px; margin-right: 28px;
+border-right: 1px solid rgba(247,244,237,.14);
+}
+.cd-unit:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+.cd-num {
+font-family: var(–serif);
+font-size: clamp(44px, 6vw, 72px);
+font-weight: 300; line-height: 1;
+color: #f7f4ed;
+letter-spacing: -.04em;
+min-width: 2ch; text-align: center;
+}
+.cd-num.bounce { animation: bounce .2s var(–ease); }
+.cd-label {
+font-size: 10px; font-weight: 500;
+letter-spacing: .14em; text-transform: uppercase;
+color: rgba(247,244,237,.38);
+margin-top: 8px;
+}
+
+.signup { animation: fadeUp .7s var(–ease) .68s both; }
+.signup-label { font-size: 12px; color: rgba(247,244,237,.48); margin-bottom: 10px; }
+.signup-row { display: flex; max-width: 440px; }
+.signup-input {
+flex: 1;
+font-family: ‘Outfit’, sans-serif;
+font-size: 14px; font-weight: 300;
+color: #f7f4ed;
+background: rgba(247,244,237,.1);
+border: 1px solid rgba(247,244,237,.2);
+border-right: none;
+border-radius: 7px 0 0 7px;
+padding: 13px 16px;
+outline: none;
+-webkit-appearance: none;
+transition: background .2s, border-color .2s;
+}
+.signup-input::placeholder { color: rgba(247,244,237,.28); }
+.signup-input:focus {
+background: rgba(247,244,237,.15);
+border-color: rgba(247,244,237,.35);
+}
+.signup-btn {
+font-family: ‘Outfit’, sans-serif;
+font-size: 13px; font-weight: 500;
+color: var(–ink);
+background: var(–amber);
+border: 1px solid var(–amber);
+border-radius: 0 7px 7px 0;
+padding: 13px 22px;
+cursor: pointer; letter-spacing: .03em;
+white-space: nowrap; -webkit-appearance: none;
+transition: background .2s;
+}
+.signup-btn:hover { background: var(–amber-warm); }
+.signup-success {
+display: none; align-items: center; gap: 8px;
+font-size: 13px; color: rgba(247,244,237,.7);
+margin-top: 10px;
+}
+.signup-success.show { display: flex; }
+.success-dot { width: 7px; height: 7px; border-radius: 50%; background: var(–amber-warm); flex-shrink: 0; }
+.signup-note { font-size: 11px; color: rgba(247,244,237,.25); margin-top: 8px; }
+
+.bottom {
+display: flex; align-items: flex-end; justify-content: space-between;
+animation: fadeUp .7s var(–ease) .9s both;
+}
+.bottom-contact { font-size: 13px; font-weight: 300; color: rgba(247,244,237,.42); }
+.bottom-contact a { color: rgba(232,192,106,.72); text-decoration: none; transition: color .2s; }
+.bottom-contact a:hover { color: var(–amber-warm); }
+.bottom-copy { font-size: 11px; color: rgba(247,244,237,.22); margin-top: 4px; }
+.progress-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.progress-label { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,244,237,.3); }
+.progress-track { width: 160px; height: 2px; background: rgba(247,244,237,.1); border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(–forest-mid), var(–amber-warm)); border-radius: 2px; animation: progressGrow 1.6s var(–ease) 1.2s both; }
+
+/* MOBILE */
 @media (max-width: 600px) {
-  .container { padding: 0 20px; }
-
-  /* Hero */
-  .hero__content { padding: 120px 0 56px; }
-  .hero__h1 { font-size: clamp(44px, 13vw, 64px); }
-  .hero__sub { font-size: 15px; max-width: 100%; }
-  .hero__actions { flex-direction: column; gap: 10px; }
-  .hero__actions .btn { width: 100%; justify-content: center; }
-  .hero__deco { display: none; }
-
-  /* Trust */
-  .trust__inner { flex-direction: column; gap: 10px; align-items: flex-start; padding: 0 4px; }
-  .trust__dot { display: none; }
-
-  /* Section spacing */
-  .intro,
-  .packages,
-  .process,
-  .why,
-  .devices,
-  .about,
-  .testi,
-  .contact { padding: 72px 0; }
-  .cta-sec { padding: 72px 0; }
-
-  /* Intro */
-  .intro__grid { gap: 40px; }
-  .cards-stack {
-    position: relative;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .fcard { position: static; width: 100% !important; transform: none !important; box-shadow: 0 4px 16px rgba(26,25,22,.07); }
-
-  /* Packages */
-  .pkg-grid { max-width: 100%; }
-  .packages .sec-center { margin-bottom: 40px; }
-
-  /* Process */
-  .process__grid { gap: 36px; }
-  .step { grid-template-columns: 44px 1fr; gap: 16px; }
-
-  /* Why */
-  .why__grid { grid-template-columns: 1fr; gap: 1px; }
-  .why__item { padding: 24px 20px; }
-  .why__head { margin-bottom: 40px; }
-
-  /* Devices */
-  .dev-tags { grid-template-columns: 1fr 1fr; }
-
-  /* About */
-  .about__frame { max-width: 100%; }
-  .about__pic { aspect-ratio: 3/2; }
-  .about__badge { top: -12px; right: -8px; width: 72px; height: 72px; }
-  .about__badge .bnum { font-size: 20px; }
-
-  /* Testimonials */
-  .testi-grid { grid-template-columns: 1fr; }
-
-  /* CTA */
-  .cta-btns { flex-direction: column; align-items: center; }
-  .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
-
-  /* Contact form */
-  .frow { grid-template-columns: 1fr; }
-
-  /* Footer */
-  .footer__top { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
-  .footer__tagline { max-width: 100%; }
-  .footer__bottom { gap: 8px; }
-  .flegal { justify-content: center; }
+.lang-toggle { top: 28px; right: 22px; }
+main { padding: 28px 24px 36px; }
+.headline { font-size: clamp(48px, 14vw, 72px); }
+.subline { font-size: 15px; margin-bottom: 36px; }
+.center { padding: 32px 0; }
+.countdown { margin-bottom: 36px; }
+.cd-unit { padding-right: 18px; margin-right: 18px; }
+.cd-num { font-size: clamp(36px, 10vw, 52px); }
+.cd-label { font-size: 9px; margin-top: 6px; }
+.signup-row { flex-direction: column; max-width: 100%; gap: 8px; }
+.signup-input { border-right: 1px solid rgba(247,244,237,.2); border-radius: 7px; width: 100%; }
+.signup-btn { border-radius: 7px; width: 100%; text-align: center; padding: 14px; }
+.bottom { flex-direction: column; align-items: flex-start; gap: 20px; }
+.progress-wrap { align-items: flex-start; }
+.progress-track { width: 120px; }
+.house-deco { width: 220px; height: 220px; bottom: -30px; right: -30px; }
 }
 
-/* ─────────────────────────────────────────
-   SMALL MOBILE  ≤ 380px
-───────────────────────────────────────── */
 @media (max-width: 380px) {
-  .container { padding: 0 16px; }
-  .hero__h1 { font-size: 40px; }
-  .dev-tags { grid-template-columns: 1fr; }
-  .about-chips { gap: 6px; }
-  .about-chip { font-size: 11px; padding: 4px 10px; }
+main { padding: 22px 18px 28px; }
+.lang-toggle { top: 22px; right: 18px; }
+.cd-unit { padding-right: 13px; margin-right: 13px; }
+.cd-num { font-size: 30px; }
+.headline { font-size: 42px; }
 }
 </style>
+
 </head>
-<body>
+<body style="background:#2a4a35 !important; background-color:#2a4a35 !important;" bgcolor="#2a4a35">
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="container">
-    <div class="nav__inner">
-      <a href="#" aria-label="Konihaus">
-        <svg width="148" height="32" viewBox="0 0 220 48" fill="none">
-          <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
-          <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
-          <circle cx="24" cy="5" r="2.5" fill="#e8c06a"/>
-          <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="400" fill="#f7f4ed" letter-spacing="-0.4">Konihaus</text>
-        </svg>
-      </a>
-      <ul class="nav__links">
-        <li><a href="#packages">Pakete</a></li>
-        <li><a href="#process">Ablauf</a></li>
-        <li><a href="#about">Über Koni</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-      <a href="#contact" class="btn nav__cta">Kostenlose Beratung</a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
+<!-- Nuclear background floor - always green no matter what -->
 
-<!-- MOBILE DRAWER -->
-<div class="nav__drawer" id="drawer">
-  <ul>
-    <li><a href="#packages" class="drawer-link">Pakete</a></li>
-    <li><a href="#process" class="drawer-link">Ablauf</a></li>
-    <li><a href="#about" class="drawer-link">Über Koni</a></li>
-    <li><a href="#contact" class="drawer-link">Kontakt</a></li>
-  </ul>
-  <a href="#contact" class="drawer-cta drawer-link">Kostenlose Beratung →</a>
+<div id="bg"></div>
+
+<!-- House deco -->
+
+<div class="house-deco" aria-hidden="true">
+  <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200 40 L360 160 L360 360 L40 360 L40 160 Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="160" y="260" width="80" height="100" rx="4" stroke="white" stroke-width="1.5"/>
+    <rect x="80" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
+    <rect x="260" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
+    <circle cx="200" cy="40" r="12" stroke="white" stroke-width="1.5"/>
+    <line x1="200" y1="160" x2="200" y2="360" stroke="white" stroke-width="1" stroke-dasharray="4 6" opacity=".4"/>
+  </svg>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero__deco" aria-hidden="true">
-    <svg viewBox="0 0 400 400" fill="none">
-      <path d="M200 40 L360 160 L360 360 L40 360 L40 160 Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-      <rect x="160" y="260" width="80" height="100" rx="4" stroke="white" stroke-width="1.5"/>
-      <rect x="80" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
-      <rect x="260" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
-      <circle cx="200" cy="40" r="12" stroke="white" stroke-width="1.5"/>
-      <line x1="200" y1="160" x2="200" y2="360" stroke="white" stroke-width="1" stroke-dasharray="4 6" opacity=".4"/>
+<!-- Language toggle -->
+
+<div class="lang-toggle">
+  <button class="lang-btn active" data-lang="de">DE</button>
+  <button class="lang-btn" data-lang="en">EN</button>
+</div>
+
+<main>
+
+  <div class="logo">
+    <svg width="148" height="32" viewBox="0 0 220 48" fill="none">
+      <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
+      <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
+      <circle cx="24" cy="5" r="2.5" fill="#e8c06a"/>
+      <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="400" fill="rgba(247,244,237,0.9)" letter-spacing="-0.4">Konihaus</text>
     </svg>
   </div>
-  <div class="container">
-    <div class="hero__content">
-      <p class="hero__eye">Smart Home · Zürich · Schweiz</p>
-      <h1 class="hero__h1">Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
-      <p class="hero__sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Anbieterbindung. Für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn-primary">Kostenlose Beratung →</a>
-        <a href="#packages" class="btn btn-ghost">Pakete ansehen</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="hero__bar">
-      <div class="hero__bar-line"></div>
-      <span class="hero__bar-text">Mehr erfahren</span>
-    </div>
-  </div>
-</section>
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="container">
-    <div class="trust__inner">
-      <div class="trust__item">✓ Keine Cloud-Pflicht</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Plattformunabhängig</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Persönlich betreut</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Swiss Made</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Keine Eingriffe ins Mauerwerk</div>
-    </div>
-  </div>
+  <div class="center">
+    <p class="eyebrow" id="eyebrow">Smart Home · Zürich · Schweiz</p>
+    <h1 class="headline" id="headline">Wir kommen<br><em>bald.</em></h1>
+    <p class="subline" id="subline">Konihaus — persönlich betreutes Smart Home in der Schweiz. Plattformunabhängig, lokal, ohne Cloud-Zwang.</p>
+
+```
+<div class="countdown">
+  <div class="cd-unit"><div class="cd-num" id="cd-days">00</div><div class="cd-label" id="lbl-days">Tage</div></div>
+  <div class="cd-unit"><div class="cd-num" id="cd-hours">00</div><div class="cd-label" id="lbl-hours">Stunden</div></div>
+  <div class="cd-unit"><div class="cd-num" id="cd-mins">00</div><div class="cd-label" id="lbl-mins">Minuten</div></div>
+  <div class="cd-unit"><div class="cd-num" id="cd-secs">00</div><div class="cd-label" id="lbl-secs">Sekunden</div></div>
 </div>
 
-<!-- INTRO -->
-<section class="intro" id="intro">
-  <div class="container">
-    <div class="intro__grid">
-      <div>
-        <p class="sec-eye intro__eye reveal">Was ist Konihaus?</p>
-        <h2 class="intro__h reveal d1">Smarthome ohne<br><em>Kompromisse.</em></h2>
-        <p class="intro__p reveal d2">Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem: Google, Amazon oder Apple. Konihaus macht das anders.</p>
-        <p class="intro__p reveal d2">Ich installiere und betreue Ihr Smart Home auf Basis von Home Assistant — offen, lokal und kompatibel mit fast jedem Gerät. Ihre Daten bleiben bei Ihnen, der Support bleibt bei mir.</p>
-        <a href="#packages" class="intro__link reveal d3">Pakete ansehen <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="reveal d2">
-        <div class="cards-stack">
-          <div class="fcard fcard-1"><div class="fcard__icon">🔒</div><div class="fcard__t">Privatsphäre zuerst</div><div class="fcard__b">Alle Daten bleiben lokal in Ihrem Zuhause.</div></div>
-          <div class="fcard fcard-2"><div class="fcard__icon">🔧</div><div class="fcard__t">Voll betreut</div><div class="fcard__b">Ich installiere alles und halte es aus der Ferne am Laufen.</div></div>
-          <div class="fcard fcard-3"><div class="fcard__icon">🔗</div><div class="fcard__t">Keine Bindung</div><div class="fcard__b">Wechseln Sie Geräte ohne das System neu aufzubauen.</div></div>
-        </div>
-      </div>
-    </div>
+<div class="signup">
+  <p class="signup-label" id="signup-label">Informiert werden wenn wir starten:</p>
+  <div class="signup-row">
+    <input class="signup-input" type="email" id="email-input" placeholder="ihre@email.ch" autocomplete="email">
+    <button class="signup-btn" id="signup-btn">Benachrichtigen</button>
   </div>
-</section>
+  <div class="signup-success" id="signup-success"><div class="success-dot"></div><span id="success-msg">Danke — wir melden uns bei Launch!</span></div>
+  <p class="signup-note" id="signup-note">Kein Spam. Nur eine Nachricht wenn wir live gehen.</p>
+</div>
+```
 
-<!-- PACKAGES -->
-<section class="packages" id="packages">
-  <div class="container">
-    <div class="sec-center">
-      <p class="sec-eye reveal">Preise & Pakete</p>
-      <h2 class="sec-h reveal d1">Das richtige Paket<br><em>für Ihr Zuhause.</em></h2>
-      <p class="reveal d2">Alle Pakete beinhalten Installation, Einrichtung und laufende Fernbetreuung. Keine versteckten Kosten.</p>
-    </div>
-    <div class="pkg-grid">
-      <!-- Essential -->
-      <div class="pkg reveal d1">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-d">Essential</span>
-          <div class="pkg__name">Safe at Home</div>
-          <div class="pkg__tag">Sicherheit und Grundfunktionen</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">49</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Home Assistant Hub inkl.</li>
-            <li><span class="chk">✓</span>2× Bewegungsmelder</li>
-            <li><span class="chk">✓</span>Rauch- & CO-Detektor</li>
-            <li><span class="chk">✓</span>2× Wassermelder</li>
-            <li><span class="chk">✓</span>Smarter Thermostat / TRV</li>
-            <li><span class="chk">✓</span>Haustür-Sensor</li>
-            <li><span class="chk">✓</span>Smart Plug (Herd-Abschaltung)</li>
-            <li><span class="chk">✓</span>Monatlicher Familienbericht</li>
-            <li><span class="chk">✓</span>E-Mail Support / 48h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 280–340</p>
-        </div>
-      </div>
-      <!-- Featured -->
-      <div class="pkg pkg-featured reveal d2">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-f">Empfohlen</span>
-          <div class="pkg__name">Peace of Mind</div>
-          <div class="pkg__tag">Vollständige Überwachung & Kontrolle</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">89</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Alles aus Essential</li>
-            <li><span class="chk">✓</span>4× Bewegungsmelder</li>
-            <li><span class="chk">✓</span>Video-Türklingel</li>
-            <li><span class="chk">✓</span>Nacht-Licht Automation</li>
-            <li><span class="chk">✓</span>Notfall-Knopf (tragbar)</li>
-            <li><span class="chk">✓</span>Inaktivitäts-Monitoring</li>
-            <li><span class="chk">✓</span>Voller Jahresbericht</li>
-            <li><span class="chk">✓</span>Telefon-Support / 24h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-f">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 480–580</p>
-        </div>
-      </div>
-      <!-- Premium -->
-      <div class="pkg reveal d3">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-d">Premium</span>
-          <div class="pkg__name">Independent Living</div>
-          <div class="pkg__tag">Vollständig ausgestattet</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">149</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Alles aus Peace of Mind</li>
-            <li><span class="chk">✓</span>Smart Lock (schlüssellos)</li>
-            <li><span class="chk">✓</span>6× Sensoren, Luftqualität</li>
-            <li><span class="chk">✓</span>Quartalsbesuch vor Ort</li>
-            <li><span class="chk">✓</span>Familien-App Zugang</li>
-            <li><span class="chk">✓</span>Prioritäts-Support / 4h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 700–900</p>
-        </div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--ink-4);" class="reveal">
-      Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
-      <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>
-    </p>
   </div>
-</section>
 
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="process__grid">
-      <div>
-        <p class="sec-eye proc-eye reveal">So funktioniert's</p>
-        <h2 class="proc-h reveal d1">Einfach<br><em>loslegen.</em></h2>
-        <p class="proc-p reveal d2">Von der Beratung bis zur laufenden Betreuung kümmere ich mich um alles. Keine Technik-Vorkenntnisse nötig.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step__nc"><div class="step__n">1</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Kostenloses Beratungsgespräch</div>
-            <div class="step__b">Wir sprechen über Ihre Bedürfnisse und was am besten passt. Kein Verkaufsgespräch — nur Zuhören und ehrliche Empfehlungen.</div>
-            <div class="step__tags"><span class="step__tag">30 Min</span><span class="step__tag">Online oder vor Ort</span><span class="step__tag">Kostenlos</span></div>
-          </div>
-        </div>
-        <div class="step reveal d1">
-          <div class="step__nc"><div class="step__n">2</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Installation & Einrichtung</div>
-            <div class="step__b">Ich installiere alle Geräte, richte Home Assistant ein und konfiguriere alle Automatisierungen. 2–4 Stunden, keine Eingriffe ins Mauerwerk.</div>
-            <div class="step__tags"><span class="step__tag">Vor Ort</span><span class="step__tag">2–4 Stunden</span><span class="step__tag">Keine Eingriffe</span></div>
-          </div>
-        </div>
-        <div class="step reveal d2">
-          <div class="step__nc"><div class="step__n">3</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Einführung & Schulung</div>
-            <div class="step__b">Ich zeige Ihnen und Ihrer Familie wie alles funktioniert — einfach, ohne Fachjargon. Mit Handbuch in Deutsch und Englisch.</div>
-            <div class="step__tags"><span class="step__tag">Deutsch / Englisch</span><span class="step__tag">Handbuch inkl.</span></div>
-          </div>
-        </div>
-        <div class="step reveal d3">
-          <div class="step__nc"><div class="step__n">4</div></div>
-          <div class="step__c">
-            <div class="step__t">Laufende Fernbetreuung</div>
-            <div class="step__b">Ich überwache Ihr System, führe Updates durch und bin bei Problemen erreichbar. Monatlicher Bericht für Sie und Ihre Familie.</div>
-            <div class="step__tags"><span class="step__tag">Remote Monitoring</span><span class="step__tag">Monatsbericht</span><span class="step__tag">Support inkl.</span></div>
-          </div>
-        </div>
-      </div>
+  <div class="bottom">
+    <div>
+      <p class="bottom-contact">Jetzt schon Fragen? <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a></p>
+      <p class="bottom-copy">© 2025 Konihaus · Konrad Häfele · Zürich</p>
+    </div>
+    <div class="progress-wrap">
+      <span class="progress-label" id="progress-label">Aufbau läuft</span>
+      <div class="progress-track"><div class="progress-fill"></div></div>
     </div>
   </div>
-</section>
 
-<!-- WHY -->
-<section class="why" id="why">
-  <div class="container">
-    <div class="why__head">
-      <p class="why__eye reveal">Warum Konihaus?</p>
-      <h2 class="why__h reveal d1">Die Alternative zu Big<br><em>Tech im Wohnzimmer.</em></h2>
-    </div>
-    <div class="why__grid">
-      <div class="why__item reveal"><div class="why__icon">🔒</div><div class="why__t">Privatsphäre als Standard</div><div class="why__b">Ihre Daten verlassen Ihr Zuhause nicht. Vollständig lokal betrieben — kein Amazon, kein Google erforderlich.</div></div>
-      <div class="why__item reveal d1"><div class="why__icon">🔗</div><div class="why__t">Kein Vendor Lock-in</div><div class="why__b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie Geräte, ohne das System neu aufzubauen.</div></div>
-      <div class="why__item reveal d2"><div class="why__icon">🤝</div><div class="why__t">Persönlicher Service</div><div class="why__b">Sie sprechen immer direkt mit Koni. Kein Callcenter, kein Ticket-System — echte Betreuung.</div></div>
-      <div class="why__item reveal d1"><div class="why__icon">🏔️</div><div class="why__t">Schweizer Qualität</div><div class="why__b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards, Typ-J-Steckdosen und kantonalen Vorschriften.</div></div>
-      <div class="why__item reveal d2"><div class="why__icon">⚡</div><div class="why__t">Energieeffizienz</div><div class="why__b">Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren Energieverbrauch.</div></div>
-      <div class="why__item reveal d3"><div class="why__icon">🔄</div><div class="why__t">Zukunftssicher</div><div class="why__b">Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit — kostenlos.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- DEVICES -->
-<section class="devices" id="devices">
-  <div class="container">
-    <div class="devices__grid">
-      <div>
-        <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal">Geräte & Technik</p>
-        <h2 class="dev-h reveal d1">Beste Geräte.<br><em>Lokal vernetzt.</em></h2>
-        <p class="dev-p reveal d2">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Home Assistant, ohne Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz erhältlich.</p>
-        <div class="dev-tags reveal d3">
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Bewegungsmelder</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Wassermelder</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Türsensoren</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Thermostate</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Rauch & CO</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Smart Plugs (Typ J)</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Video-Türklingel</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Notfall-Knopf</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Smart Locks</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Luftqualität</div>
-        </div>
-      </div>
-      <div class="hub-box reveal d2">
-        <div class="hub-lbl">Das Herzstück Ihres Systems</div>
-        <div class="hub-name">Home Assistant Green</div>
-        <div class="hub-sub">+ Zigbee ZBT-2 Dongle · Nabu Casa Remote Access</div>
-        <div class="hub-rows">
-          <div class="hub-row"><span class="hl">Betrieb</span><span class="hv">100% lokal</span></div>
-          <div class="hub-row"><span class="hl">Protokolle</span><span class="hv">Zigbee · Matter · Z-Wave</span></div>
-          <div class="hub-row"><span class="hl">Stromverbrauch</span><span class="hv">2–6 Watt</span></div>
-          <div class="hub-row"><span class="hl">Speicher</span><span class="hv">32GB eMMC (kein SD)</span></div>
-          <div class="hub-row"><span class="hl">Fernzugriff</span><span class="hv">Verschlüsselt via HA Cloud</span></div>
-        </div>
-        <div class="hub-note">★ Daten verlassen Ihr Haus nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen möchten.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about__grid">
-      <div class="about__frame reveal">
-        <div class="about__pic">
-          <div class="about__init">KH</div>
-          <div class="about__tag">
-            <div class="aname">Koni Häfele</div>
-            <div class="arole">Gründer · Solution Architect</div>
-          </div>
-        </div>
-        <div class="about__badge">
-          <span class="bnum">10+</span>
-          <span class="blbl">Jahre<br>Erfahrung</span>
-        </div>
-      </div>
-      <div>
-        <p class="sec-eye about-eye reveal">Über Koni</p>
-        <h2 class="about-h reveal d1">Smart Home von<br>einem <em>echten Menschen.</em></h2>
-        <p class="about-p reveal d2">Mein Name ist Konrad — alle nennen mich Koni. Als Solution Architect mit Schwerpunkt Frontend-Technologie mache ich komplexe Systeme verständlich und nutzbar.</p>
-        <p class="about-p reveal d2">Konihaus entstand aus meiner eigenen Frustration: Entweder kauft man sich in ein proprietäres Ökosystem ein, oder man kämpft sich als Technikprofi alleine durch. Eine professionell betreute, lokale Lösung gab es nicht — bis jetzt.</p>
-        <blockquote class="about-q reveal d3">"Ich möchte, dass Ihr Zuhause für Sie arbeitet — nicht für Amazon oder Google."</blockquote>
-        <div class="about-chips reveal d3">
-          <span class="about-chip">Home Assistant</span>
-          <span class="about-chip">Zigbee / Matter</span>
-          <span class="about-chip">Solution Architecture</span>
-          <span class="about-chip">Zürich, Schweiz</span>
-          <span class="about-chip">Deutsch · English</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testi" id="testimonials">
-  <div class="container">
-    <div class="sec-center">
-      <p class="sec-eye reveal">Was Kunden sagen</p>
-      <h2 class="sec-h reveal d1" style="color:var(--ink);">Echte <em style="color:var(--forest-mid)">Erfahrungen.</em></h2>
-      <p class="reveal d2">Stimmen aus unseren Pilotinstallationen.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="tcard reveal d1">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Endlich kann ich von Basel aus prüfen, ob die Heizung meiner Mutter in Zürich funktioniert. Koni hat alles in drei Stunden eingerichtet."</div>
-        <div class="tcard__author"><div class="tcard__av">M</div><div><div class="tcard__name">Markus R.</div><div class="tcard__meta">Sohn einer Pilotkunden · Zürich</div></div></div>
-      </div>
-      <div class="tcard reveal d2">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Mein Ferienhaus in Zermatt war immer eine Sorge. Jetzt bekomme ich sofort eine Nachricht wenn etwas nicht stimmt — Wasserrohr, Fenster, alles."</div>
-        <div class="tcard__author"><div class="tcard__av">S</div><div><div class="tcard__name">Sandra K.</div><div class="tcard__meta">Ferienwohnungsbesitzerin · Zermatt</div></div></div>
-      </div>
-      <div class="tcard reveal d3">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Ich dachte, Smarthome sei nichts für mich. Koni hat mir in einer Stunde alles erklärt — ohne einen einzigen Fachbegriff."</div>
-        <div class="tcard__author"><div class="tcard__av">H</div><div><div class="tcard__name">Heidi F.</div><div class="tcard__meta">Rentnerin · Bern — Pilotkundin</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-sec">
-  <div class="container">
-    <p class="cta-eye reveal">Loslegen</p>
-    <h2 class="cta-h reveal d1">Bereit für ein<br>smartheres <em>Zuhause?</em></h2>
-    <p class="cta-sub reveal d2">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und empfehle, was wirklich zu Ihnen passt.</p>
-    <div class="cta-btns reveal d3">
-      <a href="#contact" class="btn btn-primary">Beratung anfragen →</a>
-      <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost">hallo@konihaus.ch</a>
-    </div>
-    <p class="cta-note reveal d4">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni</p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact__grid">
-      <div>
-        <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal">Kontakt</p>
-        <h2 class="con-h reveal d1">Sprechen wir<br>über <em>Ihr Zuhause.</em></h2>
-        <p class="con-p reveal d2">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder Feriendomizil. Ich melde mich innert 24 Stunden.</p>
-        <div class="con-details reveal d3">
-          <div class="con-detail"><div class="con-icon">📧</div>hallo@konihaus.ch</div>
-          <div class="con-detail"><div class="con-icon">📱</div>+41 78 964 65 92</div>
-          <div class="con-detail"><div class="con-icon">📍</div>Affoltern am Albis, Zürich · Einsatz CH-weit</div>
-        </div>
-      </div>
-      <form class="cform reveal d2" onsubmit="handleSubmit(event)">
-        <div class="frow">
-          <div class="fg"><label for="n">Name</label><input type="text" id="n" placeholder="Max Muster" required></div>
-          <div class="fg"><label for="e">E-Mail</label><input type="email" id="e" placeholder="max@example.ch" required></div>
-        </div>
-        <div class="fg">
-          <label for="i">Interesse</label>
-          <select id="i">
-            <option value="">Bitte wählen...</option>
-            <option>Essential — Safe at Home (CHF 49/mo)</option>
-            <option>Peace of Mind — Advanced (CHF 89/mo)</option>
-            <option>Independent Living — Full (CHF 149/mo)</option>
-            <option>Ferienwohnung / Airbnb</option>
-            <option>Noch unsicher — Beratung gewünscht</option>
-          </select>
-        </div>
-        <div class="fg"><label for="m">Ihre Situation</label><textarea id="m" rows="4" placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
-        <button type="submit" class="fsub">Nachricht senden →</button>
-        <p style="font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;">Keine Werbung. Kein Newsletter. Nur Koni.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div>
-        <a href="#" aria-label="Konihaus">
-          <svg width="132" height="28" viewBox="0 0 220 48" fill="none">
-            <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.5)" stroke-width="2" stroke-linejoin="round"/>
-            <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.07)" stroke="rgba(247,244,237,0.5)" stroke-width="1.5"/>
-            <circle cx="24" cy="5" r="2.5" fill="#c9a84c"/>
-            <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="300" fill="rgba(247,244,237,0.6)" letter-spacing="-0.4">Konihaus</text>
-          </svg>
-        </a>
-        <p class="footer__tagline">Smart home managed service für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
-      </div>
-      <div>
-        <div class="fcol-title">Service</div>
-        <ul class="flinks">
-          <li><a href="#packages">Essential Paket</a></li>
-          <li><a href="#packages">Peace of Mind</a></li>
-          <li><a href="#packages">Independent Living</a></li>
-          <li><a href="#packages">Ferienwohnungen</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fcol-title">Unternehmen</div>
-        <ul class="flinks">
-          <li><a href="#about">Über Koni</a></li>
-          <li><a href="#process">So funktioniert's</a></li>
-          <li><a href="#why">Warum Konihaus</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fcol-title">Technik</div>
-        <ul class="flinks">
-          <li><a href="#devices">Home Assistant</a></li>
-          <li><a href="#devices">Zigbee Geräte</a></li>
-          <li><a href="#devices">Matter / Thread</a></li>
-          <li><a href="#devices">Datenschutz</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
-      <div class="flegal"><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Impressum</a></div>
-      <p class="fch">🇨🇭 Made in Switzerland</p>
-    </div>
-  </div>
-</footer>
+</main>
 
 <script>
-// Nav scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
-
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
-hamburger.addEventListener('click', () => {
-  const open = hamburger.classList.toggle('open');
-  drawer.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
-document.querySelectorAll('.drawer-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    drawer.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
-
-// Scroll reveal
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const t = document.querySelector(this.getAttribute('href'));
-    if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
-  });
-});
-
-// Form
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.fsub');
-  btn.textContent = '✓ Gesendet — ich melde mich bald!';
-  btn.style.background = 'var(--forest-mid)';
-  btn.disabled = true;
+// Countdown
+const launch = new Date('2026-08-01T08:00:00');
+function pad(n){return String(n).padStart(2,'0');}
+function setNum(id,val){
+  const el=document.getElementById(id), s=pad(val);
+  if(el.textContent!==s){el.textContent=s;el.classList.remove('bounce');void el.offsetWidth;el.classList.add('bounce');}
 }
+function tick(){
+  const d=Math.max(0,launch-Date.now());
+  setNum('cd-days', Math.floor(d/86400000));
+  setNum('cd-hours',Math.floor(d%86400000/3600000));
+  setNum('cd-mins', Math.floor(d%3600000/60000));
+  setNum('cd-secs', Math.floor(d%60000/1000));
+}
+tick(); setInterval(tick,1000);
 
-// Package buttons → scroll to contact
-document.querySelectorAll('.pkg__btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+// Email
+function submit(){
+  const input=document.getElementById('email-input');
+  if(!input.value.trim()||!input.value.includes('@')){
+    input.style.borderColor='rgba(196,124,43,.7)';input.focus();
+    setTimeout(()=>input.style.borderColor='',1200);return;
+  }
+  const btn=document.getElementById('signup-btn');
+  btn.textContent='✓';btn.style.background='#3d6b4f';btn.style.borderColor='#3d6b4f';
+  input.disabled=true;input.style.opacity='.4';
+  document.getElementById('signup-success').classList.add('show');
+}
+document.getElementById('signup-btn').addEventListener('click',submit);
+document.getElementById('email-input').addEventListener('keydown',e=>{if(e.key==='Enter')submit();});
+
+// Language
+const copy={
+  de:{eyebrow:'Smart Home · Zürich · Schweiz',headline:'Wir kommen<br><em>bald.</em>',subline:'Konihaus — persönlich betreutes Smart Home in der Schweiz. Plattformunabhängig, lokal, ohne Cloud-Zwang.',days:'Tage',hours:'Stunden',mins:'Minuten',secs:'Sekunden',signupLabel:'Informiert werden wenn wir starten:',signupBtn:'Benachrichtigen',placeholder:'ihre@email.ch',successMsg:'Danke — wir melden uns bei Launch!',signupNote:'Kein Spam. Nur eine Nachricht wenn wir live gehen.',progressLabel:'Aufbau läuft'},
+  en:{eyebrow:'Smart Home · Zürich · Switzerland',headline:'Coming<br><em>soon.</em>',subline:'Konihaus — personally managed smart home in Switzerland. Platform-independent, local, no cloud lock-in.',days:'Days',hours:'Hours',mins:'Minutes',secs:'Seconds',signupLabel:'Get notified when we launch:',signupBtn:'Notify me',placeholder:'your@email.ch',successMsg:"Thank you — we'll be in touch at launch!",signupNote:'No spam. One email when we go live.',progressLabel:'Building now'}
+};
+document.querySelectorAll('.lang-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const lang=btn.dataset.lang,t=copy[lang];
+    document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+    document.getElementById('eyebrow').textContent=t.eyebrow;
+    document.getElementById('headline').innerHTML=t.headline;
+    document.getElementById('subline').textContent=t.subline;
+    document.getElementById('lbl-days').textContent=t.days;
+    document.getElementById('lbl-hours').textContent=t.hours;
+    document.getElementById('lbl-mins').textContent=t.mins;
+    document.getElementById('lbl-secs').textContent=t.secs;
+    document.getElementById('signup-label').textContent=t.signupLabel;
+    document.getElementById('signup-btn').textContent=t.signupBtn;
+    document.getElementById('email-input').placeholder=t.placeholder;
+    document.getElementById('success-msg').textContent=t.successMsg;
+    document.getElementById('signup-note').textContent=t.signupNote;
+    document.getElementById('progress-label').textContent=t.progressLabel;
   });
 });
 </script>
+
 </body>
 </html>
