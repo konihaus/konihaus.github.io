@@ -28,6 +28,8 @@ display: flex;
 flex-direction: column;
 overflow-x: hidden;
 -webkit-font-smoothing: antialiased;
+max-width: 750px;
+margin: 0 auto;
 }
 
 /* Full-screen green floor — catches anything that leaks through */
@@ -63,7 +65,7 @@ to   { width: 68%; }
 }
 
 .house-deco {
-position: fixed;
+position: absolute;
 bottom: -60px; right: -60px;
 width: 420px; height: 420px;
 opacity: .06;
@@ -72,7 +74,7 @@ z-index: 0;
 }
 
 .lang-toggle {
-position: fixed;
+position: absolute;
 top: 36px; right: 48px;
 display: flex; gap: 2px;
 z-index: 20;
