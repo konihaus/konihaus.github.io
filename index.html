@@ -30,8 +30,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
- 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 36'><path d='M22 2 L40 14 L40 34 L4 34 L4 14 Z' fill='none' stroke='%23e8c06a' stroke-width='2' stroke-linejoin='round'/><circle cx='22' cy='2' r='2.5' fill='%23e8c06a'/></svg>">
  
@@ -46,7 +45,7 @@ min-height: 100%;
 }
 
 body {
-font-family: ‘Outfit’, system-ui, sans-serif;
+font-family: 'Outfit', system-ui, sans-serif;
 background: #2a4a35 !important;
 background-color: #2a4a35 !important;
 color: #f7f4ed;
@@ -77,7 +76,7 @@ z-index: -1;
 --forest-mid: #3d6b4f;
 --parchment:  #f7f4ed;
 --ink:        #1a1916;
---serif: ‘Cormorant Garamond’, Georgia, serif;
+--serif: 'Cormorant Garamond', Georgia, serif;
 --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -111,7 +110,7 @@ z-index: 20;
 animation: fadeUp .6s var(--ease) 1s both;
 }
 .lang-btn {
-font-family: ‘Outfit’, sans-serif;
+font-family: 'Outfit', sans-serif;
 font-size: 11px; font-weight: 500;
 letter-spacing: .08em;
 padding: 5px 10px;
@@ -198,7 +197,7 @@ min-width: 2ch; text-align: center;
 font-size: 10px; font-weight: 500;
 letter-spacing: .14em; text-transform: uppercase;
 color: rgba(247,244,237,.38);
-margin-top: 8px;
+margin-top: 18px;
 }
 
 .signup { animation: fadeUp .7s var(--ease) .68s both; }
@@ -206,7 +205,7 @@ margin-top: 8px;
 .signup-row { display: flex; max-width: 440px; }
 .signup-input {
 flex: 1;
-font-family: ‘Outfit’, sans-serif;
+font-family: 'Outfit', sans-serif;
 font-size: 14px; font-weight: 300;
 color: #f7f4ed;
 background: rgba(247,244,237,.1);
@@ -224,7 +223,7 @@ background: rgba(247,244,237,.15);
 border-color: rgba(247,244,237,.35);
 }
 .signup-btn {
-font-family: ‘Outfit’, sans-serif;
+font-family: 'Outfit', sans-serif;
 font-size: 13px; font-weight: 500;
 color: var(--ink);
 background: var(--amber);
@@ -388,14 +387,45 @@ main { padding: 22px 18px 28px; }
 <main>
 
   <div class="logo">
-    <a href="/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
-      <svg width="48" height="48" viewBox="0 0 1024 1024" fill="none" style="stroke:rgba(247,244,237,0.8);">
-        <g fill="none" stroke="rgba(247,244,237,0.8)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 220 740 L 220 480 L 512 220 L 804 480 L 804 740 L 610 740 L 610 610 L 414 610 L 414 740 Z"/>
-        </g>
-        <circle cx="512" cy="220" r="34" fill="#EBC363"/>
+    <a href="/" style="display:inline-flex;align-items:flex-end;gap:12px;text-decoration:none;">
+      <svg xmlns="http://www.w3.org/2000/svg"
+          width="72" height="72"
+          viewBox="0 0 72 72"
+          role="img"
+          aria-label="Konihaus icon">
+        <title>Konihaus</title>
+
+        <!--
+          House geometry — native 72×72 coordinates.
+          Proportions preserved from original 1024×1024 source.
+          Uniform scale factor: 54/584 ≈ 0.0925
+          Left padding: 9px  |  Top padding: 12px
+        -->
+
+        <!-- House outline: roof + walls + door opening -->
+        <path
+          d="M 9 36
+            L 9 60
+            L 27 60
+            L 27 48
+            L 45 48
+            L 45 60
+            L 63 60
+            L 63 36
+            L 36 12
+            Z"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <!-- Amber apex dot -->
+        <circle cx="36" cy="12" r="3.5" fill="#EBC363"/>
+
       </svg>
-      <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:400;color:rgba(247,244,237,0.9);letter-spacing:-0.3px;line-height:1;">Konihaus</span>
+      <span style="font-family:'Cormorant Garamond', Georgia, serif;font-size:28px;font-weight:400;color:rgba(247,244,237,0.9);letter-spacing:-0.3px;line-height:1;margin-bottom: 6px;">Konihaus</span>
     </a>
   </div>
 
