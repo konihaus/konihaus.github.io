@@ -260,14 +260,16 @@ max-width: 320px; text-align: center;
 .toast.error { border-color: rgba(196,124,43,.4); }
 
 .bottom {
-display: flex; align-items: flex-end; justify-content: space-between;
+display: flex; 
 animation: fadeUp .7s var(--ease) .9s both;
+flex-direction: column;
+gap: 20px;
 }
 .bottom-contact { font-size: 13px; font-weight: 300; color: rgba(247,244,237,.42); }
 .bottom-contact a { color: rgba(232,192,106,.72); text-decoration: none; transition: color .2s; }
 .bottom-contact a:hover { color: var(--amber-warm); }
 .bottom-copy { font-size: 11px; color: rgba(247,244,237,.22); margin-top: 4px; }
-.progress-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.progress-wrap { display: flex; flex-direction: column; gap: 6px; }
 .progress-label { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(247,244,237,.3); }
 .progress-track { width: 160px; height: 2px; background: rgba(247,244,237,.1); border-radius: 2px; overflow: hidden; }
 .progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--forest-mid), var(--amber-warm)); border-radius: 2px; animation: progressGrow 1.6s var(--ease) 1.2s both; }
@@ -387,10 +389,11 @@ main { padding: 22px 18px 28px; }
 
   <div class="logo">
     <a href="/" style="display:inline-flex;align-items:center;gap:12px;text-decoration:none;">
-      <svg width="44" height="36" viewBox="0 0 44 36" fill="none">
-        <path d="M22 2 L40 14 L40 34 L4 34 L4 14 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
-        <rect x="15" y="24" width="14" height="10" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
-        <circle cx="22" cy="2" r="2.5" fill="#e8c06a"/>
+      <svg width="48" height="48" viewBox="0 0 1024 1024" fill="none" style="stroke:rgba(247,244,237,0.8);">
+        <g fill="none" stroke="rgba(247,244,237,0.8)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 220 740 L 220 480 L 512 220 L 804 480 L 804 740 L 610 740 L 610 610 L 414 610 L 414 740 Z"/>
+        </g>
+        <circle cx="512" cy="220" r="34" fill="#EBC363"/>
       </svg>
       <span style="font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:400;color:rgba(247,244,237,0.9);letter-spacing:-0.3px;line-height:1;">Konihaus</span>
     </a>
