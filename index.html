@@ -441,16 +441,30 @@ function tick(){
 tick(); setInterval(tick,1000);
 
 // Email
-function submit(){
+async function submit(){
   const input=document.getElementById('email-input');
   if(!input.value.trim()||!input.value.includes('@')){
     input.style.borderColor='rgba(196,124,43,.7)';input.focus();
     setTimeout(()=>input.style.borderColor='',1200);return;
   }
   const btn=document.getElementById('signup-btn');
-  btn.textContent='✓';btn.style.background='#3d6b4f';btn.style.borderColor='#3d6b4f';
-  input.disabled=true;input.style.opacity='.4';
-  document.getElementById('signup-success').classList.add('show');
+  const email=input.value.trim();
+  btn.textContent='...';btn.disabled=true;
+  try{
+    const res=await fetch('https://project-zovba.vercel.app/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
+    if(res.ok){
+      btn.textContent='✓';btn.style.background='#3d6b4f';btn.style.borderColor='#3d6b4f';
+      input.disabled=true;input.style.opacity='.4';
+      document.getElementById('signup-success').classList.add('show');
+    }else{
+      const data=await res.json();
+      btn.textContent='Benachrichtigen';btn.disabled=false;
+      alert(data.message||'Fehler beim Anmelden');
+    }
+  }catch(e){
+    btn.textContent='Benachrichtigen';btn.disabled=false;
+    alert('Verbindungsfehler');
+  }
 }
 document.getElementById('signup-btn').addEventListener('click',submit);
 document.getElementById('email-input').addEventListener('keydown',e=>{if(e.key==='Enter')submit();});
