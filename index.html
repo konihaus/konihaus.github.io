@@ -249,6 +249,17 @@ margin-top: 10px;
 .success-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--amber-warm); flex-shrink: 0; }
 .signup-note { font-size: 11px; color: rgba(247,244,237,.25); margin-top: 8px; }
 
+.toast {
+position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(120px);
+background: rgba(26,25,22,.95); border: 1px solid rgba(232,192,106,.2);
+border-radius: 8px; padding: 14px 20px; font-size: 13px;
+color: #f7f4ed; z-index: 100; opacity: 0;
+transition: all .3s var(--ease);
+max-width: 320px; text-align: center;
+}
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+.toast.error { border-color: rgba(196,124,43,.4); }
+
 .bottom {
 display: flex; align-items: flex-end; justify-content: space-between;
 animation: fadeUp .7s var(--ease) .9s both;
@@ -371,6 +382,8 @@ main { padding: 22px 18px 28px; }
   <button class="lang-btn" data-lang="en">EN</button>
 </div>
 
+<div class="toast" id="toast"></div>
+
 <main>
 
   <div class="logo">
@@ -440,6 +453,46 @@ function tick(){
 }
 tick(); setInterval(tick,1000);
 
+// Toast notification
+function showToast(msg,isError=false){
+  const toast=document.getElementById('toast');
+  toast.textContent=msg;
+  toast.classList.toggle('error',isError);
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),4000);
+}
+
+// API Messages i18n
+const apiMessages={
+  de:{
+    'Email is required':'E-Mail erforderlich',
+    'Invalid email format':'Ungültiges E-Mail-Format',
+    'Email already subscribed':'E-Mail bereits angemeldet',
+    'Too many signups from this IP address':'Zu viele Anmeldungen von dieser IP-Adresse',
+    'Server error':'Serverfehler',
+    'Email subscribed successfully':'E-Mail erfolgreich angemeldet',
+    'connectionError':'Verbindungsfehler'
+  },
+  en:{
+    'Email is required':'Email is required',
+    'Invalid email format':'Invalid email format',
+    'Email already subscribed':'Email already subscribed',
+    'Too many signups from this IP address':'Too many signups from this IP address',
+    'Server error':'Server error',
+    'Email subscribed successfully':'Email subscribed successfully',
+    'connectionError':'Connection error'
+  }
+};
+
+function getCurrentLang(){
+  return document.querySelector('.lang-btn.active')?.dataset.lang||'de';
+}
+
+function translateMessage(msg){
+  const lang=getCurrentLang();
+  return apiMessages[lang]?.[msg]||msg;
+}
+
 // Email
 async function submit(){
   const input=document.getElementById('email-input');
@@ -459,11 +512,12 @@ async function submit(){
     }else{
       const data=await res.json();
       btn.textContent='Benachrichtigen';btn.disabled=false;
-      alert(data.message||'Fehler beim Anmelden');
+      const msg=translateMessage(data.message)||translateMessage('Server error');
+      showToast(msg,true);
     }
   }catch(e){
     btn.textContent='Benachrichtigen';btn.disabled=false;
-    alert('Verbindungsfehler');
+    showToast(translateMessage('connectionError'),true);
   }
 }
 document.getElementById('signup-btn').addEventListener('click',submit);
