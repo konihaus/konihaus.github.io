@@ -82,11 +82,11 @@ setInterval(() => {
     newH1.classList.add('fade-in');
     heroH1.style.animation = 'fadeOutUp 0.5s ease forwards';
   }, 10);
+  newH1.classList.remove('hero__h1-next', 'fade-in');
 
   // Remove old h1 after animation
   setTimeout(() => {
     heroH1.remove();
-    newH1.classList.remove('hero__h1-next', 'fade-in');
     newH1.style.opacity = '1';
   }, 500);
 }, 3000);

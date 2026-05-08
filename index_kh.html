@@ -1,486 +1,659 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0VZ3EBY1JT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VZ3EBY1JT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-0VZ3EBY1JT');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konihaus — Ihr smartes Zuhause, persönlich betreut</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    gtag('config', 'G-0VZ3EBY1JT');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konihaus — Ihr smartes Zuhause, persönlich betreut</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="container">
-    <div class="nav__inner">
-      <a href="#" aria-label="Konihaus">
-        <svg width="148" height="32" viewBox="0 0 220 48" fill="none">
-          <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.75)" stroke-width="2" stroke-linejoin="round"/>
-          <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.1)" stroke="rgba(247,244,237,0.75)" stroke-width="1.5"/>
-          <circle cx="24" cy="5" r="2.5" fill="#e8c06a"/>
-          <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="400" fill="#f7f4ed" letter-spacing="-0.4">Konihaus</text>
-        </svg>
-      </a>
-      <ul class="nav__links">
-        <li><a href="#packages">Pakete</a></li>
-        <li><a href="#process">Ablauf</a></li>
-        <li><a href="#about">Über Koni</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-      <a href="#contact" class="btn nav__cta">Kostenlose Beratung</a>
-      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="#" aria-label="Konihaus"
+          style="display:inline-flex;align-items:flex-end;gap:12px;text-decoration:none;">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="72" height="72"
+     viewBox="0 0 72 72"
+     role="img"
+     aria-label="Konihaus icon"
+     shape-rendering="geometricPrecision">
+  <title>Konihaus</title>
 
-<!-- MOBILE DRAWER -->
-<div class="nav__drawer" id="drawer">
-  <ul>
-    <li><a href="#packages" class="drawer-link">Pakete</a></li>
-    <li><a href="#process" class="drawer-link">Ablauf</a></li>
-    <li><a href="#about" class="drawer-link">Über Koni</a></li>
-    <li><a href="#contact" class="drawer-link">Kontakt</a></li>
-  </ul>
-  <a href="#contact" class="drawer-cta drawer-link">Kostenlose Beratung →</a>
-</div>
+  <path
+    d="M 10 36 L 36 13 L 62 36"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="2"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    vector-effect="non-scaling-stroke"
+  />
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero__deco" aria-hidden="true">
-    <svg viewBox="0 0 400 400" fill="none">
-      <path d="M200 40 L360 160 L360 360 L40 360 L40 160 Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
-      <rect x="160" y="260" width="80" height="100" rx="4" stroke="white" stroke-width="1.5"/>
-      <rect x="80" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
-      <rect x="260" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5"/>
-      <circle cx="200" cy="40" r="12" stroke="white" stroke-width="1.5"/>
-      <line x1="200" y1="160" x2="200" y2="360" stroke="white" stroke-width="1" stroke-dasharray="4 6" opacity=".4"/>
-    </svg>
-  </div>
-  <div class="container">
-    <div class="hero__content">
-      <p class="hero__eye">Smart Home · Zürich · Schweiz</p>
-      <div class="hero__headline_container">
-        <h1 class="hero__h1">Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
-      </div>
-      <p class="hero__sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Anbieterbindung. Für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn-primary">Kostenlose Beratung →</a>
-        <a href="#packages" class="btn btn-ghost">Pakete ansehen</a>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="hero__bar">
-      <div class="hero__bar-line"></div>
-      <span class="hero__bar-text">Mehr erfahren</span>
-    </div>
-  </div>
-</section>
+  <path
+    d="M 10 36 L 10 60 L 28 60 L 28 48 L 44 48 L 44 60 L 62 60 L 62 36"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="2"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+    vector-effect="non-scaling-stroke"
+  />
 
-<!-- TRUST -->
-<div class="trust">
-  <div class="container">
-    <div class="trust__inner">
-      <div class="trust__item">✓ Keine Cloud-Pflicht</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Plattformunabhängig</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Persönlich betreut</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Swiss Made</div>
-      <div class="trust__dot"></div>
-      <div class="trust__item">✓ Keine Eingriffe ins Mauerwerk</div>
-    </div>
-  </div>
-</div>
-
-<!-- INTRO -->
-<section class="intro" id="intro">
-  <div class="container">
-    <div class="intro__grid">
-      <div>
-        <p class="sec-eye intro__eye reveal">Was ist Konihaus?</p>
-        <h2 class="intro__h reveal d1">Smarthome ohne<br><em>Kompromisse.</em></h2>
-        <p class="intro__p reveal d2">Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem: Google, Amazon oder Apple. Konihaus macht das anders.</p>
-        <p class="intro__p reveal d2">Ich installiere und betreue Ihr Smart Home auf Basis von Home Assistant — offen, lokal und kompatibel mit fast jedem Gerät. Ihre Daten bleiben bei Ihnen, der Support bleibt bei mir.</p>
-        <a href="#packages" class="intro__link reveal d3">Pakete ansehen <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="reveal d2">
-        <div class="cards-stack">
-          <div class="fcard fcard-1"><div class="fcard__icon">🔒</div><div class="fcard__t">Privatsphäre zuerst</div><div class="fcard__b">Alle Daten bleiben lokal in Ihrem Zuhause.</div></div>
-          <div class="fcard fcard-2"><div class="fcard__icon">🔧</div><div class="fcard__t">Voll betreut</div><div class="fcard__b">Ich installiere alles und halte es aus der Ferne am Laufen.</div></div>
-          <div class="fcard fcard-3"><div class="fcard__icon">🔗</div><div class="fcard__t">Keine Bindung</div><div class="fcard__b">Wechseln Sie Geräte ohne das System neu aufzubauen.</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PACKAGES -->
-<section class="packages" id="packages">
-  <div class="container">
-    <div class="sec-center">
-      <p class="sec-eye reveal">Preise & Pakete</p>
-      <h2 class="sec-h reveal d1">Das richtige Paket<br><em>für Ihr Zuhause.</em></h2>
-      <p class="reveal d2">Alle Pakete beinhalten Installation, Einrichtung und laufende Fernbetreuung. Keine versteckten Kosten.</p>
-    </div>
-    <div class="pkg-grid">
-      <!-- Essential -->
-      <div class="pkg reveal d1">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-d">Essential</span>
-          <div class="pkg__name">Safe at Home</div>
-          <div class="pkg__tag">Sicherheit und Grundfunktionen</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">49</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Home Assistant Hub inkl.</li>
-            <li><span class="chk">✓</span>2× Bewegungsmelder</li>
-            <li><span class="chk">✓</span>Rauch- & CO-Detektor</li>
-            <li><span class="chk">✓</span>2× Wassermelder</li>
-            <li><span class="chk">✓</span>Smarter Thermostat / TRV</li>
-            <li><span class="chk">✓</span>Haustür-Sensor</li>
-            <li><span class="chk">✓</span>Smart Plug (Herd-Abschaltung)</li>
-            <li><span class="chk">✓</span>Monatlicher Familienbericht</li>
-            <li><span class="chk">✓</span>E-Mail Support / 48h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 280–340</p>
-        </div>
-      </div>
-      <!-- Featured -->
-      <div class="pkg pkg-featured reveal d2">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-f">Empfohlen</span>
-          <div class="pkg__name">Peace of Mind</div>
-          <div class="pkg__tag">Vollständige Überwachung & Kontrolle</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">89</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Alles aus Essential</li>
-            <li><span class="chk">✓</span>4× Bewegungsmelder</li>
-            <li><span class="chk">✓</span>Video-Türklingel</li>
-            <li><span class="chk">✓</span>Nacht-Licht Automation</li>
-            <li><span class="chk">✓</span>Notfall-Knopf (tragbar)</li>
-            <li><span class="chk">✓</span>Inaktivitäts-Monitoring</li>
-            <li><span class="chk">✓</span>Voller Jahresbericht</li>
-            <li><span class="chk">✓</span>Telefon-Support / 24h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-f">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 480–580</p>
-        </div>
-      </div>
-      <!-- Premium -->
-      <div class="pkg reveal d3">
-        <div class="pkg__top">
-          <span class="pkg__badge badge-d">Premium</span>
-          <div class="pkg__name">Independent Living</div>
-          <div class="pkg__tag">Vollständig ausgestattet</div>
-          <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">149</span><span class="pkg__mo">/Monat</span></div>
-        </div>
-        <div class="pkg__body">
-          <ul class="pkg__list">
-            <li><span class="chk">✓</span>Alles aus Peace of Mind</li>
-            <li><span class="chk">✓</span>Smart Lock (schlüssellos)</li>
-            <li><span class="chk">✓</span>6× Sensoren, Luftqualität</li>
-            <li><span class="chk">✓</span>Quartalsbesuch vor Ort</li>
-            <li><span class="chk">✓</span>Familien-App Zugang</li>
-            <li><span class="chk">✓</span>Prioritäts-Support / 4h</li>
-          </ul>
-          <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
-          <p class="pkg__note">Hardware einmalig ~CHF 700–900</p>
-        </div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--ink-4);" class="reveal">
-      Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
-      <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>
-    </p>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="process__grid">
-      <div>
-        <p class="sec-eye proc-eye reveal">So funktioniert's</p>
-        <h2 class="proc-h reveal d1">Einfach<br><em>loslegen.</em></h2>
-        <p class="proc-p reveal d2">Von der Beratung bis zur laufenden Betreuung kümmere ich mich um alles. Keine Technik-Vorkenntnisse nötig.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step__nc"><div class="step__n">1</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Kostenloses Beratungsgespräch</div>
-            <div class="step__b">Wir sprechen über Ihre Bedürfnisse und was am besten passt. Kein Verkaufsgespräch — nur Zuhören und ehrliche Empfehlungen.</div>
-            <div class="step__tags"><span class="step__tag">30 Min</span><span class="step__tag">Online oder vor Ort</span><span class="step__tag">Kostenlos</span></div>
-          </div>
-        </div>
-        <div class="step reveal d1">
-          <div class="step__nc"><div class="step__n">2</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Installation & Einrichtung</div>
-            <div class="step__b">Ich installiere alle Geräte, richte Home Assistant ein und konfiguriere alle Automatisierungen. 2–4 Stunden, keine Eingriffe ins Mauerwerk.</div>
-            <div class="step__tags"><span class="step__tag">Vor Ort</span><span class="step__tag">2–4 Stunden</span><span class="step__tag">Keine Eingriffe</span></div>
-          </div>
-        </div>
-        <div class="step reveal d2">
-          <div class="step__nc"><div class="step__n">3</div><div class="step__ln"></div></div>
-          <div class="step__c">
-            <div class="step__t">Einführung & Schulung</div>
-            <div class="step__b">Ich zeige Ihnen und Ihrer Familie wie alles funktioniert — einfach, ohne Fachjargon. Mit Handbuch in Deutsch und Englisch.</div>
-            <div class="step__tags"><span class="step__tag">Deutsch / Englisch</span><span class="step__tag">Handbuch inkl.</span></div>
-          </div>
-        </div>
-        <div class="step reveal d3">
-          <div class="step__nc"><div class="step__n">4</div></div>
-          <div class="step__c">
-            <div class="step__t">Laufende Fernbetreuung</div>
-            <div class="step__b">Ich überwache Ihr System, führe Updates durch und bin bei Problemen erreichbar. Monatlicher Bericht für Sie und Ihre Familie.</div>
-            <div class="step__tags"><span class="step__tag">Remote Monitoring</span><span class="step__tag">Monatsbericht</span><span class="step__tag">Support inkl.</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="why" id="why">
-  <div class="container">
-    <div class="why__head">
-      <p class="why__eye reveal">Warum Konihaus?</p>
-      <h2 class="why__h reveal d1">Die Alternative zu Big<br><em>Tech im Wohnzimmer.</em></h2>
-    </div>
-    <div class="why__grid">
-      <div class="why__item reveal"><div class="why__icon">🔒</div><div class="why__t">Privatsphäre als Standard</div><div class="why__b">Ihre Daten verlassen Ihr Zuhause nicht. Vollständig lokal betrieben — kein Amazon, kein Google erforderlich.</div></div>
-      <div class="why__item reveal d1"><div class="why__icon">🔗</div><div class="why__t">Kein Vendor Lock-in</div><div class="why__b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie Geräte, ohne das System neu aufzubauen.</div></div>
-      <div class="why__item reveal d2"><div class="why__icon">🤝</div><div class="why__t">Persönlicher Service</div><div class="why__b">Sie sprechen immer direkt mit Koni. Kein Callcenter, kein Ticket-System — echte Betreuung.</div></div>
-      <div class="why__item reveal d1"><div class="why__icon">🏔️</div><div class="why__t">Schweizer Qualität</div><div class="why__b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards, Typ-J-Steckdosen und kantonalen Vorschriften.</div></div>
-      <div class="why__item reveal d2"><div class="why__icon">⚡</div><div class="why__t">Energieeffizienz</div><div class="why__b">Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren Energieverbrauch.</div></div>
-      <div class="why__item reveal d3"><div class="why__icon">🔄</div><div class="why__t">Zukunftssicher</div><div class="why__b">Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit — kostenlos.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- DEVICES -->
-<section class="devices" id="devices">
-  <div class="container">
-    <div class="devices__grid">
-      <div>
-        <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal">Geräte & Technik</p>
-        <h2 class="dev-h reveal d1">Beste Geräte.<br><em>Lokal vernetzt.</em></h2>
-        <p class="dev-p reveal d2">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Home Assistant, ohne Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz erhältlich.</p>
-        <div class="dev-tags reveal d3">
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Bewegungsmelder</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Wassermelder</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Türsensoren</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Thermostate</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Rauch & CO</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Smart Plugs (Typ J)</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Video-Türklingel</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Notfall-Knopf</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Smart Locks</div>
-          <div class="dev-tag"><div class="dev-tag__dot"></div>Luftqualität</div>
-        </div>
-      </div>
-      <div class="hub-box reveal d2">
-        <div class="hub-lbl">Das Herzstück Ihres Systems</div>
-        <div class="hub-name">Home Assistant Green</div>
-        <div class="hub-sub">+ Zigbee ZBT-2 Dongle · Nabu Casa Remote Access</div>
-        <div class="hub-rows">
-          <div class="hub-row"><span class="hl">Betrieb</span><span class="hv">100% lokal</span></div>
-          <div class="hub-row"><span class="hl">Protokolle</span><span class="hv">Zigbee · Matter · Z-Wave</span></div>
-          <div class="hub-row"><span class="hl">Stromverbrauch</span><span class="hv">2–6 Watt</span></div>
-          <div class="hub-row"><span class="hl">Speicher</span><span class="hv">32GB eMMC (kein SD)</span></div>
-          <div class="hub-row"><span class="hl">Fernzugriff</span><span class="hv">Verschlüsselt via HA Cloud</span></div>
-        </div>
-        <div class="hub-note">★ Daten verlassen Ihr Haus nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen möchten.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about__grid">
-      <div class="about__frame reveal">
-        <div class="about__pic">
-          <div class="about__init">KH</div>
-          <div class="about__tag">
-            <div class="aname">Koni Häfele</div>
-            <div class="arole">Gründer · Solution Architect</div>
-          </div>
-        </div>
-        <div class="about__badge">
-          <span class="bnum">10+</span>
-          <span class="blbl">Jahre<br>Erfahrung</span>
-        </div>
-      </div>
-      <div>
-        <p class="sec-eye about-eye reveal">Über Koni</p>
-        <h2 class="about-h reveal d1">Smart Home von<br>einem <em>echten Menschen.</em></h2>
-        <p class="about-p reveal d2">Mein Name ist Konrad — alle nennen mich Koni. Als Solution Architect mit Schwerpunkt Frontend-Technologie mache ich komplexe Systeme verständlich und nutzbar.</p>
-        <p class="about-p reveal d2">Konihaus entstand aus meiner eigenen Frustration: Entweder kauft man sich in ein proprietäres Ökosystem ein, oder man kämpft sich als Technikprofi alleine durch. Eine professionell betreute, lokale Lösung gab es nicht — bis jetzt.</p>
-        <blockquote class="about-q reveal d3">"Ich möchte, dass Ihr Zuhause für Sie arbeitet — nicht für Amazon oder Google."</blockquote>
-        <div class="about-chips reveal d3">
-          <span class="about-chip">Home Assistant</span>
-          <span class="about-chip">Zigbee / Matter</span>
-          <span class="about-chip">Solution Architecture</span>
-          <span class="about-chip">Zürich, Schweiz</span>
-          <span class="about-chip">Deutsch · English</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testi" id="testimonials">
-  <div class="container">
-    <div class="sec-center">
-      <p class="sec-eye reveal">Was Kunden sagen</p>
-      <h2 class="sec-h reveal d1" style="color:var(--ink);">Echte <em style="color:var(--forest-mid)">Erfahrungen.</em></h2>
-      <p class="reveal d2">Stimmen aus unseren Pilotinstallationen.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="tcard reveal d1">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Endlich kann ich von Basel aus prüfen, ob die Heizung meiner Mutter in Zürich funktioniert. Koni hat alles in drei Stunden eingerichtet."</div>
-        <div class="tcard__author"><div class="tcard__av">M</div><div><div class="tcard__name">Markus R.</div><div class="tcard__meta">Sohn einer Pilotkunden · Zürich</div></div></div>
-      </div>
-      <div class="tcard reveal d2">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Mein Ferienhaus in Zermatt war immer eine Sorge. Jetzt bekomme ich sofort eine Nachricht wenn etwas nicht stimmt — Wasserrohr, Fenster, alles."</div>
-        <div class="tcard__author"><div class="tcard__av">S</div><div><div class="tcard__name">Sandra K.</div><div class="tcard__meta">Ferienwohnungsbesitzerin · Zermatt</div></div></div>
-      </div>
-      <div class="tcard reveal d3">
-        <div class="tcard__stars">★★★★★</div>
-        <div class="tcard__q">"Ich dachte, Smarthome sei nichts für mich. Koni hat mir in einer Stunde alles erklärt — ohne einen einzigen Fachbegriff."</div>
-        <div class="tcard__author"><div class="tcard__av">H</div><div><div class="tcard__name">Heidi F.</div><div class="tcard__meta">Rentnerin · Bern — Pilotkundin</div></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-sec">
-  <div class="container">
-    <p class="cta-eye reveal">Loslegen</p>
-    <h2 class="cta-h reveal d1">Bereit für ein<br>smartheres <em>Zuhause?</em></h2>
-    <p class="cta-sub reveal d2">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und empfehle, was wirklich zu Ihnen passt.</p>
-    <div class="cta-btns reveal d3">
-      <a href="#contact" class="btn btn-primary">Beratung anfragen →</a>
-      <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost">hallo@konihaus.ch</a>
-    </div>
-    <p class="cta-note reveal d4">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni</p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact__grid">
-      <div>
-        <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal">Kontakt</p>
-        <h2 class="con-h reveal d1">Sprechen wir<br>über <em>Ihr Zuhause.</em></h2>
-        <p class="con-p reveal d2">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder Feriendomizil. Ich melde mich innert 24 Stunden.</p>
-        <div class="con-details reveal d3">
-          <div class="con-detail"><div class="con-icon">📧</div>hallo@konihaus.ch</div>
-          <div class="con-detail"><div class="con-icon">📱</div>+41 78 964 65 92</div>
-          <div class="con-detail"><div class="con-icon">📍</div>Affoltern am Albis, Zürich · Einsatz CH-weit</div>
-        </div>
-      </div>
-      <form class="cform reveal d2" onsubmit="handleSubmit(event)">
-        <div class="frow">
-          <div class="fg"><label for="n">Name</label><input type="text" id="n" placeholder="Max Muster" required></div>
-          <div class="fg"><label for="e">E-Mail</label><input type="email" id="e" placeholder="max@example.ch" required></div>
-        </div>
-        <div class="fg">
-          <label for="i">Interesse</label>
-          <select id="i">
-            <option value="">Bitte wählen...</option>
-            <option>Essential — Safe at Home (CHF 49/mo)</option>
-            <option>Peace of Mind — Advanced (CHF 89/mo)</option>
-            <option>Independent Living — Full (CHF 149/mo)</option>
-            <option>Ferienwohnung / Airbnb</option>
-            <option>Noch unsicher — Beratung gewünscht</option>
-          </select>
-        </div>
-        <div class="fg"><label for="m">Ihre Situation</label><textarea id="m" rows="4" placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
-        <button type="submit" class="fsub">Nachricht senden →</button>
-        <p style="font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;">Keine Werbung. Kein Newsletter. Nur Koni.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div>
-        <a href="#" aria-label="Konihaus">
-          <svg width="132" height="28" viewBox="0 0 220 48" fill="none">
-            <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.5)" stroke-width="2" stroke-linejoin="round"/>
-            <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.07)" stroke="rgba(247,244,237,0.5)" stroke-width="1.5"/>
-            <circle cx="24" cy="5" r="2.5" fill="#c9a84c"/>
-            <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="300" fill="rgba(247,244,237,0.6)" letter-spacing="-0.4">Konihaus</text>
-          </svg>
+  <circle cx="36" cy="13" r="3" fill="#EBC363"/>
+</svg>
+          <span
+            style="font-family:'Cormorant Garamond', Georgia, serif;font-size:28px;font-weight:400;color:rgba(247,244,237,0.9);letter-spacing:-0.3px;line-height:1;margin-bottom: 6px;">Konihaus</span>
         </a>
-        <p class="footer__tagline">Smart home managed service für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
-      </div>
-      <div>
-        <div class="fcol-title">Service</div>
-        <ul class="flinks">
-          <li><a href="#packages">Essential Paket</a></li>
-          <li><a href="#packages">Peace of Mind</a></li>
-          <li><a href="#packages">Independent Living</a></li>
-          <li><a href="#packages">Ferienwohnungen</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="fcol-title">Unternehmen</div>
-        <ul class="flinks">
+        <ul class="nav__links">
+          <li><a href="#packages">Pakete</a></li>
+          <li><a href="#process">Ablauf</a></li>
           <li><a href="#about">Über Koni</a></li>
-          <li><a href="#process">So funktioniert's</a></li>
-          <li><a href="#why">Warum Konihaus</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
-      </div>
-      <div>
-        <div class="fcol-title">Technik</div>
-        <ul class="flinks">
-          <li><a href="#devices">Home Assistant</a></li>
-          <li><a href="#devices">Zigbee Geräte</a></li>
-          <li><a href="#devices">Matter / Thread</a></li>
-          <li><a href="#devices">Datenschutz</a></li>
-        </ul>
+        <a href="#contact" class="btn nav__cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p class="footer__copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
-      <div class="flegal"><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Impressum</a></div>
-      <p class="fch">🇨🇭 Made in Switzerland</p>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="#packages" class="drawer-link">Pakete</a></li>
+      <li><a href="#process" class="drawer-link">Ablauf</a></li>
+      <li><a href="#about" class="drawer-link">Über Koni</a></li>
+      <li><a href="#contact" class="drawer-link">Kontakt</a></li>
+    </ul>
+    <a href="#contact" class="drawer-cta drawer-link">Kostenlose Beratung →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__deco" aria-hidden="true">
+      <svg viewBox="0 0 400 400" fill="none">
+        <path d="M200 40 L360 160 L360 360 L40 360 L40 160 Z" stroke="white" stroke-width="1.5"
+          stroke-linejoin="round" />
+        <rect x="160" y="260" width="80" height="100" rx="4" stroke="white" stroke-width="1.5" />
+        <rect x="80" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5" />
+        <rect x="260" y="200" width="60" height="60" rx="4" stroke="white" stroke-width="1.5" />
+        <circle cx="200" cy="40" r="12" stroke="white" stroke-width="1.5" />
+        <line x1="200" y1="160" x2="200" y2="360" stroke="white" stroke-width="1" stroke-dasharray="4 6" opacity=".4" />
+      </svg>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eye">Smart Home · Zürich · Schweiz</p>
+        <div class="hero__headline_container">
+          <h1 class="hero__h1">Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
+        </div>
+        <p class="hero__sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne
+          Anbieterbindung. Für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn-primary">Kostenlose Beratung →</a>
+          <a href="#packages" class="btn btn-ghost">Pakete ansehen</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero__bar">
+        <div class="hero__bar-line"></div>
+        <span class="hero__bar-text">Mehr erfahren</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="container">
+      <div class="trust__inner">
+        <div class="trust__item">✓ Keine Cloud-Pflicht</div>
+        <div class="trust__dot"></div>
+        <div class="trust__item">✓ Plattformunabhängig</div>
+        <div class="trust__dot"></div>
+        <div class="trust__item">✓ Persönlich betreut</div>
+        <div class="trust__dot"></div>
+        <div class="trust__item">✓ Swiss Made</div>
+        <div class="trust__dot"></div>
+        <div class="trust__item">✓ Keine Eingriffe ins Mauerwerk</div>
+      </div>
     </div>
   </div>
-</footer>
 
-<script src="main.js"></script>
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="container">
+      <div class="intro__grid">
+        <div>
+          <p class="sec-eye intro__eye reveal">Was ist Konihaus?</p>
+          <h2 class="intro__h reveal d1">Smarthome ohne<br><em>Kompromisse.</em></h2>
+          <p class="intro__p reveal d2">Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem:
+            Google, Amazon oder Apple. Konihaus macht das anders.</p>
+          <p class="intro__p reveal d2">Ich installiere und betreue Ihr Smart Home auf Basis von Home Assistant — offen,
+            lokal und kompatibel mit fast jedem Gerät. Ihre Daten bleiben bei Ihnen, der Support bleibt bei mir.</p>
+          <a href="#packages" class="intro__link reveal d3">Pakete ansehen <svg width="16" height="16"
+              viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
+        </div>
+        <div class="reveal d2">
+          <div class="cards-stack">
+            <div class="fcard fcard-1">
+              <div class="fcard__icon">🔒</div>
+              <div class="fcard__t">Privatsphäre zuerst</div>
+              <div class="fcard__b">Alle Daten bleiben lokal in Ihrem Zuhause.</div>
+            </div>
+            <div class="fcard fcard-2">
+              <div class="fcard__icon">🔧</div>
+              <div class="fcard__t">Voll betreut</div>
+              <div class="fcard__b">Ich installiere alles und halte es aus der Ferne am Laufen.</div>
+            </div>
+            <div class="fcard fcard-3">
+              <div class="fcard__icon">🔗</div>
+              <div class="fcard__t">Keine Bindung</div>
+              <div class="fcard__b">Wechseln Sie Geräte ohne das System neu aufzubauen.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye reveal">Preise & Pakete</p>
+        <h2 class="sec-h reveal d1">Das richtige Paket<br><em>für Ihr Zuhause.</em></h2>
+        <p class="reveal d2">Alle Pakete beinhalten Installation, Einrichtung und laufende Fernbetreuung. Keine
+          versteckten Kosten.</p>
+      </div>
+      <div class="pkg-grid">
+        <!-- Essential -->
+        <div class="pkg reveal d1">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-d">Essential</span>
+            <div class="pkg__name">Safe at Home</div>
+            <div class="pkg__tag">Sicherheit und Grundfunktionen</div>
+            <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">49</span><span
+                class="pkg__mo">/Monat</span></div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__list">
+              <li><span class="chk">✓</span>Home Assistant Hub inkl.</li>
+              <li><span class="chk">✓</span>2× Bewegungsmelder</li>
+              <li><span class="chk">✓</span>Rauch- & CO-Detektor</li>
+              <li><span class="chk">✓</span>2× Wassermelder</li>
+              <li><span class="chk">✓</span>Smarter Thermostat / TRV</li>
+              <li><span class="chk">✓</span>Haustür-Sensor</li>
+              <li><span class="chk">✓</span>Smart Plug (Herd-Abschaltung)</li>
+              <li><span class="chk">✓</span>Monatlicher Familienbericht</li>
+              <li><span class="chk">✓</span>E-Mail Support / 48h</li>
+            </ul>
+            <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
+            <p class="pkg__note">Hardware einmalig ~CHF 280–340</p>
+          </div>
+        </div>
+        <!-- Featured -->
+        <div class="pkg pkg-featured reveal d2">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-f">Empfohlen</span>
+            <div class="pkg__name">Peace of Mind</div>
+            <div class="pkg__tag">Vollständige Überwachung & Kontrolle</div>
+            <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">89</span><span
+                class="pkg__mo">/Monat</span></div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__list">
+              <li><span class="chk">✓</span>Alles aus Essential</li>
+              <li><span class="chk">✓</span>4× Bewegungsmelder</li>
+              <li><span class="chk">✓</span>Video-Türklingel</li>
+              <li><span class="chk">✓</span>Nacht-Licht Automation</li>
+              <li><span class="chk">✓</span>Notfall-Knopf (tragbar)</li>
+              <li><span class="chk">✓</span>Inaktivitäts-Monitoring</li>
+              <li><span class="chk">✓</span>Voller Jahresbericht</li>
+              <li><span class="chk">✓</span>Telefon-Support / 24h</li>
+            </ul>
+            <button class="pkg__btn btn-pkg-f">Jetzt anfragen</button>
+            <p class="pkg__note">Hardware einmalig ~CHF 480–580</p>
+          </div>
+        </div>
+        <!-- Premium -->
+        <div class="pkg reveal d3">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-d">Premium</span>
+            <div class="pkg__name">Independent Living</div>
+            <div class="pkg__tag">Vollständig ausgestattet</div>
+            <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">149</span><span
+                class="pkg__mo">/Monat</span></div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__list">
+              <li><span class="chk">✓</span>Alles aus Peace of Mind</li>
+              <li><span class="chk">✓</span>Smart Lock (schlüssellos)</li>
+              <li><span class="chk">✓</span>6× Sensoren, Luftqualität</li>
+              <li><span class="chk">✓</span>Quartalsbesuch vor Ort</li>
+              <li><span class="chk">✓</span>Familien-App Zugang</li>
+              <li><span class="chk">✓</span>Prioritäts-Support / 4h</li>
+            </ul>
+            <button class="pkg__btn btn-pkg-d">Jetzt anfragen</button>
+            <p class="pkg__note">Hardware einmalig ~CHF 700–900</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:24px;font-size:13px;color:var(--ink-4);" class="reveal">
+        Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
+        <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für
+          Ferienwohnungen & Airbnb</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="process__grid">
+        <div>
+          <p class="sec-eye proc-eye reveal">So funktioniert's</p>
+          <h2 class="proc-h reveal d1">Einfach<br><em>loslegen.</em></h2>
+          <p class="proc-p reveal d2">Von der Beratung bis zur laufenden Betreuung kümmere ich mich um alles. Keine
+            Technik-Vorkenntnisse nötig.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__nc">
+              <div class="step__n">1</div>
+              <div class="step__ln"></div>
+            </div>
+            <div class="step__c">
+              <div class="step__t">Kostenloses Beratungsgespräch</div>
+              <div class="step__b">Wir sprechen über Ihre Bedürfnisse und was am besten passt. Kein Verkaufsgespräch —
+                nur Zuhören und ehrliche Empfehlungen.</div>
+              <div class="step__tags"><span class="step__tag">30 Min</span><span class="step__tag">Online oder vor
+                  Ort</span><span class="step__tag">Kostenlos</span></div>
+            </div>
+          </div>
+          <div class="step reveal d1">
+            <div class="step__nc">
+              <div class="step__n">2</div>
+              <div class="step__ln"></div>
+            </div>
+            <div class="step__c">
+              <div class="step__t">Installation & Einrichtung</div>
+              <div class="step__b">Ich installiere alle Geräte, richte Home Assistant ein und konfiguriere alle
+                Automatisierungen. 2–4 Stunden, keine Eingriffe ins Mauerwerk.</div>
+              <div class="step__tags"><span class="step__tag">Vor Ort</span><span class="step__tag">2–4
+                  Stunden</span><span class="step__tag">Keine Eingriffe</span></div>
+            </div>
+          </div>
+          <div class="step reveal d2">
+            <div class="step__nc">
+              <div class="step__n">3</div>
+              <div class="step__ln"></div>
+            </div>
+            <div class="step__c">
+              <div class="step__t">Einführung & Schulung</div>
+              <div class="step__b">Ich zeige Ihnen und Ihrer Familie wie alles funktioniert — einfach, ohne Fachjargon.
+                Mit Handbuch in Deutsch und Englisch.</div>
+              <div class="step__tags"><span class="step__tag">Deutsch / Englisch</span><span class="step__tag">Handbuch
+                  inkl.</span></div>
+            </div>
+          </div>
+          <div class="step reveal d3">
+            <div class="step__nc">
+              <div class="step__n">4</div>
+            </div>
+            <div class="step__c">
+              <div class="step__t">Laufende Fernbetreuung</div>
+              <div class="step__b">Ich überwache Ihr System, führe Updates durch und bin bei Problemen erreichbar.
+                Monatlicher Bericht für Sie und Ihre Familie.</div>
+              <div class="step__tags"><span class="step__tag">Remote Monitoring</span><span
+                  class="step__tag">Monatsbericht</span><span class="step__tag">Support inkl.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="why__head">
+        <p class="why__eye reveal">Warum Konihaus?</p>
+        <h2 class="why__h reveal d1">Die Alternative zu Big<br><em>Tech im Wohnzimmer.</em></h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__icon">🔒</div>
+          <div class="why__t">Privatsphäre als Standard</div>
+          <div class="why__b">Ihre Daten verlassen Ihr Zuhause nicht. Vollständig lokal betrieben — kein Amazon, kein
+            Google erforderlich.</div>
+        </div>
+        <div class="why__item reveal d1">
+          <div class="why__icon">🔗</div>
+          <div class="why__t">Kein Vendor Lock-in</div>
+          <div class="why__b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie Geräte, ohne das System neu
+            aufzubauen.</div>
+        </div>
+        <div class="why__item reveal d2">
+          <div class="why__icon">🤝</div>
+          <div class="why__t">Persönlicher Service</div>
+          <div class="why__b">Sie sprechen immer direkt mit Koni. Kein Callcenter, kein Ticket-System — echte Betreuung.
+          </div>
+        </div>
+        <div class="why__item reveal d1">
+          <div class="why__icon">🏔️</div>
+          <div class="why__t">Schweizer Qualität</div>
+          <div class="why__b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards, Typ-J-Steckdosen und kantonalen
+            Vorschriften.</div>
+        </div>
+        <div class="why__item reveal d2">
+          <div class="why__icon">⚡</div>
+          <div class="why__t">Energieeffizienz</div>
+          <div class="why__b">Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren
+            Energieverbrauch.</div>
+        </div>
+        <div class="why__item reveal d3">
+          <div class="why__icon">🔄</div>
+          <div class="why__t">Zukunftssicher</div>
+          <div class="why__b">Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit —
+            kostenlos.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVICES -->
+  <section class="devices" id="devices">
+    <div class="container">
+      <div class="devices__grid">
+        <div>
+          <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal">Geräte & Technik</p>
+          <h2 class="dev-h reveal d1">Beste Geräte.<br><em>Lokal vernetzt.</em></h2>
+          <p class="dev-p reveal d2">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Home Assistant, ohne
+            Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz erhältlich.</p>
+          <div class="dev-tags reveal d3">
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Bewegungsmelder
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Wassermelder
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Türsensoren
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Thermostate
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Rauch & CO
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Smart Plugs (Typ J)
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Video-Türklingel
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Notfall-Knopf
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Smart Locks
+            </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>Luftqualität
+            </div>
+          </div>
+        </div>
+        <div class="hub-box reveal d2">
+          <div class="hub-lbl">Das Herzstück Ihres Systems</div>
+          <div class="hub-name">Home Assistant Green</div>
+          <div class="hub-sub">+ Zigbee ZBT-2 Dongle · Nabu Casa Remote Access</div>
+          <div class="hub-rows">
+            <div class="hub-row"><span class="hl">Betrieb</span><span class="hv">100% lokal</span></div>
+            <div class="hub-row"><span class="hl">Protokolle</span><span class="hv">Zigbee · Matter · Z-Wave</span>
+            </div>
+            <div class="hub-row"><span class="hl">Stromverbrauch</span><span class="hv">2–6 Watt</span></div>
+            <div class="hub-row"><span class="hl">Speicher</span><span class="hv">32GB eMMC (kein SD)</span></div>
+            <div class="hub-row"><span class="hl">Fernzugriff</span><span class="hv">Verschlüsselt via HA Cloud</span>
+            </div>
+          </div>
+          <div class="hub-note">★ Daten verlassen Ihr Haus nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen
+            möchten.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__frame reveal">
+          <div class="about__pic">
+            <div class="about__init">KH</div>
+            <div class="about__tag">
+              <div class="aname">Koni Häfele</div>
+              <div class="arole">Gründer · Solution Architect</div>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="bnum">10+</span>
+            <span class="blbl">Jahre<br>Erfahrung</span>
+          </div>
+        </div>
+        <div>
+          <p class="sec-eye about-eye reveal">Über Koni</p>
+          <h2 class="about-h reveal d1">Smart Home von<br>einem <em>echten Menschen.</em></h2>
+          <p class="about-p reveal d2">Mein Name ist Konrad — alle nennen mich Koni. Als Solution Architect mit
+            Schwerpunkt Frontend-Technologie mache ich komplexe Systeme verständlich und nutzbar.</p>
+          <p class="about-p reveal d2">Konihaus entstand aus meiner eigenen Frustration: Entweder kauft man sich in ein
+            proprietäres Ökosystem ein, oder man kämpft sich als Technikprofi alleine durch. Eine professionell
+            betreute, lokale Lösung gab es nicht — bis jetzt.</p>
+          <blockquote class="about-q reveal d3">"Ich möchte, dass Ihr Zuhause für Sie arbeitet — nicht für Amazon oder
+            Google."</blockquote>
+          <div class="about-chips reveal d3">
+            <span class="about-chip">Home Assistant</span>
+            <span class="about-chip">Zigbee / Matter</span>
+            <span class="about-chip">Solution Architecture</span>
+            <span class="about-chip">Zürich, Schweiz</span>
+            <span class="about-chip">Deutsch · English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi" id="testimonials">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye reveal">Was Kunden sagen</p>
+        <h2 class="sec-h reveal d1" style="color:var(--ink);">Echte <em
+            style="color:var(--forest-mid)">Erfahrungen.</em></h2>
+        <p class="reveal d2">Stimmen aus unseren Pilotinstallationen.</p>
+      </div>
+      <div class="testi-grid">
+        <div class="tcard reveal d1">
+          <div class="tcard__stars">★★★★★</div>
+          <div class="tcard__q">"Endlich kann ich von Basel aus prüfen, ob die Heizung meiner Mutter in Zürich
+            funktioniert. Koni hat alles in drei Stunden eingerichtet."</div>
+          <div class="tcard__author">
+            <div class="tcard__av">M</div>
+            <div>
+              <div class="tcard__name">Markus R.</div>
+              <div class="tcard__meta">Sohn einer Pilotkunden · Zürich</div>
+            </div>
+          </div>
+        </div>
+        <div class="tcard reveal d2">
+          <div class="tcard__stars">★★★★★</div>
+          <div class="tcard__q">"Mein Ferienhaus in Zermatt war immer eine Sorge. Jetzt bekomme ich sofort eine
+            Nachricht wenn etwas nicht stimmt — Wasserrohr, Fenster, alles."</div>
+          <div class="tcard__author">
+            <div class="tcard__av">S</div>
+            <div>
+              <div class="tcard__name">Sandra K.</div>
+              <div class="tcard__meta">Ferienwohnungsbesitzerin · Zermatt</div>
+            </div>
+          </div>
+        </div>
+        <div class="tcard reveal d3">
+          <div class="tcard__stars">★★★★★</div>
+          <div class="tcard__q">"Ich dachte, Smarthome sei nichts für mich. Koni hat mir in einer Stunde alles erklärt —
+            ohne einen einzigen Fachbegriff."</div>
+          <div class="tcard__author">
+            <div class="tcard__av">H</div>
+            <div>
+              <div class="tcard__name">Heidi F.</div>
+              <div class="tcard__meta">Rentnerin · Bern — Pilotkundin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="container">
+      <p class="cta-eye reveal">Loslegen</p>
+      <h2 class="cta-h reveal d1">Bereit für ein<br>smartheres <em>Zuhause?</em></h2>
+      <p class="cta-sub reveal d2">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und empfehle, was
+        wirklich zu Ihnen passt.</p>
+      <div class="cta-btns reveal d3">
+        <a href="#contact" class="btn btn-primary">Beratung anfragen →</a>
+        <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost">hallo@konihaus.ch</a>
+      </div>
+      <p class="cta-note reveal d4">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div>
+          <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal">Kontakt</p>
+          <h2 class="con-h reveal d1">Sprechen wir<br>über <em>Ihr Zuhause.</em></h2>
+          <p class="con-p reveal d2">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder
+            Feriendomizil. Ich melde mich innert 24 Stunden.</p>
+          <div class="con-details reveal d3">
+            <div class="con-detail">
+              <div class="con-icon">📧</div>hallo@konihaus.ch
+            </div>
+            <div class="con-detail">
+              <div class="con-icon">📱</div>+41 78 964 65 92
+            </div>
+            <div class="con-detail">
+              <div class="con-icon">📍</div>Affoltern am Albis, Zürich · Einsatz CH-weit
+            </div>
+          </div>
+        </div>
+        <form class="cform reveal d2" onsubmit="handleSubmit(event)">
+          <div class="frow">
+            <div class="fg"><label for="n">Name</label><input type="text" id="n" placeholder="Max Muster" required>
+            </div>
+            <div class="fg"><label for="e">E-Mail</label><input type="email" id="e" placeholder="max@example.ch"
+                required></div>
+          </div>
+          <div class="fg">
+            <label for="i">Interesse</label>
+            <select id="i">
+              <option value="">Bitte wählen...</option>
+              <option>Essential — Safe at Home (CHF 49/mo)</option>
+              <option>Peace of Mind — Advanced (CHF 89/mo)</option>
+              <option>Independent Living — Full (CHF 149/mo)</option>
+              <option>Ferienwohnung / Airbnb</option>
+              <option>Noch unsicher — Beratung gewünscht</option>
+            </select>
+          </div>
+          <div class="fg"><label for="m">Ihre Situation</label><textarea id="m" rows="4"
+              placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
+          <button type="submit" class="fsub">Nachricht senden →</button>
+          <p style="font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;">Keine Werbung. Kein Newsletter.
+            Nur Koni.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="#" aria-label="Konihaus">
+            <svg width="132" height="28" viewBox="0 0 220 48" fill="none">
+              <path d="M24 5 L43 19 L43 40 L5 40 L5 19 Z" fill="none" stroke="rgba(247,244,237,0.5)" stroke-width="2"
+                stroke-linejoin="round" />
+              <rect x="17" y="29" width="14" height="11" rx="1.5" fill="rgba(247,244,237,0.07)"
+                stroke="rgba(247,244,237,0.5)" stroke-width="1.5" />
+              <circle cx="24" cy="5" r="2.5" fill="#c9a84c" />
+              <text x="55" y="33" font-family="Cormorant Garamond, serif" font-size="28" font-weight="300"
+                fill="rgba(247,244,237,0.6)" letter-spacing="-0.4">Konihaus</text>
+            </svg>
+          </a>
+          <p class="footer__tagline">Smart home managed service für Senioren, Mieter und Ferienhausbesitzer in der
+            Schweiz.</p>
+        </div>
+        <div>
+          <div class="fcol-title">Service</div>
+          <ul class="flinks">
+            <li><a href="#packages">Essential Paket</a></li>
+            <li><a href="#packages">Peace of Mind</a></li>
+            <li><a href="#packages">Independent Living</a></li>
+            <li><a href="#packages">Ferienwohnungen</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title">Unternehmen</div>
+          <ul class="flinks">
+            <li><a href="#about">Über Koni</a></li>
+            <li><a href="#process">So funktioniert's</a></li>
+            <li><a href="#why">Warum Konihaus</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title">Technik</div>
+          <ul class="flinks">
+            <li><a href="#devices">Home Assistant</a></li>
+            <li><a href="#devices">Zigbee Geräte</a></li>
+            <li><a href="#devices">Matter / Thread</a></li>
+            <li><a href="#devices">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
+        <div class="flegal"><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Impressum</a></div>
+        <p class="fch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
