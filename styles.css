@@ -1,8 +1,8 @@
 :root {
   --marine: #1e2535;
   --forest: #2a4a35;
-  --gold: #A87018;
-  --burgundy: #421113;
+  --gold: #6B4A0D;
+  --burgundy: #5A1A1D;
   --forest-mid: #3d6b4f;
   --forest-deep: #1e3628;
   --forest-tint: #e8f0eb;
@@ -524,15 +524,17 @@ button {
 }
 
 .fcard {
-  position: absolute;
+  display: flex;
+  gap: 10px;
   background: var(--cream);
   border-radius: 14px;
   border: 1px solid var(--warm-mid);
   padding: 22px 24px;
   box-shadow: 0 8px 32px rgba(26, 25, 22, .08);
+  margin-bottom:24px;
 }
 
-.fcard-1 {
+/*.fcard-1 {
   width: 250px;
   top: 0;
   left: 10px;
@@ -554,17 +556,20 @@ button {
   left: 30px;
   transform: rotate(-1deg);
 }
-
+*/
 .fcard__icon {
   width: 34px;
   height: 34px;
-  background: var(--forest-tint);
+  /*background: var(--forest-tint);*/
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
   font-size: 17px;
+}
+.fcard__c {
+  display: block;
 }
 
 .fcard__t {
@@ -584,6 +589,71 @@ button {
 .packages {
   padding: 112px 0;
   background: var(--cream);
+}
+
+.pkg-title em {
+  transition: color 0.4s var(--ease);
+  font-weight: 500;
+}
+
+.pkg-title.senioren em {
+  color: #6B4A0D;
+}
+
+.pkg-title.mieter em {
+  color: #5A1A1D;
+}
+
+.pkg-title.ferienhaus em {
+  color: #1e2535;
+}
+
+.pkg-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.pkg-tab {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: 1.5px solid var(--ink-3);
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: all .3s var(--ease);
+  letter-spacing: .02em;
+}
+
+.pkg-tab:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+
+.pkg-tab.active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--parchment);
+}
+
+.pkg-tab.active[data-audience="senioren"] {
+  background: #6B4A0D;
+  border-color: #6B4A0D;
+}
+
+.pkg-tab.active[data-audience="mieter"] {
+  background: #5A1A1D;
+  border-color: #5A1A1D;
+}
+
+.pkg-tab.active[data-audience="ferienhaus"] {
+  background: #1e2535;
+  border-color: #1e2535;
 }
 
 .pkg-grid {
@@ -610,11 +680,39 @@ button {
   background: var(--forest);
   border-color: var(--forest);
   transform: scale(1.03);
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease);
 }
 
 .pkg-featured:hover {
   transform: scale(1.03) translateY(-6px);
   box-shadow: 0 24px 64px rgba(42, 74, 53, .3);
+}
+
+.pkg-featured.senioren {
+  background: #6B4A0D;
+  border-color: #6B4A0D;
+}
+
+.pkg-featured.senioren:hover {
+  box-shadow: 0 24px 64px rgba(201, 168, 76, .3);
+}
+
+.pkg-featured.mieter {
+  background: #5A1A1D;
+  border-color: #5A1A1D;
+}
+
+.pkg-featured.mieter:hover {
+  box-shadow: 0 24px 64px rgba(139, 58, 58, .3);
+}
+
+.pkg-featured.ferienhaus {
+  background: #1e2535;
+  border-color: #1e2535;
+}
+
+.pkg-featured.ferienhaus:hover {
+  box-shadow: 0 24px 64px rgba(30, 42, 77, .3);
 }
 
 .pkg__top {
@@ -1803,19 +1901,40 @@ button {
   }
 
   .cards-stack {
-    height: 320px;
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .fcard-1 {
-    width: 220px;
+  .fcard {
+    position: static !important;
+    width: 100% !important;
+    transform: none !important;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 16px;
   }
 
-  .fcard-2 {
-    width: 240px;
+  .fcard-1, .fcard-2, .fcard-3 {
+    width: 100%;
+    z-index: auto;
   }
 
-  .fcard-3 {
-    width: 210px;
+  .fcard__icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 6px;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .fcard__t {
+    font-size: 14px;
+    margin-bottom: 0;
   }
 
   .pkg-grid {

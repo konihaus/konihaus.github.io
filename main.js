@@ -90,3 +90,49 @@ setInterval(() => {
     newH1.style.opacity = '1';
   }, 500);
 }, 3000);
+
+// Package tabs switching
+const pkgTabs = document.querySelectorAll('.pkg-tab');
+const pkgCards = document.querySelectorAll('.pkg');
+const pkgFeatured = document.querySelector('.pkg-featured');
+const pkgTitle = document.querySelector('.pkg-title');
+
+pkgTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const audience = tab.dataset.audience;
+
+    // Update active tab
+    pkgTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Update featured package background color
+    pkgFeatured.classList.remove('senioren', 'mieter', 'ferienhaus');
+    if (audience !== 'basis') {
+      pkgFeatured.classList.add(audience);
+    }
+
+    // Update title color class
+    pkgTitle.classList.remove('senioren', 'mieter', 'ferienhaus');
+    if (audience !== 'basis') {
+      pkgTitle.classList.add(audience);
+    }
+
+    // Update title text
+    if (pkgTitle && pkgTitle.dataset[audience]) {
+      pkgTitle.innerHTML = pkgTitle.dataset[audience];
+    }
+
+    // Update package content
+    pkgCards.forEach(card => {
+      const nameEl = card.querySelector('.pkg__name');
+      const tagEl = card.querySelector('.pkg__tag');
+
+      if (nameEl && nameEl.dataset[audience]) {
+        nameEl.textContent = nameEl.dataset[audience];
+      }
+      if (tagEl && tagEl.dataset[audience]) {
+        tagEl.textContent = tagEl.dataset[audience];
+      }
+    });
+  });
+});
