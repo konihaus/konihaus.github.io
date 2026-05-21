@@ -1,0 +1,12 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">konihaus favicon</title>
+  <desc id="desc">Rounded forest green favicon with konihaus house icon in parchment and amber.</desc>
+  <rect width="512" height="512" rx="112" fill="#2a4a35"/>
+  <g transform="translate(104 90) scale(1.72)">
+    <path d="M24 82 L24 148 C24 156.8 31.2 164 40 164 H62" stroke="#f7f4ed" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 82 L88 24 L152 82" stroke="#f7f4ed" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M152 82 V148 C152 156.8 144.8 164 136 164 H114" stroke="#f7f4ed" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="70" cy="112" r="9.5" fill="#c47c2b"/>
+    <circle cx="108" cy="112" r="9.5" fill="#f7f4ed"/>
+  </g>
+</svg>
