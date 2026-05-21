@@ -327,7 +327,7 @@
             </div>
             <div class="step__c">
               <div class="step__t">Installation & Einrichtung</div>
-              <div class="step__b">Ich installiere alle Geräte, richte Home Assistant ein und konfiguriere alle
+              <div class="step__b">Ich installiere alle Geräte, richte das Platfrom ein und konfiguriere alle
                 Automatisierungen. 2–4 Stunden, keine Eingriffe ins Mauerwerk.</div>
               <div class="step__tags"><span class="step__tag">Vor Ort</span><span class="step__tag">2–4
                   Stunden</span><span class="step__tag">Keine Eingriffe</span></div>
@@ -418,8 +418,8 @@
         <div>
           <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal">Geräte & Technik</p>
           <h2 class="dev-h reveal d1">Beste Geräte.<br><em>Lokal vernetzt.</em></h2>
-          <p class="dev-p reveal d2">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Home Assistant, ohne
-            Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz erhältlich.</p>
+          <p class="dev-p reveal d2">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Greenhub und ohne
+            Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz oder anderen Schweizer Händlern erhältlich.</p>
           <div class="dev-tags reveal d3">
             <div class="dev-tag">
               <div class="dev-tag__dot"></div>Bewegungsmelder
@@ -451,22 +451,59 @@
             <div class="dev-tag">
               <div class="dev-tag__dot"></div>Luftqualität
             </div>
+            <div class="dev-tag">
+              <div class="dev-tag__dot"></div>und vieles mehr...
+            </div>
           </div>
         </div>
         <div class="hub-box reveal d2">
           <div class="hub-lbl">Das Herzstück Ihres Systems</div>
-          <div class="hub-name">Home Assistant Green</div>
-          <div class="hub-sub">+ Zigbee ZBT-2 Dongle · Nabu Casa Remote Access</div>
-          <div class="hub-rows">
-            <div class="hub-row"><span class="hl">Betrieb</span><span class="hv">100% lokal</span></div>
-            <div class="hub-row"><span class="hl">Protokolle</span><span class="hv">Zigbee · Matter · Z-Wave</span>
+          <div class="hub-name">
+            <div class="hub-logo-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="210" height="140" viewBox="500 250 1500 1000" role="img" aria-label="Koninhaus Greenhub icon">
+                <g filter="url(#softShadow)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <!-- House outline -->
+                  <path d="M 656 738 L 585 738
+                          Q 553 738 553 706
+                          L 553 449
+                          Q 553 421 577 405
+                          L 738 296
+                          Q 765 278 792 296
+                          L 954 405
+                          Q 980 423 980 454
+                          L 980 704
+                          Q 980 738 946 738
+                          L 870 738"
+                        stroke="var(--parchment)" stroke-width="30"/>
+
+                  <!-- Power symbol ring -->
+                  <path d="M 697 488
+                          A 104 104 0 1 0 831 488"
+                        stroke="var(--forest-light)" stroke-width="31"/>
+
+                  <!-- Power symbol bar -->
+                  <path d="M 764 426 L 764 529"
+                        stroke="var(--amber)" stroke-width="39"/>
+
+
+                </g>
+              </svg>
             </div>
-            <div class="hub-row"><span class="hl">Stromverbrauch</span><span class="hv">2–6 Watt</span></div>
-            <div class="hub-row"><span class="hl">Speicher</span><span class="hv">32GB eMMC (kein SD)</span></div>
-            <div class="hub-row"><span class="hl">Fernzugriff</span><span class="hv">Verschlüsselt via HA Cloud</span>
+            <div class="hub__text">
+              <span class="hub__brand">konihaus</span>
+              <span class="hub__name">greenhub</span>
             </div>
           </div>
-          <div class="hub-note">★ Daten verlassen Ihr Haus nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen
+          <div class="hub-sub">+ Zigbee ZBT3 Dongle · Secure Remote Access</div>
+          <div class="hub-rows">
+            <div class="hub-row"><span class="hl">Betrieb</span><span class="hv">100% lokal</span></div>
+            <div class="hub-row"><span class="hl">Protokolle</span><span class="hv">Zigbee · Matter · Thread</span></div>
+            <div class="hub-row"><span class="hl">Stromverbrauch</span><span class="hv">2–6 Watt</span></div>
+            <div class="hub-row"><span class="hl">Speicher</span><span class="hv">64-1284GB SD or SSD</span></div>
+            <div class="hub-row"><span class="hl">Fernzugriff</span><span class="hv">Verschlüsselt via Private VPN or Tailscale</span>
+            </div>
+          </div>
+          <div class="hub-note">★ Daten verlassen Ihr Haus nicht oder nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen
             möchten.</div>
         </div>
       </div>
@@ -481,12 +518,12 @@
           <div class="about__pic">
             <div class="about__init">KH</div>
             <div class="about__tag">
-              <div class="aname">Koni Häfele</div>
+              <div class="aname">Konrad 'Koni' Hefelle</div>
               <div class="arole">Gründer · Solution Architect</div>
             </div>
           </div>
           <div class="about__badge">
-            <span class="bnum">10+</span>
+            <span class="bnum">15+</span>
             <span class="blbl">Jahre<br>Erfahrung</span>
           </div>
         </div>
@@ -500,13 +537,13 @@
             betreute, lokale Lösung gab es nicht — bis jetzt.</p>
           <blockquote class="about-q reveal d3">"Ich möchte, dass Ihr Zuhause für Sie arbeitet — nicht für Amazon oder
             Google."</blockquote>
-          <div class="about-chips reveal d3">
+          <!--div class="about-chips reveal d3">
             <span class="about-chip">Home Assistant</span>
             <span class="about-chip">Zigbee / Matter</span>
             <span class="about-chip">Solution Architecture</span>
             <span class="about-chip">Zürich, Schweiz</span>
             <span class="about-chip">Deutsch · English</span>
-          </div>
+          </div-->
         </div>
       </div>
     </div>

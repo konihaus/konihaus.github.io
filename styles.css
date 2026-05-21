@@ -3,6 +3,7 @@
   --forest: #2a4a35;
   --gold: #6B4A0D;
   --burgundy: #5A1A1D;
+  --forest-light: #9fc77f;
   --forest-mid: #3d6b4f;
   --forest-deep: #1e3628;
   --forest-tint: #e8f0eb;
@@ -416,7 +417,7 @@ a.logo {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: rgba(247, 244, 237, .42);
+  color: rgba(247, 244, 237, .62);
 }
 
 .trust__dot {
@@ -1175,6 +1176,7 @@ a.logo {
   font-size: 12px;
   color: var(--ink-2);
   transition: all .2s;
+  cursor: pointer;
 }
 
 .dev-tag:hover {
@@ -1219,18 +1221,47 @@ a.logo {
   margin-bottom: 16px;
 }
 
+.hub-logo-svg {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+
 .hub-name {
   font-family: var(--serif);
   font-size: 24px;
   font-weight: 300;
   color: var(--parchment);
   margin-bottom: 4px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hub__text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+}
+.hub__brand {
+  font-size: 0.75em;
+  color: var(--parchment);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+.hub__name {
+  font-size: 1.75em;
+  color: var(--forest-light);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.1em;
 }
 
 .hub-sub {
   font-size: 12px;
   color: rgba(247, 244, 237, .4);
   margin-bottom: 22px;
+  margin-top: 10px;
 }
 
 .hub-rows {
@@ -1253,7 +1284,7 @@ a.logo {
 }
 
 .hub-row .hl {
-  color: rgba(247, 244, 237, .42);
+  color: rgba(247, 244, 237, .62);
 }
 
 .hub-row .hv {
@@ -1297,6 +1328,10 @@ a.logo {
   justify-content: center;
   overflow: hidden;
   position: relative;
+  background-image: url(./me.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about__pic::after {
@@ -1308,7 +1343,7 @@ a.logo {
 
 .about__init {
   font-family: var(--serif);
-  font-size: 96px;
+  font-size: 196px;
   font-weight: 300;
   color: rgba(247, 244, 237, .1);
   letter-spacing: -.05em;
@@ -1337,7 +1372,7 @@ a.logo {
 
 .about__tag .arole {
   font-size: 11px;
-  color: rgba(247, 244, 237, .42);
+  color: rgba(247, 244, 237, .62);
 }
 
 .about__badge {
