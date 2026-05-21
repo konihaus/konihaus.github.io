@@ -1,138 +1,325 @@
 // Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+// i18n Configuration
+const i18n = {
+  currentLang: localStorage.getItem('lang') || 'de',
+  supportedLangs: ['de', 'en', 'fr', 'it'],
+  translations: {},
 
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const drawer = document.getElementById('drawer');
-hamburger.addEventListener('click', () => {
-  const open = hamburger.classList.toggle('open');
-  drawer.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-});
+  async init() {
+    // Load all translation files
+    for (const lang of this.supportedLangs) {
+      try {
+        const response = await fetch(`./translations/${lang}.json`);
+        this.translations[lang] = await response.json();
+      } catch (error) {
+        console.error(`Failed to load translation for ${lang}:`, error);
+      }
+    }
+
+    // Set initial language
+    this.setLanguage(this.currentLang);
+    this.setupLanguageSelector();
+  },
+
+  setLanguage(lang) {
+    if (!this.supportedLangs.includes(lang)) lang = 'de';
+
+    this.currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    // Update all elements with data-i18n attribute
+    this.updatePageContent();
+
+    // Update language selector dropdown
+    const langSelect = document.getElementById('lang-selector');
+    if (langSelect) {
+      langSelect.value = lang;
+    }
+
+    // Update package content with current selected audience
+    const activeTab = document.querySelector('.pkg-tab.active');
+    if (activeTab) {
+      const audience = activeTab.dataset.audience;
+      updatePackageContent(audience);
+    }
+  },
+
+  updatePageContent() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach((el) => {
+      const keys = el.dataset.i18n.split('.');
+      const text = this.getText(...keys);
+
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        if (el.placeholder) el.placeholder = text;
+        if (el.dataset.i18nValue === 'true') el.value = text;
+      } else if (el.dataset.i18nHtml === 'true') {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    });
+
+    // Update select options
+    this.updateSelectOptions();
+  },
+
+  getText(section, key) {
+    const keys = [section, key];
+    let text = this.translations[this.currentLang];
+
+    for (const k of keys) {
+      text = text ? text[k] : null;
+    }
+
+    return text || `[${section}.${key}]`;
+  },
+
+  updateSelectOptions() {
+    const selects = document.querySelectorAll('[data-i18n-options]');
+    selects.forEach((select) => {
+      const options = select.dataset.i18nOptions.split(',');
+      const optionsArray = options.map((opt) => {
+        const [section, key] = opt.trim().split('.');
+        return this.getText(section, key);
+      });
+
+      Array.from(select.options).forEach((option, index) => {
+        if (index > 0 && index <= optionsArray.length) {
+          option.textContent = optionsArray[index - 1];
+        }
+      });
+    });
+  },
+
+  setupLanguageSelector() {
+    const langSelect = document.getElementById('lang-selector');
+    if (langSelect) {
+      langSelect.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        this.setLanguage(lang);
+      });
+    }
+  },
+
+  // Helper to get text for dynamic content
+  t(section, key) {
+    return this.getText(section, key);
+  },
+};
+
+// Form handling
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('n').value;
+  const email = document.getElementById('e').value;
+  const interest = document.getElementById('i').value;
+  const message = document.getElementById('m').value;
+
+  if (!name || !email || !message) {
+    alert('Bitte füllen Sie alle Felder aus');
+    return;
+  }
+
+  // Prepare form data
+  const formData = {
+    name,
+    email,
+    interest: interest || 'Keine Angabe',
+    message,
+    language: i18n.currentLang,
+    timestamp: new Date().toISOString(),
+  };
+
+  // Send via email (using formspree or similar service)
+  console.log('Form submitted:', formData);
+
+  // For now, just log and show success
+  alert(`Danke! Ihre Nachricht wurde versendet.\n\nWir melden uns innerhalb von 24 Stunden.`);
+  event.target.reset();
+}
+
+// Mobile menu toggle
+function setupMobileMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('drawer');
+
+  if (!hamburger || !drawer) return;
+
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    drawer.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Close drawer on link click
 document.querySelectorAll('.drawer-link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
     drawer.classList.remove('open');
     document.body.style.overflow = '';
+    });
   });
-});
-
-// Scroll reveal
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const t = document.querySelector(this.getAttribute('href'));
-    if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
-  });
-});
-
-// Form
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.fsub');
-  btn.textContent = '✓ Gesendet — ich melde mich bald!';
-  btn.style.background = 'var(--forest-mid)';
-  btn.disabled = true;
 }
 
-// Package buttons → scroll to contact
-document.querySelectorAll('.pkg__btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+// Scroll animations
+function setupScrollAnimations() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
   });
-});
 
-// Hero tagline rotation with fade animation
-const hero = document.querySelector('.hero');
-const taglines = [
-  { bg: 'var(--forest-deep)', class: '', text: 'Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.' },
-  { bg: 'var(--marine)', class: 'hero-marine', text: 'Ihre Ferienwohnung.<br><em>Geschützt.</em><br>Immer im Griff.' },
-  { bg: 'var(--gold)', class: 'hero-gold', text: 'Alles in Ordnung.<br><em>Immer.</em><br>Für Sie und Ihre Familie.' },
-  { bg: 'var(--burgundy)', class: 'hero-burgundy', text: 'Ihre Mietwohnung.<br><em>Smart und Spurlos.</em><br>Ohne Bohren.' }
-];
-let taglineIndex = 0;
+  reveals.forEach((el) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+}
 
-setInterval(() => {
-  taglineIndex = (taglineIndex + 1) % taglines.length;
-  const current = taglines[taglineIndex];
+// Package tab switching
+function setupPackageTabs() {
+  const tabs = document.querySelectorAll('.pkg-tab');
 
-  // Get current h1
-  const heroH1 = document.querySelector('.hero__h1:not(.hero__h1-next)');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const audience = tab.dataset.audience;
 
-  // Create new h1 for incoming text (starts invisible)
-  const newH1 = document.createElement('h1');
-  newH1.className = 'hero__h1 hero__h1-next';
-  newH1.innerHTML = current.text;
-  newH1.style.opacity = '0';
-  heroH1.parentNode.insertBefore(newH1, heroH1.nextSibling);
+      // Update active tab
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
 
-  // Update background color and gradient overlay via class
-  hero.style.backgroundColor = current.bg;
-  hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
-  if (current.class) hero.classList.add(current.class);
+      // Update package content
+      updatePackageContent(audience);
+    });
+  });
+}
 
-  // Fade in new h1
-  setTimeout(() => {
-    newH1.classList.add('fade-in');
-    heroH1.style.animation = 'fadeOutUp 0.5s ease forwards';
-  }, 10);
-  newH1.classList.remove('hero__h1-next', 'fade-in');
+function updatePackageContent(audience) {
+  // Update title from i18n
+  const titleEl = document.querySelector('.pkg-title');
+  if (titleEl) {
+    const titleKey = `h2_${audience}`;
+    const translatedTitle = i18n.getText('packages', titleKey);
+    titleEl.innerHTML = translatedTitle;
 
-  // Remove old h1 after animation
-  setTimeout(() => {
-    heroH1.remove();
-    newH1.style.opacity = '1';
-  }, 500);
-}, 3000);
+    // Update title color class
+    titleEl.classList.remove('senioren', 'mieter', 'ferienhaus');
+    if (audience !== 'basis') {
+      titleEl.classList.add(audience);
+    }
+  }
 
-// Package tabs switching
-const pkgTabs = document.querySelectorAll('.pkg-tab');
-const pkgCards = document.querySelectorAll('.pkg');
-const pkgFeatured = document.querySelector('.pkg-featured');
-const pkgTitle = document.querySelector('.pkg-title');
-
-pkgTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const audience = tab.dataset.audience;
-
-    // Update active tab
-    pkgTabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-
-    // Update featured package background color
+  // Update featured package background color
+  const pkgFeatured = document.querySelector('.pkg-featured');
+  if (pkgFeatured) {
     pkgFeatured.classList.remove('senioren', 'mieter', 'ferienhaus');
     if (audience !== 'basis') {
       pkgFeatured.classList.add(audience);
     }
+  }
 
-    // Update title color class
-    pkgTitle.classList.remove('senioren', 'mieter', 'ferienhaus');
-    if (audience !== 'basis') {
-      pkgTitle.classList.add(audience);
+  // Update package names and tags from i18n
+  const packages = document.querySelectorAll('.pkg');
+  packages.forEach((card, index) => {
+    // Package number is 1-based (1, 2, or 3)
+    const pkgNumber = index + 1;
+
+    // Update package name
+    const nameEl = card.querySelector('.pkg__name');
+    if (nameEl) {
+      const nameKey = `pkg${pkgNumber}_name_${audience}`;
+      const translatedName = i18n.getText('packages', nameKey);
+      nameEl.textContent = translatedName;
     }
 
-    // Update title text
-    if (pkgTitle && pkgTitle.dataset[audience]) {
-      pkgTitle.innerHTML = pkgTitle.dataset[audience];
+    // Update package tag
+    const tagEl = card.querySelector('.pkg__tag');
+    if (tagEl) {
+      const tagKey = `pkg${pkgNumber}_tag_${audience}`;
+      const translatedTag = i18n.getText('packages', tagKey);
+      tagEl.textContent = translatedTag;
     }
+  });
+}
 
-    // Update package content
-    pkgCards.forEach(card => {
-      const nameEl = card.querySelector('.pkg__name');
-      const tagEl = card.querySelector('.pkg__tag');
+// Hero tagline rotation
+function setupHeroTaglines() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
 
-      if (nameEl && nameEl.dataset[audience]) {
-        nameEl.textContent = nameEl.dataset[audience];
-      }
-      if (tagEl && tagEl.dataset[audience]) {
-        tagEl.textContent = tagEl.dataset[audience];
-      }
-    });
+  const taglines = [
+    { bg: 'var(--forest-deep)', class: '', keyPrefix: 'hero_tagline1' },
+    { bg: 'var(--marine)', class: 'hero-marine', keyPrefix: 'hero_tagline2' },
+    { bg: 'var(--gold)', class: 'hero-gold', keyPrefix: 'hero_tagline3' },
+    { bg: 'var(--burgundy)', class: 'hero-burgundy', keyPrefix: 'hero_tagline4' }
+  ];
+
+  let taglineIndex = 0;
+
+  const rotateTagline = () => {
+    taglineIndex = (taglineIndex + 1) % taglines.length;
+    const current = taglines[taglineIndex];
+
+    // Get the hero h1 container
+    const h1Container = hero.querySelector('.hero__headline_container');
+    if (!h1Container) return;
+
+    const heroH1 = h1Container.querySelector('.hero__h1:not(.hero__h1-next)');
+    if (!heroH1) return;
+
+    // Get translated tagline text
+    const taglineKey = current.keyPrefix;
+    const taglineText = i18n.getText('hero', taglineKey);
+
+    // Create new h1 for incoming text
+    const newH1 = document.createElement('h1');
+    newH1.className = 'hero__h1 hero__h1-next';
+    newH1.innerHTML = taglineText;
+    newH1.style.opacity = '0';
+    h1Container.appendChild(newH1);
+
+    // Update background color and class
+    hero.style.backgroundColor = current.bg;
+    hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
+    if (current.class) hero.classList.add(current.class);
+
+    // Trigger fade animation
+    setTimeout(() => {
+      newH1.classList.add('fade-in');
+      heroH1.style.animation = 'fadeOutUp 0.5s ease forwards';
+    }, 10);
+
+    // Remove old h1 after animation
+    setTimeout(() => {
+      heroH1.remove();
+      newH1.classList.remove('hero__h1-next', 'fade-in');
+      newH1.style.opacity = '1';
+    }, 500);
+  };
+
+  // Start rotation after initial delay
+  setInterval(rotateTagline, 3000);
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  i18n.init().then(() => {
+    setupMobileMenu();
+    setupScrollAnimations();
+    setupPackageTabs();
+    setupHeroTaglines();
+    // Initialize package content with i18n on page load
+    updatePackageContent('basis');
   });
 });

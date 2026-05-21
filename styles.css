@@ -179,6 +179,7 @@ a.logo {
   display: flex;
   gap: 36px;
   list-style: none;
+  margin-left: auto;
 }
 
 .nav__links a {
@@ -223,6 +224,63 @@ a.logo {
   transform: translateY(-1px);
 }
 
+/* ANIMATIONS */
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__h1.fade-in {
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+/* LANGUAGE SELECTOR */
+.lang-selector {
+  margin: 0 10px 0 auto;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: rgba(247,244,237,0.3);
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-selector:hover {
+  border-color: rgba(247,244,237,0.3);
+  color: rgba(247,244,237,0.3);
+}
+
+.lang-selector:focus {
+  outline: none;
+  border-color: transparent;
+  color: rgba(247,244,237,0.3);
+}
+
+.lang-selector option {
+  background: white;
+  color: var(--ink);
+}
+
 /* HERO */
 .hero {
   background: var(--forest);
@@ -257,7 +315,7 @@ a.logo {
 
 .hero__headline_container {
   position: relative;
-  min-height: clamp(270px, 32.5vw, 350px);
+  min-height: clamp(350px, 32.5vw, 350px);
 }
 
 .hero__deco {
@@ -292,7 +350,7 @@ a.logo {
   position: absolute;
   bottom: 0;
   font-family: var(--serif);
-  font-size: clamp(56px, 7.5vw, 100px);
+  font-size: clamp(56px, 7.5vw, 85px);
   font-weight: 300;
   line-height: 1.02;
   letter-spacing: -.03em;
@@ -2074,10 +2132,20 @@ a.logo {
 
   /* Hero */
   .hero__content {
-    padding: 120px 0 56px;
+    /*padding: 120px 0 56px;*/
     max-width: 560px;
-    width: 100% !important
+    width: 100% !important;
+    padding: 90px 0 72px;
   }
+
+  .hero__eye {
+    margin-bottom: 84px;
+  }
+
+  .hero__h1 {
+    line-height: 1.3em;
+  }
+
 
   .hero__h1 {
     font-size: clamp(44px, 13vw, 64px);
@@ -2275,5 +2343,10 @@ a.logo {
   .about-chip {
     font-size: 11px;
     padding: 4px 10px;
+  }
+
+  .lang-selector {
+    padding: 4px 8px;
+    font-size: 11px;
   }
 }
