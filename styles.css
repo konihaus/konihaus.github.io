@@ -162,6 +162,18 @@ button {
   justify-content: space-between;
 }
 
+a.logo {
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  display: flex;
+  align-content: center;
+  color: var(--parchment);
+  font-size: 1.5em;
+}
+.wordmark{ font-family:'Outfit',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:400;letter-spacing:-0.055em;}
+.logo-image { display: block; background-image:url(./logo.png); width:36px; height:36px; background-size:contain; background-repeat:no-repeat; }
+
 .nav__links {
   display: flex;
   gap: 36px;
@@ -249,7 +261,7 @@ button {
 
 .hero__deco {
   position: absolute;
-  right: -60px;
+  right: 0;
   top: 50%;
   transform: translateY(-52%);
   width: 560px;
@@ -2039,7 +2051,9 @@ button {
   }
 
   .hero__deco {
-    display: none;
+    left: -35%;
+    margin: 15% 0 0 50%;
+    width: 70%;
   }
 
   /* Trust */
