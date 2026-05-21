@@ -253,6 +253,35 @@ function updatePackageContent(audience) {
   });
 }
 
+// Package details accordion for mobile
+function setupPackageAccordion() {
+  const toggles = document.querySelectorAll('.pkg__toggle');
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const pkg = toggle.closest('.pkg');
+      if (!pkg) return;
+
+      const isExpanded = pkg.classList.contains('expanded');
+
+      // Close all other packages
+      toggles.forEach((otherToggle) => {
+        const otherPkg = otherToggle.closest('.pkg');
+        if (otherPkg && otherPkg !== pkg) {
+          otherPkg.classList.remove('expanded');
+          otherToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current package
+      pkg.classList.toggle('expanded');
+      toggle.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+}
+
 // Hero tagline rotation
 function setupHeroTaglines() {
   const hero = document.querySelector('.hero');
@@ -318,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupScrollAnimations();
     setupPackageTabs();
+    setupPackageAccordion();
     setupHeroTaglines();
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
