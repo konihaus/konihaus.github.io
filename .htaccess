@@ -1,0 +1,158 @@
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Remove .html extension
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^\.]+)$ $1.html [NC, L]
+
+  # Serve clean URLs
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index_kh.html [QSA, L]
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Set expiration headers for better caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML - cache for 1 hour
+  ExpiresByType text/html "access plus 1 hour"
+
+  # CSS and JavaScript - cache for 1 month
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # Images - cache for 3 months
+  ExpiresByType image/jpeg "access plus 3 months"
+  ExpiresByType image/gif "access plus 3 months"
+  ExpiresByType image/png "access plus 3 months"
+  ExpiresByType image/svg+xml "access plus 3 months"
+  ExpiresByType image/webp "access plus 3 months"
+  ExpiresByType image/x-icon "access plus 3 months"
+
+  # Fonts - cache for 1 year
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # JSON files - cache for 1 hour
+  ExpiresByType application/json "access plus 1 hour"
+
+  # Service Worker - don't cache
+  ExpiresByType application/javascript "access plus 0 seconds"
+  <FilesMatch "\.js$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Default
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Cache Control headers
+<IfModule mod_headers.c>
+  # HTML - don't cache
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # CSS and JS - cache for 1 month
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000, immutable"
+  </FilesMatch>
+
+  # Images - cache for 3 months
+  <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|ico)$">
+    Header set Cache-Control "public, max-age=7776000, immutable"
+  </FilesMatch>
+
+  # Fonts - cache for 1 year
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Service Worker - never cache
+  <FilesMatch "\.js$">
+    <FilesMatch "sw\.js$">
+      Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+  </FilesMatch>
+
+  # JSON - cache for 1 hour
+  <FilesMatch "\.json$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Manifest - cache for 1 day
+  <FilesMatch "manifest\.json$">
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </FilesMatch>
+
+  # Add CORS headers for fonts
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+
+  # Service Worker MIME type
+  <FilesMatch "\.js$">
+    Header set Content-Type "application/javascript; charset=UTF-8"
+  </FilesMatch>
+
+  # JSON MIME types
+  <FilesMatch "manifest\.json$">
+    Header set Content-Type "application/manifest+json; charset=UTF-8"
+  </FilesMatch>
+
+  <FilesMatch "translations/.*\.json$">
+    Header set Content-Type "application/json; charset=UTF-8"
+  </FilesMatch>
+
+  # SVG MIME types
+  <FilesMatch "\.svg$">
+    Header set Content-Type "image/svg+xml; charset=UTF-8"
+  </FilesMatch>
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Prevent access to sensitive files
+<FilesMatch "^\.(htaccess|htpasswd)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

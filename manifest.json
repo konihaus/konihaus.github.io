@@ -1,0 +1,103 @@
+{
+  "name": "Konihaus — Smart Home Schweiz",
+  "short_name": "Konihaus",
+  "description": "Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f4ed",
+  "theme_color": "#2a4a35",
+  "lang": "de-CH",
+  "dir": "ltr",
+  "categories": ["business", "utilities"],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect width='540' height='720' fill='%232a4a35'/><g transform='translate(130 200) scale(2.5)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g><text x='270' y='650' font-family='Outfit, sans-serif' font-size='28' font-weight='600' text-anchor='middle' fill='%23f7f4ed'>konihaus</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect width='1280' height='720' fill='%232a4a35'/><g transform='translate(440 200) scale(2.5)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g><text x='640' y='650' font-family='Outfit, sans-serif' font-size='28' font-weight='600' text-anchor='middle' fill='%23f7f4ed'>konihaus</text></svg>",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide"
+    }
+  ],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='44' fill='%232a4a35'/><g transform='translate(26 18) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='44' fill='%232a4a35'/><g transform='translate(26 18) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='112' fill='%232a4a35'/><g transform='translate(104 90) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='112' fill='%232a4a35'/><g transform='translate(104 90) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%23c47c2b'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kostenlose Beratung",
+      "short_name": "Beratung",
+      "description": "Starten Sie Ihre kostenlose Smart Home Beratung",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='44' fill='%23c47c2b'/><g transform='translate(26 18) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%232a4a35'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+          "sizes": "192x192",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Pakete ansehen",
+      "short_name": "Pakete",
+      "description": "Entdecken Sie unsere Smart Home Pakete",
+      "url": "/#packages",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='44' fill='%239fc77f'/><g transform='translate(26 18) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%232a4a35'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+          "sizes": "192x192",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "Über Konihaus",
+      "short_name": "Über uns",
+      "description": "Lernen Sie Koni und die Geschichte von Konihaus kennen",
+      "url": "/#about",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='44' fill='%236B4A0D'/><g transform='translate(26 18) scale(1.72)'><path d='M24 82 L24 148 C24 156.8 31.2 164 40 164 H62' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M24 82 L88 24 L152 82' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><path d='M152 82 V148 C152 156.8 144.8 164 136 164 H114' stroke='%23f7f4ed' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/><circle cx='70' cy='112' r='9.5' fill='%232a4a35'/><circle cx='108' cy='112' r='9.5' fill='%23f7f4ed'/></g></svg>",
+          "sizes": "192x192",
+          "type": "image/svg+xml",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
+}

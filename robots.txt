@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /index_kh.html
+Allow: /styles.css
+Allow: /main.js
+Allow: /manifest.json
+Allow: /favicon.svg
+Allow: /logo.png
+Allow: /translations/
+
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*sw.js$
+
+Sitemap: https://konihaus.ch/sitemap.xml
+
+# Crawl delay (optional - adjust as needed)
+Crawl-delay: 1

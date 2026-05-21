@@ -1337,6 +1337,10 @@ a.logo {
   width: 70px;
   height: 70px;
   overflow: hidden;
+  background-image: url('./greenhub.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hub-name {
@@ -1440,7 +1444,7 @@ a.logo {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  background-image: url(./me.png);
+  background-image: url(./me.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
