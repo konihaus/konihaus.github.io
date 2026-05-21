@@ -38,7 +38,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap"
     rel="stylesheet">
-<!-- Favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'><path d='M 9 36 L 36 12 L 63 36' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/><path d='M 9 36 L 9 60 L 27 60 L 27 48 L 45 48 L 45 60 L 63 60 L 63 36' fill='none' stroke='%23FFFFFF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/><circle cx='36' cy='12' r='3.5' fill='%23EBC363'/></svg>">
 
@@ -185,6 +185,7 @@
     .logo {
       animation: fadeUp .7s var(--ease) .1s both;
     }
+
     .logo a {
       align-items: center;
       gap: 12px;
@@ -193,10 +194,23 @@
       align-content: center;
       color: var(--parchment);
       font-size: 1.5em;
-      margin:-10px 0 0;
+      margin: -10px 0 0;
     }
-    .wordmark{font-family:'Outfit',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:400;letter-spacing:-0.055em;}
-    .logo-image { display: block; background-image:url(./logo.png); width:36px; height:36px; background-size:contain; background-repeat:no-repeat; }
+
+    .wordmark {
+      font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+    }
+
+    .logo-image {
+      display: block;
+      background-image: url(./logo.png);
+      width: 36px;
+      height: 36px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
     .center {
       flex: 1;
@@ -637,8 +651,7 @@
 
   <div class="house-deco" aria-hidden="true">
     <svg viewBox="80 105 245 245" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-      d="M88 210
+      <path d="M88 210
         L200 112
         L312 210
         V322
@@ -647,12 +660,7 @@
         M148 344
         H110
         C98 344 88 334 88 322
-        V210"
-      stroke="rgba(247,244,237,0.08)"
-      stroke-width="5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+        V210" stroke="rgba(247,244,237,0.08)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
       <circle cx="162" cy="248" r="13" fill="rgba(196, 124, 43, 0.08)" opacity="0.9" />
       <circle cx="238" cy="248" r="13" fill="rgba(247,244,237,0.08)" opacity="0.55" />
     </svg>

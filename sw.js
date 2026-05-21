@@ -64,8 +64,11 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
 
-        // Cache successful responses for certain types
+        // Clone response before checking content type
+        const responseToCache = response.clone();
         const contentType = response.headers.get('content-type');
+
+        // Cache successful responses for certain types
         if (
           event.request.url.includes('/translations/') ||
           (contentType && contentType.includes('application/json')) ||
@@ -74,8 +77,9 @@ self.addEventListener('fetch', (event) => {
           (contentType && contentType.includes('image/')) ||
           (contentType && contentType.includes('font/'))
         ) {
-          const cache = caches.open(CACHE_NAME);
-          cache.then((c) => c.put(event.request, response.clone()));
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
 
         return response;

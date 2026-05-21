@@ -4,6 +4,7 @@
 <head>
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#2a4a35">
@@ -22,13 +23,14 @@
   <link rel="apple-touch-icon" href="favicon.svg">
 
   <title>Konihaus — Smart Home Schweiz | Zürich</title>
-  <meta name="description" content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.">
+  <meta name="description"
+    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.">
   <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
     rel="stylesheet">
@@ -80,8 +82,7 @@
   <section class="hero" id="home">
     <div class="hero__deco" aria-hidden="true">
       <svg viewBox="80 105 245 245" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-      d="M88 210
+        <path d="M88 210
         L200 112
         L312 210
         V322
@@ -90,23 +91,20 @@
         M148 344
         H110
         C98 344 88 334 88 322
-        V210"
-      stroke="var(--parchment)"
-      stroke-width="5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-      <circle cx="162" cy="248" r="13" fill="var(--amber)" opacity="0.9" />
-      <circle cx="238" cy="248" r="13" fill="var(--parchment)" opacity="0.55" />
-    </svg>
+        V210" stroke="var(--parchment)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="162" cy="248" r="13" fill="var(--amber)" opacity="0.9" />
+        <circle cx="238" cy="248" r="13" fill="var(--parchment)" opacity="0.55" />
+      </svg>
     </div>
     <div class="container">
       <div class="hero__content">
         <p class="hero__eye" data-i18n="hero.eye">Smart Home · Zürich · Schweiz</p>
         <div class="hero__headline_container">
-          <h1 class="hero__h1" data-i18n="hero.h1" data-i18n-html="true">Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
+          <h1 class="hero__h1" data-i18n="hero.h1" data-i18n-html="true">Ihr
+            Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
         </div>
-        <p class="hero__sub" data-i18n="hero.sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne
+        <p class="hero__sub" data-i18n="hero.sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig,
+          lokal, ohne
           Anbieterbindung. Für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
         <div class="hero__actions">
           <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Kostenlose Beratung →</a>
@@ -145,13 +143,15 @@
       <div class="intro__grid">
         <div>
           <p class="sec-eye intro__eye reveal" data-i18n="intro.eye">Was ist Konihaus?</p>
-          <h2 class="intro__h reveal d1" data-i18n="intro.h2" data-i18n-html="true">Smarthome ohne<br><em>Kompromisse.</em></h2>
-          <p class="intro__p reveal d2" data-i18n="intro.p1">Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem:
+          <h2 class="intro__h reveal d1" data-i18n="intro.h2" data-i18n-html="true">Smarthome
+            ohne<br><em>Kompromisse.</em></h2>
+          <p class="intro__p reveal d2" data-i18n="intro.p1">Die meisten Smart-Home-Lösungen zwingen Sie in ein
+            proprietäres Ökosystem:
             Google, Amazon oder Apple. Konihaus macht das anders.</p>
           <p class="intro__p reveal d2" data-i18n="intro.p2">Ich installiere und betreue Ihr Smart Home offen,
             lokal und kompatibel mit fast jedem Gerät. Ihre Daten bleiben bei Ihnen, der Support bleibt bei mir.</p>
-          <a href="#packages" class="intro__link reveal d3" data-i18n="intro.link">Pakete ansehen <svg width="16" height="16"
-              viewBox="0 0 16 16" fill="none">
+          <a href="#packages" class="intro__link reveal d3" data-i18n="intro.link">Pakete ansehen <svg width="16"
+              height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg></a>
@@ -160,7 +160,15 @@
           <div class="cards-stack">
             <div class="fcard fcard-1">
               <div class="fcard__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="var(--forest)"><g fill="none"><path d="M0 0h24v24H0V0z"/><path d="M0 0h24v24H0V0z" opacity=".87"/></g><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px"
+                  fill="var(--forest)">
+                  <g fill="none">
+                    <path d="M0 0h24v24H0V0z" />
+                    <path d="M0 0h24v24H0V0z" opacity=".87" />
+                  </g>
+                  <path
+                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                </svg>
               </div>
               <div class="fcard__c">
                 <div class="fcard__t" data-i18n="intro.card1_t">Privatsphäre zuerst</div>
@@ -169,20 +177,36 @@
             </div>
             <div class="fcard fcard-2">
               <div class="fcard__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="36px" viewBox="0 0 24 24" width="36px" fill="var(--forest)"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12.22,19.85c-0.18,0.18-0.5,0.21-0.71,0c-0.18-0.18-0.21-0.5,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39 c-0.19,0.2-0.51,0.19-0.71,0c-0.21-0.21-0.18-0.53,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0 c-0.19-0.19-0.19-0.51,0-0.71l3.39-3.39L9.24,10.1l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0c-0.19-0.2-0.19-0.51,0-0.71L9.52,8.4 l1.87,1.86c0.95,0.95,2.59,0.94,3.54,0c0.98-0.98,0.98-2.56,0-3.54l-1.86-1.86l0.28-0.28c0.78-0.78,2.05-0.78,2.83,0l4.24,4.24 c0.78,0.78,0.78,2.05,0,2.83L12.22,19.85z M21.83,13.07c1.56-1.56,1.56-4.09,0-5.66l-4.24-4.24c-1.56-1.56-4.09-1.56-5.66,0 l-0.28,0.28l-0.28-0.28c-1.56-1.56-4.09-1.56-5.66,0L2.17,6.71c-1.42,1.42-1.55,3.63-0.4,5.19l1.45-1.45 C2.83,9.7,2.96,8.75,3.59,8.12l3.54-3.54c0.78-0.78,2.05-0.78,2.83,0l3.56,3.56c0.18,0.18,0.21,0.5,0,0.71 c-0.21,0.21-0.53,0.18-0.71,0L9.52,5.57l-5.8,5.79c-0.98,0.97-0.98,2.56,0,3.54c0.39,0.39,0.89,0.63,1.42,0.7 c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7 c0.07,0.54,0.31,1.03,0.7,1.42c0.47,0.47,1.1,0.73,1.77,0.73c0.67,0,1.3-0.26,1.77-0.73L21.83,13.07z"/></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="36px"
+                  viewBox="0 0 24 24" width="36px" fill="var(--forest)">
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                  </g>
+                  <g>
+                    <path
+                      d="M12.22,19.85c-0.18,0.18-0.5,0.21-0.71,0c-0.18-0.18-0.21-0.5,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39 c-0.19,0.2-0.51,0.19-0.71,0c-0.21-0.21-0.18-0.53,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0 c-0.19-0.19-0.19-0.51,0-0.71l3.39-3.39L9.24,10.1l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0c-0.19-0.2-0.19-0.51,0-0.71L9.52,8.4 l1.87,1.86c0.95,0.95,2.59,0.94,3.54,0c0.98-0.98,0.98-2.56,0-3.54l-1.86-1.86l0.28-0.28c0.78-0.78,2.05-0.78,2.83,0l4.24,4.24 c0.78,0.78,0.78,2.05,0,2.83L12.22,19.85z M21.83,13.07c1.56-1.56,1.56-4.09,0-5.66l-4.24-4.24c-1.56-1.56-4.09-1.56-5.66,0 l-0.28,0.28l-0.28-0.28c-1.56-1.56-4.09-1.56-5.66,0L2.17,6.71c-1.42,1.42-1.55,3.63-0.4,5.19l1.45-1.45 C2.83,9.7,2.96,8.75,3.59,8.12l3.54-3.54c0.78-0.78,2.05-0.78,2.83,0l3.56,3.56c0.18,0.18,0.21,0.5,0,0.71 c-0.21,0.21-0.53,0.18-0.71,0L9.52,5.57l-5.8,5.79c-0.98,0.97-0.98,2.56,0,3.54c0.39,0.39,0.89,0.63,1.42,0.7 c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7 c0.07,0.54,0.31,1.03,0.7,1.42c0.47,0.47,1.1,0.73,1.77,0.73c0.67,0,1.3-0.26,1.77-0.73L21.83,13.07z" />
+                  </g>
+                </svg>
               </div>
               <div class="fcard__c">
                 <div class="fcard__t" data-i18n="intro.card2_t">Voll betreut</div>
-                <div class="fcard__b" data-i18n="intro.card2_b">Ich installiere alles und halte es aus der Ferne am Laufen.</div>
+                <div class="fcard__b" data-i18n="intro.card2_b">Ich installiere alles und halte es aus der Ferne am
+                  Laufen.</div>
               </div>
             </div>
             <div class="fcard fcard-3">
               <div class="fcard__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="var(--forest)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M24 15c0-2.64-2.05-4.78-4.65-4.96C18.67 6.59 15.64 4 12 4c-1.33 0-2.57.36-3.65.97l1.49 1.49C10.51 6.17 11.23 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 .99-.48 1.85-1.21 2.4l1.41 1.41c1.09-.92 1.8-2.27 1.8-3.81zM4.41 3.86L3 5.27l2.77 2.77h-.42C2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h11.73l2 2 1.41-1.41L4.41 3.86zM6 18c-2.21 0-4-1。79-4-4s1。79-4 4-4h1。73l8 8H6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px"
+                  fill="var(--forest)">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M24 15c0-2.64-2.05-4.78-4.65-4.96C18.67 6.59 15.64 4 12 4c-1.33 0-2.57.36-3.65.97l1.49 1.49C10.51 6.17 11.23 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 .99-.48 1.85-1.21 2.4l1.41 1.41c1.09-.92 1.8-2.27 1.8-3.81zM4.41 3.86L3 5.27l2.77 2.77h-.42C2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h11.73l2 2 1.41-1.41L4.41 3.86zM6 18c-2.21 0-4-1。79-4-4s1。79-4 4-4h1。73l8 8H6z" />
+                </svg>
               </div>
               <div class="fcard__c">
                 <div class="fcard__t" data-i18n="intro.card3_t">Keine Bindung</div>
-                <div class="fcard__b" data-i18n="intro.card3_b">Wechseln Sie Geräte ohne das System neu aufzubauen.</div>
+                <div class="fcard__b" data-i18n="intro.card3_b">Wechseln Sie Geräte ohne das System neu aufzubauen.
+                </div>
               </div>
             </div>
           </div>
@@ -197,9 +221,11 @@
       <div class="sec-center">
         <p class="sec-eye reveal" data-i18n="packages.eye">Preise & Pakete</p>
         <h2 class="sec-h reveal d1">
-          <span class="pkg-title" data-i18n="packages.h2_basis" data-i18n-html="true">Das richtige Paket<br><em>für Ihr Zuhause.</em></span>
+          <span class="pkg-title" data-i18n="packages.h2_basis" data-i18n-html="true">Das richtige Paket<br><em>für Ihr
+              Zuhause.</em></span>
         </h2>
-        <p class="reveal d2" data-i18n="packages.sub">Alle Pakete beinhalten Installation, Einrichtung und laufende Fernbetreuung. Keine
+        <p class="reveal d2" data-i18n="packages.sub">Alle Pakete beinhalten Installation, Einrichtung und laufende
+          Fernbetreuung. Keine
           versteckten Kosten.</p>
       </div>
       <div class="pkg-tabs">
@@ -213,8 +239,11 @@
         <div class="pkg reveal d1">
           <div class="pkg__top">
             <span class="pkg__badge badge-d" data-i18n="packages.pkg1_badge">Essential</span>
-            <div class="pkg__name" data-basis="Basic" data-senioren="Safe at Home" data-mieter="Miet-Sicherheit" data-ferienhaus="Holiday Security">Basic</div>
-            <div class="pkg__tag" data-basis="Einstieg ins Smart Home" data-senioren="Sicherheit und Grundfunktionen" data-mieter="Sichere Vermögenswerte schützen" data-ferienhaus="Grundschutz für Ferienhäuser">Einstieg ins Smart Home</div>
+            <div class="pkg__name" data-basis="Basic" data-senioren="Safe at Home" data-mieter="Miet-Sicherheit"
+              data-ferienhaus="Holiday Security">Basic</div>
+            <div class="pkg__tag" data-basis="Einstieg ins Smart Home" data-senioren="Sicherheit und Grundfunktionen"
+              data-mieter="Sichere Vermögenswerte schützen" data-ferienhaus="Grundschutz für Ferienhäuser">Einstieg ins
+              Smart Home</div>
             <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">49</span><span
                 class="pkg__mo">/Monat</span></div>
           </div>
@@ -224,10 +253,13 @@
               <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_2">2× Bewegungsmelder</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_3">Rauch- & CO-Detektor</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_4">2× Wassermelder</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_5">Smarter Thermostat / TRV</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_5">Smarter Thermostat / TRV</span>
+              </li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_6">Haustür-Sensor</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_7">Smart Plug (Herd-Abschaltung)</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_8">Monatlicher Familienbericht</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_7">Smart Plug
+                  (Herd-Abschaltung)</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_8">Monatlicher Familienbericht</span>
+              </li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg1_feature_9">E-Mail Support / 48h</span></li>
             </ul>
             <button class="pkg__btn btn-pkg-d" data-i18n="packages.pkg1_btn">Jetzt anfragen</button>
@@ -238,8 +270,11 @@
         <div class="pkg pkg-featured reveal d2">
           <div class="pkg__top">
             <span class="pkg__badge badge-f" data-i18n="packages.pkg2_badge">Empfohlen</span>
-            <div class="pkg__name" data-basis="Advanced" data-senioren="Peace of Mind" data-mieter="Umfassender Schutz" data-ferienhaus="Holiday Peace of Mind">Advanced</div>
-            <div class="pkg__tag" data-basis="Umfassende Smart-Home Lösung" data-senioren="Vollständige Überwachung & Kontrolle" data-mieter="Kompletter Schutz und Monitoring" data-ferienhaus="Überwachung und Kontrolle">Umfassende Smart-Home Lösung</div>
+            <div class="pkg__name" data-basis="Advanced" data-senioren="Peace of Mind" data-mieter="Umfassender Schutz"
+              data-ferienhaus="Holiday Peace of Mind">Advanced</div>
+            <div class="pkg__tag" data-basis="Umfassende Smart-Home Lösung"
+              data-senioren="Vollständige Überwachung & Kontrolle" data-mieter="Kompletter Schutz und Monitoring"
+              data-ferienhaus="Überwachung und Kontrolle">Umfassende Smart-Home Lösung</div>
             <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">89</span><span
                 class="pkg__mo">/Monat</span></div>
           </div>
@@ -249,8 +284,10 @@
               <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_2">4× Bewegungsmelder</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_3">Video-Türklingel</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_4">Nacht-Licht Automation</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_5">Notfall-Knopf (tragbar)</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_6">Inaktivitäts-Monitoring</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_5">Notfall-Knopf (tragbar)</span>
+              </li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_6">Inaktivitäts-Monitoring</span>
+              </li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_7">Voller Jahresbericht</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg2_feature_8">Telefon-Support / 24h</span></li>
             </ul>
@@ -262,19 +299,26 @@
         <div class="pkg reveal d3">
           <div class="pkg__top">
             <span class="pkg__badge badge-d" data-i18n="packages.pkg3_badge">Premium</span>
-            <div class="pkg__name" data-basis="All in" data-senioren="Independent Living" data-mieter="Smart Living" data-ferienhaus="Holiday Complete">All in</div>
-            <div class="pkg__tag" data-basis="Komplette Smart-Home Lösung" data-senioren="Vollständig ausgestattet" data-mieter="Intelligentes Wohnen vollständig" data-ferienhaus="Komplette Smart-Home Lösung">Komplette Smart-Home Lösung</div>
+            <div class="pkg__name" data-basis="All in" data-senioren="Independent Living" data-mieter="Smart Living"
+              data-ferienhaus="Holiday Complete">All in</div>
+            <div class="pkg__tag" data-basis="Komplette Smart-Home Lösung" data-senioren="Vollständig ausgestattet"
+              data-mieter="Intelligentes Wohnen vollständig" data-ferienhaus="Komplette Smart-Home Lösung">Komplette
+              Smart-Home Lösung</div>
             <div class="pkg__pr"><span class="pkg__cur">CHF</span><span class="pkg__num">149</span><span
                 class="pkg__mo">/Monat</span></div>
           </div>
           <div class="pkg__body">
             <ul class="pkg__list pkg-3">
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_1">Alles aus Peace of Mind</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_2">Smart Lock (schlüssellos)</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_3">6× Sensoren, Luftqualität</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_1">Alles aus Peace of Mind</span>
+              </li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_2">Smart Lock (schlüssellos)</span>
+              </li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_3">6× Sensoren, Luftqualität</span>
+              </li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_4">Quartalsbesuch vor Ort</span></li>
               <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_5">Familien-App Zugang</span></li>
-              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_6">Prioritäts-Support / 4h</span></li>
+              <li><span class="chk">✓</span><span data-i18n="packages.pkg3_feature_6">Prioritäts-Support / 4h</span>
+              </li>
             </ul>
             <button class="pkg__btn btn-pkg-d" data-i18n="packages.pkg3_btn">Jetzt anfragen</button>
             <p class="pkg__note" data-i18n="packages.pkg3_note">Hardware einmalig ~CHF 700–900</p>
@@ -296,7 +340,8 @@
         <div>
           <p class="sec-eye proc-eye reveal" data-i18n="process.eye">So funktioniert's</p>
           <h2 class="proc-h reveal d1" data-i18n="process.h2" data-i18n-html="true">Einfach<br><em>loslegen.</em></h2>
-          <p class="proc-p reveal d2" data-i18n="process.p">Von der Beratung bis zur laufenden Betreuung kümmere ich mich um alles. Keine
+          <p class="proc-p reveal d2" data-i18n="process.p">Von der Beratung bis zur laufenden Betreuung kümmere ich
+            mich um alles. Keine
             Technik-Vorkenntnisse nötig.</p>
         </div>
         <div class="steps">
@@ -307,9 +352,11 @@
             </div>
             <div class="step__c">
               <div class="step__t" data-i18n="process.step1_t">Kostenloses Beratungsgespräch</div>
-              <div class="step__b" data-i18n="process.step1_b">Wir sprechen über Ihre Bedürfnisse und was am besten passt. Kein Verkaufsgespräch —
+              <div class="step__b" data-i18n="process.step1_b">Wir sprechen über Ihre Bedürfnisse und was am besten
+                passt. Kein Verkaufsgespräch —
                 nur Zuhören und ehrliche Empfehlungen.</div>
-              <div class="step__tags"><span class="step__tag" data-i18n="process.step1_tag1">30 Min</span><span class="step__tag" data-i18n="process.step1_tag2">Online oder vor
+              <div class="step__tags"><span class="step__tag" data-i18n="process.step1_tag1">30 Min</span><span
+                  class="step__tag" data-i18n="process.step1_tag2">Online oder vor
                   Ort</span><span class="step__tag" data-i18n="process.step1_tag3">Kostenlos</span></div>
             </div>
           </div>
@@ -320,9 +367,11 @@
             </div>
             <div class="step__c">
               <div class="step__t" data-i18n="process.step2_t">Installation & Einrichtung</div>
-              <div class="step__b" data-i18n="process.step2_b">Ich installiere alle Geräte, richte das Platfrom ein und konfiguriere alle
+              <div class="step__b" data-i18n="process.step2_b">Ich installiere alle Geräte, richte das Platfrom ein und
+                konfiguriere alle
                 Automatisierungen. 2–4 Stunden, keine Eingriffe ins Mauerwerk.</div>
-              <div class="step__tags"><span class="step__tag" data-i18n="process.step2_tag1">Vor Ort</span><span class="step__tag" data-i18n="process.step2_tag2">2–4
+              <div class="step__tags"><span class="step__tag" data-i18n="process.step2_tag1">Vor Ort</span><span
+                  class="step__tag" data-i18n="process.step2_tag2">2–4
                   Stunden</span><span class="step__tag" data-i18n="process.step2_tag3">Keine Eingriffe</span></div>
             </div>
           </div>
@@ -333,9 +382,11 @@
             </div>
             <div class="step__c">
               <div class="step__t" data-i18n="process.step3_t">Einführung & Schulung</div>
-              <div class="step__b" data-i18n="process.step3_b">Ich zeige Ihnen und Ihrer Familie wie alles funktioniert — einfach, ohne Fachjargon.
+              <div class="step__b" data-i18n="process.step3_b">Ich zeige Ihnen und Ihrer Familie wie alles funktioniert
+                — einfach, ohne Fachjargon.
                 Mit Handbuch in Deutsch und Englisch.</div>
-              <div class="step__tags"><span class="step__tag" data-i18n="process.step3_tag1">Deutsch / Englisch</span><span class="step__tag" data-i18n="process.step3_tag2">Handbuch
+              <div class="step__tags"><span class="step__tag" data-i18n="process.step3_tag1">Deutsch /
+                  Englisch</span><span class="step__tag" data-i18n="process.step3_tag2">Handbuch
                   inkl.</span></div>
             </div>
           </div>
@@ -345,10 +396,12 @@
             </div>
             <div class="step__c">
               <div class="step__t" data-i18n="process.step4_t">Laufende Fernbetreuung</div>
-              <div class="step__b" data-i18n="process.step4_b">Ich überwache Ihr System, führe Updates durch und bin bei Problemen erreichbar.
+              <div class="step__b" data-i18n="process.step4_b">Ich überwache Ihr System, führe Updates durch und bin bei
+                Problemen erreichbar.
                 Monatlicher Bericht für Sie und Ihre Familie.</div>
-              <div class="step__tags"><span class="step__tag" data-i18n="process.step4_tag1">Remote Monitoring</span><span
-                  class="step__tag" data-i18n="process.step4_tag2">Monatsbericht</span><span class="step__tag" data-i18n="process.step4_tag3">Support inkl.</span></div>
+              <div class="step__tags"><span class="step__tag" data-i18n="process.step4_tag1">Remote
+                  Monitoring</span><span class="step__tag" data-i18n="process.step4_tag2">Monatsbericht</span><span
+                  class="step__tag" data-i18n="process.step4_tag3">Support inkl.</span></div>
             </div>
           </div>
         </div>
@@ -361,55 +414,100 @@
     <div class="container">
       <div class="why__head">
         <p class="why__eye reveal" data-i18n="why.eye">Warum Konihaus?</p>
-        <h2 class="why__h reveal d1" data-i18n="why.h2" data-i18n-html="true">Die Alternative zu Big<br><em>Tech im Wohnzimmer.</em></h2>
+        <h2 class="why__h reveal d1" data-i18n="why.h2" data-i18n-html="true">Die Alternative zu Big<br><em>Tech im
+            Wohnzimmer.</em></h2>
       </div>
       <div class="why__grid">
         <div class="why__item reveal">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M24 15c0-2.64-2.05-4.78-4.65-4.96C18.67 6.59 15.64 4 12 4c-1.33 0-2.57.36-3.65.97l1.49 1.49C10.51 6.17 11.23 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 .99-.48 1.85-1.21 2.4l1.41 1.41c1.09-.92 1.8-2.27 1.8-3.81zM4.41 3.86L3 5.27l2.77 2.77h-.42C2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h11.73l2 2 1.41-1.41L4.41 3.86zM6 18c-2.21 0-4-1.79-4-4s1.79-4 4-4h1.73l8 8H6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+              fill="var(--parchment)">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M24 15c0-2.64-2.05-4.78-4.65-4.96C18.67 6.59 15.64 4 12 4c-1.33 0-2.57.36-3.65.97l1.49 1.49C10.51 6.17 11.23 6 12 6c3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3 0 .99-.48 1.85-1.21 2.4l1.41 1.41c1.09-.92 1.8-2.27 1.8-3.81zM4.41 3.86L3 5.27l2.77 2.77h-.42C2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h11.73l2 2 1.41-1.41L4.41 3.86zM6 18c-2.21 0-4-1.79-4-4s1.79-4 4-4h1.73l8 8H6z" />
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item1_t">Privatsphäre als Standard</div>
-          <div class="why__b" data-i18n="why.item1_b">Ihre Daten verlassen Ihr Zuhause nicht. Vollständig lokal betrieben — kein Amazon, kein
+          <div class="why__b" data-i18n="why.item1_b">Ihre Daten verlassen Ihr Zuhause nicht. Vollständig lokal
+            betrieben — kein Amazon, kein
             Google erforderlich.</div>
         </div>
         <div class="why__item reveal d1">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+              fill="var(--parchment)">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92zM18 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM6 13c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 7.02c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item2_t">Kein Vendor Lock-in</div>
-          <div class="why__b" data-i18n="why.item2_b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie Geräte, ohne das System neu
+          <div class="why__b" data-i18n="why.item2_b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie
+            Geräte, ohne das System neu
             aufzubauen.</div>
         </div>
         <div class="why__item reveal d2">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><g><rect fill="none" height="24" width="24"/></g><g><path d="M12.22,19.85c-0.18,0.18-0.5,0.21-0.71,0c-0.18-0.18-0.21-0.5,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39 c-0.19,0.2-0.51,0.19-0.71,0c-0.21-0.21-0.18-0.53,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0 c-0.19-0.19-0.19-0.51,0-0.71l3.39-3.39L9.24,10.1l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0c-0.19-0.2-0.19-0.51,0-0.71L9.52,8.4 l1.87,1.86c0.95,0.95,2.59,0.94,3.54,0c0.98-0.98,0.98-2.56,0-3.54l-1.86-1.86l0.28-0.28c0.78-0.78,2.05-0.78,2.83,0l4.24,4.24 c0.78,0.78,0.78,2.05,0,2.83L12.22,19.85z M21.83,13.07c1.56-1.56,1.56-4.09,0-5.66l-4.24-4.24c-1.56-1.56-4.09-1.56-5.66,0 l-0.28,0.28l-0.28-0.28c-1.56-1.56-4.09-1.56-5.66,0L2.17,6.71c-1.42,1.42-1.55,3.63-0.4,5.19l1.45-1.45 C2.83,9.7,2.96,8.75,3.59,8.12l3.54-3.54c0.78-0.78,2.05-0.78,2.83,0l3.56,3.56c0.18,0.18,0.21,0.5,0,0.71 c-0.21,0.21-0.53,0.18-0.71,0L9.52,5.57l-5.8,5.79c-0.98,0.97-0.98,2.56,0,3.54c0.39,0.39,0.89,0.63,1.42,0.7 c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7 c0.07,0.54,0.31,1.03,0.7,1.42c0.47,0.47,1.1,0.73,1.77,0.73c0.67,0,1.3-0.26,1.77-0.73L21.83,13.07z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+              width="24px" fill="var(--parchment)">
+              <g>
+                <rect fill="none" height="24" width="24" />
+              </g>
+              <g>
+                <path
+                  d="M12.22,19.85c-0.18,0.18-0.5,0.21-0.71,0c-0.18-0.18-0.21-0.5,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39 c-0.19,0.2-0.51,0.19-0.71,0c-0.21-0.21-0.18-0.53,0-0.71l3.39-3.39l-1.41-1.41l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0 c-0.19-0.19-0.19-0.51,0-0.71l3.39-3.39L9.24,10.1l-3.39,3.39c-0.18,0.18-0.5,0.21-0.71,0c-0.19-0.2-0.19-0.51,0-0.71L9.52,8.4 l1.87,1.86c0.95,0.95,2.59,0.94,3.54,0c0.98-0.98,0.98-2.56,0-3.54l-1.86-1.86l0.28-0.28c0.78-0.78,2.05-0.78,2.83,0l4.24,4.24 c0.78,0.78,0.78,2.05,0,2.83L12.22,19.85z M21.83,13.07c1.56-1.56,1.56-4.09,0-5.66l-4.24-4.24c-1.56-1.56-4.09-1.56-5.66,0 l-0.28,0.28l-0.28-0.28c-1.56-1.56-4.09-1.56-5.66,0L2.17,6.71c-1.42,1.42-1.55,3.63-0.4,5.19l1.45-1.45 C2.83,9.7,2.96,8.75,3.59,8.12l3.54-3.54c0.78-0.78,2.05-0.78,2.83,0l3.56,3.56c0.18,0.18,0.21,0.5,0,0.71 c-0.21,0.21-0.53,0.18-0.71,0L9.52,5.57l-5.8,5.79c-0.98,0.97-0.98,2.56,0,3.54c0.39,0.39,0.89,0.63,1.42,0.7 c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7c0.07,0.52,0.3,1.02,0.7,1.42c0.4,0.4,0.9,0.63,1.42,0.7 c0.07,0.54,0.31,1.03,0.7,1.42c0.47,0.47,1.1,0.73,1.77,0.73c0.67,0,1.3-0.26,1.77-0.73L21.83,13.07z" />
+              </g>
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item3_t">Persönlicher Service</div>
-          <div class="why__b" data-i18n="why.item3_b">Sie sprechen immer direkt mit Koni. Kein Callcenter, kein Ticket-System — echte Betreuung.
+          <div class="why__b" data-i18n="why.item3_b">Sie sprechen immer direkt mit Koni. Kein Callcenter, kein
+            Ticket-System — echte Betreuung.
           </div>
         </div>
         <div class="why__item reveal d1">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><rect fill="none" height="24" width="24"/><path d="M10.5,13H8v-3h2.5V7.5h3V10H16v3h-2.5v2.5h-3V13z M12,2L4,5v6.09c0,5.05,3.41,9.76,8,10.91c4.59-1.15,8-5.86,8-10.91V5L12,2 z M18,11.09c0,4-2.55,7.7-6,8.83c-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25l6,2.25V11.09z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+              width="24px" fill="var(--parchment)">
+              <rect fill="none" height="24" width="24" />
+              <path
+                d="M10.5,13H8v-3h2.5V7.5h3V10H16v3h-2.5v2.5h-3V13z M12,2L4,5v6.09c0,5.05,3.41,9.76,8,10.91c4.59-1.15,8-5.86,8-10.91V5L12,2 z M18,11.09c0,4-2.55,7.7-6,8.83c-3.45-1.13-6-4.82-6-8.83v-4.7l6-2.25l6,2.25V11.09z" />
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item4_t">Schweizer Qualität</div>
-          <div class="why__b" data-i18n="why.item4_b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards, Typ-J-Steckdosen und kantonalen
+          <div class="why__b" data-i18n="why.item4_b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards,
+            Typ-J-Steckdosen und kantonalen
             Vorschriften.</div>
         </div>
         <div class="why__item reveal d2">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><g><rect fill="none" height="24" width="24"/></g><g><path d="M11,21h-1l1-7H7.5c-0.88,0-0.33-0.75-0.31-0.78C8.48,10.94,10.42,7.54,13.01,3h1l-1,7h3.51c0.4,0,0.62,0.19,0.4,0.66 C12.97,17.55,11,21,11,21z"/></g></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24"
+              width="24px" fill="var(--parchment)">
+              <g>
+                <rect fill="none" height="24" width="24" />
+              </g>
+              <g>
+                <path
+                  d="M11,21h-1l1-7H7.5c-0.88,0-0.33-0.75-0.31-0.78C8.48,10.94,10.42,7.54,13.01,3h1l-1,7h3.51c0.4,0,0.62,0.19,0.4,0.66 C12.97,17.55,11,21,11,21z" />
+              </g>
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item5_t">Energieeffizienz</div>
-          <div class="why__b" data-i18n="why.item5_b">Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren
+          <div class="why__b" data-i18n="why.item5_b">Automatische Heizungsregelung, Geräteabschaltung und
+            Verbrauchsberichte senken Ihren
             Energieverbrauch.</div>
         </div>
         <div class="why__item reveal d3">
           <div class="why__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="var(--parchment)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+              fill="var(--parchment)">
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
+            </svg>
           </div>
           <div class="why__t" data-i18n="why.item6_t">Zukunftssicher</div>
-          <div class="why__b" data-i18n="why.item6_b">Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit —
+          <div class="why__b" data-i18n="why.item6_b">Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit
+            neuen Standards mit —
             kostenlos.</div>
         </div>
       </div>
@@ -421,9 +519,12 @@
     <div class="container">
       <div class="devices__grid">
         <div>
-          <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal" data-i18n="devices.eye">Geräte & Technik</p>
-          <h2 class="dev-h reveal d1" data-i18n="devices.h2" data-i18n-html="true">Beste Geräte.<br><em>Lokal vernetzt.</em></h2>
-          <p class="dev-p reveal d2" data-i18n="devices.p">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit Greenhub und ohne
+          <p class="sec-eye" style="color:var(--stone);margin-bottom:12px;" class="reveal" data-i18n="devices.eye">
+            Geräte & Technik</p>
+          <h2 class="dev-h reveal d1" data-i18n="devices.h2" data-i18n-html="true">Beste Geräte.<br><em>Lokal
+              vernetzt.</em></h2>
+          <p class="dev-p reveal d2" data-i18n="devices.p">Bewährte Zigbee-Geräte führender Hersteller — kompatibel mit
+            Greenhub und ohne
             Cloud-Zwang. Alle bei Digitec, Galaxus und IKEA Schweiz oder anderen Schweizer Händlern erhältlich.</p>
           <div class="dev-tags reveal d3">
             <div class="dev-tag" data-i18n="devices.tag1">
@@ -472,14 +573,20 @@
           </div>
           <div class="hub-sub" data-i18n="devices.hub_sub">+ Zigbee ZBT3 Dongle · Secure Remote Access</div>
           <div class="hub-rows">
-            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row1_l">Betrieb</span><span class="hv" data-i18n="devices.hub_row1_v">100% lokal</span></div>
-            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row2_l">Protokolle</span><span class="hv" data-i18n="devices.hub_row2_v">Zigbee · Matter · Thread</span></div>
-            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row3_l">Stromverbrauch</span><span class="hv" data-i18n="devices.hub_row3_v">2–6 Watt</span></div>
-            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row4_l">Speicher</span><span class="hv" data-i18n="devices.hub_row4_v">64-1284GB SD or SSD</span></div>
-            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row5_l">Fernzugriff</span><span class="hv" data-i18n="devices.hub_row5_v">Verschlüsselt via Private VPN or Tailscale</span>
+            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row1_l">Betrieb</span><span class="hv"
+                data-i18n="devices.hub_row1_v">100% lokal</span></div>
+            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row2_l">Protokolle</span><span class="hv"
+                data-i18n="devices.hub_row2_v">Zigbee · Matter · Thread</span></div>
+            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row3_l">Stromverbrauch</span><span class="hv"
+                data-i18n="devices.hub_row3_v">2–6 Watt</span></div>
+            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row4_l">Speicher</span><span class="hv"
+                data-i18n="devices.hub_row4_v">64-1284GB SD or SSD</span></div>
+            <div class="hub-row"><span class="hl" data-i18n="devices.hub_row5_l">Fernzugriff</span><span class="hv"
+                data-i18n="devices.hub_row5_v">Verschlüsselt via Private VPN or Tailscale</span>
             </div>
           </div>
-          <div class="hub-note" data-i18n="devices.hub_note">★ Daten verlassen Ihr Haus nicht oder nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen
+          <div class="hub-note" data-i18n="devices.hub_note">★ Daten verlassen Ihr Haus nicht oder nur verschlüsselt —
+            und nur wenn Sie aus der Ferne zugreifen
             möchten.</div>
         </div>
       </div>
@@ -505,13 +612,17 @@
         </div>
         <div>
           <p class="sec-eye about-eye reveal" data-i18n="about.eye">Über Koni</p>
-          <h2 class="about-h reveal d1" data-i18n="about.h2" data-i18n-html="true">Smart Home von<br>einem <em>echten Menschen.</em></h2>
-          <p class="about-p reveal d2" data-i18n="about.p1">Mein Name ist Konrad — alle nennen mich Koni. Als Solution Architect mit
+          <h2 class="about-h reveal d1" data-i18n="about.h2" data-i18n-html="true">Smart Home von<br>einem <em>echten
+              Menschen.</em></h2>
+          <p class="about-p reveal d2" data-i18n="about.p1">Mein Name ist Konrad — alle nennen mich Koni. Als Solution
+            Architect mit
             Schwerpunkt Frontend-Technologie mache ich komplexe Systeme verständlich und nutzbar.</p>
-          <p class="about-p reveal d2" data-i18n="about.p2">Konihaus entstand aus meiner eigenen Frustration: Entweder kauft man sich in ein
+          <p class="about-p reveal d2" data-i18n="about.p2">Konihaus entstand aus meiner eigenen Frustration: Entweder
+            kauft man sich in ein
             proprietäres Ökosystem ein, oder man kämpft sich als Technikprofi alleine durch. Eine professionell
             betreute, lokale Lösung gab es nicht — bis jetzt.</p>
-          <blockquote class="about-q reveal d3" data-i18n="about.quote">"Ich möchte, dass Ihr Zuhause für Sie arbeitet — nicht für Amazon oder
+          <blockquote class="about-q reveal d3" data-i18n="about.quote">"Ich möchte, dass Ihr Zuhause für Sie arbeitet —
+            nicht für Amazon oder
             Google."</blockquote>
           <!--div class="about-chips reveal d3">
             <span class="about-chip">Home Assistant</span>
@@ -530,14 +641,15 @@
     <div class="container">
       <div class="sec-center">
         <p class="sec-eye reveal" data-i18n="testimonials.eye">Was Kunden sagen</p>
-        <h2 class="sec-h reveal d1" style="color:var(--ink);" data-i18n="testimonials.h2" data-i18n-html="true">Echte <em
-            style="color:var(--forest-mid)">Erfahrungen.</em></h2>
+        <h2 class="sec-h reveal d1" style="color:var(--ink);" data-i18n="testimonials.h2" data-i18n-html="true">Echte
+          <em style="color:var(--forest-mid)">Erfahrungen.</em></h2>
         <p class="reveal d2" data-i18n="testimonials.sub">Stimmen aus unseren Pilotinstallationen.</p>
       </div>
       <div class="testi-grid">
         <div class="tcard reveal d1">
           <div class="tcard__stars">★★★★★</div>
-          <div class="tcard__q" data-i18n="testimonials.t1_q">"Endlich kann ich von Basel aus prüfen, ob die Heizung meiner Mutter in Zürich
+          <div class="tcard__q" data-i18n="testimonials.t1_q">"Endlich kann ich von Basel aus prüfen, ob die Heizung
+            meiner Mutter in Zürich
             funktioniert. Koni hat alles in drei Stunden eingerichtet."</div>
           <div class="tcard__author">
             <div class="tcard__av">M</div>
@@ -549,7 +661,8 @@
         </div>
         <div class="tcard reveal d2">
           <div class="tcard__stars">★★★★★</div>
-          <div class="tcard__q" data-i18n="testimonials.t2_q">"Mein Ferienhaus in Zermatt war immer eine Sorge. Jetzt bekomme ich sofort eine
+          <div class="tcard__q" data-i18n="testimonials.t2_q">"Mein Ferienhaus in Zermatt war immer eine Sorge. Jetzt
+            bekomme ich sofort eine
             Nachricht wenn etwas nicht stimmt — Wasserrohr, Fenster, alles."</div>
           <div class="tcard__author">
             <div class="tcard__av">S</div>
@@ -561,7 +674,8 @@
         </div>
         <div class="tcard reveal d3">
           <div class="tcard__stars">★★★★★</div>
-          <div class="tcard__q" data-i18n="testimonials.t3_q">"Ich dachte, Smarthome sei nichts für mich. Koni hat mir in einer Stunde alles erklärt —
+          <div class="tcard__q" data-i18n="testimonials.t3_q">"Ich dachte, Smarthome sei nichts für mich. Koni hat mir
+            in einer Stunde alles erklärt —
             ohne einen einzigen Fachbegriff."</div>
           <div class="tcard__author">
             <div class="tcard__av">H</div>
@@ -579,14 +693,17 @@
   <section class="cta-sec">
     <div class="container">
       <p class="cta-eye reveal" data-i18n="cta.eye">Loslegen</p>
-      <h2 class="cta-h reveal d1" data-i18n="cta.h2" data-i18n-html="true">Bereit für ein<br>smartheres <em>Zuhause?</em></h2>
-      <p class="cta-sub reveal d2" data-i18n="cta.sub">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und empfehle, was
+      <h2 class="cta-h reveal d1" data-i18n="cta.h2" data-i18n-html="true">Bereit für ein<br>smartheres
+        <em>Zuhause?</em></h2>
+      <p class="cta-sub reveal d2" data-i18n="cta.sub">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und
+        empfehle, was
         wirklich zu Ihnen passt.</p>
       <div class="cta-btns reveal d3">
         <a href="#contact" class="btn btn-primary" data-i18n="cta.btn1">Beratung anfragen →</a>
         <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost" data-i18n="cta.btn2">hallo@konihaus.ch</a>
       </div>
-      <p class="cta-note reveal d4" data-i18n="cta.note">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni</p>
+      <p class="cta-note reveal d4" data-i18n="cta.note">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt
+        mit Koni</p>
     </div>
   </section>
 
@@ -595,9 +712,12 @@
     <div class="container">
       <div class="contact__grid">
         <div>
-          <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal" data-i18n="contact.eye">Kontakt</p>
-          <h2 class="con-h reveal d1" data-i18n="contact.h2" data-i18n-html="true">Sprechen wir<br>über <em>Ihr Zuhause.</em></h2>
-          <p class="con-p reveal d2" data-i18n="contact.p">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder
+          <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal" data-i18n="contact.eye">
+            Kontakt</p>
+          <h2 class="con-h reveal d1" data-i18n="contact.h2" data-i18n-html="true">Sprechen wir<br>über <em>Ihr
+              Zuhause.</em></h2>
+          <p class="con-p reveal d2" data-i18n="contact.p">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung,
+            Elternhaus oder
             Feriendomizil. Ich melde mich innert 24 Stunden.</p>
           <div class="con-details reveal d3">
             <div class="con-detail" data-i18n="contact.detail1">
@@ -613,10 +733,11 @@
         </div>
         <form class="cform reveal d2" onsubmit="handleSubmit(event)">
           <div class="frow">
-            <div class="fg"><label for="n" data-i18n="contact.form_name_label">Name</label><input type="text" id="n" data-i18n="contact.form_name_placeholder" placeholder="Max Muster" required>
+            <div class="fg"><label for="n" data-i18n="contact.form_name_label">Name</label><input type="text" id="n"
+                data-i18n="contact.form_name_placeholder" placeholder="Max Muster" required>
             </div>
-            <div class="fg"><label for="e" data-i18n="contact.form_email_label">E-Mail</label><input type="email" id="e" data-i18n="contact.form_email_placeholder" placeholder="max@example.ch"
-                required></div>
+            <div class="fg"><label for="e" data-i18n="contact.form_email_label">E-Mail</label><input type="email" id="e"
+                data-i18n="contact.form_email_placeholder" placeholder="max@example.ch" required></div>
           </div>
           <div class="fg">
             <label for="i" data-i18n="contact.form_interest_label">Interesse</label>
@@ -629,10 +750,12 @@
               <option data-i18n="contact.form_interest_o5">Noch unsicher — Beratung gewünscht</option>
             </select>
           </div>
-          <div class="fg"><label for="m" data-i18n="contact.form_message_label">Ihre Situation</label><textarea id="m" rows="4"
-              data-i18n="contact.form_message_placeholder" placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
+          <div class="fg"><label for="m" data-i18n="contact.form_message_label">Ihre Situation</label><textarea id="m"
+              rows="4" data-i18n="contact.form_message_placeholder"
+              placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
           <button type="submit" class="fsub" data-i18n="contact.form_submit">Nachricht senden →</button>
-          <p style="font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;" data-i18n="contact.form_note">Keine Werbung. Kein Newsletter.
+          <p style="font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;" data-i18n="contact.form_note">
+            Keine Werbung. Kein Newsletter.
             Nur Koni.</p>
         </form>
       </div>
@@ -648,7 +771,8 @@
             <div class="logo-image"></div>
             <div class="wordmark">konihaus</div>
           </a>
-          <p class="footer__tagline" data-i18n="footer.tagline">Smart home managed service für Senioren, Mieter und Ferienhausbesitzer in der
+          <p class="footer__tagline" data-i18n="footer.tagline">Smart home managed service für Senioren, Mieter und
+            Ferienhausbesitzer in der
             Schweiz.</p>
         </div>
         <div>
@@ -680,8 +804,10 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
-        <div class="flegal"><a href="#" data-i18n="footer.legal1">Datenschutz</a><a href="#" data-i18n="footer.legal2">AGB</a><a href="#" data-i18n="footer.legal3">Impressum</a></div>
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz
+        </p>
+        <div class="flegal"><a href="#" data-i18n="footer.legal1">Datenschutz</a><a href="#"
+            data-i18n="footer.legal2">AGB</a><a href="#" data-i18n="footer.legal3">Impressum</a></div>
         <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
       </div>
     </div>
