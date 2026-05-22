@@ -6,7 +6,8 @@
       "mcp__MCP_DOCKER__*",
       "Bash(cat)",
       "Read(//tmp/**)",
-      "mcp__plugin_serena_serena__*"
+      "mcp__plugin_serena_serena__*",
+      "Bash(python3)"
     ]
   }
 }

@@ -873,6 +873,25 @@ a.logo {
   box-shadow: 0 24px 64px rgba(30, 42, 77, .3);
 }
 
+
+
+
+.pkg__disclaimer {
+  display: none;
+  font-size: 0.6875em;
+  color: var(--ink-4);
+  text-align: center;
+  margin-top: 0px;
+}
+
+.pkg-premium.senioren .pkg__disclaimer,
+.pkg-premium.mieter .pkg__disclaimer,
+.pkg-premium.ferienhaus .pkg__disclaimer{
+  display: block;
+}
+
+
+
 .pkg__top {
   padding: 26px 26px 18px;
   border-bottom: 1px solid var(--rule);
@@ -911,8 +930,18 @@ a.logo {
   color: var(--ink);
 }
 
+.pkg__highlight {
+  color: var(--forest);
+  font-weight: 500;
+}
+
 .pkg-featured .pkg__name {
   color: var(--parchment);
+}
+
+.pkg-featured .pkg__highlight {
+  color: var(--amber-warm);
+  font-weight: 500;
 }
 
 .pkg__tag {

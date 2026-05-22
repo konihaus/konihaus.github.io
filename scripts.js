@@ -229,6 +229,25 @@ function updatePackageContent(audience) {
     }
   }
 
+    // Update featured package background color
+  const pkgPremium = document.querySelector('.pkg-premium');
+  if (pkgPremium) {
+    pkgPremium.classList.remove('senioren', 'mieter', 'ferienhaus');
+    if (audience !== 'basis') {
+      pkgPremium.classList.add(audience);
+    }
+  }
+
+  // Update package "includes" label based on audience
+  const includesEls = document.querySelectorAll('.pkg__includes');
+  if (includesEls.length > 0) {
+    const includesKey = `pkg_includes_${audience}`;
+    const translatedIncludes = i18n.getText('packages', includesKey);
+    includesEls.forEach((el) => {
+      el.textContent = translatedIncludes;
+    });
+  }
+
   // Update package names and tags from i18n
   const packages = document.querySelectorAll('.pkg');
   packages.forEach((card, index) => {
@@ -249,6 +268,31 @@ function updatePackageContent(audience) {
       const tagKey = `pkg${pkgNumber}_tag_${audience}`;
       const translatedTag = i18n.getText('packages', tagKey);
       tagEl.textContent = translatedTag;
+    }
+
+    // Update features with segment-specific keys
+    const featureList = card.querySelector('.pkg__list');
+    if (featureList) {
+      const featureItems = featureList.querySelectorAll('li');
+      featureItems.forEach((item, featureIndex) => {
+        // Feature number is 1-based
+        const featureNumber = featureIndex + 1;
+        // Build segment-specific key: basis_pkg1_feature_1, senioren_pkg2_feature_5, etc.
+        const featureKey = `${audience}_pkg${pkgNumber}_feature_${featureNumber}`;
+        const translatedFeature = i18n.getText('packages', featureKey);
+
+        // Check if the key exists (not a fallback like [packages.basis_pkg3_feature_7])
+        const isFallback = translatedFeature.startsWith('[') && translatedFeature.endsWith(']');
+
+        if (isFallback) {
+          // Hide empty features
+          item.style.display = 'none';
+        } else {
+          // Show and update feature text
+          item.style.display = '';
+          item.textContent = translatedFeature;
+        }
+      });
     }
   });
 }
