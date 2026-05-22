@@ -50,6 +50,9 @@
     "tab3": "For Renters",
     "tab4": "For Vacation Homes",
     "pkg1_badge": "Essential",
+    "pkg_from": "from",
+    "pkg_mo": "/Month",
+    "pkg_includes": "Example configuration:",
     "pkg1_name_basis": "Basic",
     "pkg1_name_senioren": "Safe at Home",
     "pkg1_name_mieter": "Rental Security",
@@ -109,7 +112,7 @@
     "pkg3_btn": "Request Now",
     "pkg3_note": "Hardware one-time ~CHF 700-900",
     "details_btn": "Details",
-    "footer": "Prices incl. VAT · Hardware one-time at initial installation · Free consultation for vacation rentals & Airbnb"
+    "footer": "Prices in Swiss Francs incl. VAT · Hardware one-time at initial installation · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for vacation rentals & Airbnb</a>"
   },
   "process": {
     "eye": "How It Works",
@@ -239,7 +242,7 @@
     "form_note": "No advertising. No newsletter. Just Koni."
   },
   "footer": {
-    "tagline": "Smart home managed service for seniors, renters, and vacation home owners in Switzerland.",
+    "tagline": "Smart home managed service for seniors, renters, vacation home owners and everyone else in Switzerland.",
     "col1_title": "Service",
     "col1_l1": "Essential Package",
     "col1_l2": "Peace of Mind",

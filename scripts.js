@@ -314,31 +314,37 @@ function setupHeroTaglines() {
     // Create new h1 for incoming text
     const newH1 = document.createElement('h1');
     newH1.className = 'hero__h1 hero__h1-next';
+    newH1.setAttribute('data-i18n', `hero.${taglineKey}`);
+    newH1.setAttribute('data-i18n-html', 'true');
     newH1.innerHTML = taglineText;
     newH1.style.opacity = '0';
     h1Container.appendChild(newH1);
 
-    // Update background color and class
+    // Update background color and class immediately
     hero.style.backgroundColor = current.bg;
     hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
     if (current.class) hero.classList.add(current.class);
 
-    // Trigger fade animation
-    setTimeout(() => {
-      newH1.classList.add('fade-in');
-      heroH1.style.animation = 'fadeOutUp 0.5s ease forwards';
-    }, 10);
+    // Trigger animations using requestAnimationFrame for smooth timing
+    requestAnimationFrame(() => {
+      // Start fade out of old h1
+      heroH1.style.animation = 'fadeOutUp 0.5s ease-in forwards';
 
-    // Remove old h1 after animation
+      // Start fade in of new h1
+      newH1.style.animation = 'fadeInDown 0.5s ease-out forwards';
+      newH1.style.animationDelay = '0.2s';
+      //newH1.style.opacity = '1';
+    });
+
+    // Remove old h1 after animation completes
     setTimeout(() => {
       heroH1.remove();
-      newH1.classList.remove('hero__h1-next', 'fade-in');
-      newH1.style.opacity = '1';
+      newH1.classList.remove('hero__h1-next');
     }, 500);
   };
 
   // Start rotation after initial delay
-  setInterval(rotateTagline, 3000);
+  setInterval(rotateTagline, 6000);
 }
 
 // Initialize on DOM ready

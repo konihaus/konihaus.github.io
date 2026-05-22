@@ -54,6 +54,9 @@
     "tab3": "Für Mieter",
     "tab4": "Für Ferienhäuser",
     "pkg1_badge": "Essential",
+    "pkg_from": "ab",
+    "pkg_mo": "/Monat",
+    "pkg_includes": "Beispiel-Ausstattung:",
     "pkg1_name_basis": "Basic",
     "pkg1_name_senioren": "Safe at Home",
     "pkg1_name_mieter": "Miet-Sicherheit",
@@ -113,7 +116,7 @@
     "pkg3_btn": "Jetzt anfragen",
     "pkg3_note": "Hardware einmalig ~CHF 700-900",
     "details_btn": "Details",
-    "footer": "Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation · Kostenlose Beratung für Ferienwohnungen & Airbnb"
+    "footer": "Preise in Schweizer Franken inkl. MwSt. · Hardware einmalig bei Erstinstallation · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>"
   },
   "process": {
     "eye": "So funktioniert's",
@@ -243,7 +246,7 @@
     "form_note": "Keine Werbung. Kein Newsletter. Nur Koni."
   },
   "footer": {
-    "tagline": "Smart home managed service für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.",
+    "tagline": "Smart home managed service für Senioren, Mieter, Ferienhausbesitzer und alle anderen in der Schweiz.",
     "col1_title": "Service",
     "col1_l1": "Essential Paket",
     "col1_l2": "Peace of Mind",

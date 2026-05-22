@@ -50,6 +50,9 @@
     "tab3": "Pour Locataires",
     "tab4": "Pour Résidences Secondaires",
     "pkg1_badge": "Essential",
+    "pkg_from": "de",
+    "pkg_mo": "/Mois",
+    "pkg_includes": "Configuration d'exemple :",
     "pkg1_name_basis": "Basic",
     "pkg1_name_senioren": "Sécurité Garantie",
     "pkg1_name_mieter": "Sécurité Logement",
@@ -109,7 +112,7 @@
     "pkg3_btn": "Demander Maintenant",
     "pkg3_note": "Matériel unique ~CHF 700-900",
     "details_btn": "Détails",
-    "footer": "Prix TTC · Matériel unique à l'installation initiale · Consultation gratuite pour résidences de vacances & Airbnb"
+    "footer": "Prix en francs suisses TTC · Matériel unique à l'installation initiale · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consultation gratuite pour résidences de vacances & Airbnb</a>"
   },
   "process": {
     "eye": "Comment Ça Marche",
@@ -239,7 +242,7 @@
     "form_note": "Pas de publicité. Pas de newsletter. Juste Koni."
   },
   "footer": {
-    "tagline": "Service maison connectée gérée pour seniors, locataires et propriétaires de résidences secondaires en Suisse.",
+    "tagline": "Service maison connectée gérée pour seniors, locataires, propriétaires de résidences secondaires et tous les autres en Suisse.",
     "col1_title": "Service",
     "col1_l1": "Forfait Essential",
     "col1_l2": "Tranquillité d'Esprit",

@@ -288,28 +288,32 @@ a.logo {
   from {
     opacity: 1;
     transform: translateY(0);
+    backface-visibility: hidden;
   }
 
   to {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-50px);
+    backface-visibility: hidden;
   }
 }
 
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
+    backface-visibility: hidden;
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
+    backface-visibility: hidden;
   }
 }
 
 .hero__h1.fade-in {
-  animation: fadeInDown 0.5s ease forwards;
+  animation: fadeInDown 0.5s ease forwards !important;
 }
 
 /* LANGUAGE SELECTOR */
@@ -376,7 +380,8 @@ a.logo {
 
 .hero__headline_container {
   position: relative;
-  min-height: clamp(350px, 32.5vw, 350px);
+  height: clamp(350px, 32.5vw, 360px);
+  overflow: hidden;
 }
 
 .hero__deco {
@@ -410,15 +415,20 @@ a.logo {
 .hero__h1 {
   position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
   font-family: var(--serif);
-  font-size: clamp(56px, 7.5vw, 85px);
+  font-size: clamp(56px, 7.5vw, 82px);
   font-weight: 300;
   line-height: 1.02;
   letter-spacing: -.03em;
   color: var(--parchment);
   margin-bottom: 28px;
   animation: fadeUp .9s var(--ease) .12s both;
-  transition: opacity 0.5s ease;
+  opacity: 1;
+  z-index: 1;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hero__h1 em {
@@ -429,22 +439,25 @@ a.logo {
 .hero__h1-next {
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
   width: 100%;
-  opacity: 0 !important;
-  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+  z-index: 2;
+  backface-visibility: hidden;
 }
 
 .hero__h1-next.fade-in {
-  animation: fadeIn 0.5s ease forwards;
-  visibility: visible;
+  animation: fadeIn 0.5s ease forwards !important;
+  pointer-events: auto;
 }
 
 .hero__sub {
   font-size: 1em;
   font-weight: 300;
   color: rgba(247, 244, 237, .52);
-  max-width: 480px;
+  max-width: 510px;
   line-height: 1.72;
   margin-bottom: 44px;
   animation: fadeUp .9s var(--ease) .22s both;
@@ -906,14 +919,14 @@ a.logo {
   margin-top: 14px;
 }
 
-.pkg__cur {
+.pkg__from {
   font-size: 1em;
   color: var(--ink-3);
-  align-self: flex-start;
+  align-self: flex-end;
   padding-top: 5px;
 }
 
-.pkg-featured .pkg__cur {
+.pkg-featured .pkg__from {
   color: rgba(232, 192, 106, .6);
 }
 
@@ -946,6 +959,19 @@ a.logo {
 
 .pkg__toggle {
   display: none;
+}
+
+.pkg__includes {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.pkg-featured .pkg__includes {
+  color: rgba(232, 192, 106, 0.8);
 }
 
 .pkg__list {
@@ -2064,10 +2090,6 @@ a.logo {
   padding: 15px 40px;
   border-radius: 6px;
   letter-spacing: .03em;
-}
-
-.pkg__ext {
-    display: none;
 }
 
 /* ─────────────────────────────────────────

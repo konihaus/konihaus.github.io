@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -m http.server 8000)"
+      "Bash(python -m http.server 8000)",
+      "Bash(ls \"C:\\\\project\\\\konihaus.github.io\\\\\")"
     ]
   }
 }

@@ -50,6 +50,9 @@
     "tab3": "Per Inquilini",
     "tab4": "Per Case Vacanze",
     "pkg1_badge": "Essential",
+    "pkg_from": "da",
+    "pkg_mo": "/Mese",
+    "pkg_includes": "Configurazione di esempio:",
     "pkg1_name_basis": "Base",
     "pkg1_name_senioren": "Sicurezza Garantita",
     "pkg1_name_mieter": "Sicurezza Proprietà",
@@ -109,7 +112,7 @@
     "pkg3_btn": "Richiedi Ora",
     "pkg3_note": "Hardware una tantum ~CHF 700-900",
     "details_btn": "Dettagli",
-    "footer": "Prezzi IVA inclusa · Hardware una tantum all'installazione iniziale · Consulenza gratuita per case vacanze e Airbnb"
+    "footer": "Prezzi in franchi svizzeri IVA inclusa · Hardware una tantum all'installazione iniziale · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consulenza gratuita per case vacanze e Airbnb</a>"
   },
   "process": {
     "eye": "Come Funziona",
@@ -239,7 +242,7 @@
     "form_note": "Nessuna pubblicità. Nessuna newsletter. Solo Koni."
   },
   "footer": {
-    "tagline": "Servizio casa intelligente gestito per anziani, inquilini e proprietari di case vacanze in Svizzera.",
+    "tagline": "Servizio casa intelligente gestito per anziani, inquilini, proprietari di case vacanze e tutti gli altri in Svizzera.",
     "col1_title": "Servizio",
     "col1_l1": "Pacchetto Essential",
     "col1_l2": "Tranquillità Mentale",
