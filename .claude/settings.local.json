@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(python -m http.server 8000)",
-      "Bash(ls \"C:\\\\project\\\\konihaus.github.io\\\\\")"
+      "Bash(ls \"C:\\\\project\\\\konihaus.github.io\\\\\")",
+      "mcp__MCP_DOCKER__*",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "mcp__plugin_serena_serena__*"
     ]
   }
 }
