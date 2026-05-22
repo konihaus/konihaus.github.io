@@ -285,6 +285,7 @@ function setupPackageAccordion() {
 // Hero tagline rotation
 function setupHeroTaglines() {
   const hero = document.querySelector('.hero');
+  const topElement = document.querySelector('html');
   if (!hero) return;
 
   const taglines = [
@@ -324,6 +325,12 @@ function setupHeroTaglines() {
     hero.style.backgroundColor = current.bg;
     hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
     if (current.class) hero.classList.add(current.class);
+
+
+    // Update background color and class immediately
+    topElement.style.backgroundColor = current.bg;
+    topElement.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
+    if (current.class) topElement.classList.add(current.class);
 
     // Trigger animations using requestAnimationFrame for smooth timing
     requestAnimationFrame(() => {
