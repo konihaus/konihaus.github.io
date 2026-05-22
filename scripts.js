@@ -332,6 +332,10 @@ function setupHeroTaglines() {
     topElement.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
     if (current.class) topElement.classList.add(current.class);
 
+    // Update background color and class immediately
+    nav.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
+    if (current.class) nav.classList.add(current.class);
+
     // Trigger animations using requestAnimationFrame for smooth timing
     requestAnimationFrame(() => {
       // Start fade out of old h1
