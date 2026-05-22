@@ -203,18 +203,6 @@ object {
   box-shadow: 0 1px 0 rgba(255, 255, 255, .05);
 }
 
-.nav.scrolled.hero-marine {
-  background: var(--marine);
-}
-
-.nav.scrolled.hero-gold {
-  background: var(--gold);
-}
-
-.nav.scrolled.hero-burgundy {
-  background: var(--burgundy);
-}
-
 .nav__inner {
   display: flex;
   align-items: center;
@@ -723,7 +711,7 @@ a.logo {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
-  font-size:1.0625em;
+  font-size: 1.0625em;
 }
 
 .fcard__c {
@@ -825,7 +813,7 @@ a.logo {
   background: var(--parchment);
   border-radius: 16px;
   border: 1px solid var(--warm-mid);
-  overflow: hidden;
+  /*overflow: hidden;*/
   transition: transform .3s var(--ease), box-shadow .3s;
 }
 
@@ -886,7 +874,7 @@ a.logo {
 
 .pkg-premium.senioren .pkg__disclaimer,
 .pkg-premium.mieter .pkg__disclaimer,
-.pkg-premium.ferienhaus .pkg__disclaimer{
+.pkg-premium.ferienhaus .pkg__disclaimer {
   display: block;
 }
 
@@ -913,13 +901,19 @@ a.logo {
 }
 
 .badge-d {
-  background: var(--forest-tint);
+  background: var(--forest-light);
   color: var(--forest);
+  position: absolute;
+  top: -10px;
+  left: 10px;
 }
 
 .badge-f {
   background: var(--amber);
   color: var(--ink);
+  position: absolute;
+  top: -10px;
+  left: 10px;
 }
 
 .pkg__name {
@@ -1173,7 +1167,7 @@ a.logo {
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size:1.1875em;
+  font-size: 1.1875em;
   font-weight: 400;
   flex-shrink: 0;
 }
@@ -1317,7 +1311,7 @@ a.logo {
 
 .why__t {
   font-family: var(--serif);
-  font-size:1.1875em;
+  font-size: 1.1875em;
   font-weight: 400;
   color: var(--parchment);
   margin-bottom: 9px;
@@ -1578,7 +1572,7 @@ a.logo {
 
 .about__tag .aname {
   font-family: var(--serif);
-  font-size:1.0625em;
+  font-size: 1.0625em;
   font-weight: 400;
   color: var(--parchment);
   margin-bottom: 2px;
@@ -1650,7 +1644,7 @@ a.logo {
   padding-left: 18px;
   margin: 24px 0;
   font-family: var(--serif);
-  font-size:1.5em;
+  font-size: 1.5em;
   font-weight: 500;
   font-style: italic;
   color: var(--ink-2);
@@ -1893,7 +1887,7 @@ a.logo {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  max-width: calc(100% - 32px);
+  max-width: 100%;
 }
 
 .fg label {
@@ -1945,7 +1939,7 @@ a.logo {
   border: none;
   font-family: var(--sans);
   transition: background .2s, transform .2s;
-  max-width: calc(100% - 32px);
+  max-width: 100%;
 }
 
 .fsub:hover {
@@ -2211,7 +2205,7 @@ a.logo {
 
   .pkg-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 24px;
     max-width: 480px;
     margin: 0 auto;
   }
@@ -2288,9 +2282,11 @@ a.logo {
     grid-template-columns: 1fr;
     gap: 48px;
   }
-  .contact__grid > div {
-    max-width: calc(100% - 32px);
+
+  .contact__grid>div {
+    max-width: 100%;
   }
+
   .footer__top {
     grid-template-columns: 1fr 1fr;
     gap: 36px;

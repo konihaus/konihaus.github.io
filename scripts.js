@@ -157,11 +157,11 @@ function setupMobileMenu() {
   });
 
   // Close drawer on link click
-document.querySelectorAll('.drawer-link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    drawer.classList.remove('open');
-    document.body.style.overflow = '';
+  document.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      drawer.classList.remove('open');
+      document.body.style.overflow = '';
     });
   });
 }
@@ -229,7 +229,7 @@ function updatePackageContent(audience) {
     }
   }
 
-    // Update featured package background color
+  // Update featured package background color
   const pkgPremium = document.querySelector('.pkg-premium');
   if (pkgPremium) {
     pkgPremium.classList.remove('senioren', 'mieter', 'ferienhaus');
@@ -329,7 +329,6 @@ function setupPackageAccordion() {
 // Hero tagline rotation
 function setupHeroTaglines() {
   const hero = document.querySelector('.hero');
-  const topElement = document.querySelector('html');
   if (!hero) return;
 
   const taglines = [
@@ -369,16 +368,6 @@ function setupHeroTaglines() {
     hero.style.backgroundColor = current.bg;
     hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
     if (current.class) hero.classList.add(current.class);
-
-
-    // Update background color and class immediately
-    topElement.style.backgroundColor = current.bg;
-    topElement.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
-    if (current.class) topElement.classList.add(current.class);
-
-    // Update background color and class immediately
-    nav.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
-    if (current.class) nav.classList.add(current.class);
 
     // Trigger animations using requestAnimationFrame for smooth timing
     requestAnimationFrame(() => {
