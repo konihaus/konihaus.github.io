@@ -610,7 +610,12 @@ a.logo {
 /* INTRO */
 .intro {
   padding: 112px 0;
-  background: var(--parchment);
+  background: linear-gradient(to right,
+      rgba(247, 244, 237, 1) 0%,
+      rgba(247, 244, 237, 0.5) 50%,
+      rgba(247, 244, 237, 0.2) 60%,
+      rgba(247, 244, 237, 0) 100%
+    ),url('./section-1-bg.jpg') no-repeat right 20% center / cover var(--parchment);
 }
 
 .intro__grid {
@@ -2157,6 +2162,16 @@ a.logo {
     display: flex;
   }
 
+  .intro {
+    padding: 112px 0 250px;
+    background: linear-gradient(
+      rgba(247, 244, 237, 1) 0%,
+      rgba(247, 244, 237, 0.7) 50%,
+      rgba(247, 244, 237, 0.2) 60%,
+      rgba(247, 244, 237, 0) 100%
+    ), url('./section-1-bg-mobile.jpg') no-repeat center bottom / cover;
+  }
+
   .intro__grid {
     grid-template-columns: 1fr;
     gap: 56px;
@@ -2385,6 +2400,9 @@ a.logo {
   .testi,
   .contact {
     padding: 72px 0;
+  }
+  .intro {
+    padding: 72px 0 120px;
   }
 
   .cta-sec {
