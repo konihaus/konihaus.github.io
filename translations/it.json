@@ -118,7 +118,7 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Familiare Mensile",
-      "Supporto Email / 24h",
+      "Supporto Email & WhatsApp / 24h",
       "Automazione Schermature Solari*"
     ],
     "senioren_pkg2_features": [
@@ -130,7 +130,7 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
-      "Email + Avviso Famiglia",
+      "Email & WhatsApp + Avviso Famiglia",
       "Automazione Schermature Solari*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +142,7 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
-      "Email + Avvisi SMS",
+      "Email & WhatsApp + Avvisi SMS",
       "Automazione Schermature Solari*"
     ],
     "ferienhaus_pkg2_features": [
@@ -155,7 +155,7 @@
       "Presa Intelligente",
       "Rapporto Assenza Mensile",
       "Avvisi SMS",
-      "Supporto Email / 24h",
+      "Supporto Email & WhatsApp / 24h",
       "Automazione Schermature Solari*"
     ],
     "pkg2_btn": "Richiedi Ora",

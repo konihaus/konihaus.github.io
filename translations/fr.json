@@ -118,7 +118,7 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Familial Mensuel",
-      "Support Email / 24h",
+      "Support Email & WhatsApp / 24h",
       "Automatisation des Stores*"
     ],
     "senioren_pkg2_features": [
@@ -130,7 +130,7 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
-      "Email + Alerte Famille",
+      "Email & WhatsApp + Alerte Famille",
       "Automatisation des Stores*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +142,7 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
-      "Email + Alertes SMS",
+      "Email & WhatsApp + Alertes",
       "Automatisation des Stores*"
     ],
     "ferienhaus_pkg2_features": [
@@ -155,7 +155,7 @@
       "Prise Intelligente",
       "Rapport Absence Mensuel",
       "Alertes SMS",
-      "Support Email / 24h",
+      "Support Email & WhatsApp / 24h",
       "Automatisation des Stores*"
     ],
     "pkg2_btn": "Demander Maintenant",

@@ -118,7 +118,7 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Family Report",
-      "Email Support / 24h",
+      "Email & WhatsApp Support / 24h",
       "Shading System Automation*"
     ],
     "senioren_pkg2_features": [
@@ -130,7 +130,7 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Safety Report",
-      "Email + Family Alert",
+      "Email or WhatsApp + Family Alert",
       "Shading System Automation*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +142,7 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Security Report",
-      "Email + SMS Alerts",
+      "Email + WhatsApp Alerts",
       "Shading System Automation*"
     ],
     "ferienhaus_pkg2_features": [
@@ -155,7 +155,7 @@
       "Smart Plug",
       "Monthly Absence Report",
       "SMS Alerts",
-      "Email Support",
+      "Email & WhatsApp Support",
       "Shading System Automation*"
     ],
     "pkg2_btn": "Request Now",
@@ -204,7 +204,7 @@
       "Guest Access Portal",
       "Humidity Monitor",
       "Quarterly Tenant Report",
-      "Phone Support",
+      "Phone Support / 12h response (working hours)",
       "Shading System Automation*"
     ],
     "ferienhaus_pkg3_features": [

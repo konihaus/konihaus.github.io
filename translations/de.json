@@ -118,7 +118,7 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Familienbericht",
-      "E-Mail-Support / 24h",
+      "E-Mail- & WhatsApp-Support / 24h",
       "Beschattungs-Automatisierung*"
     ],
     "senioren_pkg2_features": [
@@ -130,7 +130,7 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
-      "E-Mail + Familienalarm",
+      "E-Mail oder WhatsApp + Familienalarm",
       "Beschattungs-Automatisierung*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +142,7 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
-      "E-Mail + SMS-Warnungen",
+      "E-Mail- & WhatsApp-Warnungen",
       "Beschattungs-Automatisierung*"
     ],
     "ferienhaus_pkg2_features": [
@@ -155,7 +155,7 @@
       "Smart Plug",
       "Monatlicher Abwesenheitsbericht",
       "SMS-Warnungen",
-      "E-Mail-Support",
+      "E-Mail- & WhatsApp-Support",
       "Beschattungs-Automatisierung*"
     ],
     "pkg2_btn": "Jetzt anfragen",
@@ -204,7 +204,7 @@
       "Gast-Zugriffsportal",
       "Feuchtemessgerät",
       "Vierteljährlicher Mieterbericht",
-      "Telefon-Support",
+      "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
     "ferienhaus_pkg3_features": [
