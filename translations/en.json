@@ -55,17 +55,17 @@
     "pkg_includes_senioren": "Safety features included:",
     "pkg_includes_mieter": "Property protection includes:",
     "pkg_includes_ferienhaus": "Protection includes:",
-    "pkg0_badge": "Starter",
-    "pkg0_name_basis": "Starter",
-    "pkg0_name_senioren": "Daily Check",
-    "pkg0_name_mieter": "Rental Start",
-    "pkg0_name_ferienhaus": "Holiday Watch",
-    "pkg0_tag_basis": "The simplest way to start",
-    "pkg0_tag_senioren": "Keep an eye on daily activity",
-    "pkg0_tag_mieter": "Simple start, no renovation needed",
-    "pkg0_tag_ferienhaus": "Presence and access at a glance",
-    "pkg0_price": "29",
-    "basis_pkg0_features": [
+    "pkg1_badge": "Starter",
+    "pkg1_name_basis": "Starter",
+    "pkg1_name_senioren": "Daily Check",
+    "pkg1_name_mieter": "Rental Start",
+    "pkg1_name_ferienhaus": "Holiday Watch",
+    "pkg1_tag_basis": "The simplest way to start",
+    "pkg1_tag_senioren": "Keep an eye on daily activity",
+    "pkg1_tag_mieter": "Simple start, no renovation needed",
+    "pkg1_tag_ferienhaus": "Presence and access at a glance",
+    "pkg1_price": "29",
+    "basis_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
       "Door / Window Sensor",
@@ -73,7 +73,7 @@
       "Monthly Report",
       "Email & WhatsApp Support / 48h"
     ],
-    "senioren_pkg0_features": [
+    "senioren_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
       "Door / Window Sensor",
@@ -81,7 +81,7 @@
       "Monthly Activity Report",
       "Email & WhatsApp Support / 48h"
     ],
-    "mieter_pkg0_features": [
+    "mieter_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
       "Door / Window Sensor",
@@ -89,7 +89,7 @@
       "Monthly Security Report",
       "Email & WhatsApp Support / 48h"
     ],
-    "ferienhaus_pkg0_features": [
+    "ferienhaus_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
       "Door / Window Sensor",
@@ -97,19 +97,19 @@
       "Monthly Absence Report",
       "Email & WhatsApp Support / 48h"
     ],
-    "pkg0_btn": "Request Now",
-    "pkg0_note": "Setup investment CHF ~200-260 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
-    "pkg1_badge": "Essential",
-    "pkg1_name_basis": "Basic",
-    "pkg1_name_senioren": "Safe at Home",
-    "pkg1_name_mieter": "Rental Security",
-    "pkg1_name_ferienhaus": "Holiday Security",
-    "pkg1_tag_basis": "Introduction to Smart Home",
-    "pkg1_tag_senioren": "Essential Safety & Peace of Mind",
-    "pkg1_tag_mieter": "Protect valuable assets",
-    "pkg1_tag_ferienhaus": "Basic protection while away",
-    "pkg1_price": "49",
-    "basis_pkg1_features": [
+    "pkg1_btn": "Request Now",
+    "pkg1_note": "Setup investment CHF ~200-260 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg2_badge": "Essential",
+    "pkg2_name_basis": "Basic",
+    "pkg2_name_senioren": "Safe at Home",
+    "pkg2_name_mieter": "Rental Security",
+    "pkg2_name_ferienhaus": "Holiday Security",
+    "pkg2_tag_basis": "Introduction to Smart Home",
+    "pkg2_tag_senioren": "Essential Safety & Peace of Mind",
+    "pkg2_tag_mieter": "Protect valuable assets",
+    "pkg2_tag_ferienhaus": "Basic protection while away",
+    "pkg2_price": "49",
+    "basis_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
       "Smoke & CO Detector",
@@ -121,7 +121,7 @@
       "Email Support / 24h",
       "Shading System Automation*"
     ],
-    "senioren_pkg1_features": [
+    "senioren_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
       "Smoke & CO Detector",
@@ -133,7 +133,7 @@
       "Email + Family Alert",
       "Shading System Automation*"
     ],
-    "mieter_pkg1_features": [
+    "mieter_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
       "Smoke & CO Detector",
@@ -145,7 +145,7 @@
       "Email + SMS Alerts",
       "Shading System Automation*"
     ],
-    "ferienhaus_pkg1_features": [
+    "ferienhaus_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
       "Smoke & CO Detector",
@@ -158,19 +158,19 @@
       "Email Support",
       "Shading System Automation*"
     ],
-    "pkg1_btn": "Request Now",
-    "pkg1_note": "Setup investment CHF ~300-700 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
-    "pkg2_badge": "Recommended",
-    "pkg2_name_basis": "Advanced",
-    "pkg2_name_senioren": "Peace of Mind",
-    "pkg2_name_mieter": "Complete Protection",
-    "pkg2_name_ferienhaus": "Holiday Peace of Mind",
-    "pkg2_tag_basis": "Comprehensive Smart Home Solution",
-    "pkg2_tag_senioren": "Full monitoring & independence support",
-    "pkg2_tag_mieter": "Complete protection and monitoring",
-    "pkg2_tag_ferienhaus": "Monitoring and control",
-    "pkg2_price": "89",
-    "basis_pkg2_features": [
+    "pkg2_btn": "Request Now",
+    "pkg2_note": "Setup investment CHF ~300-700 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg3_badge": "Recommended",
+    "pkg3_name_basis": "Advanced",
+    "pkg3_name_senioren": "Peace of Mind",
+    "pkg3_name_mieter": "Complete Protection",
+    "pkg3_name_ferienhaus": "Holiday Peace of Mind",
+    "pkg3_tag_basis": "Comprehensive Smart Home Solution",
+    "pkg3_tag_senioren": "Full monitoring & independence support",
+    "pkg3_tag_mieter": "Complete protection and monitoring",
+    "pkg3_tag_ferienhaus": "Monitoring and control",
+    "pkg3_price": "89",
+    "basis_pkg3_features": [
       "Everything from Essential",
       "+ Up to 4× Motion Sensors",
       "Video Doorbell",
@@ -181,7 +181,7 @@
       "Phone Support / 12h response (working hours)",
       "Shading System Automation*"
     ],
-    "senioren_pkg2_features": [
+    "senioren_pkg3_features": [
       "Everything from Safe at Home",
       "+ Up to 4× Motion Sensors",
       "Video Doorbell",
@@ -194,7 +194,7 @@
       "Phone Support / 12h response (working hours)",
       "Shading System Automation*"
     ],
-    "mieter_pkg2_features": [
+    "mieter_pkg3_features": [
       "Everything from Secure Living",
       "+ Up to 4× Motion Sensors",
       "Video Doorbell",
@@ -207,7 +207,7 @@
       "Phone Support",
       "Shading System Automation*"
     ],
-    "ferienhaus_pkg2_features": [
+    "ferienhaus_pkg3_features": [
       "Everything from Holiday Security",
       "Smart Lock",
       "+ Up to 4× Motion Sensors",
@@ -220,19 +220,19 @@
       "Phone Support / 12h response (working hours)",
       "Shading System Automation*"
     ],
-    "pkg2_btn": "Request Now",
-    "pkg2_note": "Setup investment CHF ~500-1200 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
-    "pkg3_badge": "Premium",
-    "pkg3_name_basis": "All-in",
-    "pkg3_name_senioren": "Independent Living",
-    "pkg3_name_mieter": "Smart Living",
-    "pkg3_name_ferienhaus": "Holiday Complete",
-    "pkg3_tag_basis": "Complete Smart Home Solution",
-    "pkg3_tag_senioren": "Advanced care & dignity support",
-    "pkg3_tag_mieter": "Premium guest experience & security",
-    "pkg3_tag_ferienhaus": "Full intelligence & seamless management",
-    "pkg3_price": "149",
-    "basis_pkg3_features": [
+    "pkg3_btn": "Request Now",
+    "pkg3_note": "Setup investment CHF ~500-1200 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg4_badge": "Premium",
+    "pkg4_name_basis": "All-in",
+    "pkg4_name_senioren": "Independent Living",
+    "pkg4_name_mieter": "Smart Living",
+    "pkg4_name_ferienhaus": "Holiday Complete",
+    "pkg4_tag_basis": "Complete Smart Home Solution",
+    "pkg4_tag_senioren": "Advanced care & dignity support",
+    "pkg4_tag_mieter": "Premium guest experience & security",
+    "pkg4_tag_ferienhaus": "Full intelligence & seamless management",
+    "pkg4_price": "149",
+    "basis_pkg4_features": [
       "Everything from Advanced",
       "Smart Lock",
       "+ Up to 6× Additional Sensors",
@@ -241,7 +241,7 @@
       "Priority Support",
       "Shading System Automation*"
     ],
-    "senioren_pkg3_features": [
+    "senioren_pkg4_features": [
       "Everything from Peace of Mind",
       "Smart Lock",
       "+ Up to 6× Environmental Sensors",
@@ -253,7 +253,7 @@
       "Priority Support",
       "Shading System Automation*"
     ],
-    "mieter_pkg3_features": [
+    "mieter_pkg4_features": [
       "Everything from Smart Comfort",
       "+ Up to 6× Environmental Sensors",
       "Advanced Security Dashboard",
@@ -266,7 +266,7 @@
       "Priority Support",
       "Shading System Automation*"
     ],
-    "ferienhaus_pkg3_features": [
+    "ferienhaus_pkg4_features": [
       "Everything from Holiday Peace of Mind",
       "+ Up to 6× Environmental Sensors",
       "Energy Monitoring Dashboard",
@@ -279,8 +279,8 @@
       "Priority Support",
       "Shading System Automation*"
     ],
-    "pkg3_btn": "Request Now",
-    "pkg3_note": "Setup investment CHF ~900-1500 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg4_btn": "Request Now",
+    "pkg4_note": "Setup investment CHF ~900-1500 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "details_btn": "Details",
     "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for vacation rentals & Airbnb</a>",
     "disclaimer": "* wherever applicable",

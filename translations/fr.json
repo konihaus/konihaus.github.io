@@ -55,17 +55,17 @@
     "pkg_includes_senioren": "Équipement de sécurité :",
     "pkg_includes_mieter": "Protection des biens :",
     "pkg_includes_ferienhaus": "Protection:",
-    "pkg0_badge": "Starter",
-    "pkg0_name_basis": "Starter",
-    "pkg0_name_senioren": "Suivi Quotidien",
-    "pkg0_name_mieter": "Démarrage Locatif",
-    "pkg0_name_ferienhaus": "Veille Vacances",
-    "pkg0_tag_basis": "Le moyen le plus simple de démarrer",
-    "pkg0_tag_senioren": "Garder un œil sur l'activité quotidienne",
-    "pkg0_tag_mieter": "Démarrage simple, sans travaux",
-    "pkg0_tag_ferienhaus": "Présence et accès sous contrôle",
-    "pkg0_price": "29",
-    "basis_pkg0_features": [
+    "pkg1_badge": "Starter",
+    "pkg1_name_basis": "Starter",
+    "pkg1_name_senioren": "Suivi Quotidien",
+    "pkg1_name_mieter": "Démarrage Locatif",
+    "pkg1_name_ferienhaus": "Veille Vacances",
+    "pkg1_tag_basis": "Le moyen le plus simple de démarrer",
+    "pkg1_tag_senioren": "Garder un œil sur l'activité quotidienne",
+    "pkg1_tag_mieter": "Démarrage simple, sans travaux",
+    "pkg1_tag_ferienhaus": "Présence et accès sous contrôle",
+    "pkg1_price": "29",
+    "basis_pkg1_features": [
       "Concentrateur Maison Intelligente",
       "2–3× Détecteurs de Mouvement / Présence",
       "Capteur Porte / Fenêtre",
@@ -73,7 +73,7 @@
       "Rapport Mensuel",
       "Support Email & WhatsApp / 48h"
     ],
-    "senioren_pkg0_features": [
+    "senioren_pkg1_features": [
       "Concentrateur Maison Intelligente",
       "2–3× Détecteurs de Mouvement / Présence",
       "Capteur Porte / Fenêtre",
@@ -81,7 +81,7 @@
       "Rapport Activité Mensuel",
       "Support Email & WhatsApp / 48h"
     ],
-    "mieter_pkg0_features": [
+    "mieter_pkg1_features": [
       "Concentrateur Maison Intelligente",
       "2–3× Détecteurs de Mouvement / Présence",
       "Capteur Porte / Fenêtre",
@@ -89,7 +89,7 @@
       "Rapport Sécurité Mensuel",
       "Support Email & WhatsApp / 48h"
     ],
-    "ferienhaus_pkg0_features": [
+    "ferienhaus_pkg1_features": [
       "Concentrateur Maison Intelligente",
       "2–3× Détecteurs de Mouvement / Présence",
       "Capteur Porte / Fenêtre",
@@ -97,19 +97,19 @@
       "Rapport Absence Mensuel",
       "Support Email & WhatsApp / 48h"
     ],
-    "pkg0_btn": "Demander Maintenant",
-    "pkg0_note": "Investissement installation CHF ~200-260 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
-    "pkg1_badge": "Essentiel",
-    "pkg1_name_basis": "Basique",
-    "pkg1_name_senioren": "Sûr à la Maison",
-    "pkg1_name_mieter": "Sécurité Locative",
-    "pkg1_name_ferienhaus": "Sécurité Vacances",
-    "pkg1_tag_basis": "Introduction à la Maison Intelligente",
-    "pkg1_tag_senioren": "Sécurité Essentielle & Tranquillité",
-    "pkg1_tag_mieter": "Protéger les biens précieux",
-    "pkg1_tag_ferienhaus": "Protection basique en absence",
-    "pkg1_price": "49",
-    "basis_pkg1_features": [
+    "pkg1_btn": "Demander Maintenant",
+    "pkg1_note": "Investissement installation CHF ~200-260 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
+    "pkg2_badge": "Essentiel",
+    "pkg2_name_basis": "Basique",
+    "pkg2_name_senioren": "Sûr à la Maison",
+    "pkg2_name_mieter": "Sécurité Locative",
+    "pkg2_name_ferienhaus": "Sécurité Vacances",
+    "pkg2_tag_basis": "Introduction à la Maison Intelligente",
+    "pkg2_tag_senioren": "Sécurité Essentielle & Tranquillité",
+    "pkg2_tag_mieter": "Protéger les biens précieux",
+    "pkg2_tag_ferienhaus": "Protection basique en absence",
+    "pkg2_price": "49",
+    "basis_pkg2_features": [
       "Concentrateur Maison Intelligente",
       "2× Détecteurs de Mouvement",
       "Détecteur Fumée & CO",
@@ -121,7 +121,7 @@
       "Support Email / 24h",
       "Automatisation des Stores*"
     ],
-    "senioren_pkg1_features": [
+    "senioren_pkg2_features": [
       "Concentrateur Maison Intelligente",
       "2× Détecteurs de Mouvement",
       "Détecteur Fumée & CO",
@@ -133,7 +133,7 @@
       "Email + Alerte Famille",
       "Automatisation des Stores*"
     ],
-    "mieter_pkg1_features": [
+    "mieter_pkg2_features": [
       "Concentrateur Maison Intelligente",
       "2× Détecteurs de Mouvement",
       "Détecteur Fumée & CO",
@@ -145,7 +145,7 @@
       "Email + Alertes SMS",
       "Automatisation des Stores*"
     ],
-    "ferienhaus_pkg1_features": [
+    "ferienhaus_pkg2_features": [
       "Concentrateur Maison Intelligente",
       "2× Détecteurs de Mouvement",
       "Détecteur Fumée & CO",
@@ -158,19 +158,19 @@
       "Support Email / 24h",
       "Automatisation des Stores*"
     ],
-    "pkg1_btn": "Demander Maintenant",
-    "pkg1_note": "Investissement installation CHF ~300-700 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
-    "pkg2_badge": "Recommandé",
-    "pkg2_name_basis": "Avancé",
-    "pkg2_name_senioren": "Tranquillité d'Esprit",
-    "pkg2_name_mieter": "Protection Complète",
-    "pkg2_name_ferienhaus": "Tranquillité Vacances",
-    "pkg2_tag_basis": "Solution Maison Intelligente Complète",
-    "pkg2_tag_senioren": "Surveillance Complète & Support d'Indépendance",
-    "pkg2_tag_mieter": "Protection et surveillance complètes",
-    "pkg2_tag_ferienhaus": "Surveillance et contrôle",
-    "pkg2_price": "89",
-    "basis_pkg2_features": [
+    "pkg2_btn": "Demander Maintenant",
+    "pkg2_note": "Investissement installation CHF ~300-700 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
+    "pkg3_badge": "Recommandé",
+    "pkg3_name_basis": "Avancé",
+    "pkg3_name_senioren": "Tranquillité d'Esprit",
+    "pkg3_name_mieter": "Protection Complète",
+    "pkg3_name_ferienhaus": "Tranquillité Vacances",
+    "pkg3_tag_basis": "Solution Maison Intelligente Complète",
+    "pkg3_tag_senioren": "Surveillance Complète & Support d'Indépendance",
+    "pkg3_tag_mieter": "Protection et surveillance complètes",
+    "pkg3_tag_ferienhaus": "Surveillance et contrôle",
+    "pkg3_price": "89",
+    "basis_pkg3_features": [
       "Tout de l'Essentiel",
       "+ Jusqu'à 4× Détecteurs de Mouvement",
       "Sonnette Vidéo",
@@ -181,7 +181,7 @@
       "Support Téléphone / 12h réponse (heures de bureau)",
       "Automatisation des Stores*"
     ],
-    "senioren_pkg2_features": [
+    "senioren_pkg3_features": [
       "Tout de Sûr à la Maison",
       "+ Jusqu'à 4× Détecteurs de Mouvement",
       "Sonnette Vidéo",
@@ -194,7 +194,7 @@
       "Support Téléphone / 12h réponse (heures de bureau)",
       "Automatisation des Stores*"
     ],
-    "mieter_pkg2_features": [
+    "mieter_pkg3_features": [
       "Tout de Sécurité Locative",
       "+ Jusqu'à 4× Détecteurs de Mouvement",
       "Sonnette Vidéo",
@@ -207,7 +207,7 @@
       "Support Téléphone",
       "Automatisation des Stores*"
     ],
-    "ferienhaus_pkg2_features": [
+    "ferienhaus_pkg3_features": [
       "Tout de Sécurité Vacances",
       "Serrure Intelligente",
       "+ Jusqu'à 4× Détecteurs de Mouvement",
@@ -220,19 +220,19 @@
       "Support Téléphone / 12h réponse (heures de bureau)",
       "Automatisation des Stores*"
     ],
-    "pkg2_btn": "Demander Maintenant",
-    "pkg2_note": "Investissement installation CHF ~500-1200 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
-    "pkg3_badge": "Premium",
-    "pkg3_name_basis": "Tout Inclus",
-    "pkg3_name_senioren": "Vie Indépendante",
-    "pkg3_name_mieter": "Vie Intelligente",
-    "pkg3_name_ferienhaus": "Vacances Complètes",
-    "pkg3_tag_basis": "Solution Maison Intelligente Complète",
-    "pkg3_tag_senioren": "Soins Avancés & Support de Dignité",
-    "pkg3_tag_mieter": "Expérience Premium & Sécurité",
-    "pkg3_tag_ferienhaus": "Intelligence Complète & Gestion Transparente",
-    "pkg3_price": "149",
-    "basis_pkg3_features": [
+    "pkg3_btn": "Demander Maintenant",
+    "pkg3_note": "Investissement installation CHF ~500-1200 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
+    "pkg4_badge": "Premium",
+    "pkg4_name_basis": "Tout Inclus",
+    "pkg4_name_senioren": "Vie Indépendante",
+    "pkg4_name_mieter": "Vie Intelligente",
+    "pkg4_name_ferienhaus": "Vacances Complètes",
+    "pkg4_tag_basis": "Solution Maison Intelligente Complète",
+    "pkg4_tag_senioren": "Soins Avancés & Support de Dignité",
+    "pkg4_tag_mieter": "Expérience Premium & Sécurité",
+    "pkg4_tag_ferienhaus": "Intelligence Complète & Gestion Transparente",
+    "pkg4_price": "149",
+    "basis_pkg4_features": [
       "Tout d'Avancé",
       "Serrure Intelligente",
       "+ Jusqu'à 6× Capteurs Supplémentaires",
@@ -241,7 +241,7 @@
       "Support Prioritaire",
       "Automatisation des Stores*"
     ],
-    "senioren_pkg3_features": [
+    "senioren_pkg4_features": [
       "Tout de Tranquillité d'Esprit",
       "Serrure Intelligente",
       "+ Jusqu'à 6× Capteurs Environnementaux",
@@ -253,7 +253,7 @@
       "Support Prioritaire",
       "Automatisation des Stores*"
     ],
-    "mieter_pkg3_features": [
+    "mieter_pkg4_features": [
       "Tout de Confort Intelligent",
       "+ Jusqu'à 6× Capteurs Environnementaux",
       "Tableau Bord Sécurité Avancée",
@@ -266,7 +266,7 @@
       "Support Prioritaire",
       "Automatisation des Stores*"
     ],
-    "ferienhaus_pkg3_features": [
+    "ferienhaus_pkg4_features": [
       "Tout de Tranquillité Vacances",
       "+ Jusqu'à 6× Capteurs Environnementaux",
       "Tableau Bord Surveillance Énergie",
@@ -279,8 +279,8 @@
       "Support Prioritaire",
       "Automatisation des Stores*"
     ],
-    "pkg3_btn": "Demander Maintenant",
-    "pkg3_note": "Investissement installation CHF ~900-1500 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
+    "pkg4_btn": "Demander Maintenant",
+    "pkg4_note": "Investissement installation CHF ~900-1500 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
     "details_btn": "Détails",
     "footer": "Prix en Francs Suisses TVA incl. · Coûts uniques gratuits avec accord 2 ans · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consultation gratuite pour locations de vacances & Airbnb</a>",
     "disclaimer": "* le cas échéant",

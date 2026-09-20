@@ -3,7 +3,7 @@
  * Builds the <li> items of every package card from the language JSON, so
  * adding, removing or reordering features only means editing the JSON.
  *
- * HTML  : <ul class="pkg__list pkg-1"></ul>      pkg-<N> = tier number; keep the list empty
+ * HTML  : <ul class="pkg__list pkg-1"></ul>      pkg-<N> = card position (1 = first card); keep the list empty
  * JSON  : "packages": { "<audience>_pkg<N>_features": ["Item 1", "Item 2", ...] }
  *         audiences: basis | senioren | mieter | ferienhaus
  *
@@ -22,7 +22,7 @@
   'use strict';
 
   // ── Config: adjust if your setup differs ───────────────────────────────────
-  const JSON_URL         = (lang) => './translations/' + lang + '.json'; // where the language files live
+  const JSON_URL         = (lang) => './translations' + lang + '.json'; // where the language files live
   const DEFAULT_LANG     = 'de';
   const DEFAULT_AUDIENCE = 'basis';
   // ───────────────────────────────────────────────────────────────────────────

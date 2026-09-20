@@ -1059,6 +1059,13 @@ a.logo {
   border-bottom: none;
 }
 
+/* Feature <li>s are rendered from the language JSON (packages-render.js).
+   Guards against older i18n code that hides list items via inline style.
+   Remove once that code is gone. */
+.pkg__list li {
+  display: flex !important;
+}
+
 .chk {
   width: 15px;
   height: 15px;

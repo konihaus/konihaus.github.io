@@ -55,17 +55,17 @@
     "pkg_includes_senioren": "Sicherheitsausstattung:",
     "pkg_includes_mieter": "Schutzausrüstung:",
     "pkg_includes_ferienhaus": "Schutzausrüstung:",
-    "pkg0_badge": "Starter",
-    "pkg0_name_basis": "Starter",
-    "pkg0_name_senioren": "Alltags-Check",
-    "pkg0_name_mieter": "Mieter-Start",
-    "pkg0_name_ferienhaus": "Ferienhaus-Wache",
-    "pkg0_tag_basis": "Der einfachste Einstieg",
-    "pkg0_tag_senioren": "Aktivität im Blick behalten",
-    "pkg0_tag_mieter": "Einfacher Einstieg ohne Umbau",
-    "pkg0_tag_ferienhaus": "Präsenz und Zutritt im Blick",
-    "pkg0_price": "29",
-    "basis_pkg0_features": [
+    "pkg1_badge": "Starter",
+    "pkg1_name_basis": "Starter",
+    "pkg1_name_senioren": "Alltags-Check",
+    "pkg1_name_mieter": "Mieter-Start",
+    "pkg1_name_ferienhaus": "Ferienhaus-Wache",
+    "pkg1_tag_basis": "Der einfachste Einstieg",
+    "pkg1_tag_senioren": "Aktivität im Blick behalten",
+    "pkg1_tag_mieter": "Einfacher Einstieg ohne Umbau",
+    "pkg1_tag_ferienhaus": "Präsenz und Zutritt im Blick",
+    "pkg1_price": "29",
+    "basis_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
@@ -73,7 +73,7 @@
       "Monatlicher Bericht",
       "E-Mail- & WhatsApp-Support / 48h"
     ],
-    "senioren_pkg0_features": [
+    "senioren_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
@@ -81,7 +81,7 @@
       "Monatlicher Aktivitätsbericht",
       "E-Mail- & WhatsApp-Support / 48h"
     ],
-    "mieter_pkg0_features": [
+    "mieter_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
@@ -89,7 +89,7 @@
       "Monatlicher Sicherheitsbericht",
       "E-Mail- & WhatsApp-Support / 48h"
     ],
-    "ferienhaus_pkg0_features": [
+    "ferienhaus_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
@@ -97,19 +97,19 @@
       "Monatlicher Abwesenheitsbericht",
       "E-Mail- & WhatsApp-Support / 48h"
     ],
-    "pkg0_btn": "Jetzt anfragen",
-    "pkg0_note": "Einrichtungsinvestition ~CHF 200-260 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
-    "pkg1_badge": "Essential",
-    "pkg1_name_basis": "Basis",
-    "pkg1_name_senioren": "Sicher zu Hause",
-    "pkg1_name_mieter": "Mieterschutz",
-    "pkg1_name_ferienhaus": "Ferienhaus-Sicherheit",
-    "pkg1_tag_basis": "Einstieg ins Smart Home",
-    "pkg1_tag_senioren": "Essenzielle Sicherheit & Wohlbefinden",
-    "pkg1_tag_mieter": "Vermögenswerte schützen",
-    "pkg1_tag_ferienhaus": "Grundschutz bei Abwesenheit",
-    "pkg1_price": "49",
-    "basis_pkg1_features": [
+    "pkg1_btn": "Jetzt anfragen",
+    "pkg1_note": "Einrichtungsinvestition ~CHF 200-260 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg2_badge": "Essential",
+    "pkg2_name_basis": "Basis",
+    "pkg2_name_senioren": "Sicher zu Hause",
+    "pkg2_name_mieter": "Mieterschutz",
+    "pkg2_name_ferienhaus": "Ferienhaus-Sicherheit",
+    "pkg2_tag_basis": "Einstieg ins Smart Home",
+    "pkg2_tag_senioren": "Essenzielle Sicherheit & Wohlbefinden",
+    "pkg2_tag_mieter": "Vermögenswerte schützen",
+    "pkg2_tag_ferienhaus": "Grundschutz bei Abwesenheit",
+    "pkg2_price": "49",
+    "basis_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
       "Rauch- & CO-Detektor",
@@ -121,7 +121,7 @@
       "E-Mail-Support / 24h",
       "Beschattungs-Automatisierung*"
     ],
-    "senioren_pkg1_features": [
+    "senioren_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
       "Rauch- & CO-Detektor",
@@ -133,7 +133,7 @@
       "E-Mail + Familienalarm",
       "Beschattungs-Automatisierung*"
     ],
-    "mieter_pkg1_features": [
+    "mieter_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
       "Rauch- & CO-Detektor",
@@ -145,7 +145,7 @@
       "E-Mail + SMS-Warnungen",
       "Beschattungs-Automatisierung*"
     ],
-    "ferienhaus_pkg1_features": [
+    "ferienhaus_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
       "Rauch- & CO-Detektor",
@@ -158,19 +158,19 @@
       "E-Mail-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg1_btn": "Jetzt anfragen",
-    "pkg1_note": "Einrichtungsinvestition ~CHF 300-700 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
-    "pkg2_badge": "Empfohlen",
-    "pkg2_name_basis": "Advanced",
-    "pkg2_name_senioren": "Seelenfrieden",
-    "pkg2_name_mieter": "Vollständiger Schutz",
-    "pkg2_name_ferienhaus": "Ferienfrieden",
-    "pkg2_tag_basis": "Umfassende Smart-Home-Lösung",
-    "pkg2_tag_senioren": "Vollständige Überwachung & Unabhängigkeit",
-    "pkg2_tag_mieter": "Kompletter Schutz und Überwachung",
-    "pkg2_tag_ferienhaus": "Überwachung und Kontrolle",
-    "pkg2_price": "89",
-    "basis_pkg2_features": [
+    "pkg2_btn": "Jetzt anfragen",
+    "pkg2_note": "Einrichtungsinvestition ~CHF 300-700 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg3_badge": "Empfohlen",
+    "pkg3_name_basis": "Advanced",
+    "pkg3_name_senioren": "Seelenfrieden",
+    "pkg3_name_mieter": "Vollständiger Schutz",
+    "pkg3_name_ferienhaus": "Ferienfrieden",
+    "pkg3_tag_basis": "Umfassende Smart-Home-Lösung",
+    "pkg3_tag_senioren": "Vollständige Überwachung & Unabhängigkeit",
+    "pkg3_tag_mieter": "Kompletter Schutz und Überwachung",
+    "pkg3_tag_ferienhaus": "Überwachung und Kontrolle",
+    "pkg3_price": "89",
+    "basis_pkg3_features": [
       "Alles aus Essential",
       "+ Bis zu 4× Bewegungsmelder",
       "Video-Türklingel",
@@ -181,7 +181,7 @@
       "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
-    "senioren_pkg2_features": [
+    "senioren_pkg3_features": [
       "Alles aus Sicher zu Hause",
       "+ Bis zu 4× Bewegungsmelder",
       "Video-Türklingel",
@@ -194,7 +194,7 @@
       "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
-    "mieter_pkg2_features": [
+    "mieter_pkg3_features": [
       "Alles aus Sicher Wohnen",
       "+ Bis zu 4× Bewegungsmelder",
       "Video-Türklingel",
@@ -207,7 +207,7 @@
       "Telefon-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "ferienhaus_pkg2_features": [
+    "ferienhaus_pkg3_features": [
       "Alles aus Ferienhaus-Sicherheit",
       "Smart Lock",
       "+ Bis zu 4× Bewegungsmelder",
@@ -220,19 +220,19 @@
       "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg2_btn": "Jetzt anfragen",
-    "pkg2_note": "Einrichtungsinvestition ~CHF 500-1200 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
-    "pkg3_badge": "Premium",
-    "pkg3_name_basis": "All-in",
-    "pkg3_name_senioren": "Unabhängig Wohnen",
-    "pkg3_name_mieter": "Smart Living",
-    "pkg3_name_ferienhaus": "Ferienhaus Komplettpaket",
-    "pkg3_tag_basis": "Komplette Smart-Home-Lösung",
-    "pkg3_tag_senioren": "Fortgeschrittene Betreuung & Würde",
-    "pkg3_tag_mieter": "Premium-Gastkompetenz & Sicherheit",
-    "pkg3_tag_ferienhaus": "Vollständige Intelligenz & nahtlose Verwaltung",
-    "pkg3_price": "149",
-    "basis_pkg3_features": [
+    "pkg3_btn": "Jetzt anfragen",
+    "pkg3_note": "Einrichtungsinvestition ~CHF 500-1200 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg4_badge": "Premium",
+    "pkg4_name_basis": "All-in",
+    "pkg4_name_senioren": "Unabhängig Wohnen",
+    "pkg4_name_mieter": "Smart Living",
+    "pkg4_name_ferienhaus": "Ferienhaus Komplettpaket",
+    "pkg4_tag_basis": "Komplette Smart-Home-Lösung",
+    "pkg4_tag_senioren": "Fortgeschrittene Betreuung & Würde",
+    "pkg4_tag_mieter": "Premium-Gastkompetenz & Sicherheit",
+    "pkg4_tag_ferienhaus": "Vollständige Intelligenz & nahtlose Verwaltung",
+    "pkg4_price": "149",
+    "basis_pkg4_features": [
       "Alles aus Advanced",
       "Smart Lock",
       "+ Bis zu 6× Zusätzliche Sensoren",
@@ -241,7 +241,7 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "senioren_pkg3_features": [
+    "senioren_pkg4_features": [
       "Alles aus Seelenfrieden",
       "Smart Lock",
       "+ Bis zu 6× Umweltsensoren",
@@ -253,7 +253,7 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "mieter_pkg3_features": [
+    "mieter_pkg4_features": [
       "Alles aus Smart Comfort",
       "+ Bis zu 6× Umweltsensoren",
       "Erweitertes Sicherheits-Dashboard",
@@ -266,7 +266,7 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "ferienhaus_pkg3_features": [
+    "ferienhaus_pkg4_features": [
       "Alles aus Ferienfrieden",
       "+ Bis zu 6× Umweltsensoren",
       "Energie-Überwachungs-Dashboard",
@@ -279,8 +279,8 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg3_btn": "Jetzt anfragen",
-    "pkg3_note": "Einrichtungsinvestition ~CHF 900-1500 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg4_btn": "Jetzt anfragen",
+    "pkg4_note": "Einrichtungsinvestition ~CHF 900-1500 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "details_btn": "Details",
     "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>",
     "disclaimer": "* soweit zutreffend",
