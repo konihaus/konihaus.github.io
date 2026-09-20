@@ -22,7 +22,7 @@
   'use strict';
 
   // ── Config: adjust if your setup differs ───────────────────────────────────
-  const JSON_URL         = (lang) => './' + lang + '.json'; // where the language files live
+  const JSON_URL         = (lang) => './translations/' + lang + '.json'; // where the language files live
   const DEFAULT_LANG     = 'de';
   const DEFAULT_AUDIENCE = 'basis';
   // ───────────────────────────────────────────────────────────────────────────
