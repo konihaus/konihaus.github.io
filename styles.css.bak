@@ -809,31 +809,9 @@ a.logo {
 
 .pkg-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   align-items: start;
-}
-
-/* 4 cards need more room than the default 1120px container */
-.packages .container {
-  max-width: 1280px;
-}
-
-.pkg__top {
-  padding: 26px 22px 18px;
-}
-
-.pkg__body {
-  padding: 22px 22px 26px;
-}
-
-/* Between desktop and the ≤900px accordion layout: 2 x 2 grid.
-   Must stay ABOVE the ≤900px block so that block still wins. */
-@media (max-width: 1100px) {
-  .pkg-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-  }
 }
 
 .pkg {
@@ -908,6 +886,7 @@ a.logo {
 
 
 .pkg__top {
+  padding: 26px 26px 18px;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -1014,6 +993,7 @@ a.logo {
 }
 
 .pkg__body {
+  padding: 22px 26px 26px;
   display: block;
 }
 
@@ -1119,14 +1099,6 @@ a.logo {
 
 .pkg-featured .pkg__note {
   color: rgba(247, 244, 237, .28);
-}
-
-/* Footnote under the grid (shading automation asterisk) */
-.pkg__shading-note {
-  text-align: center;
-  margin-top: 24px;
-  font-size: 0.75em;
-  color: var(--ink-3);
 }
 
 /* PROCESS */
