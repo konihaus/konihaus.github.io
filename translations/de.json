@@ -65,6 +65,11 @@
     "pkg1_tag_mieter": "Einfacher Einstieg ohne Umbau",
     "pkg1_tag_ferienhaus": "Präsenz und Zutritt im Blick",
     "pkg1_price": "29",
+    "basis_pkg1_outcomes": [
+      "Im Monatsbericht sehen, wie Ihr Zuhause genutzt wird",
+      "Wissen, ob Türen und Fenster offen oder geschlossen sind",
+      "Lampen und Geräte per App ein- und ausschalten"
+    ],
     "basis_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
@@ -72,6 +77,11 @@
       "3× Smart Plug",
       "Monatlicher Bericht",
       "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
+    ],
+    "senioren_pkg1_outcomes": [
+      "Der Monatsbericht zeigt, ob der Alltag wie gewohnt verläuft",
+      "Türen und Fenster im Blick — offen oder geschlossen",
+      "Steckdosen bequem per App ein- und ausschalten"
     ],
     "senioren_pkg1_features": [
       "Smart-Home-Zentrale",
@@ -81,6 +91,11 @@
       "Monatlicher Aktivitätsbericht",
       "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
+    "mieter_pkg1_outcomes": [
+      "Wissen, ob Tür oder Fenster offen sind — auch von unterwegs",
+      "Monatsbericht: Was ist in Ihrer Wohnung passiert?",
+      "Steckdosen per App schalten — ganz ohne Umbau"
+    ],
     "mieter_pkg1_features": [
       "Smart-Home-Zentrale",
       "2–3× Bewegungs-/Präsenzmelder",
@@ -88,6 +103,11 @@
       "3× Smart Plug",
       "Monatlicher Sicherheitsbericht",
       "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
+    ],
+    "ferienhaus_pkg1_outcomes": [
+      "Sehen, ob sich im Haus etwas bewegt, während Sie weg sind",
+      "Wissen, ob Türen und Fenster geschlossen sind",
+      "Der Monatsbericht zeigt, was in Ihrer Abwesenheit passiert ist"
     ],
     "ferienhaus_pkg1_features": [
       "Smart-Home-Zentrale",
@@ -109,6 +129,11 @@
     "pkg2_tag_mieter": "Vermögenswerte schützen",
     "pkg2_tag_ferienhaus": "Grundschutz bei Abwesenheit",
     "pkg2_price": "49",
+    "basis_pkg2_outcomes": [
+      "Wasseralarm auf dem Handy — auch wenn Sie unterwegs sind",
+      "Bei Rauch oder CO werden Sie direkt aufs Handy benachrichtigt",
+      "Die Heizung regelt sich automatisch für angenehme Wärme"
+    ],
     "basis_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
@@ -120,6 +145,11 @@
       "Monatlicher Familienbericht",
       "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
+    ],
+    "senioren_pkg2_outcomes": [
+      "Angehörige erhalten bei Rauch, CO oder Wasser eine Push-Nachricht",
+      "Ein Sicherheitsbericht pro Monat macht Auffälligkeiten sichtbar",
+      "Die Heizung regelt sich automatisch für angenehme Wärme"
     ],
     "senioren_pkg2_features": [
       "Smart-Home-Zentrale",
@@ -134,6 +164,11 @@
       "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
+    "mieter_pkg2_outcomes": [
+      "Bei Wasser, Rauch oder CO erhalten Sie eine Push-Nachricht aufs Handy",
+      "Sie erfahren, wenn während Ihrer Abwesenheit eine Tür geöffnet wird",
+      "Heizung smart regeln — ohne Umbau"
+    ],
     "mieter_pkg2_features": [
       "Smart-Home-Zentrale",
       "2× Bewegungsmelder",
@@ -146,6 +181,11 @@
       "Push-Benachrichtigungen via offizielle App",
       "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
+    ],
+    "ferienhaus_pkg2_outcomes": [
+      "Wasseralarm auf dem Handy — auch wenn Sie unterwegs sind",
+      "Bei Rauch oder CO im leeren Haus werden Sie benachrichtigt",
+      "Heizung aus der Ferne steuern — bei Ankunft ist es warm"
     ],
     "ferienhaus_pkg2_features": [
       "Smart-Home-Zentrale",
@@ -172,6 +212,11 @@
     "pkg3_tag_mieter": "Kompletter Schutz und Überwachung",
     "pkg3_tag_ferienhaus": "Überwachung und Kontrolle",
     "pkg3_price": "89",
+    "basis_pkg3_outcomes": [
+      "Sehen, wer klingelt — auch von unterwegs",
+      "Sie erfahren, wenn im Haus ungewöhnlich lange nichts passiert",
+      "Ein Knopfdruck am Alarm-Knopf benachrichtigt Ihre Kontaktpersonen"
+    ],
     "basis_pkg3_features": [
       "Alles aus Essential",
       "+ Bis zu 4× Bewegungsmelder",
@@ -182,6 +227,11 @@
       "Vollständiger Jahresbericht",
       "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
+    ],
+    "senioren_pkg3_outcomes": [
+      "Ein Knopfdruck am Alarm-Knopf benachrichtigt Ihre Kontaktpersonen",
+      "Veränderungen im Alltag fallen Ihren Angehörigen früher auf",
+      "Sehen, wer vor der Tür steht — bevor Sie öffnen"
     ],
     "senioren_pkg3_features": [
       "Alles aus Sicher zu Hause",
@@ -196,6 +246,11 @@
       "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
+    "mieter_pkg3_outcomes": [
+      "Sehen, wer vor der Tür steht — auch von unterwegs",
+      "Luftfeuchtigkeit im Blick — hilft, Schimmel vorzubeugen",
+      "Licht und Geräte laufen automatisch nach Ihrem Alltag"
+    ],
     "mieter_pkg3_features": [
       "Alles aus Sicher Wohnen",
       "+ Bis zu 4× Bewegungsmelder",
@@ -208,6 +263,11 @@
       "Vierteljährlicher Mieterbericht",
       "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
+    ],
+    "ferienhaus_pkg3_outcomes": [
+      "Gäste und Handwerker ohne Schlüsselübergabe hereinlassen",
+      "Sehen, wer vor der Tür steht — auch aus der Ferne",
+      "Feuchte und Temperatur im Protokoll — Veränderungen fallen früher auf"
     ],
     "ferienhaus_pkg3_features": [
       "Alles aus Ferienhaus-Sicherheit",
@@ -234,6 +294,11 @@
     "pkg4_tag_mieter": "Premium-Gastkompetenz & Sicherheit",
     "pkg4_tag_ferienhaus": "Vollständige Intelligenz & nahtlose Verwaltung",
     "pkg4_price": "149",
+    "basis_pkg4_outcomes": [
+      "Zutritt per App vergeben — ohne Schlüsselübergabe",
+      "Ihre Familie behält den Überblick — mit eigenem App-Zugang",
+      "Alle drei Monate prüfen wir vor Ort, ob alles rund läuft"
+    ],
     "basis_pkg4_features": [
       "Alles aus Advanced",
       "Smart Lock",
@@ -242,6 +307,11 @@
       "Familien-App-Zugang",
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
+    ],
+    "senioren_pkg4_outcomes": [
+      "Automatische Erinnerung an Ihre Medikamente",
+      "Angehörige behalten den Überblick — mit App und Betreuungs-Dashboard",
+      "Angehörige erhalten Zutritt per App — ohne Schlüsselübergabe"
     ],
     "senioren_pkg4_features": [
       "Alles aus Seelenfrieden",
@@ -255,6 +325,11 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
+    "mieter_pkg4_outcomes": [
+      "Stromverbrauch im Energie-Dashboard nachverfolgen",
+      "Lärmereignisse werden erkannt und im Dashboard sichtbar",
+      "Alle zwei Wochen prüfen wir, ob Ihr System einwandfrei läuft"
+    ],
     "mieter_pkg4_features": [
       "Alles aus Smart Comfort",
       "+ Bis zu 6× Umweltsensoren",
@@ -267,6 +342,11 @@
       "Energie-Überwachungs-Dashboard",
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
+    ],
+    "ferienhaus_pkg4_outcomes": [
+      "Pool oder Whirlpool aus der Ferne steuern",
+      "Auswertungen helfen, Ihre Vermietung zu optimieren",
+      "Störungen an Geräten werden früh sichtbar — vor dem nächsten Gast"
     ],
     "ferienhaus_pkg4_features": [
       "Alles aus Ferienfrieden",
@@ -284,7 +364,7 @@
     "pkg4_btn": "Jetzt anfragen",
     "pkg4_note": "Einrichtungsinvestition ~CHF 900-1500 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "details_btn": "Details",
-    "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>",
+    "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für alle</a>",
     "disclaimer": "* soweit zutreffend",
     "shading_note": "* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.",
     "safety_line": "Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.",
@@ -399,7 +479,7 @@
     "h2": "Sprechen wir<br>über <em>Ihr Zuhause.</em>",
     "p": "Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder Feriendomizil. Ich melde mich innert 24 Stunden.",
     "detail1": "hallo@konihaus.ch",
-    "detail2": "ö",
+    "detail2": "+41 78 237 96 85",
     "detail3": "Affoltern am Albis, Zürich · Einsatz CH-weit",
     "form_name_label": "Name",
     "form_name_placeholder": "Max Muster",

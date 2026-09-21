@@ -65,6 +65,11 @@
     "pkg1_tag_mieter": "Simple start, no renovation needed",
     "pkg1_tag_ferienhaus": "Presence and access at a glance",
     "pkg1_price": "29",
+    "basis_pkg1_outcomes": [
+      "See in the monthly report how your home is being used",
+      "Know whether doors and windows are open or closed",
+      "Switch lamps and appliances on and off from the app"
+    ],
     "basis_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
@@ -72,6 +77,11 @@
       "3× Smart Plugs",
       "Monthly Report",
       "Email & WhatsApp Support (response within 48h)"
+    ],
+    "senioren_pkg1_outcomes": [
+      "The monthly report shows whether daily life is running as usual",
+      "Doors and windows at a glance — open or closed",
+      "Switch plugs on and off conveniently from the app"
     ],
     "senioren_pkg1_features": [
       "Smart Home Hub",
@@ -81,6 +91,11 @@
       "Monthly Activity Report",
       "Email & WhatsApp Support (response within 48h)"
     ],
+    "mieter_pkg1_outcomes": [
+      "Know whether a door or window is open — even when you're out",
+      "Monthly report: what happened in your home",
+      "Switch plugs from the app — no renovation needed"
+    ],
     "mieter_pkg1_features": [
       "Smart Home Hub",
       "2–3× Motion / Presence Sensors",
@@ -88,6 +103,11 @@
       "3× Smart Plugs",
       "Monthly Security Report",
       "Email & WhatsApp Support (response within 48h)"
+    ],
+    "ferienhaus_pkg1_outcomes": [
+      "See whether anything moves in the house while you're away",
+      "Know whether doors and windows are closed",
+      "The monthly report shows what happened while you were away"
     ],
     "ferienhaus_pkg1_features": [
       "Smart Home Hub",
@@ -109,6 +129,11 @@
     "pkg2_tag_mieter": "Protect valuable assets",
     "pkg2_tag_ferienhaus": "Basic protection while away",
     "pkg2_price": "49",
+    "basis_pkg2_outcomes": [
+      "Water alert on your phone — even when you're away",
+      "Get notified on your phone about smoke or CO",
+      "Heating adjusts automatically for comfortable warmth"
+    ],
     "basis_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
@@ -120,6 +145,11 @@
       "Monthly Family Report",
       "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
+    ],
+    "senioren_pkg2_outcomes": [
+      "Family receives a push notification about smoke, CO or water",
+      "A monthly safety report makes anything unusual visible",
+      "Heating adjusts automatically for comfortable warmth"
     ],
     "senioren_pkg2_features": [
       "Smart Home Hub",
@@ -134,6 +164,11 @@
       "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
+    "mieter_pkg2_outcomes": [
+      "Get a push notification on your phone about water, smoke or CO",
+      "Find out if a door is opened while you're away",
+      "Control your heating smartly — no renovation needed"
+    ],
     "mieter_pkg2_features": [
       "Smart Home Hub",
       "2× Motion Sensors",
@@ -146,6 +181,11 @@
       "Push Notifications via Official App",
       "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
+    ],
+    "ferienhaus_pkg2_outcomes": [
+      "Water alert on your phone — even when you're away",
+      "Get notified about smoke or CO in the empty house",
+      "Control the heating remotely — warm on arrival"
     ],
     "ferienhaus_pkg2_features": [
       "Smart Home Hub",
@@ -172,6 +212,11 @@
     "pkg3_tag_mieter": "Complete protection and monitoring",
     "pkg3_tag_ferienhaus": "Monitoring and control",
     "pkg3_price": "89",
+    "basis_pkg3_outcomes": [
+      "See who's at the door — even when you're out",
+      "Find out when nothing has happened at home for unusually long",
+      "Press the alarm button to notify your contacts"
+    ],
     "basis_pkg3_features": [
       "Everything from Essential",
       "+ Up to 4× Motion Sensors",
@@ -182,6 +227,11 @@
       "Full Annual Report",
       "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
+    ],
+    "senioren_pkg3_outcomes": [
+      "Press the alarm button to notify your contacts",
+      "Relatives notice changes in daily routine sooner",
+      "See who's at the door before you open it"
     ],
     "senioren_pkg3_features": [
       "Everything from Safe at Home",
@@ -196,6 +246,11 @@
       "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
+    "mieter_pkg3_outcomes": [
+      "See who's at the door — even when you're out",
+      "Humidity at a glance — helps prevent mold",
+      "Lights and appliances follow your daily routine automatically"
+    ],
     "mieter_pkg3_features": [
       "Everything from Secure Living",
       "+ Up to 4× Motion Sensors",
@@ -208,6 +263,11 @@
       "Quarterly Tenant Report",
       "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
+    ],
+    "ferienhaus_pkg3_outcomes": [
+      "Let guests and tradespeople in without handing over keys",
+      "See who's at the door — even from afar",
+      "Humidity and temperature are logged — changes show up sooner"
     ],
     "ferienhaus_pkg3_features": [
       "Everything from Holiday Security",
@@ -234,6 +294,11 @@
     "pkg4_tag_mieter": "Premium guest experience & security",
     "pkg4_tag_ferienhaus": "Full intelligence & seamless management",
     "pkg4_price": "149",
+    "basis_pkg4_outcomes": [
+      "Grant access from the app — no key handover",
+      "Your family stays in the loop with their own app access",
+      "Every three months we check on site that everything runs smoothly"
+    ],
     "basis_pkg4_features": [
       "Everything from Advanced",
       "Smart Lock",
@@ -242,6 +307,11 @@
       "Family App Access",
       "Priority Support",
       "Shading System Automation*"
+    ],
+    "senioren_pkg4_outcomes": [
+      "Automatic reminders for your medication",
+      "Relatives stay informed with the app and caregiver dashboard",
+      "Relatives get access through the app — no key handover"
     ],
     "senioren_pkg4_features": [
       "Everything from Peace of Mind",
@@ -255,6 +325,11 @@
       "Priority Support",
       "Shading System Automation*"
     ],
+    "mieter_pkg4_outcomes": [
+      "Track your electricity use in the energy dashboard",
+      "Noise events are detected and shown in the dashboard",
+      "Every two weeks we check that your system is running properly"
+    ],
     "mieter_pkg4_features": [
       "Everything from Smart Comfort",
       "+ Up to 6× Environmental Sensors",
@@ -267,6 +342,11 @@
       "Energy Monitoring Dashboard",
       "Priority Support",
       "Shading System Automation*"
+    ],
+    "ferienhaus_pkg4_outcomes": [
+      "Control the pool or hot tub remotely",
+      "Analytics help you optimize your rentals",
+      "Appliance faults show up early — before the next guest arrives"
     ],
     "ferienhaus_pkg4_features": [
       "Everything from Holiday Peace of Mind",
@@ -284,7 +364,7 @@
     "pkg4_btn": "Request Now",
     "pkg4_note": "Setup investment CHF ~900-1500 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "details_btn": "Details",
-    "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for vacation rentals & Airbnb</a>",
+    "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for everyone</a>",
     "disclaimer": "* wherever applicable",
     "shading_note": "* Available where electrically controlled shading (blinds, shutters, awnings) is already installed.",
     "safety_line": "Konihaus is not an emergency service. In an emergency: 144 or 112.",

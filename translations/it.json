@@ -65,6 +65,11 @@
     "pkg1_tag_mieter": "Avvio semplice, senza lavori",
     "pkg1_tag_ferienhaus": "Presenza e accessi sotto controllo",
     "pkg1_price": "29",
+    "basis_pkg1_outcomes": [
+      "Vedere nel rapporto mensile come viene usata la tua casa",
+      "Sapere se porte e finestre sono aperte o chiuse",
+      "Accendere e spegnere luci e apparecchi dall'app"
+    ],
     "basis_pkg1_features": [
       "Hub Casa Intelligente",
       "2–3× Sensori di Movimento / Presenza",
@@ -72,6 +77,11 @@
       "3× Prese Intelligenti",
       "Rapporto Mensile",
       "Supporto Email & WhatsApp (risposta entro 48h)"
+    ],
+    "senioren_pkg1_outcomes": [
+      "Il rapporto mensile mostra se la giornata procede come al solito",
+      "Porte e finestre sotto controllo — aperte o chiuse",
+      "Accendere e spegnere le prese comodamente dall'app"
     ],
     "senioren_pkg1_features": [
       "Hub Casa Intelligente",
@@ -81,6 +91,11 @@
       "Rapporto Attività Mensile",
       "Supporto Email & WhatsApp (risposta entro 48h)"
     ],
+    "mieter_pkg1_outcomes": [
+      "Sapere se una porta o una finestra è aperta — anche quando sei fuori",
+      "Rapporto mensile: cosa è successo a casa tua",
+      "Comandare le prese dall'app — senza lavori"
+    ],
     "mieter_pkg1_features": [
       "Hub Casa Intelligente",
       "2–3× Sensori di Movimento / Presenza",
@@ -88,6 +103,11 @@
       "3× Prese Intelligenti",
       "Rapporto Sicurezza Mensile",
       "Supporto Email & WhatsApp (risposta entro 48h)"
+    ],
+    "ferienhaus_pkg1_outcomes": [
+      "Vedere se qualcosa si muove in casa mentre sei via",
+      "Sapere se porte e finestre sono chiuse",
+      "Il rapporto mensile mostra cosa è successo durante la tua assenza"
     ],
     "ferienhaus_pkg1_features": [
       "Hub Casa Intelligente",
@@ -109,6 +129,11 @@
     "pkg2_tag_mieter": "Proteggi i beni preziosi",
     "pkg2_tag_ferienhaus": "Protezione base durante l'assenza",
     "pkg2_price": "49",
+    "basis_pkg2_outcomes": [
+      "Allarme acqua sul telefono — anche quando sei fuori",
+      "In caso di fumo o CO ricevi una notifica sul telefono",
+      "Il riscaldamento si regola da solo per un comfort piacevole"
+    ],
     "basis_pkg2_features": [
       "Hub Casa Intelligente",
       "2× Sensori di Movimento",
@@ -120,6 +145,11 @@
       "Rapporto Familiare Mensile",
       "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
+    ],
+    "senioren_pkg2_outcomes": [
+      "I tuoi familiari ricevono una notifica in caso di fumo, CO o acqua",
+      "Un rapporto di sicurezza mensile rende visibile ciò che è insolito",
+      "Il riscaldamento si regola da solo per un comfort piacevole"
     ],
     "senioren_pkg2_features": [
       "Hub Casa Intelligente",
@@ -134,6 +164,11 @@
       "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
     ],
+    "mieter_pkg2_outcomes": [
+      "Notifica sul telefono in caso di acqua, fumo o CO",
+      "Scopri se una porta viene aperta mentre sei assente",
+      "Regolare il riscaldamento in modo intelligente — senza lavori"
+    ],
     "mieter_pkg2_features": [
       "Hub Casa Intelligente",
       "2× Sensori di Movimento",
@@ -146,6 +181,11 @@
       "Notifiche Push tramite App Ufficiale",
       "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
+    ],
+    "ferienhaus_pkg2_outcomes": [
+      "Allarme acqua sul telefono — anche quando sei fuori",
+      "Notifica in caso di fumo o CO nella casa vuota",
+      "Riscaldamento comandato a distanza — all'arrivo la casa è calda"
     ],
     "ferienhaus_pkg2_features": [
       "Hub Casa Intelligente",
@@ -172,6 +212,11 @@
     "pkg3_tag_mieter": "Protezione e monitoraggio completi",
     "pkg3_tag_ferienhaus": "Monitoraggio e controllo",
     "pkg3_price": "89",
+    "basis_pkg3_outcomes": [
+      "Vedere chi suona alla porta — anche quando sei fuori",
+      "Una segnalazione se in casa non succede nulla per un tempo insolito",
+      "Con il pulsante d'allarme avvisi i tuoi contatti con un tocco"
+    ],
     "basis_pkg3_features": [
       "Tutto dall'Essenziale",
       "+ Fino a 4× Sensori di Movimento",
@@ -182,6 +227,11 @@
       "Rapporto Annuale Completo",
       "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
+    ],
+    "senioren_pkg3_outcomes": [
+      "Con il pulsante d'allarme avvisi i tuoi contatti con un tocco",
+      "I familiari notano prima i cambiamenti nella quotidianità",
+      "Vedere chi è alla porta prima di aprire"
     ],
     "senioren_pkg3_features": [
       "Tutto da Sicuro a Casa",
@@ -196,6 +246,11 @@
       "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
     ],
+    "mieter_pkg3_outcomes": [
+      "Vedere chi è alla porta — anche quando sei fuori",
+      "Umidità sotto controllo — aiuta a prevenire la muffa",
+      "Luci e apparecchi seguono automaticamente la tua giornata"
+    ],
     "mieter_pkg3_features": [
       "Tutto da Sicurezza Affitto",
       "+ Fino a 4× Sensori di Movimento",
@@ -208,6 +263,11 @@
       "Rapporto Inquilino Trimestrale",
       "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
+    ],
+    "ferienhaus_pkg3_outcomes": [
+      "Far entrare ospiti e artigiani senza consegnare le chiavi",
+      "Vedere chi è alla porta — anche a distanza",
+      "Umidità e temperatura registrate — i cambiamenti si notano prima"
     ],
     "ferienhaus_pkg3_features": [
       "Tutto da Sicurezza Vacanze",
@@ -234,6 +294,11 @@
     "pkg4_tag_mieter": "Esperienza Premium & Sicurezza",
     "pkg4_tag_ferienhaus": "Intelligenza Completa & Gestione Senza Soluzione di Continuità",
     "pkg4_price": "149",
+    "basis_pkg4_outcomes": [
+      "Concedere l'accesso dall'app — senza consegnare le chiavi",
+      "La tua famiglia resta informata con il proprio accesso all'app",
+      "Ogni tre mesi verifichiamo sul posto che tutto funzioni"
+    ],
     "basis_pkg4_features": [
       "Tutto da Avanzato",
       "Serratura Intelligente",
@@ -242,6 +307,11 @@
       "Accesso App Famiglia",
       "Supporto Prioritario",
       "Automazione Schermature Solari*"
+    ],
+    "senioren_pkg4_outcomes": [
+      "Promemoria automatici per i tuoi farmaci",
+      "I familiari restano informati con app e dashboard",
+      "I familiari entrano tramite app — senza consegnare le chiavi"
     ],
     "senioren_pkg4_features": [
       "Tutto da Tranquillità",
@@ -255,6 +325,11 @@
       "Supporto Prioritario",
       "Automazione Schermature Solari*"
     ],
+    "mieter_pkg4_outcomes": [
+      "Seguire il consumo di elettricità nella dashboard energetica",
+      "I rumori vengono rilevati e mostrati nella dashboard",
+      "Ogni due settimane verifichiamo che il tuo sistema funzioni"
+    ],
     "mieter_pkg4_features": [
       "Tutto da Comfort Intelligente",
       "+ Fino a 6× Sensori Ambientali",
@@ -267,6 +342,11 @@
       "Dashboard Monitoraggio Energia",
       "Supporto Prioritario",
       "Automazione Schermature Solari*"
+    ],
+    "ferienhaus_pkg4_outcomes": [
+      "Comandare piscina o idromassaggio a distanza",
+      "Le analisi aiutano a ottimizzare l'affitto",
+      "I guasti agli apparecchi emergono presto — prima del prossimo ospite"
     ],
     "ferienhaus_pkg4_features": [
       "Tutto da Tranquillità Vacanze",
@@ -284,7 +364,7 @@
     "pkg4_btn": "Richiedi Ora",
     "pkg4_note": "Investimento installazione CHF ~900-1500 · <span class=\"pkg__highlight\">Gratuito con accordo servizio 2 anni</span>",
     "details_btn": "Dettagli",
-    "footer": "Prezzi in Franchi Svizzeri IVA incl. · Costi unici gratuiti con accordo 2 anni · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consulenza gratuita per affitti vacanze & Airbnb</a>",
+    "footer": "Prezzi in Franchi Svizzeri IVA incl. · Costi unici gratuiti con accordo 2 anni · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consulenza gratuita per tutti</a>",
     "disclaimer": "* dove applicabile",
     "shading_note": "* Disponibile dove sono già presenti schermature solari a comando elettrico (tende, tapparelle, tende da sole).",
     "safety_line": "Konihaus non è un servizio di emergenza. In caso di emergenza: 144 o 112.",
@@ -399,7 +479,7 @@
     "h2": "Parliamo della<br><em>Tua Casa.</em>",
     "p": "Raccontami brevemente la tua situazione — casa per anziani, casa familiare o proprietà vacanze. Risponderò entro 24 ore.",
     "detail1": "hello@konihaus.ch",
-    "detail2": " +41 78 237 96 85",
+    "detail2": "+41 78 237 96 85",
     "detail3": "Affoltern am Albis, Zurigo · Servizio in tutta la Svizzera",
     "form_name_label": "Nome",
     "form_name_placeholder": "Giovanni Rossi",

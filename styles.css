@@ -850,6 +850,11 @@ a.logo {
   display: block;
 }
 
+/* the footnote now sits right under the (collapsible) hardware list it refers to */
+.pkg__details .pkg__disclaimer {
+  margin: -10px 0 20px;
+}
+
 
 
 .pkg__top {
@@ -962,8 +967,78 @@ a.logo {
   display: block;
 }
 
+/* Outcomes: what the customer gets (2-3 lines). Always visible, above the hardware list. */
+.pkg__outcomes {
+  list-style: none;
+  margin: 0 0 12px;
+}
+
+.pkg__outcomes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875em;
+  color: var(--ink);
+  padding: 6px 0;
+  line-height: 1.4;
+}
+
+.pkg-featured .pkg__outcomes li {
+  color: var(--parchment);
+}
+
+/* "Details" toggle: shows / hides the hardware list (.pkg__details) on every screen size */
 .pkg__toggle {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 4px 0;
+  font-family: var(--sans);
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--forest);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s var(--ease);
+}
+
+.pkg__toggle::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.2s var(--ease);
+}
+
+.pkg__toggle[aria-expanded="true"] {
+  margin-bottom: 12px;
+}
+
+.pkg__toggle[aria-expanded="true"]::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.pkg__toggle:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pkg__toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.pkg-featured .pkg__toggle {
+  color: rgba(232, 192, 106, 0.85);
+}
+
+.pkg-featured .pkg__toggle:hover {
+  color: var(--amber-warm);
 }
 
 .pkg__includes {
@@ -1931,7 +2006,6 @@ a.logo {
   width: 38px;
   height: 38px;
   border-radius: 9px;
-  background: var(--forest-tint);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2289,35 +2363,6 @@ a.logo {
     margin: 0 auto;
   }
 
-  .pkg__body {
-    display: none;
-  }
-
-  .expanded .pkg__body {
-    display: block;
-  }
-
-  .pkg__ext {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .pkg__toggle {
-    display: block;
-    color: var(--forest);
-    border-color: var(--rule-inv);
-  }
-
-  .pkg-featured .pkg__toggle {
-    color: rgba(232, 192, 106, 0.8);
-    border-color: var(--rule-inv);
-  }
-
-  .expanded .pkg__toggle {
-    display: none;
-  }
-
   .pkg-featured {
     transform: none;
   }
@@ -2495,47 +2540,6 @@ a.logo {
 
   .packages .sec-center {
     margin-bottom: 40px;
-  }
-
-  /* Package accordion on mobile */
-  .pkg__toggle {
-    display: block;
-    font-family: var(--sans);
-    font-size: 0.875em;
-    font-weight: 500;
-    color: var(--forest);
-    background: none;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.3s var(--ease);
-  }
-
-  .pkg-featured .pkg__toggle {
-    color: rgba(232, 192, 106, 0.8);
-    border-color: var(--rule-inv);
-  }
-
-  .pkg__toggle:hover {
-    color: var(--forest);
-  }
-
-  .pkg-featured .pkg__toggle:hover {
-    color: var(--amber-warm);
-  }
-
-  .pkg__body {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s var(--ease), opacity 0.3s var(--ease);
-    opacity: 0;
-  }
-
-  .pkg.expanded .pkg__body {
-    display: block;
-    max-height: 1000px;
-    opacity: 1;
   }
 
   /* Process */

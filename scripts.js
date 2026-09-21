@@ -273,19 +273,25 @@ function updatePackageContent(audience) {
       tagEl.textContent = translatedTag;
     }
 
-    // Feature list: one <li> per entry of "<audience>_pkg<N>_features" in the language JSON
+    // Outcomes (2-3 benefit lines, always visible) and hardware list (under "Details"):
+    // one <li> per entry of "<audience>_pkg<N>_outcomes" / "<audience>_pkg<N>_features" in the language JSON
+    const outcomeList = card.querySelector('.pkg__outcomes');
+    if (outcomeList) renderFeatureList(outcomeList, pkgNumber, audience, 'outcomes');
+
     const featureList = card.querySelector('.pkg__list');
-    if (featureList) renderFeatureList(featureList, pkgNumber, audience);
+    if (featureList) renderFeatureList(featureList, pkgNumber, audience, 'features');
   });
 
   updatePackageSafetyLine(audience);
 }
 
-// Builds the <li> items of one package card from the language JSON, e.g.
-//   "packages": { "senioren_pkg2_features": ["Smart-Home-Zentrale", "2× Bewegungsmelder", ...] }
-// Adding, removing or reordering features only means editing the array in the JSON.
-function renderFeatureList(listEl, pkgNumber, audience) {
-  const key = `${audience}_pkg${pkgNumber}_features`;
+// Builds the <li> items of one list in a package card from the language JSON, e.g.
+//   "packages": { "senioren_pkg2_outcomes": ["Angehörige erhalten bei Rauch, CO oder Wasser ...", ...],
+//                 "senioren_pkg2_features": ["Smart-Home-Zentrale", "2× Bewegungsmelder", ...] }
+// suffix is "outcomes" (what the customer gets, 2-3 lines) or "features" (the hardware list under Details).
+// Adding, removing or reordering entries only means editing the array in the JSON.
+function renderFeatureList(listEl, pkgNumber, audience, suffix = 'features') {
+  const key = `${audience}_pkg${pkgNumber}_${suffix}`;
   const packages = i18n.translations[i18n.currentLang]?.packages;
   const items = packages?.[key];
 
@@ -367,31 +373,23 @@ function renderSafetyStatement() {
   );
 }
 
-// Package details accordion for mobile
+// "Details" toggle of a package card (all screen sizes): shows / hides the hardware list.
+// The outcomes, the button and the price note stay visible. Cards toggle independently,
+// so visitors can open two cards side by side to compare the hardware.
 function setupPackageAccordion() {
-  const toggles = document.querySelectorAll('.pkg__toggle');
-
-  toggles.forEach((toggle) => {
+  document.querySelectorAll('.pkg__toggle').forEach((toggle) => {
     toggle.addEventListener('click', (e) => {
       e.preventDefault();
 
+      const panel = document.getElementById(toggle.getAttribute('aria-controls'));
+      if (!panel) return;
+
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+
       const pkg = toggle.closest('.pkg');
-      if (!pkg) return;
-
-      const isExpanded = pkg.classList.contains('expanded');
-
-      // Close all other packages
-      toggles.forEach((otherToggle) => {
-        const otherPkg = otherToggle.closest('.pkg');
-        if (otherPkg && otherPkg !== pkg) {
-          otherPkg.classList.remove('expanded');
-          otherToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Toggle current package
-      pkg.classList.toggle('expanded');
-      toggle.setAttribute('aria-expanded', !isExpanded);
+      if (pkg) pkg.classList.toggle('expanded', open);
     });
   });
 }
