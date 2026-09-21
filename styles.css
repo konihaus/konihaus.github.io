@@ -527,6 +527,7 @@ a.logo {
   letter-spacing: .12em;
   text-transform: uppercase;
   color: rgba(247, 244, 237, .3);
+  cursor: pointer;
 }
 
 /* TRUST */
