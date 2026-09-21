@@ -33,6 +33,7 @@ const i18n = {
     // Update all elements with data-i18n attribute
     this.updatePageContent();
     renderSafetyStatement();
+    if (typeof cookieConsent !== 'undefined') cookieConsent.refresh();
 
     // Update language selector dropdown
     const langSelect = document.getElementById('lang-selector');
@@ -435,6 +436,7 @@ function setupHeroTaglines() {
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init().then(() => {
+    if (typeof cookieConsent !== 'undefined') cookieConsent.init();
     setupMobileMenu();
     setupScrollAnimations();
     setupPackageTabs();
