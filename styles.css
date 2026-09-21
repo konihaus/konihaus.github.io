@@ -352,7 +352,7 @@ a.logo {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   transition: background-color 0.8s ease;
