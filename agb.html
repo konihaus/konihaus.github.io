@@ -43,8 +43,8 @@
     <div class="container">
       <h1 data-i18n="legal.terms_title">Allgemeine Geschäftsbedingungen</h1>
       <p class="legal__meta" data-i18n="legal.updated">Stand: September 2026</p>
-      <div data-legal-doc>
-        <p class="legal__notice" data-i18n="legal.german_only" hidden></p>
+      <div data-legal-doc data-fallback="en">
+        <p class="legal__notice" data-i18n="legal.en_de_notice" hidden></p>
         <div data-lang="de" lang="de">
           <h2>1. Geltung</h2>
           <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Konihaus, Konrad Hefelle, 8910 Affoltern am Albis (nachfolgend «Konihaus»), und ihren Kundinnen und Kunden (nachfolgend «Kunde») über Beratung, Beschaffung, Installation, Einrichtung und laufende Betreuung von Smart-Home-Anlagen. Abweichende Bedingungen des Kunden gelten nur, wenn Konihaus ihnen schriftlich zugestimmt hat.</p>
@@ -103,6 +103,66 @@
           <p>14.1 Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen unberührt. Anstelle der unwirksamen Bestimmung gilt eine wirksame, die dem wirtschaftlichen Zweck am nächsten kommt.</p>
           <p>14.2 Es gilt Schweizer Recht unter Ausschluss des Kollisionsrechts und des UN-Kaufrechts (CISG).</p>
           <p>14.3 Gerichtsstand ist, soweit gesetzlich zulässig, Affoltern am Albis. Für Konsumentinnen und Konsumenten bleiben die zwingenden gesetzlichen Gerichtsstände vorbehalten.</p>
+        </div>
+
+        <div data-lang="en" lang="en" hidden>
+          <h2>1. Scope of Application</h2>
+          <p>These General Terms and Conditions (GTC) apply to all contracts between Konihaus, Konrad Hefelle, 8910 Affoltern am Albis (hereinafter “Konihaus”), and its customers (hereinafter the “Customer”) concerning consulting, procurement, installation, setup and ongoing support for smart home systems. Any differing terms of the Customer apply only if Konihaus has agreed to them in writing.</p>
+
+          <h2>2. Services</h2>
+          <p>2.1 Konihaus advises the Customer, procures and installs smart home components, configures the system using a locally operated platform (Home Assistant), and provides remote support in accordance with the selected package.</p>
+          <p>2.2 The scope of services and equipment are specified in the quotation or order confirmation and the package description on the website. The initial consultation is free of charge and without obligation.</p>
+          <p>2.3 Konihaus may engage third parties (e.g. suppliers or specialist contractors) to provide its services.</p>
+
+          <h2>3. Conclusion of Contract</h2>
+          <p>The contract is concluded when the Customer accepts a quotation from Konihaus in writing (including by email) or Konihaus confirms an order. Unless otherwise stated, quotations are valid for 30 days.</p>
+
+          <h2>4. Prices and Payment</h2>
+          <p>4.1 All prices are in Swiss francs and include statutory value added tax where applicable.</p>
+          <p>4.2 The Customer pays the monthly fee for the selected package and a one-time setup charge (hardware and installation) as specified in the quotation. The setup charge is waived if a minimum contract term of 24 months is agreed.</p>
+          <p>4.3 Monthly fees are invoiced in advance. Invoices are payable in full within 30 days. In the event of late payment, Konihaus may suspend remote access, support and updates until payment is received, after issuing a reminder granting an additional payment period of 14 days.</p>
+
+          <h2>5. Term and Termination</h2>
+          <p>5.1 The minimum contract term is specified in the quotation. Thereafter, the contract continues indefinitely and may be terminated by either party with one month’s notice effective at the end of a calendar month. Notice of termination must be given in writing or by email.</p>
+          <p>5.2 If the contract ends before the expiry of the minimum term for reasons for which Konihaus is not responsible, the waived setup charge will be invoiced on a pro rata basis for the remaining months of the minimum term.</p>
+          <p>5.3 Both parties retain the right to terminate the contract for good cause.</p>
+          <p>5.4 Once the contract ends, Konihaus’s ongoing services (remote access, support and updates) cease. A locally installed system will continue to operate insofar as it belongs to the Customer. Upon request, Konihaus will provide the Customer with the access credentials and documentation of the configuration.</p>
+
+          <h2>6. Hardware and Ownership</h2>
+          <p>6.1 Ownership of the hardware supplied and installed by Konihaus passes to the Customer once the setup charge has been paid in full.</p>
+          <p>6.2 If the setup charge has been waived in exchange for an agreed minimum contract term, the hardware remains the property of Konihaus until that term expires, after which ownership passes to the Customer. Until then, the Customer may not remove or pledge the hardware or make it available to third parties.</p>
+
+          <h2>7. Support</h2>
+          <p>7.1 Konihaus responds to the Customer’s technical enquiries by email and WhatsApp and, depending on the package, by telephone.</p>
+          <p>7.2 The response time is determined by the selected package. It refers to the time until Konihaus’s initial response, rather than the time until the issue is resolved. Response times run only on business days (Monday to Friday, excluding public holidays in the Canton of Zurich).</p>
+          <p>7.3 Support covers the hardware and configuration supplied and set up by Konihaus. It does not cover faults involving third-party devices, systems or software that the Customer has procured or modified themselves, or disruptions to the electricity or internet supply.</p>
+
+          <h2>8. No Emergency Service, No Guarantee</h2>
+          <p>8.1 Konihaus is not an emergency response, care or monitoring service. Konihaus does not monitor the Customer’s system around the clock or alert emergency services. Support response times do not apply to emergencies.</p>
+          <p>8.2 System notifications (e.g. alarms) are delivered as push notifications through the official app to the contact persons designated by the Customer. Notifications may fail to arrive or may be delayed in the event of power or internet outages, depleted batteries or disruptions to push notification services.</p>
+          <p>8.3 In an emergency, immediately contact the ambulance service (144) or call the emergency number 112.</p>
+          <p>8.4 The Customer decides what is monitored and how; Konihaus provides advice based on its ideas and experience. Konihaus cannot guarantee that incidents (e.g. water damage, falls or break-ins) will be prevented or detected in time. The technology used may increase the likelihood of problems being noticed early.</p>
+
+          <h2>9. Customer Cooperation</h2>
+          <p>The Customer provides electricity and a working internet connection and grants Konihaus the necessary access to the premises. The Customer must give sufficient advance notice of any change of router or internet provider or any move to a new address. Tenants must obtain their landlord’s consent where necessary. The Customer informs other household members and their designated contact persons about the use of the system, keeps access credentials confidential, and does not make any configuration changes that could impair operation without first consulting Konihaus.</p>
+
+          <h2>10. Data Protection and Remote Access</h2>
+          <p>The Customer authorises Konihaus to access the system remotely insofar as this is necessary for ongoing service and support. Konihaus processes personal data in accordance with its <a href="datenschutz.html">Privacy Policy</a>.</p>
+
+          <h2>11. Warranty</h2>
+          <p>The supplied hardware is subject to statutory warranty rights and any applicable manufacturer warranties. To the extent permitted by law, Konihaus will remedy defects through repair or replacement at its discretion. Defects and faults resulting from improper use, intervention by the Customer or third parties, updates, apps or extensions installed by the Customer, or third-party systems are excluded.</p>
+
+          <h2>12. Liability</h2>
+          <p>12.1 Konihaus is liable for damage only in cases of intent or gross negligence. Liability for slight negligence is excluded to the extent permitted by law. Mandatory statutory liability, particularly for personal injury, remains unaffected.</p>
+          <p>12.2 To the extent permitted by law, liability is excluded for indirect and consequential damage (e.g. loss of profit or data), as well as damage resulting from failures of electricity, internet, push notification services or third-party systems.</p>
+
+          <h2>13. Amendments to the GTC and Prices</h2>
+          <p>Konihaus may amend these GTC and its prices. The Customer will be notified of changes by email at least 30 days before they take effect. Within this period, the Customer may terminate the contract effective on the date of the change; otherwise, the changes will be deemed accepted.</p>
+
+          <h2>14. Final Provisions</h2>
+          <p>14.1 If any provision is invalid, the validity of the remaining provisions remains unaffected. The invalid provision will be replaced by a valid provision that comes closest to its economic purpose.</p>
+          <p>14.2 Swiss law applies, excluding its conflict-of-laws rules and the United Nations Convention on Contracts for the International Sale of Goods (CISG).</p>
+          <p>14.3 To the extent permitted by law, the place of jurisdiction is Affoltern am Albis. Mandatory statutory rules on jurisdiction for consumers remain unaffected.</p>
         </div>
       </div>
     </div>

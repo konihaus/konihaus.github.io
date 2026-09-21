@@ -43,8 +43,8 @@
     <div class="container">
       <h1 data-i18n="legal.privacy_title">Datenschutzerklärung</h1>
       <p class="legal__meta" data-i18n="legal.updated">Stand: September 2026</p>
-      <div data-legal-doc>
-        <p class="legal__notice" data-i18n="legal.german_only" hidden></p>
+      <div data-legal-doc data-fallback="en">
+        <p class="legal__notice" data-i18n="legal.en_de_notice" hidden></p>
         <div data-lang="de" lang="de">
           <p>Der Schutz Ihrer Personendaten ist uns wichtig. Diese Erklärung zeigt, welche Personendaten wir beim Besuch dieser Website (konihaus.ch) und bei der Kontaktaufnahme bearbeiten, wofür wir sie brauchen und welche Rechte Sie haben. Sie richtet sich nach dem Schweizer Datenschutzgesetz (DSG); soweit anwendbar, berücksichtigen wir auch die Datenschutz-Grundverordnung der EU (DSGVO).</p>
 
@@ -91,6 +91,54 @@
 
           <h2>10. Änderungen dieser Erklärung</h2>
           <p>Wir können diese Datenschutzerklärung anpassen, etwa wenn sich die Website oder die rechtlichen Vorgaben ändern. Es gilt die jeweils auf dieser Website veröffentlichte Fassung.</p>
+        </div>
+
+        <div data-lang="en" lang="en" hidden>
+          <p>Protecting your personal data is important to us. This policy explains which personal data we process when you visit this website (konihaus.ch) and when you contact us, what we need it for, and what rights you have. It is based on the Swiss Federal Act on Data Protection (FADP); where applicable, we also take the EU General Data Protection Regulation (GDPR) into account.</p>
+
+          <h2>1. Controller</h2>
+          <p>The controller responsible for processing your personal data is:<br>Konihaus, Konrad Hefelle<br>8910 Affoltern am Albis, Switzerland<br>Email: <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a> · Telephone: <a href="tel:+41789646592">+41 78 237 96 85</a></p>
+          <p>If you have questions about data protection or wish to exercise your rights, you can reach us using these details.</p>
+
+          <h2>2. Visiting the Website</h2>
+          <h3>2.1 Hosting</h3>
+          <p>This website is hosted on GitHub Pages (GitHub, Inc., USA). When you access it, the hosting provider processes technically necessary connection data, in particular your IP address, the date and time, the page requested, and information about your browser and device. This is necessary to deliver and secure the website (legitimate interest). We do not analyse this data.</p>
+          <h3>2.2 Fonts</h3>
+          <p>To ensure consistent display, we load fonts from Google servers (Google Fonts; Google Ireland Limited, Ireland, or Google LLC, USA). Your IP address is transmitted to Google in the process. No cookies are set for this purpose.</p>
+          <h3>2.3 Statistics (Google Analytics)</h3>
+          <p>Only with your consent do we use Google Analytics (Google Ireland Limited or Google LLC) to understand how the website is used. This involves setting cookies and collecting information such as pages viewed, approximate location, and browser, device and session data under a random identifier. We have disabled features for advertising purposes (Google Signals, ad personalisation). Without your consent, Google Analytics is not loaded. You can withdraw your consent at any time with effect for the future (see 2.4).</p>
+          <h3>2.4 Cookies and Similar Technologies</h3>
+          <p>You can find out which cookies and storage features we use, and how you can change or withdraw your choice, in the <a href="#cookie-declaration" data-cc-open>Cookie Declaration</a>. Your language selection is stored locally by your browser; this information does not leave your device.</p>
+
+          <h2>3. Contacting Us</h2>
+          <p>If you contact us via the contact form, email, telephone or WhatsApp, we process the information you provide (e.g. name, email address, telephone number, your message, the service you are interested in) as well as the date and time of the enquiry. We use it to respond to your enquiry and to prepare a quotation. The legal basis is pre-contractual measures or our legitimate interest in responding to enquiries. Information submitted through the contact form is transmitted to us electronically.</p>
+          <p>If you write to us on WhatsApp, WhatsApp (Meta) processes connection and communication data under its own terms; the content of messages is end-to-end encrypted. Please do not send us sensitive personal data (e.g. health data) through this channel.</p>
+          <p>We do not send newsletters or advertising to your contact details unless you expressly ask us to.</p>
+
+          <h2>4. Customer Relationship and Support for Your Smart Home</h2>
+          <p>If you become our customer, we additionally process contract, billing and contact data as well as the technical information needed to install, set up, maintain and support your system (e.g. device list, configuration, error messages). The legal basis is the performance of the contract.</p>
+          <p>The smart home hub is operated locally in your home; the data from your sensors and devices generally remains in your system. We access your system remotely only where this is necessary for support and maintenance, and only in encrypted form.</p>
+          <p>Notifications from your system are sent as push notifications through the official app to the persons you designate. Push notifications are delivered via the services of Apple or Google; their content may pass through these services.</p>
+          <p>You are responsible for informing the persons whose data you disclose to us or record in your system (e.g. family members, housemates, tenants) accordingly.</p>
+
+          <h2>5. Disclosure to Third Parties</h2>
+          <p>We disclose personal data only where necessary for the purposes stated: to service providers for hosting, communication, statistics (with your consent), payment processing and accounting, to hardware suppliers, and to authorities where we are legally obliged to do so. We do not sell personal data.</p>
+
+          <h2>6. Processing Abroad</h2>
+          <p>Some service providers (e.g. GitHub, Google, Meta) are based in the USA or process data there. Where a country does not offer an adequate level of data protection, we rely on adequacy decisions (e.g. the Swiss-U.S. Data Privacy Framework for certified providers) or on standard contractual clauses.</p>
+
+          <h2>7. Retention</h2>
+          <p>We retain personal data for as long as is necessary for the respective purpose or as statutory retention obligations require. We generally retain business records (e.g. invoices) for ten years. Enquiries that do not lead to a contract are generally deleted after two years at the latest.</p>
+
+          <h2>8. Data Security</h2>
+          <p>Transmission between your browser and this website is encrypted (HTTPS). We take appropriate technical and organisational measures to protect personal data against loss, misuse and unauthorised access. Absolute security cannot be guaranteed on the internet, particularly for communication by email.</p>
+
+          <h2>9. Your Rights</h2>
+          <p>You may request information about the personal data we process about you, and you may request its correction or deletion, the restriction of processing, and the release of your data in a common format. You may object to processing, and you may withdraw any consent you have given at any time with effect for the future. Please contact us at the address given in section 1. Statutory exceptions apply to these rights, for example where we must continue to retain data to perform a contract or because of legal obligations.</p>
+          <p>You may also lodge a complaint with the competent supervisory authority. In Switzerland, this is the Federal Data Protection and Information Commissioner (FDPIC), <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">www.edoeb.admin.ch</a>.</p>
+
+          <h2>10. Changes to This Policy</h2>
+          <p>We may amend this privacy policy, for example if the website or legal requirements change. The version published on this website at the relevant time applies.</p>
         </div>
       </div>
     </div>

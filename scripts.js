@@ -325,8 +325,11 @@ function updatePackageSafetyLine(audience) {
 }
 
 // Legal pages (impressum / datenschutz / agb): shows the block of a document that matches the current
-// language. Documents that exist in German only fall back to it and show a notice (legal.german_only).
-// To add a translation, add <div data-lang="en" lang="en" hidden>…</div> next to the German block.
+// language. If the document has no block for the current language, it falls back to the language named in
+// the container's data-fallback attribute (default "de") and shows the notice paragraph of that document.
+//   datenschutz.html, agb.html: <div data-legal-doc data-fallback="en">   DE + EN, FR/IT see EN, notice legal.en_de_notice
+//   a German-only document:     <div data-legal-doc>                      FR/IT/EN see DE, notice legal.german_only
+// To add a translation, add <div data-lang="xx" lang="xx" hidden>…</div> next to the existing blocks.
 function applyLanguageBlocks() {
   const titleKey = document.body && document.body.dataset.titleKey;
   if (titleKey) {
@@ -338,8 +341,9 @@ function applyLanguageBlocks() {
     const blocks = Array.from(doc.querySelectorAll(':scope > [data-lang]'));
     if (!blocks.length) return;
 
+    const fallbackLang = doc.dataset.fallback || 'de';
     const wanted = blocks.find((b) => b.dataset.lang === i18n.currentLang);
-    const shown = wanted || blocks.find((b) => b.dataset.lang === 'de') || blocks[0];
+    const shown = wanted || blocks.find((b) => b.dataset.lang === fallbackLang) || blocks[0];
     blocks.forEach((b) => { b.hidden = b !== shown; });
 
     const notice = doc.querySelector('.legal__notice');
@@ -393,68 +397,134 @@ function setupPackageAccordion() {
 }
 
 // Hero tagline rotation
+//
+// Exactly one headline is on screen at any time. The rules that keep it that way:
+//  - the current headline is tracked in a variable, never looked up from the DOM;
+//  - a rotation never starts while another one is still running (no setInterval: the next rotation is
+//    scheduled only after the previous one has finished);
+//  - the loop pauses while the tab is hidden and re-syncs when it comes back (timers and animation
+//    frames run at different speeds in background tabs, which is what used to leave stale headlines behind);
+//  - before and after every rotation, any headline other than the current one is removed.
 function setupHeroTaglines() {
   const hero = document.querySelector('.hero');
-  if (!hero) return;
+  const container = hero && hero.querySelector('.hero__headline_container');
+  if (!container) return;
 
-  const taglines = [
+  const TAGLINES = [
     { bg: 'var(--forest-deep)', class: '', keyPrefix: 'hero_tagline1' },
     { bg: 'var(--marine)', class: 'hero-marine', keyPrefix: 'hero_tagline2' },
     { bg: 'var(--gold)', class: 'hero-gold', keyPrefix: 'hero_tagline3' },
-    { bg: 'var(--burgundy)', class: 'hero-burgundy', keyPrefix: 'hero_tagline4' }
+    { bg: 'var(--burgundy)', class: 'hero-burgundy', keyPrefix: 'hero_tagline4' },
   ];
+  const HOLD_MS = 5000;   // time a headline stays fully visible (about 6 s per headline including the transition)
+  const OUT_MS = 450;     // old headline fades out and up ...
+  const IN_MS = 550;      // ... then the new one fades in from below (sequential: the two never overlap)
+  const canAnimate = typeof hero.animate === 'function';
+  const reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
 
-  let taglineIndex = 0;
+  let index = 0;
+  let current = container.querySelector('.hero__h1'); // the headline that is on screen
+  let pending = null;                                 // { outgoing, incoming, animations } while a transition runs
+  let timer = null;
 
-  const rotateTagline = () => {
-    taglineIndex = (taglineIndex + 1) % taglines.length;
-    const current = taglines[taglineIndex];
-
-    // Get the hero h1 container
-    const h1Container = hero.querySelector('.hero__headline_container');
-    if (!h1Container) return;
-
-    const heroH1 = h1Container.querySelector('.hero__h1:not(.hero__h1-next)');
-    if (!heroH1) return;
-
-    // Get translated tagline text
-    const taglineKey = current.keyPrefix;
-    const taglineText = i18n.getText('hero', taglineKey);
-
-    // Create new h1 for incoming text
-    const newH1 = document.createElement('h1');
-    newH1.className = 'hero__h1 hero__h1-next';
-    newH1.setAttribute('data-i18n', `hero.${taglineKey}`);
-    newH1.setAttribute('data-i18n-html', 'true');
-    newH1.innerHTML = taglineText;
-    newH1.style.opacity = '0';
-    h1Container.appendChild(newH1);
-
-    // Update background color and class immediately
-    hero.style.backgroundColor = current.bg;
-    hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
-    if (current.class) hero.classList.add(current.class);
-
-    // Trigger animations using requestAnimationFrame for smooth timing
-    requestAnimationFrame(() => {
-      // Start fade out of old h1
-      heroH1.style.animation = 'fadeOutUp 0.5s ease-in forwards';
-
-      // Start fade in of new h1
-      newH1.style.animation = 'fadeInDown 0.5s ease-out forwards';
-      newH1.style.animationDelay = '0.2s';
-      //newH1.style.opacity = '1';
+  // remove every headline except the current one (and the incoming one during a transition)
+  function removeStrays() {
+    container.querySelectorAll('.hero__h1').forEach((h) => {
+      if (h !== current && !(pending && h === pending.incoming)) h.remove();
     });
+  }
 
-    // Remove old h1 after animation completes
-    setTimeout(() => {
-      heroH1.remove();
-      newH1.classList.remove('hero__h1-next');
-    }, 500);
-  };
+  function applyTheme(tagline) {
+    hero.style.backgroundColor = tagline.bg;
+    hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
+    if (tagline.class) hero.classList.add(tagline.class);
+  }
 
-  // Start rotation after initial delay
-  setInterval(rotateTagline, 6000);
+  function createHeadline(tagline) {
+    const h1 = document.createElement('h1');
+    h1.className = 'hero__h1';
+    h1.setAttribute('data-i18n', `hero.${tagline.keyPrefix}`); // keeps it translated when the language changes
+    h1.setAttribute('data-i18n-html', 'true');
+    h1.innerHTML = i18n.getText('hero', tagline.keyPrefix);
+    h1.style.animation = 'none'; // the CSS entrance animation is for the first page load only
+    return h1;
+  }
+
+  // Finish the running transition right now. Safe to call at any time and more than once.
+  function settle() {
+    if (!pending) return;
+    const { outgoing, incoming, animations } = pending;
+    pending = null;
+    animations.forEach((a) => a.cancel());
+    outgoing.remove();
+    incoming.style.opacity = '';
+    current = incoming;
+    removeStrays();
+    schedule();
+  }
+
+  function schedule() {
+    clearTimeout(timer);
+    timer = null;
+    if (!document.hidden && !pending) timer = setTimeout(rotate, HOLD_MS);
+  }
+
+  function rotate() {
+    timer = null;
+    if (document.hidden || pending) return;
+    if (!current || !container.contains(current)) current = container.querySelector('.hero__h1');
+    removeStrays();
+
+    index = (index + 1) % TAGLINES.length;
+    const tagline = TAGLINES[index];
+    const outgoing = current;
+    const incoming = createHeadline(tagline);
+    incoming.style.opacity = '0';
+    container.appendChild(incoming);
+    applyTheme(tagline);
+
+    if (!outgoing) { // nothing to fade out (should not happen): just show the new headline
+      incoming.style.opacity = '';
+      current = incoming;
+      schedule();
+      return;
+    }
+
+    if (!canAnimate || reduceMotion.matches) { // no motion: swap immediately
+      pending = { outgoing, incoming, animations: [] };
+      settle();
+      return;
+    }
+
+    const out = outgoing.animate(
+      [{ opacity: 1, transform: 'translateY(0)' }, { opacity: 0, transform: 'translateY(-50px)' }],
+      { duration: OUT_MS, easing: 'ease-in', fill: 'forwards' }
+    );
+    const into = incoming.animate(
+      [{ opacity: 0, transform: 'translateY(50px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: IN_MS, delay: OUT_MS, easing: 'ease-out', fill: 'both' }
+    );
+    const mine = { outgoing, incoming, animations: [out, into] };
+    pending = mine;
+
+    // Both animations run on the same timeline; when they are done (or the tab returns), settle.
+    Promise.all([out.finished, into.finished])
+      .then(() => { if (pending === mine) settle(); })
+      .catch(() => {}); // cancelled by settle(): nothing left to do
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearTimeout(timer);
+      timer = null;
+    } else {
+      settle();        // finish a transition that was interrupted by hiding the tab
+      removeStrays();
+      schedule();
+    }
+  });
+
+  schedule();
 }
 
 // Initialize on DOM ready
