@@ -130,7 +130,8 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
-      "Email & WhatsApp + Avviso Famiglia",
+      "Notifiche Push per i Familiari tramite App Ufficiale",
+      "Supporto Email & WhatsApp / 24h",
       "Automazione Schermature Solari*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +143,8 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
-      "Email & WhatsApp + Avvisi SMS",
+      "Notifiche Push tramite App Ufficiale",
+      "Supporto Email & WhatsApp / 24h",
       "Automazione Schermature Solari*"
     ],
     "ferienhaus_pkg2_features": [
@@ -154,7 +156,7 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Assenza Mensile",
-      "Avvisi SMS",
+      "Notifiche Push tramite App Ufficiale",
       "Supporto Email & WhatsApp / 24h",
       "Automazione Schermature Solari*"
     ],
@@ -395,7 +397,7 @@
     "h2": "Parliamo della<br><em>Tua Casa.</em>",
     "p": "Raccontami brevemente la tua situazione — casa per anziani, casa familiare o proprietà vacanze. Risponderò entro 24 ore.",
     "detail1": "hello@konihaus.ch",
-    "detail2": "+41 78 237 96 85",
+    "detail2": "+41 78 964 65 92",
     "detail3": "Affoltern am Albis, Zurigo · Servizio in tutta la Svizzera",
     "form_name_label": "Nome",
     "form_name_placeholder": "Giovanni Rossi",

@@ -130,7 +130,8 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
-      "Email & WhatsApp + Alerte Famille",
+      "Notifications Push pour la Famille via l'App Officielle",
+      "Support Email & WhatsApp / 24h",
       "Automatisation des Stores*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +143,8 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
-      "Email & WhatsApp + Alertes",
+      "Notifications Push via l'App Officielle",
+      "Support Email & WhatsApp / 24h",
       "Automatisation des Stores*"
     ],
     "ferienhaus_pkg2_features": [
@@ -154,7 +156,7 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Absence Mensuel",
-      "Alertes SMS",
+      "Notifications Push via l'App Officielle",
       "Support Email & WhatsApp / 24h",
       "Automatisation des Stores*"
     ],
@@ -395,7 +397,7 @@
     "h2": "Parlons de<br><em>Votre Maison.</em>",
     "p": "Dites-moi brièvement votre situation — maison senior, maison familiale ou propriété de vacances. Je répondrai en 24 heures.",
     "detail1": "hello@konihaus.ch",
-    "detail2": "+41 78 237 96 85",
+    "detail2": "+41 78 964 65 92",
     "detail3": "Affoltern am Albis, Zurich · Service partout en Suisse",
     "form_name_label": "Nom",
     "form_name_placeholder": "Jean Dupont",

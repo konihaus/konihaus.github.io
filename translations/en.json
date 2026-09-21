@@ -130,7 +130,8 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Safety Report",
-      "Email or WhatsApp + Family Alert",
+      "Push Notifications for Family via Official App",
+      "Email & WhatsApp Support / 24h",
       "Shading System Automation*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +143,8 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Security Report",
-      "Email + WhatsApp Alerts",
+      "Push Notifications via Official App",
+      "Email & WhatsApp Support / 24h",
       "Shading System Automation*"
     ],
     "ferienhaus_pkg2_features": [
@@ -154,8 +156,8 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Absence Report",
-      "SMS Alerts",
-      "Email & WhatsApp Support",
+      "Push Notifications via Official App",
+      "Email & WhatsApp Support / 24h",
       "Shading System Automation*"
     ],
     "pkg2_btn": "Request Now",
@@ -395,7 +397,7 @@
     "h2": "Let's Talk About<br><em>Your Home.</em>",
     "p": "Tell me briefly about your situation — whether senior home, family house, or vacation property. I'll respond within 24 hours.",
     "detail1": "hello@konihaus.ch",
-    "detail2": "+41 78 237 96 85",
+    "detail2": "+41 78 964 65 92",
     "detail3": "Affoltern am Albis, Zurich · Service throughout Switzerland",
     "form_name_label": "Name",
     "form_name_placeholder": "John Doe",

@@ -130,7 +130,8 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
-      "E-Mail oder WhatsApp + Familienalarm",
+      "Push-Benachrichtigungen für Angehörige via offizielle App",
+      "E-Mail- & WhatsApp-Support / 24h",
       "Beschattungs-Automatisierung*"
     ],
     "mieter_pkg2_features": [
@@ -142,7 +143,8 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
-      "E-Mail- & WhatsApp-Warnungen",
+      "Push-Benachrichtigungen via offizielle App",
+      "E-Mail- & WhatsApp-Support / 24h",
       "Beschattungs-Automatisierung*"
     ],
     "ferienhaus_pkg2_features": [
@@ -154,8 +156,8 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Abwesenheitsbericht",
-      "SMS-Warnungen",
-      "E-Mail- & WhatsApp-Support",
+      "Push-Benachrichtigungen via offizielle App",
+      "E-Mail- & WhatsApp-Support / 24h",
       "Beschattungs-Automatisierung*"
     ],
     "pkg2_btn": "Jetzt anfragen",
@@ -395,7 +397,7 @@
     "h2": "Sprechen wir<br>über <em>Ihr Zuhause.</em>",
     "p": "Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder Feriendomizil. Ich melde mich innert 24 Stunden.",
     "detail1": "hallo@konihaus.ch",
-    "detail2": "+41 78 237 96 85",
+    "detail2": "+41 78 964 65 92",
     "detail3": "Affoltern am Albis, Zürich · Einsatz CH-weit",
     "form_name_label": "Name",
     "form_name_placeholder": "Max Muster",
