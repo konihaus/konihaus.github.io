@@ -287,14 +287,8 @@
     "footer": "Prix en Francs Suisses TVA incl. · Coûts uniques gratuits avec accord 2 ans · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consultation gratuite pour locations de vacances & Airbnb</a>",
     "disclaimer": "* le cas échéant",
     "shading_note": "* Disponible là où des protections solaires à commande électrique (stores, volets, marquises) sont déjà installées.",
-    "notice_title": "Important : Konihaus n'est pas un service d'urgence",
-    "notice_items": [
-      "Les alertes et notifications sont envoyées sous forme de notifications push, via l'application officielle, aux personnes de contact que vous désignez vous-même.",
-      "Je n'appelle pas les services de secours et je ne surveille pas votre domicile 24 h/24. Les délais de réponse du support concernent les demandes techniques, pas les urgences.",
-      "En cas d'urgence, appelez le 144 (ambulance) ou le 112.",
-      "En cas de panne de courant ou d'internet, les notifications peuvent être retardées ou ne pas être livrées.",
-      "Aucun système ne peut garantir qu'un incident sera évité. Un équipement adapté augmente toutefois les chances qu'un problème soit repéré tôt et qu'on puisse réagir à temps. Ce qui est surveillé, et comment, c'est vous qui décidez — je vous aide avec des idées et de l'expérience."
-    ]
+    "safety_line": "Konihaus n'est pas un service d'urgence. En cas d'urgence : 144 ou 112.",
+    "safety_more": "En savoir plus"
   },
   "process": {
     "eye": "Comment ça Marche",
@@ -420,7 +414,13 @@
     "form_message_label": "Votre Situation",
     "form_message_placeholder": "Appartement / Maison / Maison de vacances, ce que vous recherchez...",
     "form_submit": "Envoyer Message →",
-    "form_note": "Pas de publicité. Pas de newsletter. Juste Koni."
+    "form_note": "Pas de publicité. Pas de newsletter. Juste Koni.",
+    "safety_title": "Important : Konihaus n'est pas un service d'urgence",
+    "safety_items": [
+      "En cas d'urgence, appelez le 144 (ambulance) ou le 112. Je n'appelle pas les services de secours et je ne surveille pas votre domicile 24 h/24 ; les délais de réponse du support ne s'appliquent pas aux urgences.",
+      "Les alertes sont envoyées par notification push, via l'application officielle, aux personnes de contact que vous désignez. En cas de panne de courant ou d'internet, elles peuvent être retardées ou ne pas arriver.",
+      "Aucune garantie : un équipement adapté augmente les chances qu'un problème soit repéré tôt. Ce qui est surveillé, c'est vous qui décidez."
+    ]
   },
   "footer": {
     "tagline": "Service maison intelligente gérée pour seniors, locataires, propriétaires maisons vacances et tous les autres en Suisse.",

@@ -80,7 +80,7 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="container" style="position:relative; flex: calc(1 / 3 * 100%);">
+    <div class="container hero__top">
       <div class="hero__deco" aria-hidden="true">
         <svg viewBox="80 105 245 245" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M88 210
@@ -277,15 +277,11 @@
           </div>
         </div>
       </div>
-      <aside class="pkg-notice" id="pkg-notice" role="note" aria-labelledby="pkg-notice-title"
-        data-audiences="basis senioren" hidden>
-        <div class="pkg-notice__icon" aria-hidden="true">i</div>
-        <div class="pkg-notice__body">
-          <h3 class="pkg-notice__title" id="pkg-notice-title" data-i18n="packages.notice_title">Wichtig: Konihaus ist kein Notrufdienst</h3>
-          <ul class="pkg-notice__list" id="pkg-notice-list"></ul>
-        </div>
-      </aside>
       <p class="pkg__shading-note reveal" data-i18n="packages.shading_note">* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.</p>
+      <p class="pkg-safety-line" id="pkg-safety-line" data-audiences="basis senioren" hidden>
+        <span data-i18n="packages.safety_line">Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.</span>
+        <a href="#safety" data-i18n="packages.safety_more">Mehr dazu</a>
+      </p>
       <p style="text-align:center;margin-top:24px;font-size:0.8125em;color:var(--ink-4);" class="reveal" data-i18n="packages.footer" data-i18n-html="true">
         Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
         <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für
@@ -723,6 +719,15 @@
             Nur Koni.</p>
         </form>
       </div>
+
+      <!-- Full-width statement: what Konihaus is and is not -->
+      <aside class="safety" id="safety" role="note" aria-labelledby="safety-title">
+        <div class="safety__head">
+          <div class="safety__icon" aria-hidden="true">i</div>
+          <h3 class="safety__title" id="safety-title" data-i18n="contact.safety_title">Wichtig: Konihaus ist kein Notrufdienst</h3>
+        </div>
+        <ul class="safety__list" id="safety-list"></ul>
+      </aside>
     </div>
   </section>
 

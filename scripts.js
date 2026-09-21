@@ -32,6 +32,7 @@ const i18n = {
 
     // Update all elements with data-i18n attribute
     this.updatePageContent();
+    renderSafetyStatement();
 
     // Update language selector dropdown
     const langSelect = document.getElementById('lang-selector');
@@ -275,7 +276,7 @@ function updatePackageContent(audience) {
     if (featureList) renderFeatureList(featureList, pkgNumber, audience);
   });
 
-  updatePackageNotice(audience);
+  updatePackageSafetyLine(audience);
 }
 
 // Builds the <li> items of one package card from the language JSON, e.g.
@@ -310,24 +311,26 @@ function renderFeatureList(listEl, pkgNumber, audience) {
   );
 }
 
-// "Not an emergency service" notice under the package grid.
-// Shown only for the audiences listed in its data-audiences attribute (see index.html);
-// title and bullet points come from packages.notice_title / packages.notice_items.
-function updatePackageNotice(audience) {
-  const notice = document.getElementById('pkg-notice');
-  const list = document.getElementById('pkg-notice-list');
-  if (!notice || !list) return;
+// One-line "not an emergency service" hint under the package grid.
+// Shown only for the audiences listed in its data-audiences attribute (see index.html), i.e. the
+// packages with alarm/monitoring features. It links to the full statement (#safety) in the contact section.
+function updatePackageSafetyLine(audience) {
+  const line = document.getElementById('pkg-safety-line');
+  if (!line) return;
 
-  const audiences = (notice.dataset.audiences || '').split(/\s+/).filter(Boolean);
-  const items = i18n.translations[i18n.currentLang]?.packages?.notice_items;
-  const show = audiences.includes(audience) && Array.isArray(items) && items.length > 0;
+  const audiences = (line.dataset.audiences || '').split(/\s+/).filter(Boolean);
+  line.hidden = !audiences.includes(audience);
+}
 
-  notice.hidden = !show;
-  notice.classList.remove('senioren', 'mieter', 'ferienhaus');
-  if (audience !== 'basis') notice.classList.add(audience);
+// Full "not an emergency service" statement in the contact section.
+// Title comes from contact.safety_title, the points from contact.safety_items (array) in the language JSON.
+function renderSafetyStatement() {
+  const list = document.getElementById('safety-list');
+  if (!list) return;
 
+  const items = i18n.translations[i18n.currentLang]?.contact?.safety_items;
   list.replaceChildren(
-    ...(show ? items : []).map((text) => {
+    ...(Array.isArray(items) ? items : []).map((text) => {
       const li = document.createElement('li');
       li.textContent = text;
       return li;
