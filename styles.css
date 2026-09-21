@@ -123,18 +123,6 @@ object {
   }
 }
 
-@keyframes fadeOutUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(-28px);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -283,39 +271,6 @@ a.logo {
   transform: translateY(-1px);
 }
 
-/* ANIMATIONS */
-@keyframes fadeOutUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-    backface-visibility: hidden;
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(-50px);
-    backface-visibility: hidden;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-    backface-visibility: hidden;
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    backface-visibility: hidden;
-  }
-}
-
-.hero__h1.fade-in {
-  animation: fadeInDown 0.5s ease forwards !important;
-}
-
 /* LANGUAGE SELECTOR */
 .lang-selector {
   margin: 0 10px 0 auto;
@@ -440,23 +395,6 @@ a.logo {
 .hero__h1 em {
   font-style: italic;
   color: var(--amber-warm);
-}
-
-.hero__h1-next {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  will-change: opacity;
-  z-index: 2;
-  backface-visibility: hidden;
-}
-
-.hero__h1-next.fade-in {
-  animation: fadeIn 0.5s ease forwards !important;
-  pointer-events: auto;
 }
 
 .hero__sub {
