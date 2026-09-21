@@ -2140,7 +2140,8 @@ a.logo {
 
 .flegal {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 8px 20px;
 }
 
 .flegal a {
@@ -2720,5 +2721,451 @@ a.logo {
   .lang-selector {
     padding: 4px 8px;
     font-size: 0.6875em;
+  }
+}
+
+
+/* ───────── COOKIE CONSENT (cookie-consent.js) ───────── */
+.cc-banner {
+  position: fixed;
+  z-index: 1000;
+  right: 20px; /* bottom-right: keeps the hero call-to-action on the left visible */
+  bottom: 20px;
+  width: min(440px, calc(100vw - 40px));
+  padding: 22px 22px 16px;
+  background: var(--parchment);
+  color: var(--ink);
+  border: 1px solid var(--warm-mid);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(26, 25, 22, .24);
+  font-family: var(--sans);
+}
+
+.cc-banner[hidden] {
+  display: none;
+}
+
+.cc-banner__title {
+  font-family: var(--serif);
+  font-size: 1.375em;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cc-banner__text {
+  font-size: 0.8125em;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-bottom: 16px;
+}
+
+.cc-banner__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cc-banner__links {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 10px;
+}
+
+/* buttons: "allow" and "reject" are deliberately the same size */
+.cc-btn {
+  font-family: var(--sans);
+  font-size: 0.8125em;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--forest);
+  cursor: pointer;
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+
+.cc-btn--primary {
+  background: var(--forest);
+  color: var(--parchment);
+}
+
+.cc-btn--primary:hover {
+  background: var(--forest-deep);
+}
+
+.cc-btn--secondary {
+  background: transparent;
+  color: var(--forest);
+}
+
+.cc-btn--secondary:hover {
+  background: var(--forest-tint);
+}
+
+.cc-link {
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  font-family: var(--sans);
+  font-size: 0.75em;
+  color: var(--ink-3);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.cc-link:hover {
+  color: var(--forest);
+}
+
+.cc-btn:focus-visible,
+.cc-link:focus-visible,
+.cc-close:focus-visible,
+.cc-dialog a:focus-visible,
+.cc-switch input:focus-visible+.cc-switch__ui {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* dialog */
+html.cc-lock,
+body.cc-lock {
+  overflow: hidden;
+}
+
+body.cc-lock .cc-banner {
+  visibility: hidden;
+}
+
+.cc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(20, 28, 23, .58);
+}
+
+.cc-overlay[hidden] {
+  display: none;
+}
+
+.cc-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(780px, 100%);
+  max-height: min(90vh, 920px);
+  background: var(--parchment);
+  color: var(--ink);
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+  font-family: var(--sans);
+  overflow: hidden;
+}
+
+.cc-dialog:focus {
+  outline: none;
+}
+
+.cc-dialog__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 26px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cc-dialog__title {
+  font-family: var(--serif);
+  font-size: 1.75em;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.cc-close {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--ink-2);
+  font-size: 1.5em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cc-close:hover {
+  background: var(--warm-mid);
+}
+
+.cc-dialog__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 22px 26px 26px;
+  font-size: 0.875em;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+.cc-dialog__body p+p {
+  margin-top: 10px;
+}
+
+.cc-dialog__body a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cc-sec+.cc-sec {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid var(--rule);
+}
+
+.cc-sec h3 {
+  font-family: var(--serif);
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.cc-status {
+  color: var(--ink-3);
+  margin-bottom: 8px;
+}
+
+.cc-cat {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cc-cat__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.cc-cat__title,
+.cc-list__cat {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cc-list__cat {
+  margin: 20px 0 8px;
+}
+
+.cc-unused {
+  margin-top: 14px;
+  color: var(--ink-3);
+  font-style: italic;
+}
+
+/* switch */
+.cc-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.cc-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.cc-switch__ui {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--warm-mid);
+  transition: background .2s var(--ease);
+}
+
+.cc-switch__ui::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--parchment);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+  transition: transform .2s var(--ease);
+}
+
+.cc-switch input:checked+.cc-switch__ui {
+  background: var(--forest);
+}
+
+.cc-switch input:checked+.cc-switch__ui::after {
+  transform: translateX(18px);
+}
+
+.cc-switch input:disabled+.cc-switch__ui {
+  opacity: .55;
+}
+
+.cc-switch input:disabled~.cc-switch__label {
+  cursor: default;
+}
+
+.cc-switch__label {
+  font-size: 0.8125em;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+/* cookie list */
+.cc-tablewrap {
+  overflow-x: auto;
+}
+
+.cc-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 0.8125em;
+  line-height: 1.5;
+}
+
+.cc-table th,
+.cc-table td {
+  padding: 9px 10px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+.cc-table th:nth-child(1) { width: 25%; }
+.cc-table th:nth-child(2) { width: 14%; }
+.cc-table th:nth-child(3) { width: 31%; }
+.cc-table th:nth-child(4) { width: 14%; }
+.cc-table th:nth-child(5) { width: 16%; }
+
+.cc-table th {
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.cc-table code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+.cc-domain {
+  color: var(--ink-3);
+}
+
+.cc-dialog__foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px 26px;
+  background: var(--cream);
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .cc-banner {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    padding: 18px 18px calc(14px + env(safe-area-inset-bottom, 0px));
+    border-radius: 16px 16px 0 0;
+    border-width: 1px 0 0;
+  }
+
+  .cc-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .cc-dialog {
+    width: 100%;
+    max-height: 94vh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .cc-dialog__head,
+  .cc-dialog__body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cc-dialog__foot {
+    padding: 14px 18px calc(14px + env(safe-area-inset-bottom, 0px));
+    flex-direction: column-reverse;
+  }
+
+  .cc-dialog__foot .cc-btn {
+    width: 100%;
+  }
+
+  /* cookie list: one card per cookie */
+  .cc-table {
+    table-layout: auto;
+  }
+
+  .cc-table thead {
+    display: none;
+  }
+
+  .cc-table,
+  .cc-table tbody,
+  .cc-table tr,
+  .cc-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .cc-table tr {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .cc-table td {
+    padding: 3px 0;
+    border: 0;
+  }
+
+  .cc-table code {
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  .cc-table td::before {
+    content: attr(data-label) ': ';
+    font-weight: 600;
+    color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cc-btn,
+  .cc-switch__ui,
+  .cc-switch__ui::after {
+    transition: none;
   }
 }
