@@ -71,7 +71,7 @@
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Bericht",
-      "E-Mail- & WhatsApp-Support / 48h"
+      "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
     "senioren_pkg1_features": [
       "Smart-Home-Zentrale",
@@ -79,7 +79,7 @@
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Aktivitätsbericht",
-      "E-Mail- & WhatsApp-Support / 48h"
+      "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
     "mieter_pkg1_features": [
       "Smart-Home-Zentrale",
@@ -87,7 +87,7 @@
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Sicherheitsbericht",
-      "E-Mail- & WhatsApp-Support / 48h"
+      "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
     "ferienhaus_pkg1_features": [
       "Smart-Home-Zentrale",
@@ -95,7 +95,7 @@
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Abwesenheitsbericht",
-      "E-Mail- & WhatsApp-Support / 48h"
+      "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
     "pkg1_btn": "Jetzt anfragen",
     "pkg1_note": "Einrichtungsinvestition ~CHF 200-260 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
@@ -118,7 +118,7 @@
       "Türsensor",
       "Smart Plug",
       "Monatlicher Familienbericht",
-      "E-Mail- & WhatsApp-Support / 24h",
+      "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
     "senioren_pkg2_features": [
@@ -131,7 +131,7 @@
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
       "Push-Benachrichtigungen für Angehörige via offizielle App",
-      "E-Mail- & WhatsApp-Support / 24h",
+      "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
     "mieter_pkg2_features": [
@@ -144,7 +144,7 @@
       "Smart Plug",
       "Monatlicher Sicherheitsbericht",
       "Push-Benachrichtigungen via offizielle App",
-      "E-Mail- & WhatsApp-Support / 24h",
+      "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
     "ferienhaus_pkg2_features": [
@@ -157,7 +157,7 @@
       "Smart Plug",
       "Monatlicher Abwesenheitsbericht",
       "Push-Benachrichtigungen via offizielle App",
-      "E-Mail- & WhatsApp-Support / 24h",
+      "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
     "pkg2_btn": "Jetzt anfragen",
@@ -177,23 +177,23 @@
       "+ Bis zu 4× Bewegungsmelder",
       "Video-Türklingel",
       "Nacht-Licht-Automatisierung",
-      "Notfall-Knopf",
+      "Alarm-Knopf",
       "Inaktivitäts-Monitoring",
       "Vollständiger Jahresbericht",
-      "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
     "senioren_pkg3_features": [
       "Alles aus Sicher zu Hause",
       "+ Bis zu 4× Bewegungsmelder",
       "Video-Türklingel",
-      "Tragbarer Notfall-Knopf",
+      "Tragbarer Alarm-Knopf",
       "Bettbelegungssensor",
       "Toilettenfluss-Monitor",
       "Smart Beleuchtung",
       "Inaktivitäts-Monitoring",
       "Vollständiger Jahresbericht + Betreuungsbriefing",
-      "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
     "mieter_pkg3_features": [
@@ -206,7 +206,7 @@
       "Gast-Zugriffsportal",
       "Feuchtemessgerät",
       "Vierteljährlicher Mieterbericht",
-      "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
     "ferienhaus_pkg3_features": [
@@ -219,7 +219,7 @@
       "Smart Plug",
       "Vierteljährlicher Immobilienbericht",
       "Gast-Verwaltungsportal",
-      "Telefon-Support / 12h Reaktion (Geschäftszeiten)",
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
     "pkg3_btn": "Jetzt anfragen",
@@ -286,7 +286,15 @@
     "details_btn": "Details",
     "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>",
     "disclaimer": "* soweit zutreffend",
-    "shading_note": "* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind."
+    "shading_note": "* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.",
+    "notice_title": "Wichtig: Konihaus ist kein Notrufdienst",
+    "notice_items": [
+      "Alarme und Benachrichtigungen gehen als Push-Nachricht über die offizielle App an die Kontaktpersonen, die Sie selbst festlegen.",
+      "Ich alarmiere keine Rettungsdienste und überwache Ihr Zuhause nicht rund um die Uhr. Die Support-Antwortzeiten gelten für technische Anfragen, nicht für Notfälle.",
+      "Im Notfall wählen Sie 144 (Sanität) oder 112.",
+      "Bei Strom- oder Internetausfall können Benachrichtigungen verzögert oder gar nicht zugestellt werden.",
+      "Kein System kann Zwischenfälle garantiert verhindern. Mit passender Ausstattung steigt aber die Chance, dass Probleme früh auffallen und rechtzeitig reagiert werden kann. Was überwacht wird und wie, entscheiden Sie — ich unterstütze Sie mit Ideen und Erfahrung."
+    ]
   },
   "process": {
     "eye": "So funktioniert's",
@@ -339,7 +347,7 @@
     "tag5": "Rauch & CO",
     "tag6": "Smart Plugs (Typ J)",
     "tag7": "Video-Türklingel",
-    "tag8": "Notfall-Knopf",
+    "tag8": "Alarm-Knopf",
     "tag9": "Smart Locks",
     "tag10": "Luftqualität",
     "tag11": "und vieles mehr...",

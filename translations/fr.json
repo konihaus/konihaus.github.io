@@ -71,7 +71,7 @@
       "Capteur Porte / Fenêtre",
       "3× Prises Intelligentes",
       "Rapport Mensuel",
-      "Support Email & WhatsApp / 48h"
+      "Support Email & WhatsApp (réponse sous 48h)"
     ],
     "senioren_pkg1_features": [
       "Concentrateur Maison Intelligente",
@@ -79,7 +79,7 @@
       "Capteur Porte / Fenêtre",
       "3× Prises Intelligentes",
       "Rapport Activité Mensuel",
-      "Support Email & WhatsApp / 48h"
+      "Support Email & WhatsApp (réponse sous 48h)"
     ],
     "mieter_pkg1_features": [
       "Concentrateur Maison Intelligente",
@@ -87,7 +87,7 @@
       "Capteur Porte / Fenêtre",
       "3× Prises Intelligentes",
       "Rapport Sécurité Mensuel",
-      "Support Email & WhatsApp / 48h"
+      "Support Email & WhatsApp (réponse sous 48h)"
     ],
     "ferienhaus_pkg1_features": [
       "Concentrateur Maison Intelligente",
@@ -95,7 +95,7 @@
       "Capteur Porte / Fenêtre",
       "3× Prises Intelligentes",
       "Rapport Absence Mensuel",
-      "Support Email & WhatsApp / 48h"
+      "Support Email & WhatsApp (réponse sous 48h)"
     ],
     "pkg1_btn": "Demander Maintenant",
     "pkg1_note": "Investissement installation CHF ~200-260 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
@@ -118,7 +118,7 @@
       "Capteur de Porte",
       "Prise Intelligente",
       "Rapport Familial Mensuel",
-      "Support Email & WhatsApp / 24h",
+      "Support Email & WhatsApp (réponse sous 24h)",
       "Automatisation des Stores*"
     ],
     "senioren_pkg2_features": [
@@ -131,7 +131,7 @@
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
       "Notifications Push pour la Famille via l'App Officielle",
-      "Support Email & WhatsApp / 24h",
+      "Support Email & WhatsApp (réponse sous 24h)",
       "Automatisation des Stores*"
     ],
     "mieter_pkg2_features": [
@@ -144,7 +144,7 @@
       "Prise Intelligente",
       "Rapport Sécurité Mensuel",
       "Notifications Push via l'App Officielle",
-      "Support Email & WhatsApp / 24h",
+      "Support Email & WhatsApp (réponse sous 24h)",
       "Automatisation des Stores*"
     ],
     "ferienhaus_pkg2_features": [
@@ -157,7 +157,7 @@
       "Prise Intelligente",
       "Rapport Absence Mensuel",
       "Notifications Push via l'App Officielle",
-      "Support Email & WhatsApp / 24h",
+      "Support Email & WhatsApp (réponse sous 24h)",
       "Automatisation des Stores*"
     ],
     "pkg2_btn": "Demander Maintenant",
@@ -177,23 +177,23 @@
       "+ Jusqu'à 4× Détecteurs de Mouvement",
       "Sonnette Vidéo",
       "Automatisation Lumière Nocturne",
-      "Bouton d'Urgence Portable",
+      "Bouton d'Alarme Portable",
       "Surveillance Inactivité",
       "Rapport Annuel Complet",
-      "Support Téléphone / 12h réponse (heures de bureau)",
+      "Support Téléphone (réponse sous 12h, heures de bureau)",
       "Automatisation des Stores*"
     ],
     "senioren_pkg3_features": [
       "Tout de Sûr à la Maison",
       "+ Jusqu'à 4× Détecteurs de Mouvement",
       "Sonnette Vidéo",
-      "Bouton d'Urgence Portable",
+      "Bouton d'Alarme Portable",
       "Capteur Occupation Lit",
       "Moniteur Chasse d'Eau",
       "Éclairage Intelligent",
       "Surveillance Inactivité",
       "Rapport Annuel Complet + Briefing Soignant",
-      "Support Téléphone / 12h réponse (heures de bureau)",
+      "Support Téléphone (réponse sous 12h, heures de bureau)",
       "Automatisation des Stores*"
     ],
     "mieter_pkg3_features": [
@@ -206,7 +206,7 @@
       "Portail Accès Invités",
       "Moniteur Humidité",
       "Rapport Locataire Trimestriel",
-      "Support Téléphone",
+      "Support Téléphone (réponse sous 12h, heures de bureau)",
       "Automatisation des Stores*"
     ],
     "ferienhaus_pkg3_features": [
@@ -219,7 +219,7 @@
       "Prise Intelligente",
       "Rapport Propriété Trimestriel",
       "Portail Gestion Invités",
-      "Support Téléphone / 12h réponse (heures de bureau)",
+      "Support Téléphone (réponse sous 12h, heures de bureau)",
       "Automatisation des Stores*"
     ],
     "pkg3_btn": "Demander Maintenant",
@@ -286,7 +286,15 @@
     "details_btn": "Détails",
     "footer": "Prix en Francs Suisses TVA incl. · Coûts uniques gratuits avec accord 2 ans · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consultation gratuite pour locations de vacances & Airbnb</a>",
     "disclaimer": "* le cas échéant",
-    "shading_note": "* Disponible là où des protections solaires à commande électrique (stores, volets, marquises) sont déjà installées."
+    "shading_note": "* Disponible là où des protections solaires à commande électrique (stores, volets, marquises) sont déjà installées.",
+    "notice_title": "Important : Konihaus n'est pas un service d'urgence",
+    "notice_items": [
+      "Les alertes et notifications sont envoyées sous forme de notifications push, via l'application officielle, aux personnes de contact que vous désignez vous-même.",
+      "Je n'appelle pas les services de secours et je ne surveille pas votre domicile 24 h/24. Les délais de réponse du support concernent les demandes techniques, pas les urgences.",
+      "En cas d'urgence, appelez le 144 (ambulance) ou le 112.",
+      "En cas de panne de courant ou d'internet, les notifications peuvent être retardées ou ne pas être livrées.",
+      "Aucun système ne peut garantir qu'un incident sera évité. Un équipement adapté augmente toutefois les chances qu'un problème soit repéré tôt et qu'on puisse réagir à temps. Ce qui est surveillé, et comment, c'est vous qui décidez — je vous aide avec des idées et de l'expérience."
+    ]
   },
   "process": {
     "eye": "Comment ça Marche",
@@ -339,7 +347,7 @@
     "tag5": "Fumée & CO",
     "tag6": "Prises Intelligentes (Type J)",
     "tag7": "Sonnette Vidéo",
-    "tag8": "Bouton d'Urgence",
+    "tag8": "Bouton d'Alarme",
     "tag9": "Serrures Intelligentes",
     "tag10": "Qualité Air",
     "tag11": "et bien plus...",
@@ -390,12 +398,12 @@
     "sub": "Consultation initiale gratuite. Aucune obligation. J'écoute et recommande ce qui vous convient vraiment.",
     "btn1": "Demander Consultation →",
     "btn2": "hello@konihaus.ch",
-    "note": "Réponse en 24h · Pas de centre d'appels — vous parlez directement avec Koni"
+    "note": "Réponse sous 24h · Pas de centre d'appels — vous parlez directement avec Koni"
   },
   "contact": {
     "eye": "Contact",
     "h2": "Parlons de<br><em>Votre Maison.</em>",
-    "p": "Dites-moi brièvement votre situation — maison senior, maison familiale ou propriété de vacances. Je répondrai en 24 heures.",
+    "p": "Dites-moi brièvement votre situation — maison senior, maison familiale ou propriété de vacances. Je répondrai sous 24 heures.",
     "detail1": "hello@konihaus.ch",
     "detail2": "+41 78 964 65 92",
     "detail3": "Affoltern am Albis, Zurich · Service partout en Suisse",

@@ -1060,13 +1060,6 @@ a.logo {
   border-bottom: none;
 }
 
-/* Feature <li>s are rendered from the language JSON (packages-render.js).
-   Guards against older i18n code that hides list items via inline style.
-   Remove once that code is gone. */
-.pkg__list li {
-  display: flex !important;
-}
-
 .chk {
   width: 15px;
   height: 15px;
@@ -1135,6 +1128,89 @@ a.logo {
   margin-top: 24px;
   font-size: 0.75em;
   color: var(--ink-3);
+}
+
+/* Notice "not an emergency service": shown for the audiences in its data-audiences attribute */
+.pkg-notice {
+  --notice-accent: var(--forest);
+  display: flex;
+  gap: 16px;
+  max-width: 820px;
+  margin: 44px auto 0;
+  padding: 20px 26px;
+  background: var(--parchment);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--notice-accent);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.pkg-notice[hidden] {
+  display: none;
+}
+
+.pkg-notice.senioren {
+  --notice-accent: #6B4A0D;
+}
+
+.pkg-notice__icon {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--notice-accent);
+  color: var(--parchment);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.0625em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pkg-notice__title {
+  font-family: var(--serif);
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.pkg-notice__list {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+}
+
+.pkg-notice__list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.875em;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.pkg-notice__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--notice-accent);
+}
+
+@media (max-width: 600px) {
+  .pkg-notice {
+    gap: 12px;
+    margin-top: 32px;
+    padding: 16px 16px 16px 14px;
+  }
 }
 
 /* PROCESS */

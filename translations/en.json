@@ -71,7 +71,7 @@
       "Door / Window Sensor",
       "3× Smart Plugs",
       "Monthly Report",
-      "Email & WhatsApp Support / 48h"
+      "Email & WhatsApp Support (response within 48h)"
     ],
     "senioren_pkg1_features": [
       "Smart Home Hub",
@@ -79,7 +79,7 @@
       "Door / Window Sensor",
       "3× Smart Plugs",
       "Monthly Activity Report",
-      "Email & WhatsApp Support / 48h"
+      "Email & WhatsApp Support (response within 48h)"
     ],
     "mieter_pkg1_features": [
       "Smart Home Hub",
@@ -87,7 +87,7 @@
       "Door / Window Sensor",
       "3× Smart Plugs",
       "Monthly Security Report",
-      "Email & WhatsApp Support / 48h"
+      "Email & WhatsApp Support (response within 48h)"
     ],
     "ferienhaus_pkg1_features": [
       "Smart Home Hub",
@@ -95,7 +95,7 @@
       "Door / Window Sensor",
       "3× Smart Plugs",
       "Monthly Absence Report",
-      "Email & WhatsApp Support / 48h"
+      "Email & WhatsApp Support (response within 48h)"
     ],
     "pkg1_btn": "Request Now",
     "pkg1_note": "Setup investment CHF ~200-260 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
@@ -118,7 +118,7 @@
       "Door Sensor",
       "Smart Plug",
       "Monthly Family Report",
-      "Email & WhatsApp Support / 24h",
+      "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
     "senioren_pkg2_features": [
@@ -131,7 +131,7 @@
       "Smart Plug",
       "Monthly Safety Report",
       "Push Notifications for Family via Official App",
-      "Email & WhatsApp Support / 24h",
+      "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
     "mieter_pkg2_features": [
@@ -144,7 +144,7 @@
       "Smart Plug",
       "Monthly Security Report",
       "Push Notifications via Official App",
-      "Email & WhatsApp Support / 24h",
+      "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
     "ferienhaus_pkg2_features": [
@@ -157,7 +157,7 @@
       "Smart Plug",
       "Monthly Absence Report",
       "Push Notifications via Official App",
-      "Email & WhatsApp Support / 24h",
+      "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
     "pkg2_btn": "Request Now",
@@ -177,23 +177,23 @@
       "+ Up to 4× Motion Sensors",
       "Video Doorbell",
       "Night Light Automation",
-      "Emergency Button",
+      "Alarm Button",
       "Inactivity Monitoring",
       "Full Annual Report",
-      "Phone Support / 12h response (working hours)",
+      "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
     "senioren_pkg3_features": [
       "Everything from Safe at Home",
       "+ Up to 4× Motion Sensors",
       "Video Doorbell",
-      "Wearable Emergency Button",
+      "Wearable Alarm Button",
       "Bed Occupancy Sensor",
       "Toilet Flush Monitor",
       "Smart Lighting",
       "Inactivity Monitoring",
       "Full Annual Report + Caregiver Briefing",
-      "Phone Support / 12h response (working hours)",
+      "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
     "mieter_pkg3_features": [
@@ -206,7 +206,7 @@
       "Guest Access Portal",
       "Humidity Monitor",
       "Quarterly Tenant Report",
-      "Phone Support / 12h response (working hours)",
+      "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
     "ferienhaus_pkg3_features": [
@@ -219,7 +219,7 @@
       "Smart Plug",
       "Quarterly Property Report",
       "Guest Management Portal",
-      "Phone Support / 12h response (working hours)",
+      "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
     "pkg3_btn": "Request Now",
@@ -286,7 +286,15 @@
     "details_btn": "Details",
     "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for vacation rentals & Airbnb</a>",
     "disclaimer": "* wherever applicable",
-    "shading_note": "* Available where electrically controlled shading (blinds, shutters, awnings) is already installed."
+    "shading_note": "* Available where electrically controlled shading (blinds, shutters, awnings) is already installed.",
+    "notice_title": "Important: Konihaus is not an emergency service",
+    "notice_items": [
+      "Alerts and notifications are sent as push messages through the official app to the contacts you name yourself.",
+      "I don't call emergency services and I don't monitor your home around the clock. Support response times apply to technical requests, not emergencies.",
+      "In an emergency, call 144 (ambulance) or 112.",
+      "During a power or internet outage, notifications may be delayed or not delivered at all.",
+      "No system can guarantee that incidents are prevented. The right equipment does raise the chance that problems are noticed early and can be acted on in time. What is monitored, and how, is your decision — I help with ideas and experience."
+    ]
   },
   "process": {
     "eye": "How It Works",
@@ -339,7 +347,7 @@
     "tag5": "Smoke & CO",
     "tag6": "Smart Plugs (Type J)",
     "tag7": "Video Doorbell",
-    "tag8": "Emergency Button",
+    "tag8": "Alarm Button",
     "tag9": "Smart Locks",
     "tag10": "Air Quality",
     "tag11": "and much more...",
