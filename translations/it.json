@@ -287,14 +287,8 @@
     "footer": "Prezzi in Franchi Svizzeri IVA incl. · Costi unici gratuiti con accordo 2 anni · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consulenza gratuita per affitti vacanze & Airbnb</a>",
     "disclaimer": "* dove applicabile",
     "shading_note": "* Disponibile dove sono già presenti schermature solari a comando elettrico (tende, tapparelle, tende da sole).",
-    "notice_title": "Importante: Konihaus non è un servizio di emergenza",
-    "notice_items": [
-      "Gli avvisi e le notifiche vengono inviati come notifiche push, tramite l'app ufficiale, alle persone di contatto che scegli tu.",
-      "Non chiamo i servizi di emergenza e non monitoro la tua casa 24 ore su 24. I tempi di risposta del supporto valgono per richieste tecniche, non per emergenze.",
-      "In caso di emergenza chiama il 144 (ambulanza) o il 112.",
-      "In caso di interruzione di corrente o di internet, le notifiche possono essere ritardate o non recapitate.",
-      "Nessun sistema può garantire che gli incidenti vengano evitati. Un'attrezzatura adeguata aumenta però le possibilità che i problemi vengano notati per tempo e che si possa intervenire. Cosa monitorare, e come, lo decidi tu — ti aiuto con idee ed esperienza."
-    ]
+    "safety_line": "Konihaus non è un servizio di emergenza. In caso di emergenza: 144 o 112.",
+    "safety_more": "Scopri di più"
   },
   "process": {
     "eye": "Come Funziona",
@@ -420,7 +414,13 @@
     "form_message_label": "La Tua Situazione",
     "form_message_placeholder": "Appartamento / Casa / Casa Vacanze, cosa speri...",
     "form_submit": "Invia Messaggio →",
-    "form_note": "Nessuna pubblicità. Nessuna newsletter. Solo Koni."
+    "form_note": "Nessuna pubblicità. Nessuna newsletter. Solo Koni.",
+    "safety_title": "Importante: Konihaus non è un servizio di emergenza",
+    "safety_items": [
+      "In caso di emergenza chiama il 144 (ambulanza) o il 112. Non chiamo i servizi di emergenza e non monitoro la tua casa 24 ore su 24; i tempi di risposta del supporto non valgono per le emergenze.",
+      "Gli avvisi arrivano come notifiche push, tramite l'app ufficiale, alle persone di contatto che scegli tu. In caso di interruzione di corrente o di internet possono essere ritardati o non arrivare.",
+      "Nessuna garanzia: un'attrezzatura adeguata aumenta le possibilità che i problemi vengano notati per tempo. Cosa monitorare lo decidi tu."
+    ]
   },
   "footer": {
     "tagline": "Servizio casa intelligente gestito per anziani, affittuari, proprietari case vacanze e chiunque altro in Svizzera.",

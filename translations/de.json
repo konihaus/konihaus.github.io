@@ -287,14 +287,8 @@
     "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für Ferienwohnungen & Airbnb</a>",
     "disclaimer": "* soweit zutreffend",
     "shading_note": "* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.",
-    "notice_title": "Wichtig: Konihaus ist kein Notrufdienst",
-    "notice_items": [
-      "Alarme und Benachrichtigungen gehen als Push-Nachricht über die offizielle App an die Kontaktpersonen, die Sie selbst festlegen.",
-      "Ich alarmiere keine Rettungsdienste und überwache Ihr Zuhause nicht rund um die Uhr. Die Support-Antwortzeiten gelten für technische Anfragen, nicht für Notfälle.",
-      "Im Notfall wählen Sie 144 (Sanität) oder 112.",
-      "Bei Strom- oder Internetausfall können Benachrichtigungen verzögert oder gar nicht zugestellt werden.",
-      "Kein System kann Zwischenfälle garantiert verhindern. Mit passender Ausstattung steigt aber die Chance, dass Probleme früh auffallen und rechtzeitig reagiert werden kann. Was überwacht wird und wie, entscheiden Sie — ich unterstütze Sie mit Ideen und Erfahrung."
-    ]
+    "safety_line": "Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.",
+    "safety_more": "Mehr dazu"
   },
   "process": {
     "eye": "So funktioniert's",
@@ -420,7 +414,13 @@
     "form_message_label": "Ihre Situation",
     "form_message_placeholder": "Wohnung / Haus / Feriendomizil, was Sie sich erhoffen...",
     "form_submit": "Nachricht senden →",
-    "form_note": "Keine Werbung. Kein Newsletter. Nur Koni."
+    "form_note": "Keine Werbung. Kein Newsletter. Nur Koni.",
+    "safety_title": "Wichtig: Konihaus ist kein Notrufdienst",
+    "safety_items": [
+      "Im Notfall wählen Sie 144 (Sanität) oder 112. Ich alarmiere keine Rettungsdienste und überwache Ihr Zuhause nicht rund um die Uhr; Support-Antwortzeiten gelten nicht für Notfälle.",
+      "Alarme gehen per Push über die offizielle App an die Kontaktpersonen, die Sie festlegen. Bei Strom- oder Internetausfall können sie verzögert oder gar nicht ankommen.",
+      "Keine Garantie: Passende Ausstattung erhöht die Chance, dass Probleme früh auffallen. Was überwacht wird, entscheiden Sie."
+    ]
   },
   "footer": {
     "tagline": "Smart home managed service für Senioren, Mieter, Ferienhausbesitzer und alle anderen in der Schweiz.",

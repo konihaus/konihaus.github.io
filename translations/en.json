@@ -287,14 +287,8 @@
     "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for vacation rentals & Airbnb</a>",
     "disclaimer": "* wherever applicable",
     "shading_note": "* Available where electrically controlled shading (blinds, shutters, awnings) is already installed.",
-    "notice_title": "Important: Konihaus is not an emergency service",
-    "notice_items": [
-      "Alerts and notifications are sent as push messages through the official app to the contacts you name yourself.",
-      "I don't call emergency services and I don't monitor your home around the clock. Support response times apply to technical requests, not emergencies.",
-      "In an emergency, call 144 (ambulance) or 112.",
-      "During a power or internet outage, notifications may be delayed or not delivered at all.",
-      "No system can guarantee that incidents are prevented. The right equipment does raise the chance that problems are noticed early and can be acted on in time. What is monitored, and how, is your decision — I help with ideas and experience."
-    ]
+    "safety_line": "Konihaus is not an emergency service. In an emergency: 144 or 112.",
+    "safety_more": "Learn more"
   },
   "process": {
     "eye": "How It Works",
@@ -420,7 +414,13 @@
     "form_message_label": "Your Situation",
     "form_message_placeholder": "Apartment / House / Vacation home, what you're hoping for...",
     "form_submit": "Send Message →",
-    "form_note": "No advertising. No newsletter. Just Koni."
+    "form_note": "No advertising. No newsletter. Just Koni.",
+    "safety_title": "Important: Konihaus is not an emergency service",
+    "safety_items": [
+      "In an emergency, call 144 (ambulance) or 112. I don't call emergency services or monitor your home around the clock; support response times don't apply to emergencies.",
+      "Alerts go as push notifications through the official app to the contacts you choose. During a power or internet outage they may be delayed or not arrive at all.",
+      "No guarantees: the right equipment raises the chance that problems are noticed early. What is monitored is your decision."
+    ]
   },
   "footer": {
     "tagline": "Smart home managed service for seniors, renters, vacation home owners and everyone else in Switzerland.",
