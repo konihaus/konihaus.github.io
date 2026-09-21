@@ -1,7 +1,6 @@
 const CACHE_NAME = 'konihaus-v1';
 const ASSETS_TO_CACHE = [
   '/',
-  '/index_kh.html',
   '/styles.css',
   '/main.js',
   '/favicon.svg',
@@ -93,7 +92,7 @@ self.addEventListener('fetch', (event) => {
 
           // Return a fallback for HTML pages
           if (event.request.headers.get('accept').includes('text/html')) {
-            return caches.match('/index_kh.html');
+            return caches.match('/');
           }
 
           return new Response('Offline - content not available', {

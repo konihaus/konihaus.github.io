@@ -1,13 +1,18 @@
 User-agent: *
 Allow: /
-Allow: /index_kh.html
+Allow: /index.html
+Allow: /agb.html
+Allow: /impressum.html
+Allow: /datenschutz.html
 Allow: /styles.css
-Allow: /main.js
+Allow: /scripts.js
 Allow: /manifest.json
 Allow: /favicon.svg
 Allow: /logo.png
+Allow: /greenhub.png
 Allow: /translations/
 
+Disallow: /src/
 Disallow: /node_modules/
 Disallow: /*.json$
 Disallow: /*sw.js$
