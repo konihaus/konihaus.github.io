@@ -170,7 +170,7 @@
 
   // ── Dialog (declaration + settings) ────────────────────────────────────────
   function privacyHref() {
-    const link = document.querySelector('[data-i18n="footer.legal1"]');
+    const link = document.querySelector('[data-legal="privacy"]');
     const href = link && link.getAttribute('href');
     return href && href !== '#' ? href : null;
   }

@@ -434,16 +434,12 @@
     "col2_l2": "Comment ça Marche",
     "col2_l3": "Pourquoi Konihaus",
     "col2_l4": "Contact",
-    "col3_title": "Technologie",
-    "col3_l1": "Home Assistant",
-    "col3_l2": "Appareils Zigbee",
-    "col3_l3": "Matter / Thread",
-    "col3_l4": "Confidentialité",
+    "col3_title": "Informations légales",
+    "col3_l1": "Mentions légales",
+    "col3_l2": "Confidentialité",
+    "col3_l3": "Déclaration des cookies",
+    "col3_l4": "Conditions",
     "copy": "© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Suisse",
-    "legal1": "Confidentialité",
-    "legal2": "Conditions",
-    "legal3": "Mentions Légales",
-    "cookies": "Déclaration des cookies",
     "ch": "🇨🇭 Fabriqué en Suisse"
   },
   "cookies": {
@@ -492,5 +488,19 @@
     "about_privacy": "Pour en savoir plus sur qui nous sommes, comment nous contacter et comment nous traitons les données personnelles, consultez notre {link}.",
     "privacy_link_text": "politique de confidentialité",
     "domain_line": "Votre consentement s'applique au domaine konihaus.ch."
+  },
+  "legal": {
+    "back": "← Retour à l'accueil",
+    "updated": "Dernière mise à jour : septembre 2026",
+    "german_only": "Ce document n'est disponible qu'en allemand. La version allemande fait foi.",
+    "imp_title": "Mentions légales",
+    "privacy_title": "Politique de confidentialité",
+    "terms_title": "Conditions générales",
+    "imp_operator": "Exploitant du site",
+    "imp_country": "Suisse",
+    "imp_contact": "Contact",
+    "imp_phone": "Téléphone",
+    "imp_email": "E-mail",
+    "imp_whatsapp_cta": "Envoyer un message"
   }
 }

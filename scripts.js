@@ -33,6 +33,7 @@ const i18n = {
     // Update all elements with data-i18n attribute
     this.updatePageContent();
     renderSafetyStatement();
+    applyLanguageBlocks();
     if (typeof cookieConsent !== 'undefined') cookieConsent.refresh();
 
     // Update language selector dropdown
@@ -323,6 +324,29 @@ function updatePackageSafetyLine(audience) {
   line.hidden = !audiences.includes(audience);
 }
 
+// Legal pages (impressum / datenschutz / agb): shows the block of a document that matches the current
+// language. Documents that exist in German only fall back to it and show a notice (legal.german_only).
+// To add a translation, add <div data-lang="en" lang="en" hidden>…</div> next to the German block.
+function applyLanguageBlocks() {
+  const titleKey = document.body && document.body.dataset.titleKey;
+  if (titleKey) {
+    const [section, key] = titleKey.split('.');
+    document.title = i18n.getText(section, key) + ' \u2014 Konihaus';
+  }
+
+  document.querySelectorAll('[data-legal-doc]').forEach((doc) => {
+    const blocks = Array.from(doc.querySelectorAll(':scope > [data-lang]'));
+    if (!blocks.length) return;
+
+    const wanted = blocks.find((b) => b.dataset.lang === i18n.currentLang);
+    const shown = wanted || blocks.find((b) => b.dataset.lang === 'de') || blocks[0];
+    blocks.forEach((b) => { b.hidden = b !== shown; });
+
+    const notice = doc.querySelector('.legal__notice');
+    if (notice) notice.hidden = !!wanted;
+  });
+}
+
 // Full "not an emergency service" statement in the contact section.
 // Title comes from contact.safety_title, the points from contact.safety_items (array) in the language JSON.
 function renderSafetyStatement() {
@@ -444,10 +468,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setupHeroTaglines();
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
-    document.getElementById('morestart').addEventListener('click', (e) => {
-      e.preventDefault();
-      document.getElementById('trustsection').scrollIntoView();
-    });
+    const moreStart = document.getElementById('morestart'); // only on the home page
+    if (moreStart) {
+      moreStart.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('trustsection').scrollIntoView();
+      });
+    }
   });
 });
 

@@ -434,16 +434,12 @@
     "col2_l2": "So funktioniert's",
     "col2_l3": "Warum Konihaus",
     "col2_l4": "Kontakt",
-    "col3_title": "Technik",
-    "col3_l1": "Home Assistant",
-    "col3_l2": "Zigbee Geräte",
-    "col3_l3": "Matter / Thread",
-    "col3_l4": "Datenschutz",
+    "col3_title": "Rechtliches",
+    "col3_l1": "Impressum",
+    "col3_l2": "Datenschutz",
+    "col3_l3": "Cookie-Erklärung",
+    "col3_l4": "AGB",
     "copy": "© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz",
-    "legal1": "Datenschutz",
-    "legal2": "AGB",
-    "legal3": "Impressum",
-    "cookies": "Cookie-Erklärung",
     "ch": "🇨🇭 Made in Switzerland"
   },
   "cookies": {
@@ -492,5 +488,19 @@
     "about_privacy": "Mehr dazu, wer wir sind, wie Sie uns kontaktieren können und wie wir personenbezogene Daten verarbeiten, erfahren Sie in unserer {link}.",
     "privacy_link_text": "Datenschutzerklärung",
     "domain_line": "Ihre Einwilligung gilt für die Domain konihaus.ch."
+  },
+  "legal": {
+    "back": "← Zur Startseite",
+    "updated": "Stand: September 2026",
+    "german_only": "Dieses Dokument liegt nur in deutscher Sprache vor. Massgebend ist die deutsche Fassung.",
+    "imp_title": "Impressum",
+    "privacy_title": "Datenschutzerklärung",
+    "terms_title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "imp_operator": "Betreiber der Website",
+    "imp_country": "Schweiz",
+    "imp_contact": "Kontakt",
+    "imp_phone": "Telefon",
+    "imp_email": "E-Mail",
+    "imp_whatsapp_cta": "Nachricht senden"
   }
 }

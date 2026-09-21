@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a4a35">
+  <link rel="icon" type="image/svg+xml" href="favicon_sm.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <title>Impressum — Konihaus</title>
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="legal-body" data-title-key="legal.imp_title">
+
+  <nav class="nav nav--solid" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index_kh.html" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <div class="legal-nav__right">
+          <a href="index_kh.html" class="legal-back" data-i18n="legal.back">← Zur Startseite</a>
+          <select id="lang-selector" class="lang-selector" aria-label="Sprache / Language">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="fr">FR</option>
+            <option value="it">IT</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="legal">
+    <div class="container">
+      <h1 data-i18n="legal.imp_title">Impressum</h1>
+      <section class="legal__block">
+        <h2 data-i18n="legal.imp_operator">Betreiber der Website</h2>
+        <p>Konihaus<br>Konrad Hefelle<br>8910 Affoltern am Albis<br><span data-i18n="legal.imp_country">Schweiz</span></p>
+      </section>
+      <section class="legal__block">
+        <h2 data-i18n="legal.imp_contact">Kontakt</h2>
+        <dl class="legal__contact">
+          <dt data-i18n="legal.imp_phone">Telefon</dt>
+          <dd><a href="tel:+41789646592">+41 78 964 65 92</a></dd>
+          <dt data-i18n="legal.imp_email">E-Mail</dt>
+          <dd><a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a></dd>
+          <dt>WhatsApp</dt>
+          <dd><a href="https://wa.me/41789646592" target="_blank" rel="noopener" data-i18n="legal.imp_whatsapp_cta">Nachricht senden</a></dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer footer--legal">
+    <div class="container">
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
+        <div class="flegal">
+          <a href="impressum.html" data-i18n="footer.col3_l1">Impressum</a>
+          <a href="datenschutz.html" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a>
+          <a href="#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a>
+          <a href="agb.html" data-i18n="footer.col3_l4">AGB</a>
+        </div>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="cookie-consent.js"></script>
+</body>
+
+</html>
