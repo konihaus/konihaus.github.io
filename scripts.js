@@ -401,6 +401,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setupHeroTaglines();
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
+    document.getElementById('morestart').addEventListener('click', (e) => {
+      e.preventDefault();
+      document.getElementById('trustsection').scrollIntoView();
+    });
   });
 });
 
