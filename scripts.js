@@ -251,7 +251,7 @@ function updatePackageContent(audience) {
   // Update package names and tags from i18n
   const packages = document.querySelectorAll('.pkg');
   packages.forEach((card, index) => {
-    // Package number is 1-based (1, 2, or 3)
+    // Package number = card position, 1-based (1 = first card)
     const pkgNumber = index + 1;
 
     // Update package name
@@ -270,31 +270,69 @@ function updatePackageContent(audience) {
       tagEl.textContent = translatedTag;
     }
 
-    // Update features with segment-specific keys
+    // Feature list: one <li> per entry of "<audience>_pkg<N>_features" in the language JSON
     const featureList = card.querySelector('.pkg__list');
-    if (featureList) {
-      const featureItems = featureList.querySelectorAll('li');
-      featureItems.forEach((item, featureIndex) => {
-        // Feature number is 1-based
-        const featureNumber = featureIndex + 1;
-        // Build segment-specific key: basis_pkg1_feature_1, senioren_pkg2_feature_5, etc.
-        const featureKey = `${audience}_pkg${pkgNumber}_feature_${featureNumber}`;
-        const translatedFeature = i18n.getText('packages', featureKey);
-
-        // Check if the key exists (not a fallback like [packages.basis_pkg3_feature_7])
-        const isFallback = translatedFeature.startsWith('[') && translatedFeature.endsWith(']');
-
-        if (isFallback) {
-          // Hide empty features
-          item.style.display = 'none';
-        } else {
-          // Show and update feature text
-          item.style.display = '';
-          item.textContent = translatedFeature;
-        }
-      });
-    }
+    if (featureList) renderFeatureList(featureList, pkgNumber, audience);
   });
+
+  updatePackageNotice(audience);
+}
+
+// Builds the <li> items of one package card from the language JSON, e.g.
+//   "packages": { "senioren_pkg2_features": ["Smart-Home-Zentrale", "2× Bewegungsmelder", ...] }
+// Adding, removing or reordering features only means editing the array in the JSON.
+function renderFeatureList(listEl, pkgNumber, audience) {
+  const key = `${audience}_pkg${pkgNumber}_features`;
+  const packages = i18n.translations[i18n.currentLang]?.packages;
+  const items = packages?.[key];
+
+  if (!Array.isArray(items)) {
+    console.warn(`Missing feature list "${key}" for language "${i18n.currentLang}"`);
+    listEl.replaceChildren();
+    return;
+  }
+
+  listEl.replaceChildren(
+    ...items.map((text) => {
+      const li = document.createElement('li');
+
+      const check = document.createElement('span');
+      check.className = 'chk';
+      check.setAttribute('aria-hidden', 'true');
+      check.textContent = '✓';
+
+      const label = document.createElement('span');
+      label.textContent = text; // textContent: JSON text is never parsed as HTML
+
+      li.append(check, label);
+      return li;
+    })
+  );
+}
+
+// "Not an emergency service" notice under the package grid.
+// Shown only for the audiences listed in its data-audiences attribute (see index.html);
+// title and bullet points come from packages.notice_title / packages.notice_items.
+function updatePackageNotice(audience) {
+  const notice = document.getElementById('pkg-notice');
+  const list = document.getElementById('pkg-notice-list');
+  if (!notice || !list) return;
+
+  const audiences = (notice.dataset.audiences || '').split(/\s+/).filter(Boolean);
+  const items = i18n.translations[i18n.currentLang]?.packages?.notice_items;
+  const show = audiences.includes(audience) && Array.isArray(items) && items.length > 0;
+
+  notice.hidden = !show;
+  notice.classList.remove('senioren', 'mieter', 'ferienhaus');
+  if (audience !== 'basis') notice.classList.add(audience);
+
+  list.replaceChildren(
+    ...(show ? items : []).map((text) => {
+      const li = document.createElement('li');
+      li.textContent = text;
+      return li;
+    })
+  );
 }
 
 // Package details accordion for mobile

@@ -71,7 +71,7 @@
       "Sensore Porta / Finestra",
       "3× Prese Intelligenti",
       "Rapporto Mensile",
-      "Supporto Email & WhatsApp / 48h"
+      "Supporto Email & WhatsApp (risposta entro 48h)"
     ],
     "senioren_pkg1_features": [
       "Hub Casa Intelligente",
@@ -79,7 +79,7 @@
       "Sensore Porta / Finestra",
       "3× Prese Intelligenti",
       "Rapporto Attività Mensile",
-      "Supporto Email & WhatsApp / 48h"
+      "Supporto Email & WhatsApp (risposta entro 48h)"
     ],
     "mieter_pkg1_features": [
       "Hub Casa Intelligente",
@@ -87,7 +87,7 @@
       "Sensore Porta / Finestra",
       "3× Prese Intelligenti",
       "Rapporto Sicurezza Mensile",
-      "Supporto Email & WhatsApp / 48h"
+      "Supporto Email & WhatsApp (risposta entro 48h)"
     ],
     "ferienhaus_pkg1_features": [
       "Hub Casa Intelligente",
@@ -95,7 +95,7 @@
       "Sensore Porta / Finestra",
       "3× Prese Intelligenti",
       "Rapporto Assenza Mensile",
-      "Supporto Email & WhatsApp / 48h"
+      "Supporto Email & WhatsApp (risposta entro 48h)"
     ],
     "pkg1_btn": "Richiedi Ora",
     "pkg1_note": "Investimento installazione CHF ~200-260 · <span class=\"pkg__highlight\">Gratuito con accordo servizio 2 anni</span>",
@@ -118,7 +118,7 @@
       "Sensore Porta",
       "Presa Intelligente",
       "Rapporto Familiare Mensile",
-      "Supporto Email & WhatsApp / 24h",
+      "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
     ],
     "senioren_pkg2_features": [
@@ -131,7 +131,7 @@
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
       "Notifiche Push per i Familiari tramite App Ufficiale",
-      "Supporto Email & WhatsApp / 24h",
+      "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
     ],
     "mieter_pkg2_features": [
@@ -144,7 +144,7 @@
       "Presa Intelligente",
       "Rapporto Sicurezza Mensile",
       "Notifiche Push tramite App Ufficiale",
-      "Supporto Email & WhatsApp / 24h",
+      "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
     ],
     "ferienhaus_pkg2_features": [
@@ -157,7 +157,7 @@
       "Presa Intelligente",
       "Rapporto Assenza Mensile",
       "Notifiche Push tramite App Ufficiale",
-      "Supporto Email & WhatsApp / 24h",
+      "Supporto Email & WhatsApp (risposta entro 24h)",
       "Automazione Schermature Solari*"
     ],
     "pkg2_btn": "Richiedi Ora",
@@ -177,23 +177,23 @@
       "+ Fino a 4× Sensori di Movimento",
       "Campanello Video",
       "Automazione Luce Notturna",
-      "Pulsante Emergenza Portatile",
+      "Pulsante d'Allarme Portatile",
       "Monitoraggio Inattività",
       "Rapporto Annuale Completo",
-      "Supporto Telefonico / 12h risposta (orario lavorativo)",
+      "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
     ],
     "senioren_pkg3_features": [
       "Tutto da Sicuro a Casa",
       "+ Fino a 4× Sensori di Movimento",
       "Campanello Video",
-      "Pulsante Emergenza Portatile",
+      "Pulsante d'Allarme Portatile",
       "Sensore Occupazione Letto",
       "Monitore Scarico Toilette",
       "Illuminazione Intelligente",
       "Monitoraggio Inattività",
       "Rapporto Annuale Completo + Briefing Caregiver",
-      "Supporto Telefonico / 12h risposta (orario lavorativo)",
+      "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
     ],
     "mieter_pkg3_features": [
@@ -206,7 +206,7 @@
       "Portale Accesso Ospiti",
       "Monitore Umidità",
       "Rapporto Inquilino Trimestrale",
-      "Supporto Telefonico",
+      "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
     ],
     "ferienhaus_pkg3_features": [
@@ -219,7 +219,7 @@
       "Presa Intelligente",
       "Rapporto Proprietà Trimestrale",
       "Portale Gestione Ospiti",
-      "Supporto Telefonico / 12h risposta (orario lavorativo)",
+      "Supporto Telefonico (risposta entro 12h, orario lavorativo)",
       "Automazione Schermature Solari*"
     ],
     "pkg3_btn": "Richiedi Ora",
@@ -286,7 +286,15 @@
     "details_btn": "Dettagli",
     "footer": "Prezzi in Franchi Svizzeri IVA incl. · Costi unici gratuiti con accordo 2 anni · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Consulenza gratuita per affitti vacanze & Airbnb</a>",
     "disclaimer": "* dove applicabile",
-    "shading_note": "* Disponibile dove sono già presenti schermature solari a comando elettrico (tende, tapparelle, tende da sole)."
+    "shading_note": "* Disponibile dove sono già presenti schermature solari a comando elettrico (tende, tapparelle, tende da sole).",
+    "notice_title": "Importante: Konihaus non è un servizio di emergenza",
+    "notice_items": [
+      "Gli avvisi e le notifiche vengono inviati come notifiche push, tramite l'app ufficiale, alle persone di contatto che scegli tu.",
+      "Non chiamo i servizi di emergenza e non monitoro la tua casa 24 ore su 24. I tempi di risposta del supporto valgono per richieste tecniche, non per emergenze.",
+      "In caso di emergenza chiama il 144 (ambulanza) o il 112.",
+      "In caso di interruzione di corrente o di internet, le notifiche possono essere ritardate o non recapitate.",
+      "Nessun sistema può garantire che gli incidenti vengano evitati. Un'attrezzatura adeguata aumenta però le possibilità che i problemi vengano notati per tempo e che si possa intervenire. Cosa monitorare, e come, lo decidi tu — ti aiuto con idee ed esperienza."
+    ]
   },
   "process": {
     "eye": "Come Funziona",
@@ -339,7 +347,7 @@
     "tag5": "Fumo & CO",
     "tag6": "Prese Intelligenti (Type J)",
     "tag7": "Campanello Video",
-    "tag8": "Pulsante Emergenza",
+    "tag8": "Pulsante d'Allarme",
     "tag9": "Serrature Intelligenti",
     "tag10": "Qualità Aria",
     "tag11": "e molto altro...",
