@@ -439,7 +439,7 @@
     "hub_row4_v": "64-128 GB SD o SSD",
     "hub_row5_l": "Accesso Remoto",
     "hub_row5_v": "Crittografato via VPN Privata o Tailscale",
-    "hub_note": "★ I dati non lasciano mai la tua casa o solo crittografati — e solo quando vi accedi da remoto."
+    "hub_note": "★ I dati vengono elaborati localmente. L’accesso remoto — sia da parte tua che nostro per il supporto — è cifrato. Le notifiche sono opzionali e possono passare da servizi esterni come Apple o Google."
   },
   "about": {
     "eye": "Su Koni",
@@ -597,7 +597,7 @@
     "q3": "L'hardware è mio?",
     "a3": "Sì — una volta pagato per intero l'investimento di installazione, in anticipo oppure tramite l'accordo di servizio di 2 anni. Fino ad allora resta di proprietà di Konihaus, ma rimane installato e in uso a casa tua.",
     "q4": "Cosa succede se un dispositivo si guasta o voglio sostituirlo?",
-    "a4": "Trasferiamo a te le garanzie del produttore; oltre a queste non diamo alcuna garanzia aggiuntiva sull'hardware di terzi. Poiché puntiamo su standard aperti (Zigbee, Z-Wave, Matter, WiFi), puoi sostituire o aggiungere singoli dispositivi in qualsiasi momento senza ricostruire il sistema.",
+    "a4": "Mi occupo io delle garanzie del produttore — non devi mai avere a che fare direttamente con il produttore. La maggior parte dei dispositivi, come sensori o prese, li sostituisci tu stesso con la mia guida a distanza; se un dispositivo sostitutivo richiede un'installazione professionale in loco, fissiamo un appuntamento per questo. Poiché puntiamo su standard aperti (Zigbee, Z-Wave, Matter, WiFi), puoi sostituire o aggiungere singoli dispositivi in qualsiasi momento senza ricostruire il sistema.",
     "q5": "Cosa continua a funzionare dopo la fine del contratto?",
     "a5": "L'accesso remoto, il supporto e gli aggiornamenti da parte nostra terminano con il contratto. Il tuo sistema installato localmente — l'hub Home Assistant e tutti i dispositivi — continua a funzionare in autonomia finché ti appartiene. Su richiesta ricevi le credenziali di accesso e la documentazione della configurazione.",
     "q6": "Posso passare a un pacchetto superiore in seguito?",

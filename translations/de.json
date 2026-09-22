@@ -439,7 +439,7 @@
     "hub_row4_v": "64-128 GB SD oder SSD",
     "hub_row5_l": "Fernzugriff",
     "hub_row5_v": "Verschlüsselt via Private VPN oder Tailscale",
-    "hub_note": "★ Daten verlassen Ihr Haus nicht oder nur verschlüsselt — und nur wenn Sie aus der Ferne zugreifen möchten."
+    "hub_note": "★ Daten werden lokal verarbeitet. Fernzugriff — egal ob durch Sie oder für den Support durch uns — ist verschlüsselt. Benachrichtigungen sind optional und laufen ggf. über externe Dienste wie Apple oder Google."
   },
   "about": {
     "eye": "Über Koni",
@@ -597,7 +597,7 @@
     "q3": "Gehört mir die Hardware?",
     "a3": "Ja — sobald Sie die Einrichtungsinvestition vollständig bezahlt haben, entweder direkt bei der Installation oder über den 2-Jahres-Servicevertrag. Bis dahin bleibt sie im Eigentum von Konihaus, bleibt aber bei Ihnen installiert und in Betrieb.",
     "q4": "Was passiert, wenn ein Gerät ausfällt oder ich es wechseln möchte?",
-    "a4": "Herstellergarantien geben wir an Sie weiter; darüber hinaus übernehmen wir keine zusätzliche Garantie für Fremdhardware. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.",
+    "a4": "Herstellergarantien wickle ich für Sie ab — Sie müssen sich nicht selbst mit dem Hersteller auseinandersetzen. Die meisten Geräte, etwa Sensoren oder Stecker, tauschen Sie mit meiner Anleitung aus der Ferne selbst; braucht ein Ersatzgerät eine fachgerechte Installation vor Ort, vereinbaren wir dafür einen Termin. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.",
     "q5": "Was funktioniert noch, wenn der Vertrag endet?",
     "a5": "Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.",
     "q6": "Kann ich später upgraden?",

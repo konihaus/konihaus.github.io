@@ -439,7 +439,7 @@
     "hub_row4_v": "64-128 GB SD ou SSD",
     "hub_row5_l": "Accès Distant",
     "hub_row5_v": "Chiffré via VPN Privée ou Tailscale",
-    "hub_note": "★ Les données ne quittent jamais votre maison ou seulement chiffrées — et seulement quand vous y accédez à distance."
+    "hub_note": "★ Les données sont traitées localement. L'accès à distance — que ce soit par vous ou par nous pour le support — est chiffré. Les notifications sont optionnelles et peuvent passer par des services externes comme Apple ou Google."
   },
   "about": {
     "eye": "À Propos de Koni",
@@ -597,7 +597,7 @@
     "q3": "Le matériel m'appartient-il ?",
     "a3": "Oui — dès que vous avez payé intégralement l'investissement d'installation, soit d'avance, soit via l'accord de service de 2 ans. D'ici là, il reste la propriété de Konihaus, mais reste installé et utilisé chez vous.",
     "q4": "Que se passe-t-il si un appareil tombe en panne ou que je veux le changer ?",
-    "a4": "Nous transmettons les garanties du fabricant ; au-delà, nous n'offrons aucune garantie supplémentaire sur le matériel tiers. Comme nous misons sur des standards ouverts (Zigbee, Z-Wave, Matter, WiFi), vous pouvez remplacer ou ajouter des appareils à tout moment sans reconstruire le système.",
+    "a4": "Je m'occupe des garanties fabricant pour vous — vous n'avez jamais affaire au fabricant vous-même. La plupart des appareils, comme les capteurs ou les prises, vous les remplacez vous-même avec mes conseils à distance ; si un appareil de remplacement nécessite une installation professionnelle sur place, nous planifions une visite pour cela. Comme nous misons sur des standards ouverts (Zigbee, Z-Wave, Matter, WiFi), vous pouvez remplacer ou ajouter des appareils à tout moment sans reconstruire le système.",
     "q5": "Qu’est-ce qui continue de fonctionner après la fin du contrat ?",
     "a5": "L'accès à distance, le support et les mises à jour de notre part s'arrêtent à la fin du contrat. Votre système installé localement — le hub Home Assistant et tous les appareils — continue de fonctionner de façon autonome tant qu'il vous appartient. Sur demande, vous recevez les identifiants d'accès et la documentation de la configuration.",
     "q6": "Puis-je passer à un forfait supérieur plus tard ?",
