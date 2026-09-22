@@ -600,6 +600,8 @@
     "a4": "Nous transmettons les garanties du fabricant ; au-delà, nous n'offrons aucune garantie supplémentaire sur le matériel tiers. Comme nous misons sur des standards ouverts (Zigbee, Z-Wave, Matter, WiFi), vous pouvez remplacer ou ajouter des appareils à tout moment sans reconstruire le système.",
     "q5": "Qu’est-ce qui continue de fonctionner après la fin du contrat ?",
     "a5": "L'accès à distance, le support et les mises à jour de notre part s'arrêtent à la fin du contrat. Votre système installé localement — le hub Home Assistant et tous les appareils — continue de fonctionner de façon autonome tant qu'il vous appartient. Sur demande, vous recevez les identifiants d'accès et la documentation de la configuration.",
+    "q6": "Puis-je passer à un forfait supérieur plus tard ?",
+    "a6": "À tout moment — changer de forfait est vivement encouragé. Pour chaque demande, j'établis un nouveau devis : un petit ajout est facturé une fois, passer à un forfait supérieur augmente la mensualité. Le matériel existant est presque toujours réutilisé ; seul un changement important nécessite une nouvelle centrale, et même là, vous ne payez que la différence. Les coûts dépendent de l'ampleur — les forfaits actuels donnent un ordre de grandeur. Une nouvelle durée minimale ne s'applique qu'aux changements importants comme une nouvelle centrale, pas à l'ajout de quelques appareils.",
     "more": "Détails complets dans nos <a href=\"agb.html\">Conditions</a>."
   }
 }

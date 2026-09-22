@@ -600,6 +600,8 @@
     "a4": "Trasferiamo a te le garanzie del produttore; oltre a queste non diamo alcuna garanzia aggiuntiva sull'hardware di terzi. Poiché puntiamo su standard aperti (Zigbee, Z-Wave, Matter, WiFi), puoi sostituire o aggiungere singoli dispositivi in qualsiasi momento senza ricostruire il sistema.",
     "q5": "Cosa continua a funzionare dopo la fine del contratto?",
     "a5": "L'accesso remoto, il supporto e gli aggiornamenti da parte nostra terminano con il contratto. Il tuo sistema installato localmente — l'hub Home Assistant e tutti i dispositivi — continua a funzionare in autonomia finché ti appartiene. Su richiesta ricevi le credenziali di accesso e la documentazione della configurazione.",
+    "q6": "Posso passare a un pacchetto superiore in seguito?",
+    "a6": "In qualsiasi momento — passare a un pacchetto superiore è ben accetto. Per ogni richiesta preparo un nuovo preventivo: una piccola aggiunta viene fatturata una tantum, il passaggio a un pacchetto superiore aumenta la quota mensile. L'hardware esistente viene quasi sempre riutilizzato; solo un salto importante richiede un nuovo hub, e anche in quel caso paghi solo la differenza. I costi dipendono dalla portata — i pacchetti attuali danno un'idea dell'ordine di grandezza. Una nuova durata minima si applica solo per cambiamenti importanti come un nuovo hub, non per l'aggiunta di qualche dispositivo.",
     "more": "Dettagli completi nei nostri <a href=\"agb.html\">Termini</a>."
   }
 }

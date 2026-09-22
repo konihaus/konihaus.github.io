@@ -600,6 +600,8 @@
     "a4": "We pass manufacturer warranties on to you; beyond that we give no additional warranty on third-party hardware. Because we build on open standards (Zigbee, Z-Wave, Matter, WiFi), you can swap or add individual devices at any time without rebuilding the system.",
     "q5": "What keeps working after the contract ends?",
     "a5": "Remote access, support and updates from us stop when the contract ends. Your locally installed system — the Home Assistant hub and all devices — keeps running on its own as long as it belongs to you. On request, you'll get the access credentials and configuration documentation.",
+    "q6": "Can I upgrade later?",
+    "a6": "Any time — upgrading is very welcome. For every request I put together a new quote: a small addition is billed once, moving to a higher package raises the monthly fee. Existing equipment is almost always reused; only a bigger leap needs a new hub, and even then you only pay the difference. Costs depend on the scope — the current packages show the range. A new minimum term only applies for bigger changes like a new hub, not for adding a few devices.",
     "more": "Full details in our <a href=\"agb.html\">Terms</a>."
   }
 }
