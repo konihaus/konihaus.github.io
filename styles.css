@@ -541,6 +541,7 @@ a.logo {
 
 .sec-center .sec-h em {
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .sec-center p {
@@ -588,6 +589,7 @@ a.logo {
 .intro__h em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .intro__p {
@@ -689,7 +691,7 @@ a.logo {
 
 .pkg-title em {
   transition: color 0.4s var(--ease);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .pkg-title.senioren em {
@@ -1217,6 +1219,7 @@ a.logo {
 .safety__title em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .safety__list {
@@ -1372,6 +1375,7 @@ a.logo {
 .proc-h em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .proc-p {
@@ -1509,6 +1513,7 @@ a.logo {
 .why__h em {
   font-style: italic;
   color: var(--amber-warm);
+  font-weight: 400;
 }
 
 .why__grid {
@@ -1597,6 +1602,7 @@ a.logo {
 .dev-h em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .dev-p {
@@ -1878,6 +1884,7 @@ a.logo {
 .about-h em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .about-p {
@@ -2035,6 +2042,7 @@ a.logo {
 .cta-h em {
   font-style: italic;
   color: var(--amber-warm);
+  font-weight: 400;
 }
 
 .cta-sub {
@@ -2084,6 +2092,7 @@ a.logo {
 .con-h em {
   font-style: italic;
   color: var(--forest-mid);
+  font-weight: 400;
 }
 
 .con-p {
