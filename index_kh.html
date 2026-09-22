@@ -830,8 +830,23 @@
               rows="4" data-i18n="contact.form_message_placeholder"
               placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
           <!-- hCaptcha, free zero-config proxy via Web3Forms. Requires enabling "hCaptcha" under
-               Block Spam in your Web3Forms dashboard once; see the note delivered with this change. -->
-          <div class="h-captcha" data-captcha="true"></div>
+               Block Spam in your Web3Forms dashboard once; see the note delivered with this change.
+               data-lang is set synchronously below, from localStorage directly, BEFORE the async
+               Web3Forms script (loaded at the end of the page) has any chance to fetch and mount the
+               widget. i18n.setLanguage() in scripts.js keeps it in sync only for a language switch
+               that happens before this widget has mounted — it cannot fix the *initial* mount, because
+               i18n.init() awaits four sequential translation-file fetches first, which is far slower
+               than the hCaptcha script loading, especially once that script is cached. This inline
+               script is what actually wins that race, every time, on document order alone. -->
+          <div class="h-captcha" style="margin: 0 auto;" data-captcha="true" data-lang="de"></div>
+          <script>
+            (function () {
+              var supported = ['de', 'en', 'fr', 'it'];
+              var saved = localStorage.getItem('lang');
+              var lang = supported.indexOf(saved) !== -1 ? saved : 'de';
+              document.currentScript.previousElementSibling.setAttribute('data-lang', lang);
+            })();
+          </script>
           <button type="submit" class="fsub" id="fsub-btn" data-i18n="contact.form_submit">Nachricht senden →</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
           <p style="font-size:0.6875em;color:var(--ink-4);text-align:center;margin-top:8px;"
