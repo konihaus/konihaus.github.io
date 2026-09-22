@@ -56,7 +56,7 @@
     "pkg_includes_mieter": "Protezione proprietà:",
     "pkg_includes_ferienhaus": "Protezione proprietà:",
     "pkg1_badge": "Starter",
-    "pkg1_name_basis": "Starter",
+    "pkg1_name_basis": "Base",
     "pkg1_name_senioren": "Controllo Quotidiano",
     "pkg1_name_mieter": "Avvio Affitto",
     "pkg1_name_ferienhaus": "Vigilanza Vacanze",
@@ -120,7 +120,7 @@
     "pkg1_btn": "Richiedi Ora",
     "pkg1_note": "Investimento installazione CHF ~200-260 · <span class=\"pkg__highlight\">Gratuito con accordo servizio 2 anni</span>",
     "pkg2_badge": "Essenziale",
-    "pkg2_name_basis": "Base",
+    "pkg2_name_basis": "Standard",
     "pkg2_name_senioren": "Sicuro a Casa",
     "pkg2_name_mieter": "Sicurezza Affitto",
     "pkg2_name_ferienhaus": "Sicurezza Vacanze",
@@ -583,5 +583,21 @@
     "imp_phone": "Telefono",
     "imp_email": "E-mail",
     "imp_whatsapp_cta": "Invia un messaggio"
+  },
+  "faq": {
+    "eye": "Domande Frequenti",
+    "h2": "Prima di<br><em>Decidere.</em>",
+    "sub": "I punti essenziali delle nostre CG — spiegati in breve.",
+    "q1": "Per quanto tempo sono vincolato?",
+    "a1": "Se sostituisci l'investimento di installazione con un accordo di servizio di 2 anni, la durata minima è di 24 mesi. Dopodiché il contratto prosegue a tempo indeterminato e ciascuna parte può disdirlo con un preavviso di un mese, con effetto a fine mese. Se paghi l'installazione in anticipo, non c'è durata minima.",
+    "q2": "Come disdico, e cosa succede se disdico in anticipo?",
+    "a2": "La disdetta va data per iscritto o via e-mail, con un preavviso di un mese a fine mese. Se termini il contratto prima della scadenza della durata minima, puoi scegliere: pagare pro rata l'investimento di installazione che era stato offerto e tenere l'hardware, oppure restituirlo entro 14 giorni — in questo caso non è dovuto alcun pagamento.",
+    "q3": "L'hardware è mio?",
+    "a3": "Sì — una volta pagato per intero l'investimento di installazione, in anticipo oppure tramite l'accordo di servizio di 2 anni. Fino ad allora resta di proprietà di Konihaus, ma rimane installato e in uso a casa tua.",
+    "q4": "Cosa succede se un dispositivo si guasta o voglio sostituirlo?",
+    "a4": "Trasferiamo a te le garanzie del produttore; oltre a queste non diamo alcuna garanzia aggiuntiva sull'hardware di terzi. Poiché puntiamo su standard aperti (Zigbee, Z-Wave, Matter, WiFi), puoi sostituire o aggiungere singoli dispositivi in qualsiasi momento senza ricostruire il sistema.",
+    "q5": "Cosa continua a funzionare dopo la fine del contratto?",
+    "a5": "L'accesso remoto, il supporto e gli aggiornamenti da parte nostra terminano con il contratto. Il tuo sistema installato localmente — l'hub Home Assistant e tutti i dispositivi — continua a funzionare in autonomia finché ti appartiene. Su richiesta ricevi le credenziali di accesso e la documentazione della configurazione.",
+    "more": "Dettagli completi nei nostri <a href=\"agb.html\">Termini</a>."
   }
 }

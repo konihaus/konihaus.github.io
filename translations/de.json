@@ -56,7 +56,7 @@
     "pkg_includes_mieter": "Schutzausrüstung:",
     "pkg_includes_ferienhaus": "Schutzausrüstung:",
     "pkg1_badge": "Starter",
-    "pkg1_name_basis": "Starter",
+    "pkg1_name_basis": "Basis",
     "pkg1_name_senioren": "Alltags-Check",
     "pkg1_name_mieter": "Mieter-Start",
     "pkg1_name_ferienhaus": "Ferienhaus-Wache",
@@ -120,7 +120,7 @@
     "pkg1_btn": "Jetzt anfragen",
     "pkg1_note": "Einrichtungsinvestition ~CHF 200-260 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "pkg2_badge": "Essential",
-    "pkg2_name_basis": "Basis",
+    "pkg2_name_basis": "Standard",
     "pkg2_name_senioren": "Sicher zu Hause",
     "pkg2_name_mieter": "Mieterschutz",
     "pkg2_name_ferienhaus": "Ferienhaus-Sicherheit",
@@ -583,5 +583,21 @@
     "imp_phone": "Telefon",
     "imp_email": "E-Mail",
     "imp_whatsapp_cta": "Nachricht senden"
+  },
+  "faq": {
+    "eye": "Häufige Fragen",
+    "h2": "Bevor Sie sich<br><em>entscheiden.</em>",
+    "sub": "Die wichtigsten Punkte aus unseren AGB — kurz erklärt.",
+    "q1": "Wie lange bin ich gebunden?",
+    "a1": "Wenn Sie die Einrichtungsinvestition durch einen 2-Jahres-Servicevertrag ersetzen, beträgt die Mindestlaufzeit 24 Monate. Danach läuft der Vertrag unbefristet weiter und ist von beiden Seiten mit einem Monat Kündigungsfrist auf Ende eines Monats kündbar. Zahlen Sie die Einrichtung sofort, gibt es keine Mindestlaufzeit.",
+    "q2": "Wie kündige ich, und was passiert bei vorzeitiger Kündigung?",
+    "a2": "Kündigung erfolgt schriftlich oder per E-Mail mit einem Monat Frist auf Ende eines Monats. Beenden Sie den Vertrag vor Ablauf der Mindestlaufzeit, haben Sie die Wahl: die erlassene Einrichtungsinvestition anteilig nachzahlen und die Hardware behalten, oder die Hardware innert 14 Tagen zurückgeben — dann entfällt die Nachzahlung.",
+    "q3": "Gehört mir die Hardware?",
+    "a3": "Ja — sobald Sie die Einrichtungsinvestition vollständig bezahlt haben, entweder direkt bei der Installation oder über den 2-Jahres-Servicevertrag. Bis dahin bleibt sie im Eigentum von Konihaus, bleibt aber bei Ihnen installiert und in Betrieb.",
+    "q4": "Was passiert, wenn ein Gerät ausfällt oder ich es wechseln möchte?",
+    "a4": "Herstellergarantien geben wir an Sie weiter; darüber hinaus übernehmen wir keine zusätzliche Garantie für Fremdhardware. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.",
+    "q5": "Was funktioniert noch, wenn der Vertrag endet?",
+    "a5": "Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.",
+    "more": "Vollständige Details in unseren <a href=\"agb.html\">AGB</a>."
   }
 }

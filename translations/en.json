@@ -56,7 +56,7 @@
     "pkg_includes_mieter": "Property protection includes:",
     "pkg_includes_ferienhaus": "Protection includes:",
     "pkg1_badge": "Starter",
-    "pkg1_name_basis": "Starter",
+    "pkg1_name_basis": "Basic",
     "pkg1_name_senioren": "Daily Check",
     "pkg1_name_mieter": "Rental Start",
     "pkg1_name_ferienhaus": "Holiday Watch",
@@ -120,7 +120,7 @@
     "pkg1_btn": "Request Now",
     "pkg1_note": "Setup investment CHF ~200-260 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "pkg2_badge": "Essential",
-    "pkg2_name_basis": "Basic",
+    "pkg2_name_basis": "Standard",
     "pkg2_name_senioren": "Safe at Home",
     "pkg2_name_mieter": "Rental Security",
     "pkg2_name_ferienhaus": "Holiday Security",
@@ -583,5 +583,21 @@
     "imp_phone": "Phone",
     "imp_email": "Email",
     "imp_whatsapp_cta": "Send a message"
+  },
+  "faq": {
+    "eye": "Frequently Asked Questions",
+    "h2": "Before You<br><em>Decide.</em>",
+    "sub": "The key points from our Terms & Conditions — explained briefly.",
+    "q1": "How long am I committed for?",
+    "a1": "If you replace the setup investment with a 2-year service agreement, the minimum term is 24 months. After that the contract continues indefinitely and either side can cancel with one month's notice, effective at the end of a month. If you pay the setup cost upfront, there is no minimum term.",
+    "q2": "How do I cancel, and what happens if I cancel early?",
+    "a2": "Cancel in writing or by email, with one month's notice effective at the end of a month. If you end the contract before the minimum term expires, you can either pay the waived setup investment pro rata and keep the hardware, or return the hardware within 14 days — in which case no payment is due.",
+    "q3": "Do I own the hardware?",
+    "a3": "Yes — once you've paid the setup investment in full, either upfront or through the 2-year service agreement. Until then it remains Konihaus's property, but stays installed and in use at your home.",
+    "q4": "What happens if a device fails or I want to swap it?",
+    "a4": "We pass manufacturer warranties on to you; beyond that we give no additional warranty on third-party hardware. Because we build on open standards (Zigbee, Z-Wave, Matter, WiFi), you can swap or add individual devices at any time without rebuilding the system.",
+    "q5": "What keeps working after the contract ends?",
+    "a5": "Remote access, support and updates from us stop when the contract ends. Your locally installed system — the Home Assistant hub and all devices — keeps running on its own as long as it belongs to you. On request, you'll get the access credentials and configuration documentation.",
+    "more": "Full details in our <a href=\"agb.html\">Terms</a>."
   }
 }
