@@ -493,6 +493,7 @@
     "form_interest_o4": "Per Case Vacanze",
     "form_message_label": "La Tua Situazione",
     "form_message_placeholder": "Appartamento / Casa / Casa Vacanze, cosa speri...",
+    "form_prefill": "Interesse per: {package} (da CHF {price}/mese).",
     "form_submit": "Invia Messaggio →",
     "form_note": "Nessuna pubblicità. Nessuna newsletter. Solo Koni.",
     "safety_title1": "Importante:",

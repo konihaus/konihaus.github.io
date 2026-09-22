@@ -493,6 +493,7 @@
     "form_interest_o4": "For Vacation Homes",
     "form_message_label": "Your Situation",
     "form_message_placeholder": "Apartment / House / Vacation home, what you're hoping for...",
+    "form_prefill": "Interest in: {package} (from CHF {price}/month).",
     "form_submit": "Send Message →",
     "form_note": "No advertising. No newsletter. Just Koni.",
     "safety_title1": "Important:",
