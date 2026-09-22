@@ -2204,6 +2204,51 @@ a.logo {
   transform: translateY(-2px);
 }
 
+.fsub:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Honeypot fields: off-screen rather than display:none, since some bots specifically
+   skip display:none / visibility:hidden fields. Invisible and unreachable by keyboard
+   or screen reader for a real visitor. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  font-size: 0.8125em;
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+}
+
+.form-status--sending {
+  color: var(--ink-3);
+}
+
+.form-status--success {
+  background: var(--forest-tint);
+  color: var(--forest);
+}
+
+.form-status--error {
+  background: rgba(90, 26, 29, 0.08);
+  color: var(--burgundy);
+}
+
+.form-status--error a {
+  color: var(--burgundy);
+  text-decoration: underline;
+}
+
 /* FOOTER */
 .footer {
   background: var(--forest-deep);
@@ -2422,7 +2467,7 @@ a.logo {
       rgba(247, 244, 237, 0.7) 50%,
       rgba(247, 244, 237, 0.2) 60%,
       rgba(247, 244, 237, 0) 100%
-    ), url('./section-1-bg-mobile.jpg') no-repeat center bottom / cover;
+    ), url('./section-1-bg-mobile.jpg') no-repeat right bottom / 100%;
   }
 
   .intro__grid {
@@ -2622,7 +2667,8 @@ a.logo {
     padding: 72px 0;
   }
   .intro {
-    padding: 72px 0 120px;
+    padding: 72px 0 200px;
+    background: linear-gradient(rgba(247, 244, 237, 1) 0%, rgba(247, 244, 237, 0.7) 50%, rgba(247, 244, 237, 0.2) 60%, rgba(247, 244, 237, 0) 100%), url(./section-1-bg-mobile.jpg) no-repeat center bottom / contain;
   }
 
   .cta-sec {

@@ -796,7 +796,19 @@
             </div>
           </div>
         </div>
-        <form class="cform reveal d2" onsubmit="handleSubmit(event)">
+        <form class="cform reveal d2" id="contact-form" onsubmit="handleSubmit(event)">
+          <!-- Web3Forms: replace with your real access key from https://web3forms.com after creating a free account -->
+          <input type="hidden" name="access_key" value="cbb6de9c-650c-4eec-8e5f-17db23137b7d">
+          <input type="hidden" name="subject" value="Neue Anfrage über konihaus.ch">
+          <input type="hidden" name="from_name" value="Konihaus Website">
+          <!-- Web3Forms' own honeypot field: must stay empty. Off-screen rather than display:none,
+               since some bots specifically skip display:none fields. -->
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <!-- Second, independent honeypot (not a Web3Forms field, checked in scripts.js before we even submit) -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="hp-website">Website</label>
+            <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="frow">
             <div class="fg"><label for="n" data-i18n="contact.form_name_label">Name</label><input type="text" id="n"
                 data-i18n="contact.form_name_placeholder" placeholder="Max Muster" required>
@@ -817,7 +829,26 @@
           <div class="fg"><label for="m" data-i18n="contact.form_message_label">Ihre Situation</label><textarea id="m"
               rows="4" data-i18n="contact.form_message_placeholder"
               placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
-          <button type="submit" class="fsub" data-i18n="contact.form_submit">Nachricht senden →</button>
+          <!-- hCaptcha, free zero-config proxy via Web3Forms. Requires enabling "hCaptcha" under
+               Block Spam in your Web3Forms dashboard once; see the note delivered with this change.
+               data-lang is set synchronously below, from localStorage directly, BEFORE the async
+               Web3Forms script (loaded at the end of the page) has any chance to fetch and mount the
+               widget. i18n.setLanguage() in scripts.js keeps it in sync only for a language switch
+               that happens before this widget has mounted — it cannot fix the *initial* mount, because
+               i18n.init() awaits four sequential translation-file fetches first, which is far slower
+               than the hCaptcha script loading, especially once that script is cached. This inline
+               script is what actually wins that race, every time, on document order alone. -->
+          <div class="h-captcha" style="margin: 0 auto;" data-captcha="true" data-lang="de"></div>
+          <script>
+            (function () {
+              var supported = ['de', 'en', 'fr', 'it'];
+              var saved = localStorage.getItem('lang');
+              var lang = supported.indexOf(saved) !== -1 ? saved : 'de';
+              document.currentScript.previousElementSibling.setAttribute('data-lang', lang);
+            })();
+          </script>
+          <button type="submit" class="fsub" id="fsub-btn" data-i18n="contact.form_submit">Nachricht senden →</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
           <p style="font-size:0.6875em;color:var(--ink-4);text-align:center;margin-top:8px;"
             data-i18n="contact.form_note">
             Keine Werbung. Kein Newsletter.
@@ -887,6 +918,8 @@
 
   <script src="scripts.js"></script>
   <script src="cookie-consent.js"></script>
+  <!-- Web3Forms hCaptcha proxy: only needed for the contact form's spam check -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>

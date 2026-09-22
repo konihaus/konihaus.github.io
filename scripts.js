@@ -30,6 +30,13 @@ const i18n = {
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
 
+    // hCaptcha reads data-lang when its widget first mounts. Keeping this attribute in sync
+    // on every language change covers the normal case (visitor picks a language, then reaches
+    // the contact form); it can't retroactively re-render a widget that already mounted in a
+    // different language, since hCaptcha itself doesn't support that.
+    const hcaptcha = document.querySelector('.h-captcha');
+    if (hcaptcha) hcaptcha.setAttribute('data-lang', lang);
+    console.log(`Language set to ${lang}`);
     // Update all elements with data-i18n attribute
     this.updatePageContent();
     renderSafetyStatement();
@@ -114,36 +121,101 @@ const i18n = {
   },
 };
 
-// Form handling
-function handleSubmit(event) {
+// Form handling — sends real email via Web3Forms (https://web3forms.com), a free
+// forms-to-email service that works from a static site with no backend of its own.
+//
+// Anti-spam layers, in the order they run:
+//   1. Two honeypot fields ("botcheck" — Web3Forms' own field name, and "website" — a second,
+//      independent one) that must stay empty. A bot that fills every field trips one of these.
+//   2. A time trap: reject anything submitted less than 3 seconds after the page loaded, since
+//      no human reads the form and fills it that fast.
+//   3. hCaptcha (the <div class="h-captcha"> in the form + Web3Forms' client script) — only
+//      enforced if you've turned it on as the "Block Spam" method in your Web3Forms dashboard;
+//      until then this layer is a no-op.
+//   4. Web3Forms' own server-side spam filtering on every submission that reaches them.
+//
+// Layers 1-2 fail silently (the visitor still sees the normal success message) so a bot never
+// learns which check caught it. A genuine visitor should never trip any of them.
+const FORM_LOAD_TIME = Date.now();
+
+async function handleSubmit(event) {
   event.preventDefault();
 
-  const name = document.getElementById('n').value;
-  const email = document.getElementById('e').value;
-  const interest = document.getElementById('i').value;
-  const message = document.getElementById('m').value;
+  const form = event.target;
+  const submitBtn = document.getElementById('fsub-btn');
+  const statusEl = document.getElementById('form-status');
 
-  if (!name || !email || !message) {
-    alert('Bitte füllen Sie alle Felder aus');
+  const name = document.getElementById('n').value.trim();
+  const email = document.getElementById('e').value.trim();
+  const interest = document.getElementById('i').value;
+  const message = document.getElementById('m').value.trim();
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!name || !email || !message || !emailPattern.test(email)) {
+    showFormStatus(statusEl, i18n.getText('contact', 'form_error_invalid'), 'error');
     return;
   }
 
-  // Prepare form data
-  const formData = {
+  // Honeypots: a real visitor never fills or checks these (they're off-screen, see .hp-field).
+  const botcheck = form.querySelector('[name="botcheck"]');
+  const honeypot2 = form.querySelector('[name="website"]');
+  const tooFast = Date.now() - FORM_LOAD_TIME < 3000;
+  const looksLikeBot = (botcheck && botcheck.checked) || (honeypot2 && honeypot2.value) || tooFast;
+
+  if (looksLikeBot) {
+    // Never reveal that we caught it — show the same success state a real visitor would get.
+    showFormStatus(statusEl, i18n.getText('contact', 'form_success'), 'success');
+    form.reset();
+    return;
+  }
+
+  const hCaptchaField = form.querySelector('[name="h-captcha-response"]');
+
+  const payload = {
+    access_key: form.querySelector('[name="access_key"]').value,
+    subject: form.querySelector('[name="subject"]').value,
+    from_name: form.querySelector('[name="from_name"]').value,
     name,
     email,
     interest: interest || 'Keine Angabe',
     message,
     language: i18n.currentLang,
-    timestamp: new Date().toISOString(),
   };
+  if (hCaptchaField && hCaptchaField.value) {
+    payload['h-captcha-response'] = hCaptchaField.value;
+  }
 
-  // Send via email (using formspree or similar service)
-  console.log('Form submitted:', formData);
+  submitBtn.disabled = true;
+  showFormStatus(statusEl, i18n.getText('contact', 'form_sending'), 'sending');
 
-  // For now, just log and show success
-  alert(`Danke! Ihre Nachricht wurde versendet.\n\nWir melden uns innerhalb von 24 Stunden.`);
-  event.target.reset();
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const result = await response.json();
+
+    if (result.success) {
+      showFormStatus(statusEl, i18n.getText('contact', 'form_success'), 'success');
+      form.reset();
+    } else {
+      showFormStatus(statusEl, i18n.getText('contact', 'form_error'), 'error');
+    }
+  } catch (error) {
+    showFormStatus(statusEl, i18n.getText('contact', 'form_error'), 'error');
+  } finally {
+    submitBtn.disabled = false;
+  }
+}
+
+// The status strings come only from our own translation files (never from user input),
+// so innerHTML here is safe and lets the error message include a clickable mailto link.
+function showFormStatus(el, text, kind) {
+  if (!el) return;
+  el.innerHTML = text;
+  el.hidden = false;
+  el.className = `form-status form-status--${kind}`;
 }
 
 // Mobile menu toggle
@@ -397,17 +469,29 @@ function setupPackageAccordion() {
 // "FAQ beside pricing" accordion: same independent-toggle pattern as setupPackageAccordion
 // (each question opens/closes on its own, several can be open at once).
 function setupFaqAccordion() {
-  document.querySelectorAll('.faq-q').forEach((toggle) => {
-    toggle.addEventListener('click', () => {
-      const panel = document.getElementById(toggle.getAttribute('aria-controls'));
-      if (!panel) return;
+  document.querySelectorAll('.faq-list').forEach((list) => {
+    const items = [...list.querySelectorAll('.faq-q')]
+      .map((toggle) => ({
+        toggle,
+        panel: document.getElementById(toggle.getAttribute('aria-controls')),
+      }))
+      .filter(({ panel }) => panel);
 
-      const open = toggle.getAttribute('aria-expanded') !== 'true';
-      toggle.setAttribute('aria-expanded', String(open));
-      panel.hidden = !open;
+    items.forEach(({ toggle }) => {
+      toggle.addEventListener('click', () => {
+        const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+
+        items.forEach(({ toggle: button, panel }) => {
+          const isOpen = button === toggle && shouldOpen;
+
+          button.setAttribute('aria-expanded', String(isOpen));
+          panel.hidden = !isOpen;
+        });
+      });
     });
   });
 }
+
 
 // "Jetzt anfragen" on a package card: carries the chosen customer category and package
 // into the enquiry form instead of leaving the visitor to repeat their choice.
