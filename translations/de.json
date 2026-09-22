@@ -600,6 +600,8 @@
     "a4": "Herstellergarantien geben wir an Sie weiter; darüber hinaus übernehmen wir keine zusätzliche Garantie für Fremdhardware. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.",
     "q5": "Was funktioniert noch, wenn der Vertrag endet?",
     "a5": "Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.",
+    "q6": "Kann ich später upgraden?",
+    "a6": "Jederzeit — ein Wechsel wird ausdrücklich begrüsst. Für jede Anfrage stelle ich eine neue Offerte: eine kleine Ergänzung wird einmalig verrechnet, ein höheres Paket erhöht die monatliche Gebühr. Bestehende Geräte werden fast immer weiterverwendet; nur bei einem grösseren Sprung braucht es eine neue Zentrale, und dann zahlen Sie nur die Differenz. Die Kosten richten sich nach dem Umfang — die aktuellen Pakete zeigen die Grössenordnung. Eine neue Mindestlaufzeit gibt es nur bei grösseren Änderungen wie einer neuen Zentrale, nicht bei ein paar zusätzlichen Geräten.",
     "more": "Vollständige Details in unseren <a href=\"agb.html\">AGB</a>."
   }
 }
