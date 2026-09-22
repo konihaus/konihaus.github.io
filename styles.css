@@ -1435,11 +1435,12 @@ a.logo {
 }
 
 .step__t {
-  font-family: var(--serif);
-  font-size: 1.5em;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1.25em;
+  font-weight: 300;
   margin-bottom: 7px;
   color: var(--ink);
+  text-transform: uppercase;
 }
 
 .step__b {
@@ -1557,11 +1558,12 @@ a.logo {
 }
 
 .why__t {
-  font-family: var(--serif);
-  font-size: 1.1875em;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1em;
+  font-weight: 300;
   color: var(--parchment);
-  margin-bottom: 9px;
+  margin: 9px 0;
+  text-transform: uppercase;
 }
 
 .why__b {
@@ -1891,7 +1893,7 @@ a.logo {
   padding-left: 18px;
   margin: 24px 0;
   font-family: var(--serif);
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
   font-style: italic;
   color: var(--ink-2);
