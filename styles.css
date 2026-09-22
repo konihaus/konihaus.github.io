@@ -893,11 +893,13 @@ a.logo {
 }
 
 .pkg__name {
-  font-family: var(--serif);
-  font-size: 1.3125em;
-  font-weight: 400;
+  font-family: var(--sans);
+  font-size: 1.1em;
+  font-weight: 300;
   margin-bottom: 4px;
-  color: var(--ink);
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 .pkg__highlight {
@@ -942,9 +944,9 @@ a.logo {
 }
 
 .pkg__num {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 2.5em;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: -.03em;
   color: var(--ink);
   line-height: 1;
@@ -1206,10 +1208,15 @@ a.logo {
 
 .safety__title {
   font-family: var(--serif);
-  font-size: 1.25em;
-  font-weight: 500;
+  font-size: clamp(26px, 2.8vw, 44px);
+  font-weight: 300;
+  letter-spacing: -.02em;
   line-height: 1.25;
   color: var(--ink);
+}
+.safety__title em {
+  font-style: italic;
+  color: var(--forest-mid);
 }
 
 .safety__list {
@@ -1941,7 +1948,7 @@ a.logo {
 }
 
 .tcard__q {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1em;
   font-weight: 300;
   font-style: italic;

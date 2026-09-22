@@ -45,7 +45,7 @@
     "h2_mieter": "Il Pacchetto Giusto<br><em>per il Tuo Affitto.</em>",
     "h2_ferienhaus": "Il Pacchetto Giusto<br><em>per la Tua Casa Vacanze.</em>",
     "sub": "Tutti i pacchetti includono installazione, configurazione e gestione remota continua. Nessun costo nascosto.",
-    "tab1": "Standard",
+    "tab1": "Pacchetti generici",
     "tab2": "Per Anziani",
     "tab3": "Per Affittuari",
     "tab4": "Per Case Vacanze",
@@ -495,7 +495,8 @@
     "form_message_placeholder": "Appartamento / Casa / Casa Vacanze, cosa speri...",
     "form_submit": "Invia Messaggio →",
     "form_note": "Nessuna pubblicità. Nessuna newsletter. Solo Koni.",
-    "safety_title": "Importante: Konihaus non è un servizio di emergenza",
+    "safety_title1": "Importante:",
+    "safety_title2": "Konihaus non è un servizio di emergenza",
     "safety_items": [
       "In caso di emergenza chiama il 144 (ambulanza) o il 112. Non chiamo i servizi di emergenza e non monitoro la tua casa 24 ore su 24; i tempi di risposta del supporto non valgono per le emergenze.",
       "Gli avvisi arrivano come notifiche push, tramite l'app ufficiale, alle persone di contatto che scegli tu. In caso di interruzione di corrente o di internet possono essere ritardati o non arrivare.",

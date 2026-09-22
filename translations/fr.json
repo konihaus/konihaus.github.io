@@ -45,7 +45,7 @@
     "h2_mieter": "Le Bon Forfait<br><em>pour Votre Rental.</em>",
     "h2_ferienhaus": "Le Bon Forfait<br><em>pour Votre Maison de Vacances.</em>",
     "sub": "Tous les forfaits incluent l'installation, la configuration et la gestion à distance continue. Aucun coût caché.",
-    "tab1": "Standard",
+    "tab1": "Forfaits Génériques",
     "tab2": "Pour les Seniors",
     "tab3": "Pour les Locataires",
     "tab4": "Pour les Maisons de Vacances",
@@ -495,7 +495,8 @@
     "form_message_placeholder": "Appartement / Maison / Maison de vacances, ce que vous recherchez...",
     "form_submit": "Envoyer Message →",
     "form_note": "Pas de publicité. Pas de newsletter. Juste Koni.",
-    "safety_title": "Important : Konihaus n'est pas un service d'urgence",
+    "safety_title1": "Important :",
+    "safety_title2": "Konihaus n'est pas un service d'urgence",
     "safety_items": [
       "En cas d'urgence, appelez le 144 (ambulance) ou le 112. Je n'appelle pas les services de secours et je ne surveille pas votre domicile 24 h/24 ; les délais de réponse du support ne s'appliquent pas aux urgences.",
       "Les alertes sont envoyées par notification push, via l'application officielle, aux personnes de contact que vous désignez. En cas de panne de courant ou d'internet, elles peuvent être retardées ou ne pas arriver.",
