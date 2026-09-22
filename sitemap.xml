@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<!--
+  Only "/" (index.html, the coming-soon page) is listed — it's the only page currently
+  meant to be indexed. index_kh.html, agb.html, datenschutz.html and impressum.html all
+  carry <meta name="robots" content="noindex"> until the 15 Oct 2026 launch; add them back
+  here once that tag is removed from each of them.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-       <loc>https://konihaus.ch/</loc>
-       <lastmod>2026-09-21T16:40:06+00:00</lastmod>
-       <priority>1.0000</priority>
-  </url>
-  <url>
-       <loc>https://konihaus.ch/agb.html</loc>
-       <lastmod>2026-09-21T16:40:06+00:00</lastmod>
-       <priority>1.0000</priority>
-  </url>
-  <url>
-       <loc>https://konihaus.ch/datenschutz.html</loc>
-       <lastmod>2026-09-21T16:40:06+00:00</lastmod>
-       <priority>1.0000</priority>
-  </url>
-  <url>
-       <loc>https://konihaus.ch/impressum.html</loc>
-       <lastmod>2026-09-21T16:40:06+00:00</lastmod>
-       <priority>1.0000</priority>
+    <loc>https://konihaus.ch/</loc>
+    <lastmod>2026-09-22T16:35:13+00:00</lastmod>
   </url>
 </urlset>
