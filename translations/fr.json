@@ -45,7 +45,7 @@
     "h2_mieter": "Le Bon Forfait<br><em>pour Votre Rental.</em>",
     "h2_ferienhaus": "Le Bon Forfait<br><em>pour Votre Maison de Vacances.</em>",
     "sub": "Tous les forfaits incluent l'installation, la configuration et la gestion à distance continue. Aucun coût caché.",
-    "tab1": "Standard",
+    "tab1": "Forfaits Génériques",
     "tab2": "Pour les Seniors",
     "tab3": "Pour les Locataires",
     "tab4": "Pour les Maisons de Vacances",
@@ -56,7 +56,7 @@
     "pkg_includes_mieter": "Protection des biens :",
     "pkg_includes_ferienhaus": "Protection:",
     "pkg1_badge": "Starter",
-    "pkg1_name_basis": "Starter",
+    "pkg1_name_basis": "Basique",
     "pkg1_name_senioren": "Suivi Quotidien",
     "pkg1_name_mieter": "Démarrage Locatif",
     "pkg1_name_ferienhaus": "Veille Vacances",
@@ -120,7 +120,7 @@
     "pkg1_btn": "Demander Maintenant",
     "pkg1_note": "Investissement installation CHF ~200-260 · <span class=\"pkg__highlight\">Gratuit avec accord service 2 ans</span>",
     "pkg2_badge": "Essentiel",
-    "pkg2_name_basis": "Basique",
+    "pkg2_name_basis": "Standards",
     "pkg2_name_senioren": "Sûr à la Maison",
     "pkg2_name_mieter": "Sécurité Locative",
     "pkg2_name_ferienhaus": "Sécurité Vacances",
@@ -495,7 +495,8 @@
     "form_message_placeholder": "Appartement / Maison / Maison de vacances, ce que vous recherchez...",
     "form_submit": "Envoyer Message →",
     "form_note": "Pas de publicité. Pas de newsletter. Juste Koni.",
-    "safety_title": "Important : Konihaus n'est pas un service d'urgence",
+    "safety_title1": "Important :",
+    "safety_title2": "Konihaus n'est pas un service d'urgence",
     "safety_items": [
       "En cas d'urgence, appelez le 144 (ambulance) ou le 112. Je n'appelle pas les services de secours et je ne surveille pas votre domicile 24 h/24 ; les délais de réponse du support ne s'appliquent pas aux urgences.",
       "Les alertes sont envoyées par notification push, via l'application officielle, aux personnes de contact que vous désignez. En cas de panne de courant ou d'internet, elles peuvent être retardées ou ne pas arriver.",
@@ -583,5 +584,21 @@
     "imp_phone": "Téléphone",
     "imp_email": "E-mail",
     "imp_whatsapp_cta": "Envoyer un message"
+  },
+  "faq": {
+    "eye": "Questions Fréquentes",
+    "h2": "Avant de<br><em>Décider.</em>",
+    "sub": "Les points essentiels de nos CGV — expliqués brièvement.",
+    "q1": "Pendant combien de temps suis-je engagé ?",
+    "a1": "Si vous remplacez l'investissement d'installation par un accord de service de 2 ans, la durée minimale est de 24 mois. Ensuite, le contrat se poursuit indéfiniment et chaque partie peut le résilier avec un préavis d'un mois, à la fin d'un mois. Si vous payez l'installation d'avance, il n'y a pas de durée minimale.",
+    "q2": "Comment résilier, et que se passe-t-il en cas de résiliation anticipée ?",
+    "a2": "La résiliation se fait par écrit ou par e-mail, avec un préavis d'un mois à la fin d'un mois. Si vous mettez fin au contrat avant la fin de la durée minimale, vous avez le choix : payer au prorata l'investissement d'installation qui avait été offert et garder le matériel, ou le restituer sous 14 jours — auquel cas aucun paiement n'est dû.",
+    "q3": "Le matériel m'appartient-il ?",
+    "a3": "Oui — dès que vous avez payé intégralement l'investissement d'installation, soit d'avance, soit via l'accord de service de 2 ans. D'ici là, il reste la propriété de Konihaus, mais reste installé et utilisé chez vous.",
+    "q4": "Que se passe-t-il si un appareil tombe en panne ou que je veux le changer ?",
+    "a4": "Nous transmettons les garanties du fabricant ; au-delà, nous n'offrons aucune garantie supplémentaire sur le matériel tiers. Comme nous misons sur des standards ouverts (Zigbee, Z-Wave, Matter, WiFi), vous pouvez remplacer ou ajouter des appareils à tout moment sans reconstruire le système.",
+    "q5": "Qu’est-ce qui continue de fonctionner après la fin du contrat ?",
+    "a5": "L'accès à distance, le support et les mises à jour de notre part s'arrêtent à la fin du contrat. Votre système installé localement — le hub Home Assistant et tous les appareils — continue de fonctionner de façon autonome tant qu'il vous appartient. Sur demande, vous recevez les identifiants d'accès et la documentation de la configuration.",
+    "more": "Détails complets dans nos <a href=\"agb.html\">Conditions</a>."
   }
 }
