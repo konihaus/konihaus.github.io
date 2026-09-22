@@ -493,6 +493,7 @@
     "form_interest_o4": "Für Ferienhäuser",
     "form_message_label": "Ihre Situation",
     "form_message_placeholder": "Wohnung / Haus / Feriendomizil, was Sie sich erhoffen...",
+    "form_prefill": "Interesse an: {package} (ab CHF {price}/Monat).",
     "form_submit": "Nachricht senden →",
     "form_note": "Keine Werbung. Kein Newsletter. Nur Koni.",
     "safety_title1": "Wichtig:",

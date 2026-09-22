@@ -409,6 +409,50 @@ function setupFaqAccordion() {
   });
 }
 
+// "Jetzt anfragen" on a package card: carries the chosen customer category and package
+// into the enquiry form instead of leaving the visitor to repeat their choice.
+//   - the "Interesse" select is matched by option position, not by text, so it works
+//     the same in every language (the option order mirrors the audience tabs and never changes);
+//   - the specific package name and price are written into the message field, since
+//     there is no separate package field — only if the visitor hasn't typed anything yet,
+//     so a second click (or an earlier draft) is never overwritten.
+function setupPackageRequestButtons() {
+  const audienceSelect = document.getElementById('i');
+  const messageField = document.getElementById('m');
+  if (!audienceSelect || !messageField) return;
+
+  const AUDIENCE_OPTION_INDEX = { basis: 1, senioren: 2, mieter: 3, ferienhaus: 4 };
+
+  document.querySelectorAll('[data-request-pkg]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.pkg');
+      const grid = document.querySelector('.pkg-grid');
+      if (!card || !grid) return;
+
+      const pkgIndex = Array.from(grid.children).indexOf(card);
+      const activeTab = document.querySelector('.pkg-tab.active');
+      const audience = activeTab ? activeTab.dataset.audience : 'basis';
+
+      const optionIndex = AUDIENCE_OPTION_INDEX[audience];
+      if (optionIndex !== undefined) audienceSelect.selectedIndex = optionIndex;
+
+      if (!messageField.value.trim() && pkgIndex !== -1) {
+        const packageName = card.querySelector('.pkg__name');
+        const price = card.querySelector('.pkg__num');
+        if (packageName && price) {
+          const template = i18n.getText('contact', 'form_prefill');
+          messageField.value = template
+            .replace('{package}', packageName.textContent.trim())
+            .replace('{price}', price.textContent.trim());
+        }
+      }
+
+      const contactSection = document.getElementById('contact');
+      if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
 // Hero tagline rotation
 //
 // Exactly one headline is on screen at any time. The rules that keep it that way:
@@ -549,6 +593,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPackageTabs();
     setupPackageAccordion();
     setupFaqAccordion();
+    setupPackageRequestButtons();
     setupHeroTaglines();
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
