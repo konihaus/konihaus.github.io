@@ -597,7 +597,7 @@
     "q3": "Do I own the hardware?",
     "a3": "Yes — once you've paid the setup investment in full, either upfront or through the 2-year service agreement. Until then it remains Konihaus's property, but stays installed and in use at your home.",
     "q4": "What happens if a device fails or I want to swap it?",
-    "a4": "I handle manufacturer warranty claims for you — you never have to deal with the manufacturer yourself. Most devices, like sensors or plugs, you can swap yourself with my remote guidance; if a replacement needs professional installation on site, we schedule a visit for that. Because we build on open standards (Zigbee, Z-Wave, Matter, WiFi), you can swap or add individual devices at any time without rebuilding the system.",
+    "a4": "I handle manufacturer warranty claims for you — you never have to deal with the manufacturer yourself. Most devices, like sensors or plugs, you can swap yourself with my remote guidance; if a replacement needs professional installation on site, we schedule a visit for that. Any cost for that visit is quoted to you in advance — nothing is billed without your prior approval. Because we build on open standards (Zigbee, Z-Wave, Matter, WiFi), you can swap or add individual devices at any time without rebuilding the system.",
     "q5": "What keeps working after the contract ends?",
     "a5": "Remote access, support and updates from us stop when the contract ends. Your locally installed system — the Home Assistant hub and all devices — keeps running on its own as long as it belongs to you. On request, you'll get the access credentials and configuration documentation.",
     "q6": "Can I upgrade later?",
