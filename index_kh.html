@@ -108,9 +108,9 @@
           <div class="wordmark">konihaus</div>
         </a>
         <ul class="nav__links">
-          <li><a href="#packages" data-i18n="nav.packages">Pakete</a></li>
           <li><a href="#process" data-i18n="nav.process">Ablauf</a></li>
           <li><a href="#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="#packages" data-i18n="nav.packages">Pakete</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
         <select id="lang-selector" class="lang-selector">
@@ -216,8 +216,10 @@
             und Heizung passen sich an — ohne dass Sie etwas tun müssen.</p>
           <p class="intro__p reveal d2" data-i18n="intro.card1_b">Ihre Daten werden lokal verarbeitet, Fernzugriff für
                 den Support ist verschlüsselt.</p>
-          <p class="intro__p reveal d2" data-i18n="intro.card2_b">Ich nutze, was Sie bereits besitzen, und ergänze mit
-                bewährter Hardware. Alles läuft zusammen über Greenhub.</p>  
+          <p class="intro__p reveal d2" data-i18n="intro.card2_b">Die Geräte fügen sich unauffällig ein — Sie merken
+                sie im Alltag kaum. Bei älteren Angehörigen zum Beispiel: Bleibt die Küche einen ganzen Tag ohne
+                Bewegung, obwohl die Person zu Hause ist, benachrichtigt das System automatisch Familie oder
+                Betreuungspersonen — sonst bleibt der Alltag einfach der Alltag.</p>
           <a href="#process" class="intro__link reveal d3" data-i18n="intro.link">So funktioniert's <svg width="16"
               height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -306,218 +308,6 @@
     </div>
   </section>
 
-<!-- PACKAGES -->
-  <section class="packages" id="packages">
-    <div class="container">
-      <div class="sec-center">
-        <p class="sec-eye reveal" data-i18n="packages.eye">Preise & Pakete</p>
-      </div>
-      <div class="pkg-tabs">
-        <button class="pkg-tab active" data-audience="basis" data-i18n="packages.tab1">Generic packages</button>
-        <button class="pkg-tab" data-audience="senioren" data-i18n="packages.tab2">Für Senioren</button>
-        <button class="pkg-tab" data-audience="mieter" data-i18n="packages.tab3">Für Mieter</button>
-        <button class="pkg-tab" data-audience="ferienhaus" data-i18n="packages.tab4">Für Ferienhäuser</button>
-      </div>
-      <div class="sec-center">
-        <h2 class="sec-h reveal d1">
-          <span class="pkg-title" data-i18n="packages.h2_basis" data-i18n-html="true">Das richtige Paket<br><em>für Ihr
-              Zuhause.</em></span>
-        </h2>
-        <p class="reveal d2" data-i18n="packages.sub">Alle Pakete beinhalten Installation, Einrichtung und laufende
-          Fernbetreuung. Keine
-          versteckten Kosten.</p>
-      </div>
-      <div class="pkg-grid">
-        <!-- Starter (NEW – simplest offering) -->
-        <div class="pkg reveal d1">
-          <div class="pkg__top">
-            <span class="pkg__badge badge-d" data-i18n="packages.pkg1_badge">Starter</span>
-            <div class="pkg__name" data-basis="Basis" data-senioren="Daily Check" data-mieter="Miet-Start"
-              data-ferienhaus="Holiday Watch">Basis</div>
-            <div class="pkg__tag" data-basis="Der einfachste Einstieg" data-senioren="Aktivität im Blick behalten"
-              data-mieter="Einfacher Einstieg ohne Umbau" data-ferienhaus="Präsenz und Zutritt im Blick">Der einfachste Einstieg</div>
-            <div class="pkg__ext">
-              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">29</span><span class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
-            </div>
-          </div>
-          <div class="pkg__body">
-            <ul class="pkg__outcomes"></ul>
-            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-1">
-              <span data-i18n="packages.details_btn">Details</span>
-            </button>
-            <div class="pkg__details" id="pkg-details-1" hidden>
-              <p class="pkg__includes"></p>
-              <ul class="pkg__list pkg-1"></ul>
-            </div>
-            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg1_btn" data-request-pkg>Jetzt anfragen</button>
-            <p class="pkg__note" data-i18n="packages.pkg1_note" data-i18n-html="true">Hardware einmalig ~CHF 200-260</p>
-          </div>
-        </div>
-        <!-- Essential -->
-        <div class="pkg reveal d2">
-          <div class="pkg__top">
-            <span class="pkg__badge badge-d" data-i18n="packages.pkg2_badge">Essential</span>
-            <div class="pkg__name" data-basis="Standard" data-senioren="Safe at Home" data-mieter="Miet-Sicherheit"
-              data-ferienhaus="Holiday Security">Standard</div>
-            <div class="pkg__tag" data-basis="Einstieg ins Smart Home" data-senioren="Sicherheit und Grundfunktionen"
-              data-mieter="Sichere Vermögenswerte schützen" data-ferienhaus="Grundschutz für Ferienhäuser">Einstieg ins
-              Smart Home</div>
-            <div class="pkg__ext">
-              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">49</span><span class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
-            </div>
-          </div>
-          <div class="pkg__body">
-            <ul class="pkg__outcomes"></ul>
-            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-2">
-              <span data-i18n="packages.details_btn">Details</span>
-            </button>
-            <div class="pkg__details" id="pkg-details-2" hidden>
-              <p class="pkg__includes"></p>
-              <ul class="pkg__list pkg-2"></ul>
-            </div>
-            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg2_btn" data-request-pkg>Jetzt anfragen</button>
-            <p class="pkg__note" data-i18n="packages.pkg2_note" data-i18n-html="true">Hardware einmalig ~CHF 280-340</p>
-          </div>
-        </div>
-        <!-- Featured -->
-        <div class="pkg pkg-featured reveal d3">
-          <div class="pkg__top">
-            <span class="pkg__badge badge-f" data-i18n="packages.pkg3_badge">Empfohlen</span>
-            <div class="pkg__name" data-basis="Advanced" data-senioren="Peace of Mind" data-mieter="Umfassender Schutz"
-              data-ferienhaus="Holiday Peace of Mind">Advanced</div>
-            <div class="pkg__tag" data-basis="Umfassende Smart-Home Lösung"
-              data-senioren="Vollständige Überwachung & Kontrolle" data-mieter="Kompletter Schutz und Monitoring"
-              data-ferienhaus="Überwachung und Kontrolle">Umfassende Smart-Home Lösung</div>
-            <div class="pkg__ext">
-              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">89</span><span
-                class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
-            </div>
-          </div>
-          <div class="pkg__body">
-            <ul class="pkg__outcomes"></ul>
-            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-3">
-              <span data-i18n="packages.details_btn">Details</span>
-            </button>
-            <div class="pkg__details" id="pkg-details-3" hidden>
-              <p class="pkg__includes"></p>
-              <ul class="pkg__list pkg-3"></ul>
-            </div>
-            <button type="button" class="pkg__btn btn-pkg-f" data-i18n="packages.pkg3_btn" data-request-pkg>Jetzt anfragen</button>
-            <p class="pkg__note" data-i18n="packages.pkg3_note" data-i18n-html="true">Hardware einmalig ~CHF 480-580</p>
-          </div>
-        </div>
-        <!-- Premium -->
-        <div class="pkg pkg-premium reveal d4">
-          <div class="pkg__top">
-            <span class="pkg__badge badge-d" data-i18n="packages.pkg4_badge">Premium</span>
-            <div class="pkg__name" data-basis="All in" data-senioren="Independent Living" data-mieter="Smart Living"
-              data-ferienhaus="Holiday Complete">All in</div>
-            <div class="pkg__tag" data-basis="Komplette Smart-Home Lösung" data-senioren="Vollständig ausgestattet"
-              data-mieter="Intelligentes Wohnen vollständig" data-ferienhaus="Komplette Smart-Home Lösung">Komplette
-              Smart-Home Lösung</div>
-            <div class="pkg__ext">
-              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">149</span><span
-                class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
-            </div>
-          </div>
-          <div class="pkg__body">
-            <ul class="pkg__outcomes"></ul>
-            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-4">
-              <span data-i18n="packages.details_btn">Details</span>
-            </button>
-            <div class="pkg__details" id="pkg-details-4" hidden>
-              <p class="pkg__includes"></p>
-              <ul class="pkg__list pkg-4"></ul>
-              <p class="pkg__disclaimer" data-i18n="packages.disclaimer">* wherever applicable</p>
-            </div>
-            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg4_btn" data-request-pkg>Jetzt anfragen</button>
-            <p class="pkg__note" data-i18n="packages.pkg4_note" data-i18n-html="true">Hardware einmalig ~CHF 700-900</p>
-          </div>
-        </div>
-      </div>
-      <p class="pkg__shading-note reveal" data-i18n="packages.shading_note">* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.</p>
-      <p class="pkg-safety-line" id="pkg-safety-line" data-audiences="basis senioren" hidden>
-        <span data-i18n="packages.safety_line">Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.</span>
-        <a href="#safety" data-i18n="packages.safety_more">Mehr dazu</a>
-      </p>
-      <p style="text-align:center;margin-top:24px;font-size:0.8125em;color:var(--ink-4);" class="reveal" data-i18n="packages.footer" data-i18n-html="true">
-        Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
-        <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für
-          alle</a>
-      </p>
-      
-    </div>
-  </section>
-
-  <!-- FAQ (beside pricing) -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="sec-center">
-        <p class="sec-eye reveal" data-i18n="faq.eye">Häufige Fragen</p>
-        <h2 class="sec-h reveal d1" data-i18n="faq.h2" data-i18n-html="true">Bevor Sie sich<br><em>entscheiden.</em></h2>
-        <p class="reveal d2" data-i18n="faq.sub">Die wichtigsten Punkte aus unseren AGB — kurz erklärt.</p>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
-            <span data-i18n="faq.q1">Wie lange bin ich gebunden?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-1" hidden>
-            <p data-i18n="faq.a1">Wenn Sie die Einrichtungsinvestition durch einen 2-Jahres-Servicevertrag ersetzen, beträgt die Mindestlaufzeit 24 Monate. Danach läuft der Vertrag unbefristet weiter und ist von beiden Seiten mit einem Monat Kündigungsfrist auf Ende eines Monats kündbar. Zahlen Sie die Einrichtung sofort, gibt es keine Mindestlaufzeit.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
-            <span data-i18n="faq.q2">Wie kündige ich, und was passiert bei vorzeitiger Kündigung?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-2" hidden>
-            <p data-i18n="faq.a2">Kündigung erfolgt schriftlich oder per E-Mail mit einem Monat Frist auf Ende eines Monats. Beenden Sie den Vertrag vor Ablauf der Mindestlaufzeit, haben Sie die Wahl: die erlassene Einrichtungsinvestition anteilig nachzahlen und die Hardware behalten, oder die Hardware innert 14 Tagen zurückgeben — dann entfällt die Nachzahlung.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
-            <span data-i18n="faq.q3">Gehört mir die Hardware?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-3" hidden>
-            <p data-i18n="faq.a3">Ja — sobald Sie die Einrichtungsinvestition vollständig bezahlt haben, entweder direkt bei der Installation oder über den 2-Jahres-Servicevertrag. Bis dahin bleibt sie im Eigentum von Konihaus, bleibt aber bei Ihnen installiert und in Betrieb.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
-            <span data-i18n="faq.q4">Was passiert, wenn ein Gerät ausfällt oder ich es wechseln möchte?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-4" hidden>
-            <p data-i18n="faq.a4">Herstellergarantien geben wir an Sie weiter; darüber hinaus übernehmen wir keine zusätzliche Garantie für Fremdhardware. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
-            <span data-i18n="faq.q5">Was funktioniert noch, wenn der Vertrag endet?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-5" hidden>
-            <p data-i18n="faq.a5">Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.</p>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
-            <span data-i18n="faq.q6">Kann ich später upgraden?</span>
-            <span class="faq-q__icon" aria-hidden="true"></span>
-          </button>
-          <div class="faq-a" id="faq-a-6" hidden>
-            <p data-i18n="faq.a6">Jederzeit — ein Wechsel wird ausdrücklich begrüsst. Für jede Anfrage stelle ich eine neue Offerte: eine kleine Ergänzung wird einmalig verrechnet, ein höheres Paket erhöht die monatliche Gebühr. Bestehende Geräte werden fast immer weiterverwendet; nur bei einem grösseren Sprung braucht es eine neue Zentrale, und dann zahlen Sie nur die Differenz. Die Kosten richten sich nach dem Umfang — die aktuellen Pakete zeigen die Grössenordnung. Eine neue Mindestlaufzeit gibt es nur bei grösseren Änderungen wie einer neuen Zentrale, nicht bei ein paar zusätzlichen Geräten.</p>
-          </div>
-        </div>
-      </div>
-      <p class="faq-more reveal" data-i18n="faq.more" data-i18n-html="true">Vollständige Details in unseren <a href="agb.html">AGB</a>.</p>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
   <!-- WHY -->
   <section class="why" id="why">
     <div class="container">
@@ -735,7 +525,6 @@
       </div>
     </div>
   </section>
-
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
@@ -778,6 +567,220 @@
       </div>
     </div>
   </section>
+
+<!-- PACKAGES -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye reveal" data-i18n="packages.eye">Preise & Pakete</p>
+      </div>
+      <div class="pkg-tabs">
+        <button class="pkg-tab active" data-audience="basis" data-i18n="packages.tab1">Generic packages</button>
+        <button class="pkg-tab" data-audience="senioren" data-i18n="packages.tab2">Für Senioren</button>
+        <button class="pkg-tab" data-audience="mieter" data-i18n="packages.tab3">Für Mieter</button>
+        <button class="pkg-tab" data-audience="ferienhaus" data-i18n="packages.tab4">Für Ferienhäuser</button>
+      </div>
+      <div class="sec-center">
+        <h2 class="sec-h reveal d1">
+          <span class="pkg-title" data-i18n="packages.h2_basis" data-i18n-html="true">Das richtige Paket<br><em>für Ihr
+              Zuhause.</em></span>
+        </h2>
+        <p class="reveal d2" data-i18n="packages.sub">Alle Pakete beinhalten Installation, Einrichtung und laufende
+          Fernbetreuung. Keine
+          versteckten Kosten.</p>
+      </div>
+      <div class="pkg-grid">
+        <!-- Starter (NEW – simplest offering) -->
+        <div class="pkg reveal d1">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-d" data-i18n="packages.pkg1_badge">Starter</span>
+            <div class="pkg__name" data-basis="Basis" data-senioren="Daily Check" data-mieter="Miet-Start"
+              data-ferienhaus="Holiday Watch">Basis</div>
+            <div class="pkg__tag" data-basis="Der einfachste Einstieg" data-senioren="Aktivität im Blick behalten"
+              data-mieter="Einfacher Einstieg ohne Umbau" data-ferienhaus="Präsenz und Zutritt im Blick">Der einfachste Einstieg</div>
+            <div class="pkg__ext">
+              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">29</span><span class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
+            </div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__outcomes"></ul>
+            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-1">
+              <span data-i18n="packages.details_btn">Details</span>
+            </button>
+            <div class="pkg__details" id="pkg-details-1" hidden>
+              <p class="pkg__includes"></p>
+              <ul class="pkg__list pkg-1"></ul>
+            </div>
+            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg1_btn" data-request-pkg>Jetzt anfragen</button>
+            <p class="pkg__note" data-i18n="packages.pkg1_note" data-i18n-html="true">Hardware einmalig ~CHF 200-260</p>
+          </div>
+        </div>
+        <!-- Essential -->
+        <div class="pkg reveal d2">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-d" data-i18n="packages.pkg2_badge">Essential</span>
+            <div class="pkg__name" data-basis="Standard" data-senioren="Safe at Home" data-mieter="Miet-Sicherheit"
+              data-ferienhaus="Holiday Security">Standard</div>
+            <div class="pkg__tag" data-basis="Einstieg ins Smart Home" data-senioren="Sicherheit und Grundfunktionen"
+              data-mieter="Sichere Vermögenswerte schützen" data-ferienhaus="Grundschutz für Ferienhäuser">Einstieg ins
+              Smart Home</div>
+            <div class="pkg__ext">
+              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">49</span><span class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
+            </div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__outcomes"></ul>
+            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-2">
+              <span data-i18n="packages.details_btn">Details</span>
+            </button>
+            <div class="pkg__details" id="pkg-details-2" hidden>
+              <p class="pkg__includes"></p>
+              <ul class="pkg__list pkg-2"></ul>
+            </div>
+            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg2_btn" data-request-pkg>Jetzt anfragen</button>
+            <p class="pkg__note" data-i18n="packages.pkg2_note" data-i18n-html="true">Hardware einmalig ~CHF 280-340</p>
+          </div>
+        </div>
+        <!-- Featured -->
+        <div class="pkg pkg-featured reveal d3">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-f" data-i18n="packages.pkg3_badge">Empfohlen</span>
+            <div class="pkg__name" data-basis="Advanced" data-senioren="Peace of Mind" data-mieter="Umfassender Schutz"
+              data-ferienhaus="Holiday Peace of Mind">Advanced</div>
+            <div class="pkg__tag" data-basis="Umfassende Smart-Home Lösung"
+              data-senioren="Vollständige Überwachung & Kontrolle" data-mieter="Kompletter Schutz und Monitoring"
+              data-ferienhaus="Überwachung und Kontrolle">Umfassende Smart-Home Lösung</div>
+            <div class="pkg__ext">
+              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">89</span><span
+                class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
+            </div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__outcomes"></ul>
+            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-3">
+              <span data-i18n="packages.details_btn">Details</span>
+            </button>
+            <div class="pkg__details" id="pkg-details-3" hidden>
+              <p class="pkg__includes"></p>
+              <ul class="pkg__list pkg-3"></ul>
+            </div>
+            <button type="button" class="pkg__btn btn-pkg-f" data-i18n="packages.pkg3_btn" data-request-pkg>Jetzt anfragen</button>
+            <p class="pkg__note" data-i18n="packages.pkg3_note" data-i18n-html="true">Hardware einmalig ~CHF 480-580</p>
+          </div>
+        </div>
+        <!-- Premium -->
+        <div class="pkg pkg-premium reveal d4">
+          <div class="pkg__top">
+            <span class="pkg__badge badge-d" data-i18n="packages.pkg4_badge">Premium</span>
+            <div class="pkg__name" data-basis="All in" data-senioren="Independent Living" data-mieter="Smart Living"
+              data-ferienhaus="Holiday Complete">All in</div>
+            <div class="pkg__tag" data-basis="Komplette Smart-Home Lösung" data-senioren="Vollständig ausgestattet"
+              data-mieter="Intelligentes Wohnen vollständig" data-ferienhaus="Komplette Smart-Home Lösung">Komplette
+              Smart-Home Lösung</div>
+            <div class="pkg__ext">
+              <div class="pkg__pr"><span class="pkg__from" data-i18n="packages.pkg_from">ab</span><span class="pkg__num">149</span><span
+                class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
+            </div>
+          </div>
+          <div class="pkg__body">
+            <ul class="pkg__outcomes"></ul>
+            <button type="button" class="pkg__toggle" aria-expanded="false" aria-controls="pkg-details-4">
+              <span data-i18n="packages.details_btn">Details</span>
+            </button>
+            <div class="pkg__details" id="pkg-details-4" hidden>
+              <p class="pkg__includes"></p>
+              <ul class="pkg__list pkg-4"></ul>
+              <p class="pkg__disclaimer" data-i18n="packages.disclaimer">* wherever applicable</p>
+            </div>
+            <button type="button" class="pkg__btn btn-pkg-d" data-i18n="packages.pkg4_btn" data-request-pkg>Jetzt anfragen</button>
+            <p class="pkg__note" data-i18n="packages.pkg4_note" data-i18n-html="true">Hardware einmalig ~CHF 700-900</p>
+          </div>
+        </div>
+      </div>
+      <p class="pkg__shading-note reveal" data-i18n="packages.shading_note">* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.</p>
+      <p class="pkg-safety-line" id="pkg-safety-line" data-audiences="basis senioren" hidden>
+        <span data-i18n="packages.safety_line">Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.</span>
+        <a href="#safety" data-i18n="packages.safety_more">Mehr dazu</a>
+      </p>
+      <p style="text-align:center;margin-top:24px;font-size:0.8125em;color:var(--ink-4);" class="reveal" data-i18n="packages.footer" data-i18n-html="true">
+        Preise inkl. MwSt. · Hardware einmalig bei Erstinstallation ·
+        <a href="#contact" style="color:var(--forest);text-decoration:underline;">Kostenlose Beratung für
+          alle</a>
+      </p>
+      
+    </div>
+  </section>
+
+  <!-- FAQ (beside pricing) -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye reveal" data-i18n="faq.eye">Häufige Fragen</p>
+        <h2 class="sec-h reveal d1" data-i18n="faq.h2" data-i18n-html="true">Bevor Sie sich<br><em>entscheiden.</em></h2>
+        <p class="reveal d2" data-i18n="faq.sub">Die wichtigsten Punkte aus unseren AGB — kurz erklärt.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+            <span data-i18n="faq.q1">Wie lange bin ich gebunden?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-1" hidden>
+            <p data-i18n="faq.a1">Wenn Sie die Einrichtungsinvestition durch einen 2-Jahres-Servicevertrag ersetzen, beträgt die Mindestlaufzeit 24 Monate. Danach läuft der Vertrag unbefristet weiter und ist von beiden Seiten mit einem Monat Kündigungsfrist auf Ende eines Monats kündbar. Zahlen Sie die Einrichtung sofort, gibt es keine Mindestlaufzeit.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+            <span data-i18n="faq.q2">Wie kündige ich, und was passiert bei vorzeitiger Kündigung?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-2" hidden>
+            <p data-i18n="faq.a2">Kündigung erfolgt schriftlich oder per E-Mail mit einem Monat Frist auf Ende eines Monats. Beenden Sie den Vertrag vor Ablauf der Mindestlaufzeit, haben Sie die Wahl: die erlassene Einrichtungsinvestition anteilig nachzahlen und die Hardware behalten, oder die Hardware innert 14 Tagen zurückgeben — dann entfällt die Nachzahlung.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+            <span data-i18n="faq.q3">Gehört mir die Hardware?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-3" hidden>
+            <p data-i18n="faq.a3">Ja — sobald Sie die Einrichtungsinvestition vollständig bezahlt haben, entweder direkt bei der Installation oder über den 2-Jahres-Servicevertrag. Bis dahin bleibt sie im Eigentum von Konihaus, bleibt aber bei Ihnen installiert und in Betrieb.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+            <span data-i18n="faq.q4">Was passiert, wenn ein Gerät ausfällt oder ich es wechseln möchte?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-4" hidden>
+            <p data-i18n="faq.a4">Herstellergarantien geben wir an Sie weiter; darüber hinaus übernehmen wir keine zusätzliche Garantie für Fremdhardware. Da wir auf offene Standards setzen (Zigbee, Z-Wave, Matter, WLAN), können Sie einzelne Geräte jederzeit austauschen oder ergänzen, ohne das System neu aufzubauen.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-5">
+            <span data-i18n="faq.q5">Was funktioniert noch, wenn der Vertrag endet?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-5" hidden>
+            <p data-i18n="faq.a5">Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-6">
+            <span data-i18n="faq.q6">Kann ich später upgraden?</span>
+            <span class="faq-q__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id="faq-a-6" hidden>
+            <p data-i18n="faq.a6">Jederzeit — ein Wechsel wird ausdrücklich begrüsst. Für jede Anfrage stelle ich eine neue Offerte: eine kleine Ergänzung wird einmalig verrechnet, ein höheres Paket erhöht die monatliche Gebühr. Bestehende Geräte werden fast immer weiterverwendet; nur bei einem grösseren Sprung braucht es eine neue Zentrale, und dann zahlen Sie nur die Differenz. Die Kosten richten sich nach dem Umfang — die aktuellen Pakete zeigen die Grössenordnung. Eine neue Mindestlaufzeit gibt es nur bei grösseren Änderungen wie einer neuen Zentrale, nicht bei ein paar zusätzlichen Geräten.</p>
+          </div>
+        </div>
+      </div>
+      <p class="faq-more reveal" data-i18n="faq.more" data-i18n-html="true">Vollständige Details in unseren <a href="agb.html">AGB</a>.</p>
+    </div>
+  </section>
+
+  
+
 
   <!-- TESTIMONIALS -->
   <section class="testi" id="testimonials">
@@ -864,7 +867,7 @@
           <p class="con-p reveal d2" data-i18n="contact.p">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung,
             Elternhaus oder
             Feriendomizil. Ich melde mich innert 24 Stunden.</p>
-          <div class="con-details reveal d3">
+          <!--div class="con-details reveal d3">
             <div class="con-detail">
               <div class="con-icon">
                 <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -907,7 +910,7 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2848 18.9935C12.1567 19.0875 12.0373 19.1728 11.9282 19.2493C11.8118 19.1721 11.6827 19.0833 11.5427 18.9832C10.8826 18.5109 10.0265 17.8176 9.18338 16.9529C7.45402 15.1792 6 12.9151 6 10.5C6 7.18629 8.68629 4.5 12 4.5C15.3137 4.5 18 7.18629 18 10.5C18 12.8892 16.4819 15.1468 14.6893 16.9393C13.8196 17.8091 12.9444 18.5099 12.2848 18.9935ZM19.5 10.5C19.5 16.5 12 21 12 21C11.625 21 4.5 16.5 4.5 10.5C4.5 6.35786 7.85786 3 12 3C16.1421 3 19.5 6.35786 19.5 10.5ZM13.5 10.5C13.5 11.3284 12.8284 12 12 12C11.1716 12 10.5 11.3284 10.5 10.5C10.5 9.67157 11.1716 9 12 9C12.8284 9 13.5 9.67157 13.5 10.5ZM15 10.5C15 12.1569 13.6569 13.5 12 13.5C10.3431 13.5 9 12.1569 9 10.5C9 8.84315 10.3431 7.5 12 7.5C13.6569 7.5 15 8.84315 15 10.5Z" fill="#3D6B4F"/>
 </svg></div><span data-i18n="contact.detail3">Affoltern am Albis, Zürich · Einsatz CH-weit</span>
             </div>
-          </div>
+          </div-->
         </div>
         <form class="cform reveal d2" id="contact-form" onsubmit="handleSubmit(event)">
           <!-- Web3Forms: replace with your real access key from https://web3forms.com after creating a free account -->
