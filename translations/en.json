@@ -29,14 +29,15 @@
     "eye": "What is Konihaus?",
     "h2": "Smart Home without<br><em>Compromises.</em>",
     "p1": "Most smart home solutions lock you into a proprietary ecosystem: Google, Amazon, or Apple. Konihaus does it differently.",
-    "p2": "I install and manage your smart home openly, locally, and compatible with almost any device. Your data is processed locally, remote access for support is encrypted, and notifications are optional and may go through external services like Apple or Google.",
-    "link": "View Packages",
+    "p2": "I use devices you already own, and add proven hardware from leading manufacturers — Konihaus doesn't manufacture any devices itself. Everything comes together through Greenhub, your home's hub.",
+    "p3": "The value isn't in an app you have to operate — it's in automations that simply work: irrigation, shades, lighting and heating adjust themselves, without you having to do anything.",
+    "link": "See how it works",
     "card1_t": "Privacy First",
     "card1_b": "Your data is processed locally, remote access for support is encrypted, and notifications are optional and may go through external services like Apple or Google.",
-    "card2_t": "Fully Managed",
-    "card2_b": "I install everything and keep it running remotely.",
-    "card3_t": "No Lock-in",
-    "card3_b": "Switch devices without rebuilding your system."
+    "card2_t": "Existing + New, Unified",
+    "card2_b": "I use what you already own and add proven hardware. Everything comes together through Greenhub.",
+    "card3_t": "Automatic, Not Manual",
+    "card3_b": "Irrigation, shades, lights, heating — they work on their own. No app required day to day."
   },
   "packages": {
     "eye": "Pricing & Packages",
@@ -408,7 +409,7 @@
     "item5_t": "Energy Efficiency",
     "item5_b": "Automatic heating control, device shutdown, and consumption reports reduce your energy use.",
     "item6_t": "Future-Proof",
-    "item6_b": "Home Assistant is actively developed. Your system grows with new standards — free."
+    "item6_b": "The platform is actively developed further. Your system grows with new standards — for free."
   },
   "devices": {
     "eye": "Devices & Technology",
@@ -439,7 +440,11 @@
     "hub_row4_v": "64-128 GB SD or SSD",
     "hub_row5_l": "Remote Access",
     "hub_row5_v": "Encrypted via Private VPN or Tailscale",
-    "hub_note": "★ Data is processed locally. Remote access — whether by you or by us for support — is encrypted. Notifications are optional and may go through external services like Apple or Google."
+    "hub_row6_l": "Foundation",
+    "hub_row6_v": "Open Source (Home Assistant)",
+    "hub_note": "★ Data is processed locally. Remote access — whether by you or by us for support — is encrypted. Notifications are optional and may go through external services like Apple or Google.",
+    "brands_lbl": "Compatible with devices from",
+    "brands_more": "and many more"
   },
   "about": {
     "eye": "About Koni",

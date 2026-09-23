@@ -29,14 +29,15 @@
     "eye": "Qu'est-ce que Konihaus?",
     "h2": "Maison Intelligente sans<br><em>Compromis.</em>",
     "p1": "La plupart des solutions de maison intelligente vous enferment dans un écosystème propriétaire: Google, Amazon ou Apple. Konihaus fonctionne différemment.",
-    "p2": "J'installe et gère votre maison intelligente ouvertement, localement et compatible avec presque n'importe quel appareil. Vos données sont traitées localement, l'accès à distance pour le support est chiffré, et les notifications sont optionnelles et peuvent passer par des services externes comme Apple ou Google.",
-    "link": "Voir les Forfaits",
+    "p2": "J'utilise les appareils que vous possédez déjà et les complète avec du matériel éprouvé de fabricants reconnus — Konihaus ne fabrique elle-même aucun appareil. Tout se réunit via Greenhub, la centrale de votre maison.",
+    "p3": "La valeur ne réside pas dans une application que vous devez utiliser, mais dans des automatisations qui fonctionnent tout simplement : l'arrosage, les stores, l'éclairage et le chauffage s'adaptent d'eux-mêmes, sans que vous ayez à faire quoi que ce soit.",
+    "link": "Comment ça marche",
     "card1_t": "Confidentialité d'abord",
     "card1_b": "Vos données sont traitées localement, l'accès à distance pour le support est chiffré, et les notifications sont optionnelles et peuvent passer par des services externes comme Apple ou Google.",
-    "card2_t": "Entièrement Gérée",
-    "card2_b": "J'installe tout et le maintiens à distance.",
-    "card3_t": "Pas de Verrouillage",
-    "card3_b": "Changez d'appareils sans reconstruire votre système."
+    "card2_t": "Existant + Nouveau, réunis",
+    "card2_b": "J'utilise ce que vous possédez déjà et j'ajoute du matériel éprouvé. Tout se réunit via Greenhub.",
+    "card3_t": "Automatique, pas manuel",
+    "card3_b": "Arrosage, stores, lumières, chauffage — ils fonctionnent d'eux-mêmes. Pas d'application requise au quotidien."
   },
   "packages": {
     "eye": "Prix & Forfaits",
@@ -408,7 +409,7 @@
     "item5_t": "Efficacité Énergétique",
     "item5_b": "Contrôle chauffage automatique, arrêt appareils et rapports consommation réduisent votre usage.",
     "item6_t": "À Épreuve du Temps",
-    "item6_b": "Home Assistant est activement développée. Votre système grandit avec les nouvelles normes — gratuitement."
+    "item6_b": "La plateforme continue d'être activement développée. Votre système évolue avec les nouveaux standards — gratuitement."
   },
   "devices": {
     "eye": "Appareils & Technologie",
@@ -439,7 +440,11 @@
     "hub_row4_v": "64-128 GB SD ou SSD",
     "hub_row5_l": "Accès Distant",
     "hub_row5_v": "Chiffré via VPN Privée ou Tailscale",
-    "hub_note": "★ Les données sont traitées localement. L'accès à distance — que ce soit par vous ou par nous pour le support — est chiffré. Les notifications sont optionnelles et peuvent passer par des services externes comme Apple ou Google."
+    "hub_row6_l": "Base",
+    "hub_row6_v": "Open Source (Home Assistant)",
+    "hub_note": "★ Les données sont traitées localement. L'accès à distance — que ce soit par vous ou par nous pour le support — est chiffré. Les notifications sont optionnelles et peuvent passer par des services externes comme Apple ou Google.",
+    "brands_lbl": "Compatible avec des appareils de",
+    "brands_more": "et bien d'autres"
   },
   "about": {
     "eye": "À Propos de Koni",

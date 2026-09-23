@@ -29,14 +29,15 @@
     "eye": "Was ist Konihaus?",
     "h2": "Smarthome ohne<br><em>Kompromisse.</em>",
     "p1": "Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem: Google, Amazon oder Apple. Konihaus macht das anders.",
-    "p2": "Ich installiere und betreue Ihr Smart Home offen, lokal und kompatibel mit fast jedem Gerät. Ihre Daten werden lokal verarbeitet, Fernzugriff für den Support ist verschlüsselt, und Benachrichtigungen laufen optional über externe Dienste wie Apple oder Google.",
-    "link": "Pakete ansehen",
+    "p2": "Ich nutze Geräte, die Sie bereits besitzen, und ergänze sie mit bewährter Hardware führender Hersteller — Konihaus stellt selbst keine Geräte her. Alles läuft zusammen über Greenhub, die Zentrale Ihres Zuhauses.",
+    "p3": "Der Mehrwert liegt nicht in einer App, die Sie bedienen müssen, sondern in Automatisierungen, die einfach funktionieren: Bewässerung, Storen, Licht und Heizung passen sich an — ohne dass Sie etwas tun müssen.",
+    "link": "So funktioniert's",
     "card1_t": "Privatsphäre zuerst",
     "card1_b": "Ihre Daten werden lokal verarbeitet, Fernzugriff für den Support ist verschlüsselt, und Benachrichtigungen laufen optional über externe Dienste wie Apple oder Google.",
-    "card2_t": "Voll betreut",
-    "card2_b": "Ich installiere alles und halte es aus der Ferne am Laufen.",
-    "card3_t": "Keine Bindung",
-    "card3_b": "Wechseln Sie Geräte ohne das System neu aufzubauen."
+    "card2_t": "Bestehendes + Neues, vereint",
+    "card2_b": "Ich nutze, was Sie bereits besitzen, und ergänze mit bewährter Hardware. Alles läuft zusammen über Greenhub.",
+    "card3_t": "Automatisch, nicht manuell",
+    "card3_b": "Bewässerung, Storen, Licht, Heizung — sie funktionieren von selbst. Keine App-Pflicht im Alltag."
   },
   "packages": {
     "eye": "Preise & Pakete",
@@ -408,7 +409,7 @@
     "item5_t": "Energieeffizienz",
     "item5_b": "Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren Energieverbrauch.",
     "item6_t": "Zukunftssicher",
-    "item6_b": "Home Assistant wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit — kostenlos."
+    "item6_b": "Die Plattform wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit — kostenlos."
   },
   "devices": {
     "eye": "Geräte & Technik",
@@ -439,7 +440,11 @@
     "hub_row4_v": "64-128 GB SD oder SSD",
     "hub_row5_l": "Fernzugriff",
     "hub_row5_v": "Verschlüsselt via Private VPN oder Tailscale",
-    "hub_note": "★ Daten werden lokal verarbeitet. Fernzugriff — egal ob durch Sie oder für den Support durch uns — ist verschlüsselt. Benachrichtigungen sind optional und laufen ggf. über externe Dienste wie Apple oder Google."
+    "hub_row6_l": "Basis",
+    "hub_row6_v": "Open Source (Home Assistant)",
+    "hub_note": "★ Daten werden lokal verarbeitet. Fernzugriff — egal ob durch Sie oder für den Support durch uns — ist verschlüsselt. Benachrichtigungen sind optional und laufen ggf. über externe Dienste wie Apple oder Google.",
+    "brands_lbl": "Kompatibel mit Geräten von",
+    "brands_more": "und vielen mehr"
   },
   "about": {
     "eye": "Über Koni",

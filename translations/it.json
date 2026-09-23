@@ -29,14 +29,15 @@
     "eye": "Cos'è Konihaus?",
     "h2": "Casa Intelligente senza<br><em>Compromessi.</em>",
     "p1": "La maggior parte delle soluzioni di casa intelligente ti blocca in un ecosistema proprietario: Google, Amazon o Apple. Konihaus funziona diversamente.",
-    "p2": "Installo e gestisco la tua casa intelligente apertamente, localmente e compatibile con quasi qualsiasi dispositivo. I tuoi dati vengono elaborati localmente, l'accesso remoto per il supporto è cifrato, e le notifiche sono opzionali e possono passare da servizi esterni come Apple o Google.",
-    "link": "Vedi Pacchetti",
+    "p2": "Utilizzo i dispositivi che possiedi già e li integro con hardware affidabile di produttori leader — Konihaus non produce alcun dispositivo proprio. Tutto si unisce tramite Greenhub, la centrale della tua casa.",
+    "p3": "Il valore non sta in un'app che devi usare, ma in automazioni che funzionano semplicemente: irrigazione, tende, luci e riscaldamento si adattano da soli, senza che tu debba fare nulla.",
+    "link": "Come funziona",
     "card1_t": "Privacy Prima",
     "card1_b": "I tuoi dati vengono elaborati localmente, l'accesso remoto per il supporto è cifrato, e le notifiche sono opzionali e possono passare da servizi esterni come Apple o Google.",
-    "card2_t": "Completamente Gestita",
-    "card2_b": "Installo tutto e lo mantengo in remoto.",
-    "card3_t": "Nessun Blocco",
-    "card3_b": "Cambia dispositivi senza ricostruire il tuo sistema."
+    "card2_t": "Esistente + Nuovo, uniti",
+    "card2_b": "Utilizzo ciò che possiedi già e aggiungo hardware affidabile. Tutto si unisce tramite Greenhub.",
+    "card3_t": "Automatico, non manuale",
+    "card3_b": "Irrigazione, tende, luci, riscaldamento — funzionano da soli. Nessuna app necessaria ogni giorno."
   },
   "packages": {
     "eye": "Prezzi & Pacchetti",
@@ -408,7 +409,7 @@
     "item5_t": "Efficienza Energetica",
     "item5_b": "Controllo riscaldamento automatico, spegnimento dispositivi e rapporti consumi riducono il tuo uso.",
     "item6_t": "A Prova di Futuro",
-    "item6_b": "Home Assistant è attivamente sviluppata. Il tuo sistema cresce con i nuovi standard — gratuitamente."
+    "item6_b": "La piattaforma viene sviluppata attivamente. Il tuo sistema cresce con i nuovi standard — gratuitamente."
   },
   "devices": {
     "eye": "Dispositivi & Tecnologia",
@@ -439,7 +440,11 @@
     "hub_row4_v": "64-128 GB SD o SSD",
     "hub_row5_l": "Accesso Remoto",
     "hub_row5_v": "Crittografato via VPN Privata o Tailscale",
-    "hub_note": "★ I dati vengono elaborati localmente. L’accesso remoto — sia da parte tua che nostro per il supporto — è cifrato. Le notifiche sono opzionali e possono passare da servizi esterni come Apple o Google."
+    "hub_row6_l": "Base",
+    "hub_row6_v": "Open Source (Home Assistant)",
+    "hub_note": "★ I dati vengono elaborati localmente. L’accesso remoto — sia da parte tua che nostro per il supporto — è cifrato. Le notifiche sono opzionali e possono passare da servizi esterni come Apple o Google.",
+    "brands_lbl": "Compatibile con dispositivi di",
+    "brands_more": "e molti altri"
   },
   "about": {
     "eye": "Su Koni",
