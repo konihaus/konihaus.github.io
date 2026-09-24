@@ -1889,6 +1889,7 @@ a.logo {
 }
 
 .examples__card {
+  position: relative;
   scroll-snap-align: start;
   flex: 0 0 min(360px, 100%);
   /* Two layers: a cream gradient (guarantees the text stays legible no matter how the photo
@@ -1904,10 +1905,27 @@ a.logo {
   transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
 
+.examples__card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 90%;
+  border-radius: 0 0 16px 16px;
+  pointer-events: none;
+  box-shadow: inset 0 -4px 0 0 var(--forest-mid);
+}
+
 .examples__card--hans {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
     url('./isolierter-senior/hans-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--hans::after {
+  box-shadow: inset 0 -4px 0 0 var(--gold-mid);
 }
 
 .examples__card--elsa {
@@ -1916,10 +1934,18 @@ a.logo {
     url('./wasserschaden/elsa-homepage.jpg') no-repeat right center / cover var(--cream);
 }
 
+.examples__card--elsa::after {
+  box-shadow: inset 0 -4px 0 0 var(--burgundy-mid);
+}
+
 .examples__card--inge {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
     url('./ferienwohnung-management/inge-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--inge::after {
+  box-shadow: inset 0 -4px 0 0 var(--marine-mid);
 }
 
 .examples__card:hover {
