@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Only "/" (index.html, the coming-soon page) is listed — it's the only page currently
-  meant to be indexed. index_kh.html, agb.html, datenschutz.html and impressum.html all
-  carry <meta name="robots" content="noindex"> until the 15 Oct 2026 launch; add them back
-  here once that tag is removed from each of them.
+  meant to be indexed. index_kh.html, agb.html, datenschutz.html, impressum.html, and every
+  beispiel-*/ example page (currently beispiel-hans/, beispiel-elsa/) all carry
+  <meta name="robots" content="noindex"> until the 15 Oct 2026 launch; add them back here
+  once that tag is removed from each of them.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>

@@ -10,12 +10,7 @@
   <title>Anwendungsbeispiel: Hans — Konihaus</title>
   <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einem isolierten Senior im Appenzell mehr Sicherheit geben könnte, ohne seine Unabhängigkeit einzuschränken.">
   <meta name="author" content="Konrad Hefelle">
-  <!-- NOINDEX: bundled with the pre-launch site (index_kh.html), goes live 15 Oct 2026.
-       At launch, alongside renaming index_kh.html to index.html at the site root: every
-       "../index_kh.html..." link on this page (logo, nav, footer, CTA buttons) needs the
-       "index_kh.html" replaced with nothing (so it becomes "../" or "../#packages" etc.),
-       since the legal pages already link home via plain "/" and expect the same. A simple
-       find-and-replace across this file and any other beispiel-*/index.html covers it. -->
+  <!-- NOINDEX: bundled with the pre-launch site (index_kh.html), goes live 15 Oct 2026 -->
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://konihaus.ch/beispiel-hans">
 
@@ -26,7 +21,7 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="de_CH">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:image" content="https://konihaus.ch/beispiel-hans/hans-og.jpg">
+  <meta property="og:image" content="https://konihaus.ch/hans_og.jpg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
@@ -40,9 +35,9 @@
   <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="example-body example-body--senioren">
+<body class="example-body">
 
-  <nav class="nav nav--solid nav--senioren" id="nav">
+  <nav class="nav nav--solid" id="nav">
     <div class="container">
       <div class="nav__inner">
         <a href="../index_kh.html" class="logo" aria-label="Konihaus">
@@ -70,7 +65,7 @@
           illustratives Beispiel zur Veranschaulichung — keine dokumentierte Kundengeschichte. Name und Details sind
           frei erfunden.</p>
         <div class="example-hero__badge reveal d3">
-          <div class="example-badge badge--senioren"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <div class="example-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
           <p class="example-hero__tag" data-i18n="beispiel_hans.hero_tag" data-i18n-html="true">Für ein sicheres
             Zuhause.<br>Für ein gutes Gefühl.</p>
         </div>
@@ -79,7 +74,7 @@
 
     <section class="example-section-top">
       <div class="container example-narrow">
-        <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.sit_title">Die Situation</h2></div>
+        <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.sit_title">Die Situation</h2></div>
         <p class="example-p reveal d1" data-i18n="beispiel_hans.sit_body">Hans, 84, ist pensionierter Landwirt und lebt
           allein in einem abgelegenen Bauernhaus im Appenzeller Hinterland — acht Kilometer bis zum nächsten Nachbarn.
           Er hat Diabetes. Seine Tochter Sonja, 52, Kinderärztin in Basel, besucht ihn alle zwei Wochen. Dazwischen ist
@@ -89,7 +84,7 @@
   </div>
   <section class="example-section example-section--alt">
     <div class="container example-narrow">
-      <div class="example-h2-row"><div class="example-badge badge--senioren example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.worry_title">Sonjas Sorgen</h2></div>
+      <div class="example-h2-row"><div class="example-badge example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.worry_title">Sonjas Sorgen</h2></div>
       <ul class="example-worry-list">
         <li class="reveal d1" data-i18n="beispiel_hans.worry1">Was, wenn er stürzt und niemand ihn rechtzeitig
           findet?</li>
@@ -104,12 +99,12 @@
 
   <section class="example-section">
     <div class="container">
-      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.sol_title">Die Lösung: Unabhängig Wohnen</h2></div>
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.sol_title">Die Lösung: Unabhängig Wohnen</h2></div>
       <p class="example-p example-narrow reveal d1" data-i18n="beispiel_hans.sol_intro">Für Hans würde sich unser
         umfassendstes Senioren-Paket anbieten, ab CHF 149 pro Monat.</p>
       <div class="example-sol-grid">
         <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2" fill="var(--forest)"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2" fill="var(--forest)"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <div class="example-sol-t" data-i18n="beispiel_hans.sol1_t">Inaktivitäts-Monitoring + Bewegungsmelder</div>
           <div class="example-sol-b" data-i18n="beispiel_hans.sol1_b">Bleibt es ungewöhnlich lange ruhig, wird das
             erkannt.</div>
@@ -118,7 +113,7 @@
           <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
      xmlns="http://www.w3.org/2000/svg">
   <g transform="rotate(-45 12 12)"
-     stroke="var(--gold)" stroke-width="1.6">
+     stroke="var(--forest)" stroke-width="1.6">
     <rect x="4" y="8.5" width="16" height="7" rx="3.5"/>
     <path d="M12 8.5v7" stroke-linecap="round"/>
   </g>
@@ -128,24 +123,24 @@
             Insulin-Einnahme.</div>
         </div>
         <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--forest)"/></svg></div>
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--forest)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--forest)"/></svg></div>
           <div class="example-sol-t" data-i18n="beispiel_hans.sol3_t">Umweltsensoren</div>
           <div class="example-sol-b" data-i18n="beispiel_hans.sol3_b">Behalten die Temperatur im Blick — wichtig bei
             einem Heizungsausfall im Winter.</div>
         </div>
         <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="7.5" stroke="var(--gold)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" fill="var(--gold)"/></svg></div>
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="7.5" stroke="var(--forest)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" fill="var(--forest)"/></svg></div>
           <div class="example-sol-t" data-i18n="beispiel_hans.sol4_t">Tragbarer Alarm-Knopf</div>
           <div class="example-sol-b" data-i18n="beispiel_hans.sol4_b">Ein Knopfdruck genügt, um Hilfe zu rufen.</div>
         </div>
         <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="11" rx="2" stroke="var(--gold)" stroke-width="1.6"/><path d="M9 20h6M12 16v4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 12.5l2.3-2.3 2 2 3.7-3.7" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="11" rx="2" stroke="var(--forest)" stroke-width="1.6"/><path d="M9 20h6M12 16v4" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 12.5l2.3-2.3 2 2 3.7-3.7" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="example-sol-t" data-i18n="beispiel_hans.sol5_t">Familien-App + Betreuungs-Dashboard</div>
           <div class="example-sol-b" data-i18n="beispiel_hans.sol5_b">Sonja sieht auf einen Blick, dass alles normal
             läuft — ohne anrufen zu müssen.</div>
         </div>
         <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--gold)" stroke-width="1.6"/><path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/><path d="M9 14l2 2 4-4.4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--forest)" stroke-width="1.6"/><path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/><path d="M9 14l2 2 4-4.4" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="example-sol-t" data-i18n="beispiel_hans.sol6_t">Vierteljährlicher technischer Hausbesuch</div>
           <div class="example-sol-b" data-i18n="beispiel_hans.sol6_b">Ich schaue selbst vorbei und stelle sicher,
             dass alles funktioniert.</div>
@@ -156,10 +151,10 @@
 
   <section class="example-section example-section--alt">
     <div class="container example-mid">
-      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.out_title">Was das für die beiden bedeuten könnte</h2></div>
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.out_title">Was das für die beiden bedeuten könnte</h2></div>
       <div class="example-outcomes">
         <div class="example-outcomes__col reveal d1">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--gold)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_hans_t">Für Hans</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--forest)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_hans_t">Für Hans</div></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_hans.out_hans1">Bleibt in seinem Bauernhaus, so wie er es möchte.</li>
             <li data-i18n="beispiel_hans.out_hans2">Bewegungsmuster statt Überwachung — das System erkennt
@@ -169,7 +164,7 @@
           </ul>
         </div>
         <div class="example-outcomes__col reveal d2">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="7.5" r="2.6" stroke="var(--gold)" stroke-width="1.5"/><circle cx="16" cy="8.5" r="2.2" stroke="var(--gold)" stroke-width="1.5"/><path d="M3.5 19c0-3 2.2-5.2 5-5.2s5 2.2 5 5.2M14.5 19c0-2.4 1.7-4.3 4-4.3s4 1.9 4 4.3" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_sonja_t">Für Sonja</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="7.5" r="2.6" stroke="var(--forest)" stroke-width="1.5"/><circle cx="16" cy="8.5" r="2.2" stroke="var(--forest)" stroke-width="1.5"/><path d="M3.5 19c0-3 2.2-5.2 5-5.2s5 2.2 5 5.2M14.5 19c0-2.4 1.7-4.3 4-4.3s4 1.9 4 4.3" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_sonja_t">Für Sonja</div></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_hans.out_sonja1">Ein Inaktivitäts-Alarm würde sie benachrichtigen, statt dass sie
               rätselt.</li>
@@ -183,11 +178,11 @@
     </div>
   </section>
 
-  <section class="example-cta-sec example-cta-sec--senioren">
+  <section class="example-cta-sec">
     <div class="container">
       <div class="example-cost reveal">
         <div class="example-cost__lbl" data-i18n="beispiel_hans.cost_title">Die Kosten</div>
-        <div class="example-cost__price" data-i18n="beispiel_hans.cost_price" data-i18n-html="true"><span class="pkg__from">CHF</span><span class="pkg__num">149</span><span class="pkg__mo" data-i18n="packages.pkg_mo">/Monat</span></div>
+        <div class="example-cost__price" data-i18n="beispiel_hans.cost_price">CHF 149/Monat</div>
         <div class="example-cost__note" data-i18n="beispiel_hans.cost_note">Einrichtungsinvestition ~CHF 900–1500 ·
           entfällt bei 2-Jahres-Servicevertrag</div>
       </div>
@@ -204,7 +199,7 @@
         den Beispielen</a>
     </div>
   </section>
-  <footer class="footer footer--senioren">
+  <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div>

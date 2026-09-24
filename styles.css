@@ -1,12 +1,29 @@
 :root {
+
+  --gold: #6b4a0d;
+  --gold-light: #d6bd78;
+  --gold-mid: #947023;
+  --gold-deep: #493208;
+  --gold-tint: #f4eedf;
+
+  --burgundy: #5a1a1d;
+  --burgundy-light: #d59b9d;
+  --burgundy-mid: #83383c;
+  --burgundy-deep: #3e1214;
+  --burgundy-tint: #f3e7e8;
+
   --marine: #1e2535;
+  --marine-light: #9baecb;
+  --marine-mid: #3e506e;
+  --marine-deep: #141a26;
+  --marine-tint: #e8ecf2;
+
   --forest: #2a4a35;
-  --gold: #6B4A0D;
-  --burgundy: #5A1A1D;
   --forest-light: #9fc77f;
   --forest-mid: #3d6b4f;
   --forest-deep: #1e3628;
   --forest-tint: #e8f0eb;
+
   --amber: #c47c2b;
   --amber-warm: #e8c06a;
   --amber-tint: #faebd5;
@@ -189,6 +206,18 @@ object {
   background: var(--forest-deep);
   padding: 14px 0;
   box-shadow: 0 1px 0 rgba(255, 255, 255, .05);
+}
+
+.nav.scrolled.nav--senioren {
+  background: var(--gold-deep);
+}
+
+.nav.scrolled.nav--mieter {
+  background: var(--burgundy-deep);
+}
+
+.nav.scrolled.nav--ferien {
+  background: var(--marine-deep);
 }
 
 .nav__inner {
@@ -1878,7 +1907,13 @@ a.logo {
 .examples__card--hans {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
-    url('./beispiel-hans/hans_example.jpg') no-repeat left center / cover var(--cream);
+    url('./beispiel-hans/hans-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--elsa {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./beispiel-elsa/elsa-homepage.jpg') no-repeat right center / cover var(--cream);
 }
 
 .examples__card:hover {
@@ -2445,6 +2480,19 @@ a.logo {
   background: var(--forest-deep);
   padding: 60px 0 28px;
 }
+
+.footer--senioren {
+  background: var(--gold-deep);
+}
+
+.footer--mieter {
+  background: var(--burgundy-deep);
+}
+
+.footer--ferien {
+  background: var(--marine-deep);
+}
+
 
 .footer__top {
   display: grid;
@@ -3489,7 +3537,11 @@ body.cc-lock .cc-banner {
 }
 
 .example-hero-container.hans {
-  background: url('./beispiel-hans/hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
+  background: url('./beispiel-hans/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
+}
+
+.example-hero-container.elsa {
+  background: url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero {
@@ -3512,6 +3564,14 @@ body.cc-lock .cc-banner {
   font-style: italic;
   color: var(--forest-mid);
   font-weight: 400;
+}
+
+.example-body--mieter .example-hero__h em {
+  color: var(--burgundy-mid);
+}
+
+.example-body--senioren .example-hero__h em {
+  color: var(--gold-mid);
 }
 
 .example-hero__sub {
@@ -3581,6 +3641,18 @@ body.cc-lock .cc-banner {
   background: var(--forest);
   display: grid;
   place-items: center;
+}
+
+.badge--senioren {
+  background: var(--gold-mid);
+}
+
+.badge--mieter {
+  background: var(--burgundy-mid);
+}
+
+.badge--ferien {
+  background: var(--marine-mid);
 }
 
 .example-badge--amber {
@@ -3743,6 +3815,19 @@ body.cc-lock .cc-banner {
   text-align: center;
 }
 
+.example-cta-sec--senioren {
+  background: var(--gold);
+}
+
+.example-cta-sec--mieter {
+  background: var(--burgundy);
+}
+
+.example-cta-sec--ferien {
+  background: var(--marine);
+}
+
+
 .example-cost {
   display: inline-block;
   background: rgba(255, 255, 255, .06);
@@ -3763,8 +3848,23 @@ body.cc-lock .cc-banner {
 
 .example-cost__price {
   font-family: var(--serif);
-  font-size: 2em;
+  font-size: 1.25em;
   color: var(--amber-warm);
+}
+.example-cost__price .pkg__mo,
+.example-cost__price .pkg__from {
+  font-size: 0.75em;
+  color: var(--amber-warm);
+  margin-right: 4px;
+}
+
+.example-cost__price .pkg__num {
+   font-family: var(--sans);
+    font-size: 2.5em;
+    font-weight: 100;
+    letter-spacing: -.03em;
+    color: var(--amber-warm);
+    line-height: 1;
 }
 
 .example-cost__note {
@@ -3814,10 +3914,26 @@ body.cc-lock .cc-banner {
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 0) 60%,
         rgba(247, 244, 237, 1) 95%
-      ),url('./beispiel-hans/hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
+      ),url('./beispiel-hans/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  }
+  .example-hero-container.elsa {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 0) 60%,
+        rgba(247, 244, 237, 1) 90%
+      ),url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
   }
 }
 @media (max-width: 900px) {
+  .example-hero-container.elsa {
+    background: linear-gradient(to top,
+        rgba(247, 244, 237, 1) 30%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 1) 70%
+      ),url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center center / contain var(--parchment);
+  }
+
   .example-hero {
     padding: 130px 0 56px;
   }
@@ -3843,8 +3959,13 @@ body.cc-lock .cc-banner {
       rgba(247, 244, 237, 0.1) 50%,
       rgba(247, 244, 237, 0.5) 60%,
       rgba(247, 244, 237, 1) 100%
-    ),url('./beispiel-hans/hans_bg_small.jpg') no-repeat center 40% / contain var(--parchment);
-}
+    ),url('./beispiel-hans/hans-mobile.jpg') no-repeat center 40% / contain var(--parchment);
+  }
+
+  .example-hero-container.elsa {
+    background: url('./beispiel-elsa/elsa-mobile.jpg') no-repeat center bottom  / contain var(--parchment);
+    padding-bottom: 70%;
+  }
 
   .example-hero {
     padding: 130px 0 0;
@@ -3852,12 +3973,32 @@ body.cc-lock .cc-banner {
   .example-sol-grid {
     grid-template-columns: 1fr;
   }
+  .example-p {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0.7) 90%,
+        rgba(247, 244, 237, 0.4) 100%
+      );
+    padding-bottom: 20px;  
+  }
 }
 
 /* ───────── LEGAL PAGES (impressum.html, datenschutz.html, agb.html) ───────── */
 .nav--solid {
   background: var(--forest-deep);
   padding: 14px 0;
+}
+
+.nav--senioren {
+  background: var(--gold);
+}
+
+.nav--mieter {
+  background: var(--burgundy);
+}
+
+.nav--ferien {
+  background: var(--marine);
 }
 
 .legal-nav__right {
