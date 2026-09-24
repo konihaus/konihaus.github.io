@@ -1907,13 +1907,13 @@ a.logo {
 .examples__card--hans {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
-    url('./beispiel-hans/hans-homepage.jpg') no-repeat right center / cover var(--cream);
+    url('./isolierter-senior/hans-homepage.jpg') no-repeat right center / cover var(--cream);
 }
 
 .examples__card--elsa {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
-    url('./beispiel-elsa/elsa-homepage.jpg') no-repeat right center / cover var(--cream);
+    url('./wasserschaden/elsa-homepage.jpg') no-repeat right center / cover var(--cream);
 }
 
 .examples__card:hover {
@@ -3537,11 +3537,11 @@ body.cc-lock .cc-banner {
 }
 
 .example-hero-container.hans {
-  background: url('./beispiel-hans/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: url('./isolierter-senior/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero-container.elsa {
-  background: url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: url('./wasserschaden/elsa-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero {
@@ -3914,7 +3914,7 @@ body.cc-lock .cc-banner {
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 0) 60%,
         rgba(247, 244, 237, 1) 95%
-      ),url('./beispiel-hans/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
+      ),url('./isolierter-senior/hans-desktop.jpg') no-repeat center center / 100% var(--parchment);
   }
   .example-hero-container.elsa {
     background: linear-gradient(to bottom,
@@ -3922,7 +3922,7 @@ body.cc-lock .cc-banner {
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 0) 60%,
         rgba(247, 244, 237, 1) 90%
-      ),url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+      ),url('./wasserschaden/elsa-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
   }
 }
 @media (max-width: 900px) {
@@ -3931,7 +3931,7 @@ body.cc-lock .cc-banner {
         rgba(247, 244, 237, 1) 30%,
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 1) 70%
-      ),url('./beispiel-elsa/elsa-desktop.jpg') no-repeat center center / contain var(--parchment);
+      ),url('./wasserschaden/elsa-desktop.jpg') no-repeat center center / contain var(--parchment);
   }
 
   .example-hero {
@@ -3959,11 +3959,11 @@ body.cc-lock .cc-banner {
       rgba(247, 244, 237, 0.1) 50%,
       rgba(247, 244, 237, 0.5) 60%,
       rgba(247, 244, 237, 1) 100%
-    ),url('./beispiel-hans/hans-mobile.jpg') no-repeat center 40% / contain var(--parchment);
+    ),url('./isolierter-senior/hans-mobile.jpg') no-repeat center 40% / contain var(--parchment);
   }
 
   .example-hero-container.elsa {
-    background: url('./beispiel-elsa/elsa-mobile.jpg') no-repeat center bottom  / contain var(--parchment);
+    background: url('./wasserschaden/elsa-mobile.jpg') no-repeat center bottom  / contain var(--parchment);
     padding-bottom: 70%;
   }
 
