@@ -1831,7 +1831,7 @@ a.logo {
   align-items: center;
   gap: 16px;
   max-width: 1000px;
-  margin: 48px auto 0;
+  margin: 24px auto 0;
 }
 
 .examples__track {
@@ -1840,7 +1840,12 @@ a.logo {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 4px;
+  /* Setting overflow-x alone silently forces overflow-y to clip too (a long-standing CSS
+     quirk — overflow-y: visible cannot override it in any browser). The only real fix is
+     giving the box-shadow room to render before that clip boundary: generous padding here,
+     with the track-wrap's own margin trimmed above to keep the overall gap the same. */
+  padding: 24px 28px 48px;
+  margin: -24px -24px-48px;
   flex: 1;
   scrollbar-width: none;
 }
@@ -1852,7 +1857,9 @@ a.logo {
 .examples__card {
   scroll-snap-align: start;
   flex: 0 0 min(360px, 100%);
-  background: url('./hans_example.jpg') no-repeat center / cover var(--cream);
+  /* Two layers: a cream gradient (guarantees the text stays legible no matter how the photo
+     is cropped) sitting on top of the photo itself, anchored left so the crop favours the
+     photo's own built-in light-toned margin instead of cutting into it from both sides. */
   border: 1px solid var(--warm-mid);
   border-radius: 16px;
   padding: 28px 26px;
@@ -1861,6 +1868,12 @@ a.logo {
   gap: 10px;
   text-decoration: none;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+
+.examples__card--hans {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./beispiel-hans/hans_example.jpg') no-repeat left center / cover var(--cream);
 }
 
 .examples__card:hover {
@@ -1880,6 +1893,7 @@ a.logo {
   font-family: var(--serif);
   font-size: 1.5em;
   color: var(--ink);
+  max-width: 190px;
 }
 
 .examples__hook {
@@ -1888,6 +1902,7 @@ a.logo {
   color: var(--ink-3);
   line-height: 1.65;
   flex: 1;
+  max-width: 190px;
 }
 
 .examples__cta {
@@ -3468,8 +3483,8 @@ body.cc-lock .cc-banner {
   background: var(--parchment);
 }
 
-.example-hero-container {
-  background: url('./hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
+.example-hero-container.hans {
+  background: url('./beispiel-hans/hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero {
@@ -3788,13 +3803,13 @@ body.cc-lock .cc-banner {
 }
 
 @media (max-width: 1220px) {
-  .example-hero-container {
+  .example-hero-container.hans {
     background: linear-gradient(to bottom,
         rgba(247, 244, 237, 1) 2%,
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 0) 60%,
         rgba(247, 244, 237, 1) 95%
-      ),url('./hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
+      ),url('./beispiel-hans/hans_bg_big.jpg') no-repeat center center / 100% var(--parchment);
   }
 }
 @media (max-width: 900px) {
@@ -3817,13 +3832,13 @@ body.cc-lock .cc-banner {
 }
 
 @media (max-width: 600px) {
-  .example-hero-container {
+  .example-hero-container.hans {
     background: linear-gradient(to bottom,
       rgba(247, 244, 237, 0.5) 0%,
       rgba(247, 244, 237, 0.1) 50%,
       rgba(247, 244, 237, 0.5) 60%,
       rgba(247, 244, 237, 1) 100%
-    ),url('./hans_bg_small.jpg') no-repeat center 40% / contain var(--parchment);
+    ),url('./beispiel-hans/hans_bg_small.jpg') no-repeat center 40% / contain var(--parchment);
 }
 
   .example-hero {

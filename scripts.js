@@ -6,12 +6,16 @@ const i18n = {
   currentLang: localStorage.getItem('lang') || 'de',
   supportedLangs: ['de', 'en', 'fr', 'it'],
   translations: {},
+  baseDir:
+  typeof CUSTOM_BASE_DIR !== 'undefined' && CUSTOM_BASE_DIR
+    ? CUSTOM_BASE_DIR
+    : './',
 
   async init() {
     // Load all translation files
     for (const lang of this.supportedLangs) {
       try {
-        const response = await fetch(`./translations/${lang}.json`);
+        const response = await fetch(`${this.baseDir}translations/${lang}.json`);
         this.translations[lang] = await response.json();
       } catch (error) {
         console.error(`Failed to load translation for ${lang}:`, error);
@@ -36,7 +40,7 @@ const i18n = {
     // different language, since hCaptcha itself doesn't support that.
     const hcaptcha = document.querySelector('.h-captcha');
     if (hcaptcha) hcaptcha.setAttribute('data-lang', lang);
-    console.log(`Language set to ${lang}`);
+    
     // Update all elements with data-i18n attribute
     this.updatePageContent();
     renderSafetyStatement();
@@ -77,7 +81,7 @@ const i18n = {
     this.updateSelectOptions();
   },
 
-  // Falls back to German if a key is missing in the current language, rather than showing
+  // Falls back to English if a key is missing in the current language, rather than showing
   // broken "[section.key]" placeholder text — lets content exist in only some languages
   // (e.g. a page translated so far into just DE/EN) without breaking FR/IT visitors.
   getText(section, key) {
@@ -88,7 +92,7 @@ const i18n = {
       }
       return text;
     };
-    return lookup(this.currentLang) || lookup('de') || `[${section}.${key}]`;
+    return lookup(this.currentLang) || lookup('en') || `[${section}.${key}]`;
   },
 
   updateSelectOptions() {
@@ -458,6 +462,7 @@ function renderSafetyStatement() {
 // packages section is otherwise a long scroll past four stacked tabs.
 function applyDeepLinkedPackage() {
   const params = new URLSearchParams(window.location.search);
+  
   const pkgParam = params.get('pkg');
   if (!pkgParam) return;
 
@@ -465,19 +470,45 @@ function applyDeepLinkedPackage() {
   const tier = parseInt(tierStr, 10);
   const tab = document.querySelector(`.pkg-tab[data-audience="${audience}"]`);
   if (!tab || !tier) return;
+  
+  const audienceSelect = document.getElementById('i');
+  const messageField = document.getElementById('m');
+  const card = document.querySelector(`.pkg.d${tier}`);
+  if (!audienceSelect || !messageField || !card) return;
+
+  const pkgIndex = tierStr;
+  const AUDIENCE_OPTION_INDEX = { basis: 1, senioren: 2, mieter: 3, ferienhaus: 4 };
+  const optionIndex = AUDIENCE_OPTION_INDEX[audience];
+  if (optionIndex !== undefined) audienceSelect.selectedIndex = optionIndex;
+
+  if (!messageField.value.trim() && pkgIndex !== -1) {
+    const packageName = card.querySelector('.pkg__name');
+    const price = card.querySelector('.pkg__num');
+    if (packageName && price) {
+      const template = i18n.getText('contact', 'form_prefill');
+      messageField.value = template
+        .replace('{package}', packageName.textContent.trim())
+        .replace('{price}', price.textContent.trim());
+    }
+  }
+
 
   document.querySelectorAll('.pkg-tab').forEach((t) => t.classList.remove('active'));
   tab.classList.add('active');
   updatePackageContent(audience);
-
+  const currentHash = window.location.hash.slice(1); 
+  if (!currentHash) return;
+  
   // Wait a tick for the tab switch's content/layout to settle before measuring position.
-  requestAnimationFrame(() => {
-    const card = document.querySelectorAll('.pkg-grid > .pkg')[tier - 1];
-    if (!card) return;
-    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    card.classList.add('pkg--highlight');
-    setTimeout(() => card.classList.remove('pkg--highlight'), 2200);
-  });
+  if(currentHash === 'packages') {
+    requestAnimationFrame(() => {
+      const card = document.querySelectorAll('.pkg-grid > .pkg')[tier - 1];
+      if (!card) return;
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.add('pkg--highlight');
+      setTimeout(() => card.classList.remove('pkg--highlight'), 2200);
+    });
+  }
 }
 
 function setupPackageAccordion() {
@@ -765,7 +796,7 @@ document.addEventListener('DOMContentLoaded', () => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').then((registration) => {
-      console.log('Service Worker registered successfully:', registration);
+      // console.log('Service Worker registered successfully:', registration);
 
       // Check for updates periodically
       setInterval(() => {
