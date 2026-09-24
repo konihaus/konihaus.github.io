@@ -1916,6 +1916,12 @@ a.logo {
     url('./wasserschaden/elsa-homepage.jpg') no-repeat right center / cover var(--cream);
 }
 
+.examples__card--inge {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./ferienwohnung-management/inge-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
 .examples__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px rgba(26, 25, 22, .08);
@@ -3544,6 +3550,10 @@ body.cc-lock .cc-banner {
   background: url('./wasserschaden/elsa-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
+.example-hero-container.inge {
+  background: url('./ferienwohnung-management/inge-desktop.jpg') no-repeat center center / 100% var(--parchment);
+}
+
 .example-hero {
   padding: 160px 0 0;
   /*background: var(--parchment);*/
@@ -3572,6 +3582,10 @@ body.cc-lock .cc-banner {
 
 .example-body--senioren .example-hero__h em {
   color: var(--gold-mid);
+}
+
+.example-body--ferien .example-hero__h em {
+  color: var(--marine-mid);
 }
 
 .example-hero__sub {
@@ -3925,6 +3939,16 @@ body.cc-lock .cc-banner {
       ),url('./wasserschaden/elsa-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
   }
 }
+@media (max-width: 1380px) {
+  .example-hero-container.inge {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 0) 60%,
+        rgba(247, 244, 237, 1) 90%
+      ),url('./ferienwohnung-management/inge-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+  }
+}
 @media (max-width: 900px) {
   .example-hero-container.elsa {
     background: linear-gradient(to top,
@@ -3932,6 +3956,14 @@ body.cc-lock .cc-banner {
         rgba(247, 244, 237, 0) 50%,
         rgba(247, 244, 237, 1) 70%
       ),url('./wasserschaden/elsa-desktop.jpg') no-repeat center center / contain var(--parchment);
+  }
+
+  .example-hero-container.inge {
+    background: linear-gradient(to top,
+        rgba(247, 244, 237, 1) 30%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 1) 70%
+      ),url('./ferienwohnung-management/inge-desktop.jpg') no-repeat center center / contain var(--parchment);
   }
 
   .example-hero {
@@ -3964,6 +3996,11 @@ body.cc-lock .cc-banner {
 
   .example-hero-container.elsa {
     background: url('./wasserschaden/elsa-mobile.jpg') no-repeat center bottom  / contain var(--parchment);
+    padding-bottom: 70%;
+  }
+
+  .example-hero-container.inge {
+    background: url('./ferienwohnung-management/inge-mobile.jpg') no-repeat center bottom / contain var(--parchment);
     padding-bottom: 70%;
   }
 
