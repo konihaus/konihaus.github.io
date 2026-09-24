@@ -35,8 +35,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:locale:alternate" content="fr_CH">
-  <meta property="og:locale:alternate" content="it_CH">
+  <!--meta property="og:locale:alternate" content="fr_CH">
+  <meta property="og:locale:alternate" content="it_CH"-->
   <meta property="og:image" content="https://konihaus.ch/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -116,8 +116,8 @@
         <select id="lang-selector" class="lang-selector">
           <option value="de">DE</option>
           <option value="en">EN</option>
-          <option value="fr">FR</option>
-          <option value="it">IT</option>
+          <!--option value="fr">FR</option>
+          <option value="it">IT</option-->
         </select>
         <a href="#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
@@ -220,13 +220,59 @@
                 sie im Alltag kaum. Bei älteren Angehörigen zum Beispiel: Bleibt die Küche einen ganzen Tag ohne
                 Bewegung, obwohl die Person zu Hause ist, benachrichtigt das System automatisch Familie oder
                 Betreuungspersonen — sonst bleibt der Alltag einfach der Alltag.</p>
-          <a href="#process" class="intro__link reveal d3" data-i18n="intro.link">So funktioniert's <svg width="16"
+          <a href="#examples" class="intro__link reveal d3"><span data-i18n="intro.link">Let me show some examples</span> <svg width="16"
               height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg></a>
         </div>
 
+      </div>
+    </div>
+  </section>
+  <!-- EXAMPLES (illustrative scenarios, not documented case studies) -->
+  <section class="examples" id="examples">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye reveal" data-i18n="examples.eyebrow">Anwendungsbeispiele</p>
+        <h2 class="sec-h reveal d1" data-i18n="examples.h2" data-i18n-html="true">So könnte es<br><em>bei Ihnen
+            aussehen.</em></h2>
+        <p class="reveal d2" data-i18n="examples.sub">Illustrative Beispiele — keine dokumentierten
+          Kundengeschichten.</p>
+      </div>
+      <div class="examples__track-wrap reveal d2">
+        <button type="button" class="examples__arrow examples__arrow--prev" aria-label="Zurück" disabled>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="examples__track" id="examples-track">
+          <a class="examples__card examples__card--hans" href="/beispiel-hans">
+            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
+            <span class="examples__name">Hans</span>
+            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
+              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
+            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+        </div>
+        <button type="button" class="examples__arrow examples__arrow--next" aria-label="Weiter" disabled>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+      <a href="#process" class="examples__link reveal d3"><span data-i18n="examples.link">So funktioniert's</span> <svg width="16"
+              height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
       </div>
     </div>
   </section>
@@ -526,56 +572,6 @@
     </div>
   </section>
 
-  <!-- EXAMPLES (illustrative scenarios, not documented case studies) -->
-  <section class="examples" id="examples">
-    <div class="container">
-      <div class="sec-center">
-        <p class="sec-eye reveal" data-i18n="examples.eyebrow">Anwendungsbeispiele</p>
-        <h2 class="sec-h reveal d1" data-i18n="examples.h2" data-i18n-html="true">So könnte es<br><em>bei Ihnen
-            aussehen.</em></h2>
-        <p class="reveal d2" data-i18n="examples.sub">Illustrative Beispiele — keine dokumentierten
-          Kundengeschichten.</p>
-      </div>
-      <div class="examples__track-wrap reveal d2">
-        <button type="button" class="examples__arrow examples__arrow--prev" aria-label="Zurück" disabled>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-        <div class="examples__track" id="examples-track">
-          <a class="examples__card examples__card--hans" href="/beispiel-hans">
-            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
-            <span class="examples__name">Hans</span>
-            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
-              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
-            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--hans" href="/beispiel-hans">
-            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
-            <span class="examples__name">Hans</span>
-            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
-              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
-            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-        </div>
-        <button type="button" class="examples__arrow examples__arrow--next" aria-label="Weiter" disabled>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">

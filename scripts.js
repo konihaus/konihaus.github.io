@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', windo
 // i18n Configuration
 const i18n = {
   currentLang: localStorage.getItem('lang') || 'de',
-  supportedLangs: ['de', 'en', 'fr', 'it'],
+  supportedLangs: ['de', 'en'/*, 'fr', 'it'*/],
   translations: {},
   baseDir:
   typeof CUSTOM_BASE_DIR !== 'undefined' && CUSTOM_BASE_DIR

@@ -600,6 +600,7 @@ a.logo {
   margin-bottom: 16px;
 }
 
+.examples__link,
 .intro__link {
   display: inline-flex;
   align-items: center;
@@ -608,9 +609,14 @@ a.logo {
   font-weight: 500;
   color: var(--forest);
   margin-top: 16px;
-  transition: gap .2s;
+  transition: gap 3s;
 }
 
+.examples__link {
+  margin: 0 auto;
+}
+
+.examples__link:hover,
 .intro__link:hover {
   gap: 16px;
 }
@@ -1364,7 +1370,7 @@ a.logo {
 /* PROCESS */
 .process {
   padding: 112px 0;
-  background: var(--parchment);
+  background: var(--cream);
 }
 
 .process__grid {
@@ -1427,14 +1433,13 @@ a.logo {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--forest-tint);
+  background: var(--forest-light);
   color: var(--forest);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 1.1875em;
-  font-weight: 400;
+  font-size: 2em;
   flex-shrink: 0;
 }
 
@@ -1481,7 +1486,7 @@ a.logo {
   font-weight: 500;
   padding: 3px 9px;
   border-radius: 20px;
-  background: var(--forest-tint);
+  background: var(--forest-light);
   color: var(--forest);
 }
 
