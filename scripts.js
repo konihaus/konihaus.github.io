@@ -77,15 +77,18 @@ const i18n = {
     this.updateSelectOptions();
   },
 
+  // Falls back to German if a key is missing in the current language, rather than showing
+  // broken "[section.key]" placeholder text — lets content exist in only some languages
+  // (e.g. a page translated so far into just DE/EN) without breaking FR/IT visitors.
   getText(section, key) {
-    const keys = [section, key];
-    let text = this.translations[this.currentLang];
-
-    for (const k of keys) {
-      text = text ? text[k] : null;
-    }
-
-    return text || `[${section}.${key}]`;
+    const lookup = (lang) => {
+      let text = this.translations[lang];
+      for (const k of [section, key]) {
+        text = text ? text[k] : null;
+      }
+      return text;
+    };
+    return lookup(this.currentLang) || lookup('de') || `[${section}.${key}]`;
   },
 
   updateSelectOptions() {
@@ -448,6 +451,35 @@ function renderSafetyStatement() {
 // "Details" toggle of a package card (all screen sizes): shows / hides the hardware list.
 // The outcomes, the button and the price note stay visible. Cards toggle independently,
 // so visitors can open two cards side by side to compare the hardware.
+// Deep-linking into a specific package from another page (e.g. "Paket ansehen" on an
+// example page): the link carries ?pkg=<audience>-<tier 1-4>, e.g. ?pkg=senioren-4.
+// On load, this switches to the right audience tab and scrolls straight to that card,
+// instead of leaving the visitor to find it themselves — most useful on mobile, where the
+// packages section is otherwise a long scroll past four stacked tabs.
+function applyDeepLinkedPackage() {
+  const params = new URLSearchParams(window.location.search);
+  const pkgParam = params.get('pkg');
+  if (!pkgParam) return;
+
+  const [audience, tierStr] = pkgParam.split('-');
+  const tier = parseInt(tierStr, 10);
+  const tab = document.querySelector(`.pkg-tab[data-audience="${audience}"]`);
+  if (!tab || !tier) return;
+
+  document.querySelectorAll('.pkg-tab').forEach((t) => t.classList.remove('active'));
+  tab.classList.add('active');
+  updatePackageContent(audience);
+
+  // Wait a tick for the tab switch's content/layout to settle before measuring position.
+  requestAnimationFrame(() => {
+    const card = document.querySelectorAll('.pkg-grid > .pkg')[tier - 1];
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('pkg--highlight');
+    setTimeout(() => card.classList.remove('pkg--highlight'), 2200);
+  });
+}
+
 function setupPackageAccordion() {
   document.querySelectorAll('.pkg__toggle').forEach((toggle) => {
     toggle.addEventListener('click', (e) => {
@@ -490,6 +522,42 @@ function setupFaqAccordion() {
       });
     });
   });
+}
+
+// Examples carousel: arrow buttons scroll the track by one card width (CSS scroll-snap
+// handles touch/trackpad swiping on its own). Arrows disable themselves at each end so
+// they stay usable once more than one card is in the track.
+function setupExamplesCarousel() {
+  const track = document.getElementById('examples-track');
+  if (!track) return;
+
+  const prev = document.querySelector('.examples__arrow--prev');
+  const next = document.querySelector('.examples__arrow--next');
+  if (!prev || !next) return;
+
+  const cardGap = 20;
+
+  function updateArrows() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 4;
+    next.disabled = track.scrollLeft >= maxScroll - 4;
+  }
+
+  prev.addEventListener('click', () => {
+    const card = track.querySelector('.examples__card');
+    const step = card ? card.offsetWidth + cardGap : 300;
+    track.scrollBy({ left: -step, behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', () => {
+    const card = track.querySelector('.examples__card');
+    const step = card ? card.offsetWidth + cardGap : 300;
+    track.scrollBy({ left: step, behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
 }
 
 
@@ -677,10 +745,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPackageTabs();
     setupPackageAccordion();
     setupFaqAccordion();
+    setupExamplesCarousel();
     setupPackageRequestButtons();
     setupHeroTaglines();
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
+    applyDeepLinkedPackage();
     const moreStart = document.getElementById('morestart'); // only on the home page
     if (moreStart) {
       moreStart.addEventListener('click', (e) => {
