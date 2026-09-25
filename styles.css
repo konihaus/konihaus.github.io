@@ -4348,6 +4348,23 @@ body.cc-lock .cc-banner {
 /* very narrow phones: the logo already links home */
 @media (max-width: 480px) {
   .legal-back {
-    display: none;
+    display: inline-block;
+    max-width: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px 2px;
+    margin-left: 4px;
+    position: relative;
+    color: transparent
   }
+  .legal-back::after {
+    content: '←';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 2em;
+    line-height: 1em;
+    color: rgba(247, 244, 237, .6);
+  }
+
 }
