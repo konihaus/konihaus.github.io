@@ -1643,13 +1643,75 @@ a.logo {
 
 .why__item {
   background: rgba(42, 74, 53, .5);
-  padding: 34px 30px;
+  padding: 34px 140px 34px 30px;
   transition: background .3s;
+  position: relative;
+  overflow: hidden;
+  min-height: 255px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.why__item:hover {
-  background: rgba(61, 107, 79, .5);
+.why__item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: var(--forest);
+  background-image: var(--feature-pictogram);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 150px;
+  opacity: 0.4;
 }
+
+.why__item:hover::before {
+  background-color: var(--forest-mid);
+  background-image: var(--feature-pictogram);
+}
+
+.why__item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.why__item--privacy {
+  --feature-pictogram: url("./privacy.png");
+}
+
+.why__item--vendor {
+  --feature-pictogram: url("./vendor-lock-in.png");
+}
+
+.why__item--service {
+  --feature-pictogram: url("./personal-service.png");
+}
+
+.why__item--quality {
+  --feature-pictogram: url("./swiss-quality.png");
+}
+
+.why__item--energy {
+  --feature-pictogram: url("./energy-efficiency.png");
+}
+
+.why__item--future {
+  --feature-pictogram: url("./future-proof.png");
+}
+
+@media (max-width: 900px) {
+  .why__item {
+    padding: 34px 160px 34px 30px;
+    min-height: 200px;
+  }
+  .why__item::before {
+    background-position: right center;
+    background-size: auto 82%;
+  }
+}
+
 
 .why__icon {
   width: 56px;
@@ -2902,7 +2964,7 @@ a.logo {
   }
 
   .why__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .devices__grid {
@@ -3084,10 +3146,6 @@ a.logo {
   .why__grid {
     grid-template-columns: 1fr;
     gap: 1px;
-  }
-
-  .why__item {
-    padding: 24px 20px;
   }
 
   .why__head {
