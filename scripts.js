@@ -769,6 +769,100 @@ function setupHeroTaglines() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
+
+
+  const picker = document.querySelector(".language-picker");
+  const trigger = picker.querySelector(".language-trigger");
+  const menu = picker.querySelector(".language-options");
+  const current = picker.querySelector(".language-current");
+  const select = picker.querySelector("#lang-selector");
+  const options = [...picker.querySelectorAll(".language-option")];
+
+  function syncLanguage() {
+    current.textContent = select.value.toUpperCase();
+
+    options.forEach((option) => {
+      const selected = option.dataset.lang === select.value;
+      option.setAttribute("aria-current", String(selected));
+
+      if (selected) {
+        trigger.setAttribute(
+          "aria-label",
+          `Language: ${option.firstElementChild.textContent}`
+        );
+      }
+    });
+  }
+
+  function closeMenu(returnFocus = false) {
+    menu.hidden = true;
+    trigger.setAttribute("aria-expanded", "false");
+    if (returnFocus) trigger.focus();
+  }
+
+  function openMenu() {
+    menu.hidden = false;
+    trigger.setAttribute("aria-expanded", "true");
+
+    const selected = options.find(
+      (option) => option.dataset.lang === select.value
+    );
+    (selected || options[0]).focus();
+  }
+
+  trigger.addEventListener("click", () => {
+    if (menu.hidden) openMenu();
+    else closeMenu();
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      const changed = select.value !== option.dataset.lang;
+      select.value = option.dataset.lang;
+      syncLanguage();
+      closeMenu(true);
+
+      if (changed) {
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    });
+  });
+
+  picker.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !menu.hidden) {
+      event.preventDefault();
+      closeMenu(true);
+    }
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+
+      if (menu.hidden) {
+        openMenu();
+        return;
+      }
+
+      const index = options.indexOf(document.activeElement);
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      options[
+        (index + direction + options.length) % options.length
+      ].focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!picker.contains(event.target)) closeMenu();
+  });
+
+  picker.addEventListener("focusout", (event) => {
+    if (!picker.contains(event.relatedTarget)) closeMenu();
+  });
+
+  select.addEventListener("change", syncLanguage);
+  syncLanguage();
+
+
+
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
     setupMobileMenu();

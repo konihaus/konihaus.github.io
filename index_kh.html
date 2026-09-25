@@ -113,12 +113,36 @@
           <li><a href="#packages" data-i18n="nav.packages">Pakete</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
-        <select id="lang-selector" class="lang-selector">
-          <option value="de">DE</option>
-          <option value="en">EN</option>
-          <!--option value="fr">FR</option>
-          <option value="it">IT</option-->
-        </select>
+        <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: Deutsch"
+          >
+            <span class="language-current">DE</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
         <a href="#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
           <span></span><span></span><span></span>
