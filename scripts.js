@@ -555,40 +555,142 @@ function setupFaqAccordion() {
   });
 }
 
-// Examples carousel: arrow buttons scroll the track by one card width (CSS scroll-snap
-// handles touch/trackpad swiping on its own). Arrows disable themselves at each end so
-// they stay usable once more than one card is in the track.
+// Examples carousel: loops infinitely in both directions and auto-scrolls slowly on
+// its own until the visitor interacts with it (drag, swipe, or an arrow click), at
+// which point autoplay stops for good and it behaves like a normal scroll-snap track.
+//
+// The loop is built by cloning the original cards once before and once after
+// themselves ([clone][original][clone]), starting the scroll position in the middle
+// (real) segment, and jumping back by exactly one segment width — instantly, so it's
+// invisible — whenever scrolling crosses into a clone segment. Autoplay itself moves
+// scrollLeft directly (not scrollBy/scrollTo) so it isn't subject to CSS smooth-scroll
+// easing, and scroll-snap is switched off only while autoplay is actually running so a
+// manual swipe still snaps normally once the visitor takes over.
 function setupExamplesCarousel() {
   const track = document.getElementById('examples-track');
   if (!track) return;
 
   const prev = document.querySelector('.examples__arrow--prev');
   const next = document.querySelector('.examples__arrow--next');
-  if (!prev || !next) return;
 
   const cardGap = 20;
+  const originalCards = Array.from(track.children);
+  if (!originalCards.length) return;
 
-  function updateArrows() {
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    prev.disabled = track.scrollLeft <= 4;
-    next.disabled = track.scrollLeft >= maxScroll - 4;
+  function cloneSegment() {
+    return originalCards.map((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.tabIndex = -1;
+      return clone;
+    });
   }
 
-  prev.addEventListener('click', () => {
-    const card = track.querySelector('.examples__card');
-    const step = card ? card.offsetWidth + cardGap : 300;
-    track.scrollBy({ left: -step, behavior: 'smooth' });
+  const beforeSegment = document.createDocumentFragment();
+  cloneSegment().forEach((clone) => beforeSegment.appendChild(clone));
+  track.insertBefore(beforeSegment, track.firstChild);
+
+  const afterSegment = document.createDocumentFragment();
+  cloneSegment().forEach((clone) => afterSegment.appendChild(clone));
+  track.appendChild(afterSegment);
+
+  let segmentWidth = 0;
+  function measure() {
+    segmentWidth = originalCards.reduce((sum, card) => sum + card.offsetWidth + cardGap, 0);
+  }
+  measure();
+  window.addEventListener('resize', measure);
+
+  track.scrollLeft = segmentWidth; // start on the real (middle) copy
+
+  function wrapIfNeeded() {
+    if (!segmentWidth) return;
+    if (track.scrollLeft >= segmentWidth * 2) {
+      track.scrollLeft -= segmentWidth;
+    } else if (track.scrollLeft <= 0) {
+      track.scrollLeft += segmentWidth;
+    }
+  }
+
+  let autoplay = true;
+  let rafId = null;
+  let lastTime = null;
+  let scrollPos = track.scrollLeft; // float accumulator — see tick() for why
+  const AUTOPLAY_SPEED = 18; // px/second — a slow, steady crawl
+
+  // At 18px/s each frame's step is under 1px, and track.scrollLeft always reads back
+  // as a whole pixel. Deriving the running total from track.scrollLeft (e.g.
+  // `track.scrollLeft += delta`) throws that fractional progress away every single
+  // frame, so the track would round-trip to the same integer forever and never
+  // visibly move. Keeping the true position in this separate float instead, and only
+  // writing the rounded pixel value to the DOM, is what actually lets it accumulate.
+  function tick(time) {
+    if (!autoplay) { rafId = null; lastTime = null; return; }
+    if (lastTime == null) lastTime = time;
+    scrollPos += AUTOPLAY_SPEED * ((time - lastTime) / 1000);
+    lastTime = time;
+    if (scrollPos >= segmentWidth * 2) scrollPos -= segmentWidth;
+    else if (scrollPos <= 0) scrollPos += segmentWidth;
+    track.scrollLeft = scrollPos;
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function startAutoplay() {
+    if (!autoplay || rafId) return;
+    scrollPos = track.scrollLeft; // resync in case something moved it while paused
+    lastTime = null;
+    track.style.scrollSnapType = 'none';
+    track.style.scrollBehavior = 'auto';
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function stopAutoplay() {
+    if (!autoplay) return;
+    autoplay = false;
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = null;
+    track.style.scrollSnapType = '';
+    track.style.scrollBehavior = '';
+  }
+
+  // Dragging or swiping the track is what should end autoplay — not an incidental
+  // mouse-wheel pass while scrolling the page over it.
+  track.addEventListener('pointerdown', stopAutoplay, { passive: true, once: true });
+
+  track.addEventListener("touchstart", () => {
+      stopAutoplay();
   });
 
-  next.addEventListener('click', () => {
-    const card = track.querySelector('.examples__card');
-    const step = card ? card.offsetWidth + cardGap : 300;
-    track.scrollBy({ left: step, behavior: 'smooth' });
+  track.addEventListener("touchend", () => {
+    setTimeout(() => {
+      autoplay = true;
+      startAutoplay();
+    }, 4000);
   });
 
-  track.addEventListener('scroll', updateArrows);
-  window.addEventListener('resize', updateArrows);
-  updateArrows();
+  function scrollByCard(dir) {
+    stopAutoplay();
+    const card = originalCards[0];
+    const step = card ? card.offsetWidth + cardGap : 300;
+    track.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+  if (prev) prev.addEventListener('click', () => scrollByCard(-1));
+  if (next) next.addEventListener('click', () => scrollByCard(1));
+
+  track.addEventListener('scroll', wrapIfNeeded);
+
+  // Pause the rAF loop while the tab is hidden so it doesn't jump on return.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = null;
+      lastTime = null;
+    } else if (autoplay) {
+      startAutoplay();
+    }
+  });
+
+  startAutoplay();
 }
 
 
