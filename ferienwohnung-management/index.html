@@ -52,10 +52,36 @@
         </a>
         <div class="legal-nav__right">
           <a href="../index_kh.html#examples" class="legal-back" data-i18n="beispiel_inge.back">← Zurück zu den Beispielen</a>
-          <select id="lang-selector" class="lang-selector" aria-label="Sprache / Language">
+          <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: Deutsch"
+          >
+            <span class="language-current">DE</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
             <option value="de">DE</option>
             <option value="en">EN</option>
           </select>
+        </div>
         </div>
       </div>
     </div>
