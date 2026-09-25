@@ -277,10 +277,12 @@ a.logo {
   transition: right .25s var(--ease);
 }
 
+.nav__links a.active,
 .nav__links a:hover {
   color: var(--parchment);
 }
 
+.nav__links a.active::after,
 .nav__links a:hover::after {
   right: 0;
 }

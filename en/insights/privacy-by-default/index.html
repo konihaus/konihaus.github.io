@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a4a35">
+  <link rel="icon" type="image/svg+xml" href="/favicon_sm.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <title>Privacy by Default — Konihaus</title>
+  <meta name="description" content="How Konihaus keeps your data local, secure, and under your control.">
+  <meta name="author" content="Konrad Hefelle">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy by Default — Konihaus">
+  <meta property="og:description" content="How Konihaus keeps your data local, secure, and under your control.">
+  <meta property="og:url" content="https://konihaus.ch/en/insights/privacy-by-default/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://konihaus.ch/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  
+  <style>
+    .blog-post__container {
+      max-width: 900px;
+      margin: 80px auto 0;
+      padding: 3rem 1.5rem;
+    }
+
+    .blog-post__header {
+      margin-bottom: 3rem;
+    }
+
+    .blog-post__title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .blog-post__meta {
+      font-size: 0.95rem;
+      color: var(--ink-3);
+      font-weight: 400;
+    }
+
+    .blog-post__content {
+      line-height: 1.8;
+      color: var(--ink);
+    }
+
+    .blog-post__content h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--ink);
+    }
+
+    .blog-post__content h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .blog-post__content p {
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post__content ul,
+    .blog-post__content ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-post__content li {
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-post__content strong {
+      font-weight: 600;
+    }
+
+    .blog-post__footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .blog-post__link {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .blog-post__back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--forest);
+      font-weight: 500;
+      transition: color 0.3s var(--ease);
+    }
+
+    .blog-post__back-link:hover {
+      color: var(--forest-mid);
+    }
+
+    @media (max-width: 768px) {
+      .blog-post__container {
+        padding: 2rem 1rem;
+      }
+
+      .blog-post__content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .blog-post__content h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--solid">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="/" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <div class="legal-nav__right">
+          
+            <a href="/" class="legal-back">← Back to Home</a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="blog-post__container">
+
+    <header class="blog-post__link">
+      
+        <a href="/en/insights/" class="blog-post__back-link">← Back to Insights</a>
+      
+    </header>
+
+    <article>
+      <header class="blog-post__header">
+        <h1 class="blog-post__title">Privacy by Default</h1>
+        <time class="blog-post__meta" datetime="Sat Aug 15 2026 02:00:00 GMT+0200 (Central European Summer Time)">
+          
+            August 15, 2026
+          
+        </time>
+      </header>
+
+
+      <div class="blog-post__content">
+        <h2>Your Data Stays at Home</h2>
+<p>When you use Google Home or Amazon Alexa, your voice commands, your routines, your preferences—they all flow to the cloud. You're trading convenience for surveillance, whether you realize it or not.</p>
+<p>With Konihaus, everything runs on hardware <em>in your home</em>. No cloud. No servers somewhere else processing your patterns. Your smart home data never leaves your living room unless you explicitly tell it to.</p>
+<h2>How It Works</h2>
+<p>Your Konihaus system runs on a <strong>Home Assistant instance</strong> (a lightweight Linux computer, typically a Raspberry Pi or small NUC) installed in your home. All the logic—automations, device coordination, scenes—lives there.</p>
+<p><strong>Local-only data flow:</strong></p>
+<ul>
+<li>Your Zigbee devices talk directly to the local hub</li>
+<li>Z-Wave devices stay local</li>
+<li>WiFi devices communicate locally when possible</li>
+<li>No outbound data collection</li>
+</ul>
+<p>The only exception: if you <em>choose</em> to set up remote access (to check your home while away), we use an encrypted VPN tunnel that <em>you</em> control. You're not giving Konihaus access—you're granting yourself secure remote access.</p>
+<h2>What This Means Practically</h2>
+<p><strong>No data harvesting.</strong> Konihaus has no incentive to collect behavioral data. We don't monetize your attention or sell insights about your living patterns.</p>
+<p><strong>No forced cloud updates.</strong> Your system doesn't depend on distant servers that might go down or change terms.</p>
+<p><strong>No lock-in.</strong> You can access your own data directly. It's all open standards (Zigbee, Z-Wave, Matter, WiFi). You own it.</p>
+<p><strong>Faster response times.</strong> Local processing is instant. No cloud latency for turning on a light or adjusting the thermostat.</p>
+<h2>Remote Access: Secure and Optional</h2>
+<p>Want to check on your home while traveling? Konihaus supports a private VPN connection—encrypted end-to-end, using protocols like WireGuard or OpenVPN. You set it up, you control the credentials, you decide when to use it.</p>
+<p>This is fundamentally different from cloud-first systems: with Konihaus, <em>you</em> decide if and when to enable remote access. It's not the default mode of operation.</p>
+<h2>Why We Built It This Way</h2>
+<p>Privacy isn't a feature we added. It's the foundation. A truly personal smart home shouldn't require trusting a corporation with intimate details of your daily life—what time you wake, when you leave, whether you're home.</p>
+<p>With local-first architecture, that trust barrier simply doesn't exist.</p>
+
+      </div>
+
+      <footer class="blog-post__footer">
+        
+          <a href="/en/insights/" class="blog-post__back-link">← Back to Insights</a>
+        
+      </footer>
+    </article>
+  </main>
+  <footer class="footer footer--legal">
+    <div class="container">
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
+        <div class="flegal">
+          <a href="/impressum" data-i18n="footer.col3_l1">Impressum</a>
+          <a href="/datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a>
+          <a href="/#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a>
+          <a href="/agb" data-i18n="footer.col3_l4">AGB</a>
+        </div>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

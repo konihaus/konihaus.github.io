@@ -9,7 +9,7 @@ const i18n = {
   baseDir:
   typeof CUSTOM_BASE_DIR !== 'undefined' && CUSTOM_BASE_DIR
     ? CUSTOM_BASE_DIR
-    : './',
+    : '/',
 
   async init() {
     // Load all translation files
@@ -27,12 +27,21 @@ const i18n = {
     this.setupLanguageSelector();
   },
 
+  setBlogLink(lang) {
+    const blogLink = document.getElementById('blog_link');
+    if (blogLink) {
+      blogLink.href = `/${lang}/insights`;
+    }
+  },
+
   setLanguage(lang) {
     if (!this.supportedLangs.includes(lang)) lang = 'de';
 
     this.currentLang = lang;
     localStorage.setItem('lang', lang);
     document.documentElement.lang = lang;
+
+    this.setBlogLink(lang);
 
     // hCaptcha reads data-lang when its widget first mounts. Keeping this attribute in sync
     // on every language change covers the normal case (visitor picks a language, then reaches

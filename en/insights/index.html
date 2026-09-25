@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a4a35">
+  <link rel="icon" type="image/svg+xml" href="/favicon_sm.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <title>Insights — Konihaus</title>
+  <meta name="description" content="Deep dives into smart home architecture, privacy, and Konihaus design.">
+  <meta name="author" content="Konrad Hefelle">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .insights-container {
+      max-width: 1000px;
+      margin: 80px auto 0;
+      padding: 3rem 1.5rem;
+    }
+
+    .insights__header {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .insights__title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .insights__intro {
+      font-size: 1.1rem;
+      color: var(--ink-3);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .insights__grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .insights-card {
+      padding: 2rem;
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      transition: all 0.3s var(--ease);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .insights-card:hover {
+      border-color: var(--forest);
+      box-shadow: 0 4px 12px rgba(26, 25, 22, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .insights-card__title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .insights-card__title a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.3s var(--ease);
+    }
+
+    .insights-card:hover .insights-card__title a {
+      color: var(--forest);
+    }
+
+    .insights-card__date {
+      font-size: 0.9rem;
+      color: var(--ink-3);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .insights-card__excerpt {
+      color: var(--ink-2);
+      line-height: 1.7;
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .insights-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--forest);
+      font-weight: 500;
+      transition: color 0.3s var(--ease);
+      align-self: flex-start;
+    }
+
+    .insights-card__link:hover {
+      color: var(--forest-mid);
+    }
+    @media (max-width: 1100px) {
+
+      .insights__grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .insights-container {
+        padding: 2rem 1rem;
+      }
+
+      .insights__grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+      }
+
+      .insights-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <nav class="nav nav--solid" id="nav">
+    <div class="container">
+      <div class="nav__inner ">
+        <a href="/" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <ul class="nav__links">
+          <li><a href="/#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="/#packages" data-i18n="nav.packages">Pakete</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="/en/insights/" class="active" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+        <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: English"
+          >
+            <span class="language-current">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de" onclick="location.href='/de/insights/'">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <a href="/#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="/#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
+      <li><a href="/#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
+      <li><a href="/#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="/en/insights/" class="drawer-link active" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
+
+  <main class="insights-container">
+    <header class="insights__header">
+      <h1 class="insights__title">Insights</h1>
+      <p class="insights__intro">Deep dives into smart home architecture, privacy, and Konihaus design.</p>
+    </header>
+
+
+      <div class="insights__grid">
+        
+          <article class="insights-card" onclick="location.href='/en/insights/no-vendor-lock-in/'">
+            <h3 class="insights-card__title">
+              <a href="/en/insights/no-vendor-lock-in/">No Vendor Lock-In</a>
+            </h3>
+            <time class="insights-card__date" datetime="Thu Aug 20 2026 02:00:00 GMT+0200 (Central European Summer Time)">
+              August 20, 2026
+            </time>
+            <p class="insights-card__excerpt">Mix and match devices freely. Your system isn&#39;t owned by any single manufacturer.</p>
+            <a href="/en/insights/no-vendor-lock-in/" class="insights-card__link">Read More →</a>
+          </article>
+        
+          <article class="insights-card" onclick="location.href='/en/insights/privacy-by-default/'">
+            <h3 class="insights-card__title">
+              <a href="/en/insights/privacy-by-default/">Privacy by Default</a>
+            </h3>
+            <time class="insights-card__date" datetime="Sat Aug 15 2026 02:00:00 GMT+0200 (Central European Summer Time)">
+              August 15, 2026
+            </time>
+            <p class="insights-card__excerpt">How Konihaus keeps your data local, secure, and under your control.</p>
+            <a href="/en/insights/privacy-by-default/" class="insights-card__link">Read More →</a>
+          </article>
+        
+      </div>
+  </main>
+
+  <footer class="footer footer--legal">
+    <div class="container">
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz</p>
+        <div class="flegal">
+          <a href="/impressum" data-i18n="footer.col3_l1">Impressum</a>
+          <a href="/datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a>
+          <a href="/#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a>
+          <a href="/agb" data-i18n="footer.col3_l4">AGB</a>
+        </div>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+  <script src="/scripts.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+</html>
