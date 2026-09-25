@@ -28,9 +28,12 @@ const i18n = {
   },
 
   setBlogLink(lang) {
-    const blogLink = document.getElementById('blog_link');
+    const blogLink = document.querySelectorAll('.blog_link');
+    console.log(':', blogLink);
     if (blogLink) {
-      blogLink.href = `/${lang}/insights`;
+      blogLink.forEach((link) => {
+        link.setAttribute('href', `/${lang}/insights`);
+      });
     }
   },
 

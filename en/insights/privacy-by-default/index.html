@@ -132,21 +132,67 @@
 </head>
 <body>
 
-  <nav class="nav nav--solid">
+ <nav class="nav  nav--solid" id="nav">
     <div class="container">
-      <div class="nav__inner">
+      <div class="nav__inner ">
         <a href="/" class="logo" aria-label="Konihaus">
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          
-            <a href="/" class="legal-back">← Back to Home</a>
-          
+        <ul class="nav__links">
+          <li><a href="/#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="/#packages" data-i18n="nav.packages">Pakete</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a class="active blog_link" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+        <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: Deutsch"
+          >
+            <span class="language-current">DE</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de" onclick="switchToDe()">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en" onclick="switchToEn()">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
         </div>
+        <a href="/#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="/#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
+      <li><a href="/#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
+      <li><a href="/#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a class="active blog_link drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
 
 
   <main class="blog-post__container">
@@ -217,5 +263,22 @@
       </div>
     </div>
   </footer>
+    <script src="/scripts.js"></script>
+  <script src="/cookie-consent.js"></script>
+  <script>
+    const lang = "en";
+  
+    function switchToDe() {
+      if (lang === 'de') return;
+      location.href = '/de/insights/datenschutz-by-default/'
+    }
+
+    function switchToEn() {
+      if (lang === 'en') return;
+      location.href = '/de/insights/datenschutz-by-default/'
+    }
+
+
+  </script>
 </body>
 </html>

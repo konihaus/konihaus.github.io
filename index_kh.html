@@ -111,7 +111,7 @@
           <li><a href="#about" data-i18n="nav.about">Über Koni</a></li>
           <li><a href="#packages" data-i18n="nav.packages">Pakete</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-          <li><a id="blog_link" href="/blog" data-i18n="nav.blog">Blog</a></li>
+          <li><a class="blog_link" data-i18n="nav.blog">Blog</a></li>
         </ul>
         <div class="language-picker">
           <button
@@ -154,10 +154,10 @@
   <!-- MOBILE DRAWER -->
   <div class="nav__drawer" id="drawer">
     <ul>
-      <li><a href="#process" class="drawer-link" data-i18n="nav.process">Ablauf</a></li>
       <li><a href="#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
       <li><a href="#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
       <li><a href="#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a class="blog_link drawer-link" data-i18n="nav.blog">Blog</a></li>
     </ul>
     <a href="#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
   </div>
@@ -969,7 +969,7 @@
           <!-- Web3Forms' own honeypot field: must stay empty. Off-screen rather than display:none,
                since some bots specifically skip display:none fields. -->
           <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <!-- Second, independent honeypot (not a Web3Forms field, checked in scripts.js before we even submit) -->
+          <!-- Second, independent honeypot (not a Web3Forms field, checkfed in scripts.js before we even submit) -->
           <div class="hp-field" aria-hidden="true">
             <label for="hp-website">Website</label>
             <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
