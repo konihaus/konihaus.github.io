@@ -767,16 +767,24 @@ function setupHeroTaglines() {
   schedule();
 }
 
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-
-
+function initLanguagePicker() {
   const picker = document.querySelector(".language-picker");
+  if (!picker) return;
+
   const trigger = picker.querySelector(".language-trigger");
   const menu = picker.querySelector(".language-options");
   const current = picker.querySelector(".language-current");
   const select = picker.querySelector("#lang-selector");
   const options = [...picker.querySelectorAll(".language-option")];
+  const storageKey = "konihaus-language";
+
+  function readLanguage() {
+    try {
+      return localStorage.getItem(storageKey);
+    } catch {
+      return null;
+    }
+  }
 
   function syncLanguage() {
     current.textContent = select.value.toUpperCase();
@@ -788,7 +796,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (selected) {
         trigger.setAttribute(
           "aria-label",
-          `Language: ${option.firstElementChild.textContent}`
+          `Language: ${option.firstElementChild.textContent.trim()}`
         );
       }
     });
@@ -810,6 +818,16 @@ document.addEventListener('DOMContentLoaded', () => {
     (selected || options[0]).focus();
   }
 
+  select.addEventListener("change", () => {
+    syncLanguage();
+
+    try {
+      localStorage.setItem(storageKey, select.value);
+    } catch {
+      // Keep the selector usable when storage is unavailable.
+    }
+  });
+
   trigger.addEventListener("click", () => {
     if (menu.hidden) openMenu();
     else closeMenu();
@@ -817,14 +835,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      const changed = select.value !== option.dataset.lang;
       select.value = option.dataset.lang;
-      syncLanguage();
+      select.dispatchEvent(new Event("change", { bubbles: true }));
       closeMenu(true);
-
-      if (changed) {
-        select.dispatchEvent(new Event("change", { bubbles: true }));
-      }
     });
   });
 
@@ -834,7 +847,7 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu(true);
     }
 
-    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    if (["ArrowDown", "ArrowUp"].includes(event.key)) {
       event.preventDefault();
 
       if (menu.hidden) {
@@ -858,11 +871,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!picker.contains(event.relatedTarget)) closeMenu();
   });
 
-  select.addEventListener("change", syncLanguage);
+  // Restore storage BEFORE updating the visible selector.
+  const savedLanguage = readLanguage();
+  const supported = [...select.options].some(
+    (option) => option.value === savedLanguage
+  );
+
+  if (supported) {
+    select.value = savedLanguage;
+  }
+
   syncLanguage();
 
+  // Apply the restored language through your translation handler.
+  select.dispatchEvent(new Event("change", { bubbles: true }));
+}
 
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initLanguagePicker);
+} else {
+  initLanguagePicker();
+}
 
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
     setupMobileMenu();
