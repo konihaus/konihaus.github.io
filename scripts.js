@@ -29,7 +29,6 @@ const i18n = {
 
   setBlogLink(lang) {
     const blogLink = document.querySelectorAll('.blog_link');
-    console.log(':', blogLink);
     if (blogLink) {
       blogLink.forEach((link) => {
         link.setAttribute('href', `/${lang}/insights`);
@@ -999,6 +998,24 @@ function initLanguagePicker() {
 
   // Apply the restored language through your translation handler.
   select.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+function openBlogPrivacy() {
+  const link = {
+    de: '/de/insights/datenschutz-by-default/',
+    en: '/en/insights/privacy-by-default/'
+  };
+  const language = localStorage.getItem('lang') || 'de';
+  window.location.href = link[language];
+}
+
+function openBlogNoVendor() {
+  const link = {
+    de: '/de/insights/kein-vendor-lock-in/',
+    en: '/en/insights/no-vendor-lock-in/'
+  };
+  const language = localStorage.getItem('lang') || 'de';
+  window.location.href = link[language];
 }
 
 if (document.readyState === "loading") {
