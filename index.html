@@ -1359,7 +1359,6 @@ body.cc-lock .cc-banner {
         document.getElementById('progress-label').textContent = t.progressLabel;
         document.getElementById('bottom-contact').innerHTML = t.contactQuestion + ' <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a>';
 
-        // Keep the cookie banner (cookie-consent.js) and its settings link in the same language
         const ccLink = document.getElementById('cc-open-link');
         if (ccLink) ccLink.textContent = lang === 'en' ? 'Cookie settings' : 'Cookie-Einstellungen';
         if (window.i18n) {
@@ -1372,10 +1371,6 @@ body.cc-lock .cc-banner {
 
   <script src="cookie-consent.js"></script>
   <script>
-    // Minimal i18n shim: cookie-consent.js reads i18n.translations[i18n.currentLang].cookies for
-    // its text. This page only ever shows German or English (see the .lang-btn toggle above), so
-    // it only needs those two translation files, not the full 4-language set scripts.js loads
-    // elsewhere on the site.
     window.i18n = { currentLang: 'de', translations: {} };
     Promise.all([
       fetch('./translations/de.json').then((r) => r.json()),
@@ -1385,17 +1380,11 @@ body.cc-lock .cc-banner {
         window.i18n.translations.de = de;
         window.i18n.translations.en = en;
       })
-      .catch(() => {
-        // Translations unreachable: the banner still renders (cookie-consent.js falls back
-        // gracefully), just without cookie-policy text until the page is reloaded.
-      })
+      .catch(() => {})
       .finally(() => {
         if (window.cookieConsent) window.cookieConsent.init();
       });
   </script>
-
-  <!-- Google Analytics is loaded by cookie-consent.js, only after the visitor allows "statistics" -->
-
 </body>
 
 </html>
