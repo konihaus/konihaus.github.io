@@ -980,8 +980,10 @@ function initLanguagePicker() {
     if (!picker.contains(event.target)) closeMenu();
   });
 
-  picker.addEventListener("focusout", (event) => {
-    if (!picker.contains(event.relatedTarget)) closeMenu();
+  picker.addEventListener("focusout", () => {
+    setTimeout(() => {
+      if (!picker.contains(document.activeElement)) closeMenu();
+    }, 0);
   });
 
   // Restore storage BEFORE updating the visible selector.
