@@ -1018,16 +1018,14 @@ function openBlogNoVendor() {
   window.location.href = link[language];
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initLanguagePicker);
-} else {
-  initLanguagePicker();
-}
-
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
+    
+    // MOVE THIS HERE - after i18n is ready
+    initLanguagePicker();
+    
     setupMobileMenu();
     setupScrollAnimations();
     setupPackageTabs();
@@ -1036,11 +1034,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setupExamplesCarousel();
     setupPackageRequestButtons();
     setupHeroTaglines();
+    
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
     applyDeepLinkedPackage();
     document.documentElement.classList.remove('no-js');
-    const moreStart = document.getElementById('morestart'); // only on the home page
+    const moreStart = document.getElementById('morestart');
     if (moreStart) {
       moreStart.addEventListener('click', (e) => {
         e.preventDefault();
@@ -1054,18 +1053,14 @@ document.addEventListener('DOMContentLoaded', () => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').then((registration) => {
-      // console.log('Service Worker registered successfully:', registration);
-
-      // Check for updates periodically
       setInterval(() => {
         registration.update();
-      }, 60000); // Check every minute
+      }, 60000);
     }).catch((error) => {
       console.warn('Service Worker registration failed:', error);
     });
   });
 
-  // Handle service worker updates
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     console.log('Service Worker updated');
   });
