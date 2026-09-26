@@ -1039,6 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
     applyDeepLinkedPackage();
+    document.documentElement.classList.remove('no-js');
     const moreStart = document.getElementById('morestart'); // only on the home page
     if (moreStart) {
       moreStart.addEventListener('click', (e) => {
