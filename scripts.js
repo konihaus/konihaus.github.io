@@ -29,6 +29,13 @@ function setCookie(name, value, days = 365) {
   }
 }
 
+function getLangFromPath() {
+  const path = window.location.pathname;
+  if (path.startsWith('/de/')) return 'de';
+  if (path.startsWith('/en/')) return 'en';
+  return null;
+}
+
 // Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
@@ -36,7 +43,8 @@ window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', windo
 const i18n = {
   // Priority: shared cross-subdomain cookie first (the most recent choice made on EITHER
   // konihaus.ch or blog.konihaus.ch), then this origin's own localStorage, then default.
-  currentLang: getCookie(LANG_COOKIE) || localStorage.getItem('lang') || 'de',
+
+  currentLang: getLangFromPath() || getCookie(LANG_COOKIE) || localStorage.getItem('lang') || 'de',
   supportedLangs: ['de', 'en'/*, 'fr', 'it'*/],
   translations: {},
   baseDir:
