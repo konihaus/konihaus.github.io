@@ -1,9 +1,42 @@
+// Cross-subdomain language sync (konihaus.ch <-> blog.konihaus.ch)
+//
+// localStorage is per-origin, so a language choice made on konihaus.ch is invisible to
+// blog.konihaus.ch and vice versa. A cookie scoped to ".konihaus.ch" (the leading dot) is
+// shared by every subdomain, so that's the source of truth whenever a choice needs to carry
+// over between the two sites. localStorage is kept too, purely as a same-origin fallback for
+// when cookies are blocked. On localhost / file:// (local dev) the "domain=.konihaus.ch"
+// attribute would just make the cookie silently fail to set, so it's only added when the page
+// is actually being served from a konihaus.ch host.
+const LANG_COOKIE = 'konihaus-language';
+
+function getCookie(name) {
+  try {
+    const escaped = name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1');
+    const match = document.cookie.match(new RegExp('(?:^|; )' + escaped + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
+  } catch {
+    return null;
+  }
+}
+
+function setCookie(name, value, days = 365) {
+  try {
+    const host = window.location.hostname;
+    const domainAttr = host.endsWith('konihaus.ch') ? '; domain=.konihaus.ch' : '';
+    document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${days * 24 * 60 * 60}${domainAttr}; SameSite=Lax`;
+  } catch {
+    // Keep the site usable when cookies are unavailable.
+  }
+}
+
 // Nav scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 // i18n Configuration
 const i18n = {
-  currentLang: localStorage.getItem('lang') || 'de',
+  // Priority: shared cross-subdomain cookie first (the most recent choice made on EITHER
+  // konihaus.ch or blog.konihaus.ch), then this origin's own localStorage, then default.
+  currentLang: getCookie(LANG_COOKIE) || localStorage.getItem('lang') || 'de',
   supportedLangs: ['de', 'en'/*, 'fr', 'it'*/],
   translations: {},
   baseDir:
@@ -27,7 +60,7 @@ const i18n = {
     this.setupLanguageSelector();
   },
 
-  setBlogLink(lang) {
+    setBlogLink(lang) {
     const blogLink = document.querySelectorAll('.blog_link');
     if (blogLink) {
       blogLink.forEach((link) => {
@@ -41,6 +74,7 @@ const i18n = {
 
     this.currentLang = lang;
     localStorage.setItem('lang', lang);
+    setCookie(LANG_COOKIE, lang); // shared with the other konihaus.ch subdomain
     document.documentElement.lang = lang;
 
     this.setBlogLink(lang);
@@ -889,11 +923,15 @@ function initLanguagePicker() {
   const current = picker.querySelector(".language-current");
   const select = picker.querySelector("#lang-selector");
   const options = [...picker.querySelectorAll(".language-option")];
-  const storageKey = "konihaus-language";
+  const storageKey = LANG_COOKIE; // same name used for the shared cross-subdomain cookie
 
+  // Cross-subdomain cookie first (the most recent choice made on EITHER konihaus.ch or
+  // blog.konihaus.ch), then this origin's own localStorage as a same-origin fallback.
   function readLanguage() {
+    const fromCookie = getCookie(storageKey);
+    if (fromCookie) return fromCookie;
     try {
-      return localStorage.getItem(storageKey);
+      return localStorage.getItem(storageKey) || localStorage.getItem('lang');
     } catch {
       return null;
     }
@@ -1024,10 +1062,9 @@ function openBlogNoVendor() {
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
-    
-    // MOVE THIS HERE - after i18n is ready
+
     initLanguagePicker();
-    
+
     setupMobileMenu();
     setupScrollAnimations();
     setupPackageTabs();
@@ -1036,11 +1073,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setupExamplesCarousel();
     setupPackageRequestButtons();
     setupHeroTaglines();
-    
+
     // Initialize package content with i18n on page load
     updatePackageContent('basis');
     applyDeepLinkedPackage();
-    document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.remove('no-js');
 
     const requiredFonts = Promise.all([
       document.fonts.load('400 1em "Outfit"'),
