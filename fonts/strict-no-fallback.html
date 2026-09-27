@@ -1,0 +1,28 @@
+<!--
+  Optional strict mode. Put the style and first script early in <head>,
+  after the font preloads and before visible page markup.
+-->
+<style>
+  html.fonts-loading body {
+    visibility: hidden;
+  }
+</style>
+
+<script>
+  document.documentElement.classList.add("fonts-loading");
+</script>
+
+<!-- Put this script just before </body>. -->
+<script>
+  const requiredFonts = Promise.all([
+    document.fonts.load('400 1em "Outfit"'),
+    document.fonts.load('400 1em "Cormorant Garamond"'),
+    document.fonts.load('italic 400 1em "Cormorant Garamond"')
+  ]);
+
+  const safetyTimeout = new Promise(resolve => setTimeout(resolve, 2500));
+
+  Promise.race([requiredFonts, safetyTimeout]).finally(() => {
+    document.documentElement.classList.remove("fonts-loading");
+  });
+</script>

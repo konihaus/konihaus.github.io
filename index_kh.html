@@ -8,12 +8,19 @@
     <!-- Hide content until JS loads and sets language -->
   <script>
     document.documentElement.classList.add('no-js');
+    document.documentElement.classList.add("fonts-loading");
   </script>
   <style>
     html.no-js body {
       display: none;
     }
+    html.fonts-loading body {
+      visibility: hidden;
+    }
   </style>
+
+
+
   
   <!-- rest of head... -->
    
@@ -66,10 +73,27 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+    rel="preload"
+    href="fonts/outfit-latin-normal.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+  <link
+    rel="preload"
+    href="fonts/cormorant-garamond-latin-normal.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
+  <link
+    rel="preload"
+    href="fonts/cormorant-garamond-latin-italic.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
   <link rel="stylesheet" href="styles.css">
 
   <!-- Structured data. Reflects the real registered business (Konihaus, Konrad Hefelle,
@@ -1087,19 +1111,19 @@
         <div>
           <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
           <ul class="flinks">
-            <li><a href="#packages" data-i18n="footer.col1_l1">Standard</a></li>
-            <li><a href="#packages" data-i18n="footer.col1_l2">Für Senioren</a></li>
-            <li><a href="#packages" data-i18n="footer.col1_l3">Für Mieter</a></li>
-            <li><a href="#packages" data-i18n="footer.col1_l4">Für Ferienhäuser</a></li>
+            <li><a href="#packages" data-i18n="footer.col1_l1">Pakete & Preise</a></li>
+            <li><a href="#devices" data-i18n="footer.col1_l2">Geräte & Technik</a></li>
+            <li><a href="#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+            <li><a href="#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
           </ul>
         </div>
         <div>
           <div class="fcol-title" data-i18n="footer.col2_title">Unternehmen</div>
           <ul class="flinks">
-            <li><a href="#about" data-i18n="footer.col2_l1">Über Koni</a></li>
+            <li><a href="#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
             <li><a href="#process" data-i18n="footer.col2_l2">So funktioniert's</a></li>
             <li><a href="#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
-            <li><a href="#contact" data-i18n="footer.col2_l4">Kontakt</a></li>
+            <li><a href="#about" data-i18n="footer.col2_l4">Über Koni</a></li>
           </ul>
         </div>
         <div>
@@ -1113,7 +1137,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Affoltern am Albis, Schweiz
         </p>
         <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
       </div>

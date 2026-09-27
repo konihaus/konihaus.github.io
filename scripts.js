@@ -1041,6 +1041,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePackageContent('basis');
     applyDeepLinkedPackage();
     document.documentElement.classList.remove('no-js');
+
+    const requiredFonts = Promise.all([
+      document.fonts.load('400 1em "Outfit"'),
+      document.fonts.load('400 1em "Cormorant Garamond"'),
+      document.fonts.load('italic 400 1em "Cormorant Garamond"')
+    ]);
+
+    const safetyTimeout = new Promise(resolve => setTimeout(resolve, 2500));
+
+    Promise.race([requiredFonts, safetyTimeout]).finally(() => {
+      document.documentElement.classList.remove("fonts-loading");
+    });
+
     const moreStart = document.getElementById('morestart');
     if (moreStart) {
       moreStart.addEventListener('click', (e) => {
