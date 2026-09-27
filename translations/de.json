@@ -1,6 +1,7 @@
 {
   "nav": {
     "packages": "Pakete",
+    "intro": "Was ist Konihaus",
     "blog": "Blog",
     "about": "Über Koni",
     "contact": "Kontakt",
@@ -593,6 +594,7 @@
     "imp_contact": "Kontakt",
     "imp_phone": "Telefon",
     "imp_email": "E-Mail",
+    "imp_email_val": "hallo@konihaus.ch",
     "imp_whatsapp_cta": "Nachricht senden"
   },
   "faq": {

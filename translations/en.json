@@ -1,6 +1,7 @@
 {
   "nav": {
     "packages": "Packages",
+    "intro": "What is Konihaus",
     "blog": "Blog",
     "about": "About Koni",
     "contact": "Contact",
@@ -502,7 +503,7 @@
     "form_submit": "Send Message →",
     "form_sending": "Sending …",
     "form_success": "Thank you! Your message has been sent. I'll get back to you within 24 hours.",
-    "form_error": "That didn't work, sorry. Please email me directly at <a href=\"mailto:hallo@konihaus.ch\">hallo@konihaus.ch</a>.",
+    "form_error": "That didn't work, sorry. Please email me directly at <a href=\"mailto:hello@konihaus.ch\">hello@konihaus.ch</a>.",
     "form_error_invalid": "Please fill in name, email and message — with a valid email address.",
     "form_note": "No advertising. No newsletter. Just Koni.",
     "safety_title1": "Important:",
@@ -593,6 +594,7 @@
     "imp_contact": "Contact",
     "imp_phone": "Phone",
     "imp_email": "Email",
+    "imp_email_val": "hello@konihaus.ch",
     "imp_whatsapp_cta": "Send a message"
   },
   "faq": {
