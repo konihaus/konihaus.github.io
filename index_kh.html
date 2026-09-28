@@ -89,6 +89,7 @@
     crossorigin
   >
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="qr-discount.css">
 
   <!-- Structured data. Reflects the real registered business (Konihaus, Konrad Hefelle,
        8910 Affoltern am Albis) and real pricing tiers — kept accurate even while the page
@@ -700,6 +701,7 @@
         <div class="pkg reveal d2">
           <div class="pkg__top">
             <span class="pkg__badge badge-d" data-i18n="packages.pkg2_badge">Essential</span>
+            <span class="pkg__discount-badge" data-i18n="qr.banner" hidden>🎁 10% Rabatt im 1. Jahr</span>
             <div class="pkg__name" data-basis="Standard" data-senioren="Safe at Home" data-mieter="Miet-Sicherheit"
               data-ferienhaus="Holiday Security">Standard</div>
             <div class="pkg__tag" data-basis="Einstieg ins Smart Home" data-senioren="Sicherheit und Grundfunktionen"
@@ -726,6 +728,7 @@
         <div class="pkg pkg-featured reveal d3">
           <div class="pkg__top">
             <span class="pkg__badge badge-f" data-i18n="packages.pkg3_badge">Empfohlen</span>
+            <span class="pkg__discount-badge" data-i18n="qr.banner" hidden>🎁 10% Rabatt im 1. Jahr</span>
             <div class="pkg__name" data-basis="Advanced" data-senioren="Peace of Mind" data-mieter="Umfassender Schutz"
               data-ferienhaus="Holiday Peace of Mind">Advanced</div>
             <div class="pkg__tag" data-basis="Umfassende Smart-Home Lösung"
@@ -753,6 +756,7 @@
         <div class="pkg pkg-premium reveal d4">
           <div class="pkg__top">
             <span class="pkg__badge badge-d" data-i18n="packages.pkg4_badge">Premium</span>
+            <span class="pkg__discount-badge" data-i18n="qr.banner" hidden>🎁 10% Rabatt im 1. Jahr</span>
             <div class="pkg__name" data-basis="All in" data-senioren="Independent Living" data-mieter="Smart Living"
               data-ferienhaus="Holiday Complete">All in</div>
             <div class="pkg__tag" data-basis="Komplette Smart-Home Lösung" data-senioren="Vollständig ausgestattet"
@@ -1006,6 +1010,7 @@
             <label for="hp-website">Website</label>
             <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
           </div>
+          <input type="hidden" name="discount_code" id="discount-code-field" value="">
           <div class="frow">
             <div class="fg"><label for="n" data-i18n="contact.form_name_label">Name</label><input type="text" id="n"
                 data-i18n="contact.form_name_placeholder" placeholder="Max Muster" required>
@@ -1139,7 +1144,27 @@
     </div>
   </footer>
 
+  <div class="qr-modal" id="qr-modal" hidden>
+    <div class="qr-modal__backdrop" data-qr-close></div>
+    <div class="qr-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+      <button type="button" class="qr-modal__close" data-qr-close aria-label="Schliessen">&times;</button>
+      <p class="qr-modal__badge" data-i18n="qr.badge">Exklusiver Rabatt</p>
+      <h3 class="qr-modal__title" id="qr-modal-title" data-i18n="qr.title">Ihr Willkommensrabatt</h3>
+      <p class="qr-modal__body" data-i18n="qr.body">Sie haben unseren QR-Code gescannt! Sichern Sie sich 10% Rabatt auf
+        das erste Jahr — gültig für alle Pakete oberhalb Basis.</p>
+      <div class="qr-modal__code-box">
+        <span class="qr-modal__code" id="qr-modal-code">ABCD1234</span>
+        <button type="button" class="qr-modal__copy" id="qr-modal-copy" data-i18n="qr.copy">Kopieren</button>
+      </div>
+      <p class="qr-modal__note" data-i18n="qr.note">Der Code wird automatisch in Ihre Anfrage übernommen, sobald Sie ein
+        passendes Paket auswählen. Gültig für Standard, Advanced und All-in.</p>
+      <a href="#contact" class="btn btn-primary qr-modal__cta" id="qr-modal-cta" data-i18n="qr.cta">Jetzt Angebot
+        anfragen →</a>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
+  <script src="qr-discount.js"></script>
   <script src="cookie-consent.js"></script>
   <!-- Web3Forms hCaptcha proxy: only needed for the contact form's spam check -->
   <script src="https://web3forms.com/client/script.js" async defer></script>

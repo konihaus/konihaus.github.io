@@ -1,0 +1,173 @@
+/* QR sticker discount popup + package-card badges.
+   Uses the same design tokens as styles.css (--forest, --amber, --parchment, etc.)
+   so it looks native to the page without needing to touch the main stylesheet. */
+
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.qr-modal[hidden] {
+  display: none;
+}
+
+.qr-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 25, 22, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.qr-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: var(--parchment);
+  border-radius: 18px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(26, 25, 22, 0.35);
+  animation: qrModalIn 0.3s var(--ease) both;
+}
+
+@keyframes qrModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.qr-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--ink-3);
+  background: rgba(26, 25, 22, 0.06);
+  transition: background 0.2s, color 0.2s;
+}
+
+.qr-modal__close:hover {
+  background: rgba(26, 25, 22, 0.12);
+  color: var(--ink);
+}
+
+.qr-modal__badge {
+  display: inline-block;
+  font-size: 0.6875em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--forest);
+  background: var(--forest-tint);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.qr-modal__title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 4vw, 30px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.qr-modal__body {
+  font-size: 0.875em;
+  font-weight: 300;
+  color: var(--ink-3);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.qr-modal__code-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--forest);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.qr-modal__code {
+  font-family: var(--sans);
+  font-size: 1.375em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--amber-warm);
+}
+
+.qr-modal__copy {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--parchment);
+  background: rgba(247, 244, 237, 0.14);
+  border: 1px solid rgba(247, 244, 237, 0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.qr-modal__copy:hover {
+  background: rgba(247, 244, 237, 0.22);
+}
+
+.qr-modal__note {
+  font-size: 0.75em;
+  color: var(--ink-4);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.qr-modal__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .qr-modal__dialog {
+    padding: 32px 22px 24px;
+  }
+}
+
+/* Package-card badge: shown on the Essential/Advanced/Premium cards (never Starter)
+   once a discount is active. Sits right under the existing badge-d/badge-f pill. */
+.pkg__discount-badge {
+  display: inline-block;
+  font-size: 0.6875em;
+  font-weight: 600;
+  color: var(--forest);
+  background: var(--amber-tint);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin: 0 0 6px;
+}
+
+.pkg__discount-badge[hidden] {
+  display: none;
+}
+
+.pkg-featured .pkg__discount-badge {
+  color: var(--ink);
+  background: var(--amber-warm);
+}

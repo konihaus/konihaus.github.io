@@ -481,6 +481,7 @@
     "note": "Response within 24h · No call center — you speak directly with Koni"
   },
   "contact": {
+    "form_prefill_discount": "Discount code: {code} (10% off the first year)",
     "eye": "Contact",
     "h2": "Let's Talk About<br><em>Your Home.</em>",
     "p": "Tell me briefly about your situation — whether senior home, family house, or vacation property. I'll respond within 24 hours.",
@@ -812,5 +813,16 @@
     "cta_btn1": "View package",
     "cta_btn2": "Free consultation",
     "back": "← Back to examples"
-  }
+  },
+  "qr": {
+    "badge": "Exclusive Discount",
+    "title": "Your Welcome Discount",
+    "body": "You scanned our QR code! Get 10% off your first year — valid on every package above Basis.",
+    "note": "The code is added to your request automatically once you pick an eligible package. Valid for Standard, Advanced, and All-in.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "cta": "Request your quote →",
+    "close": "&times;",
+    "banner": "🎁 10% off first year"
+  }  
 }

@@ -481,6 +481,7 @@
     "note": "Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni"
   },
   "contact": {
+    "form_prefill_discount": "Rabattcode: {code} (10% auf das 1. Jahr)",
     "eye": "Kontakt",
     "h2": "Sprechen wir<br>über <em>Ihr Zuhause.</em>",
     "p": "Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung, Elternhaus oder Feriendomizil. Ich melde mich innert 24 Stunden.",
@@ -812,5 +813,16 @@
     "cta_btn1": "Paket ansehen",
     "cta_btn2": "Kostenlose Beratung",
     "back": "← Zurück zu den Beispielen"
+  },
+  "qr": {
+    "badge": "Exklusiver Rabatt",
+    "title": "Ihr Willkommensrabatt",
+    "body": "Sie haben unseren QR-Code gescannt! Sichern Sie sich 10% Rabatt auf das erste Jahr — gültig für alle Pakete oberhalb Basis.",
+    "note": "Der Code wird automatisch in Ihre Anfrage übernommen, sobald Sie ein passendes Paket auswählen. Gültig für Standard, Advanced und All-in.",
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "cta": "Jetzt Angebot anfragen →",
+    "close": "&times;",
+    "banner": "🎁 10% Rabatt im 1. Jahr"
   }
 }

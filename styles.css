@@ -514,7 +514,7 @@ a.logo {
 
 .hero__deco {
   position: absolute;
-  right: 0;
+  right: -15%;
   top: 15%;
   transform: translateY(-52%);
   width: 560px;
