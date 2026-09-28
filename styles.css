@@ -952,7 +952,6 @@ a.logo {
   align-items: start;
 }
 
-/* 4 cards need more room than the default 1120px container */
 .packages .container {
   max-width: 1280px;
 }
@@ -965,8 +964,6 @@ a.logo {
   padding: 22px 22px 26px;
 }
 
-/* Between desktop and the ≤900px accordion layout: 2 x 2 grid.
-   Must stay ABOVE the ≤900px block so that block still wins. */
 @media (max-width: 1100px) {
   .pkg-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -981,20 +978,12 @@ a.logo {
   background: var(--parchment);
   border-radius: 16px;
   border: 1px solid var(--warm-mid);
-  /*overflow: hidden;*/
   transition: transform .3s var(--ease), box-shadow .3s;
 }
 
 .pkg:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 60px rgba(26, 25, 22, .09);
-}
-
-/* Briefly highlights a package card scrolled to via a deep link from an example page
-   (see applyDeepLinkedPackage in scripts.js), so it's clear which card the visitor was sent to. */
-.pkg--highlight {
-  box-shadow: 0 0 0 3px var(--amber-warm), 0 20px 60px rgba(26, 25, 22, .12);
-  transition: box-shadow .3s var(--ease), transform .3s var(--ease);
 }
 
 .pkg-featured {
@@ -1036,8 +1025,42 @@ a.logo {
   box-shadow: 0 24px 64px rgba(30, 42, 77, .3);
 }
 
+.pkg--highlight {
+  background: var(--amber-warm) !important;
+  transition: background .3s var(--ease), transform .3s var(--ease);
+  /*box-shadow: 0 0 0 3px var(--amber-warm), 0 20px 60px rgba(26, 25, 22, .12);
+  transition: box-shadow .3s var(--ease), transform .3s var(--ease);*/
+}
 
+.pkg--highlight .pkg__name {
+  color: var(--stone) !important;
+}
 
+.pkg--highlight .pkg__outcomes li,
+.pkg--highlight .pkg__mo,
+.pkg--highlight .pkg__num,
+.pkg--highlight .pkg__note,
+.pkg--highlight .pkg__from {
+  color: var(--ink) !important;
+}
+.pkg--highlight .pkg__highlight,
+.pkg--highlight .pkg__toggle {
+  color: var(--forest) !important;
+}
+.pkg--highlight .chk {
+  background: var(--forest-tint) !important;
+  color: var(--forest) !important;
+}
+
+.pkg--highlight .pkg__tag {
+  color: var(--ink-3) !important;
+} 
+
+.pkg--highlight .btn-pkg-f {
+  background: var(--cream) !important;
+  color: var(--forest) !important;
+  border: 1.5px solid var(--forest) !important;
+}
 
 .pkg__disclaimer {
   display: none;
