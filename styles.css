@@ -2142,18 +2142,26 @@ a.logo {
   scrollbar-width: none;
 }
 
+.examples__track-wrap::after,
 .examples__track-wrap::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 54px;
-  right: 54px;
-  height: 100%;
-  
-  box-shadow: inset -2em 0 1em var(--parchment), inset 2em 0 1em var(--parchment);
+  top: -30px;
+  bottom: -30px;
+  width: 40px;
   z-index: 100;
 }
+
+.examples__track-wrap::after {
+  box-shadow: inset 1em 0 1em var(--parchment);
+  left: 54px;
+}
+
+.examples__track-wrap::before {
+  box-shadow:  inset -1em 0 1em var(--parchment);
+  right: 54px;
+}
+
 
 .examples__track::-webkit-scrollbar {
   display: none;
@@ -2295,6 +2303,7 @@ a.logo {
   .examples__track-wrap {
     margin: 0 -20px;
   }
+  .examples__track-wrap::after,
   .examples__track-wrap::before {
     display: none;
   }
