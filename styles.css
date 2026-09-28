@@ -2127,6 +2127,7 @@ a.logo {
   gap: 16px;
   max-width: 1000px;
   margin: 24px auto 0;
+  position: relative;
 }
 
 .examples__track {
@@ -2135,10 +2136,23 @@ a.logo {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 24px 28px 48px;
-  margin: -24px -24px-48px;
+  padding: 30px 0;
+  margin: -30px 0;
   flex: 1;
   scrollbar-width: none;
+}
+
+.examples__track-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 54px;
+  right: 54px;
+  height: 100%;
+  
+  box-shadow: inset -2em 0 1em var(--parchment), inset 2em 0 1em var(--parchment);
+  z-index: 100;
 }
 
 .examples__track::-webkit-scrollbar {

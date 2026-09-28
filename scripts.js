@@ -595,7 +595,7 @@ function setupExamplesCarousel() {
   }
 
   track.addEventListener('pointerdown', stopAutoplay, { passive: true, once: true });
-
+  
   track.addEventListener("touchstart", () => {
       stopAutoplay();
   });
@@ -607,11 +607,25 @@ function setupExamplesCarousel() {
     }, 4000);
   });
 
+  let sct;
+  
+  function cancelSct() {
+    clearTimeout(sct);
+  }
+
   function scrollByCard(dir) {
+    if (typeof sct === "number") {
+      cancelSct();
+    }
     stopAutoplay();
+    autoplay = false;
     const card = originalCards[0];
     const step = card ? card.offsetWidth + cardGap : 300;
     track.scrollBy({ left: dir * step, behavior: 'smooth' });
+    sct = setTimeout(() => {
+      autoplay = true;
+      startAutoplay();
+    }, 4000);
   }
   if (prev) prev.addEventListener('click', () => scrollByCard(-1));
   if (next) next.addEventListener('click', () => scrollByCard(1));
@@ -934,6 +948,7 @@ function openBlogNoVendor() {
 document.addEventListener('DOMContentLoaded', () => {
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
+    document.documentElement.classList.remove('no-js');
 
     initLanguagePicker();
 
@@ -948,7 +963,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePackageContent('basis');
     applyDeepLinkedPackage();
     if (typeof initQrDiscount === 'function') initQrDiscount();
-    document.documentElement.classList.remove('no-js');
+    
 
     const requiredFonts = Promise.all([
       document.fonts.load('400 1em "Outfit"'),
