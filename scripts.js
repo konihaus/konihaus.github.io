@@ -68,15 +68,6 @@ const i18n = {
     this.setupLanguageSelector();
   },
 
-    setBlogLink(lang) {
-    const blogLink = document.querySelectorAll('.blog_link');
-    if (blogLink) {
-      blogLink.forEach((link) => {
-        link.setAttribute('href', `/${lang}/insights`);
-      });
-    }
-  },
-
   setLanguage(lang) {
     if (!this.supportedLangs.includes(lang)) lang = 'de';
 
@@ -84,8 +75,6 @@ const i18n = {
     localStorage.setItem('lang', lang);
     setCookie(LANG_COOKIE, lang); // shared with the other konihaus.ch subdomain
     document.documentElement.lang = lang;
-
-    this.setBlogLink(lang);
 
     // hCaptcha reads data-lang when its widget first mounts. Keeping this attribute in sync
     // on every language change covers the normal case (visitor picks a language, then reaches
