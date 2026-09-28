@@ -597,6 +597,7 @@ function setupExamplesCarousel() {
   track.addEventListener('pointerdown', stopAutoplay, { passive: true, once: true });
   
   track.addEventListener("touchstart", () => {
+      console.log("g");
       stopAutoplay();
   });
 

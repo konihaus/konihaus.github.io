@@ -2290,6 +2290,19 @@ a.logo {
 }
 
 @media (max-width: 600px) {
+  
+
+  .examples__track-wrap {
+    margin: 0 -20px;
+  }
+  .examples__track-wrap::before {
+    display: none;
+  }
+
+  .examples__card {
+    max-width: 70%;
+  }
+
   .examples {
     padding: 64px 0;
   }
