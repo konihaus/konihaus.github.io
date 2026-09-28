@@ -1182,6 +1182,22 @@ a.logo {
   color: var(--amber-warm);
 }
 
+.pkg__num.discount {
+  color: var(--amber-warm);
+}
+
+.pkg-featured .pkg__num.discount {
+  color: var(--amber);
+}
+.pkg-featured .pkg__num.pkg__num-strike,
+.pkg__num.pkg__num-strike {
+  text-decoration: line-through;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--ink-4);
+}
+
+
 .pkg__mo {
   font-size: 0.75em;
   color: var(--ink-3);
