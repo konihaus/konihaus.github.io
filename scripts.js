@@ -951,6 +951,10 @@ document.addEventListener('DOMContentLoaded', () => {
       energy: {
         de: 'energieeffizienz',
         en: 'energy-efficiency'
+      },
+      future: {
+        de: 'zukunftssicher',
+        en: 'future-proof'
       }
     }
 
