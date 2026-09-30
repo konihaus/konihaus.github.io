@@ -1162,7 +1162,7 @@ a.logo {
   font-size: 1em;
   color: var(--ink-3);
   align-self: flex-end;
-  padding-top: 5px;
+  
 }
 
 .pkg-featured .pkg__from {
@@ -1175,7 +1175,11 @@ a.logo {
   font-weight: 100;
   letter-spacing: -.03em;
   color: var(--ink);
-  line-height: 1;
+  line-height: .5em;
+}
+
+.pkg__num.pkg__num-strike {
+  line-height: 1em;
 }
 
 .pkg-featured .pkg__num {
@@ -1192,11 +1196,35 @@ a.logo {
 .pkg-featured .pkg__num.pkg__num-strike,
 .pkg__num.pkg__num-strike {
   text-decoration: line-through;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 300;
   color: var(--ink-4);
 }
 
+/* "Typical for ..." reference line under the package tagline: a quiet chip, so the price has a real-world anchor */
+.pkg__assume {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 5px 11px;
+  border-radius: 10px;
+  background: var(--forest-tint);
+  color: var(--forest);
+  font-size: 0.6875em;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: .01em;
+}
+
+.pkg-featured .pkg__assume {
+  background: rgba(247, 244, 237, .10);
+  color: rgba(247, 244, 237, .85);
+}
+
+.pkg--highlight .pkg__assume {
+  background: rgba(26, 25, 22, .08) !important;
+  color: var(--ink) !important;
+}
 
 .pkg__mo {
   font-size: 0.75em;
@@ -1385,12 +1413,37 @@ a.logo {
   color: rgba(247, 244, 237, .28);
 }
 
+/* Setup-investment range: a notch more visible than the rest of the note, still secondary to the "waived" line */
+.pkg__note .pkg__setup-range {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+.pkg-featured .pkg__note .pkg__setup-range {
+  color: rgba(247, 244, 237, .6);
+}
+
 /* Footnote under the grid (shading automation asterisk) */
 .pkg__shading-note {
   text-align: center;
   margin-top: 24px;
   font-size: 0.75em;
   color: var(--ink-3);
+}
+
+/* "What drives your price" line, directly above the shading footnote */
+.pkg__drivers {
+  max-width: 720px;
+  margin: 24px auto 0;
+  text-align: center;
+  font-size: 0.8125em;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.pkg__drivers + .pkg__shading-note {
+  margin-top: 8px;
 }
 
 /* One-line "not an emergency service" hint under the package grid (audiences: data-audiences) */
@@ -1501,7 +1554,7 @@ a.logo {
 /* FAQ (beside pricing) */
 .faq {
   padding: 72px 0 112px;
-  background: var(--cream);
+  background: var(--warm-mid);
 }
 
 .faq-list {
@@ -1511,12 +1564,16 @@ a.logo {
 
 .faq-item {
   background: var(--parchment);
-  border: 1px solid var(--warm-mid);
+  border: 1px solid var(--ink-4);
   border-radius: 12px;
 }
 
 .faq-item + .faq-item {
   margin-top: 12px;
+}
+
+.faq-eye {
+  color: var(--amber) !important;
 }
 
 .faq-q {

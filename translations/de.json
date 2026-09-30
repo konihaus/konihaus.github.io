@@ -42,16 +42,16 @@
   },
   "packages": {
     "eye": "Preise & Pakete",
-    "h2_basis": "Das richtige Paket<br><em>für Ihr Zuhause.</em>",
-    "h2_senioren": "Das richtige Paket<br><em>für Ihre Situation.</em>",
-    "h2_mieter": "Das richtige Paket<br><em>für Ihre Mietwohnung.</em>",
-    "h2_ferienhaus": "Das richtige Paket<br><em>für Ihr Ferienhaus.</em>",
-    "sub": "Alle Pakete beinhalten Installation, Einrichtung und laufende Fernbetreuung. Keine versteckten Kosten.",
+    "h2_basis": "Beispiel-Pakete<br><em>für Ihr Zuhause.</em>",
+    "h2_senioren": "Beispiel-Pakete<br><em>für Ihre Situation.</em>",
+    "h2_mieter": "Beispiel-Pakete<br><em>für Ihre Mietwohnung.</em>",
+    "h2_ferienhaus": "Beispiel-Pakete<br><em>für Ihr Ferienhaus.</em>",
+    "sub": "Jedes Zuhause ist anders, darum wird jede Offerte individuell erstellt. Diese typischen Konfigurationen geben Ihnen vorab eine Preisorientierung. Installation, Einrichtung und laufende Fernbetreuung sind immer inklusive — ohne versteckte Kosten.",
     "tab1": "Generische Pakete",
     "tab2": "Für Senioren",
     "tab3": "Für Mieter",
     "tab4": "Für Ferienhäuser",
-    "pkg_from": "ab",
+    "pkg_from": "ab CHF",
     "pkg_mo": "/Monat",
     "pkg_includes_basis": "Beispiel-Ausstattung:",
     "pkg_includes_senioren": "Sicherheitsausstattung:",
@@ -67,6 +67,7 @@
     "pkg1_tag_mieter": "Einfacher Einstieg ohne Umbau",
     "pkg1_tag_ferienhaus": "Präsenz und Zutritt im Blick",
     "pkg1_price": "29",
+    "pkg1_assume": "Typisch für eine 1–2-Zimmer-Wohnung · ca. 7 Geräte",
     "basis_pkg1_outcomes": [
       "Im Monatsbericht sehen, wie Ihr Zuhause genutzt wird",
       "Wissen, ob Türen und Fenster offen oder geschlossen sind",
@@ -119,8 +120,8 @@
       "Monatlicher Abwesenheitsbericht",
       "E-Mail- & WhatsApp-Support (Antwort innert 48h)"
     ],
-    "pkg1_btn": "Jetzt anfragen",
-    "pkg1_note": "Einrichtungsinvestition ~CHF 200-260 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg1_btn": "Offerte anfragen",
+    "pkg1_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 200-260</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "pkg2_badge": "Essential",
     "pkg2_name_basis": "Standard",
     "pkg2_name_senioren": "Sicher zu Hause",
@@ -131,6 +132,7 @@
     "pkg2_tag_mieter": "Vermögenswerte schützen",
     "pkg2_tag_ferienhaus": "Grundschutz bei Abwesenheit",
     "pkg2_price": "49",
+    "pkg2_assume": "Typisch für eine 3-Zimmer-Wohnung · ca. 10 Geräte",
     "basis_pkg2_outcomes": [
       "Wasseralarm auf dem Handy — auch wenn Sie unterwegs sind",
       "Bei Rauch oder CO werden Sie direkt aufs Handy benachrichtigt",
@@ -202,8 +204,8 @@
       "E-Mail- & WhatsApp-Support (Antwort innert 24h)",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg2_btn": "Jetzt anfragen",
-    "pkg2_note": "Einrichtungsinvestition ~CHF 300-700 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg2_btn": "Offerte anfragen",
+    "pkg2_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 300-700</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "pkg3_badge": "Empfohlen",
     "pkg3_name_basis": "Advanced",
     "pkg3_name_senioren": "Seelenfrieden",
@@ -214,6 +216,7 @@
     "pkg3_tag_mieter": "Kompletter Schutz und Überwachung",
     "pkg3_tag_ferienhaus": "Überwachung und Kontrolle",
     "pkg3_price": "89",
+    "pkg3_assume": "Typisch für ein Einfamilienhaus · ca. 15 Geräte",
     "basis_pkg3_outcomes": [
       "Sehen, wer klingelt — auch von unterwegs",
       "Sie erfahren, wenn im Haus ungewöhnlich lange nichts passiert",
@@ -284,8 +287,8 @@
       "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg3_btn": "Jetzt anfragen",
-    "pkg3_note": "Einrichtungsinvestition ~CHF 500-1200 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg3_btn": "Offerte anfragen",
+    "pkg3_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 500-1200</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "pkg4_badge": "Premium",
     "pkg4_name_basis": "All-in",
     "pkg4_name_senioren": "Unabhängig Wohnen",
@@ -296,6 +299,7 @@
     "pkg4_tag_mieter": "Maximale Kontrolle & Komfort",
     "pkg4_tag_ferienhaus": "Vollständige Intelligenz & nahtlose Verwaltung",
     "pkg4_price": "149",
+    "pkg4_assume": "Typisch für ein grosses Haus · ca. 25+ Geräte und individuelle Automationen",
     "basis_pkg4_outcomes": [
       "Zutritt per App vergeben — ohne Schlüsselübergabe",
       "Ihre Familie behält den Überblick — mit eigenem App-Zugang",
@@ -363,11 +367,12 @@
       "Prioritäts-Support",
       "Beschattungs-Automatisierung*"
     ],
-    "pkg4_btn": "Jetzt anfragen",
-    "pkg4_note": "Einrichtungsinvestition ~CHF 900-1500 · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
+    "pkg4_btn": "Offerte anfragen",
+    "pkg4_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 900-1500</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
     "details_btn": "Details",
-    "footer": "Preise in Schweizer Franken inkl. MwSt. · Einmalkosten entfallen bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für alle</a>",
+    "footer": "Endkundenpreise in Schweizer Franken, keine MwSt. verrechnet · Einrichtungsinvestition entfällt bei 2-Jahres-Vereinbarung · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Kostenlose Beratung für alle</a>",
     "disclaimer": "* soweit zutreffend",
+    "price_drivers": "Ihre Offerte richtet sich nach der Anzahl der Sensoren und Geräte, den gewünschten Automationen und dem Zeitaufwand vor Ort. Die gezeigten Preise sind Richtwerte.",
     "shading_note": "* Nur, wo bereits elektrisch gesteuerte Beschattungen (Storen, Rollläden, Markisen) vorhanden sind.",
     "safety_line": "Konihaus ist kein Notrufdienst. Im Notfall: 144 oder 112.",
     "safety_more": "Mehr dazu"
@@ -601,7 +606,7 @@
   "faq": {
     "eye": "Häufige Fragen",
     "h2": "Bevor Sie sich<br><em>entscheiden.</em>",
-    "sub": "Die wichtigsten Punkte aus unseren AGB — kurz erklärt.",
+    "sub": "Offerte, Vertrag und Hardware — die wichtigsten Punkte kurz erklärt.",
     "q1": "Wie lange bin ich gebunden?",
     "a1": "Wenn Sie die Einrichtungsinvestition durch einen 2-Jahres-Servicevertrag ersetzen, beträgt die Mindestlaufzeit 24 Monate. Danach läuft der Vertrag unbefristet weiter und ist von beiden Seiten mit einem Monat Kündigungsfrist auf Ende eines Monats kündbar. Zahlen Sie die Einrichtung sofort, gibt es keine Mindestlaufzeit.",
     "q2": "Wie kündige ich, und was passiert bei vorzeitiger Kündigung?",
@@ -614,6 +619,8 @@
     "a5": "Fernzugriff, Support und Updates durch uns enden mit dem Vertrag. Ihr lokal installiertes System — die Home-Assistant-Zentrale und alle Geräte — läuft weiter, solange es Ihnen gehört. Auf Wunsch erhalten Sie die Zugangsdaten und die Dokumentation der Konfiguration.",
     "q6": "Kann ich später upgraden?",
     "a6": "Jederzeit — ein Wechsel wird ausdrücklich begrüsst. Für jede Anfrage stelle ich eine neue Offerte: eine kleine Ergänzung wird einmalig verrechnet, ein höheres Paket erhöht die monatliche Gebühr. Bestehende Geräte werden fast immer weiterverwendet; nur bei einem grösseren Sprung braucht es eine neue Zentrale, und dann zahlen Sie nur die Differenz. Die Kosten richten sich nach dem Umfang — die aktuellen Pakete zeigen die Grössenordnung. Eine neue Mindestlaufzeit gibt es nur bei grösseren Änderungen wie einer neuen Zentrale, nicht bei ein paar zusätzlichen Geräten.",
+    "q7": "Wie läuft eine Offerte ab?",
+    "a7": "Nach Ihrer Anfrage melde ich mich persönlich bei Ihnen. Wir sprechen zuerst in Ruhe über Ihre Situation und Ihre Wünsche. Danach komme ich bei Ihnen vorbei, schaue mir alles vor Ort an und messe aus, was für eine gute Lösung nötig ist. Ich erkläre Ihnen die Möglichkeiten und zeige Ihnen, wenn es sinnvoll ist, mehrere Varianten, zum Beispiel eine schlankere und eine umfassendere. Erst danach erhalten Sie die schriftliche Offerte. Sie führt alle Kosten einzeln auf, also Geräte, Einrichtung und monatliche Betreuung, und zeigt, was bei einem 2-Jahres-Servicevertrag entfällt. So wissen Sie vorab genau, wofür Sie bezahlen.",
     "more": "Vollständige Details in unseren <a href=\"agb.html\">AGB</a>."
   },
   "beispiel_hans": {

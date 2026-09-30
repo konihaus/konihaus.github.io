@@ -42,16 +42,16 @@
   },
   "packages": {
     "eye": "Pricing & Packages",
-    "h2_basis": "The Right Package<br><em>for Your Home.</em>",
-    "h2_senioren": "The Right Package<br><em>for Your Situation.</em>",
-    "h2_mieter": "The Right Package<br><em>for Your Rental.</em>",
-    "h2_ferienhaus": "The Right Package<br><em>for Your Vacation Home.</em>",
-    "sub": "All packages include installation, setup, and ongoing remote management. No hidden costs.",
+    "h2_basis": "Example Packages<br><em>for Your Home.</em>",
+    "h2_senioren": "Example Packages<br><em>for Your Situation.</em>",
+    "h2_mieter": "Example Packages<br><em>for Your Rental.</em>",
+    "h2_ferienhaus": "Example Packages<br><em>for Your Vacation Home.</em>",
+    "sub": "Every home is different, so every quote is tailored to you. These typical setups give you a price reference up front. Installation, setup and ongoing remote management are always included — no hidden costs.",
     "tab1": "Generic packages",
     "tab2": "For Seniors",
     "tab3": "For Renters",
     "tab4": "For Vacation Homes",
-    "pkg_from": "from",
+    "pkg_from": "from CHF",
     "pkg_mo": "/Month",
     "pkg_includes_basis": "Example configuration:",
     "pkg_includes_senioren": "Safety features included:",
@@ -67,6 +67,7 @@
     "pkg1_tag_mieter": "Simple start, no renovation needed",
     "pkg1_tag_ferienhaus": "Presence and access at a glance",
     "pkg1_price": "29",
+    "pkg1_assume": "Typical for a 1–2 room apartment · ~7 devices",
     "basis_pkg1_outcomes": [
       "See in the monthly report how your home is being used",
       "Know whether doors and windows are open or closed",
@@ -119,8 +120,8 @@
       "Monthly Absence Report",
       "Email & WhatsApp Support (response within 48h)"
     ],
-    "pkg1_btn": "Request Now",
-    "pkg1_note": "Setup investment CHF ~200-260 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg1_btn": "Request a quote",
+    "pkg1_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~200-260</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "pkg2_badge": "Essential",
     "pkg2_name_basis": "Standard",
     "pkg2_name_senioren": "Safe at Home",
@@ -131,6 +132,7 @@
     "pkg2_tag_mieter": "Protect valuable assets",
     "pkg2_tag_ferienhaus": "Basic protection while away",
     "pkg2_price": "49",
+    "pkg2_assume": "Typical for a 3-room apartment · ~10 devices",
     "basis_pkg2_outcomes": [
       "Water alert on your phone — even when you're away",
       "Get notified on your phone about smoke or CO",
@@ -202,8 +204,8 @@
       "Email & WhatsApp Support (response within 24h)",
       "Shading System Automation*"
     ],
-    "pkg2_btn": "Request Now",
-    "pkg2_note": "Setup investment CHF ~300-700 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg2_btn": "Request a quote",
+    "pkg2_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~300-700</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "pkg3_badge": "Recommended",
     "pkg3_name_basis": "Advanced",
     "pkg3_name_senioren": "Peace of Mind",
@@ -214,6 +216,7 @@
     "pkg3_tag_mieter": "Complete protection and monitoring",
     "pkg3_tag_ferienhaus": "Monitoring and control",
     "pkg3_price": "89",
+    "pkg3_assume": "Typical for a family home · ~15 devices",
     "basis_pkg3_outcomes": [
       "See who's at the door — even when you're out",
       "Find out when nothing has happened at home for unusually long",
@@ -284,8 +287,8 @@
       "Phone Support (response within 12h, working hours)",
       "Shading System Automation*"
     ],
-    "pkg3_btn": "Request Now",
-    "pkg3_note": "Setup investment CHF ~500-1200 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg3_btn": "Request a quote",
+    "pkg3_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~500-1200</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "pkg4_badge": "Premium",
     "pkg4_name_basis": "All-in",
     "pkg4_name_senioren": "Independent Living",
@@ -296,6 +299,7 @@
     "pkg4_tag_mieter": "Maximum Control & Comfort",
     "pkg4_tag_ferienhaus": "Full intelligence & seamless management",
     "pkg4_price": "149",
+    "pkg4_assume": "Typical for a large home · ~25+ devices and custom automations",
     "basis_pkg4_outcomes": [
       "Grant access from the app — no key handover",
       "Your family stays in the loop with their own app access",
@@ -363,11 +367,12 @@
       "Priority Support",
       "Shading System Automation*"
     ],
-    "pkg4_btn": "Request Now",
-    "pkg4_note": "Setup investment CHF ~900-1500 · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
+    "pkg4_btn": "Request a quote",
+    "pkg4_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~900-1500</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
     "details_btn": "Details",
-    "footer": "Prices in Swiss Francs incl. VAT · One-time setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for everyone</a>",
+    "footer": "Final consumer prices in Swiss Francs, no VAT charged · Setup investment waived with 2-year agreement · <a href=\"#contact\" style=\"color:var(--forest);text-decoration:underline;\">Free consultation for everyone</a>",
     "disclaimer": "* wherever applicable",
+    "price_drivers": "Your quote depends on the number of sensors and devices, the automations you want, and the time needed on site. Prices shown are indicative.",
     "shading_note": "* Available where electrically controlled shading (blinds, shutters, awnings) is already installed.",
     "safety_line": "Konihaus is not an emergency service. In an emergency: 144 or 112.",
     "safety_more": "Learn more"
@@ -601,7 +606,7 @@
   "faq": {
     "eye": "Frequently Asked Questions",
     "h2": "Before You<br><em>Decide.</em>",
-    "sub": "The key points from our Terms & Conditions — explained briefly.",
+    "sub": "Quote, contract and hardware — the key points, briefly explained.",
     "q1": "How long am I committed for?",
     "a1": "If you replace the setup investment with a 2-year service agreement, the minimum term is 24 months. After that the contract continues indefinitely and either side can cancel with one month's notice, effective at the end of a month. If you pay the setup cost upfront, there is no minimum term.",
     "q2": "How do I cancel, and what happens if I cancel early?",
@@ -614,6 +619,8 @@
     "a5": "Remote access, support and updates from us stop when the contract ends. Your locally installed system — the Home Assistant hub and all devices — keeps running on its own as long as it belongs to you. On request, you'll get the access credentials and configuration documentation.",
     "q6": "Can I upgrade later?",
     "a6": "Any time — upgrading is very welcome. For every request I put together a new quote: a small addition is billed once, moving to a higher package raises the monthly fee. Existing equipment is almost always reused; only a bigger leap needs a new hub, and even then you only pay the difference. Costs depend on the scope — the current packages show the range. A new minimum term only applies for bigger changes like a new hub, not for adding a few devices.",
+    "q7": "How does the quotation process work?",
+    "a7": "After your request, I get in touch with you personally. We first talk through your situation and what you'd like. Then I visit you, look at everything on site and measure what a good solution needs. I explain the options and, where it makes sense, show you several scenarios, for example a leaner one and a more comprehensive one. Only after that do you receive the written quote. It lists every cost individually, meaning devices, setup and monthly management, and shows what is waived with a 2-year service agreement. So you know exactly what you're paying for before you decide.",
     "more": "Full details in our <a href=\"agb.html\">Terms</a>."
   },
   "beispiel_hans": {
