@@ -928,25 +928,46 @@ function initLanguagePicker() {
   select.dispatchEvent(new Event("change", { bubbles: true }));
 }
 
-function openBlogPrivacy() {
-  const link = {
-    de: '/de/insights/datenschutz-by-default/',
-    en: '/en/insights/privacy-by-default/'
-  };
-  const language = localStorage.getItem('lang') || 'de';
-  window.location.href = link[language];
-}
-
-function openBlogNoVendor() {
-  const link = {
-    de: '/de/insights/kein-vendor-lock-in/',
-    en: '/en/insights/no-vendor-lock-in/'
-  };
-  const language = localStorage.getItem('lang') || 'de';
-  window.location.href = link[language];
-}
-
 document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.why__item').forEach(e => {
+    const art = e.getAttribute('data-why-item');
+    if(!art) return;
+    const language = localStorage.getItem('lang') || 'de';
+
+    const articles = {
+      privacy: {
+        de: 'datenschutz-by-default',
+        en: 'privacy-by-default'
+      },
+      novendor: {
+        de: 'kein-vendor-lock-in',
+        en: 'no-vendor-lock-in'
+      },
+      personal: {
+        de: 'persoenlicher-service',
+        en: 'personal-service'
+      },
+      energy: {
+        de: 'energieeffizienz',
+        en: 'energy-efficiency'
+      }
+    }
+
+    const article = articles[art];
+    if(!article) return;
+
+    const url = `https://blog.konihaus.ch/${language}/insights/${articles[art][language]}`;
+    const targetUrl = `${url}?from-website`;
+
+    e.setAttribute('title', url);
+
+    e.addEventListener('click', () => {
+      window.open(targetUrl);
+    });
+  })
+
+
   i18n.init().then(() => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
     document.documentElement.classList.remove('no-js');

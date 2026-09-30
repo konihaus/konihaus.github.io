@@ -93,9 +93,9 @@
   --marine-deep: #141a26;
   --marine-tint: #e8ecf2;
 
-  --forest: #2a4a35;
-  --forest-light: #9fc77f;
-  --forest-mid: #3d6b4f;
+  --forest: rgb(42, 74, 53); /*#2a4a35*/
+  --forest-light: rgb(159, 199, 127); /*#9fc77f*/
+  --forest-mid: rgb(61, 107, 79); /*#3d6b4f*/
   --forest-deep: #1e3628;
   --forest-tint: #e8f0eb;
 
@@ -1785,6 +1785,7 @@ a.logo {
   justify-content: center;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .why__item::before {
@@ -1793,17 +1794,21 @@ a.logo {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-color: var(--forest);
-  background-image: var(--feature-pictogram);
+  background: linear-gradient(100deg, var(--forest) 0%, var(--forest) 42%, rgba(42, 74, 53, .82) 58%, rgba(42, 74, 53, 0) 78%),
+  var(--feature-pictogram);
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: auto 150px;
-  opacity: 0.4;
+  background-size: cover;
+  opacity: 0.7;
 }
 
 .why__item:hover::before {
   background-color: var(--forest-mid);
-  background-image: var(--feature-pictogram);
+  background: linear-gradient(100deg, var(--forest-mid) 0%, var(--forest-mid) 42%, rgba(61, 107, 79, .82) 58%, rgba(61, 107, 79, 0) 78%),
+  var(--feature-pictogram);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
 }
 
 .why__item > * {
@@ -1812,37 +1817,45 @@ a.logo {
 }
 
 .why__item--privacy {
-  --feature-pictogram: url("./images/privacy.png");
+  /*--feature-pictogram: url("./images/privacy.png");*/
+  --feature-pictogram: url("./images/whys/privacy.jpg");
 }
 
 .why__item--vendor {
-  --feature-pictogram: url("./images/vendor-lock-in.png");
+  /*--feature-pictogram: url("./images/vendor-lock-in.png");*/
+  --feature-pictogram: url("./images/whys/novendor.jpg");
 }
 
 .why__item--service {
-  --feature-pictogram: url("./images/personal-service.png");
+  /*--feature-pictogram: url("./images/personal-service.png");*/
+  --feature-pictogram: url("./images/whys/personal.jpg");
 }
 
 .why__item--quality {
   --feature-pictogram: url("./images/swiss-quality.png");
 }
+.why__item--quality::before,
+.why__item--quality:hover::before {
+  background-size: contain;
+}
 
 .why__item--energy {
-  --feature-pictogram: url("./images/energy-efficiency.png");
+  /*--feature-pictogram: url("./images/energy-efficiency.png");*/
+  --feature-pictogram: url("./images/whys/energy.jpg");
 }
 
 .why__item--future {
   --feature-pictogram: url("./images/future-proof.png");
+}
+.why__item--future::before,
+.why__item--future:hover::before {
+  background-size: contain;
 }
 
 @media (max-width: 900px) {
   .why__item {
     padding: 34px 160px 34px 30px;
     min-height: 200px;
-  }
-  .why__item::before {
-    background-position: right center;
-    background-size: auto 82%;
   }
 }
 
@@ -1907,6 +1920,7 @@ a.logo {
   font-weight: 300;
   letter-spacing: -.02em;
   margin-bottom: 18px;
+  line-height: 1em;
 }
 
 .dev-h em {
