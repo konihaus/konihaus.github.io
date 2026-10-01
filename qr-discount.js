@@ -1,34 +1,27 @@
 const QR_PARAM = 'qr';
-const QR_STORAGE_KEY = 'konihaus_qr_discount';
+// v2: codes are now verified by the API. The old key held codes generated in the browser, so it is dropped on init.
+const QR_STORAGE_KEY = 'konihaus_qr_discount_v2';
+const QR_LEGACY_STORAGE_KEY = 'konihaus_qr_discount';
 const QR_POPUP_SEEN_KEY = 'konihaus_qr_popup_shown';
 const QR_EXCLUDED_PKG_INDEX = 0;
+const QR_API_BASE = 'https://project-zovba.vercel.app'.replace(/\/+$/, ''); // no trailing slash (//api -> 308 -> CORS error)
+const QR_KEY_PATTERN = /^[A-Za-z0-9-]{1,80}$/;
 
-function generateDiscountCode(seed) {
-  const CHARSET = '23456789ABCDEFGHJKMNPQRSTUVWXYZ'; 
-  const SALT = 'konihaus-qr-v1';
-
-  function fnv1a(str) {
-    let h = 0x811c9dc5;
-    for (let i = 0; i < str.length; i++) {
-      h ^= str.charCodeAt(i);
-      h = Math.imul(h, 0x01000193);
-    }
-    return h >>> 0;
+// Asks the API for the code belonging to a qr key. Returns the code, or null if the key is unknown / anything fails.
+async function fetchDiscountCode(qrKey) {
+  if (!QR_KEY_PATTERN.test(qrKey)) return null;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const res = await fetch(`${QR_API_BASE}/api/getcode?str=${encodeURIComponent(qrKey)}`, { signal: controller.signal });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data && data.success && typeof data.code === 'string' && data.code ? data.code : null;
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
   }
-
-  let h1 = fnv1a(`${SALT}:${seed}`);
-  let h2 = fnv1a(`${seed}:${SALT}:2`);
-
-  let code = '';
-  for (let i = 0; i < 4; i++) {
-    code += CHARSET[h1 % CHARSET.length];
-    h1 = Math.floor(h1 / CHARSET.length) ^ (h1 >>> 3);
-  }
-  for (let i = 0; i < 4; i++) {
-    code += CHARSET[h2 % CHARSET.length];
-    h2 = Math.floor(h2 / CHARSET.length) ^ (h2 >>> 3);
-  }
-  return code;
 }
 
 function readStoredDiscount() {
@@ -48,18 +41,8 @@ function writeStoredDiscount(data) {
   }
 }
 
+// Synchronous: only returns a discount that was already verified by the API and stored.
 function getActiveDiscount() {
-  const params = new URLSearchParams(window.location.search);
-  const qrParam = params.get(QR_PARAM);
-
-  if (qrParam) {
-    const existing = readStoredDiscount();
-    if (existing && existing.source === qrParam) return existing;
-    const fresh = { code: generateDiscountCode(qrParam), source: qrParam, firstSeen: Date.now() };
-    writeStoredDiscount(fresh);
-    return fresh;
-  }
-
   return readStoredDiscount();
 }
 
@@ -84,7 +67,7 @@ function applyDiscountToRequest(message, pkgIndex) {
 
 function updateDiscountBanners() {
   const discount = getActiveDiscount();
-  
+
   const grid = document.querySelector('.pkg-grid');
   if (!grid) return;
 
@@ -163,23 +146,37 @@ function setupQrModal() {
   }
 }
 
-function initQrDiscount() {
+async function initQrDiscount() {
   setupQrModal();
 
-  const discount = getActiveDiscount();
-  updateDiscountBanners();
-  if (!discount) return;
+  // Drop codes that an earlier version generated in the browser.
+  try { localStorage.removeItem(QR_LEGACY_STORAGE_KEY); } catch {}
 
-  const params = new URLSearchParams(window.location.search);
-  const arrivedViaQr = params.has(QR_PARAM);
+  // A previously verified discount keeps working across pages.
+  updateDiscountBanners();
+
+  const qrParam = new URLSearchParams(window.location.search).get(QR_PARAM);
+  if (!qrParam) return;
+
+  // Only a key that exists in codes.json (checked by the API) yields a code; anything else is ignored.
+  const code = await fetchDiscountCode(qrParam);
+  if (!code) return;
+
+  const existing = readStoredDiscount();
+  const discount = existing && existing.source === qrParam && existing.code === code
+    ? existing
+    : { code, source: qrParam, firstSeen: Date.now() };
+  writeStoredDiscount(discount);
+  updateDiscountBanners();
+
   let alreadyShown = false;
   try {
     alreadyShown = sessionStorage.getItem(QR_POPUP_SEEN_KEY) === '1';
   } catch {
-   
+
   }
 
-  if (arrivedViaQr && !alreadyShown) {
+  if (!alreadyShown) {
     showQrModal(discount);
     try { sessionStorage.setItem(QR_POPUP_SEEN_KEY, '1'); } catch {}
   }
