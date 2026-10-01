@@ -542,6 +542,9 @@
         </div>
         <div class="hub-box reveal d2">
           <div class="hub-lbl" data-i18n="devices.hub_lbl">Das Herzstück Ihres Systems</div>
+          <div class="hub-pic">
+            <img src="images/greenhub-box.png" alt="Greenhub Zentrale" width="100%" height="100%" />
+          </div>
           <div class="hub-name">
             <div class="hub-logo-svg"></div>
             <div class="hub__text">
@@ -982,14 +985,24 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact__grid">
-        <div>
+        <div class="contact__intro">
           <p class="sec-eye" style="color:var(--amber);margin-bottom:12px;" class="reveal" data-i18n="contact.eye">
             Kontakt</p>
           <h2 class="con-h reveal d1" data-i18n="contact.h2" data-i18n-html="true">Sprechen wir<br>über <em>Ihr
               Zuhause.</em></h2>
-          <p class="con-p reveal d2" data-i18n="contact.p">Schildern Sie mir kurz Ihre Situation — ob Seniorenwohnung,
-            Elternhaus oder
-            Feriendomizil. Ich melde mich innert 24 Stunden.</p>
+          <p class="con-p reveal d2" data-i18n="contact.p">Mehr Sicherheit, weniger Aufwand, ein Zuhause, das mitdenkt: Schreiben Sie mir kurz, worum es geht. Ich melde mich innert 24 Stunden.</p>
+          <!-- Map: static image of Affoltern am Albis (images/affoltern-map.jpg). The pin is pure CSS and always sits at the centre of the image,
+               so centre the map on Affoltern when you export it. Change the credit below if you use another source (e.g. "© swisstopo"). -->
+          <figure class="con-map reveal d3">
+            <img src="images/konihaus-region-map.webp" alt="" width="1200" height="760" loading="lazy" decoding="async" onerror="this.remove()">
+            <span class="con-map__pin" aria-hidden="true">
+              <svg viewBox="0 0 32 42" width="32" height="42"><path d="M16 0C7.2 0 0 7 0 15.6 0 27 16 42 16 42s16-15 16-26.4C32 7 24.8 0 16 0z" fill="#2a4a35"/><circle cx="16" cy="15.5" r="6.5" fill="#f7f4ed"/><circle cx="16" cy="15.5" r="2.8" fill="#c47c2b"/></svg>
+            </span>
+            <figcaption class="con-map__label">
+              <strong data-i18n="contact.map_place">Affoltern am Albis</strong>
+              <span data-i18n="contact.map_sub">Kanton Zürich · Einsatz in der ganzen Schweiz</span>
+            </figcaption>
+          </figure>
           <!--div class="con-details reveal d3">
             <div class="con-detail">
               <div class="con-icon">
