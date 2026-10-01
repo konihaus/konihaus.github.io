@@ -504,10 +504,17 @@ function setupFaqAccordion() {
 
         items.forEach(({ toggle: button, panel }) => {
           const isOpen = button === toggle && shouldOpen;
-
           button.setAttribute('aria-expanded', String(isOpen));
           panel.hidden = !isOpen;
         });
+
+        // after the layout has changed; only when opening
+        if (shouldOpen) {
+          const nav = document.getElementById('nav');
+          const gap = 15; // space between header and question
+          const y = toggle.getBoundingClientRect().top + window.scrollY - (nav ? nav.offsetHeight : 0) - gap;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
       });
     });
   });
