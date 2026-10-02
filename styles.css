@@ -4872,3 +4872,111 @@ body.cc-lock .cc-banner {
     width: 32px;
     height: 32px;
 }
+
+/* ───────── ADDITIONS for weltreise/ and neue-eltern/ example pages ─────────
+   Append to the end of styles.css */
+
+/* hero backgrounds (same pattern as .hans / .elsa / .inge) */
+.example-hero-container.weltreise {
+  background: url('./weltreise/weltreise-desktop.jpg') no-repeat center center / 100% var(--parchment);
+}
+
+.example-hero-container.eltern {
+  background: url('./neue-eltern/eltern-desktop.jpg') no-repeat center center / 100% var(--parchment);
+}
+
+@media (max-width: 1380px) {
+  .example-hero-container.weltreise {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 0) 60%,
+        rgba(247, 244, 237, 1) 90%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+  }
+}
+
+@media (max-width: 1220px) {
+  .example-hero-container.eltern {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 0) 60%,
+        rgba(247, 244, 237, 1) 90%
+      ),url('./neue-eltern/eltern-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+  }
+}
+
+@media (max-width: 900px) {
+  .example-hero-container.weltreise {
+    background: linear-gradient(to top,
+        rgba(247, 244, 237, 1) 30%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 1) 70%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center center / contain var(--parchment);
+  }
+}
+
+@media (max-width: 600px) {
+  .example-hero-container.weltreise {
+    background: url('./weltreise/weltreise-mobile.jpg') no-repeat center bottom / contain var(--parchment);
+    padding-bottom: 70%;
+  }
+
+  .example-hero-container.eltern {
+    background: linear-gradient(to bottom,
+      rgba(247, 244, 237, 0.5) 0%,
+      rgba(247, 244, 237, 0.1) 50%,
+      rgba(247, 244, 237, 0.5) 60%,
+      rgba(247, 244, 237, 1) 100%
+    ),url('./neue-eltern/eltern-mobile.jpg') no-repeat center 40% / contain var(--parchment);
+  }
+}
+
+/* palette accents: ferien (marine) and mieter (burgundy) variants of what the senioren page gets from gold */
+.example-body--ferien .example-hero__tag,
+.example-body--ferien .example-outcomes__t,
+.example-body--ferien .example-outcomes__list li::before {
+  color: var(--marine-mid);
+}
+
+.example-body--mieter .example-hero__tag,
+.example-body--mieter .example-outcomes__t,
+.example-body--mieter .example-outcomes__list li::before {
+  color: var(--burgundy-mid);
+}
+
+/* three outcome columns (weltreise) */
+.example-outcomes--3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .example-outcomes--3 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* homepage carousel cards (add the matching <a class="examples__card examples__card--peter"> items) */
+.examples__card--peter {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./weltreise/weltreise-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--peter::after {
+  box-shadow: inset 0 -4px 0 0 var(--marine-mid);
+}
+
+.examples__card--anna {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./neue-eltern/eltern-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--anna::after {
+  box-shadow: inset 0 -4px 0 0 var(--burgundy-mid);
+}
