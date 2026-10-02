@@ -29,11 +29,10 @@
   <meta name="twitter:title" content="Datenschutzerklärung — Konihaus">
   <meta name="twitter:description"
     content="Datenschutzerklärung von Konihaus: welche Personendaten wir bei Website-Besuch und Smart-Home-Betreuung bearbeiten, wofür, und welche Rechte Sie nach DSG und DSGVO haben.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
+  <link rel="preload" href="fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>
     /* readability preferences (Aa button), applied before first paint so the text size doesn't jump; logic mirrors scripts.js */
@@ -127,9 +126,9 @@
             aufgerufene Seite sowie Angaben zu Browser und Gerät. Das ist für die Auslieferung und die Sicherheit der
             Website erforderlich (berechtigtes Interesse). Wir werten diese Daten nicht aus. Unser Blog (blog.konihaus.ch) wird auf dieselbe Weise bereitgestellt.</p>
           <h3>2.2 Schriftarten</h3>
-          <p>Für eine einheitliche Darstellung laden wir Schriftarten von Servern von Google (Google Fonts; Google
-            Ireland Limited, Irland, bzw. Google LLC, USA). Dabei wird Ihre IP-Adresse an Google übermittelt. Cookies
-            werden dafür nicht gesetzt.</p>
+          <p>Die auf dieser Website verwendeten Schriftarten sind lokal eingebunden und werden von unserem eigenen
+            Server (GitHub Pages, siehe 2.1) ausgeliefert. Es wird keine Verbindung zu Google oder anderen
+            Schriftanbietern aufgebaut, und es werden dafür keine Cookies gesetzt.</p>
           <h3>2.3 Statistik (Google Analytics)</h3>
           <p>Nur mit Ihrer Einwilligung nutzen wir Google Analytics (Google Ireland Limited bzw. Google LLC), um zu
             verstehen, wie die Website genutzt wird. Dabei werden Cookies gesetzt und Angaben wie aufgerufene Seiten,
@@ -140,7 +139,8 @@
           <h3>2.4 Cookies und ähnliche Technologien</h3>
           <p>Welche Cookies und Speicherfunktionen wir einsetzen und wie Sie Ihre Auswahl ändern oder widerrufen können,
             erfahren Sie in der <a href="#cookie-declaration" data-cc-open>Cookie-Erklärung</a>. Ihre Sprachwahl
-            speichert Ihr Browser lokal; diese Angabe verlässt Ihr Gerät nicht.</p>
+            sowie Ihre Lesbarkeits-Einstellungen (Schriftgrösse, Kontrast, Animationen) speichert Ihr Browser lokal;
+            diese Angaben verlassen Ihr Gerät nicht.</p>
 
           <h2>3. Kontaktaufnahme</h2>
           <p>Wenn Sie uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktieren, bearbeiten wir die
@@ -240,9 +240,9 @@
             requested, and information about your browser and device. This is necessary to deliver and secure the
             website (legitimate interest). We do not analyse this data. Our blog (blog.konihaus.ch) is hosted in the same way.</p>
           <h3>2.2 Fonts</h3>
-          <p>To ensure consistent display, we load fonts from Google servers (Google Fonts; Google Ireland Limited,
-            Ireland, or Google LLC, USA). Your IP address is transmitted to Google in the process. No cookies are set
-            for this purpose.</p>
+          <p>The fonts used on this website are embedded locally and delivered from our own server (GitHub Pages, see
+            2.1). No connection is made to Google or any other font provider, and no cookies are set for this
+            purpose.</p>
           <h3>2.3 Statistics (Google Analytics)</h3>
           <p>Only with your consent do we use Google Analytics (Google Ireland Limited or Google LLC) to understand how
             the website is used. This involves setting cookies and collecting information such as pages viewed,
@@ -251,8 +251,9 @@
             Analytics is not loaded. You can withdraw your consent at any time with effect for the future (see 2.4).</p>
           <h3>2.4 Cookies and Similar Technologies</h3>
           <p>You can find out which cookies and storage features we use, and how you can change or withdraw your choice,
-            in the <a href="#cookie-declaration" data-cc-open>Cookie Declaration</a>. Your language selection is stored
-            locally by your browser; this information does not leave your device.</p>
+            in the <a href="#cookie-declaration" data-cc-open>Cookie Declaration</a>. Your language selection
+            and your readability settings (text size, contrast, animations) are stored locally by your browser; this
+            information does not leave your device.</p>
 
           <h2>3. Contacting Us</h2>
           <p>If you contact us via the contact form, email, telephone or WhatsApp, we process the information you
