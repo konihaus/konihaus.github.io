@@ -2110,6 +2110,7 @@ width: 60px;
   gap: 12px;
   align-items: center;
   height: 100px;
+  position: relative;
 }
 
 .hub__text {
