@@ -39,6 +39,13 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <script>
+    /* readability preferences (Aa button), applied before first paint so the text size doesn't jump; logic mirrors scripts.js */
+    (function(){try{var d=document.documentElement,p=JSON.parse(localStorage.getItem('konihaus-readability')||'{}');
+    if(p.text==='large'||p.text==='xl')d.setAttribute('data-text',p.text);
+    if(p.contrast===true)d.setAttribute('data-contrast','high');
+    if(p.motion===true||(typeof p.motion!=='boolean'&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.setAttribute('data-motion','reduce');}catch(e){}})();
+  </script>
 </head>
 
 <body class="example-body example-body--mieter">

@@ -27,6 +27,56 @@ function getLangFromPath() {
   return null;
 }
 
+/* ───────── READABILITY (Aa button): text size · high contrast · pause animations ─────────
+   Preference lives in localStorage only ("konihaus-readability"), never leaves the device.
+   <head> has a tiny inline copy of applyReadability() so the size is right before first paint. */
+const READABILITY_KEY = 'konihaus-readability';
+const READABILITY_DEFAULT = { text: 'normal', contrast: false, motion: null }; // motion: null = follow the OS setting
+
+function readReadability() {
+  try {
+    const p = JSON.parse(localStorage.getItem(READABILITY_KEY) || '{}');
+    return {
+      text: p.text === 'large' || p.text === 'xl' ? p.text : 'normal',
+      contrast: p.contrast === true,
+      motion: typeof p.motion === 'boolean' ? p.motion : null,
+    };
+  } catch {
+    return { ...READABILITY_DEFAULT };
+  }
+}
+
+function writeReadability(s) {
+  try {
+    if (s.text === 'normal' && !s.contrast && s.motion === null) localStorage.removeItem(READABILITY_KEY);
+    else localStorage.setItem(READABILITY_KEY, JSON.stringify(s));
+  } catch { /* storage blocked: applies for this page view only */ }
+}
+
+function osPrefersReducedMotion() {
+  return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+}
+
+function motionIsReduced(s) {
+  return s.motion === null ? osPrefersReducedMotion() : s.motion;
+}
+
+function isMotionReduced() {
+  return document.documentElement.getAttribute('data-motion') === 'reduce';
+}
+
+function applyReadability(s) {
+  const root = document.documentElement;
+  if (s.text === 'normal') root.removeAttribute('data-text'); else root.setAttribute('data-text', s.text);
+  if (s.contrast) root.setAttribute('data-contrast', 'high'); else root.removeAttribute('data-contrast');
+  const wasReduced = isMotionReduced();
+  if (motionIsReduced(s)) root.setAttribute('data-motion', 'reduce'); else root.removeAttribute('data-motion');
+  if (wasReduced !== isMotionReduced()) document.dispatchEvent(new CustomEvent('konihaus:motion'));
+}
+
+let readabilityState = readReadability();
+applyReadability(readabilityState);
+
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
@@ -65,6 +115,7 @@ const i18n = {
     this.updatePageContent();
     renderSafetyStatement();
     applyLanguageBlocks();
+    if (typeof updateReadabilityLabels === 'function') updateReadabilityLabels();
     if (typeof cookieConsent !== 'undefined') cookieConsent.refresh();
 
     const langSelect = document.getElementById('lang-selector');
@@ -573,7 +624,7 @@ function setupExamplesCarousel() {
   const AUTOPLAY_SPEED = 18; 
 
   function tick(time) {
-    if (!autoplay) { rafId = null; lastTime = null; return; }
+    if (!autoplay || isMotionReduced()) { rafId = null; lastTime = null; return; }
     if (lastTime == null) lastTime = time;
     scrollPos += AUTOPLAY_SPEED * ((time - lastTime) / 1000);
     lastTime = time;
@@ -584,7 +635,7 @@ function setupExamplesCarousel() {
   }
 
   function startAutoplay() {
-    if (!autoplay || rafId) return;
+    if (!autoplay || rafId || isMotionReduced()) return;
     scrollPos = track.scrollLeft;
     lastTime = null;
     track.style.scrollSnapType = 'none';
@@ -639,6 +690,16 @@ function setupExamplesCarousel() {
   if (next) next.addEventListener('click', () => scrollByCard(1));
 
   track.addEventListener('scroll', wrapIfNeeded);
+  document.addEventListener('konihaus:motion', () => {
+    if (isMotionReduced()) {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = null;
+      lastTime = null;
+    } else {
+      autoplay = true;
+      startAutoplay();
+    }
+  });
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       if (rafId) cancelAnimationFrame(rafId);
@@ -753,12 +814,12 @@ function setupHeroTaglines() {
   function schedule() {
     clearTimeout(timer);
     timer = null;
-    if (!document.hidden && !pending) timer = setTimeout(rotate, HOLD_MS);
+    if (!document.hidden && !pending && !isMotionReduced()) timer = setTimeout(rotate, HOLD_MS);
   }
 
   function rotate() {
     timer = null;
-    if (document.hidden || pending) return;
+    if (document.hidden || pending || isMotionReduced()) return;
     if (!current || !container.contains(current)) current = container.querySelector('.hero__h1');
     removeStrays();
 
@@ -800,6 +861,16 @@ function setupHeroTaglines() {
       .catch(() => {});
   }
 
+  document.addEventListener('konihaus:motion', () => {
+    if (isMotionReduced()) {
+      clearTimeout(timer);
+      timer = null;
+      settle();
+    } else {
+      schedule();
+    }
+  });
+
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       clearTimeout(timer);
@@ -812,6 +883,111 @@ function setupHeroTaglines() {
   });
 
   schedule();
+}
+
+function updateReadabilityLabels() {
+  const wrap = document.getElementById('a11y-picker');
+  if (!wrap) return;
+  const t = (key) => i18n.getText('a11y', key);
+  wrap.querySelectorAll('[data-i18n^="a11y."]').forEach((el) => {
+    el.textContent = t(el.dataset.i18n.split('.')[1]);
+  });
+  const trigger = wrap.querySelector('.a11y-trigger');
+  trigger.title = t('title');          // hover tooltip: "Lesbarkeit" / "Readability"
+  trigger.setAttribute('aria-label', t('title'));
+  wrap.querySelector('.a11y-seg').setAttribute('aria-label', t('text_size'));
+}
+
+function initReadability() {
+  const anchor = document.querySelector('.language-picker');
+  if (!anchor || document.getElementById('a11y-picker')) return;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'a11y-picker';
+  wrap.id = 'a11y-picker';
+  wrap.innerHTML = `
+    <button type="button" class="a11y-trigger" aria-expanded="false" aria-controls="a11y-panel">
+      <span class="a11y-aa" aria-hidden="true"><span class="a11y-aa__big">A</span><span class="a11y-aa__small">a</span></span>
+    </button>
+    <div id="a11y-panel" class="a11y-panel" role="group" aria-labelledby="a11y-title" hidden>
+      <div class="a11y-title" id="a11y-title" data-i18n="a11y.title"></div>
+      <span class="a11y-lbl" data-i18n="a11y.text_size"></span>
+      <div class="a11y-seg" role="group">
+        <button type="button" data-text="normal" aria-pressed="false" data-i18n="a11y.size_normal"></button>
+        <button type="button" data-text="large" aria-pressed="false" data-i18n="a11y.size_large"></button>
+        <button type="button" data-text="xl" aria-pressed="false" data-i18n="a11y.size_xl"></button>
+      </div>
+      <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-switch="contrast">
+        <span data-i18n="a11y.contrast"></span><span class="a11y-switch__track" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="a11y-switch" role="switch" aria-checked="false" data-switch="motion">
+        <span data-i18n="a11y.motion"></span><span class="a11y-switch__track" aria-hidden="true"></span>
+      </button>
+      <div class="a11y-foot">
+        <span class="a11y-note" data-i18n="a11y.note"></span>
+        <button type="button" class="a11y-reset" data-i18n="a11y.reset"></button>
+      </div>
+    </div>`;
+  anchor.parentNode.insertBefore(wrap, anchor);
+
+  const trigger = wrap.querySelector('.a11y-trigger');
+  const panel = wrap.querySelector('.a11y-panel');
+  const sizeButtons = [...wrap.querySelectorAll('.a11y-seg button')];
+  const switches = [...wrap.querySelectorAll('.a11y-switch')];
+
+  function sync() {
+    const s = readabilityState;
+    sizeButtons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.text === s.text)));
+    switches.forEach((b) => {
+      const on = b.dataset.switch === 'contrast' ? s.contrast : motionIsReduced(s);
+      b.setAttribute('aria-checked', String(on));
+    });
+    trigger.classList.toggle('is-active', s.text !== 'normal' || s.contrast || s.motion === true);
+  }
+
+  function update(next) {
+    readabilityState = { ...readabilityState, ...next };
+    applyReadability(readabilityState);
+    writeReadability(readabilityState);
+    sync();
+  }
+
+  function closePanel(returnFocus = false) {
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    if (returnFocus) trigger.focus();
+  }
+
+  function openPanel() {
+    panel.style.setProperty('--a11y-top', `${Math.round(trigger.getBoundingClientRect().bottom + 8)}px`);
+    panel.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+    const pressed = sizeButtons.find((b) => b.getAttribute('aria-pressed') === 'true');
+    (pressed || sizeButtons[0]).focus();
+  }
+
+  trigger.addEventListener('click', () => (panel.hidden ? openPanel() : closePanel()));
+  sizeButtons.forEach((b) => b.addEventListener('click', () => update({ text: b.dataset.text })));
+  switches.forEach((b) => b.addEventListener('click', () => {
+    if (b.dataset.switch === 'contrast') update({ contrast: !readabilityState.contrast });
+    else update({ motion: !motionIsReduced(readabilityState) });
+  }));
+  wrap.querySelector('.a11y-reset').addEventListener('click', () => update({ ...READABILITY_DEFAULT }));
+
+  wrap.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !panel.hidden) {
+      event.preventDefault();
+      closePanel(true);
+    }
+  });
+  document.addEventListener('click', (event) => { if (!wrap.contains(event.target)) closePanel(); });
+  wrap.addEventListener('focusout', () => {
+    setTimeout(() => { if (!wrap.contains(document.activeElement)) closePanel(); }, 0);
+  });
+  window.addEventListener('resize', () => closePanel());
+
+  updateReadabilityLabels();
+  sync();
 }
 
 function initLanguagePicker() {
@@ -983,6 +1159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof cookieConsent !== 'undefined') cookieConsent.init();
     document.documentElement.classList.remove('no-js');
 
+    initReadability();
     initLanguagePicker();
 
     setupMobileMenu();
