@@ -39,6 +39,7 @@
   const ITEMS = [
     { id: 'consent', category: 'necessary', name: STORAGE_KEY, provider: 'konihaus.ch', type: 'local', duration: '12m' },
     { id: 'lang', category: 'necessary', name: 'konihaus-language', provider: '.konihaus.ch', type: 'cookie', duration: '12m' },   
+    { id: 'a11y', category: 'necessary', name: 'konihaus-readability', provider: 'konihaus.ch', type: 'local', duration: 'persist' },
     { id: 'cache', category: 'necessary', name: 'konihaus-v1', provider: 'konihaus.ch', type: 'cache', duration: 'persist' },
     { id: 'ga', category: 'statistics', name: '_ga', provider: 'Google', type: 'cookie', duration: '2y' },
     { id: 'ga_measurement', category: 'statistics', name: '_ga_' + GA_ID.replace('G-', ''), provider: 'Google', type: 'cookie', duration: '2y' },

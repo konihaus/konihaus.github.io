@@ -7,6 +7,17 @@
     "contact": "Contact",
     "cta": "Free Consultation"
   },
+  "a11y": {
+    "title": "Readability",
+    "text_size": "Text size",
+    "size_normal": "Normal",
+    "size_large": "Large",
+    "size_xl": "Extra large",
+    "contrast": "High contrast",
+    "motion": "Pause animations",
+    "reset": "Reset",
+    "note": "Saved on this device only."
+  },
   "hero": {
     "eye": "Smart Home · Zurich · Switzerland",
     "h1": "Your Home.<br><em>Intelligent.</em><br>Private.",
@@ -557,7 +568,7 @@
     "saved_on": "Your choice was saved on {date}.",
     "cat_always_on": "Always active",
     "cat_necessary_title": "Necessary",
-    "cat_necessary_desc": "Necessary cookies and storage features make a website usable by enabling basic functions — such as remembering your language and your cookie choice. The website cannot function properly without them.",
+    "cat_necessary_desc": "Necessary cookies and storage features make a website usable by enabling basic functions — such as remembering your language, your readability settings and your cookie choice. The website cannot function properly without them.",
     "cat_statistics_title": "Statistics",
     "cat_statistics_desc": "Statistics cookies help us understand how visitors interact with the website by collecting and reporting information anonymously. We use Google Analytics for this.",
     "cat_unused": "Preference, marketing and unclassified cookies are not used on this website.",
@@ -575,6 +586,7 @@
     "dur_persist": "Until deleted",
     "purpose_consent": "Stores your cookie choice.",
     "purpose_lang": "Stores your chosen language.",
+    "purpose_a11y": "Stores your readability settings (text size, contrast, animations).",
     "purpose_cache": "Stores page files for offline use.",
     "purpose_ga": "Distinguishes visitors using a random identifier to compile usage statistics.",
     "purpose_ga_measurement": "Stores session state for the statistics.",

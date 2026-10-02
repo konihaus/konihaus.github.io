@@ -7,6 +7,17 @@
     "contact": "Kontakt",
     "cta": "Kostenlose Beratung"
   },
+  "a11y": {
+    "title": "Lesbarkeit",
+    "text_size": "Schriftgrösse",
+    "size_normal": "Normal",
+    "size_large": "Gross",
+    "size_xl": "Sehr gross",
+    "contrast": "Hoher Kontrast",
+    "motion": "Animationen pausieren",
+    "reset": "Zurücksetzen",
+    "note": "Nur auf diesem Gerät gespeichert."
+  },
   "hero": {
     "eye": "Smart Home · Zürich · Schweiz",
     "h1": "Ihr Zuhause.<br><em>Intelligent.</em><br>Privat.",
@@ -557,7 +568,7 @@
     "saved_on": "Ihre Auswahl wurde am {date} gespeichert.",
     "cat_always_on": "Immer aktiv",
     "cat_necessary_title": "Notwendig",
-    "cat_necessary_desc": "Notwendige Cookies und Speicherfunktionen machen eine Webseite nutzbar, indem sie Grundfunktionen ermöglichen — etwa das Merken Ihrer Sprachwahl und Ihrer Cookie-Entscheidung. Die Webseite kann ohne sie nicht richtig funktionieren.",
+    "cat_necessary_desc": "Notwendige Cookies und Speicherfunktionen machen eine Webseite nutzbar, indem sie Grundfunktionen ermöglichen — etwa das Merken Ihrer Sprachwahl, Ihrer Lesbarkeits-Einstellungen und Ihrer Cookie-Entscheidung. Die Webseite kann ohne sie nicht richtig funktionieren.",
     "cat_statistics_title": "Statistik",
     "cat_statistics_desc": "Statistik-Cookies helfen uns zu verstehen, wie Besucher mit der Webseite interagieren, indem Informationen anonym gesammelt und gemeldet werden. Wir nutzen dafür Google Analytics.",
     "cat_unused": "Präferenz-, Marketing- und nicht klassifizierte Cookies werden auf dieser Webseite nicht verwendet.",
@@ -575,6 +586,7 @@
     "dur_persist": "Bis zur Löschung",
     "purpose_consent": "Speichert Ihre Cookie-Auswahl.",
     "purpose_lang": "Speichert Ihre gewählte Sprache.",
+    "purpose_a11y": "Speichert Ihre Lesbarkeits-Einstellungen (Schriftgrösse, Kontrast, Animationen).",
     "purpose_cache": "Speichert Seitendateien für die Offline-Nutzung.",
     "purpose_ga": "Unterscheidet Besucher anhand einer zufälligen Kennung, um Nutzungsstatistiken zu erstellen.",
     "purpose_ga_measurement": "Speichert den Sitzungsstatus für die Statistik.",
