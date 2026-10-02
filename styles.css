@@ -4933,7 +4933,6 @@ body.cc-lock .cc-banner {
   }
 }
 
-/* palette accents: ferien (marine) and mieter (burgundy) variants of what the senioren page gets from gold */
 .example-body--ferien .example-hero__tag,
 .example-body--ferien .example-outcomes__t,
 .example-body--ferien .example-outcomes__list li::before {
@@ -4946,7 +4945,6 @@ body.cc-lock .cc-banner {
   color: var(--burgundy-mid);
 }
 
-/* three outcome columns (weltreise) */
 .example-outcomes--3 {
   grid-template-columns: repeat(3, 1fr);
   max-width: 1000px;
@@ -4960,7 +4958,6 @@ body.cc-lock .cc-banner {
   }
 }
 
-/* homepage carousel cards (add the matching <a class="examples__card examples__card--peter"> items) */
 .examples__card--peter {
   background:
     linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
@@ -4980,3 +4977,36 @@ body.cc-lock .cc-banner {
 .examples__card--anna::after {
   box-shadow: inset 0 -4px 0 0 var(--burgundy-mid);
 }
+
+.example-hero-container.barber {
+  background: url('./barbershop/barbershop-desktop.jpg') no-repeat center center / 100% var(--parchment);
+}
+
+@media (max-width: 1380px) {
+  .example-hero-container.barber {
+    background: linear-gradient(to bottom,
+        rgba(247, 244, 237, 1) 2%,
+        rgba(247, 244, 237, 0) 50%,
+        rgba(247, 244, 237, 0) 60%,
+        rgba(247, 244, 237, 1) 90%
+      ),url('./barbershop/barbershop-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+  }
+}
+
+@media (max-width: 600px) {
+  .example-hero-container.barber {
+    background: url('./barbershop/barbershop-mobile.jpg') no-repeat center bottom / contain var(--parchment);
+    padding-bottom: 70%;
+  }
+}
+
+.examples__card--luca {
+  background:
+    linear-gradient(100deg, var(--cream) 0%, var(--cream) 42%, rgba(237, 233, 223, .82) 58%, rgba(237, 233, 223, 0) 78%),
+    url('./barbershop/barbershop-homepage.jpg') no-repeat right center / cover var(--cream);
+}
+
+.examples__card--luca::after {
+  box-shadow: inset 0 -4px 0 0 var(--forest-mid);
+}
+

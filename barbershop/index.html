@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a4a35">
+  <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+  <title>Luca – der Barbershop - Anwendungsbeispiel: Konihaus</title>
+  <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einen kleinen Barbershop im Alltag entlasten könnte, vom Öffnen bis zum Abschliessen, ohne Kameras und ohne Bohren.">
+  <meta name="author" content="Konrad Hefelle">
+  <!-- NOINDEX: bundled with the pre-launch site (index_kh.html), goes live 15 Oct 2026.
+       At launch, alongside renaming index_kh.html to index.html at the site root: every
+       "../index_kh.html..." link on this page (logo, nav, footer, CTA buttons) needs the
+       "index_kh.html" replaced with nothing (so it becomes "../" or "../#packages" etc.),
+       since the legal pages already link home via plain "/" and expect the same. A simple
+       find-and-replace across this file and every other example page (isolierter-senior/,
+       wasserschaden/, ferienwohnung-management/, barbershop/, and any added later) covers it. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://konihaus.ch/barbershop">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Luca – der Barbershop - Anwendungsbeispiel: Konihaus">
+  <meta property="og:description" content="Ein illustratives Beispiel: Wie Konihaus einen kleinen Barbershop im Alltag entlasten könnte, vom Öffnen bis zum Abschliessen, ohne Kameras und ohne Bohren.">
+  <meta property="og:url" content="https://konihaus.ch/barbershop">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://konihaus.ch/barbershop/barbershop_og.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Luca – der Barbershop - Anwendungsbeispiel: Konihaus">
+  <meta name="twitter:description" content="Ein illustratives Beispiel: Wie Konihaus einen kleinen Barbershop im Alltag entlasten könnte, vom Öffnen bis zum Abschliessen, ohne Kameras und ohne Bohren.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="example-body">
+
+  <nav class="nav nav--solid" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="../index_kh.html" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <div class="legal-nav__right">
+          <a href="../index_kh.html#examples" class="legal-back" data-i18n="beispiel_hans.back">← Zurück zu den Beispielen</a>
+          <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: Deutsch"
+          >
+            <span class="language-current">DE</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="example-hero-container barber">
+    <header class="example-hero">
+      <div class="container">
+        <p class="sec-eye reveal" data-i18n="beispiel_hans.eyebrow">Anwendungsbeispiel</p>
+        <h1 class="example-hero__h reveal d1" data-i18n-html="true" data-i18n="beispiel_luca.title"><em>Luca</em> — der Barbershop in Affoltern</h1>
+        <p class="example-hero__sub reveal d2" data-i18n="beispiel_luca.subtitle">Ein Beispiel, wie Konihaus einen kleinen Barbershop im Alltag entlasten könnte — vom Öffnen bis zum Abschliessen.</p>
+        <p class="example-disclaimer reveal d2" data-i18n="beispiel_hans.disclaimer">Diese Geschichte ist ein
+          illustratives Beispiel zur Veranschaulichung — keine dokumentierte Kundengeschichte. Name und Details sind
+          frei erfunden.</p>
+        <div class="example-hero__badge reveal d3">
+          <div class="example-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="7" width="16" height="10" rx="2" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12h8M10 20h4M12 17v3" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="example-hero__tag" data-i18n="beispiel_luca.hero_tag" data-i18n-html="true">Mehr Zeit am Stuhl.<br>Weniger Kleinkram.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="example-section-top">
+      <div class="container example-narrow">
+        <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_luca.sit_title">Die Situation</h2></div>
+        <p class="example-p reveal d1" data-i18n="beispiel_luca.sit_body">Luca, 38, führt in Affoltern am Albis einen kleinen Barbershop — als Mieter. Gemeinsam mit seinem Kollegen Marco bedient er zwei Stühle, ein dritter Platz wäre bei Bedarf rasch bereit. Gebucht wird über eine Termin-App, dazwischen kommen Walk-ins vorbei. Wer am Stuhl steht, hat keine Hand frei: Aufschliessen, Licht, Musik, Handtücher, Lüften, Abschliessen — das alles läuft nebenher.</p>
+      </div>
+    </section>
+  </div>
+  <section class="example-section example-section--alt">
+    <div class="container example-narrow">
+      <div class="example-h2-row"><div class="example-badge example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_luca.worry_title">Lucas Alltagssorgen</h2></div>
+      <ul class="example-worry-list">
+        <li class="reveal d1" data-i18n="beispiel_luca.worry1">Was, wenn heute Abend wieder jemand den Dampfgarer oder den Handtuchwärmer angelassen hat?</li>
+        <li class="reveal d1" data-i18n="beispiel_luca.worry2">Was, wenn Walk-ins «Geschlossen» sehen, obwohl ein Stuhl frei wäre?</li>
+        <li class="reveal d1" data-i18n="beispiel_luca.worry3">Dampf, Haarspray und Chemie machen die Luft schwer — und mitten im Betrieb denkt niemand ans Lüften.</li>
+        <li class="reveal d1" data-i18n="beispiel_luca.worry4">Die Tür steht den ganzen Tag auf, die Wärme verschwindet und die Heizkosten steigen.</li>
+        <li class="reveal d1" data-i18n="beispiel_luca.worry5">Nachts steht der Salon mit Schaufenster leer. Reinigungskraft und Lieferanten brauchen Zugang, und Schlüssel wandern von Hand zu Hand.</li>
+        <li class="reveal d1" data-i18n="beispiel_luca.worry6">Luca weiss nicht, wann wirklich am meisten los ist — und während eines Haarschnitts kann er nicht aufs Handy schauen.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="example-section">
+    <div class="container">
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_luca.sol_title">Die Lösung: Ein Salon, der mitdenkt</h2></div>
+      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_luca.sol_intro">Für Luca würde sich unser All-in-Paket anbieten, ab CHF 149 pro Monat, mit rund 25 Geräten. Es wird geklebt, gesteckt oder reversibel montiert — gebohrt wird nicht.</p>
+      <div class="example-sol-grid">
+        <div class="example-sol-card reveal d1">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7.5V12l3 2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol1_t">Öffnungs-Szene nach Terminkalender</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol1_b">15 Minuten vor dem ersten Termin gehen Licht, Spiegel-LEDs, Musik, Kaffeemaschine und Schild automatisch an.</div>
+        </div>
+        <div class="example-sol-card reveal d1">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8c2-2 4-2 7 0s5 2 7 0v9c-2 2-4 2-7 0s-5-2-7 0V8z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol2_t">Handtuchwärmer mit Termin-Logik</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol2_b">Der Wärmer heizt kurz vor dem nächsten Termin vor und schaltet sich nach dem letzten wieder ab.</div>
+        </div>
+        <div class="example-sol-card reveal d2">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4v7" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 7a7 7 0 1 0 9 0" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol3_t">Schliess-Szene per Knopfdruck</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol3_b">Ein Taster am Ausgang schaltet alles aus, die Türsensoren bestätigen «abgeschlossen» — Luca erhält eine einzige Nachricht. Reinigungs-Erinnerungen laufen auf einem kleinen Tablet.</div>
+        </div>
+        <div class="example-sol-card reveal d2">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a5 5 0 0 0-5 5v4l-1.5 3h13L17 13V9a5 5 0 0 0-5-5zM10 19a2 2 0 0 0 4 0" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol4_t">Vergessen-Alarm</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol4_b">Die Stromüberwachung an Dampfgerät, Föhn-Leiste und Ladestation meldet, wenn 20 Minuten nach Feierabend noch etwas Strom zieht.</div>
+        </div>
+        <div class="example-sol-card reveal d3">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="7" width="16" height="10" rx="2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 12h8M10 20h4M12 17v3" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol5_t">Smartes «Walk-ins willkommen»-Schild</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol5_b">Präsenzsensoren an den Stühlen (keine Kameras) zeigen an der Tür, ob ein Platz frei ist. Der dritte Stuhl ist bereits vorbereitet.</div>
+        </div>
+        <div class="example-sol-card reveal d3">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3.4" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6L18 18M6 18l1.4-1.4M16.6 7.4L18 6" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol6_t">Ambiente-Szenen</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol6_b">Willkommenslicht beim Eintreten, ruhiges Morgenlicht, wärmere Szene am Nachmittag, Wochenend-Setup — per Wandtaster, ohne App.</div>
+        </div>
+        <div class="example-sol-card reveal d1">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol7_t">Wasser, Rauch und Hitze</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol7_b">Lecksensoren unter beiden Waschbecken und am Warmwasserspeicher, dazu ein smarter Rauch- und Hitzemelder.</div>
+        </div>
+        <div class="example-sol-card reveal d1">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 9h10a2.5 2.5 0 1 0-2.5-2.5M4 14h13a2.5 2.5 0 1 1-2.5 2.5M4 19h6" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol8_t">Luftqualität</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol8_b">Ein CO₂-, Feuchte- und Temperatursensor erinnert ans Lüften oder startet die Lüftung, wenn Dampf und Haarspray die Luft schwer machen.</div>
+        </div>
+        <div class="example-sol-card reveal d2">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol9_t">Nachtschutz</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol9_b">Tür-, Hintertür- und Schaufenster-Sensoren, Bewegungsmelder und Sirene alarmieren aufs Handy, wenn nachts etwas nicht stimmt.</div>
+        </div>
+        <div class="example-sol-card reveal d2">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="12" r="3.5" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.5 12H20M17 12v3M20 12v2.5" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol10_t">Zugangscodes auf Zeit</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol10_b">Die Reinigungskraft erhält dienstags einen Code für 06:00–07:00 Uhr, Lieferanten ein einzelnes Zeitfenster. Kein Schlüssel wird mehr weitergereicht. Einbau in Absprache mit der Vermietung.</div>
+        </div>
+        <div class="example-sol-card reveal d3">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 19V9M10 19V5M15 19v-7M20 19V8" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol11_t">Frequenz-Wochenbericht</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol11_b">Der Türsensor zählt Besuche — ohne Kamera. Ein Wochenbericht zeigt Stosszeiten und ruhige Fenster.</div>
+        </div>
+        <div class="example-sol-card reveal d3">
+          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--forest-mid)"/></svg></div>
+          <div class="example-sol-t" data-i18n="beispiel_luca.sol12_t">Zugluft-Sparer + Standby-Aus</div>
+          <div class="example-sol-b" data-i18n="beispiel_luca.sol12_b">Bleibt die Tür länger als zwei Minuten offen, pausiert das Heizkörper-Thermostat. Nachts nehmen smarte Steckdosen Geräte vom Netz.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="example-section example-section--alt">
+    <div class="container">
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_luca.out_title">Was das für den Salon bedeuten könnte</h2></div>
+      <div class="example-outcomes example-outcomes--3">
+        <div class="example-outcomes__col reveal d1">
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_luca.out_luca_t">Für Luca</div></div>
+          <ul class="example-outcomes__list">
+            <li data-i18n="beispiel_luca.out_luca1">Eine Nachricht am Abend statt zehn Kontrollgänge: alles aus, alles zu.</li>
+            <li data-i18n="beispiel_luca.out_luca2">Der Wochenbericht zeigt, wann wirklich Betrieb ist — das hilft bei Terminen und Walk-ins.</li>
+            <li data-i18n="beispiel_luca.out_luca3">Wasser-, Rauch- und Einbruchsalarm gehen direkt aufs Handy.</li>
+          </ul>
+        </div>
+        <div class="example-outcomes__col reveal d2">
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_luca.out_team_t">Für das Team</div></div>
+          <ul class="example-outcomes__list">
+            <li data-i18n="beispiel_luca.out_team1">Weniger Handgriffe zwischen zwei Kunden — Licht, Musik und Wärmer richten sich nach dem Tag.</li>
+            <li data-i18n="beispiel_luca.out_team2">Ein Taster zum Öffnen, einer zum Schliessen — eine App ist nicht nötig.</li>
+            <li data-i18n="beispiel_luca.out_team3">Erfasst werden Geräte und Räume, keine Personen: keine Kameras, kein Tracking des Teams.</li>
+          </ul>
+        </div>
+        <div class="example-outcomes__col reveal d3">
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_luca.out_kund_t">Für die Kundschaft</div></div>
+          <ul class="example-outcomes__list">
+            <li data-i18n="beispiel_luca.out_kund1">Ein warmes Handtuch, passendes Licht und frische Luft.</li>
+            <li data-i18n="beispiel_luca.out_kund2">Walk-ins sehen sofort, ob ein Stuhl frei ist.</li>
+            <li data-i18n="beispiel_luca.out_kund3">Keine Kameras an den Stühlen — der Salon bleibt privat.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="example-cta-sec">
+    <div class="container">
+      <div class="example-cost reveal">
+        <div class="example-cost__lbl" data-i18n="beispiel_hans.cost_title">Die Kosten</div>
+        <div class="example-cost__price" data-i18n="beispiel_luca.cost_price" data-i18n-html="true"><span class="pkg__from">CHF</span><span class="pkg__num">149</span><span class="pkg__mo">/Monat</span></div>
+        <div class="example-cost__note" data-i18n="beispiel_luca.cost_note">Hardware einmalig ~CHF 700–900 · ca. 25 Geräte, ohne Bohren</div>
+      </div>
+      <h2 class="example-cta__t reveal" data-i18n="beispiel_luca.cta_t">Ist das etwas für Ihren Betrieb?</h2>
+      <p class="example-cta__b reveal d1" data-i18n="beispiel_luca.cta_b">Sehen Sie sich das Paket «All in» im Detail an, oder vereinbaren Sie eine kostenlose, unverbindliche Beratung.</p>
+      <div class="example-cta__btns reveal d2">
+        <a href="../index_kh.html?pkg=basis-4#packages" class="btn btn-primary" data-i18n="beispiel_hans.cta_btn1">Paket
+          ansehen</a>
+        <a href="../index_kh.html?pkg=basis-4#contact" class="btn btn-ghost" data-i18n="beispiel_hans.cta_btn2">Kostenlose
+          Beratung</a>
+      </div>
+      <a href="../index_kh.html#examples" class="example-back-link reveal d3" data-i18n="beispiel_hans.back">← Zurück zu
+        den Beispielen</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="../index_kh.html" class="logo" aria-label="Konihaus">
+            <div class="logo-image"></div>
+            <div class="wordmark">konihaus</div>
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Smart home managed service für Senioren, Mieter und
+            Ferienhausbesitzer in der
+            Schweiz.</p>
+          <div class="footer__social" aria-label="Social Media">
+            <a href="https://www.instagram.com/ch.konihaus/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/konihaus.ch" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 8.5h2.2V5.2h-2.4c-2.5 0-4.1 1.6-4.1 4.1v2H8.6v3.3h2.1V21h3.3v-6.4h2.2l.4-3.3h-2.6V9.6c0-.7.2-1.1 1-1.1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://x.com/konihaus" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/konihaus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="7.6" cy="8.2" r="1.15" fill="currentColor"/>
+                <path d="M7.6 11v6.3M11.3 11v6.3M11.3 13.6c0-1.6 1-2.6 2.3-2.6 1.3 0 2 .9 2 2.5v3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
+          <ul class="flinks">
+            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l1">Standard</a></li>
+            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l2">Für Senioren</a></li>
+            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l3">Für Mieter</a></li>
+            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l4">Für Ferienhäuser</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col2_title">Unternehmen</div>
+          <ul class="flinks">
+            <li><a href="../index_kh.html#about" data-i18n="footer.col2_l1">Über Koni</a></li>
+            <li><a href="../index_kh.html#process" data-i18n="footer.col2_l2">So funktioniert's</a></li>
+            <li><a href="../index_kh.html#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+            <li><a href="../index_kh.html#contact" data-i18n="footer.col2_l4">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col3_title">Rechtliches</div>
+          <ul class="flinks">
+            <li><a href="../impressum" data-i18n="footer.col3_l1">Impressum</a></li>
+            <li><a href="../datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a></li>
+            <li><a href="../index_kh.html#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a></li>
+            <li><a href="../agb" data-i18n="footer.col3_l4">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz
+        </p>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const CUSTOM_BASE_DIR = '../';
+  </script>
+  <script src="../scripts.js"></script>
+  <script src="../cookie-consent.js"></script>
+</body>
+
+</html>
