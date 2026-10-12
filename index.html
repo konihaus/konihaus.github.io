@@ -509,6 +509,27 @@
       gap: 20px;
     }
 
+    .blog-teaser {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: rgba(247, 244, 237, .5);
+      max-width: 440px;
+      margin-top: 28px;
+      animation: fadeUp .7s var(--ease) .8s both;
+    }
+
+    .blog-teaser a {
+      color: rgba(232, 192, 106, .8);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .2s;
+    }
+
+    .blog-teaser a:hover {
+      color: var(--amber-warm);
+    }
+
     .bottom-contact {
       font-size: 13px;
       font-weight: 300;
@@ -1294,6 +1315,8 @@ body.cc-lock .cc-banner {
         <p class="signup-note" id="signup-note">Kein Spam. Nur eine Nachricht wenn wir live gehen.</p>
       </div>
 
+      <p class="blog-teaser" id="blog-teaser"><span id="blog-teaser-text">Bis dahin: Gedanken zu Smart Home, lokal &amp; ohne Cloud-Zwang im</span> <a
+          href="https://blog.konihaus.ch" id="blog-teaser-link">Konihaus Blog&nbsp;&rarr;</a></p>
 
     </div>
 
@@ -1431,8 +1454,8 @@ body.cc-lock .cc-banner {
 
     // Language
     const copy = {
-      de: { eyebrow: 'Smart Home · Zürich · Schweiz', headline: 'Wir kommen<br><em>bald.</em>', subline: 'Konihaus — persönlich betreutes Smart Home in der Schweiz. Plattformunabhängig, lokal, ohne Cloud-Zwang.', days: 'Tage', hours: 'Stunden', mins: 'Minuten', secs: 'Sekunden', signupLabel: 'Informiert werden wenn wir starten:', signupBtn: 'Benachrichtigen', placeholder: 'ihre@email.ch', successMsg: 'Danke — wir melden uns bei Launch!', signupNote: 'Kein Spam. Nur eine Nachricht wenn wir live gehen.', progressLabel: 'Aufbau läuft', contactQuestion: 'Jetzt schon Fragen?' },
-      en: { eyebrow: 'Smart Home · Zürich · Switzerland', headline: 'Coming<br><em>soon.</em>', subline: 'Konihaus — personally managed smart home in Switzerland. Platform-independent, local, no cloud lock-in.', days: 'Days', hours: 'Hours', mins: 'Minutes', secs: 'Seconds', signupLabel: 'Get notified when we launch:', signupBtn: 'Notify me', placeholder: 'your@email.ch', successMsg: "Thank you — we'll be in touch at launch!", signupNote: 'No spam. One email when we go live.', progressLabel: 'Building now', contactQuestion: 'Already have questions?' }
+      de: { eyebrow: 'Smart Home · Zürich · Schweiz', headline: 'Wir kommen<br><em>bald.</em>', subline: 'Konihaus — persönlich betreutes Smart Home in der Schweiz. Plattformunabhängig, lokal, ohne Cloud-Zwang.', days: 'Tage', hours: 'Stunden', mins: 'Minuten', secs: 'Sekunden', signupLabel: 'Informiert werden wenn wir starten:', signupBtn: 'Benachrichtigen', placeholder: 'ihre@email.ch', successMsg: 'Danke — wir melden uns bei Launch!', signupNote: 'Kein Spam. Nur eine Nachricht wenn wir live gehen.', progressLabel: 'Aufbau läuft', contactQuestion: 'Jetzt schon Fragen?', blogText: 'Bis dahin: Gedanken zu Smart Home, lokal & ohne Cloud-Zwang im', blogLink: 'Konihaus Blog →' },
+      en: { eyebrow: 'Smart Home · Zürich · Switzerland', headline: 'Coming<br><em>soon.</em>', subline: 'Konihaus — personally managed smart home in Switzerland. Platform-independent, local, no cloud lock-in.', days: 'Days', hours: 'Hours', mins: 'Minutes', secs: 'Seconds', signupLabel: 'Get notified when we launch:', signupBtn: 'Notify me', placeholder: 'your@email.ch', successMsg: "Thank you — we'll be in touch at launch!", signupNote: 'No spam. One email when we go live.', progressLabel: 'Building now', contactQuestion: 'Already have questions?', blogText: 'Until then: thoughts on smart home, local & cloud-free, on the', blogLink: 'Konihaus blog →' }
     };
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1451,7 +1474,9 @@ body.cc-lock .cc-banner {
         document.getElementById('success-msg').textContent = t.successMsg;
         document.getElementById('signup-note').textContent = t.signupNote;
         document.getElementById('progress-label').textContent = t.progressLabel;
-        document.getElementById('bottom-contact').innerHTML = t.contactQuestion + ' <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a>';
+        document.getElementById('blog-teaser-text').textContent = t.blogText;
+        document.getElementById('blog-teaser-link').textContent = t.blogLink;
+        document.getElementById('bottom-contact').innerHTML =t.contactQuestion + ' <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a>';
 
         const ccLink = document.getElementById('cc-open-link');
         if (ccLink) ccLink.textContent = lang === 'en' ? 'Cookie settings' : 'Cookie-Einstellungen';
