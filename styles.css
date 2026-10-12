@@ -1894,12 +1894,11 @@ a.logo {
 }
 
 .why__item--quality {
-  --feature-pictogram: url("./images/swiss-quality.png");
+  --feature-pictogram: url("./images/whys/swiss-quality.jpg");
 }
 .why__item--quality::before,
 .why__item--quality:hover::before {
-  background-size: contain;
-  background-position: right center;
+  background-position: center center;
 }
 
 .why__item--energy {

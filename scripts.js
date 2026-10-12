@@ -1138,6 +1138,10 @@ document.addEventListener('DOMContentLoaded', () => {
       future: {
         de: 'zukunftssicher',
         en: 'future-proof'
+      },
+      swiss: {
+        de: 'schweizer-qualitaet',
+        en: 'swiss-quality'
       }
     }
 
