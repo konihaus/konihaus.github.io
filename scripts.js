@@ -27,6 +27,39 @@ function getLangFromPath() {
   return null;
 }
 
+/* Pages that exist once per language under their own URL (e.g. /home-assistant-schweiz and
+   /home-assistant-switzerland) declare both URLs on <body>:
+     <body data-alt-de="/home-assistant-schweiz" data-alt-en="/home-assistant-switzerland">
+   The URL then decides the language: opening one of the pages sets the language (cookie + localStorage),
+   and the language picker jumps to the other page instead of swapping text in place. */
+function getLangPages() {
+  const b = document.body;
+  if (!b || (!b.dataset.altDe && !b.dataset.altEn)) return null;
+  return { de: b.dataset.altDe, en: b.dataset.altEn };
+}
+
+function normalizePath(path) {
+  return (path || '').replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/+$/, '') || '/';
+}
+
+function getPageLang() {
+  const pages = getLangPages();
+  if (!pages) return null;
+  const here = normalizePath(window.location.pathname);
+  for (const lang of ['de', 'en']) {
+    if (pages[lang] && normalizePath(pages[lang]) === here) return lang;
+  }
+  return null;
+}
+
+function persistLanguage(lang) {
+  try {
+    localStorage.setItem('lang', lang);
+    localStorage.setItem(LANG_COOKIE, lang);
+  } catch { /* storage blocked */ }
+  setCookie(LANG_COOKIE, lang);
+}
+
 /* ───────── READABILITY (Aa button): text size · high contrast · pause animations ─────────
    Preference lives in localStorage only ("konihaus-readability"), never leaves the device.
    <head> has a tiny inline copy of applyReadability() so the size is right before first paint. */
@@ -81,7 +114,7 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
 
 const i18n = {
-  currentLang: getLangFromPath() || getCookie(LANG_COOKIE) || localStorage.getItem('lang') || 'de',
+  currentLang: getPageLang() || getLangFromPath() || getCookie(LANG_COOKIE) || localStorage.getItem('lang') || 'de',
   supportedLangs: ['de', 'en'/*, 'fr', 'it'*/],
   translations: {},
   baseDir:
@@ -90,6 +123,9 @@ const i18n = {
     : '/',
 
   async init() {
+    /* language-specific page: remember its language right away, before the translations are fetched */
+    const pageLang = getPageLang();
+    if (pageLang) persistLanguage(pageLang);
     for (const lang of this.supportedLangs) {
       try {
         const response = await fetch(`${this.baseDir}translations/${lang}.json`);
@@ -132,9 +168,13 @@ const i18n = {
 
   updatePageContent() {
     const elements = document.querySelectorAll('[data-i18n]');
+    /* language-specific pages carry their own static text: a key without translation keeps that text
+       (other pages keep showing [section.key] so missing keys stay visible) */
+    const ownText = !!getLangPages();
     elements.forEach((el) => {
       const keys = el.dataset.i18n.split('.');
-      const text = this.getText(...keys);
+      const text = ownText ? this.lookup(...keys) : this.getText(...keys);
+      if (text == null) return;
 
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
         if (el.placeholder) el.placeholder = text;
@@ -149,15 +189,20 @@ const i18n = {
     this.updateSelectOptions();
   },
 
-  getText(section, key) {
-    const lookup = (lang) => {
+  /* translation or null (no placeholder) */
+  lookup(section, key) {
+    const find = (lang) => {
       let text = this.translations[lang];
       for (const k of [section, key]) {
         text = text ? text[k] : null;
       }
       return text;
     };
-    return lookup(this.currentLang) || lookup('en') || `[${section}.${key}]`;
+    return find(this.currentLang) || find('en') || null;
+  },
+
+  getText(section, key) {
+    return this.lookup(section, key) || `[${section}.${key}]`;
   },
 
   updateSelectOptions() {
@@ -437,7 +482,8 @@ function applyLanguageBlocks() {
   const titleKey = document.body && document.body.dataset.titleKey;
   if (titleKey) {
     const [section, key] = titleKey.split('.');
-    document.title = i18n.getText(section, key) + ' \u2014 Konihaus';
+    const title = getLangPages() ? i18n.lookup(section, key) : i18n.getText(section, key);
+    if (title) document.title = title + ' \u2014 Konihaus';
   }
 
   document.querySelectorAll('[data-legal-doc]').forEach((doc) => {
@@ -1060,9 +1106,17 @@ function initLanguagePicker() {
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
-      select.value = option.dataset.lang;
+      const lang = option.dataset.lang;
+      select.value = lang;
       select.dispatchEvent(new Event("change", { bubbles: true }));
       closeMenu(true);
+
+      /* language-specific page: go to the page of the chosen language */
+      const pages = getLangPages();
+      const target = pages && pages[lang];
+      if (target && normalizePath(target) !== normalizePath(window.location.pathname)) {
+        window.location.assign(target + window.location.search + window.location.hash);
+      }
     });
   });
 
@@ -1098,7 +1152,7 @@ function initLanguagePicker() {
     }, 0);
   });
 
-  const savedLanguage = readLanguage();
+  const savedLanguage = i18n.currentLang || readLanguage();
   const supported = [...select.options].some(
     (option) => option.value === savedLanguage
   );

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1e2535">
+  <link rel="icon" type="image/svg+xml" href="/favicon_sm.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <title>Home Assistant Switzerland – Setup &amp; Care | Konihaus</title>
+  <meta name="description" content="Konihaus sets up Home Assistant for your home in Switzerland and looks after it on an ongoing basis. Local, no cloud requirement, using your existing devices. Packages from CHF 29 per month.">
+  <meta name="author" content="Konrad Hefelle">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://konihaus.ch/home-assistant-switzerland">
+  <link rel="alternate" hreflang="de" href="https://konihaus.ch/home-assistant-schweiz">
+  <link rel="alternate" hreflang="en" href="https://konihaus.ch/home-assistant-switzerland">
+  <link rel="alternate" hreflang="x-default" href="https://konihaus.ch/home-assistant-schweiz">
+
+  <meta property="og:title" content="Home Assistant Switzerland – Setup &amp; Care | Konihaus">
+  <meta property="og:description" content="Home Assistant, set up and looked after: local, no cloud requirement, for every household in Switzerland.">
+  <meta property="og:url" content="https://konihaus.ch/home-assistant-switzerland">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="de_CH">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Home Assistant Switzerland – Setup &amp; Care | Konihaus">
+
+  <link rel="preload" href="/fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/cormorant-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    /* readability preferences (Aa button), applied before first paint; logic mirrors scripts.js */
+    (function(){try{var d=document.documentElement,p=JSON.parse(localStorage.getItem('konihaus-readability')||'{}');
+    if(p.text==='large'||p.text==='xl')d.setAttribute('data-text',p.text);
+    if(p.contrast===true)d.setAttribute('data-contrast','high');
+    if(p.motion===true||(typeof p.motion!=='boolean'&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.setAttribute('data-motion','reduce');}catch(e){}})();
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://konihaus.ch/home-assistant-switzerland#webpage",
+      "url": "https://konihaus.ch/home-assistant-switzerland",
+      "name": "Home Assistant Switzerland – Setup & Care | Konihaus",
+      "description": "Konihaus sets up Home Assistant for your home in Switzerland and looks after it on an ongoing basis. Local, no cloud requirement, using your existing devices. Packages from CHF 29 per month.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://konihaus.ch/#website"
+      },
+      "about": {
+        "@id": "https://konihaus.ch/home-assistant-switzerland#service"
+      },
+      "breadcrumb": {
+        "@id": "https://konihaus.ch/home-assistant-switzerland#breadcrumb"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://konihaus.ch/home-assistant-switzerland#service",
+      "name": "Home Assistant setup and ongoing care",
+      "serviceType": "Smart home setup and remote management with Home Assistant",
+      "provider": {
+        "@id": "https://konihaus.ch/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Switzerland"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "CHF",
+        "lowPrice": "29",
+        "highPrice": "149",
+        "offerCount": 4
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://konihaus.ch/home-assistant-switzerland#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Konihaus",
+          "item": "https://konihaus.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Home Assistant Switzerland",
+          "item": "https://konihaus.ch/home-assistant-switzerland"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    .lp-hero{background:var(--marine);color:var(--parchment);padding:140px 0 88px}
+    .lp-hero .sec-eye{color:var(--amber-warm)}
+    .lp-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(38px,5vw,64px);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px}
+    .lp-hero h1 em{font-style:italic;color:var(--forest-light);font-weight:400}
+    .lp-hero__sub{max-width:680px;font-size:1.0625em;line-height:1.7;color:rgba(247,244,237,.82);margin-bottom:28px}
+    .lp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+    .lp-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+    .lp-chips li{font-size:.8125em;border:1px solid rgba(247,244,237,.25);border-radius:20px;padding:6px 14px;color:rgba(247,244,237,.88)}
+    .lp-sec{padding:96px 0}
+    .lp-sec--cream{background:var(--cream)}
+    .lp-sec--parch{background:var(--parchment)}
+    .lp-sec h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.2vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 18px}
+    .lp-sec h2 em{font-style:italic;color:var(--forest-mid);font-weight:400}
+    .lp-lead{max-width:720px;color:var(--ink-3);line-height:1.75;margin-bottom:12px}
+    .lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:36px}
+    .lp-card,.lp-pkg{background:var(--parchment);border:1px solid var(--warm-mid);border-radius:12px;padding:22px}
+    .lp-sec--parch .lp-card{background:var(--cream)}
+    .lp-card h3,.lp-pkg h3{font-family:var(--serif);font-size:1.4em;font-weight:500;margin:0 0 8px;color:var(--forest)}
+    .lp-card p{margin:0;font-size:.9375em;line-height:1.65;color:var(--ink-3)}
+    .lp-pkg--hl{border-color:var(--forest-mid);box-shadow:0 6px 24px rgba(42,74,53,.12)}
+    .lp-pkg__badge{display:inline-block;font-size:.6875em;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-text);margin-bottom:6px}
+    .lp-pkg__price{margin:0 0 6px;color:var(--ink-3)}
+    .lp-pkg__price strong{font-family:var(--serif);font-size:2.2em;font-weight:500;color:var(--ink)}
+    .lp-pkg__assume{margin:0;font-size:.8125em;color:var(--stone-text);line-height:1.55}
+    .lp-dev-types{margin-top:36px}
+    .lp-dev-types .dev-tags{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+    .lp-dev-types h3{font-size:.75em;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-text);font-weight:500;margin:0 0 14px}
+    .lp-note{max-width:720px;margin:28px auto 0;text-align:center;font-size:.875em;color:var(--stone-text);line-height:1.65}
+    .lp-link{display:inline-flex;gap:8px;align-items:center;margin-top:24px;color:var(--forest);text-decoration:underline;text-underline-offset:3px}
+    .lp-cta{background:var(--forest-deep);color:var(--parchment);text-align:center;padding:96px 0}
+    .lp-cta h2{color:var(--parchment)}
+    .lp-cta h2 em{color:var(--forest-light)}
+    .lp-cta p{max-width:560px;margin:0 auto 24px;color:rgba(247,244,237,.82);line-height:1.7}
+    .lp-cta .lp-actions{justify-content:center;margin-bottom:16px}
+    @media (max-width:640px){.lp-hero{padding:112px 0 64px}.lp-sec,.lp-cta{padding:64px 0}}
+  </style>
+</head>
+
+<body data-title-key="ha.title" data-alt-de="/home-assistant-schweiz" data-alt-en="/home-assistant-switzerland">
+
+  <nav class="nav nav--solid" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="/" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <div class="legal-nav__right">
+          <a class="legal-back" data-i18n="ha.back" href="/">← Back to home</a>
+          <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: English"
+          >
+            <span class="language-current">EN</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en" selected>EN</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="lp-hero">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.eyebrow">Home Assistant Switzerland</p>
+      <h1 data-i18n="ha.h1" data-i18n-html="true">Home Assistant,<br><em>set up for you.</em></h1>
+      <p class="lp-hero__sub" data-i18n="ha.sub">Konihaus sets up Home Assistant for your home in Switzerland and looks after it on an ongoing basis — local, no cloud requirement, and using the devices you already own. For everyone who wants a smart home without tinkering themselves.</p>
+      <div class="lp-actions">
+        <a href="/#contact" class="btn btn-primary"><span data-i18n="ha.cta1">Request a free consultation</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/#packages" class="btn btn-ghost"><span data-i18n="ha.cta2">View packages</span></a>
+      </div>
+      <ul class="lp-chips"><li><span data-i18n="ha.chip1">100% local</span></li><li><span data-i18n="ha.chip2">Open source</span></li><li><span data-i18n="ha.chip3">Setup &amp; ongoing care from one source</span></li></ul>
+    </div>
+  </header>
+
+  <section class="lp-sec lp-sec--parch" id="was-ist-home-assistant">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.what_eye">What is Home Assistant?</p>
+      <h2 data-i18n="ha.what_h2" data-i18n-html="true">One hub for <em>all</em> your devices.</h2>
+      <p class="lp-lead" data-i18n="ha.what_p1">Home Assistant is a free, open-source smart home platform. It brings lights, sensors, heating, blinds, cameras and plugs from different manufacturers onto one shared interface — instead of one app per device.</p>
+      <p class="lp-lead" data-i18n="ha.what_p2">Data is processed locally, and automations keep running even without internet. This is the foundation I use for Greenhub, the heart of your home.</p>
+      <p class="lp-lead" data-i18n="ha.what_p3">The platform is powerful, but not everyone wants to install, update and secure it themselves. I take care of that: from the first consultation to ongoing remote management.</p>
+    </div>
+  </section>
+
+  <section class="lp-sec lp-sec--cream" id="fuer-wen">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.for_eye">Who is it for?</p>
+      <h2 data-i18n="ha.for_h2" data-i18n-html="true">Konihaus is <em>for everyone.</em></h2>
+      <p class="lp-lead" data-i18n="ha.for_sub">Apartment or house, tech fan or beginner: no prior knowledge needed. A few typical situations:</p>
+      <div class="lp-grid"><div class="lp-card reveal"><h3 data-i18n="ha.for1_t">Families &amp; households</h3><p data-i18n="ha.for1_b">Lighting, heating, blinds and security that adapt to daily life — without anyone having to do anything.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for2_t">Renters</h3><p data-i18n="ha.for2_b">Stick-on and plug-in devices, no structural changes. They move with you when you move.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for3_t">Homeowners &amp; family houses</h3><p data-i18n="ha.for3_b">Control heating, shading, irrigation and access centrally and save energy.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for4_t">Older adults &amp; relatives</h3><p data-i18n="ha.for4_b">Unobtrusive sensors that notify family or carers when something looks unusual.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for5_t">Holiday home &amp; second home</h3><p data-i18n="ha.for5_b">Keep an eye on water, smoke and temperature remotely, and give guests access without handing over keys.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for6_t">Small businesses</h3><p data-i18n="ha.for6_b">For example a hair salon: opening and closing scenes, alarms and weekly reports.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for7_t">Tech beginners</h3><p data-i18n="ha.for7_b">You want it simple, without jargon. I walk you through everything, with a manual in German and English.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.for8_t">Anyone who already owns devices</h3><p data-i18n="ha.for8_b">I use what you already have and only add what is missing.</p></div></div>
+    </div>
+  </section>
+
+  <section class="lp-sec lp-sec--parch" id="geraete">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.dev_eye">Devices &amp; Compatibility</p>
+      <h2 data-i18n="ha.dev_h2">Which devices work with Home Assistant?</h2>
+      <p class="lp-lead" data-i18n="ha.dev_p">A great many. Home Assistant supports over 1,000 integrations. Here are all the device types and manufacturers listed on my homepage — Zigbee, Matter and Thread, plus many Wi-Fi devices via integrations.</p>
+      <div class="lp-dev-types">
+        <h3 data-i18n="ha.dev_types">Device types</h3>
+        <div class="dev-tags"><div class="dev-tag" data-i18n="devices.tag1"><div class="dev-tag__dot"></div>Motion Sensors</div><div class="dev-tag" data-i18n="devices.tag2"><div class="dev-tag__dot"></div>Water Sensors</div><div class="dev-tag" data-i18n="devices.tag3"><div class="dev-tag__dot"></div>Door Sensors</div><div class="dev-tag" data-i18n="devices.tag4"><div class="dev-tag__dot"></div>Thermostats</div><div class="dev-tag" data-i18n="devices.tag5"><div class="dev-tag__dot"></div>Smoke &amp; CO</div><div class="dev-tag" data-i18n="devices.tag6"><div class="dev-tag__dot"></div>Smart Plugs (Type J)</div><div class="dev-tag" data-i18n="devices.tag7"><div class="dev-tag__dot"></div>Video Doorbell</div><div class="dev-tag" data-i18n="devices.tag8"><div class="dev-tag__dot"></div>Alarm Button</div><div class="dev-tag" data-i18n="devices.tag9"><div class="dev-tag__dot"></div>Smart Locks</div><div class="dev-tag" data-i18n="devices.tag10"><div class="dev-tag__dot"></div>Air Quality</div><div class="dev-tag" data-i18n="devices.tag11"><div class="dev-tag__dot"></div>and much more...</div></div>
+      </div>
+      <div class="brands">
+        <p class="brands__lbl" data-i18n="devices.brands_lbl">Compatible with devices from</p>
+        <div class="brands__list"><span class="brand-badge">Android</span><span class="brand-badge">Apple HomeKit</span><span class="brand-badge">Feller</span><span class="brand-badge">Gardena</span><span class="brand-badge">Google</span><span class="brand-badge">Homematic</span><span class="brand-badge">IKEA</span><span class="brand-badge">Intex</span><span class="brand-badge">myStrom</span><span class="brand-badge">Navimow</span><span class="brand-badge">Netatmo</span><span class="brand-badge">Nuki</span><span class="brand-badge">Oral-B</span><span class="brand-badge">Philips Hue</span><span class="brand-badge">Reolink</span><span class="brand-badge">Shelly</span><span class="brand-badge">Somfy</span><span class="brand-badge">Sonoff</span><span class="brand-badge">Sonos</span><span class="brand-badge">Synology</span><span class="brand-badge">Tado</span><span class="brand-badge">TP-Link</span><span class="brand-badge">Tuya</span><span class="brand-badge">Unifi</span><span class="brand-badge">Velux</span><span class="brand-badge">Worx</span><span class="brand-badge">Xiaomi</span><span class="brand-badge brand-badge--more" data-i18n="devices.brands_more">and many more</span></div>
+      </div>
+      <p class="lp-note" data-i18n="ha.dev_note">Whether a specific model works depends on manufacturer, model and firmware. I check this for your devices in the free consultation.</p>
+      <a class="lp-link" href="/#devices"><span data-i18n="ha.dev_more">More about Greenhub and the technology on the homepage</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+  <section class="lp-sec lp-sec--cream" id="warum">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.why_eye">Why Konihaus</p>
+      <h2 data-i18n="ha.why_h2" data-i18n-html="true">No need to <em>tinker</em> yourself.</h2>
+      <div class="lp-grid"><div class="lp-card reveal"><h3 data-i18n="ha.why1_t">On-site setup</h3><p data-i18n="ha.why1_b">I install the devices, set up Home Assistant and configure the automations. 2–4 hours, no wall modifications.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.why2_t">Ongoing care</h3><p data-i18n="ha.why2_b">Updates, monitoring and support are included in the monthly price. Monthly report for you and your family.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.why3_t">Local &amp; encrypted</h3><p data-i18n="ha.why3_b">Data is processed locally. Remote access — including for support — is encrypted.</p></div><div class="lp-card reveal"><h3 data-i18n="ha.why4_t">Personal, from Switzerland</h3><p data-i18n="ha.why4_b">No call center: you speak directly with Koni, in Affoltern am Albis, canton of Zurich.</p></div></div>
+    </div>
+  </section>
+
+  <section class="lp-sec lp-sec--parch" id="preise">
+    <div class="container">
+      <p class="sec-eye" data-i18n="ha.pk_eye">Pricing</p>
+      <h2 data-i18n="ha.pk_h2" data-i18n-html="true">Packages <em>from CHF 29</em> per month.</h2>
+      <p class="lp-lead" data-i18n="ha.pk_sub">Installation, setup and ongoing remote management are always included. Quotes are individual; these packages give you an orientation.</p>
+      <div class="lp-grid"><div class="lp-pkg reveal"><span class="lp-pkg__badge" data-i18n="packages.pkg1_badge">Starter</span><h3 data-i18n="packages.pkg1_name_basis">Basic</h3><p class="lp-pkg__price"><span class="lp-pkg__from" data-i18n="packages.pkg_from">from CHF</span> <strong>29</strong> <span class="lp-pkg__mo" data-i18n="packages.pkg_mo">/Month</span></p><p class="lp-pkg__assume" data-i18n="packages.pkg1_assume">Typical for a 1–2 room apartment · ~7 devices</p></div><div class="lp-pkg reveal"><span class="lp-pkg__badge" data-i18n="packages.pkg2_badge">Essential</span><h3 data-i18n="packages.pkg2_name_basis">Standard</h3><p class="lp-pkg__price"><span class="lp-pkg__from" data-i18n="packages.pkg_from">from CHF</span> <strong>49</strong> <span class="lp-pkg__mo" data-i18n="packages.pkg_mo">/Month</span></p><p class="lp-pkg__assume" data-i18n="packages.pkg2_assume">Typical for a 3-room apartment · ~10 devices</p></div><div class="lp-pkg lp-pkg--hl reveal"><span class="lp-pkg__badge" data-i18n="packages.pkg3_badge">Recommended</span><h3 data-i18n="packages.pkg3_name_basis">Advanced</h3><p class="lp-pkg__price"><span class="lp-pkg__from" data-i18n="packages.pkg_from">from CHF</span> <strong>89</strong> <span class="lp-pkg__mo" data-i18n="packages.pkg_mo">/Month</span></p><p class="lp-pkg__assume" data-i18n="packages.pkg3_assume">Typical for a family home · ~15 devices</p></div><div class="lp-pkg reveal"><span class="lp-pkg__badge" data-i18n="packages.pkg4_badge">Premium</span><h3 data-i18n="packages.pkg4_name_basis">All-in</h3><p class="lp-pkg__price"><span class="lp-pkg__from" data-i18n="packages.pkg_from">from CHF</span> <strong>149</strong> <span class="lp-pkg__mo" data-i18n="packages.pkg_mo">/Month</span></p><p class="lp-pkg__assume" data-i18n="packages.pkg4_assume">Typical for a large home · ~25+ devices and custom automations</p></div></div>
+      <p class="lp-note"><span data-i18n="packages.price_drivers">Your quote depends on the number of sensors and devices, the automations you want, and the time needed on site. Prices shown are indicative.</span></p>
+      <p class="lp-note"></p>
+      <div style="text-align:center"><a class="lp-link" href="/#packages"><span data-i18n="ha.pk_more">All package details</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="sec-center">
+        <p class="sec-eye faq-eye" data-i18n="ha.faq_eye">FAQ</p>
+        <h2 class="sec-h" data-i18n="ha.faq_h2" data-i18n-html="true">Home Assistant <em>in brief.</em></h2>
+      </div>
+      <div class="faq-list"><div class="faq-item reveal"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1"><span data-i18n="ha.faq_q1">What is Home Assistant?</span><span class="faq-q__icon" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-1" hidden><p data-i18n="ha.faq_a1">A free, open-source platform that connects and automates smart home devices from different manufacturers locally. Konihaus sets it up and looks after it for you.</p></div></div><div class="faq-item reveal"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2"><span data-i18n="ha.faq_q2">Do I need a cloud or a manufacturer subscription?</span><span class="faq-q__icon" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-2" hidden><p data-i18n="ha.faq_a2">No. Processing runs locally on the Greenhub hub. Notifications are optional and may go through external services such as Apple or Google. With Konihaus you pay the monthly care fee, not manufacturer subscriptions.</p></div></div><div class="faq-item reveal"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3"><span data-i18n="ha.faq_q3">Can I keep using my existing devices?</span><span class="faq-q__icon" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-3" hidden><p data-i18n="ha.faq_a3">In most cases, yes. I use what you already own and add proven hardware only where it makes sense. Which models work, we clarify together in the consultation.</p></div></div><div class="faq-item reveal"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4"><span data-i18n="ha.faq_q4">My device is not on the list. What now?</span><span class="faq-q__icon" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-4" hidden><p data-i18n="ha.faq_a4">The list shows the manufacturers and device types from my homepage, but it is not exhaustive. Send me the manufacturer and model and I will check it.</p></div></div><div class="faq-item reveal"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-5"><span data-i18n="ha.faq_q5">What does it cost?</span><span class="faq-q__icon" aria-hidden="true"></span></button><div class="faq-a" id="faq-a-5" hidden><p data-i18n="ha.faq_a5">Packages from CHF 29 per month, final consumer prices in Swiss francs, no VAT charged. The setup investment is waived with a 2-year service agreement. You receive the exact quote after the on-site visit.</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="lp-cta" id="kontakt">
+    <div class="container">
+      <p class="sec-eye" data-i18n="cta.eye">Get Started</p>
+      <h2 data-i18n="cta.h2" data-i18n-html="true">Ready for a<br>Smarter <em>Home?</em></h2>
+      <p data-i18n="cta.sub">Free initial consultation. No obligations. I listen and recommend what truly fits you.</p>
+      <div class="lp-actions">
+        <a href="/#contact" class="btn btn-primary"><span data-i18n="cta.btn1">Request Consultation →</span></a>
+        <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost" data-i18n="cta.btn2">hello@konihaus.ch</a>
+      </div>
+      <p data-i18n="cta.note">Response within 24h · No call center — you speak directly with Koni</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="/" class="logo" aria-label="Konihaus">
+            <div class="logo-image"></div>
+            <div class="wordmark">konihaus</div>
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Smart home managed service for seniors, renters, vacation home owners and everyone else in Switzerland.</p>
+          <div class="footer__social" aria-label="Social Media">
+            <a href="https://www.instagram.com/ch.konihaus/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/konihaus.ch" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 8.5h2.2V5.2h-2.4c-2.5 0-4.1 1.6-4.1 4.1v2H8.6v3.3h2.1V21h3.3v-6.4h2.2l.4-3.3h-2.6V9.6c0-.7.2-1.1 1-1.1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://x.com/konihaus" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/konihaus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="7.6" cy="8.2" r="1.15" fill="currentColor"/>
+                <path d="M7.6 11v6.3M11.3 11v6.3M11.3 13.6c0-1.6 1-2.6 2.3-2.6 1.3 0 2 .9 2 2.5v3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
+          <ul class="flinks">
+            <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+            <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+            <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+            <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col2_title">Unternehmen</div>
+          <ul class="flinks">
+            <li><a href="/#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+            <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert's</a></li>
+            <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+            <li><a href="/#about" data-i18n="footer.col2_l4">Über Koni</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col3_title">Rechtliches</div>
+          <ul class="flinks">
+            <li><a href="/impressum" data-i18n="footer.col3_l1">Impressum</a></li>
+            <li><a href="/datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a></li>
+            <li><a href="/#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a></li>
+            <li><a href="/agb" data-i18n="footer.col3_l4">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz
+        </p>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const CUSTOM_BASE_DIR = '/';
+  </script>
+  <script src="/scripts.js"></script>
+  <script src="/cookie-consent.js"></script>
+</body>
+
+</html>
