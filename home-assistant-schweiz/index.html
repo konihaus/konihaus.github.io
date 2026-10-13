@@ -141,14 +141,18 @@
 
   <nav class="nav nav--solid" id="nav">
     <div class="container">
-      <div class="nav__inner">
+      <div class="nav__inner ">
         <a href="/" class="logo" aria-label="Konihaus">
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          <a class="legal-back" data-i18n="ha.back" href="/">← Zur Startseite</a>
-          <div class="language-picker">
+        <ul class="nav__links">
+          <li><a href="#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="#packages" data-i18n="nav.packages">Pakete</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+        <div class="language-picker">
           <button
             type="button"
             class="language-trigger"
@@ -178,9 +182,25 @@
             <option value="en">EN</option>
           </select>
         </div>
+        <a href="#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+    <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="/#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
+      <li><a href="/#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
+      <li><a href="/#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
+
 
   <header class="lp-hero">
     <div class="container">
