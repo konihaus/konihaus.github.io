@@ -10,14 +10,8 @@
   <title>Ferienwohnung aus der Ferne - Anwendungsbeispiel: Konihaus</title>
   <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten — ohne ständige Sorgen.">
   <meta name="author" content="Konrad Hefelle">
-  <!-- NOINDEX: bundled with the pre-launch site (index_kh.html), goes live 15 Oct 2026.
-       At launch, alongside renaming index_kh.html to index.html at the site root: every
-       "../index_kh.html..." link on this page (logo, nav, footer, CTA buttons) needs the
-       "index_kh.html" replaced with nothing (so it becomes "../" or "../#packages" etc.),
-       since the legal pages already link home via plain "/" and expect the same. A simple
-       find-and-replace across this file and every other example page (isolierter-senior/,
-       wasserschaden/, ferienwohnung-management/, and any added later) covers it. -->
-  <meta name="robots" content="noindex, nofollow">
+
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/ferienwohnung-management">
 
   <!-- Open Graph -->
@@ -52,12 +46,12 @@
   <nav class="nav nav--solid nav--ferien" id="nav">
     <div class="container">
       <div class="nav__inner">
-        <a href="../index_kh.html" class="logo" aria-label="Konihaus">
+        <a href="/" class="logo" aria-label="Konihaus">
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
         <div class="legal-nav__right">
-          <a href="../index_kh.html#examples" class="legal-back" data-i18n="beispiel_inge.back">← Zurück zu den Beispielen</a>
+          <a href="/#examples" class="legal-back" data-i18n="beispiel_inge.back">← Zurück zu den Beispielen</a>
           <div class="language-picker">
           <button
             type="button"
@@ -216,12 +210,12 @@
       <p class="example-cta__b reveal d1" data-i18n="beispiel_inge.cta_b">Sehen Sie sich das Paket
         «Ferienfrieden» im Detail an, oder vereinbaren Sie eine kostenlose, unverbindliche Beratung.</p>
       <div class="example-cta__btns reveal d2">
-        <a href="../index_kh.html?pkg=ferienhaus-3#packages" class="btn btn-primary" data-i18n="beispiel_inge.cta_btn1">Paket
+        <a href="/?pkg=ferienhaus-3#packages" class="btn btn-primary" data-i18n="beispiel_inge.cta_btn1">Paket
           ansehen</a>
-        <a href="../index_kh.html?pkg=ferienhaus-3#contact" class="btn btn-ghost" data-i18n="beispiel_inge.cta_btn2">Kostenlose
+        <a href="/?pkg=ferienhaus-3#contact" class="btn btn-ghost" data-i18n="beispiel_inge.cta_btn2">Kostenlose
           Beratung</a>
       </div>
-      <a href="../index_kh.html#examples" class="example-back-link reveal d3" data-i18n="beispiel_inge.back">← Zurück zu
+      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_inge.back">← Zurück zu
         den Beispielen</a>
     </div>
   </section>
@@ -229,7 +223,7 @@
     <div class="container">
       <div class="footer__top">
         <div>
-          <a href="../index_kh.html" class="logo" aria-label="Konihaus">
+          <a href="/" class="logo" aria-label="Konihaus">
             <div class="logo-image"></div>
             <div class="wordmark">konihaus</div>
           </a>
@@ -266,19 +260,19 @@
         <div>
           <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
           <ul class="flinks">
-            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l1">Standard</a></li>
-            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l2">Für Senioren</a></li>
-            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l3">Für Mieter</a></li>
-            <li><a href="../index_kh.html#packages" data-i18n="footer.col1_l4">Für Ferienhäuser</a></li>
+            <li><a href="/#packages" data-i18n="footer.col1_l1">Standard</a></li>
+            <li><a href="/#packages" data-i18n="footer.col1_l2">Für Senioren</a></li>
+            <li><a href="/#packages" data-i18n="footer.col1_l3">Für Mieter</a></li>
+            <li><a href="/#packages" data-i18n="footer.col1_l4">Für Ferienhäuser</a></li>
           </ul>
         </div>
         <div>
           <div class="fcol-title" data-i18n="footer.col2_title">Unternehmen</div>
           <ul class="flinks">
-            <li><a href="../index_kh.html#about" data-i18n="footer.col2_l1">Über Koni</a></li>
-            <li><a href="../index_kh.html#process" data-i18n="footer.col2_l2">So funktioniert's</a></li>
-            <li><a href="../index_kh.html#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
-            <li><a href="../index_kh.html#contact" data-i18n="footer.col2_l4">Kontakt</a></li>
+            <li><a href="/#about" data-i18n="footer.col2_l1">Über Koni</a></li>
+            <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert's</a></li>
+            <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+            <li><a href="/#contact" data-i18n="footer.col2_l4">Kontakt</a></li>
           </ul>
         </div>
         <div>
@@ -286,7 +280,7 @@
           <ul class="flinks">
             <li><a href="../impressum" data-i18n="footer.col3_l1">Impressum</a></li>
             <li><a href="../datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a></li>
-            <li><a href="../index_kh.html#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a></li>
+            <li><a href="/#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a></li>
             <li><a href="../agb" data-i18n="footer.col3_l4">AGB</a></li>
           </ul>
         </div>
