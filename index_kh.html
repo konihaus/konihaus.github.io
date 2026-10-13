@@ -1118,15 +1118,6 @@
           <div class="fg"><label for="m" data-i18n="contact.form_message_label">Ihre Situation</label><textarea id="m"
               rows="4" data-i18n="contact.form_message_placeholder"
               placeholder="Wohnung / Haus / Feriendomizil, was Sie sich erhoffen..."></textarea></div>
-          <!-- hCaptcha, free zero-config proxy via Web3Forms. Requires enabling "hCaptcha" under
-               Block Spam in your Web3Forms dashboard once; see the note delivered with this change.
-               data-lang is set synchronously below, from localStorage directly, BEFORE the async
-               Web3Forms script (loaded at the end of the page) has any chance to fetch and mount the
-               widget. i18n.setLanguage() in scripts.js keeps it in sync only for a language switch
-               that happens before this widget has mounted — it cannot fix the *initial* mount, because
-               i18n.init() awaits four sequential translation-file fetches first, which is far slower
-               than the hCaptcha script loading, especially once that script is cached. This inline
-               script is what actually wins that race, every time, on document order alone. -->
           <div class="h-captcha" style="margin: 0 auto;" data-captcha="true" data-lang="de"></div>
           <script>
             (function () {
@@ -1145,7 +1136,6 @@
         </form>
       </div>
 
-      <!-- Full-width statement: what Konihaus is and is not -->
       <aside class="safety" id="safety" role="note" aria-labelledby="safety-title">
         <div class="safety__head">
           <div class="safety__icon" aria-hidden="true">i</div>

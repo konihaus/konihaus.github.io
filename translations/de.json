@@ -428,6 +428,16 @@
     "item6_t": "Zukunftssicher",
     "item6_b": "Die Plattform wird aktiv weiterentwickelt. Ihr System wächst mit neuen Standards mit — kostenlos."
   },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "eyebrow": "Fehler 404",
+    "h1": "Diese Seite<br><em>gibt es nicht.</em>",
+    "p": "Der Link ist veraltet oder die Adresse wurde falsch eingegeben. Hier kommen Sie schnell weiter.",
+    "back": "← Zur Startseite",
+    "btn_home": "Zur Startseite",
+    "btn_contact": "Kostenlose Beratung",
+    "links_lbl": "Beliebte Bereiche"
+  },
   "devices": {
     "eye": "Geräte & Technik",
     "h2": "Beste Geräte.<br><em>Lokal vernetzt.</em>",

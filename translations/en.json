@@ -428,6 +428,16 @@
     "item6_t": "Future-Proof",
     "item6_b": "The platform is actively developed further. Your system grows with new standards — for free."
   },
+  "notfound": {
+    "title": "Page not found",
+    "eyebrow": "Error 404",
+    "h1": "This page<br><em>doesn't exist.</em>",
+    "p": "The link may be outdated or the address was mistyped. Here is how to get back on track.",
+    "back": "← Back to home",
+    "btn_home": "Back to home",
+    "btn_contact": "Free consultation",
+    "links_lbl": "Popular sections"
+  },
   "devices": {
     "eye": "Devices & Technology",
     "h2": "Best Devices.<br><em>Locally Connected.</em>",
