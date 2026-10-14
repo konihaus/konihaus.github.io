@@ -269,6 +269,15 @@ async function handleSubmit(event) {
   }
 
   const hCaptchaField = form.querySelector('[name="h-captcha-response"]');
+  const hCaptchaWidget = form.querySelector('.h-captcha');
+  if (hCaptchaWidget && !(hCaptchaField && hCaptchaField.value)) {
+    const fallback = i18n.currentLang === 'en'
+      ? 'Please complete the captcha check. If it does not appear, email me at <a href="mailto:hello@konihaus.ch">hello@konihaus.ch</a>.'
+      : 'Bitte bestätigen Sie die Captcha-Prüfung. Erscheint sie nicht, schreiben Sie mir an <a href="mailto:hello@konihaus.ch">hello@konihaus.ch</a>.';
+    const t = i18n.getText('contact', 'form_error_captcha');
+    showFormStatus(statusEl, (t && t !== 'form_error_captcha') ? t : fallback, 'error');
+    return;
+  }
   const discountField = form.querySelector('#discount-code-field');
 
   const payload = {
@@ -309,6 +318,7 @@ async function handleSubmit(event) {
     showFormStatus(statusEl, i18n.getText('contact', 'form_error'), 'error');
   } finally {
     submitBtn.disabled = false;
+    try { if (window.hcaptcha) window.hcaptcha.reset(); } catch (e) { /* ignore */ }
   }
 }
 

@@ -538,6 +538,7 @@
     "form_success": "Danke! Ihre Nachricht wurde versendet. Ich melde mich innerhalb von 24 Stunden.",
     "form_error": "Das hat leider nicht geklappt. Schreiben Sie mir direkt an <a href=\"mailto:hallo@konihaus.ch\">hallo@konihaus.ch</a>.",
     "form_error_invalid": "Bitte füllen Sie Name, E-Mail und Nachricht aus — mit einer gültigen E-Mail-Adresse.",
+    "form_error_captcha": "Bitte bestätigen Sie die Captcha-Prüfung. Erscheint sie nicht, schreiben Sie mir an <a href=\"mailto:hello@konihaus.ch\">hello@konihaus.ch</a>.",
     "form_note": "Keine Werbung. Nur Koni.",
     "safety_title1": "Wichtig:",
     "safety_title2": "Konihaus ist kein Notrufdienst",
