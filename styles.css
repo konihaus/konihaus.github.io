@@ -665,7 +665,7 @@ a.logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -4922,21 +4922,31 @@ body.cc-lock .cc-banner {
 
 /* hero backgrounds (same pattern as .hans / .elsa / .inge) */
 .example-hero-container.weltreise {
-  background: url('./weltreise/weltreise-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 40%,
+        rgba(247, 244, 237, 1) 60%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero-container.eltern {
-  background: url('./neue-eltern/eltern-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 40%,
+        rgba(247, 244, 237, 1) 60%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./neue-eltern/eltern-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 @media (max-width: 1380px) {
   .example-hero-container.weltreise {
-    background: linear-gradient(to bottom,
-        rgba(247, 244, 237, 1) 2%,
-        rgba(247, 244, 237, 0) 50%,
-        rgba(247, 244, 237, 0) 60%,
-        rgba(247, 244, 237, 1) 90%
-      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+    background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 30%,
+        rgba(247, 244, 237, 1) 70%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center 70% / 100% var(--parchment)  
   }
 }
 
