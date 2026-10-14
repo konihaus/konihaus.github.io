@@ -665,7 +665,7 @@ a.logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -1732,8 +1732,8 @@ a.logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--serif);
-  font-size: 2em;
+  font-family: var(--sans);
+  font-size: 1.5em;
   flex-shrink: 0;
 }
 
@@ -2042,6 +2042,13 @@ a.logo {
   padding: 32px;
   position: relative;
   overflow: hidden;
+}
+
+.hub-more summary {
+  display: inline-block;
+  font-size: 0.8125em;
+  font-weight: 500;
+  color: var(--parchment);
 }
 
 .hub-box::before {
@@ -3188,6 +3195,8 @@ width: 60px;
 .fch {
   font-size: 0.8125em;
   color: rgba(247, 244, 237, 0.78);
+  padding-right: 14px;
+  background: url('./images/swiss-shield.png') no-repeat right center / 10px;
 }
 
 /* ─────────────────────────────────────────
@@ -4157,6 +4166,36 @@ body.cc-lock .cc-banner {
       ),url('./zu-viele-apps/marc-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
+/* ───────── READABILITY OVER HERO IMAGES (all example pages) ───────── */
+.example-hero-container {
+  /* 3px outline in 16 directions + soft glow behind it */
+  --stroke:
+    3px 0 0 var(--parchment),     2.8px 1.1px 0 var(--parchment),
+    2.1px 2.1px 0 var(--parchment), 1.1px 2.8px 0 var(--parchment),
+    0 3px 0 var(--parchment),     -1.1px 2.8px 0 var(--parchment),
+    -2.1px 2.1px 0 var(--parchment), -2.8px 1.1px 0 var(--parchment),
+    -3px 0 0 var(--parchment),    -2.8px -1.1px 0 var(--parchment),
+    -2.1px -2.1px 0 var(--parchment), -1.1px -2.8px 0 var(--parchment),
+    0 -3px 0 var(--parchment),    1.1px -2.8px 0 var(--parchment),
+    2.1px -2.1px 0 var(--parchment), 2.8px -1.1px 0 var(--parchment),
+    0 0 12px rgba(247, 244, 237, .9);
+}
+
+.example-hero .sec-eye,
+.example-hero__h,
+.example-hero__sub,
+.example-hero__tag,
+.example-hero-container .example-h2,
+.example-hero-container .example-p {
+  text-shadow: var(--stroke);
+}
+
+.example-hero__h {
+    -webkit-text-stroke: 5px var(--parchment);
+    paint-order: stroke fill;
+    text-shadow: none;
+  }
+
 .example-hero {
   padding: 160px 0 0;
   /*background: var(--parchment);*/
@@ -4883,21 +4922,31 @@ body.cc-lock .cc-banner {
 
 /* hero backgrounds (same pattern as .hans / .elsa / .inge) */
 .example-hero-container.weltreise {
-  background: url('./weltreise/weltreise-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 40%,
+        rgba(247, 244, 237, 1) 60%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 .example-hero-container.eltern {
-  background: url('./neue-eltern/eltern-desktop.jpg') no-repeat center center / 100% var(--parchment);
+  background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 40%,
+        rgba(247, 244, 237, 1) 60%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./neue-eltern/eltern-desktop.jpg') no-repeat center center / 100% var(--parchment);
 }
 
 @media (max-width: 1380px) {
   .example-hero-container.weltreise {
-    background: linear-gradient(to bottom,
-        rgba(247, 244, 237, 1) 2%,
-        rgba(247, 244, 237, 0) 50%,
-        rgba(247, 244, 237, 0) 60%,
-        rgba(247, 244, 237, 1) 90%
-      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center 70% / 100% var(--parchment);
+    background: linear-gradient(to right,
+        rgba(247, 244, 236, 0) 2%,
+        rgba(247, 244, 237, 1) 30%,
+        rgba(247, 244, 237, 1) 70%,
+        rgba(247, 244, 237, 0) 90%
+      ),url('./weltreise/weltreise-desktop.jpg') no-repeat center 70% / 100% var(--parchment)  
   }
 }
 
