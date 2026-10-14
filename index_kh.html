@@ -31,7 +31,7 @@
 
   <title>Konihaus — Smart Home Schweiz | Zürich</title>
   <meta name="description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.">
+    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
   <meta name="keywords"
     content="Smart Home Schweiz, Smart Home Zürich, Home Automation, Smart Home Installation, plattformunabhängig">
   <meta name="author" content="Konrad Hefelle">
@@ -45,7 +45,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Konihaus — Smart Home Schweiz | Zürich">
   <meta property="og:description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.">
+    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
   <meta property="og:url" content="https://konihaus.ch">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Konihaus — Smart Home Schweiz | Zürich">
   <meta name="twitter:description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für Senioren, Mieter und Ferienhausbesitzer.">
+    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
   <meta name="twitter:image" content="https://konihaus.ch/images/og-image.jpg">
 
   <!-- PWA Manifest -->
@@ -133,9 +133,19 @@
     if(p.contrast===true)d.setAttribute('data-contrast','high');
     if(p.motion===true||(typeof p.motion!=='boolean'&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.setAttribute('data-motion','reduce');}catch(e){}})();
   </script>
+  <style>
+    /* added: collapsible tech details + direct-contact line */
+    .hub-more summary{cursor:pointer;font-size:.8125em;letter-spacing:.04em;margin:12px 0;opacity:.85;list-style:none}
+    .hub-more summary::-webkit-details-marker{display:none}
+    .hub-more summary::after{content:" +"}
+    .hub-more[open] summary::after{content:" −"}
+    .con-direct{margin:18px 0 22px;line-height:1.7;font-size:.9375em}
+    .con-direct a{color:var(--amber);text-decoration:underline;text-underline-offset:3px}
+    .con-direct small{display:block;opacity:.75;font-size:.8125em;margin-top:4px}
+  </style>
 </head>
 
-<body>
+<body data-title-key="meta.title">
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -225,9 +235,7 @@
           <h1 class="hero__h1" data-i18n="hero.h1" data-i18n-html="true">Ihr
             Zuhause.<br><em>Intelligent.</em><br>Privat.</h1>
         </div>
-        <p class="hero__sub" data-i18n="hero.sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig,
-          lokal, ohne
-          Anbieterbindung. Für Senioren, Mieter und Ferienhausbesitzer in der Schweiz.</p>
+        <p class="hero__sub" data-i18n="hero.sub">Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Ökosystem-Zwang. Für alle in der Schweiz, die es sich zu Hause einfacher wünschen: Mieter, Eigentümer, Familien, Senioren und Ferienhausbesitzer.</p>
         <div class="hero__actions">
           <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Kostenlose Beratung →</a>
           <a href="#packages" class="btn btn-ghost" data-i18n="hero.cta2">Pakete ansehen</a>
@@ -252,7 +260,7 @@
         <div class="trust__dot"></div>
         <div class="trust__item" data-i18n="trust.item3">✓ Persönlich betreut</div>
         <div class="trust__dot"></div>
-        <div class="trust__item" data-i18n="trust.item4">✓ Swiss Made</div>
+        <div class="trust__item" data-i18n="trust.item4">✓ In der Schweiz betreut</div>
         <div class="trust__dot"></div>
         <div class="trust__item" data-i18n="trust.item5">✓ Keine Eingriffe ins Mauerwerk</div>
       </div>
@@ -501,7 +509,7 @@
             Google erforderlich.</div>
         </div>
         <div class="why__item reveal d1 why__item--vendor" data-why-item="novendor">
-          <div class="why__t" data-i18n="why.item2_t">Kein Vendor Lock-in</div>
+          <div class="why__t" data-i18n="why.item2_t">Kein Ökosystem-Zwang</div>
           <div class="why__b" data-i18n="why.item2_b">Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie
             Geräte, ohne das System neu
             aufzubauen.</div>
@@ -513,7 +521,7 @@
           </div>
         </div>
         <div class="why__item reveal d1 why__item--quality" data-why-item="swiss">
-          <div class="why__t" data-i18n="why.item4_t">Schweizer Qualität</div>
+          <div class="why__t" data-i18n="why.item4_t">Vor Ort in der Schweiz</div>
           <div class="why__b" data-i18n="why.item4_b">Gegründet in Zürich, vertraut mit Schweizer Wohnstandards,
             Typ-J-Steckdosen und kantonalen
             Vorschriften.</div>
@@ -595,6 +603,8 @@
             </div>
           </div>
           <div class="hub-sub" data-i18n="devices.hub_sub">+ Zigbee ZBT3 Dongle · Secure Remote Access</div>
+          <details class="hub-more">
+            <summary data-i18n="devices.hub_more">Technische Details</summary>
           <div class="hub-rows">
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row1_l">Betrieb</span><span class="hv"
                 data-i18n="devices.hub_row1_v">100% lokal</span></div>
@@ -610,6 +620,7 @@
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row6_l">Basis</span><span class="hv"
                 data-i18n="devices.hub_row6_v">Open Source (Home Assistant)</span></div>
           </div>
+          </details>
           <div class="hub-note" data-i18n="devices.hub_note">★ Daten werden lokal verarbeitet. Fernzugriff — egal ob
             durch Sie oder für den Support durch uns — ist verschlüsselt. Benachrichtigungen sind optional und
             laufen ggf. über externe Dienste wie Apple oder Google.</div>
@@ -1004,26 +1015,7 @@
     </div>
   </section-->
 
-  <!-- CTA -->
-  <section class="cta-sec">
-    <div class="container">
-      <p class="cta-eye reveal" data-i18n="cta.eye">Loslegen</p>
-      <h2 class="cta-h reveal d1" data-i18n="cta.h2" data-i18n-html="true">Bereit für ein<br>smarteres
-        <em>Zuhause?</em>
-      </h2>
-      <p class="cta-sub reveal d2" data-i18n="cta.sub">Kostenlose Erstberatung. Keine Verpflichtungen. Ich höre zu und
-        empfehle, was
-        wirklich zu Ihnen passt.</p>
-      <div class="cta-btns reveal d3">
-        <a href="#contact" class="btn btn-primary" data-i18n="cta.btn1">Beratung anfragen →</a>
-        <a href="mailto:hallo@konihaus.ch" class="btn btn-ghost" data-i18n="cta.btn2">hallo@konihaus.ch</a>
-      </div>
-      <p class="cta-note reveal d4" data-i18n="cta.note">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt
-        mit Koni</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
+<!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <div class="contact__grid">
@@ -1033,6 +1025,9 @@
           <h2 class="con-h reveal d1" data-i18n="contact.h2" data-i18n-html="true">Sprechen wir<br>über <em>Ihr
               Zuhause.</em></h2>
           <p class="con-p reveal d2" data-i18n="contact.p">Mehr Sicherheit, weniger Aufwand, ein Zuhause, das mitdenkt: Schreiben Sie mir kurz, worum es geht. Ich melde mich innert 24 Stunden.</p>
+          <p class="con-direct reveal d2"><span data-i18n="contact.direct_lead">Lieber direkt?</span>
+            <a href="https://wa.me/41782379685" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="mailto:hallo@konihaus.ch">hallo@konihaus.ch</a><br>
+            <small data-i18n="cta.note">Antwort innerhalb 24h · Kein Callcenter — Sie sprechen direkt mit Koni</small></p>
           <!-- Map: static image of Affoltern am Albis (images/affoltern-map.jpg). The pin is pure CSS and always sits at the centre of the image,
                so centre the map on Affoltern when you export it. Change the credit below if you use another source (e.g. "© swisstopo"). -->
           <figure class="con-map reveal d3">
@@ -1222,7 +1217,8 @@
       <div class="footer__bottom">
         <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Affoltern am Albis, Schweiz
         </p>
-        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+        <p class="fch" data-i18n="footer.ch">
+          Betreut in der Schweiz</p>
       </div>
     </div>
   </footer>

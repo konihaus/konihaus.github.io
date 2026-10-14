@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "title": "Smart Home Schweiz"
+  },
   "nav": {
     "packages": "Pakete",
     "intro": "Was ist Konihaus",
@@ -25,7 +28,7 @@
     "hero_tagline2": "Ihre Ferienwohnung.<br><em>Geschützt.</em><br>Immer im Griff.",
     "hero_tagline3": "Alles in Ordnung.<br><em>Immer.</em><br>Für Sie und<br>Ihre Familie.",
     "hero_tagline4": "Ihre Mietwohnung.<br><em>Smart und Spurlos.</em><br>Ohne Bohren.",
-    "sub": "Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Anbieterbindung. Für Mieter, Eigentümer, Familien, Senioren und Ferienhausbesitzer in der Schweiz. Alle in der Schweiz, die es sich zu Hause einfacher wünschen.",
+    "sub": "Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Ökosystem-Zwang. Für alle in der Schweiz, die es sich zu Hause einfacher wünschen: Mieter, Eigentümer, Familien, Senioren und Ferienhausbesitzer.",
     "cta1": "Kostenlose Beratung →",
     "cta2": "Pakete ansehen",
     "bar": "Mehr erfahren"
@@ -34,7 +37,7 @@
     "item1": "✓ Keine Cloud-Pflicht",
     "item2": "✓ Plattformunabhängig",
     "item3": "✓ Persönlich betreut",
-    "item4": "✓ Swiss Made",
+    "item4": "✓ In der Schweiz betreut",
     "item5": "✓ Keine Eingriffe ins Mauerwerk"
   },
   "intro": {
@@ -417,12 +420,12 @@
     "h2": "Die Alternative zu Big Tech<br><em>massgeschneidert für Schweizer Häuser.</em>",
     "item1_t": "Privatsphäre als Standard",
     "item1_b": "Ihre Daten werden lokal verarbeitet, Fernzugriff für den Support ist verschlüsselt, und Benachrichtigungen laufen optional über externe Dienste wie Apple oder Google.",
-    "item2_t": "Kein Vendor Lock-in",
+    "item2_t": "Kein Ökosystem-Zwang",
     "item2_b": "Funktioniert mit Zigbee, Z-Wave, Matter und WiFi. Wechseln Sie Geräte, ohne das System neu aufzubauen.",
     "item3_t": "Persönlicher Service",
     "item3_b": "Sie sprechen immer direkt mit Koni. Kein Callcenter, kein Ticket-System — echte Betreuung.",
-    "item4_t": "Schweizer Qualität",
-    "item4_b": "In der Schweiz gebaut, für die Langlebigkeit gemacht: Wir kennen Schweizer Standards in und hinter der Wand und bleiben auch langfristig für Sie da.",
+    "item4_t": "Vor Ort in der Schweiz",
+    "item4_b": "In der Schweiz installiert und betreut, für die Langlebigkeit gemacht: Wir kennen Schweizer Standards in und hinter der Wand und bleiben auch langfristig für Sie da.",
     "item5_t": "Energieeffizienz",
     "item5_b": "Automatische Heizungsregelung, Geräteabschaltung und Verbrauchsberichte senken Ihren Energieverbrauch.",
     "item6_t": "Zukunftssicher",
@@ -453,6 +456,7 @@
     "tag9": "Smart Locks",
     "tag10": "Luftqualität",
     "tag11": "und vieles mehr...",
+    "hub_more": "Technische Details",
     "hub_lbl": "Das Herzstück Ihres Systems",
     "hub_brand": "konihaus",
     "hub_name": "greenhub",
@@ -514,6 +518,7 @@
     "detail1": "hallo@konihaus.ch",
     "detail2": "+41 78 237 96 85",
     "detail3": "Affoltern am Albis, Zürich · Einsatz CH-weit",
+    "direct_lead": "Lieber direkt?",
     "form_name_label": "Name",
     "form_name_placeholder": "Max Muster",
     "form_email_label": "E-Mail",
@@ -561,7 +566,7 @@
     "col3_l3": "Cookie-Erklärung",
     "col3_l4": "AGB",
     "copy": "© 2026 Konihaus · Affoltern am Albis, Schweiz",
-    "ch": "🇨🇭 Made in Switzerland"
+    "ch": "Betreut in der Schweiz"
   },
   "cookies": {
     "banner_title": "Diese Webseite verwendet Cookies",

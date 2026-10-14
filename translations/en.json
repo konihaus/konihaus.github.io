@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "title": "Smart Home Switzerland"
+  },
   "nav": {
     "packages": "Packages",
     "intro": "What is Konihaus",
@@ -25,7 +28,7 @@
     "hero_tagline2": "Your Vacation Home.<br><em>Protected.</em><br>Always in Control.",
     "hero_tagline3": "Everything is OK.<br><em>Always.</em><br>For You and Your Family.",
     "hero_tagline4": "Your Rental Apartment.<br><em>Smart and Invisible.</em><br>No Drilling.",
-    "sub": "Konihaus installs and looks after your smart home — independent, local, no vendor lock-in. For tenants, homeowners, families, seniors and holiday-home owners. Anyone in Switzerland who wishes home were a bit easier.",    
+    "sub": "Konihaus installs and looks after your smart home — independent, local, no ecosystem lock-in. For anyone in Switzerland who wants home to be easier: tenants, homeowners, families, seniors and holiday-home owners.",    
     "cta1": "Free Consultation →",
     "cta2": "View Packages",
     "bar": "Learn more"
@@ -34,7 +37,7 @@
     "item1": "✓ No cloud required",
     "item2": "✓ Platform-agnostic",
     "item3": "✓ Personally managed",
-    "item4": "✓ Swiss Made",
+    "item4": "✓ Supported in Switzerland",
     "item5": "✓ No wall modifications"
   },
   "intro": {
@@ -417,12 +420,12 @@
     "h2": "The Alternative to Big Tech<br><em>tailored to Swiss homes.</em>",
     "item1_t": "Privacy by Default",
     "item1_b": "Your data is processed locally, remote access for support is encrypted, and notifications are optional and may go through external services like Apple or Google.",
-    "item2_t": "No Vendor Lock-in",
+    "item2_t": "No Ecosystem Lock-in",
     "item2_b": "Works with Zigbee, Z-Wave, Matter, and WiFi. Switch devices without rebuilding your system.",
     "item3_t": "Personal Service",
     "item3_b": "You always speak directly with Koni. No call centers, no ticket systems — genuine support.",
-    "item4_t": "Swiss Quality",
-    "item4_b": "Built in Switzerland, made to last: we know Swiss standards inside and outside the wall, and we stay for the long run.",
+    "item4_t": "On the Ground in Switzerland",
+    "item4_b": "Installed and supported in Switzerland, made to last: we know Swiss standards inside and outside the wall, and we stay for the long run.",
     "item5_t": "Energy Efficiency",
     "item5_b": "Automatic heating control, device shutdown, and consumption reports reduce your energy use.",
     "item6_t": "Future-Proof",
@@ -453,6 +456,7 @@
     "tag9": "Smart Locks",
     "tag10": "Air Quality",
     "tag11": "and much more...",
+    "hub_more": "Technical details",
     "hub_lbl": "The Heart of Your System",
     "hub_brand": "konihaus",
     "hub_name": "greenhub",
@@ -514,6 +518,7 @@
     "detail1": "hello@konihaus.ch",
     "detail2": "+41 78 237 96 85",
     "detail3": "Affoltern am Albis, Zurich · Service throughout Switzerland",
+    "direct_lead": "Prefer to talk?",
     "form_name_label": "Name",
     "form_name_placeholder": "John Doe",
     "form_email_label": "E-Mail",
@@ -561,7 +566,7 @@
     "col3_l3": "Cookie declaration",
     "col3_l4": "Terms",
     "copy": "© 2026 Konihaus · Affoltern am Albis, Switzerland",
-    "ch": "🇨🇭 Made in Switzerland"
+    "ch": "Supported in Switzerland"
   },
   "cookies": {
     "banner_title": "This website uses cookies",
