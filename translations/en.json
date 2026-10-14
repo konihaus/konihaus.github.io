@@ -245,8 +245,7 @@
       "Inactivity Monitoring",
       "Full Annual Report",
       "Small automation adjustments on request",
-      "Phone Support (response within 12h, working hours)",
-      "Shading System Automation*"
+      "Phone Support (response within 12h, working hours)"
     ],
     "senioren_pkg3_outcomes": [
       "Press the alarm button to notify your contacts",
@@ -264,8 +263,7 @@
       "Inactivity Monitoring",
       "Full Annual Report + Caregiver Briefing",
       "Small automation adjustments on request",
-      "Phone Support (response within 12h, working hours)",
-      "Shading System Automation*"
+      "Phone Support (response within 12h, working hours)"
     ],
     "mieter_pkg3_outcomes": [
       "See who's at the door — even when you're out",
@@ -283,8 +281,7 @@
       "Humidity Monitor",
       "Quarterly Tenant Report",
       "Small automation adjustments on request",
-      "Phone Support (response within 12h, working hours)",
-      "Shading System Automation*"
+      "Phone Support (response within 12h, working hours)"
     ],
     "ferienhaus_pkg3_outcomes": [
       "Let guests and tradespeople in without handing over keys",
@@ -302,8 +299,7 @@
       "Quarterly Property Report",
       "Guest Management Portal",
       "Small automation adjustments on request",
-      "Phone Support (response within 12h, working hours)",
-      "Shading System Automation*"
+      "Phone Support (response within 12h, working hours)"
     ],
     "pkg3_btn": "Request a quote",
     "pkg3_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~1000-1500</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",
@@ -331,8 +327,7 @@
       "Smart Lock",
       "+ Up to 6× Additional Sensors",
       "Family App Access",
-      "★ Priority Support",
-      "Shading System Automation*"
+      "★ Priority Support"
     ],
     "senioren_pkg4_outcomes": [
       "Automatic reminders for your medication",
@@ -350,8 +345,7 @@
       "Telehealth Device Integration",
       "Family App + Caregiver Dashboard",
       "Integration with Local Care Services*",
-      "★ Priority Support",
-      "Shading System Automation*"
+      "★ Priority Support"
     ],
     "mieter_pkg4_outcomes": [
       "Track your electricity use in the energy dashboard",
@@ -367,12 +361,10 @@
       "Advanced Security Dashboard",
       "Noise Detection",
       "Smart Entertainment Control",
-      "Bi-Weekly System Health Check",
       "Tenant App",
       "Automated Damage Documentation",
       "Energy Monitoring Dashboard",
-      "★ Priority Support",
-      "Shading System Automation*"
+      "★ Priority Support"
     ],
     "ferienhaus_pkg4_outcomes": [
       "Control the pool or hot tub remotely",
@@ -389,11 +381,9 @@
       "Pool / Hot Tub Control",
       "Appliance Health Monitoring",
       "Rental Optimization Analytics",
-      "Bi-Weekly Smart Home Audit",
       "Property App",
       "Integration with Vacation Rental Platforms*",
-      "★ Priority Support",
-      "Shading System Automation*"
+      "★ Priority Support"
     ],
     "pkg4_btn": "Request a quote",
     "pkg4_note": "Setup investment <span class=\"pkg__setup-range\">CHF ~1800-2600</span> · <span class=\"pkg__highlight\">Waived with 2-year service agreement</span>",

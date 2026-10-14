@@ -245,8 +245,7 @@
       "Inaktivitäts-Monitoring",
       "Vollständiger Jahresbericht",
       "Kleine Automations-Anpassungen auf Wunsch",
-      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
-      "Beschattungs-Automatisierung*"
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)"
     ],
     "senioren_pkg3_outcomes": [
       "Ein Knopfdruck am Alarm-Knopf benachrichtigt Ihre Kontaktpersonen",
@@ -264,8 +263,7 @@
       "Inaktivitäts-Monitoring",
       "Vollständiger Jahresbericht + Betreuungsbriefing",
       "Kleine Automations-Anpassungen auf Wunsch",
-      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
-      "Beschattungs-Automatisierung*"
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)"
     ],
     "mieter_pkg3_outcomes": [
       "Sehen, wer vor der Tür steht — auch von unterwegs",
@@ -283,8 +281,7 @@
       "Feuchtemessgerät",
       "Vierteljährlicher Mieterbericht",
       "Kleine Automations-Anpassungen auf Wunsch",
-      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
-      "Beschattungs-Automatisierung*"
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)"
     ],
     "ferienhaus_pkg3_outcomes": [
       "Gäste und Handwerker ohne Schlüsselübergabe hereinlassen",
@@ -302,8 +299,7 @@
       "Vierteljährlicher Immobilienbericht",
       "Gast-Verwaltungsportal",
       "Kleine Automations-Anpassungen auf Wunsch",
-      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)",
-      "Beschattungs-Automatisierung*"
+      "Telefon-Support (Antwort innert 12h, Geschäftszeiten)"
     ],
     "pkg3_btn": "Offerte anfragen",
     "pkg3_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 1000-1500</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
@@ -331,8 +327,7 @@
       "Smart Lock",
       "+ Bis zu 6× Zusätzliche Sensoren",
       "Familien-App-Zugang",
-      "★ Prioritäts-Support",
-      "Beschattungs-Automatisierung*"
+      "★ Prioritäts-Support"
     ],
     "senioren_pkg4_outcomes": [
       "Automatische Erinnerung an Ihre Medikamente",
@@ -350,8 +345,7 @@
       "Telemedizin-Geräteintegration",
       "Familien-App + Betreuungs-Dashboard",
       "Integration mit lokalen Pflegediensten*",
-      "★ Prioritäts-Support",
-      "Beschattungs-Automatisierung*"
+      "★ Prioritäts-Support"
     ],
     "mieter_pkg4_outcomes": [
       "Stromverbrauch im Energie-Dashboard nachverfolgen",
@@ -367,12 +361,10 @@
       "Erweitertes Sicherheits-Dashboard",
       "Lärmenerkennung",
       "Intelligente Unterhaltungssteuerung",
-      "Zweiwöchentliche System-Gesundheitsprüfung",
       "Mieter-App",
       "Automatisierte Schadendokumentation",
       "Energie-Überwachungs-Dashboard",
-      "★ Prioritäts-Support",
-      "Beschattungs-Automatisierung*"
+      "★ Prioritäts-Support"
     ],
     "ferienhaus_pkg4_outcomes": [
       "Pool oder Whirlpool aus der Ferne steuern",
@@ -389,11 +381,9 @@
       "Pool-/Whirlpool-Steuerung",
       "Geräte-Gesundheits-Überwachung",
       "Mietvermietungs-Optimierungs-Analytics",
-      "Zweiwöchentlicher Smart-Home-Audit",
       "Immobilien-App",
       "Integration mit Ferienmiet-Plattformen*",
-      "★ Prioritäts-Support",
-      "Beschattungs-Automatisierung*"
+      "★ Prioritäts-Support"
     ],
     "pkg4_btn": "Offerte anfragen",
     "pkg4_note": "Einrichtungsinvestition <span class=\"pkg__setup-range\">~CHF 1800-2600</span> · <span class=\"pkg__highlight\">Entfällt bei 2-Jahres-Servicevertrag</span>",
