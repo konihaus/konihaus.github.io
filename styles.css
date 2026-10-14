@@ -511,7 +511,7 @@ a.logo {
 
 .hero__headline_container {
   position: relative;
-  height: clamp(400px, 32.5vw, 410px);
+  height: clamp(320px, 32.5vw, 410px);
   overflow: hidden;
 }
 
@@ -781,6 +781,7 @@ a.logo {
 }
 
 .examples__link,
+.process__link,
 .intro__link {
   display: inline-flex;
   align-items: center;
@@ -1665,7 +1666,11 @@ a.logo {
 .process__grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 96px;
+  gap: 0 96px;
+}
+
+.process__link {
+  margin: 0;
 }
 
 .proc-eye {
