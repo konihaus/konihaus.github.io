@@ -3,6 +3,7 @@
 
 # Node modules
 node_modules/
+old/
 npm-debug.log
 yarn-error.log
 
