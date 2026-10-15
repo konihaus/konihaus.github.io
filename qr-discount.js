@@ -6,14 +6,16 @@ const QR_POPUP_SEEN_KEY = 'konihaus_qr_popup_shown';
 const QR_EXCLUDED_PKG_INDEX = 0;
 const QR_API_BASE = 'https://project-zovba.vercel.app'.replace(/\/+$/, ''); // no trailing slash (//api -> 308 -> CORS error)
 const QR_KEY_PATTERN = /^[A-Za-z0-9-]{1,80}$/;
+const QR_SIDE_PARAM = 'side'; // which side of the card/flyer was scanned: front | back
+const QR_SIDES = ['front', 'back'];
 
 // Asks the API for the code belonging to a qr key. Returns the code, or null if the key is unknown / anything fails.
-async function fetchDiscountCode(qrKey) {
+async function fetchDiscountCode(qrKey, side) {
   if (!QR_KEY_PATTERN.test(qrKey)) return null;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 8000);
   try {
-    const res = await fetch(`${QR_API_BASE}/api/getcode?str=${encodeURIComponent(qrKey)}`, { signal: controller.signal });
+    const res = await fetch(`${QR_API_BASE}/api/getcode?str=${encodeURIComponent(qrKey)}${side ? `&side=${side}` : ''}`, { signal: controller.signal });
     if (!res.ok) return null;
     const data = await res.json();
     return data && data.success && typeof data.code === 'string' && data.code ? data.code : null;
@@ -159,7 +161,9 @@ async function initQrDiscount() {
   if (!qrParam) return;
 
   // Only a key that exists in codes.json (checked by the API) yields a code; anything else is ignored.
-  const code = await fetchDiscountCode(qrParam);
+  const sideRaw = (new URLSearchParams(window.location.search).get(QR_SIDE_PARAM) || '').toLowerCase();
+  const side = QR_SIDES.includes(sideRaw) ? sideRaw : '';
+  const code = await fetchDiscountCode(qrParam, side);
   if (!code) return;
 
   const existing = readStoredDiscount();
