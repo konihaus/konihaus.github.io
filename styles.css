@@ -500,29 +500,35 @@ a.logo {
 
 .hero__headline_container {
   position: relative;
-  height: clamp(320px, 32.5vw, 410px);
+  height: clamp(290px, 76.5vw, 360px);
   overflow: hidden;
 }
 
 .hero__deco {
   position: absolute;
   right: -15%;
-  top: 15%;
+  top: 50%;
   transform: translateY(-52%);
-  width: 560px;
+  width: 800px;
   height: 560px;
-  opacity: .3;
   pointer-events: none;
-  background-image: url('./images/funny.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  transform: rotate(10deg)
 }
+
+.hero__art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.hero__art.is-on { opacity: 1; }
 
 .hero__content {
   position: relative;
   z-index: 2;
-  padding: 140px 0 20px;
+  padding: 90px 0 20px;
   width: 900px;
 }
 
@@ -570,7 +576,7 @@ a.logo {
   font-size: 1em;
   font-weight: 400;
   color: rgba(247, 244, 237, 0.78);
-  max-width: 510px;
+  max-width: 460px;
   line-height: 1.72;
   margin-bottom: 44px;
   animation: fadeUp .9s var(--ease) .22s both;
@@ -887,7 +893,7 @@ a.logo {
     gap: 24px;
   }
   .hero__sub {
-    max-width: 330px;
+    max-width: 680px;
   }
 }
 
@@ -1447,11 +1453,13 @@ a.logo {
 @media (max-width: 900px) {
 
   .hero__deco {
-    position: absolute;
-    right: -30%;
-    top: 40%;
-    width: 560px;
-    height: 560px;
+    left: auto;
+    right: -12%;
+    top: 55%;
+    width: min(100%, 760px);
+    height: auto;
+    aspect-ratio: 3 / 2;
+    transform: translateY(-50%);
   }
 
   .safety {
@@ -3139,7 +3147,7 @@ width: 60px;
   .hero__content {
     max-width: 560px;
     width: 100% !important;
-    padding: 90px 0 22px;
+    padding: 96px 0 22px;
   }
 
   .hero__h1 {
@@ -3166,10 +3174,9 @@ width: 60px;
   }
 
   .hero__deco {
-    bottom: 20%;
-    top: auto;
-    right: -55%;
-    width: min(120%, 560px);
+    top: 35%;
+    left: 30%;
+    width: min(135%, 600px);
   }
 
   /* Trust */
@@ -5275,3 +5282,17 @@ html[data-contrast="high"] .a11y-switch[aria-checked="true"] .a11y-switch__track
 .example-body--base .story-turn__quote { border-left-color: var(--forest-mid); color: var(--forest); }
 .example-body--base .story-qa__q { color: var(--forest-mid); }
 .example-body--base .story-safety { border-left-color: var(--forest-mid); }
+
+/* hero on short landscape screens (phones turned sideways) */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { min-height: 100svh; }
+  .hero__content { width: 100% !important; max-width: min(65vw, 600px); padding: 84px 0 16px; }
+  .hero__eye { margin-bottom: 10px; }
+  .hero__headline_container { height: 160px; }
+  .hero__h1 { font-size: clamp(32px, 7vh, 44px); line-height: 1.12; margin-bottom: 12px; }
+  .hero__sub { font-size: 0.8125em; line-height: 1.5; margin-bottom: 16px; max-width: 100%; }
+  .hero__actions { flex-direction: row; gap: 10px; }
+  .hero__actions .btn { width: auto; padding: 10px 18px; }
+  .hero__deco { right: -6%; top: 52%; width: min(60vw, 600px); }
+  .hero__bar { display: none; }
+}

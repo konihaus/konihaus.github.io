@@ -541,7 +541,7 @@ function applyDeepLinkedPackage() {
   if (!audienceSelect || !messageField || !card) return;
 
   const pkgIndex = tierStr;
-  const AUDIENCE_OPTION_INDEX = { basis: 1, senioren: 2, mieter: 3, ferienhaus: 4 };
+  const AUDIENCE_OPTION_INDEX = { basis: 1, mieter: 2, senioren: 3, ferienhaus: 4 };
   const optionIndex = AUDIENCE_OPTION_INDEX[audience];
   if (optionIndex !== undefined) audienceSelect.selectedIndex = optionIndex;
 
@@ -632,7 +632,7 @@ function setupPackageRequestButtons() {
   const messageField = document.getElementById('m');
   if (!audienceSelect || !messageField) return;
 
-  const AUDIENCE_OPTION_INDEX = { basis: 1, senioren: 2, mieter: 3, ferienhaus: 4 };
+  const AUDIENCE_OPTION_INDEX = { basis: 1, mieter: 2, senioren: 3, ferienhaus: 4 };
 
   document.querySelectorAll('[data-request-pkg]').forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -676,8 +676,8 @@ function setupHeroTaglines() {
   const TAGLINES = [
     { bg: 'var(--forest-deep)', class: '', keyPrefix: 'hero_tagline1' },
     { bg: 'var(--marine)', class: 'hero-marine', keyPrefix: 'hero_tagline2' },
-    { bg: 'var(--gold)', class: 'hero-gold', keyPrefix: 'hero_tagline3' },
     { bg: 'var(--burgundy)', class: 'hero-burgundy', keyPrefix: 'hero_tagline4' },
+    { bg: 'var(--gold)', class: 'hero-gold', keyPrefix: 'hero_tagline3' },
   ];
   const HOLD_MS = 5000; 
   const OUT_MS = 450;  
@@ -700,6 +700,35 @@ function setupHeroTaglines() {
     hero.style.backgroundColor = tagline.bg;
     hero.classList.remove('hero-marine', 'hero-gold', 'hero-burgundy');
     if (tagline.class) hero.classList.add(tagline.class);
+  }
+
+  const arts = Array.from(hero.querySelectorAll('.hero__art'));
+  const ART_OPACITY = 1;
+  let artIndex = 0;
+
+  function showArt(i) {
+    if (!arts.length) return;
+    const next = arts[i % arts.length];
+    const prev = arts[artIndex % arts.length];
+    artIndex = i % arts.length;
+    if (next === prev) return;
+    arts.forEach((a) => a.getAnimations && a.getAnimations().forEach((x) => x.cancel()));
+    const instant = !canAnimate || reduceMotion.matches || isMotionReduced();
+    if (instant) {
+      arts.forEach((a) => a.classList.toggle('is-on', a === next));
+      return;
+    }
+    // same rhythm as the headline: old image leaves to the left, new one enters from the right
+    const out = prev.animate(
+      [{ opacity: ART_OPACITY, transform: 'translateX(0)' }, { opacity: 0, transform: 'translateX(-60px)' }],
+      { duration: OUT_MS, easing: 'ease-in', fill: 'forwards' }
+    );
+    next.classList.add('is-on');
+    next.animate(
+      [{ opacity: 0, transform: 'translateX(60px)' }, { opacity: ART_OPACITY, transform: 'translateX(0)' }],
+      { duration: IN_MS, delay: OUT_MS, easing: 'ease-out', fill: 'both' }
+    );
+    out.finished.then(() => { if (prev !== arts[artIndex]) prev.classList.remove('is-on'); out.cancel(); }).catch(() => {});
   }
 
   function createHeadline(tagline) {
@@ -743,6 +772,7 @@ function setupHeroTaglines() {
     incoming.style.opacity = '0';
     container.appendChild(incoming);
     applyTheme(tagline);
+    showArt(index);
 
     if (!outgoing) { 
       incoming.style.opacity = '';
