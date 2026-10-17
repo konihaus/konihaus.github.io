@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#2a4a35">
   <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
-  <title>Allein auf dem Hof - Anwendungsbeispiel: Konihaus</title>
-  <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einem isolierten Senior im Appenzell mehr Sicherheit geben könnte, ohne seine Unabhängigkeit einzuschränken.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Eltern allein zu Hause – Beispiel Hans (84) | Konihaus</title>
+  <meta name="description" content="Illustriertes Beispiel: Wie Konihaus einem 84-Jährigen allein auf dem Hof und seiner Tochter in Basel ein sicheres Gefühl geben könnte – ohne Überwachung.">
   <meta name="author" content="Konrad Hefelle">
   
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/isolierter-senior">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Allein auf dem Hof - Anwendungsbeispiel: Konihaus">
-  <meta property="og:description" content="Ein illustratives Beispiel: Wie Konihaus einem isolierten Senior im Appenzell mehr Sicherheit geben könnte, ohne seine Unabhängigkeit einzuschränken.">
+  <meta property="og:title" content="Eltern allein zu Hause – Beispiel Hans (84) | Konihaus">
+  <meta property="og:description" content="Illustriertes Beispiel: Wie Konihaus einem 84-Jährigen allein auf dem Hof und seiner Tochter in Basel ein sicheres Gefühl geben könnte – ohne Überwachung.">
   <meta property="og:url" content="https://konihaus.ch/isolierter-senior">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="de_CH">
@@ -25,9 +25,10 @@
   <meta property="fb:app_id" content="2188289105366537" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Allein auf dem Hof - Anwendungsbeispiel: Konihaus">
-  <meta name="twitter:description" content="Ein illustratives Beispiel: Wie Konihaus einem isolierten Senior im Appenzell mehr Sicherheit geben könnte, ohne seine Unabhängigkeit einzuschränken.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://konihaus.ch/isolierter-senior/isolierter-senior_og.jpg">
+  <meta name="twitter:title" content="Eltern allein zu Hause – Beispiel Hans (84) | Konihaus">
+  <meta name="twitter:description" content="Illustriertes Beispiel: Wie Konihaus einem 84-Jährigen allein auf dem Hof und seiner Tochter in Basel ein sicheres Gefühl geben könnte – ohne Überwachung.">
   <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
   <link rel="preload" href="../fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -51,9 +52,13 @@
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          <a href="/#examples" class="legal-back" data-i18n="beispiel_hans.back">← Zurück zu den Beispielen</a>
-          <div class="language-picker">
+        <ul class="nav__links">
+          <li><a href="/#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="/#packages" data-i18n="nav.packages">Pakete</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+        <div class="language-picker">
           <button
             type="button"
             class="language-trigger"
@@ -83,17 +88,30 @@
             <option value="en">EN</option>
           </select>
         </div>
-        </div>
+        <a href="/?pkg=senioren-4#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="/#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
+      <li><a href="/#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
+      <li><a href="/#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/?pkg=senioren-4#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
   <div class="example-hero-container hans">
     <header class="example-hero">
       <div class="container">
         <p class="sec-eye reveal" data-i18n="beispiel_hans.eyebrow">Anwendungsbeispiel</p>
         <h1 class="example-hero__h reveal d1" data-i18n-html="true" data-i18n="beispiel_hans.title"><em>Hans</em> —  allein auf dem Hof</h1>
-        <p class="example-hero__sub reveal d2" data-i18n="beispiel_hans.subtitle">Ein Beispiel, wie Konihaus für einen
-          isolierten Senior im Appenzell aussehen könnte.</p>
+        <p class="example-hero__sub reveal d2" data-i18n="beispiel_hans.p_subtitle">Hans will auf seinem Hof bleiben. Seine Tochter Sonja möchte ruhig schlafen können. So könnte Konihaus beides möglich machen.</p>
         <p class="example-disclaimer reveal d2" data-i18n="beispiel_hans.disclaimer">Diese Geschichte ist ein
           illustratives Beispiel zur Veranschaulichung — keine dokumentierte Kundengeschichte. Name und Details sind
           frei erfunden.</p>
@@ -115,119 +133,155 @@
       </div>
     </section>
   </div>
-  <section class="example-section example-section--alt">
-    <div class="container example-narrow">
-      <div class="example-h2-row"><div class="example-badge badge--senioren example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.worry_title">Sonjas Sorgen</h2></div>
-      <ul class="example-worry-list">
-        <li class="reveal d1" data-i18n="beispiel_hans.worry1">Was, wenn er stürzt und niemand ihn rechtzeitig
-          findet?</li>
-        <li class="reveal d1" data-i18n="beispiel_hans.worry2">Was, wenn er seine Insulin-Einnahme vergisst?</li>
-        <li class="reveal d1" data-i18n="beispiel_hans.worry3">Was, wenn die Heizung im Winter ausfällt und es
-          niemand bemerkt?</li>
-        <li class="reveal d1" data-i18n="beispiel_hans.worry4">Sonja kann nicht öfter kommen. Hans will nicht
-          wegziehen.</li>
-      </ul>
+  
+  <!-- VIDEO (click-to-load; hidden until a YouTube ID is set in data-yt-de / data-yt-en) -->
+  <section class="story-video-sec" id="story-video-sec" hidden>
+    <div class="container">
+      <p class="story-video__label reveal" data-i18n="beispiel_hans.video_label">Die Geschichte in drei Minuten</p>
+      <div class="story-video reveal d1" data-yt-de="p2VDbRQFhaI" data-yt-en="v7CZ9JuQknE">
+        <button type="button" class="story-video__poster" aria-label="Video abspielen">
+          <img src="hans-homepage.jpg" alt="" width="711" height="400" decoding="async">
+          <span class="story-video__cap">Hans &amp; Sonja <small>3:10</small></span>
+          <span class="story-video__play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="var(--parchment)"/></svg></span>
+        </button>
+      </div>
+      <p class="story-video__note" data-i18n="beispiel_hans.video_note">Mit dem Klick laden Sie das Video von YouTube; dabei werden Daten an YouTube übertragen.</p>
     </div>
   </section>
 
-  <section class="example-section">
+  <!-- NIGHT QUESTIONS -->
+  <section class="story-night">
     <div class="container">
-      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.sol_title">Die Lösung: Unabhängig Wohnen</h2></div>
-      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_hans.sol_intro">Hans' Situation ist individuell, deshalb erhält er eine persönliche Offerte von rund CHF 189 pro Monat — zwischen unseren Paketen Seelenfrieden (ab CHF 139) und Unabhängig Wohnen (ab CHF 249).</p>
-      <div class="example-sol-grid">
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2" fill="var(--forest)"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol1_t">Inaktivitäts-Monitoring + Bewegungsmelder</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol1_b">Bleibt es ungewöhnlich lange ruhig, wird das
-            erkannt.</div>
+      <p class="story-night__t reveal" data-i18n="beispiel_hans.night_title">In der Nacht beginnen die Fragen.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_hans.worry1">Was, wenn er stürzt und niemand ihn rechtzeitig findet?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_hans.worry2">Was, wenn er seine Insulin-Einnahme vergisst?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_hans.worry3">Was, wenn die Heizung im Winter ausfällt und es niemand bemerkt?</p>
+      <p class="story-night__q story-night__q--last reveal d2" data-i18n="beispiel_hans.worry4">Sonja kann nicht öfter kommen. Hans will nicht wegziehen.</p>
+    </div>
+  </section>
+
+  <!-- THE TURN -->
+  <section class="story-turn">
+    <div class="container example-narrow">
+      <h2 class="story-turn__t reveal" data-i18n="beispiel_hans.turn_title">Dann findet Sonja Konihaus.</h2>
+      <p class="story-turn__sub reveal d1" data-i18n="beispiel_hans.turn_sub">Es beginnt mit einem Telefonat. Kostenlos.</p>
+      <p class="example-p reveal d1" data-i18n="beispiel_hans.turn_visit">Koni kommt auf den Hof, kostenlos, 30 bis 60 Minuten. Hans hat eine Bedingung:</p>
+      <blockquote class="story-turn__quote reveal d2" data-i18n="beispiel_hans.turn_quote">«Ich will nicht überwacht werden.»</blockquote>
+      <p class="example-p reveal d2" data-i18n="beispiel_hans.turn_answer">Deshalb zählt nicht, was Hans den ganzen Tag macht, sondern ob sein gewohnter Alltag weiterläuft: Bewegungsmuster statt Überwachung. Das System erkennt Veränderungen, ohne ihn ständig zu beobachten.</p>
+      <p class="example-p reveal d3" data-i18n="beispiel_hans.turn_next">Danach folgt eine persönliche Offerte per E-Mail, massgeschneidert für Hans. Sagt er ja, richtet Koni alles ein, Schritt für Schritt.</p>
+    </div>
+  </section>
+
+  <!-- WORRY → ANSWER -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.qa_title">Auf jede Sorge eine Antwort</h2></div>
+      <p class="example-p reveal d1" data-i18n="beispiel_hans.qa_intro">Hans’ Situation ist individuell, deshalb erhält er eine persönliche Offerte: rund CHF 189 pro Monat. Zur Orientierung: Unsere Pakete «Seelenfrieden» und «Unabhängig Wohnen» beginnen bei CHF 139 bzw. CHF 249.</p>
+      <div class="story-qa">
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_hans.q1">Was, wenn er stürzt und niemand ihn findet?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_hans.a1">Bewegungsaktivierte Nachtlichter weisen ihm den Weg und helfen, Stürze zu vermeiden. Bleibt es ungewöhnlich ruhig, bekommt Sonja eine Nachricht, statt zu rätseln. Und ein Knopfdruck am tragbaren Alarm-Knopf benachrichtigt Sonja und weitere Kontakte, die Hans festlegt.</p>
         </div>
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-     xmlns="http://www.w3.org/2000/svg">
-  <g transform="rotate(-45 12 12)"
-     stroke="var(--gold)" stroke-width="1.6">
-    <rect x="4" y="8.5" width="16" height="7" rx="3.5"/>
-    <path d="M12 8.5v7" stroke-linecap="round"/>
-  </g>
-</svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol2_t">Medikamenten-Erinnerungsautomation</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol2_b">Erinnert Hans automatisch an seine
-            Insulin-Einnahme.</div>
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_hans.q2">Was, wenn er sein Insulin vergisst?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_hans.a2">Eine sanfte Erinnerung, jeden Tag, automatisch. Hans behält seine Routine, die Erinnerung hilft nur dabei.</p>
         </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--forest)"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol3_t">Umweltsensoren</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol3_b">Behalten die Temperatur im Blick — wichtig bei
-            einem Heizungsausfall im Winter.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_hans.q3">Was, wenn im Winter die Heizung ausfällt?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_hans.a3">Sensoren behalten die Temperatur im Blick, damit ein Heizungsausfall nicht unbemerkt bleibt.</p>
         </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="7.5" stroke="var(--gold)" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" fill="var(--gold)"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol4_t">Tragbarer Alarm-Knopf</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol4_b">Ein Knopfdruck genügt, um Hilfe zu rufen.</div>
-        </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="11" rx="2" stroke="var(--gold)" stroke-width="1.6"/><path d="M9 20h6M12 16v4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 12.5l2.3-2.3 2 2 3.7-3.7" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol5_t">Familien-App + Betreuungs-Dashboard</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol5_b">Sonja sieht auf einen Blick, dass alles normal
-            läuft — ohne anrufen zu müssen.</div>
-        </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--gold)" stroke-width="1.6"/><path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/><path d="M9 14l2 2 4-4.4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_hans.sol6_t">Vierteljährlicher technischer Hausbesuch</div>
-          <div class="example-sol-b" data-i18n="beispiel_hans.sol6_b">Ich schaue selbst vorbei und stelle sicher,
-            dass alles funktioniert.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_hans.q4">Was, wenn Sonja nicht öfter kommen kann?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_hans.a4">Sonja sieht in der App auf einen Blick, dass alles normal läuft, ohne anzurufen. Und alle drei Monate schaut Koni persönlich vorbei und stellt sicher, dass alles funktioniert.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="example-section example-section--alt">
+  <!-- PAYOFF -->
+  <section class="example-section">
     <div class="container example-mid">
-      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.out_title">Was das für die beiden bedeuten könnte</h2></div>
+      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.payoff_title">Ein leichteres Gefühl</h2></div>
+      <p class="story-payoff reveal d1" data-i18n="beispiel_hans.payoff_text">Hans bleibt in seinem Bauernhaus, so wie er es will. Sonja kann zwei Wochen mit einem leichteren Gefühl überbrücken.</p>
       <div class="example-outcomes">
         <div class="example-outcomes__col reveal d1">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--gold)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_hans_t">Für Hans</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--gold)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_hans.out_hans_t">Für Hans</p></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_hans.out_hans1">Bleibt in seinem Bauernhaus, so wie er es möchte.</li>
-            <li data-i18n="beispiel_hans.out_hans2">Bewegungsmuster statt Überwachung — das System erkennt
-              Veränderungen, ohne ihn ständig zu beobachten.</li>
-            <li data-i18n="beispiel_hans.out_hans3">Bewegungsaktivierte Nachtlichter helfen, Stürze zu vermeiden.
-            </li>
+            <li data-i18n="beispiel_hans.out_hans2">Bewegungsmuster statt Überwachung — das System erkennt Veränderungen, ohne ihn ständig zu beobachten.</li>
+            <li data-i18n="beispiel_hans.out_hans3">Bewegungsaktivierte Nachtlichter helfen, Stürze zu vermeiden.</li>
           </ul>
         </div>
         <div class="example-outcomes__col reveal d2">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="7.5" r="2.6" stroke="var(--gold)" stroke-width="1.5"/><circle cx="16" cy="8.5" r="2.2" stroke="var(--gold)" stroke-width="1.5"/><path d="M3.5 19c0-3 2.2-5.2 5-5.2s5 2.2 5 5.2M14.5 19c0-2.4 1.7-4.3 4-4.3s4 1.9 4 4.3" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_hans.out_sonja_t">Für Sonja</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8.5" cy="7.5" r="2.6" stroke="var(--gold)" stroke-width="1.5"/><circle cx="16" cy="8.5" r="2.2" stroke="var(--gold)" stroke-width="1.5"/><path d="M3.5 19c0-3 2.2-5.2 5-5.2s5 2.2 5 5.2M14.5 19c0-2.4 1.7-4.3 4-4.3s4 1.9 4 4.3" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_hans.out_sonja_t">Für Sonja</p></div>
           <ul class="example-outcomes__list">
-            <li data-i18n="beispiel_hans.out_sonja1">Ein Inaktivitäts-Alarm würde sie benachrichtigen, statt dass sie
-              rätselt.</li>
-            <li data-i18n="beispiel_hans.out_sonja2">Sieht über die App, dass die Medikamenteneinnahme wie gewohnt
-              läuft.</li>
-            <li data-i18n="beispiel_hans.out_sonja3">Kann zwei Wochen ohne Besuch überbrücken, mit einem
-              beruhigteren Gefühl.</li>
+            <li data-i18n="beispiel_hans.out_sonja1">Ein Inaktivitäts-Alarm würde sie benachrichtigen, statt dass sie rätselt.</li>
+            <li data-i18n="beispiel_hans.out_sonja3">Kann zwei Wochen ohne Besuch überbrücken, mit einem beruhigteren Gefühl.</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SAFETY -->
+  <section class="example-section example-section--alt">
+    <div class="container">
+      <div class="story-safety reveal">
+        <h2 class="story-safety__t" data-i18n="beispiel_hans.safe_title">Wichtig zu wissen</h2>
+        <ul>
+          <li data-i18n="beispiel_hans.safe_1">Konihaus ist kein Notruf- und kein medizinischer Dienst. Im Notfall wählen Sie 144 (Sanität) oder 112. Ich alarmiere keine Rettungsdienste und überwache Ihr Zuhause nicht rund um die Uhr; Support-Antwortzeiten gelten nicht für Notfälle.</li>
+          <li data-i18n="beispiel_hans.safe_2">Alarme gehen per Push über die offizielle App an die Kontaktpersonen, die Sie festlegen. Bei Strom- oder Internetausfall können sie verzögert oder gar nicht ankommen.</li>
+          <li data-i18n="beispiel_hans.safe_3">Keine Garantie: Passende Ausstattung erhöht die Chance, dass Probleme früh auffallen. Was überwacht wird, entscheiden Sie.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST + CTA -->
   <section class="example-cta-sec example-cta-sec--senioren">
     <div class="container">
       <div class="example-cost reveal">
         <div class="example-cost__lbl" data-i18n="beispiel_hans.cost_title">Die Kosten</div>
         <div class="example-cost__price" data-i18n="beispiel_hans.cost_price" data-i18n-html="true"><span class="pkg__from">CHF</span><span class="pkg__num">189</span><span class="pkg__mo">/Monat</span></div>
         <div class="example-cost__note" data-i18n="beispiel_hans.cost_note">Einrichtungsinvestition ~CHF 950 · entfällt bei 2-Jahres-Servicevertrag</div>
+        <div class="example-cost__total" data-i18n="beispiel_hans.cost_total">Über 24 Monate: rund CHF 4’536 (189 × 24).</div>
       </div>
       <h2 class="example-cta__t reveal" data-i18n="beispiel_hans.cta_t">Ist das etwas für Ihre Situation?</h2>
-      <p class="example-cta__b reveal d1" data-i18n="beispiel_hans.cta_b">Sehen Sie sich das Paket «Unabhängig
-        Wohnen» im Detail an, oder vereinbaren Sie eine kostenlose, unverbindliche Beratung.</p>
+      <p class="example-cta__b reveal d1" data-i18n="beispiel_hans.p_cta_b">Vereinbaren Sie ein kostenloses, unverbindliches Gespräch, am Telefon oder per WhatsApp. Danach komme ich bei Ihnen vorbei, schaue mir alles vor Ort an und erstelle Ihre persönliche Offerte.</p>
       <div class="example-cta__btns reveal d2">
-        <a href="/?pkg=senioren-4#packages" class="btn btn-primary" data-i18n="beispiel_hans.cta_btn1">Paket
-          ansehen</a>
-        <a href="/?pkg=senioren-4#contact" class="btn btn-ghost" data-i18n="beispiel_hans.cta_btn2">Kostenlose
-          Beratung</a>
+        <a href="/?pkg=senioren-4#contact" class="btn btn-primary" data-i18n="beispiel_hans.cta_btn2">Kostenlose Beratung</a>
+        <a href="https://wa.me/41782379685" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="beispiel_hans.cta_btn_wa">Per WhatsApp schreiben</a>
       </div>
-      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_hans.back">← Zurück zu
-        den Beispielen</a>
+      <a href="/?pkg=senioren-4#packages" class="story-cta-link reveal d2" data-i18n="beispiel_hans.cta_pkg_link">Paket «Unabhängig Wohnen» ansehen</a>
+      <a href="https://wa.me/?text=https%3A%2F%2Fkonihaus.ch%2Fisolierter-senior%2F" id="story-share" class="story-share reveal d3" target="_blank" rel="noopener noreferrer"><span data-i18n="beispiel_hans.share_label">Mit der Familie teilen</span></a>
+      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_hans.back">← Zurück zu den Beispielen</a>
+    </div>
+  </section>
+
+  <!-- MORE STORIES -->
+  <section class="story-more">
+    <div class="container">
+      <h2 class="story-more__t reveal" data-i18n="beispiel_hans.more_title">Weitere Geschichten</h2>
+      <div class="examples__grid reveal d1">
+          <a class="examples__card examples__card--elsa" href="/wasserschaden">
+            <span class="examples__tag" data-i18n="examples.elsa_tag">Wasserschaden</span>
+            <span class="examples__name">Elsa</span>
+            <span class="examples__hook" data-i18n="examples.elsa_hook">Wie eine 79-jährige Mieterin einen Wasserschaden in Sekunden erkennen könnte — statt erst am nächsten Morgen.</span>
+            <span class="examples__cta" data-i18n="examples.elsa_cta">Beispiel ansehen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a class="examples__card examples__card--peter" href="/weltreise">
+            <span class="examples__tag" data-i18n="examples.peter_tag">Weltreise</span>
+            <span class="examples__name">Peter &amp; Helene</span>
+            <span class="examples__hook" data-i18n="examples.peter_hook">Wie ein Ehepaar sein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.</span>
+            <span class="examples__cta" data-i18n="examples.peter_cta">Beispiel ansehen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a class="examples__card examples__card--inge" href="/ferienwohnung-management">
+            <span class="examples__tag" data-i18n="examples.inge_tag">Ferienwohnung</span>
+            <span class="examples__name">Inge</span>
+            <span class="examples__hook" data-i18n="examples.inge_hook">Wie eine Ferienwohnungsbesitzerin ihre Wohnung aus der Ferne verwalten könnte — ohne ständige Sorgen.</span>
+            <span class="examples__cta" data-i18n="examples.inge_cta">Beispiel ansehen <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+      </div>
     </div>
   </section>
   <footer class="footer footer--senioren">
@@ -308,6 +362,46 @@
   </script>
   <script src="../scripts.js"></script>
   <script src="../cookie-consent.js"></script>
+
+  <script>
+    /* click-to-load YouTube (no Google request until the visitor clicks) + share link in the visitor's language */
+    (function () {
+      function lang() { try { return (typeof i18n !== 'undefined' && i18n.currentLang) || document.documentElement.lang || 'de'; } catch (e) { return 'de'; } }
+      var sec = document.getElementById('story-video-sec');
+      if (sec) {
+        var box = sec.querySelector('.story-video'), btn = sec.querySelector('.story-video__poster');
+        var idFor = function () { var l = lang().slice(0, 2) === 'en' ? 'en' : 'de'; return box.getAttribute('data-yt-' + l) || box.getAttribute('data-yt-de') || ''; };
+        if (idFor()) {
+          sec.hidden = false;
+          try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          btn.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(idFor()) + '?autoplay=1&rel=0';
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            box.appendChild(f); btn.style.display = 'none';
+          });
+          /* language switch: stop the running video and show the poster again (the new language's video loads on the next click) */
+          new MutationObserver(function () {
+            var f = box.querySelector('iframe');
+            if (f) f.remove();
+            btn.style.display = '';
+            try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+      }
+      var share = document.getElementById('story-share');
+      if (share) share.addEventListener('click', function (e) {
+        try {
+          var t = (typeof i18n !== 'undefined') ? i18n.getText('beispiel_hans', 'share_text') : '';
+          if (!t) return;
+          e.preventDefault();
+          window.open('https://wa.me/?text=' + encodeURIComponent(t + ' https://konihaus.ch/isolierter-senior/'), '_blank', 'noopener');
+        } catch (err) {}
+      });
+    })();
+  </script>
 </body>
 
 </html>

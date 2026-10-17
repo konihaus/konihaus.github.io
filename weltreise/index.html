@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#1e2535">
+  <meta name="theme-color" content="#2a4a35">
   <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
-  <link rel="apple-touch-icon" href="../favicon.svg">
-  <title>Sechs Monate Weltreise - Anwendungsbeispiel: Konihaus</title>
-  <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Sechs Monate Weltreise – wer schaut zum Haus? | Konihaus</title>
+  <meta name="description" content="Illustriertes Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte – ohne Kameras im Haus.">
   <meta name="author" content="Konrad Hefelle">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/weltreise">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Sechs Monate Weltreise - Anwendungsbeispiel: Konihaus">
-  <meta property="og:description" content="Ein illustratives Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.">
+  <meta property="og:title" content="Sechs Monate Weltreise – wer schaut zum Haus? | Konihaus">
+  <meta property="og:description" content="Illustriertes Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte – ohne Kameras im Haus.">
   <meta property="og:url" content="https://konihaus.ch/weltreise">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="de_CH">
@@ -24,9 +24,10 @@
   <meta property="fb:app_id" content="2188289105366537" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Sechs Monate Weltreise - Anwendungsbeispiel: Konihaus">
-  <meta name="twitter:description" content="Ein illustratives Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://konihaus.ch/weltreise/og.jpg">
+  <meta name="twitter:title" content="Sechs Monate Weltreise – wer schaut zum Haus? | Konihaus">
+  <meta name="twitter:description" content="Illustriertes Beispiel: Wie Konihaus ein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte – ohne Kameras im Haus.">
   <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
   <link rel="preload" href="../fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -41,18 +42,22 @@
   </script>
 </head>
 
-<body class="example-body example-body--ferien">
+<body class="example-body example-body--base">
 
-  <nav class="nav nav--solid nav--ferien" id="nav">
+  <nav class="nav nav--solid" id="nav">
     <div class="container">
       <div class="nav__inner">
         <a href="/" class="logo" aria-label="Konihaus">
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          <a href="/#examples" class="legal-back" data-i18n="beispiel_hans.back">← Zurück zu den Beispielen</a>
-          <div class="language-picker">
+        <ul class="nav__links">
+          <li><a href="/#about" data-i18n="nav.about">Über Koni</a></li>
+          <li><a href="/#packages" data-i18n="nav.packages">Pakete</a></li>
+          <li><a href="/#contact" data-i18n="nav.contact">Kontakt</a></li>
+          <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+        </ul>
+        <div class="language-picker">
           <button
             type="button"
             class="language-trigger"
@@ -82,21 +87,35 @@
             <option value="en">EN</option>
           </select>
         </div>
-        </div>
+        <a href="/?pkg=basis-3#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li><a href="/#about" class="drawer-link" data-i18n="nav.about">Über Koni</a></li>
+      <li><a href="/#packages" class="drawer-link" data-i18n="nav.packages">Pakete</a></li>
+      <li><a href="/#contact" class="drawer-link" data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/?pkg=basis-3#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
   <div class="example-hero-container weltreise">
     <header class="example-hero">
       <div class="container">
         <p class="sec-eye reveal" data-i18n="beispiel_hans.eyebrow">Anwendungsbeispiel</p>
         <h1 class="example-hero__h reveal d1" data-i18n-html="true" data-i18n="beispiel_peter.title"><em>Peter &amp; Helene</em> — 6 Monate Weltreise</h1>
-        <p class="example-hero__sub reveal d2" data-i18n="beispiel_peter.subtitle">Ein Beispiel, wie Konihaus ein Haus während einer langen Reise im Blick behalten könnte.</p>
+        <p class="example-hero__sub reveal d2" data-i18n="beispiel_peter.p_subtitle">Peter und Helene reisen sechs Monate um die Welt, ihr Haus bleibt leer. So könnte Konihaus es im Blick behalten, ohne Kameras und ohne Dschungel an Geräten.</p>
         <p class="example-disclaimer reveal d2" data-i18n="beispiel_hans.disclaimer">Diese Geschichte ist ein
           illustratives Beispiel zur Veranschaulichung — keine dokumentierte Kundengeschichte. Name und Details sind
           frei erfunden.</p>
         <div class="example-hero__badge reveal d3">
-          <div class="example-badge badge--ferien"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="example-badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <p class="example-hero__tag" data-i18n="beispiel_peter.hero_tag" data-i18n-html="true">Ihr Zuhause in guten Händen.<br>Egal, wo Sie sind.</p>
         </div>
       </div>
@@ -104,70 +123,94 @@
 
     <section class="example-section-top">
       <div class="container example-narrow">
-        <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.sit_title">Die Situation</h2></div>
+        <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.sit_title">Die Situation</h2></div>
         <p class="example-p reveal d1" data-i18n="beispiel_peter.sit_body">Peter, 64, und Helene, 65, sind frisch pensioniert und besitzen ein dreistöckiges Einfamilienhaus in Zürich. Von April bis September planen sie eine Weltreise — das Haus steht dann sechs Monate lang leer. Vorhanden sind elektrische Storen, dimmbares LED-Licht und eine rund 20 Jahre alte Alarmanlage, die nicht vernetzt ist. Beide sind technikaffin und möchten für diese Zeit möglichst viel Sicherheit.</p>
       </div>
     </section>
   </div>
-  <section class="example-section example-section--alt">
-    <div class="container example-narrow">
-      <div class="example-h2-row"><div class="example-badge badge--ferien example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.worry_title">Die Sorgen vor der Abreise</h2></div>
-      <ul class="example-worry-list">
-        <li class="reveal d1" data-i18n="beispiel_peter.worry1">Was, wenn ein langsames Leck zwei Wochen unentdeckt bleibt? Ein Wasserschaden kann schnell sehr teuer werden.</li>
-        <li class="reveal d1" data-i18n="beispiel_peter.worry2">Was, wenn bei der älteren Wärmepumpe, der Ladestation oder der Elektroinstallation etwas schiefgeht — und niemand es bemerkt?</li>
-        <li class="reveal d1" data-i18n="beispiel_peter.worry3">Was, wenn das leere Haus ein Ziel für Einbrecher wird und sich die Schlösser nicht aus der Ferne prüfen lassen?</li>
-        <li class="reveal d1" data-i18n="beispiel_peter.worry4">Was, wenn Feuchtigkeit oder Hitze im leeren Haus unbemerkt Schäden verursachen?</li>
-        <li class="reveal d1" data-i18n="beispiel_peter.worry5">Was, wenn in Südostasien etwas passiert — und sie nicht innert 24 Stunden zurückfliegen können?</li>
-        <li class="reveal d1" data-i18n="beispiel_peter.worry6">Was, wenn die Versicherung bei längerem Leerstand nicht mehr alles abdeckt?</li>
-      </ul>
+    <!-- VIDEO (click-to-load; hidden until a YouTube ID is set in data-yt-de / data-yt-en) -->
+  <section class="story-video-sec" id="story-video-sec" hidden>
+    <div class="container">
+      <p class="story-video__label reveal" data-i18n="beispiel_hans.video_label">Die Geschichte in drei Minuten</p>
+      <div class="story-video reveal d1" data-yt-de="lDaMrKMg--o" data-yt-en="rP04GlODp3o">
+        <button type="button" class="story-video__poster" aria-label="Video abspielen">
+          <img src="weltreise-homepage.jpg" alt="" width="711" height="400" decoding="async">
+          <span class="story-video__cap">Peter &amp; Helene <small>3:10</small></span>
+          <span class="story-video__play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="var(--parchment)"/></svg></span>
+        </button>
+      </div>
+      <p class="story-video__note" data-i18n="beispiel_hans.video_note">Mit dem Klick laden Sie das Video von YouTube; dabei werden Daten an YouTube übertragen.</p>
     </div>
   </section>
 
-  <section class="example-section">
+  <!-- NIGHT QUESTIONS -->
+  <section class="story-night">
     <div class="container">
-      <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.sol_title">Die Lösung: Das Haus im Blick, weltweit</h2></div>
-      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_peter.sol_intro">Peter und Helene erhalten eine persönliche Offerte von rund CHF 139 pro Monat, in Linie mit unserem Paket Ferienfrieden (ab CHF 139), plus eine einmalige Investition von rund CHF 1’700 für Hardware, Installation und Einführung.</p>
-      <div class="example-sol-grid">
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol1_t">Wasserüberwachung</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol1_b">Acht Sensoren in Küche, Bädern, Waschküche, Heizraum und Keller melden ein Leck sofort.</div>
+      <p class="story-night__t reveal" data-i18n="beispiel_hans.night_title">In der Nacht beginnen die Fragen.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_peter.n1">Was, wenn irgendwo ein Rohr leckt und es wochenlang niemand merkt?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_peter.n2">Was, wenn die Wärmepumpe oder die Ladestation ausfällt?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_peter.n3">Was, wenn jeder sieht, dass niemand zu Hause ist?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_peter.n4">Und von Nepal aus wären sie nicht rechtzeitig zu Hause.</p>
+      <p class="story-night__q story-night__q--last reveal d2" data-i18n="beispiel_peter.n5">Selbst die Versicherung deckt nach langer Abwesenheit vielleicht nicht alles ab.</p>
+    </div>
+  </section>
+
+  <!-- THE TURN -->
+  <section class="story-turn">
+    <div class="container example-narrow">
+      <h2 class="story-turn__t reveal" data-i18n="beispiel_peter.turn_title">Dann finden sie Konihaus.</h2>
+      <p class="story-turn__sub reveal d1" data-i18n="beispiel_peter.turn_sub">Es beginnt mit einem kostenlosen Telefonat.</p>
+      <p class="example-p reveal d1" data-i18n="beispiel_peter.turn_visit">Koni geht mit ihnen durch das Haus, Raum für Raum. Peter hat eine Bedingung:</p>
+      <blockquote class="story-turn__quote reveal d2" data-i18n="beispiel_peter.turn_quote">«Keine Kameras im Haus und kein Dschungel an Geräten.»</blockquote>
+      <p class="example-p reveal d2" data-i18n="beispiel_peter.turn_answer">Deshalb arbeitet das System mit Sensoren statt Kameras: Wasser, Strom, Klima, Türen. Koni wählt aus, installiert und betreut alles, damit Peter und Helene sich nicht mit einem Haufen Geräten herumschlagen müssen.</p>
+      <p class="example-p reveal d3" data-i18n="beispiel_peter.turn_next">Danach folgt eine persönliche Offerte per E-Mail, massgeschneidert für Peter und Helene. Sagen sie ja, richtet Koni alles ein, Stockwerk für Stockwerk.</p>
+    </div>
+  </section>
+
+  <!-- WORRY → ANSWER -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_hans.qa_title">Auf jede Sorge eine Antwort</h2></div>
+      <p class="example-p reveal d1" data-i18n="beispiel_peter.sol_intro">Peter und Helene erhalten eine persönliche Offerte von rund CHF 139 pro Monat, in Linie mit unserem Paket Advanced (ab CHF 139), plus eine einmalige Investition von rund CHF 1’700 für Hardware, Installation und Einführung.</p>
+      <div class="story-qa">
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q1">Was, wenn ein Rohr leckt?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a1">Acht Sensoren in Küche, Bädern, Waschküche, Heizraum und Keller melden ein Leck sofort. Peter und Helene bekommen eine Mitteilung aufs Handy, statt es erst nach Wochen zu erfahren.</p>
         </div>
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 3L5 13h6l-1 8 8-10h-6l1-8z" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol2_t">Elektro-Überwachung</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol2_b">Eine smarte Stromkreis-Überwachung erkennt Fehler und Auffälligkeiten frühzeitig.</div>
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q2">Was, wenn Wärmepumpe oder Ladestation ausfallen?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a2">Eine smarte Stromkreis-Überwachung erkennt Fehler und Auffälligkeiten frühzeitig, auch bei der Ladestation.</p>
         </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--marine-mid)"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol3_t">Klima-Sensoren</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol3_b">Vier Sensoren behalten Temperatur und Luftfeuchtigkeit im Blick — gegen Schimmel, Frost und Hitzeschäden.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q3">Was, wenn Feuchtigkeit oder Hitze Schäden verursachen?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a3">Vier Sensoren behalten Temperatur und Luftfeuchtigkeit im Blick, gegen Schimmel, Frost und Hitzeschäden. Ein Wochenbericht zeigt Klima und Wasserverbrauch.</p>
         </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="11" width="12" height="9" rx="2" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol4_t">Türen, Fenster + smartes Schloss</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol4_b">Sechs Sensoren bestätigen, dass alles geschlossen ist. Das smarte Türschloss lässt sich aus der Ferne prüfen und gibt Dienstleistern temporären Zugang.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q4">Was, wenn jeder sieht, dass niemand da ist?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a4">Zufällige Licht- und Storenmuster lassen das Haus bewohnt wirken. Sechs Sensoren an Türen und Fenstern bestätigen, dass alles geschlossen ist.</p>
         </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="2" fill="var(--marine-mid)"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol5_t">Hub mit 4G-Backup</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol5_b">Fällt das WLAN aus, bleibt das Haus über Mobilfunk erreichbar — auch auf Reisen im Ausland.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q5">Was, wenn sie nicht rechtzeitig zurück sein können?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a5">Das smarte Schloss lässt sich aus der Ferne prüfen und gibt der Nachbarin Isabelle oder Dienstleistern temporären Zugang, mit Protokoll, wann sie da waren. Jeden Tag kommt eine kurze «Alles in Ordnung»-Mail. Und eine kleine Zentrale mit eigener Mobilfunkverbindung funktioniert auch bei WLAN-Ausfall.</p>
         </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_peter.sol6_t">Anwesenheitssimulation</div>
-          <div class="example-sol-b" data-i18n="beispiel_peter.sol6_b">Zufällige Licht- und Storenmuster lassen das Haus bewohnt wirken. Heizung und Schlösser steuern Sie bequem per App.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_peter.q6">Was, wenn die Versicherung nicht alles deckt?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_peter.a6">Zeitgestempelte Protokolle können gegenüber der Versicherung hilfreich sein. Rabatte sind möglich, aber bei der eigenen Police nachzufragen. Was bei längerem Leerstand gedeckt ist, klären die beiden direkt mit ihrer Versicherung.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="example-section example-section--alt">
+  <!-- PAYOFF -->
+  <section class="example-section">
     <div class="container">
-      <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.out_title">Was das für die beiden bedeuten könnte</h2></div>
+      <div class="example-mid">
+      <div class="example-h2-row"><div class="example-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_peter.payoff_title">Genau so, wie sie es verlassen haben.</h2></div>
+      <p class="story-payoff reveal d1" data-i18n="beispiel_peter.payoff_text">Sechs Monate später ist das Haus so, wie sie es verlassen haben. Peter und Helene haben Nepal, Thailand und Peru genossen, ohne tägliche Sorgen ums Haus.</p>
+      </div>
       <div class="example-outcomes example-outcomes--3">
         <div class="example-outcomes__col reveal d1">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_peter.out_peter_t">Für Peter</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_peter.out_peter_t">Für Peter</p></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_peter.out_peter1">Erfährt sofort per Mitteilung aufs Handy, wenn ein Wassersensor anschlägt.</li>
             <li data-i18n="beispiel_peter.out_peter2">Kann das Thermostat unterwegs anpassen, wenn nötig.</li>
@@ -175,7 +218,7 @@
           </ul>
         </div>
         <div class="example-outcomes__col reveal d2">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_peter.out_helene_t">Für Helene</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_peter.out_helene_t">Für Helene</p></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_peter.out_helene1">Mehr Vertrauen in die Sicherheit des Hauses während der sechs Monate.</li>
             <li data-i18n="beispiel_peter.out_helene2">Eine tägliche «Alles in Ordnung»-Mail und ein Wochenbericht zeigen Klima und Wasserverbrauch.</li>
@@ -183,7 +226,7 @@
           </ul>
         </div>
         <div class="example-outcomes__col reveal d3">
-          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h16M12 4c2.5 2.3 3.8 5 3.8 8s-1.3 5.7-3.8 8c-2.5-2.3-3.8-5-3.8-8S9.5 6.3 12 4z" stroke="var(--marine-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-outcomes__t" data-i18n="beispiel_peter.out_reise_t">Für ihre Reise</div></div>
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 12h16M12 4c2.5 2.3 3.8 5 3.8 8s-1.3 5.7-3.8 8c-2.5-2.3-3.8-5-3.8-8S9.5 6.3 12 4z" stroke="var(--forest-mid)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_peter.out_reise_t">Für ihre Reise</p></div>
           <ul class="example-outcomes__list">
             <li data-i18n="beispiel_peter.out_reise1">Nepal, Thailand, Peru geniessen — ohne tägliche Sorgen ums Haus.</li>
             <li data-i18n="beispiel_peter.out_reise2">Zurückkommen zu einem Haus, das in der Zwischenzeit gepflegt im Blick war.</li>
@@ -194,7 +237,22 @@
     </div>
   </section>
 
-  <section class="example-cta-sec example-cta-sec--ferien">
+  <!-- SAFETY -->
+  <section class="example-section example-section--alt">
+    <div class="container">
+      <div class="story-safety reveal">
+        <h2 class="story-safety__t" data-i18n="beispiel_hans.safe_title">Wichtig zu wissen</h2>
+        <ul>
+          <li data-i18n="beispiel_peter.safe_1">Konihaus ist kein Notruf- und kein medizinischer Dienst. Bei Einbruch, Feuer oder Notfall wählen Sie 117 (Polizei), 118 (Feuerwehr), 144 (Sanität) oder 112. Ich alarmiere keine Rettungsdienste und überwache Ihr Zuhause nicht rund um die Uhr; Support-Antwortzeiten gelten nicht für Notfälle.</li>
+          <li data-i18n="beispiel_hans.safe_2">Alarme gehen per Push über die offizielle App an die Kontaktpersonen, die Sie festlegen. Bei Strom- oder Internetausfall können sie verzögert oder gar nicht ankommen.</li>
+          <li data-i18n="beispiel_hans.safe_3">Keine Garantie: Passende Ausstattung erhöht die Chance, dass Probleme früh auffallen. Was überwacht wird, entscheiden Sie.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COST + CTA -->
+  <section class="example-cta-sec">
     <div class="container">
       <div class="example-cost reveal">
         <div class="example-cost__lbl" data-i18n="beispiel_hans.cost_title">Die Kosten</div>
@@ -202,18 +260,59 @@
         <div class="example-cost__note" data-i18n="beispiel_peter.cost_note">Hardware, Installation und Einführung einmalig ~CHF 1’700 · 6 Monate gesamt ~CHF 2’550 · keine Mindestlaufzeit</div>
       </div>
       <h2 class="example-cta__t reveal" data-i18n="beispiel_peter.cta_t">Planen Sie eine längere Abwesenheit?</h2>
-      <p class="example-cta__b reveal d1" data-i18n="beispiel_peter.cta_b">Sehen Sie sich das Ferienhaus-Paket im Detail an, oder vereinbaren Sie eine kostenlose, unverbindliche Beratung.</p>
+      <p class="example-cta__b reveal d1" data-i18n="beispiel_hans.p_cta_b">Vereinbaren Sie ein kostenloses, unverbindliches Gespräch, am Telefon oder per WhatsApp. Danach komme ich bei Ihnen vorbei, schaue mir alles vor Ort an und erstelle Ihre persönliche Offerte.</p>
       <div class="example-cta__btns reveal d2">
-        <a href="/?pkg=ferienhaus-4#packages" class="btn btn-primary" data-i18n="beispiel_hans.cta_btn1">Paket
-          ansehen</a>
-        <a href="/?pkg=ferienhaus-4#contact" class="btn btn-ghost" data-i18n="beispiel_hans.cta_btn2">Kostenlose
-          Beratung</a>
+        <a href="/?pkg=basis-3#contact" class="btn btn-primary" data-i18n="beispiel_hans.cta_btn2">Kostenlose Beratung</a>
+        <a href="https://wa.me/41782379685" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="beispiel_hans.cta_btn_wa">Per WhatsApp schreiben</a>
       </div>
-      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_hans.back">← Zurück zu
-        den Beispielen</a>
+      <a href="/?pkg=basis-3#packages" class="story-cta-link reveal d2" data-i18n="beispiel_peter.cta_pkg_link">Paket «Advanced» ansehen</a>
+      <a href="https://wa.me/?text=https%3A%2F%2Fkonihaus.ch%2Fweltreise%2F" id="story-share" class="story-share reveal d3" target="_blank" rel="noopener noreferrer"><span data-i18n="beispiel_hans.share_label">Mit der Familie teilen</span></a>
+      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_hans.back">← Zurück zu den Beispielen</a>
     </div>
   </section>
-  <footer class="footer footer--ferien">
+
+  <!-- MORE STORIES -->
+  <section class="story-more">
+    <div class="container">
+      <h2 class="story-more__t reveal" data-i18n="beispiel_hans.more_title">Weitere Geschichten</h2>
+      <div class="examples__grid reveal d1">
+          <a class="examples__card examples__card--hans" href="/isolierter-senior">
+            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
+            <span class="examples__name">Hans</span>
+            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
+              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
+            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--elsa" href="/wasserschaden">
+            <span class="examples__tag" data-i18n="examples.elsa_tag">Wasserschaden</span>
+            <span class="examples__name">Elsa</span>
+            <span class="examples__hook" data-i18n="examples.elsa_hook">Wie eine 79-jährige Mieterin einen
+              Wasserschaden in Sekunden erkennen könnte — statt erst am nächsten Morgen.</span>
+            <span class="examples__cta" data-i18n="examples.elsa_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--inge" href="/ferienwohnung-management">
+            <span class="examples__tag" data-i18n="examples.inge_tag">Ferienwohnung</span>
+            <span class="examples__name">Inge</span>
+            <span class="examples__hook" data-i18n="examples.inge_hook">Wie eine Ferienwohnungsbesitzerin ihre
+              Wohnung aus der Ferne verwalten könnte — ohne ständige Sorgen.</span>
+            <span class="examples__cta" data-i18n="examples.inge_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <div>
@@ -286,11 +385,51 @@
       </div>
     </div>
   </footer>
-  <script>
+    <script>
     const CUSTOM_BASE_DIR = '../';
   </script>
   <script src="../scripts.js"></script>
   <script src="../cookie-consent.js"></script>
+
+  <script>
+    /* click-to-load YouTube (no Google request until the visitor clicks) + share link in the visitor's language */
+    (function () {
+      function lang() { try { return (typeof i18n !== 'undefined' && i18n.currentLang) || document.documentElement.lang || 'de'; } catch (e) { return 'de'; } }
+      var sec = document.getElementById('story-video-sec');
+      if (sec) {
+        var box = sec.querySelector('.story-video'), btn = sec.querySelector('.story-video__poster');
+        var idFor = function () { var l = lang().slice(0, 2) === 'en' ? 'en' : 'de'; return box.getAttribute('data-yt-' + l) || box.getAttribute('data-yt-de') || ''; };
+        if (idFor()) {
+          sec.hidden = false;
+          try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          btn.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(idFor()) + '?autoplay=1&rel=0';
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            box.appendChild(f); btn.style.display = 'none';
+          });
+          /* language switch: stop the running video and show the poster again (the new language's video loads on the next click) */
+          new MutationObserver(function () {
+            var f = box.querySelector('iframe');
+            if (f) f.remove();
+            btn.style.display = '';
+            try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+      }
+      var share = document.getElementById('story-share');
+      if (share) share.addEventListener('click', function (e) {
+        try {
+          var t = (typeof i18n !== 'undefined') ? i18n.getText('beispiel_peter', 'share_text') : '';
+          if (!t) return;
+          e.preventDefault();
+          window.open('https://wa.me/?text=' + encodeURIComponent(t + ' https://konihaus.ch/weltreise/'), '_blank', 'noopener');
+        } catch (err) {}
+      });
+    })();
+  </script>
 </body>
 
 </html>
