@@ -1,4 +1,4 @@
-const CACHE_NAME = 'konihaus-v1';
+const CACHE_NAME = 'konihaus-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/styles.css',
