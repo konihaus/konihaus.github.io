@@ -313,10 +313,9 @@ a.logo {
 
 .logo-image {
   display: block;
-  background-image: url('./images/logo.png');
+  background-image: url('./images/logo_sm.png');
   width: 36px;
   height: 36px;
-  background-size: contain;
   background-repeat: no-repeat;
 }
 
