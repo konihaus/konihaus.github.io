@@ -341,6 +341,19 @@ function setupMobileMenu() {
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
+  document.querySelectorAll('.drawer-acc').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      document.querySelectorAll('.drawer-acc').forEach(b => {
+        const isThis = b === btn;
+        const on = isThis ? open : false;
+        b.setAttribute('aria-expanded', String(on));
+        const sub = document.getElementById(b.getAttribute('aria-controls'));
+        if (sub) sub.hidden = !on;
+      });
+    });
+  });
+
   document.querySelectorAll('.drawer-link').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
@@ -1151,7 +1164,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && !/^app\./.test(location.hostname)) { // the app subdomain has no service worker
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').then((registration) => {
       setInterval(() => {
