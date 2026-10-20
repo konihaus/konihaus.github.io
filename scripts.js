@@ -145,6 +145,7 @@ const i18n = {
     localStorage.setItem('lang', lang);
     setCookie(LANG_COOKIE, lang); 
     document.documentElement.lang = lang;
+    document.querySelectorAll('[data-ha-link]').forEach(function (el) { el.setAttribute('href', lang === 'en' ? '/home-assistant-switzerland' : '/home-assistant-schweiz'); });
     const hcaptcha = document.querySelector('.h-captcha');
     if (hcaptcha) hcaptcha.setAttribute('data-lang', lang);
     

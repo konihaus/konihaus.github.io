@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon_sm.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <title>Home Assistant Schweiz - Einrichtung &amp; Betreuung | Konihaus</title>
-  <meta name="description" content="Konihaus richtet Home Assistant für Ihr Zuhause in der Schweiz ein und betreut es laufend. Lokal, ohne Cloud-Zwang, mit Ihren bestehenden Geräten. Pakete ab CHF 39 pro Monat.">
+  <meta name="description" content="Konihaus richtet Home Assistant für Ihr Zuhause in der Schweiz ein und betreut es laufend: lokal, ohne Cloud-Zwang. Pakete ab CHF 39 pro Monat.">
   <meta name="author" content="Konrad Hefelle">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/home-assistant-schweiz">
@@ -23,12 +23,16 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
   <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:image" content="https://konihaus.ch/images/og-image.jpg">
+  <meta property="og:image" content="https://konihaus.ch/images/og-home-assistant-de.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Home Assistant Schweiz: fertig eingerichtet und betreut von Konihaus">
+  <meta property="og:site_name" content="Konihaus">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Home Assistant Schweiz - Einrichtung &amp; Betreuung | Konihaus">
-  <meta name="twitter:image" content="https://konihaus.ch/images/og-image.jpg">
+  <meta name="twitter:description" content="Home Assistant, fertig eingerichtet und betreut: lokal, ohne Cloud-Zwang, für alle Haushalte in der Schweiz.">
+  <meta name="twitter:image:alt" content="Home Assistant Schweiz: fertig eingerichtet und betreut von Konihaus">
+  <meta name="twitter:image" content="https://konihaus.ch/images/og-home-assistant-de.jpg">
 
   <link rel="preload" href="/fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,7 +54,7 @@
       "@id": "https://konihaus.ch/home-assistant-schweiz#webpage",
       "url": "https://konihaus.ch/home-assistant-schweiz",
       "name": "Home Assistant Schweiz - Einrichtung & Betreuung | Konihaus",
-      "description": "Konihaus richtet Home Assistant für Ihr Zuhause in der Schweiz ein und betreut es laufend. Lokal, ohne Cloud-Zwang, mit Ihren bestehenden Geräten. Pakete ab CHF 39 pro Monat.",
+      "description": "Konihaus richtet Home Assistant für Ihr Zuhause in der Schweiz ein und betreut es laufend: lokal, ohne Cloud-Zwang. Pakete ab CHF 39 pro Monat.",
       "inLanguage": "de-CH",
       "isPartOf": {
         "@id": "https://konihaus.ch/#website"
@@ -60,6 +64,13 @@
       },
       "breadcrumb": {
         "@id": "https://konihaus.ch/home-assistant-schweiz#breadcrumb"
+      },
+      "dateModified": "2026-10-20",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://konihaus.ch/images/og-home-assistant-de.jpg",
+        "width": 1200,
+        "height": 630
       }
     },
     {
@@ -80,7 +91,9 @@
         "lowPrice": "39",
         "highPrice": "249",
         "offerCount": 4
-      }
+      },
+      "description": "Einrichtung und laufende Fernbetreuung von Home Assistant für Haushalte in der Schweiz: lokal, ohne Cloud-Zwang, mit den Geräten, die Sie bereits besitzen.",
+      "url": "https://konihaus.ch/home-assistant-schweiz"
     },
     {
       "@type": "BreadcrumbList",
@@ -99,52 +112,64 @@
           "item": "https://konihaus.ch/home-assistant-schweiz"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://konihaus.ch/home-assistant-schweiz#faq",
+      "url": "https://konihaus.ch/home-assistant-schweiz#faq",
+      "inLanguage": "de-CH",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist Home Assistant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eine freie Open-Source-Plattform, die Smart-Home-Geräte verschiedener Hersteller lokal vernetzt und automatisiert. Konihaus richtet sie ein und betreut sie für Sie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich eine Cloud oder ein Abo eines Herstellers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Die Verarbeitung läuft lokal auf der Greenhub-Zentrale. Benachrichtigungen sind optional und laufen gegebenenfalls über externe Dienste wie Apple oder Google. Bei Konihaus zahlen Sie die monatliche Betreuung, keine Hersteller-Abos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich meine bestehenden Geräte weiterverwenden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In den meisten Fällen ja. Ich nutze, was Sie bereits besitzen, und ergänze bewährte Hardware nur dort, wo es sinnvoll ist. Welche Modelle laufen, kläre ich mit Ihnen in der Beratung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mein Gerät steht nicht in der Liste. Was nun?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Liste zeigt die Hersteller und Gerätetypen von meiner Startseite, ist aber nicht abschliessend. Schreiben Sie mir Hersteller und Modell, dann prüfe ich es."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet es?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pakete ab CHF 39 pro Monat, Endkundenpreise in Schweizer Franken, keine MwSt. verrechnet. Die Einrichtungsinvestition entfällt bei einem 2-Jahres-Servicevertrag. Die genaue Offerte erhalten Sie nach dem Besuch vor Ort."
+          }
+        }
+      ]
     }
   ]
 }
   </script>
-  <style>
-    .lp-hero{background:var(--marine);color:var(--parchment);padding:140px 0 88px}
-    .lp-hero .sec-eye{color:var(--amber-warm)}
-    .lp-hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(38px,5vw,64px);line-height:1.08;letter-spacing:-.02em;margin:0 0 20px}
-    .lp-hero h1 em{font-style:italic;color:var(--forest-light);font-weight:400}
-    .lp-hero__sub{max-width:680px;font-size:1.0625em;line-height:1.7;color:rgba(247,244,237,.82);margin-bottom:28px}
-    .lp-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
-    .lp-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
-    .lp-chips li{font-size:.8125em;border:1px solid rgba(247,244,237,.25);border-radius:20px;padding:6px 14px;color:rgba(247,244,237,.88)}
-    .lp-sec{padding:96px 0}
-    .lp-sec--cream{background:var(--cream)}
-    .lp-sec--parch{background:var(--parchment)}
-    .lp-sec h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.2vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 18px}
-    .lp-sec h2 em{font-style:italic;color:var(--forest-mid);font-weight:400}
-    .lp-lead{max-width:720px;color:var(--ink-3);line-height:1.75;margin-bottom:12px}
-    .lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:36px}
-    .lp-card,.lp-pkg{background:var(--parchment);border:1px solid var(--warm-mid);border-radius:12px;padding:22px}
-    .lp-sec--parch .lp-card{background:var(--cream)}
-    .lp-card h3,.lp-pkg h3{font-family:var(--serif);font-size:1.4em;font-weight:500;margin:0 0 8px;color:var(--forest)}
-    .lp-card p{margin:0;font-size:.9375em;line-height:1.65;color:var(--ink-3)}
-    .lp-pkg--hl{border-color:var(--forest-mid);box-shadow:0 6px 24px rgba(42,74,53,.12)}
-    .lp-pkg__badge{display:inline-block;font-size:.6875em;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-text);margin-bottom:6px}
-    .lp-pkg__price{margin:0 0 6px;color:var(--ink-3)}
-    .lp-pkg__price strong{font-family:var(--serif);font-size:2.2em;font-weight:500;color:var(--ink)}
-    .lp-pkg__assume{margin:0;font-size:.8125em;color:var(--stone-text);line-height:1.55}
-    .lp-dev-types{margin-top:36px}
-    .lp-dev-types .dev-tags{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
-    .lp-dev-types h3{font-size:.75em;letter-spacing:.1em;text-transform:uppercase;color:var(--stone-text);font-weight:500;margin:0 0 14px}
-    .lp-note{max-width:720px;margin:28px auto 0;text-align:center;font-size:.875em;color:var(--stone-text);line-height:1.65}
-    .lp-link{display:inline-flex;gap:8px;align-items:center;margin-top:24px;color:var(--forest);text-decoration:underline;text-underline-offset:3px}
-    .lp-cta{background:var(--forest-deep);color:var(--parchment);text-align:center;padding:96px 0}
-    .lp-cta h2{color:var(--parchment)}
-    .lp-cta h2 em{color:var(--forest-light)}
-    .lp-cta p{max-width:560px;margin:0 auto 24px;color:rgba(247,244,237,.82);line-height:1.7}
-    .lp-cta .lp-actions{justify-content:center;margin-bottom:16px}
-    @media (max-width:640px){.lp-hero{padding:112px 0 64px}.lp-sec,.lp-cta{padding:64px 0}}
-  </style>
+  <link rel="stylesheet" href="/ha-landing.css">
 </head>
 
 <body data-title-key="ha.title" data-alt-de="/home-assistant-schweiz" data-alt-en="/home-assistant-switzerland">
 
-  <nav class="nav nav--solid" id="nav">
+  <nav class="nav nav--solid nav--ferien" id="nav">
     <div class="container">
       <div class="nav__inner ">
         <a href="/" class="logo" aria-label="Konihaus">
@@ -165,6 +190,7 @@
               <a href="/#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
               <ul class="nav__sub">
                 <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+                <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
                 <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
                 <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
                 <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
@@ -227,6 +253,7 @@
         <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
         <ul class="drawer-sub" id="dg-service" hidden>
           <li><a href="/#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+          <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
           <li><a href="/#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
           <li><a href="/#faq" class="drawer-link" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
           <li><a href="/#contact" class="drawer-link" data-i18n="footer.col1_l4">Kontakt</a></li>
@@ -240,15 +267,18 @@
 
 
   <header class="lp-hero">
-    <div class="container">
+    <div class="container lp-hero__grid">
+      <div class="lp-hero__text">
       <p class="sec-eye" data-i18n="ha.eyebrow">Home Assistant Schweiz</p>
-      <h1 data-i18n="ha.h1" data-i18n-html="true">Home Assistant,<br><em>fertig eingerichtet.</em></h1>
+      <h1><img class="lp-hero__word" src="/images/home-assistant-wordmark.svg" alt="Home Assistant Schweiz" width="574" height="88"><em> fertig eingerichtet.</em></h1>
       <p class="lp-hero__sub" data-i18n="ha.sub">Konihaus richtet Home Assistant für Ihr Zuhause in der Schweiz ein und betreut es laufend — lokal, ohne Cloud-Zwang und mit den Geräten, die Sie schon haben. Für alle, die ein smartes Zuhause wollen, ohne selbst zu basteln.</p>
       <div class="lp-actions">
         <a href="/#contact" class="btn btn-primary"><span data-i18n="ha.cta1">Kostenlose Beratung anfragen</span> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="/#packages" class="btn btn-ghost"><span data-i18n="ha.cta2">Pakete ansehen</span></a>
       </div>
       <ul class="lp-chips"><li><span data-i18n="ha.chip1">100 % lokal</span></li><li><span data-i18n="ha.chip2">Open Source</span></li><li><span data-i18n="ha.chip3">Einrichtung &amp; Betreuung aus einer Hand</span></li></ul>
+      </div>
+      <div class="lp-hero__art" aria-hidden="true"><img src="/images/home-assistant-icon.svg" alt="" width="400" height="400"></div>
     </div>
   </header>
 
@@ -257,7 +287,7 @@
       <p class="sec-eye" data-i18n="ha.what_eye">Was ist Home Assistant?</p>
       <h2 data-i18n="ha.what_h2" data-i18n-html="true">Eine Zentrale für <em>alle</em> Ihre Geräte.</h2>
       <p class="lp-lead" data-i18n="ha.what_p1">Home Assistant ist eine freie Open-Source-Plattform für das Smart Home. Sie bringt Lampen, Sensoren, Heizung, Storen, Kameras und Steckdosen verschiedener Hersteller auf eine gemeinsame Oberfläche — statt einer App pro Gerät.</p>
-      <p class="lp-lead" data-i18n="ha.what_p2">Die Daten werden lokal verarbeitet, die Automatisierungen laufen auch ohne Internet weiter. Genau das Gerüst nutze ich als Basis für Greenhub, die Zentrale Ihres Zuhauses.</p>
+      <p class="lp-lead" data-i18n="ha.what_p2">Die Daten werden lokal verarbeitet, die Automatisierungen laufen auch ohne Internet weiter. Genau das Gerüst nutze ich als Basis für <a href="/#devices">Greenhub</a>, die Zentrale Ihres Zuhauses.</p>
       <p class="lp-lead" data-i18n="ha.what_p3">Die Plattform ist mächtig, aber nicht jeder will sie selbst installieren, aktualisieren und absichern. Das übernehme ich: von der Beratung bis zur laufenden Fernbetreuung.</p>
     </div>
   </section>
@@ -319,6 +349,14 @@
     </div>
   </section>
 
+  <section class="lp-sec lp-sec--parch lp-more" id="mehr">
+    <div class="container">
+      <p class="sec-eye">Weiterlesen</p>
+      <h2>Mehr zu <em>Konihaus</em> entdecken.</h2>
+      <div class="lp-more__grid"><a class="lp-more__card" href="https://blog.konihaus.ch/de/insights/konihaus-app/"><h3>Die Konihaus-App</h3><p>Licht, Storen, Heizung, Sicherheit und Energie auf einen Blick: so sieht Home Assistant im Alltag aus.</p></a><a class="lp-more__card" href="/#devices"><h3>Geräte &amp; Technik</h3><p>Welche Geräte funktionieren und warum Greenhub die lokale Zentrale Ihres Zuhauses ist.</p></a><a class="lp-more__card" href="https://blog.konihaus.ch/de/insights/datenschutz-by-default/"><h3>Datenschutz by Default</h3><p>Warum Ihre Daten bei Ihnen zu Hause bleiben und nicht in einer Cloud landen.</p></a><a class="lp-more__card" href="/zu-viele-apps"><h3>Zu viele Apps</h3><p>Beispiel: ein Dutzend Geräte-Apps auf eine gemeinsame Oberfläche bringen.</p></a><a class="lp-more__card" href="/ferienwohnung-management"><h3>Ferienwohnung aus der Ferne</h3><p>Beispiel: eine Ferienwohnung aus der Ferne verwalten, ohne ständig hinzufahren.</p></a><a class="lp-more__card" href="/isolierter-senior"><h3>Eltern allein zu Hause</h3><p>Beispiel: Sicherheit für Eltern auf dem Hof und Ruhe für die Familie.</p></a></div>
+    </div>
+  </section>
+
   <section class="lp-cta" id="kontakt">
     <div class="container">
       <p class="sec-eye" data-i18n="cta.eye">Loslegen</p>
@@ -332,7 +370,7 @@
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer footer--ferien">
     <div class="container">
       <div class="footer__top">
         <div>
@@ -372,6 +410,7 @@
           <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
           <ul class="flinks">
             <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+            <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
             <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
             <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
             <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>

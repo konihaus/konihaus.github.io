@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://konihaus.ch/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://konihaus.ch/home-assistant-schweiz</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://konihaus.ch/home-assistant-switzerland</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://konihaus.ch/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://konihaus.ch/home-assistant-schweiz</loc><lastmod>2026-10-20</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://konihaus.ch/home-assistant-schweiz"/><xhtml:link rel="alternate" hreflang="en" href="https://konihaus.ch/home-assistant-switzerland"/><xhtml:link rel="alternate" hreflang="x-default" href="https://konihaus.ch/home-assistant-schweiz"/></url>
+  <url><loc>https://konihaus.ch/home-assistant-switzerland</loc><lastmod>2026-10-20</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://konihaus.ch/home-assistant-schweiz"/><xhtml:link rel="alternate" hreflang="en" href="https://konihaus.ch/home-assistant-switzerland"/><xhtml:link rel="alternate" hreflang="x-default" href="https://konihaus.ch/home-assistant-schweiz"/></url>
   <url><loc>https://konihaus.ch/isolierter-senior</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://konihaus.ch/zu-viele-apps</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://konihaus.ch/ferienwohnung-management</loc><lastmod>2026-10-15</lastmod></url>
