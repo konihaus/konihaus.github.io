@@ -7,16 +7,16 @@
   <meta name="theme-color" content="#2a4a35">
   <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <title>Ferienwohnung aus der Ferne - Anwendungsbeispiel: Konihaus</title>
-  <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten — ohne ständige Sorgen.">
+  <title>Ferienwohnung aus der Ferne – Anwendungsbeispiel | Konihaus</title>
+  <meta name="description" content="Illustriertes Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten – mit Video, Buchungskalender-Ablauf, ohne Kameras und Mikrofone.">
   <meta name="author" content="Konrad Hefelle">
 
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/ferienwohnung-management">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ferienwohnung aus der Ferne - Anwendungsbeispiel: Konihaus">
-  <meta property="og:description" content="Ein illustratives Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten — ohne ständige Sorgen.">
+  <meta property="og:title" content="Ferienwohnung aus der Ferne – Anwendungsbeispiel | Konihaus">
+  <meta property="og:description" content="Illustriertes Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten – mit Video, Buchungskalender-Ablauf, ohne Kameras und Mikrofone.">
   <meta property="og:url" content="https://konihaus.ch/ferienwohnung-management">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="de_CH">
@@ -25,9 +25,10 @@
   <meta property="fb:app_id" content="2188289105366537" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ferienwohnung aus der Ferne - Anwendungsbeispiel: Konihaus">
-  <meta name="twitter:description" content="Ein illustratives Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten — ohne ständige Sorgen.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://konihaus.ch/ferienwohnung-management/ferienwohnung-management_og.jpg">
+  <meta name="twitter:title" content="Ferienwohnung aus der Ferne – Anwendungsbeispiel | Konihaus">
+  <meta name="twitter:description" content="Illustriertes Beispiel: Wie Konihaus einer Ferienwohnungsbesitzerin helfen könnte, ihre Wohnung aus der Ferne zu verwalten – mit Video, Buchungskalender-Ablauf, ohne Kameras und Mikrofone.">
   <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
   <link rel="preload" href="../fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -51,9 +52,30 @@
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          <a href="/#examples" class="legal-back" data-i18n="beispiel_inge.back">← Zurück zu den Beispielen</a>
-          <div class="language-picker">
+        <ul class="nav__links">
+            <li class="has-sub">
+              <a href="/#about" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+                <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+                <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+                <li><a href="/#about" data-i18n="footer.col2_l4">Über Koni</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="/#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+                <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+                <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+                <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+                <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
+              </ul>
+            </li>
+            <li><a href="https://app.konihaus.ch" class="nav__app" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+            <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+          </ul>
+        <div class="language-picker">
           <button
             type="button"
             class="language-trigger"
@@ -83,10 +105,41 @@
             <option value="en">EN</option>
           </select>
         </div>
-        </div>
+        <a href="/?pkg=ferienhaus-3#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-about"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-about" hidden>
+          <li><a href="/#intro" class="drawer-link" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+          <li><a href="/#process" class="drawer-link" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+          <li><a href="/#why" class="drawer-link" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+          <li><a href="/#about" class="drawer-link" data-i18n="footer.col2_l4">Über Koni</a></li>
+        </ul>
+      </li>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-service" hidden>
+          <li><a href="/#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+          <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+          <li><a href="/#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+          <li><a href="/#faq" class="drawer-link" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+          <li><a href="/#contact" class="drawer-link" data-i18n="footer.col1_l4">Kontakt</a></li>
+        </ul>
+      </li>
+      <li><a href="https://app.konihaus.ch" class="drawer-link" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/?pkg=ferienhaus-3#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
   <div class="example-hero-container inge">
     <header class="example-hero">
       <div class="container">
@@ -109,91 +162,196 @@
     <section class="example-section-top">
       <div class="container example-narrow">
         <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.sit_title">Die Situation</h2></div>
-        <p class="example-p reveal d1" data-i18n="beispiel_inge.sit_body">Inge, 58, besitzt eine 2-Zimmer-Ferienwohnung
-          in Interlaken. Für die Arbeit ist sie nach Zürich gezogen — die Verwaltung aus der Ferne wurde zum
-          Albtraum: Gäste schliessen sich aus, vergessen den Checkout, die Heizung läuft im Winter durch, obwohl
-          niemand da ist, und von Schäden erfährt sie oft erst beim nächsten Gast. Ihr Sohn Marco schlug ein
-          Smart-Home-System vor. Ihre Reaktion: «Das ist doch nur was für Airbnb.»</p>
+        <p class="example-p reveal d1" data-i18n="beispiel_inge.sit_body">Inge, 58, besitzt eine 2-Zimmer-Ferienwohnung in Interlaken. Für die Arbeit ist sie nach Zürich gezogen. Die Wohnung ist beliebt, die Gäste kommen und gehen, und Inge organisiert alles vom Laptop aus. Das klappt, solange nichts schiefgeht.</p>
       </div>
     </section>
   </div>
+  <!-- VIDEO (click-to-load; hidden until a YouTube ID is set in data-yt-de / data-yt-en) -->
+  <section class="story-video-sec" id="story-video-sec" hidden>
+    <div class="container">
+      <p class="story-video__label reveal" data-i18n="beispiel_hans.video_label">Die Geschichte in drei Minuten</p>
+      <div class="story-video reveal d1" data-yt-de="4Pidneghg30" data-yt-en="-2Nk7RhjC-0">
+        <button type="button" class="story-video__poster" aria-label="Video abspielen">
+          <img src="inge-homepage.jpg" alt="" width="711" height="400" decoding="async">
+          <span class="story-video__cap">Inge <small>2:58</small></span>
+          <span class="story-video__play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="var(--parchment)"/></svg></span>
+        </button>
+      </div>
+      <p class="story-video__note" data-i18n="beispiel_hans.video_note">Mit dem Klick laden Sie das Video von YouTube; dabei werden Daten an YouTube übertragen.</p>
+    </div>
+  </section>
+
+  <!-- FRIDAY NIGHT -->
+  <section class="story-night">
+    <div class="container">
+      <p class="story-night__t reveal" data-i18n="beispiel_inge.night_title">Doch irgendetwas geht immer schief.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_inge.n1">Freitagabend, kurz vor dem Essen, klingelt das Handy: Ein Gast hat sich ausgesperrt.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_inge.n2">Am Sonntag steht die Reinigungskraft vor der Tür, weil der Gast vom Vortag um zwölf noch immer in der Wohnung ist.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_inge.n3">Im Winter läuft die Heizung durch, obwohl niemand da ist.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_inge.n4">Und von einem Schaden erfährt Inge oft erst, wenn die nächsten Gäste anreisen.</p>
+      <p class="story-night__s reveal d2" data-i18n="beispiel_inge.n5">Ihr Sohn Marco schlug ein Smart-Home-System vor.</p>
+      <p class="story-night__q story-night__q--last reveal d2" data-i18n="beispiel_inge.n6">«Das ist doch nur eine Ferienwohnung. Ich brauche nicht fünfzig Sensoren.»</p>
+    </div>
+  </section>
+
   <section class="example-section example-section--alt">
     <div class="container example-narrow">
       <div class="example-h2-row"><div class="example-badge badge--ferien example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.worry_title">Inges Sorgen</h2></div>
       <ul class="example-worry-list">
-        <li class="reveal d1" data-i18n="beispiel_inge.worry1">Was, wenn sich Gäste aussperren und niemand vor
-          Ort helfen kann?</li>
-        <li class="reveal d1" data-i18n="beispiel_inge.worry2">Was, wenn ein Gast das Checkout vergisst und es zu
-          Streit um Spätgebühren kommt?</li>
-        <li class="reveal d1" data-i18n="beispiel_inge.worry3">Was, wenn die Heizung im Winter unnötig durchläuft,
-          obwohl niemand da ist?</li>
-        <li class="reveal d1" data-i18n="beispiel_inge.worry4">Was, wenn Rohre einfrieren, weil niemand merkt, dass
-          es zu kalt wird?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry1">Was, wenn sich Gäste aussperren und niemand vor Ort helfen kann?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry2">Was, wenn ein Gast das Checkout vergisst und die Reinigung vor verschlossener Tür steht?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry3">Was, wenn die Heizung im Winter unnötig durchläuft, obwohl niemand da ist?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry4">Was, wenn Rohre einfrieren, weil niemand merkt, dass es zu kalt wird?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry5">Was, wenn ein Leck erst beim nächsten Gast auffällt?</li>
+        <li class="reveal d1" data-i18n="beispiel_inge.worry6">Was, wenn ein System am Ende mehr Pflege braucht, als die Wohnung einbringt?</li>
       </ul>
     </div>
   </section>
 
+  <!-- THE TURN -->
+  <section class="story-turn">
+    <div class="container example-narrow">
+      <h2 class="story-turn__t reveal" data-i18n="beispiel_inge.turn_title">Dann findet Inge Konihaus.</h2>
+      <p class="story-turn__sub reveal d1" data-i18n="beispiel_inge.turn_sub">Es beginnt mit einem kostenlosen Telefonat.</p>
+      <p class="example-p reveal d1" data-i18n="beispiel_inge.turn_visit">Koni besucht die Wohnung in Interlaken und schaut sich an, was schon da ist und was möglich wäre. Inge hat eine Bedingung:</p>
+      <blockquote class="story-turn__quote reveal d2" data-i18n="beispiel_inge.turn_quote">«Keine Kameras drinnen, und nichts, was meine Gäste belauscht.»</blockquote>
+      <p class="example-p reveal d2" data-i18n="beispiel_inge.turn_answer">Koni nickt. Die Wohnung soll gastfreundlich bleiben und nicht überwacht wirken. Genau so plant er es: ohne Kamera und ohne Mikrofon.</p>
+      <p class="example-p reveal d3" data-i18n="beispiel_inge.turn_next">Danach folgt eine persönliche Offerte per E-Mail, massgeschneidert für Inge. Sagt sie ja, richtet Koni alles vor Ort ein.</p>
+    </div>
+  </section>
+
+  <!-- BOOKING CALENDAR FLOW -->
   <section class="example-section">
     <div class="container">
-      <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.sol_title">Die Lösung: Ferienfrieden</h2></div>
-      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_inge.sol_intro">Inge erhält eine persönliche Offerte von rund CHF 109 pro Monat — zwischen unseren Paketen Ferienhaus-Sicherheit (ab CHF 79) und Ferienfrieden (ab CHF 139).</p>
-      <div class="example-sol-grid">
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="14.5" r="3.7" stroke="var(--forest)" stroke-width="1.6"/><path d="M10.5 12l9-9M16 6.5l2.5 2.5M13.5 9l2 2" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol1_t">Smart Lock</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol1_b">Keyless Check-in mit einmaligen SMS-Codes — kein Schlüsseltausch nötig.</div>
+      <div class="story-steps-head">
+      <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--parchment)" stroke-width="1.6"/><path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round"/><path d="M9 14l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.sol_title">Der Buchungskalender steuert das Haus</h2></div>
+      <p class="example-p reveal d1" data-i18n="beispiel_inge.sol_intro">Statt einzelner Geräte richtet Koni einen Ablauf ein, der dem Buchungskalender folgt. Inge erhält dafür eine persönliche Offerte von rund CHF 109 pro Monat — zwischen unseren Paketen Ferienhaus-Sicherheit (ab CHF 79) und Ferienfrieden (ab CHF 139).</p>
+      </div>
+      <ol class="story-steps">
+        <li class="story-steps__item reveal d1">
+          <span class="story-steps__n" aria-hidden="true">1</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st1_t">Ein Tag vor der Anreise</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st1_b">Die Heizung wacht auf, das Warmwasser wird vorbereitet.</p>
+          </div>
+        </li>
+        <li class="story-steps__item reveal d1">
+          <span class="story-steps__n" aria-hidden="true">2</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st2_t">Kurz vor der Ankunft</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st2_b">Die Gäste, zum Beispiel ein Wanderpaar aus Deutschland, erhalten einen persönlichen Code, nur für diesen Aufenthalt. Kein Schlüsseltausch, keine Schlüsselbox.</p>
+          </div>
+        </li>
+        <li class="story-steps__item reveal d2">
+          <span class="story-steps__n" aria-hidden="true">3</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st3_t">Ankunft</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st3_b">Licht und Storen empfangen die Gäste. Inge sieht: «Gäste sind angekommen.»</p>
+          </div>
+        </li>
+        <li class="story-steps__item reveal d2">
+          <span class="story-steps__n" aria-hidden="true">4</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st4_t">Aufenthalt</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st4_b">Die Heizung bleibt vernünftig begrenzt und geht aus, wenn ein Fenster offen steht. Ein Wassermelder meldet ein Leck sofort. Inge vertraut ihren Gästen.</p>
+          </div>
+        </li>
+        <li class="story-steps__item reveal d2">
+          <span class="story-steps__n" aria-hidden="true">5</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st5_t">Abreise</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st5_b">Um elf Uhr erinnert eine Nachricht auf dem Handy der Gäste ans Checkout. Der Code läuft ab. Inge sieht, ob noch ein Fenster offen ist.</p>
+          </div>
+        </li>
+        <li class="story-steps__item reveal d2">
+          <span class="story-steps__n" aria-hidden="true">6</span>
+          <div>
+            <h3 class="story-steps__t" data-i18n="beispiel_inge.st6_t">Zwischen den Buchungen</h3>
+            <p class="story-steps__b" data-i18n="beispiel_inge.st6_b">Maria, die Reinigungskraft, hat einen eigenen Code. Mit ihm geht das Licht an, die Storen öffnen sich, und Inge erhält eine Nachricht, wenn alles fertig ist. Danach sinkt die Heizung auf Schutztemperatur.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="story-report reveal d2">
+        <h3 class="story-report__t" data-i18n="beispiel_inge.rep_t">Einmal pro Woche ein kurzer Bericht</h3>
+        <p class="story-report__b" data-i18n="beispiel_inge.rep_b">Wie viele Gäste waren da, gab es Meldungen, wie warm war die Wohnung. Wenn nichts zu tun ist, steht dort auch nichts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO NOT DO -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="var(--parchment)" stroke-width="1.6"/><path d="M6.4 6.4l11.2 11.2" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.nodo_title">Was Konihaus bewusst nicht macht</h2></div>
+      <div class="story-qa story-qa--3">
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_inge.nd1_q">Keine Kameras, kein Mikrofon</h3>
+          <p class="story-qa__a" data-i18n="beispiel_inge.nd1_a">In der Wohnung gibt es weder Kameras noch Mikrofone. Sie soll gastfreundlich bleiben.</p>
         </div>
-        <div class="example-sol-card reveal d1">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="11" rx="2" stroke="var(--forest)" stroke-width="1.6"/><path d="M9 20h6M12 16v4" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/><path d="M7.5 12.5l2.3-2.3 2 2 3.7-3.7" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol2_t">Gast-Verwaltungsportal</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol2_b">Automatische Checkout-Erinnerung — keine Diskussionen mehr um Spätgebühren.</div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_inge.nd2_q">Keine automatischen Massnahmen gegen Gäste</h3>
+          <p class="story-qa__a" data-i18n="beispiel_inge.nd2_a">Eine Meldung bleibt eine Meldung. Die Entscheidung trifft Inge.</p>
         </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5a2 2 0 0 0-2 2v7.6a3.5 3.5 0 1 0 4 0V6.5a2 2 0 0 0-2-2z" stroke="var(--forest)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="16.5" r="1.4" fill="var(--forest)"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol3_t">Smarter Thermostat</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol3_b">Heizung läuft nur, wenn die Wohnung gebucht ist — spart Heizkosten im Winter.</div>
-        </div>
-        <div class="example-sol-card reveal d2">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3.5c3 4 6 7.7 6 11a6 6 0 1 1-12 0c0-3.3 3-7 6-11z" stroke="var(--forest)" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol4_t">Wassermelder</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol4_b">Erkennt ein Leck sofort — nicht erst beim nächsten Gast.</div>
-        </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3.5" width="14" height="17" rx="1.5" stroke="var(--forest)" stroke-width="1.6"/><path d="M8 8.5h8M8 12h8M8 15.5h5" stroke="var(--forest)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol5_t">Feuchte- &amp; Temperaturprotokoll</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol5_b">Schützt vor Frostschäden, wenn die Wohnung längere Zeit leer steht.</div>
-        </div>
-        <div class="example-sol-card reveal d3">
-          <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--forest)" stroke-width="1.6"/><path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round"/><path d="M9 14l2 2 4-4.4" stroke="var(--forest)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="example-sol-t" data-i18n="beispiel_inge.sol6_t">Vierteljährlicher Immobilienbericht</div>
-          <div class="example-sol-b" data-i18n="beispiel_inge.sol6_b">Inge behält den Überblick, ohne selbst vor Ort zu sein.</div>
+        <div class="story-qa__card reveal d3">
+          <h3 class="story-qa__q" data-i18n="beispiel_inge.nd3_q">Die stille Meldung: optional, still</h3>
+          <p class="story-qa__a" data-i18n="beispiel_inge.nd3_a">Wer sich als Eigentümerin dennoch sorgt, kann sie einrichten: Sie sagt nur, dass etwas los sein könnte. Ohne Messwerte, ohne Gerätezahl, ohne Nachricht an die Gäste.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- APP SHOWCASE -->
+  <section class="app-show" id="app-show">
+    <div class="container">
+      <p class="app-show__eye reveal" data-i18n="beispiel_inge.show_eye">Die App dazu</p>
+      <h2 class="app-show__t reveal d1" data-i18n="beispiel_inge.show_title">So könnte Inges App aussehen.</h2>
+      <p class="app-show__p reveal d1" data-i18n="beispiel_inge.show_text">Favoriten, Räume und Klima: Heizung, Licht und Status an einem Ort, auch aus Zürich. Schauen Sie sich die Konihaus-App auf app.konihaus.ch an.</p>
+      <a class="app-show__phones reveal d2" href="https://app.konihaus.ch" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <span class="appx-phone appx-phone--side"><img src="/images/app/favorites.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+        <span class="appx-phone appx-phone--mid"><img src="/images/app/rooms.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+        <span class="appx-phone appx-phone--side"><img src="/images/app/climate.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+      </a>
+      <div class="app-show__cta reveal d3">
+        <a href="https://app.konihaus.ch" class="btn btn-primary" target="_blank" rel="noopener"><span data-i18n="beispiel_inge.show_btn">Zur Konihaus-App</span> →</a>
+      </div>
+      <p class="app-show__note reveal d3" data-i18n="beispiel_inge.show_note">Die Bilder zeigen die Konihaus-App in einer Beispielansicht.</p>
     </div>
   </section>
 
   <section class="example-section example-section--alt">
     <div class="container example-mid">
       <div class="example-h2-row"><div class="example-badge badge--ferien"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_inge.out_title">Was das für Inge und ihre Vermietung bedeuten könnte</h2></div>
+      <p class="story-payoff reveal d1" data-i18n="beispiel_inge.payoff_text">Inge ist nicht mehr rund um die Uhr erreichbar. Ihr Wochenende gehört ihr wieder.</p>
       <div class="example-outcomes">
         <div class="example-outcomes__col reveal d1">
           <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--marine)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--marine)" stroke-width="1.6" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_inge.out_inge_t">Für Inge</p></div>
           <ul class="example-outcomes__list">
-            <li data-i18n="beispiel_inge.out_inge1">Deutlich weniger Heizkosten im Winter.</li>
-            <li data-i18n="beispiel_inge.out_inge2">Keine Gäste-Aussperrungen mehr — dank Self-Service-Codes.</li>
-            <li data-i18n="beispiel_inge.out_inge3">Schäden werden früh erkannt, nicht erst beim nächsten Gast.
-            </li>
+            <li data-i18n="beispiel_inge.out_inge1">Heizung und Frostschutz folgen den Buchungen.</li>
+            <li data-i18n="beispiel_inge.out_inge2">Keine Aussperrungen mehr — dank persönlichem Code für jeden Aufenthalt.</li>
+            <li data-i18n="beispiel_inge.out_inge3">Schäden fallen früh auf, nicht erst beim nächsten Gast.</li>
           </ul>
         </div>
         <div class="example-outcomes__col reveal d2">
           <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--marine)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--marine)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_inge.out_business_t">Für ihre Vermietung</p></div>
           <ul class="example-outcomes__list">
-            <li data-i18n="beispiel_inge.out_business1">Weniger Streit um verspätete Checkouts.</li>
-            <li data-i18n="beispiel_inge.out_business2">Ein professionellerer Auftritt gegenüber Gästen.</li>
-            <li data-i18n="beispiel_inge.out_business3">Zufriedenere Gäste und potenziell bessere Bewertungen.
-            </li>
+            <li data-i18n="beispiel_inge.out_business1">Weniger Streit um späte Checkouts.</li>
+            <li data-i18n="beispiel_inge.out_business2">Ein professioneller Auftritt mit persönlichem Code und freundlichen Hinweisen.</li>
+            <li data-i18n="beispiel_inge.out_business3">Zufriedenere Gäste und potenziell bessere Bewertungen.</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="example-section">
+    <div class="container">
+      <div class="story-safety reveal">
+        <h2 class="story-safety__t" data-i18n="beispiel_hans.safe_title">Wichtig zu wissen</h2>
+        <ul>
+          <li data-i18n="beispiel_inge.safe_1">Nicht jedes Gerät lässt sich einbinden. Koni klärt beim Besuch vor Ort, was möglich ist.</li>
+          <li data-i18n="beispiel_inge.safe_2">Bitte prüfen Sie die Regeln Ihrer Gemeinde und Ihrer Buchungsplattform für Kurzzeitvermietung selbst.</li>
+          <li data-i18n="beispiel_inge.safe_3">Konihaus ist kein Notruf- und kein medizinischer Dienst. Im Notfall wählen Sie 112 (oder 117, 118, 144).</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -214,8 +372,49 @@
         <a href="/?pkg=ferienhaus-3#contact" class="btn btn-ghost" data-i18n="beispiel_inge.cta_btn2">Kostenlose
           Beratung</a>
       </div>
+      <a href="https://wa.me/?text=https%3A%2F%2Fkonihaus.ch%2Fferienwohnung-management%2F" id="story-share" class="story-share reveal d3" target="_blank" rel="noopener noreferrer"><span data-i18n="beispiel_hans.share_label">Mit der Familie teilen</span></a>
       <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_inge.back">← Zurück zu
         den Beispielen</a>
+    </div>
+  </section>
+  <!-- MORE STORIES -->
+  <section class="story-more">
+    <div class="container">
+      <h2 class="story-more__t reveal" data-i18n="beispiel_hans.more_title">Weitere Geschichten</h2>
+      <div class="examples__grid reveal d1">
+          <a class="examples__card examples__card--peter" href="/weltreise">
+            <span class="examples__tag" data-i18n="examples.peter_tag">Weltreise</span>
+            <span class="examples__name">Peter &amp; Helene</span>
+            <span class="examples__hook" data-i18n="examples.peter_hook">Wie ein Ehepaar sein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.</span>
+            <span class="examples__cta" data-i18n="examples.peter_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--marc" href="/zu-viele-apps">
+            <span class="examples__tag" data-i18n="examples.marc_tag">Smart Living</span>
+            <span class="examples__name">Marc</span>
+            <span class="examples__hook" data-i18n="examples.marc_hook">Wie ein Mieter ein Dutzend Geräte-Apps auf
+              eine gemeinsame Oberfläche bringen könnte — statt ständig Logins zu wechseln.</span>
+            <span class="examples__cta" data-i18n="examples.marc_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--hans" href="/isolierter-senior">
+            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
+            <span class="examples__name">Hans</span>
+            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
+              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
+            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+      </div>
     </div>
   </section>
   <footer class="footer footer--ferien">
@@ -298,6 +497,46 @@
   </script>
   <script src="../scripts.js"></script>
   <script src="../cookie-consent.js"></script>
+
+  <script>
+    /* click-to-load YouTube (no Google request until the visitor clicks) + share link in the visitor's language */
+    (function () {
+      function lang() { try { return (typeof i18n !== 'undefined' && i18n.currentLang) || document.documentElement.lang || 'de'; } catch (e) { return 'de'; } }
+      var sec = document.getElementById('story-video-sec');
+      if (sec) {
+        var box = sec.querySelector('.story-video'), btn = sec.querySelector('.story-video__poster');
+        var idFor = function () { var l = lang().slice(0, 2) === 'en' ? 'en' : 'de'; return box.getAttribute('data-yt-' + l) || box.getAttribute('data-yt-de') || ''; };
+        if (idFor()) {
+          sec.hidden = false;
+          try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          btn.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(idFor()) + '?autoplay=1&rel=0';
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            box.appendChild(f); btn.style.display = 'none';
+          });
+          /* language switch: stop the running video and show the poster again (the new language's video loads on the next click) */
+          new MutationObserver(function () {
+            var f = box.querySelector('iframe');
+            if (f) f.remove();
+            btn.style.display = '';
+            try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+      }
+      var share = document.getElementById('story-share');
+      if (share) share.addEventListener('click', function (e) {
+        try {
+          var t = (typeof i18n !== 'undefined') ? i18n.getText('beispiel_inge', 'share_text') : '';
+          if (!t) return;
+          e.preventDefault();
+          window.open('https://wa.me/?text=' + encodeURIComponent(t + ' https://konihaus.ch/ferienwohnung-management/'), '_blank', 'noopener');
+        } catch (err) {}
+      });
+    })();
+  </script>
 </body>
 
 </html>
