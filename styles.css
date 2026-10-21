@@ -5365,3 +5365,38 @@ html[data-contrast="high"] .a11y-switch[aria-checked="true"] .a11y-switch__track
   .appband__img { width: calc(100% + 28px); margin-left: -14px; }
   .appband__img::before { width: 135%; height: 150%; top: 50%; }
 }
+
+/* story pages: rental (burgundy) theme. */
+.example-body--mieter .story-video__label { color: var(--burgundy-mid); }
+.example-body--mieter .story-video__play { background: var(--burgundy-mid); }
+.example-body--mieter .story-video__poster:hover .story-video__play,
+.example-body--mieter .story-video__poster:focus-visible .story-video__play { background: var(--burgundy); }
+.example-body--mieter .story-night { background: var(--burgundy-deep); }
+.example-body--mieter .story-night__t,
+.example-body--mieter .story-night__q--last { color: var(--burgundy-light); }
+.example-body--mieter .story-turn__quote { border-left-color: var(--burgundy-mid); color: var(--burgundy); }
+.example-body--mieter .story-qa__q { color: var(--burgundy-mid); }
+.example-body--mieter .story-safety { border-left-color: var(--burgundy-mid); }
+
+/* app showcase on story pages: three phones that lead to app.konihaus.ch */
+.app-show { padding: 72px 0 80px; background: var(--parchment); text-align: center; overflow: hidden; }
+.app-show__eye { font-size: 0.75em; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--burgundy-mid); margin: 0 0 12px; }
+.app-show__t { font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; color: var(--ink); margin: 0 0 14px; }
+.app-show__p { max-width: 620px; margin: 0 auto; color: var(--ink-3); line-height: 1.7; }
+.app-show__phones { --pw: min(250px, 30vw); display: flex; align-items: flex-end; justify-content: center; margin: 44px auto 34px; padding-bottom: 6px; text-decoration: none; }
+.appx-phone { position: relative; display: block; flex: none; aspect-ratio: 1293 / 2656; width: calc(var(--pw) * .74); filter: drop-shadow(0 22px 28px rgba(26, 25, 22, .28)); transition: transform .35s var(--ease); }
+.appx-phone--mid { width: var(--pw); z-index: 2; margin: 0 calc(var(--pw) * -.1); }
+.appx-phone::before { content: ""; position: absolute; left: 4.486%; top: 1.883%; width: 91.183%; height: 96.235%; background: #294a34; border-radius: 9% / 4.2%; }
+.appx-phone > img { position: absolute; left: 4.486%; top: 5.347%; width: 91.183%; height: 92.77%; display: block; object-fit: fill; border-radius: 0 0 9% 9% / 0 0 4.4% 4.4%; }
+.appx-phone::after { content: ""; position: absolute; inset: 0; background: url("/images/app/iphone-frame.webp") center / 100% 100% no-repeat; pointer-events: none; }
+.app-show__phones:hover .appx-phone--side:first-child { transform: translateY(-6px) rotate(-1.5deg); }
+.app-show__phones:hover .appx-phone--side:last-child { transform: translateY(-6px) rotate(1.5deg); }
+.app-show__phones:hover .appx-phone--mid { transform: translateY(-10px); }
+.app-show__cta { margin: 0 0 14px; }
+.app-show__note { font-size: 0.8125em; color: var(--ink-4); margin: 0; }
+@media (max-width: 600px) {
+  .app-show { padding: 52px 0 56px; }
+  .app-show__phones { --pw: min(150px, 38vw); margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) { .appx-phone { transition: none; } }
+html[data-motion="reduce"] .appx-phone { transition: none; }

@@ -7,15 +7,15 @@
   <meta name="theme-color" content="#2a4a35">
   <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-  <title>Zu viele Apps - Anwendungsbeispiel: Konihaus</title>
-  <meta name="description" content="Ein illustratives Beispiel: Wie Konihaus einem Mieter helfen könnte, ein Dutzend Geräte-Apps auf eine gemeinsame Oberfläche zu bringen — statt ständig Logins zu wechseln.">
+  <title>Zu viele Apps, zu wenig Überblick – Anwendungsbeispiel | Konihaus</title>
+  <meta name="description" content="Illustriertes Beispiel: Wie Konihaus einem Mieter helfen könnte, die Apps seiner Geräte auf eine gemeinsame Oberfläche zu bringen – mit Video, Szenen und einem Blick in die Konihaus-App.">
   <meta name="author" content="Konrad Hefelle">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch/zu-viele-apps">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Zu viele Apps - Anwendungsbeispiel: Konihaus">
-  <meta property="og:description" content="Ein illustratives Beispiel: Wie Konihaus einem Mieter helfen könnte, ein Dutzend Geräte-Apps auf eine gemeinsame Oberfläche zu bringen — statt ständig Logins zu wechseln.">
+  <meta property="og:title" content="Zu viele Apps, zu wenig Überblick – Anwendungsbeispiel | Konihaus">
+  <meta property="og:description" content="Illustriertes Beispiel: Wie Konihaus einem Mieter helfen könnte, die Apps seiner Geräte auf eine gemeinsame Oberfläche zu bringen – mit Video, Szenen und einem Blick in die Konihaus-App.">
   <meta property="og:url" content="https://konihaus.ch/zu-viele-apps">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="de_CH">
@@ -24,9 +24,10 @@
   <meta property="fb:app_id" content="2188289105366537" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Zu viele Apps - Anwendungsbeispiel: Konihaus">
-  <meta name="twitter:description" content="Ein illustratives Beispiel: Wie Konihaus einem Mieter helfen könnte, ein Dutzend Geräte-Apps auf eine gemeinsame Oberfläche zu bringen — statt ständig Logins zu wechseln.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://konihaus.ch/zu-viele-apps/zu-viele-apps_og.jpg">
+  <meta name="twitter:title" content="Zu viele Apps, zu wenig Überblick – Anwendungsbeispiel | Konihaus">
+  <meta name="twitter:description" content="Illustriertes Beispiel: Wie Konihaus einem Mieter helfen könnte, die Apps seiner Geräte auf eine gemeinsame Oberfläche zu bringen – mit Video, Szenen und einem Blick in die Konihaus-App.">
   <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
   <link rel="preload" href="../fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -50,9 +51,30 @@
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
         </a>
-        <div class="legal-nav__right">
-          <a href="/#examples" class="legal-back" data-i18n="beispiel_marc.back">← Zurück zu den Beispielen</a>
-          <div class="language-picker">
+        <ul class="nav__links">
+            <li class="has-sub">
+              <a href="/#about" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+                <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+                <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+                <li><a href="/#about" data-i18n="footer.col2_l4">Über Koni</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="/#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+                <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+                <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+                <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+                <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
+              </ul>
+            </li>
+            <li><a href="https://app.konihaus.ch" class="nav__app" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+            <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+          </ul>
+        <div class="language-picker">
           <button
             type="button"
             class="language-trigger"
@@ -82,16 +104,41 @@
             <option value="en">EN</option>
           </select>
         </div>
-        </div>
+        <a href="/?pkg=basis-3#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
-  <!-- TODO: no hero photo yet — unlike hans/elsa/inge, this container has no photo-bound
-       modifier class, so it falls back to the plain .example-body parchment background.
-       To add one later: crop a "Marc" photo the same way as the other three (marc-desktop.jpg,
-       marc-mobile.jpg, marc-homepage.jpg into this folder), add class="example-hero-container marc"
-       below, and add matching .example-hero-container.marc rules (base + @media 1380px/900px/600px)
-       next to the .hans/.elsa/.inge blocks in styles.css. -->
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-about"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-about" hidden>
+          <li><a href="/#intro" class="drawer-link" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+          <li><a href="/#process" class="drawer-link" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+          <li><a href="/#why" class="drawer-link" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+          <li><a href="/#about" class="drawer-link" data-i18n="footer.col2_l4">Über Koni</a></li>
+        </ul>
+      </li>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-service" hidden>
+          <li><a href="/#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+          <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+          <li><a href="/#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+          <li><a href="/#faq" class="drawer-link" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+          <li><a href="/#contact" class="drawer-link" data-i18n="footer.col1_l4">Kontakt</a></li>
+        </ul>
+      </li>
+      <li><a href="https://app.konihaus.ch" class="drawer-link" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/?pkg=basis-3#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
   <div class="example-hero-container marc">
     <header class="example-hero">
       <div class="container">
@@ -122,26 +169,74 @@
       </div>
     </section>
   </div>
-  <section class="example-section example-section--alt">
+  <!-- VIDEO (click-to-load; hidden until a YouTube ID is set in data-yt-de / data-yt-en) -->
+  <section class="story-video-sec" id="story-video-sec" hidden>
+    <div class="container">
+      <p class="story-video__label reveal" data-i18n="beispiel_hans.video_label">Die Geschichte in drei Minuten</p>
+      <div class="story-video reveal d1" data-yt-de="lE6xckuRNsg" data-yt-en="iG6hsylWARA">
+        <button type="button" class="story-video__poster" aria-label="Video abspielen">
+          <img src="marc-homepage.jpg" alt="" width="711" height="400" decoding="async">
+          <span class="story-video__cap">Marc <small>2:55</small></span>
+          <span class="story-video__play"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="var(--parchment)"/></svg></span>
+        </button>
+      </div>
+      <p class="story-video__note" data-i18n="beispiel_hans.video_note">Mit dem Klick laden Sie das Video von YouTube; dabei werden Daten an YouTube übertragen.</p>
+    </div>
+  </section>
+
+  <!-- THIRD LOGIN -->
+  <section class="story-night">
+    <div class="container">
+      <p class="story-night__t reveal" data-i18n="beispiel_marc.night_title">Dann kommt das dritte Konto an einem Abend.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_marc.n1">Warum braucht jedes Gerät seine eigene App?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_marc.n2">Warum funktionieren Sprachsteuerung, Bedienung und Meldungen in jeder App anders?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_marc.n3">Warum hängt alles an der Cloud und am Konto eines Herstellers?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_marc.n4">Und warum bedeutet jedes neue Gerät wieder eine neue App?</p>
+      <p class="story-night__q story-night__q--last reveal d2" data-i18n="beispiel_marc.n5">«Ich möchte hier wohnen — nicht meine Geräte verwalten.»</p>
+    </div>
+  </section>
+
+  <!-- THE TURN -->
+  <section class="story-turn">
     <div class="container example-narrow">
-      <div class="example-h2-row"><div class="example-badge badge--mieter example-badge--amber"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5L21 19H3L12 4.5z" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v4.2" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="16.8" r="0.9" fill="var(--ink)"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_marc.worry_title">Marcs Sorgen</h2></div>
-      <ul class="example-worry-list">
-        <li class="reveal d1" data-i18n="beispiel_marc.worry1">Für jedes Gerät eine andere App — mit eigenem
-          Login.</li>
-        <li class="reveal d1" data-i18n="beispiel_marc.worry2">Sprachsteuerung, Bedienung und Meldungen sind von App
-          zu App unterschiedlich.</li>
-        <li class="reveal d1" data-i18n="beispiel_marc.worry3">Hersteller-Clouds und -Konten machen ihn von jedem
-          Anbieter einzeln abhängig.</li>
-        <li class="reveal d1" data-i18n="beispiel_marc.worry4">Neues Gerät, nächste App — und nicht jede läuft
-          zuverlässig auf seinem Handy.</li>
-      </ul>
+      <h2 class="story-turn__t reveal" data-i18n="beispiel_marc.turn_title">Dann findet er Konihaus.</h2>
+      <p class="story-turn__sub reveal d1" data-i18n="beispiel_marc.turn_sub">Es beginnt mit einem kostenlosen Telefonat.</p>
+      <p class="example-p reveal d1" data-i18n="beispiel_marc.turn_visit">Koni besucht Marc und analysiert die Wohnung auf mögliche Lösungen. Marc hat einen Wunsch:</p>
+      <blockquote class="story-turn__quote reveal d2" data-i18n="beispiel_marc.turn_quote">«Komfort, ohne mich in Technik einzuarbeiten.»</blockquote>
+      <p class="example-p reveal d2" data-i18n="beispiel_marc.turn_answer">Deshalb bindet Koni kompatible Geräte in eine gemeinsame App ein, statt sie zu ersetzen. Er wählt aus, richtet ein und betreut alles, damit Marc nicht selbst zum Verwalter seiner Geräte wird.</p>
+      <p class="example-p reveal d3" data-i18n="beispiel_marc.turn_next">Danach folgt eine persönliche Offerte per E-Mail, massgeschneidert für Marc. Sagt er ja, richtet Koni am Installationstag alles ein, während Marc seinen Kaffee trinkt.</p>
+    </div>
+  </section>
+
+  <!-- WORRY → ANSWER -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge badge--mieter"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_marc.qa_title">Auf jede Sorge eine Antwort</h2></div>
+      <div class="story-qa">
+        <div class="story-qa__card reveal d1">
+          <h3 class="story-qa__q" data-i18n="beispiel_marc.q1">Für jedes Gerät eine andere App?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_marc.a1">Kompatible Geräte laufen in einer gemeinsamen App, mit einem Login statt einem Dutzend.</p>
+        </div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_marc.q2">Jede App bedient und meldet sich anders?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_marc.a2">Eine Oberfläche mit drei Szenen: «Guten Morgen» startet Licht und Storen gemeinsam, «Ich gehe» schaltet ausgewählte Lichter und Steckdosen aus, «Feierabend» stellt Licht, Storen und auf Wunsch Musik ein. Status und wichtige Meldungen stehen an einem Ort.</p>
+        </div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_marc.q3">Abhängig von Hersteller-Clouds und -Konten?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_marc.a3">Wo technisch möglich, läuft die Steuerung lokal. Das macht Marc weniger abhängig von Hersteller-Clouds und einzelnen Updates.</p>
+        </div>
+        <div class="story-qa__card reveal d2">
+          <h3 class="story-qa__q" data-i18n="beispiel_marc.q4">Neues Gerät, nächste App?</h3>
+          <p class="story-qa__a" data-i18n="beispiel_marc.a4">Neue Geräte werden nach Bedarf eingebunden, statt als weitere App aufs Handy zu kommen. Koni bleibt der feste Ansprechpartner für Einrichtung und Betreuung. Nicht jedes Gerät lässt sich einbinden; das klärt Koni vorher.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="example-section">
     <div class="container">
       <div class="example-h2-row"><div class="example-badge badge--mieter"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_marc.sol_title">Die Lösung: Smart Living</h2></div>
-      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_marc.sol_intro">Marc erhält eine persönliche Offerte von rund CHF 109 pro Monat — zwischen unseren Paketen Mieterschutz (ab CHF 79) und Vollständiger Schutz (ab CHF 139).</p>
+      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_marc.sol_intro">Marc hat seine Geräte bereits, die Einrichtung fällt daher günstiger aus als bei einer Komplettausstattung. Aufwand bleibt es trotzdem: Viele Geräte müssen eingebunden und individuelle Szenen und Automationen eingerichtet werden. Möchte Marc später mehr, kann er jederzeit aufrüsten — mit neuen Sensoren und Geräten bis zum vollständig smarten Zuhause.</p>
       <div class="example-sol-grid">
         <div class="example-sol-card reveal d1">
           <div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5.5" width="16" height="14" rx="2" stroke="var(--burgundy)" stroke-width="1.6"/><path d="M4 9.5h16" stroke="var(--burgundy)" stroke-width="1.6" stroke-linecap="round"/><circle cx="8" cy="14.5" r="1.1" fill="var(--burgundy)"/><circle cx="12" cy="14.5" r="1.1" fill="var(--burgundy)"/><circle cx="16" cy="14.5" r="1.1" fill="var(--burgundy)"/></svg></div>
@@ -177,9 +272,28 @@
     </div>
   </section>
 
+  <!-- APP SHOWCASE -->
+  <section class="app-show" id="app-show">
+    <div class="container">
+      <p class="app-show__eye reveal" data-i18n="beispiel_marc.show_eye">Die App dazu</p>
+      <h2 class="app-show__t reveal d1" data-i18n="beispiel_marc.show_title">So könnte Marcs App aussehen.</h2>
+      <p class="app-show__p reveal d1" data-i18n="beispiel_marc.show_text">Favoriten, Räume und Klima: Licht, Storen, Heizung und Status an einem Ort. Schauen Sie sich die Konihaus-App auf app.konihaus.ch an.</p>
+      <a class="app-show__phones reveal d2" href="https://app.konihaus.ch" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+        <span class="appx-phone appx-phone--side"><img src="/images/app/favorites.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+        <span class="appx-phone appx-phone--mid"><img src="/images/app/rooms.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+        <span class="appx-phone appx-phone--side"><img src="/images/app/climate.webp" width="433" height="938" alt="" loading="lazy" decoding="async"></span>
+      </a>
+      <div class="app-show__cta reveal d3">
+        <a href="https://app.konihaus.ch" class="btn btn-primary" target="_blank" rel="noopener"><span data-i18n="beispiel_marc.show_btn">Zur Konihaus-App</span> →</a>
+      </div>
+      <p class="app-show__note reveal d3" data-i18n="beispiel_marc.show_note">Die Bilder zeigen die Konihaus-App in einer Beispielansicht.</p>
+    </div>
+  </section>
+
   <section class="example-section example-section--alt">
     <div class="container example-mid">
       <div class="example-h2-row"><div class="example-badge badge--mieter"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_marc.out_title">Was das für Marc und seine Mietwohnung bedeuten könnte</h2></div>
+      <p class="story-payoff reveal d1" data-i18n="beispiel_marc.payoff_text">Marc wohnt wieder in seiner Wohnung, statt sie zu verwalten: weniger App-Wechsel, ein klarer Überblick und ein fester Ansprechpartner.</p>
       <div class="example-outcomes">
         <div class="example-outcomes__col reveal d1">
           <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--burgundy)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--burgundy)" stroke-width="1.6" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_marc.out_marc_t">Für Marc</p></div>
@@ -201,12 +315,26 @@
     </div>
   </section>
 
+  <!-- SAFETY -->
+  <section class="example-section example-section--alt">
+    <div class="container">
+      <div class="story-safety reveal">
+        <h2 class="story-safety__t" data-i18n="beispiel_hans.safe_title">Wichtig zu wissen</h2>
+        <ul>
+          <li data-i18n="beispiel_marc.safe_1">Nicht jedes Gerät lässt sich einbinden. Was sich einbinden lässt, klärt Koni beim Besuch vor Ort, bevor Sie sich entscheiden.</li>
+          <li data-i18n="beispiel_marc.safe_2">Lokale Steuerung gibt es nur, wo technisch möglich. Manche Funktionen bleiben von der Cloud des Herstellers abhängig.</li>
+          <li data-i18n="beispiel_marc.safe_3">Konihaus ist kein Notruf- und kein medizinischer Dienst. Im Notfall wählen Sie 112 (oder 117, 118, 144).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="example-cta-sec example-cta-sec--mieter">
     <div class="container">
       <div class="example-cost reveal">
         <div class="example-cost__lbl" data-i18n="beispiel_marc.cost_title">Die Kosten</div>
         <div class="example-cost__price" data-i18n="beispiel_marc.cost_price" data-i18n-html="true"><span class="pkg__from">CHF</span><span class="pkg__num">109</span><span class="pkg__mo">/Monat</span></div>
-        <div class="example-cost__note" data-i18n="beispiel_marc.cost_note">Einrichtungsinvestition ~CHF 750 · entfällt bei 2-Jahres-Servicevertrag</div>
+        <div class="example-cost__note" data-i18n="beispiel_marc.cost_note">Einrichtung geringer, da Geräte vorhanden — doch viele Geräte und individuelle Szenen und Automationen bleiben Aufwand · Ausbau jederzeit möglich</div>
       </div>
       <h2 class="example-cta__t reveal" data-i18n="beispiel_marc.cta_t">Ist das etwas für Ihre Situation?</h2>
       <p class="example-cta__b reveal d1" data-i18n="beispiel_marc.cta_b">Sehen Sie sich das Paket
@@ -217,8 +345,48 @@
         <a href="/?pkg=mieter-4#contact" class="btn btn-ghost" data-i18n="beispiel_marc.cta_btn2">Kostenlose
           Beratung</a>
       </div>
+      <a href="https://wa.me/?text=https%3A%2F%2Fkonihaus.ch%2Fzu-viele-apps%2F" id="story-share" class="story-share reveal d3" target="_blank" rel="noopener noreferrer"><span data-i18n="beispiel_hans.share_label">Mit der Familie teilen</span></a>
       <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_marc.back">← Zurück zu
         den Beispielen</a>
+    </div>
+  </section>
+  <!-- MORE STORIES -->
+  <section class="story-more">
+    <div class="container">
+      <h2 class="story-more__t reveal" data-i18n="beispiel_hans.more_title">Weitere Geschichten</h2>
+      <div class="examples__grid reveal d1">
+          <a class="examples__card examples__card--peter" href="/weltreise">
+            <span class="examples__tag" data-i18n="examples.peter_tag">Weltreise</span>
+            <span class="examples__name">Peter &amp; Helene</span>
+            <span class="examples__hook" data-i18n="examples.peter_hook">Wie ein Ehepaar sein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.</span>
+            <span class="examples__cta" data-i18n="examples.peter_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--hans" href="/isolierter-senior">
+            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
+            <span class="examples__name">Hans</span>
+            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
+              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
+            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--anna" href="/neue-eltern">
+            <span class="examples__tag" data-i18n="examples.anna_tag">Neue Eltern</span>
+            <span class="examples__name">Anna &amp; David</span>
+            <span class="examples__hook" data-i18n="examples.anna_hook">Wie junge Eltern in einer Mietwohnung mehr Überblick bekommen könnten — ganz ohne Bohren.</span>
+            <span class="examples__cta" data-i18n="examples.anna_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></span>
+          </a>
+      </div>
     </div>
   </section>
   <footer class="footer footer--mieter">
@@ -301,6 +469,46 @@
   </script>
   <script src="../scripts.js"></script>
   <script src="../cookie-consent.js"></script>
+
+  <script>
+    /* click-to-load YouTube (no Google request until the visitor clicks) + share link in the visitor's language */
+    (function () {
+      function lang() { try { return (typeof i18n !== 'undefined' && i18n.currentLang) || document.documentElement.lang || 'de'; } catch (e) { return 'de'; } }
+      var sec = document.getElementById('story-video-sec');
+      if (sec) {
+        var box = sec.querySelector('.story-video'), btn = sec.querySelector('.story-video__poster');
+        var idFor = function () { var l = lang().slice(0, 2) === 'en' ? 'en' : 'de'; return box.getAttribute('data-yt-' + l) || box.getAttribute('data-yt-de') || ''; };
+        if (idFor()) {
+          sec.hidden = false;
+          try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          btn.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(idFor()) + '?autoplay=1&rel=0';
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            box.appendChild(f); btn.style.display = 'none';
+          });
+          /* language switch: stop the running video and show the poster again (the new language's video loads on the next click) */
+          new MutationObserver(function () {
+            var f = box.querySelector('iframe');
+            if (f) f.remove();
+            btn.style.display = '';
+            try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+      }
+      var share = document.getElementById('story-share');
+      if (share) share.addEventListener('click', function (e) {
+        try {
+          var t = (typeof i18n !== 'undefined') ? i18n.getText('beispiel_marc', 'share_text') : '';
+          if (!t) return;
+          e.preventDefault();
+          window.open('https://wa.me/?text=' + encodeURIComponent(t + ' https://konihaus.ch/zu-viele-apps/'), '_blank', 'noopener');
+        } catch (err) {}
+      });
+    })();
+  </script>
 </body>
 
 </html>
