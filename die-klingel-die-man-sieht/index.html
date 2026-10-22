@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2a4a35">
+  <link rel="icon" type="image/svg+xml" href="../favicon_sm.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <title>Die Klingel, die man sieht - Anwendungsbeispiel | Konihaus</title>
+  <meta name="description" content="Illustriertes Beispiel: Wie Konihaus einem schwerhörigen Rentner helfen könnte, Klingel, Rauchmelder und Haushaltssignale zu sehen und zu spüren - ohne Spezialgerät, ohne Kamera im Haus.">
+  <meta name="author" content="Konrad Hefelle">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://konihaus.ch/die-klingel-die-man-sieht">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Die Klingel, die man sieht - Anwendungsbeispiel | Konihaus">
+  <meta property="og:description" content="Illustriertes Beispiel: Wie Konihaus einem schwerhörigen Rentner helfen könnte, Klingel, Rauchmelder und Haushaltssignale zu sehen und zu spüren - ohne Spezialgerät, ohne Kamera im Haus.">
+  <meta property="og:url" content="https://konihaus.ch/die-klingel-die-man-sieht">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://konihaus.ch/die-klingel-die-man-sieht/rolf-og.jpg">
+  <meta property="fb:app_id" content="2188289105366537" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://konihaus.ch/die-klingel-die-man-sieht/rolf-og.jpg">
+  <meta name="twitter:title" content="Die Klingel, die man sieht - Anwendungsbeispiel | Konihaus">
+  <meta name="twitter:description" content="Illustriertes Beispiel: Wie Konihaus einem schwerhörigen Rentner helfen könnte, Klingel, Rauchmelder und Haushaltssignale zu sehen und zu spüren - ohne Spezialgerät, ohne Kamera im Haus.">
+  <!-- Fonts: self-hosted (see @font-face in styles.css); no request to Google -->
+  <link rel="preload" href="../fonts/outfit-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/cormorant-garamond-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/cormorant-garamond-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    /* readability preferences (Aa button), applied before first paint so the text size doesn't jump; logic mirrors scripts.js */
+    (function(){try{var d=document.documentElement,p=JSON.parse(localStorage.getItem('konihaus-readability')||'{}');
+    if(p.text==='large'||p.text==='xl')d.setAttribute('data-text',p.text);
+    if(p.contrast===true)d.setAttribute('data-contrast','high');
+    if(p.motion===true||(typeof p.motion!=='boolean'&&window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))d.setAttribute('data-motion','reduce');}catch(e){}})();
+  </script>
+</head>
+
+<body class="example-body example-body--senioren">
+
+  <nav class="nav nav--solid nav--senioren" id="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="/" class="logo" aria-label="Konihaus">
+          <div class="logo-image"></div>
+          <div class="wordmark">konihaus</div>
+        </a>
+        <ul class="nav__links">
+            <li class="has-sub">
+              <a href="/#about" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+                <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+                <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+                <li><a href="/#about" data-i18n="footer.col2_l4">Über Koni</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <a href="/#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+              <ul class="nav__sub">
+                <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+                <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+                <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+                <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+                <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
+              </ul>
+            </li>
+            <li><a href="https://app.konihaus.ch" class="nav__app" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+            <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+          </ul>
+        <div class="language-picker">
+          <button
+            type="button"
+            class="language-trigger"
+            aria-expanded="false"
+            aria-controls="language-options"
+            aria-label="Language: Deutsch"
+          >
+            <span class="language-current">DE</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          <div id="language-options" class="language-options" hidden>
+            <button type="button" class="language-option" data-lang="de">
+              <span>Deutsch</span>
+              <span class="language-code">DE</span>
+            </button>
+            <button type="button" class="language-option" data-lang="en">
+              <span>English</span>
+              <span class="language-code">EN</span>
+            </button>
+          </div>
+
+          <select id="lang-selector" hidden>
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <a href="/?pkg=basis-3#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="nav__drawer" id="drawer">
+    <ul>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-about"><span data-i18n="nav.about_us">Über uns</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-about" hidden>
+          <li><a href="/#intro" class="drawer-link" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+          <li><a href="/#process" class="drawer-link" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+          <li><a href="/#why" class="drawer-link" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+          <li><a href="/#about" class="drawer-link" data-i18n="footer.col2_l4">Über Koni</a></li>
+        </ul>
+      </li>
+      <li class="drawer-group">
+        <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+        <ul class="drawer-sub" id="dg-service" hidden>
+          <li><a href="/#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+          <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+          <li><a href="/#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+          <li><a href="/#faq" class="drawer-link" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+          <li><a href="/#contact" class="drawer-link" data-i18n="footer.col1_l4">Kontakt</a></li>
+        </ul>
+      </li>
+      <li><a href="https://app.konihaus.ch" class="drawer-link" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+    </ul>
+    <a href="/?pkg=basis-3#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+  </div>
+  <div class="example-hero-container rolf">
+    <header class="example-hero">
+      <div class="container">
+        <p class="sec-eye reveal" data-i18n="beispiel_rolf.eyebrow">Anwendungsbeispiel</p>
+        <h1 class="example-hero__h reveal d1" data-i18n-html="true" data-i18n="beispiel_rolf.title"><em>Rolf</em> — Die Klingel, die man sieht</h1>
+        <p class="example-hero__sub reveal d2" data-i18n="beispiel_rolf.subtitle">Ein Beispiel, wie Konihaus einem 68-jährigen Rentner mit Hörverlust helfen könnte, Klingel, Rauchmelder und Haushaltssignale zu sehen und zu spüren — in seinem eigenen Zuhause, ohne Spezialgerät.</p>
+        <p class="example-disclaimer reveal d2" data-i18n="beispiel_rolf.disclaimer">Diese Geschichte ist ein illustratives Beispiel zur Veranschaulichung — keine dokumentierte Kundengeschichte. Name und Details sind frei erfunden.</p>
+        <div class="example-hero__badge reveal d3">
+          <div class="example-badge badge--senioren"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="example-hero__tag" data-i18n="beispiel_rolf.hero_tag" data-i18n-html="true">Sehen, was man nicht hört.<br>Zuhause bleiben.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="example-section-top">
+      <div class="container example-narrow">
+        <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5L12 5l8 6.5" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v8.5a1 1 0 0 0 1 1h3.5v-5h3v5H17a1 1 0 0 0 1-1V10" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_rolf.sit_title">Die Situation</h2></div>
+        <p class="example-p reveal d1" data-i18n="beispiel_rolf.sit_body">Rolf, 68, ist seit zwei Jahren pensioniert und wohnt allein in seinem Haus in Affoltern am Albis. Er hört schlecht. Mit den Hörgeräten geht es, aber abends legt er sie ab. Dann hört er die Türklingel nicht, den Rauchmelder erst spät und die Waschmaschine gar nicht. Zweimal stand der Pöstler vergeblich vor der Tür, und der Nachbar hat einmal eine halbe Stunde geklopft. Rolf sagt: «Ich bin nicht krank. Ich höre nur nicht gut.»</p>
+      </div>
+    </section>
+  </div>
+  <!-- VIDEO: add once the YouTube videos exist. Copy the story-video-sec block from /zu-viele-apps/index.html, set data-yt-de / data-yt-en and a poster image. -->
+
+  <!-- THE EVENING -->
+  <section class="story-night">
+    <div class="container">
+      <p class="story-night__t reveal" data-i18n="beispiel_rolf.night_title">Dann kommt der Abend.</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_rolf.n1">Warum klingelt die Klingel nur für Menschen, die gut hören?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_rolf.n2">Warum piepsen Waschmaschine, Ofen und Kühlschrank, und niemand merkt es?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_rolf.n3">Und wer bemerkt nachts den Rauch, wenn die Hörgeräte auf dem Nachttisch liegen?</p>
+      <p class="story-night__q reveal d1" data-i18n="beispiel_rolf.n4">Und woher weiss er, wer gerade ins Haus gekommen ist?</p>
+      <p class="story-night__q story-night__q--last reveal d2" data-i18n="beispiel_rolf.n5">«Ich bin nicht krank. Ich höre nur nicht gut.»</p>
+    </div>
+  </section>
+
+  <!-- THE TURN -->
+  <section class="story-turn">
+    <div class="container example-narrow">
+      <h2 class="story-turn__t reveal" data-i18n="beispiel_rolf.turn_title">Dann findet Lea Konihaus.</h2>
+      <p class="story-turn__sub reveal d1" data-i18n="beispiel_rolf.turn_sub">Seine Nichte Lea macht den ersten Anruf.</p>
+      <p class="example-p reveal d1" data-i18n="beispiel_rolf.turn_visit">Koni besucht Rolf und schaut, was schon da ist: Lampen, ein Fernseher, ein Handy. Rolf hat eine Bedingung:</p>
+      <blockquote class="story-turn__quote reveal d2" data-i18n="beispiel_rolf.turn_quote">«Kein Spezialgerät, das aussieht wie ein Pflegeheim. Mein Haus soll aussehen wie mein Haus.»</blockquote>
+      <p class="example-p reveal d2" data-i18n="beispiel_rolf.turn_answer">Deshalb gibt es statt eines lauteren Tons ein Licht, ein Vibrieren oder eine Meldung. Koni nutzt, was da ist, ergänzt wenige unauffällige Geräte und richtet alles so ein, dass Rolf selbst bestimmt, was ihn wie meldet.</p>
+      <p class="example-p reveal d3" data-i18n="beispiel_rolf.turn_next">Danach folgt eine persönliche Offerte. Sagt Rolf ja, richtet Koni am Installationstag alles ein und lässt ihn jedes Signal ausprobieren: sanft pulsieren, kräftig blinken, vibrieren.</p>
+    </div>
+  </section>
+
+  <!-- WORRY -> ANSWER -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_rolf.qa_title">Auf jede Sorge eine Antwort</h2></div>
+      <div class="story-qa">
+        <div class="story-qa__card reveal d1"><h3 class="story-qa__q" data-i18n="beispiel_rolf.q1">Ein Gerät, das nach Pflegeheim aussieht?</h3><p class="story-qa__a" data-i18n="beispiel_rolf.a1">Nein. Rolfs Lampen, sein Fernseher und sein Handy übernehmen die Signale. Dazu kommen wenige kleine, unauffällige Geräte.</p></div>
+        <div class="story-qa__card reveal d2"><h3 class="story-qa__q" data-i18n="beispiel_rolf.q2">Und wenn das Smart Home ausfällt?</h3><p class="story-qa__a" data-i18n="beispiel_rolf.a2">Die Rauchmelder sind nach EN 14604 geprüft und lösen auch ohne Smart Home laut aus. Das Smart Home ergänzt sie mit Licht, Vibration und Nachricht, es ersetzt sie nicht. Zusätzlich überwacht Konihaus die Geräte laufend.</p></div>
+        <div class="story-qa__card reveal d2"><h3 class="story-qa__q" data-i18n="beispiel_rolf.q3">Kameras und Mikrofone im Haus?</h3><p class="story-qa__a" data-i18n="beispiel_rolf.a3">Nein. Im Haus gibt es keine Kamera und kein Mikrofon. Nur die Türklingel an der Haustür hat eine Kamera. Im Haus melden Sensoren nur, ob sich jemand bewegt, eine Tür offen ist oder ein Gerät Strom braucht. Sie nehmen weder Bild noch Ton auf.</p></div>
+        <div class="story-qa__card reveal d2"><h3 class="story-qa__q" data-i18n="beispiel_rolf.q4">Wer erfährt was?</h3><p class="story-qa__a" data-i18n="beispiel_rolf.a4">Rolf bestimmt, welche Ereignisse ihn wie melden. Lea erhält nur dann eine Nachricht, wenn ein Rauchmelder auslöst oder Rolf auf ein Signal nicht reagiert.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THE HOUSE GETS HIS ATTENTION -->
+  <section class="example-section">
+    <div class="container">
+      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l7 2.6v5.3c0 4.4-3 8.2-7 9.3-4-1.1-7-4.9-7-9.3V6.6L12 4z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12.3l2 2 4-4.4" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_rolf.sol_title">So meldet sich das Haus</h2></div>
+      <p class="example-p example-narrow reveal d1" data-i18n="beispiel_rolf.sol_intro">Jedes Signal hat seine eigene Farbe, und Rolf wählt sie selbst. Hier sind es Beispiele: Blau für die Tür, Rot für Rauch, Grün für die Waschmaschine.</p>
+      <div class="example-sol-grid">
+        <div class="example-sol-card reveal d1"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15L6 16.5z" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20.5a2 2 0 0 0 4 0" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol1_t">Es klingelt</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol1_b">In den Räumen, in denen Rolf ist, blinken die Lampen dreimal blau. Auf dem Fernseher erscheint «Es klingelt», Handy oder Uhr vibrieren. Die Video-Türklingel zeigt, wer vor der Tür steht, auch wenn der Bote ein Paket bringt.</div></div>
+        <div class="example-sol-card reveal d1"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4.5" y="3" width="15" height="18" rx="2" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="4" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 6.5h2" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol2_t">Küche und Waschküche</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol2_b">Waschmaschine fertig: Die Flurlampe pulsiert kurz grün. Kühlschranktür offen? Ein sanftes Signal statt eines Pieptons, den niemand hört. Auch ein fertiger Ofen lässt sich melden, wenn er sich einbinden lässt.</div></div>
+        <div class="example-sol-card reveal d2"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.5 1 2 2 2 0-3-.5-5 1-8z" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol3_t">Rauch</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol3_b">Löst ein Rauchmelder aus, blinken die Lampen im ganzen Haus rot, das Handy vibriert, und Lea erhält eine Nachricht. Der Melder bleibt laut und arbeitet eigenständig weiter. Das Licht kommt dazu.</div></div>
+        <div class="example-sol-card reveal d2"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5 7.5 7.5 0 1 0 19 14.5z" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol4_t">Nachts</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol4_b">Nachts gelten andere Regeln: kein Blinken im ganzen Haus wegen eines Paketboten, nur ein sanftes Signal im Schlafzimmer. Bei Rauch weckt ein Vibrationskissen unter dem Kopfkissen, auch ohne Hörgeräte.</div></div>
+        <div class="example-sol-card reveal d3"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21h16" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="12" r=".9" fill="var(--gold-deep)"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol5_t">Wer ist gekommen?</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol5_b">Kommt Lea mit ihrem eigenen Zugang, leuchtet die Flurlampe in ihrer Farbe. So weiss Rolf auch im Keller, wer gerade ins Haus gekommen ist, ohne Türgeräusch und Stimmen zu hören.</div></div>
+        <div class="example-sol-card reveal d3"><div class="example-sol-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8.5" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 12.3l2.5 2.5 4.5-5" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="example-sol-t" data-i18n="beispiel_rolf.sol6_t">«Alles OK» und Selbsttest</div><div class="example-sol-b" data-i18n="beispiel_rolf.sol6_b">Ein Druck auf den Knopf beantwortet jedes Signal. Nach 10 Minuten ohne Antwort erhält Lea eine Textnachricht mit Rolfs Adresse zum Weiterleiten, keinen Anruf. Jeden Sonntag ein kurzer Test.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="example-section example-section--alt">
+    <div class="container example-mid">
+      <div class="example-h2-row"><div class="example-badge badge--senioren"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 20s-7.5-4.6-7.5-10.2C4.5 6.6 6.7 4.5 9.3 4.5c1.2 0 2.4.6 3.2 1.6.8-1 2-1.6 3.2-1.6 2.6 0 4.8 2.1 4.8 5.3C20.5 15.4 13 20 12 20z" stroke="var(--parchment)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h2 class="example-h2 reveal" data-i18n="beispiel_rolf.out_title">Was das für Rolf und Lea bedeuten könnte</h2></div>
+      <p class="story-payoff reveal d1" data-i18n="beispiel_rolf.payoff_text">Rolf bleibt in seinem Haus und verpasst weniger. Und Lea muss nicht mehr den Nachbarn anrufen, wenn Rolf nicht reagiert.</p>
+      <div class="example-outcomes">
+        <div class="example-outcomes__col reveal d1">
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--gold-deep)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_rolf.out_rolf_t">Für Rolf</p></div>
+          <ul class="example-outcomes__list">
+            <li data-i18n="beispiel_rolf.out_rolf1">Er sieht und spürt, was er nicht hört, auch abends und nachts ohne Hörgeräte.</li>
+            <li data-i18n="beispiel_rolf.out_rolf2">Nichts im Haus sieht anders aus: seine Lampen, sein Fernseher, sein Handy.</li>
+            <li data-i18n="beispiel_rolf.out_rolf3">Er bestimmt selbst, welches Signal wie und in welcher Farbe kommt.</li>
+          </ul>
+        </div>
+        <div class="example-outcomes__col reveal d2">
+          <div class="example-outcomes__head"><div class="example-outcomes__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="var(--gold-deep)" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="var(--gold-deep)" stroke-width="1.6" stroke-linecap="round"/></svg></div><p class="example-outcomes__t" data-i18n="beispiel_rolf.out_lea_t">Für Lea</p></div>
+          <ul class="example-outcomes__list">
+            <li data-i18n="beispiel_rolf.out_lea1">Sie muss nicht mehr den Nachbarn anrufen, wenn Rolf nicht reagiert.</li>
+            <li data-i18n="beispiel_rolf.out_lea2">Bei Rauch oder ausbleibender Antwort erhält sie eine Nachricht mit Rolfs Adresse, die sie bei Bedarf weiterleiten kann.</li>
+            <li data-i18n="beispiel_rolf.out_lea3">Ein fester Ansprechpartner für Einrichtung und Betreuung.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="example-section example-section--alt">
+    <div class="container">
+      <div class="story-safety reveal">
+        <h2 class="story-safety__t" data-i18n="beispiel_rolf.safe_title">Wichtig zu wissen</h2>
+        <ul>
+          <li data-i18n="beispiel_rolf.safe_1">Das funktioniert am besten mit vernetzten Lampen. Sind noch keine da, klärt Koni beim Besuch, was möglich ist.</li>
+          <li data-i18n="beispiel_rolf.safe_2">Die Rauchmelder sind nach EN 14604 geprüft. Eine Pflicht für Rauchmelder gibt es in der Schweiz nicht, die Vereinigung Kantonaler Feuerversicherungen (VKF) empfiehlt sie aber. Jeder Melder löst für sich aus, das Haus meldet es über Licht und Nachricht weiter.</li>
+          <li data-i18n="beispiel_rolf.safe_3">Das Vibrationskissen wird über das Smart Home ausgelöst. Es ergänzt die Rauchmelder und ersetzt kein zertifiziertes Funk-Alarmsystem für Gehörlose. Wer stärker eingeschränkt ist, bekommt von Koni eine passende Beratung.</li>
+          <li data-i18n="beispiel_rolf.safe_4">Die Farbe für den Zutritt braucht ein smartes Türschloss, das zur Tür passt. Das klärt Koni beim Besuch.</li>
+          <li data-i18n="beispiel_rolf.safe_5">Konihaus ist kein Notruf- und kein medizinischer Dienst. Im Notfall wählen Sie 112 (oder 117, 118, 144).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="example-cta-sec example-cta-sec--senioren">
+    <div class="container">
+      <div class="example-cost reveal">
+        <div class="example-cost__lbl" data-i18n="beispiel_rolf.cost_title">Die Kosten</div>
+        <div class="example-cost__price" data-i18n="beispiel_rolf.cost_price" data-i18n-html="true"><span class="pkg__from">CHF</span><span class="pkg__num">149</span><span class="pkg__mo">/Monat</span></div>
+        <div class="example-cost__note" data-i18n="beispiel_rolf.cost_note">Alle Bausteine · Geräte und Einrichtung (rund CHF 1’870) bezahlt Konihaus im Voraus, bei einer 2-Jahres-Vereinbarung · schriftlicher Support per E-Mail oder WhatsApp · ohne Farbe für den Zutritt (Smart Lock): CHF 129 · nur Klingel, Küche, Rauch und laufende Überwachung: CHF 109</div>
+      </div>
+      <h2 class="example-cta__t reveal" data-i18n="beispiel_rolf.cta_t">Ist das etwas für Ihre Situation?</h2>
+      <p class="example-cta__b reveal d1" data-i18n="beispiel_rolf.p_cta_b">Schreiben Sie uns per WhatsApp oder über das Kontaktformular, ein Anruf ist nicht nötig. Danach komme ich bei Ihnen vorbei, schaue mir alles vor Ort an und erstelle Ihre persönliche Offerte.</p>
+      <div class="example-cta__btns reveal d2">
+        <a href="/?pkg=senioren-4#contact" class="btn btn-primary" data-i18n="beispiel_rolf.cta_btn2">Kostenlose Beratung</a>
+        <a href="https://wa.me/41782379685" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="beispiel_rolf.cta_btn_wa">Per WhatsApp schreiben</a>
+      </div>
+      <a href="/?pkg=senioren-4#packages" class="story-cta-link reveal d2" data-i18n="beispiel_rolf.cta_pkg_link">Paket «Unabhängig Wohnen» ansehen</a>
+      <a href="https://wa.me/?text=https%3A%2F%2Fkonihaus.ch%2Fdie-klingel-die-man-sieht%2F" id="story-share" class="story-share reveal d3" target="_blank" rel="noopener noreferrer"><span data-i18n="beispiel_rolf.share_label">Mit der Familie teilen</span></a>
+      <a href="/#examples" class="example-back-link reveal d3" data-i18n="beispiel_rolf.back">← Zurück zu den Beispielen</a>
+    </div>
+  </section>
+
+  <!-- MORE STORIES -->
+  <section class="story-more">
+    <div class="container">
+      <h2 class="story-more__t reveal" data-i18n="beispiel_rolf.more_title">Weitere Geschichten</h2>
+      <div class="examples__grid reveal d1">
+          <a class="examples__card examples__card--hans" href="/isolierter-senior">
+            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
+            <span class="examples__name">Hans</span>
+            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
+            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--marc" href="/zu-viele-apps">
+            <span class="examples__tag" data-i18n="examples.marc_tag">Smart Living</span>
+            <span class="examples__name">Marc</span>
+            <span class="examples__hook" data-i18n="examples.marc_hook">Wie ein Mieter ein Dutzend Geräte-Apps auf eine gemeinsame Oberfläche bringen könnte — statt ständig Logins zu wechseln.</span>
+            <span class="examples__cta" data-i18n="examples.marc_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+          </a>
+          <a class="examples__card examples__card--elsa" href="/wasserschaden">
+            <span class="examples__tag" data-i18n="examples.elsa_tag">Wasserschaden</span>
+            <span class="examples__name">Elsa</span>
+            <span class="examples__hook" data-i18n="examples.elsa_hook">Wie eine 79-jährige Mieterin einen Wasserschaden in Sekunden erkennen könnte — statt erst am nächsten Morgen.</span>
+            <span class="examples__cta" data-i18n="examples.elsa_cta">Beispiel ansehen
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+          </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer footer--senioren">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="/" class="logo" aria-label="Konihaus">
+            <div class="logo-image"></div>
+            <div class="wordmark">konihaus</div>
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Smart home managed service für Senioren, Mieter und
+            Ferienhausbesitzer in der
+            Schweiz.</p>
+          <div class="footer__social" aria-label="Social Media">
+            <a href="https://www.instagram.com/ch.konihaus/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/konihaus.ch" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 8.5h2.2V5.2h-2.4c-2.5 0-4.1 1.6-4.1 4.1v2H8.6v3.3h2.1V21h3.3v-6.4h2.2l.4-3.3h-2.6V9.6c0-.7.2-1.1 1-1.1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://x.com/konihaus" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/konihaus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="7.6" cy="8.2" r="1.15" fill="currentColor"/>
+                <path d="M7.6 11v6.3M11.3 11v6.3M11.3 13.6c0-1.6 1-2.6 2.3-2.6 1.3 0 2 .9 2 2.5v3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
+          <ul class="flinks">
+            <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+            <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
+            <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
+            <li><a href="/#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>
+            <li><a href="/#contact" data-i18n="footer.col1_l4">Kontakt</a></li>
+            <li><a href="https://app.konihaus.ch" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col2_title">Unternehmen</div>
+          <ul class="flinks">
+            <li><a href="/#intro" data-i18n="footer.col2_l1">Was ist Konihaus</a></li>
+            <li><a href="/#process" data-i18n="footer.col2_l2">So funktioniert&#x27;s</a></li>
+            <li><a href="/#why" data-i18n="footer.col2_l3">Warum Konihaus</a></li>
+            <li><a href="/#about" data-i18n="footer.col2_l4">Über Koni</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="fcol-title" data-i18n="footer.col3_title">Rechtliches</div>
+          <ul class="flinks">
+            <li><a href="../impressum" data-i18n="footer.col3_l1">Impressum</a></li>
+            <li><a href="../datenschutz" data-legal="privacy" data-i18n="footer.col3_l2">Datenschutz</a></li>
+            <li><a href="/#cookie-declaration" data-cc-open data-i18n="footer.col3_l3">Cookie-Erklärung</a></li>
+            <li><a href="../agb" data-i18n="footer.col3_l4">AGB</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy" data-i18n="footer.copy">© 2026 Konihaus · Konrad Hefelle · Affoltern am Albis, Schweiz
+        </p>
+        <p class="fch" data-i18n="footer.ch">🇨🇭 Made in Switzerland</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const CUSTOM_BASE_DIR = '../';
+  </script>
+  <script src="../scripts.js"></script>
+  <script src="../cookie-consent.js"></script>
+
+  <script>
+    /* click-to-load YouTube (no Google request until the visitor clicks) + share link in the visitor's language */
+    (function () {
+      function lang() { try { return (typeof i18n !== 'undefined' && i18n.currentLang) || document.documentElement.lang || 'de'; } catch (e) { return 'de'; } }
+      var sec = document.getElementById('story-video-sec');
+      if (sec) {
+        var box = sec.querySelector('.story-video'), btn = sec.querySelector('.story-video__poster');
+        var idFor = function () { var l = lang().slice(0, 2) === 'en' ? 'en' : 'de'; return box.getAttribute('data-yt-' + l) || box.getAttribute('data-yt-de') || ''; };
+        if (idFor()) {
+          sec.hidden = false;
+          try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          btn.addEventListener('click', function () {
+            var f = document.createElement('iframe');
+            f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(idFor()) + '?autoplay=1&rel=0';
+            f.title = btn.getAttribute('aria-label') || 'Video';
+            f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+            f.allowFullscreen = true;
+            box.appendChild(f); btn.style.display = 'none';
+          });
+          /* language switch: stop the running video and show the poster again (the new language's video loads on the next click) */
+          new MutationObserver(function () {
+            var f = box.querySelector('iframe');
+            if (f) f.remove();
+            btn.style.display = '';
+            try { btn.setAttribute('aria-label', i18n.getText('beispiel_hans', 'video_play')); } catch (e) {}
+          }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        }
+      }
+      var share = document.getElementById('story-share');
+      if (share) share.addEventListener('click', function (e) {
+        try {
+          var t = (typeof i18n !== 'undefined') ? i18n.getText('beispiel_rolf', 'share_text') : '';
+          if (!t) return;
+          e.preventDefault();
+          window.open('https://wa.me/?text=' + encodeURIComponent(t + ' https://konihaus.ch/die-klingel-die-man-sieht/'), '_blank', 'noopener');
+        } catch (err) {}
+      });
+    })();
+  </script>
+</body>
+
+</html>
