@@ -20,3 +20,6 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# FUSE leftovers (files deleted while still open)
+.fuse_hidden*
