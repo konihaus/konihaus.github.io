@@ -364,6 +364,25 @@ function setupMobileMenu() {
   });
 }
 
+/* Deep links like /#contact: on a first visit the browser jumps to the anchor before the translations are
+   filled in and the fonts are loaded, so the layout then shifts and the target ends up off screen.
+   Re-align to the target as the page settles, unless the visitor has already scrolled themselves. */
+function keepHashInView() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id || window.__hashAligned) return;
+  const target = document.getElementById(id);
+  if (!target || /^(packages)$/.test(id)) return; // #packages has its own handling
+  let touched = false;
+  const stop = () => { touched = true; };
+  ['wheel', 'touchmove', 'keydown', 'mousedown'].forEach((ev) => window.addEventListener(ev, stop, { once: true, passive: true }));
+  const align = () => { if (!touched) target.scrollIntoView({ behavior: 'instant', block: 'start' }); };
+  requestAnimationFrame(align);
+  setTimeout(align, 400);
+  window.addEventListener('load', () => setTimeout(align, 150), { once: true });
+  if (document.readyState === 'complete') setTimeout(align, 150);
+  window.__hashAligned = true;
+}
+
 function setupScrollAnimations() {
   const reveals = document.querySelectorAll('.reveal');
 
@@ -1153,6 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Promise.race([requiredFonts, safetyTimeout]).finally(() => {
       document.documentElement.classList.remove("fonts-loading");
+      keepHashInView();
     });
 
     const moreStart = document.getElementById('morestart');
