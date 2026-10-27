@@ -391,6 +391,8 @@ function setupScrollAnimations() {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
+        // a leftover transform keeps the text on its own compositing layer, which can render it softer
+        entry.target.addEventListener('transitionend', () => { entry.target.style.transform = 'none'; }, { once: true });
       }
     });
   });

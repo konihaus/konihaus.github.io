@@ -636,7 +636,12 @@
     "imp_phone": "Telefon",
     "imp_email": "E-Mail",
     "imp_email_val": "hallo@konihaus.ch",
-    "imp_whatsapp_cta": "Nachricht senden"
+    "imp_whatsapp_cta": "Nachricht senden",
+    "imp_company": "Unternehmensangaben",
+    "imp_legalform": "Rechtsform",
+    "imp_legalform_val": "Einzelunternehmen",
+    "imp_register": "Handelsregister",
+    "imp_register_val": "Kanton Zürich"
   },
   "faq": {
     "eye": "Häufige Fragen",

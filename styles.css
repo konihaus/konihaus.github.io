@@ -153,7 +153,7 @@ body {
   margin: 0;
   padding: 0;
   touch-action: manipulation;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
   position: relative;
   -webkit-user-select: text;
   user-select: text;
@@ -582,7 +582,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
   width: 100%;
   font-family: var(--serif);
   font-size: clamp(56px, 7.5vw, 82px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.02;
   letter-spacing: -.03em;
   color: var(--parchment);
@@ -716,7 +716,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 
 .sec-h {
   font-family: var(--serif);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -.02em;
   line-height: 1.1;
 }
@@ -781,7 +781,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .intro__h {
   font-family: var(--serif);
   font-size: clamp(36px, 3.5vw, 52px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.02em;
   margin-bottom: 22px;
@@ -1144,7 +1144,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .pkg__num.pkg__num-strike {
   text-decoration: line-through;
   font-size: 2em;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink-4);
 }
 
@@ -1451,7 +1451,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .safety__title {
   font-family: var(--serif);
   font-size: clamp(26px, 2.8vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -.02em;
   line-height: 1.25;
   color: var(--ink);
@@ -1625,7 +1625,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .proc-h {
   font-family: var(--serif);
   font-size: clamp(30px, 2.8vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.02em;
   margin-bottom: 20px;
@@ -1762,7 +1762,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .why__h {
   font-family: var(--serif);
   font-size: clamp(32px, 3vw, 48px);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--parchment);
   line-height: 1.1;
   letter-spacing: -.02em;
@@ -1893,7 +1893,7 @@ html[data-motion="reduce"] .nav__sub, html[data-motion="reduce"] .nav__parent .c
 .dev-h {
   font-family: var(--serif);
   font-size: clamp(30px, 2.8vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.02em;
   margin-bottom: 18px;
@@ -2025,7 +2025,7 @@ width: 60px;
 .hub-name {
   font-family: var(--serif);
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--parchment);
   margin-bottom: 4px;
   display: block;
@@ -2361,7 +2361,7 @@ width: 60px;
 .about__init {
   font-family: var(--serif);
   font-size: 196px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(247, 244, 237, 0.28);
   letter-spacing: -.05em;
   user-select: none;
@@ -2430,7 +2430,7 @@ width: 60px;
 .about-h {
   font-family: var(--serif);
   font-size: clamp(30px, 2.8vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.02em;
   margin-bottom: 20px;
@@ -2569,7 +2569,7 @@ width: 60px;
 .con-h {
   font-family: var(--serif);
   font-size: clamp(30px, 2.8vw, 44px);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -.02em;
   line-height: 1.1;
   margin-bottom: 18px;
@@ -3011,7 +3011,7 @@ width: 60px;
 .nav__drawer .drawer-cta { margin-bottom: auto; }
 .drawer-acc {
   display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%;
-  font-family: var(--serif); font-size: 32px; font-weight: 300; letter-spacing: -.01em;
+  font-family: var(--serif); font-size: 32px; font-weight: 400; letter-spacing: -.01em;
   color: rgba(247, 244, 237, .78); background: none; border: 0; border-bottom: 1px solid rgba(247, 244, 237, .06);
   padding: 16px 24px; cursor: pointer;
 }
@@ -3043,7 +3043,7 @@ html[data-contrast="high"] .drawer-acc { color: var(--parchment); }
   display: block;
   font-family: var(--serif);
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(247, 244, 237, 0.78);
   padding: 16px 24px;
   letter-spacing: -.01em;
@@ -3897,7 +3897,7 @@ body.cc-lock .cc-banner {
   font-family: var(--serif);
   color: var(--ink);
   font-size: clamp(36px, 3.5vw, 52px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -.02em;
   margin: 14px 0 10px;
@@ -4430,7 +4430,7 @@ body.cc-lock .cc-banner {
 .legal h1 {
   font-family: var(--serif);
   font-size: clamp(34px, 4vw, 52px);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -.02em;
   line-height: 1.1;
   color: var(--ink);
@@ -4465,6 +4465,7 @@ body.cc-lock .cc-banner {
   line-height: 1.2;
   color: var(--ink);
   margin: 40px 0 10px;
+  font-style: italic;
 }
 
 .legal h3 {
@@ -5372,7 +5373,7 @@ html[data-contrast="high"] .a11y-switch[aria-checked="true"] .a11y-switch__track
 .appband__in { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
 .appband__eye { display: flex; align-items: center; gap: 4px; margin-bottom: 12px; font-size: .75em; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--amber-warm); }
 .appband__eye .nav__badge { margin-left: 8px; }
-.appband__h { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); font-weight: 300; line-height: 1.08; letter-spacing: -.02em; color: var(--parchment); margin-bottom: 16px; }
+.appband__h { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); font-weight: 400; line-height: 1.08; letter-spacing: -.02em; color: var(--parchment); margin-bottom: 16px; }
 .appband__h em { color: var(--forest-light); font-style: italic; }
 .appband__p { max-width: 460px; font-size: 1.0625em; line-height: 1.7; color: rgba(247,244,237,.78); margin-bottom: 26px; }
 .appband__img { position: relative; isolation: isolate;}
@@ -5510,4 +5511,14 @@ html[data-motion="reduce"] .appx-phone { transition: none; }
 @media (max-width: 760px) {
   .story-qa--3 { grid-template-columns: 1fr; }
   .story-steps__item { padding: 18px 18px; gap: 14px; }
+}
+
+/* Crisper type: grayscale antialiasing, kerning/ligatures on, and no hairline weight for the serif headlines
+   (Cormorant 300 is very thin and looks jagged on Windows screens at normal zoom). */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
 }
