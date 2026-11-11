@@ -13,7 +13,7 @@
     "about": "About Koni",
     "contact": "Contact",
     "cta": "Free Consultation",
-    "services": "Services",
+    "services": "What I do",
     "all_services": "All services"
   },
   "a11y": {
@@ -561,6 +561,7 @@
     "col1_l1": "Packages & Pricing",
     "col1_l2": "Devices & Technology",
     "col1_l3": "FAQ",
+    "col1_l0": "What I do",
     "col1_l4": "Contact",
     "col1_l5": "Home Assistant Switzerland",
     "col2_title": "Company",

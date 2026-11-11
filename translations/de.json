@@ -13,7 +13,7 @@
     "about": "Über Koni",
     "contact": "Kontakt",
     "cta": "Kostenlose Beratung",
-    "services": "Leistungen",
+    "services": "Was ich mache",
     "all_services": "Alle Leistungen"
   },
   "a11y": {
@@ -561,6 +561,7 @@
     "col1_l1": "Pakete & Preise",
     "col1_l2": "Geräte & Technik",
     "col1_l3": "Häufige Fragen",
+    "col1_l0": "Was ich mache",
     "col1_l4": "Kontakt",
     "col1_l5": "Home Assistant Schweiz",
     "col2_title": "Unternehmen",
