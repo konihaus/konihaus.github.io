@@ -12,7 +12,9 @@
     "blog": "Blog",
     "about": "About Koni",
     "contact": "Contact",
-    "cta": "Free Consultation"
+    "cta": "Free Consultation",
+    "services": "Services",
+    "all_services": "All services"
   },
   "a11y": {
     "title": "Readability",
@@ -35,7 +37,7 @@
     "sub": "Konihaus installs and looks after your smart home — independent, local, no ecosystem lock-in. For anyone in Switzerland who wants home to be easier: tenants, homeowners, families, seniors and holiday-home owners.",
     "cta1": "Free Consultation →",
     "cta2": "View Packages",
-    "bar": "Learn more"
+    "bar": "See what Konihaus is"
   },
   "trust": {
     "item1": "✓ No cloud required",
@@ -50,7 +52,7 @@
     "p1": "Most smart home solutions lock you into a proprietary ecosystem: Google, Amazon, or Apple. Konihaus does it differently.",
     "p2": "I use devices you already own, and add proven hardware from leading manufacturers — Konihaus doesn't manufacture any devices itself. Everything comes together through Greenhub, your home's hub.",
     "p3": "The value lies in automations that simply work: irrigation, shades, lighting and heating adjust themselves. And when you do want to check in or step in, there's the Konihaus app — one you can use, but never have to.",
-    "link": "Let me show you some examples",
+    "link": "See what I do",
     "card1_t": "Privacy First",
     "card1_b": "Your data is processed locally, remote access for support is encrypted, and notifications are optional and may go through external services like Apple or Google.",
     "card2_t": "Existing + New, Unified",
@@ -469,11 +471,11 @@
     "hub_row2_l": "Protocols",
     "hub_row2_v": "Zigbee · Matter · Thread",
     "hub_row3_l": "Power Consumption",
-    "hub_row3_v": "2-6 Watts",
+    "hub_row3_v": "4-7 Watts",
     "hub_row4_l": "Storage",
-    "hub_row4_v": "64-128 GB SD or SSD",
+    "hub_row4_v": "64-256 GB SD or SSD",
     "hub_row5_l": "Remote Access",
-    "hub_row5_v": "Encrypted via Private VPN or Tailscale",
+    "hub_row5_v": "Encrypted via Tailscale VPN",
     "hub_row6_l": "Foundation",
     "hub_row6_v": "Open Source (Home Assistant)",
     "ha_link": "More about Home Assistant in Switzerland →",
@@ -642,7 +644,9 @@
     "imp_legalform": "Legal form",
     "imp_legalform_val": "Sole proprietorship",
     "imp_register": "Commercial register",
-    "imp_register_val": "Canton of Zurich"
+    "imp_register_val": "Canton of Zurich",
+    "imp_trademark": "Trademark",
+    "imp_trademark_text": "Konihaus is a word mark filed with the Swiss Federal Institute of Intellectual Property (IGE)."
   },
   "faq": {
     "eye": "Frequently Asked Questions",
@@ -1227,7 +1231,7 @@
     "banner": "🎁 10% off first year"
   },
   "app_page": {
-    "title": "Konihaus App – Your home in one calm app | Konihaus",
+    "title": "Konihaus App - Your home in one calm app | Konihaus",
     "meta": "The Konihaus app shows rooms, heating, security and energy at a glance — local to your system, no cloud required. Optional: your home runs on its own even without the app.",
     "eyebrow": "The Konihaus app",
     "h1": "Your home.<br><em>In your hand.</em>",
@@ -1270,5 +1274,44 @@
     "h2": "Your home <em>on every screen.</em>",
     "p": "Lights, blinds, heating, security and energy in one calm app for smartphone, tablet and computer. Local in your own system, no cloud requirement.",
     "btn": "See the app"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "h2": "What I do<br><em>for your <span class=\"rotword\" data-words=\"home|business|garden|office\">home</span>.</em>",
+    "sub": "From a single automation to a fully connected house. Each service has its own page with the details and matching examples.",
+    "examples_label": "Examples:",
+    "partner_badge": "With specialist partner",
+    "g1": "Smart Home & Automation",
+    "g2": "Security & Protection",
+    "g3": "Energy & Climate",
+    "g4": "Audio, Video & Network",
+    "automation_t": "Home automation & retrofitting",
+    "automation_b": "Your devices, one hub: lights, blinds, heating and appliances work together — locally, with no ecosystem lock-in. Existing switches and blinds I retrofit instead of replacing everything.",
+    "light_t": "Lighting control",
+    "light_b": "Light that reacts to presence, time of day and daylight — and, when needed, shows you visibly that the doorbell rang or the smoke alarm went off.",
+    "shades_t": "Blinds & shading",
+    "shades_b": "Blinds and shutters move with sun, wind, temperature or absence — cool in summer, lived-in looking while you are away.",
+    "hazard_t": "Damage detection",
+    "hazard_b": "Water, smoke and CO detectors that do more than beep: they trigger automations — lights on, a push notification to your contacts, the water valve closed where one exists.",
+    "power_t": "Power monitoring",
+    "power_b": "See what uses how much — and get a notice when an appliance runs unusually long or was left on.",
+    "climate_t": "Air conditioning & indoor climate",
+    "climate_b": "Monitor air conditioners, temperature, humidity and CO₂ — with a notice when the nursery gets too warm or the air gets heavy.",
+    "audio_t": "Multi-room audio",
+    "audio_b": "Music in every room, controlled together or separately — part of the smart home, for example quieter as soon as the doorbell rings.",
+    "network_t": "Professional network",
+    "network_b": "Stable Wi-Fi in every room, separate networks for guests and smart devices, cleanly cabled — the foundation for everything else.",
+    "cinema_t": "Home cinema",
+    "cinema_b": "Projector or TV, screen and surround sound, planned for your room — and a cinema scene that takes lights and blinds along at the touch of a button.",
+    "partner_t": "One point of contact — even when specialists are needed.",
+    "partner_b": "Some work belongs in the hands of specialists: connections to the fixed electrical installation, new cabling or construction work. For this I bring in qualified firms, such as licensed electricians. You still get one quote, I coordinate everything, and you keep talking only to me.",
+    "pricing_note": "Many of these services are already part of the <a href=\"#packages\">packages</a>. Larger projects such as network, multi-room audio or home cinema I quote individually — with ongoing support if you wish.",
+    "access_t": "Access & smart locks",
+    "access_b": "Smart locks with codes or time-limited access for guests, cleaners and tradespeople — plus door and window sensors that show what is still open before you leave.",
+    "surveillance_t": "Motion, presence & cameras",
+    "surveillance_b": "Motion and presence detectors know whether someone is home — cameras show what is going on. With clear rules on who sees what and when anything is recorded.",
+    "heating_t": "Heating: monitoring & control",
+    "heating_b": "Heat pump, oil or gas heating at a glance — failures and frost risk are noticed early. Warm room by room when someone is home, economical when not.",
+    "more": "Learn more"
   }
 }

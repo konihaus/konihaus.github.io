@@ -40,7 +40,7 @@
 
   <nav class="nav nav--solid" id="nav">
     <div class="container">
-      <div class="nav__inner ">
+      <div class="nav__inner">
         <a href="/" class="logo" aria-label="Konihaus">
           <div class="logo-image"></div>
           <div class="wordmark">konihaus</div>
@@ -58,6 +58,24 @@
             <li class="has-sub">
               <a href="/#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
               <ul class="nav__sub">
+                <li class="has-sub has-sub--nested">
+                  <a href="/#services" class="nav__subparent" aria-haspopup="true"><span data-i18n="nav.services">Leistungen</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+                  <ul class="nav__sub nav__sub--nested">
+                    <li class="nav__sub-all"><a href="/#services" data-i18n="nav.all_services">Alle Leistungen</a></li>
+                    <li><a href="/leistungen/hausautomation" data-href-de="/leistungen/hausautomation" data-href-en="/services/home-automation" data-i18n="services.automation_t">Hausautomation &amp; Nachrüsten</a></li>
+                    <li><a href="/leistungen/lichtsteuerung" data-href-de="/leistungen/lichtsteuerung" data-href-en="/services/lighting-control" data-i18n="services.light_t">Lichtsteuerung</a></li>
+                    <li><a href="/leistungen/storen-beschattung" data-href-de="/leistungen/storen-beschattung" data-href-en="/services/blinds-shading" data-i18n="services.shades_t">Storen &amp; Beschattung</a></li>
+                    <li><a href="/leistungen/zutritt-smarte-schloesser" data-href-de="/leistungen/zutritt-smarte-schloesser" data-href-en="/services/access-smart-locks" data-i18n="services.access_t">Zutritt &amp; smarte Schlösser</a></li>
+                    <li><a href="/leistungen/bewegung-praesenz-kameras" data-href-de="/leistungen/bewegung-praesenz-kameras" data-href-en="/services/motion-presence-cameras" data-i18n="services.surveillance_t">Bewegung, Präsenz &amp; Kameras</a></li>
+                    <li><a href="/leistungen/schadenerkennung" data-href-de="/leistungen/schadenerkennung" data-href-en="/services/damage-detection" data-i18n="services.hazard_t">Schadenerkennung</a></li>
+                    <li><a href="/leistungen/strom-monitoring" data-href-de="/leistungen/strom-monitoring" data-href-en="/services/power-monitoring" data-i18n="services.power_t">Strom-Monitoring</a></li>
+                    <li><a href="/leistungen/heizung" data-href-de="/leistungen/heizung" data-href-en="/services/heating" data-i18n="services.heating_t">Heizung: Überwachung &amp; Steuerung</a></li>
+                    <li><a href="/leistungen/raumklima" data-href-de="/leistungen/raumklima" data-href-en="/services/indoor-climate" data-i18n="services.climate_t">Klimaanlage &amp; Raumklima</a></li>
+                    <li><a href="/leistungen/multiroom-audio" data-href-de="/leistungen/multiroom-audio" data-href-en="/services/multi-room-audio" data-i18n="services.audio_t">Multiroom-Audio</a></li>
+                    <li><a href="/leistungen/netzwerk" data-href-de="/leistungen/netzwerk" data-href-en="/services/network" data-i18n="services.network_t">Professionelles Netzwerk</a></li>
+                    <li><a href="/leistungen/heimkino" data-href-de="/leistungen/heimkino" data-href-en="/services/home-cinema" data-i18n="services.cinema_t">Heimkino</a></li>
+                  </ul>
+                </li>
                 <li><a href="/#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
                 <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
                 <li><a href="/#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
@@ -66,37 +84,18 @@
               </ul>
             </li>
             <li><a href="https://app.konihaus.ch" class="nav__app" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
-            <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="https://blog.konihaus.ch" target="_blank" rel="noopener" data-i18n="nav.blog">Blog</a></li>
           </ul>
         <div class="language-picker">
-          <button
-            type="button"
-            class="language-trigger"
-            aria-expanded="false"
-            aria-controls="language-options"
-            aria-label="Language: Deutsch"
-          >
+          <button type="button" class="language-trigger" aria-expanded="false" aria-controls="language-options" aria-label="Language: Deutsch">
             <span class="language-current">DE</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m6 9 6 6 6-6" />
-            </svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
           </button>
-
           <div id="language-options" class="language-options" hidden>
-            <button type="button" class="language-option" data-lang="de">
-              <span>Deutsch</span>
-              <span class="language-code">DE</span>
-            </button>
-            <button type="button" class="language-option" data-lang="en">
-              <span>English</span>
-              <span class="language-code">EN</span>
-            </button>
+            <button type="button" class="language-option" data-lang="de"><span>Deutsch</span><span class="language-code">DE</span></button>
+            <button type="button" class="language-option" data-lang="en"><span>English</span><span class="language-code">EN</span></button>
           </div>
-
-          <select id="lang-selector" hidden>
-            <option value="de">DE</option>
-            <option value="en">EN</option>
-          </select>
+          <select id="lang-selector" hidden><option value="de">DE</option><option value="en">EN</option></select>
         </div>
         <a href="#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
@@ -121,6 +120,24 @@
       <li class="drawer-group">
         <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
         <ul class="drawer-sub" id="dg-service" hidden>
+          <li class="drawer-group drawer-group--nested">
+            <button type="button" class="drawer-acc drawer-acc--nested" aria-expanded="false" aria-controls="dg-services"><span data-i18n="nav.services">Leistungen</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <ul class="drawer-sub drawer-sub--nested" id="dg-services" hidden>
+              <li><a href="/#services" class="drawer-link" data-i18n="nav.all_services">Alle Leistungen</a></li>
+              <li><a href="/leistungen/hausautomation" class="drawer-link" data-href-de="/leistungen/hausautomation" data-href-en="/services/home-automation" data-i18n="services.automation_t">Hausautomation &amp; Nachrüsten</a></li>
+              <li><a href="/leistungen/lichtsteuerung" class="drawer-link" data-href-de="/leistungen/lichtsteuerung" data-href-en="/services/lighting-control" data-i18n="services.light_t">Lichtsteuerung</a></li>
+              <li><a href="/leistungen/storen-beschattung" class="drawer-link" data-href-de="/leistungen/storen-beschattung" data-href-en="/services/blinds-shading" data-i18n="services.shades_t">Storen &amp; Beschattung</a></li>
+              <li><a href="/leistungen/zutritt-smarte-schloesser" class="drawer-link" data-href-de="/leistungen/zutritt-smarte-schloesser" data-href-en="/services/access-smart-locks" data-i18n="services.access_t">Zutritt &amp; smarte Schlösser</a></li>
+              <li><a href="/leistungen/bewegung-praesenz-kameras" class="drawer-link" data-href-de="/leistungen/bewegung-praesenz-kameras" data-href-en="/services/motion-presence-cameras" data-i18n="services.surveillance_t">Bewegung, Präsenz &amp; Kameras</a></li>
+              <li><a href="/leistungen/schadenerkennung" class="drawer-link" data-href-de="/leistungen/schadenerkennung" data-href-en="/services/damage-detection" data-i18n="services.hazard_t">Schadenerkennung</a></li>
+              <li><a href="/leistungen/strom-monitoring" class="drawer-link" data-href-de="/leistungen/strom-monitoring" data-href-en="/services/power-monitoring" data-i18n="services.power_t">Strom-Monitoring</a></li>
+              <li><a href="/leistungen/heizung" class="drawer-link" data-href-de="/leistungen/heizung" data-href-en="/services/heating" data-i18n="services.heating_t">Heizung: Überwachung &amp; Steuerung</a></li>
+              <li><a href="/leistungen/raumklima" class="drawer-link" data-href-de="/leistungen/raumklima" data-href-en="/services/indoor-climate" data-i18n="services.climate_t">Klimaanlage &amp; Raumklima</a></li>
+              <li><a href="/leistungen/multiroom-audio" class="drawer-link" data-href-de="/leistungen/multiroom-audio" data-href-en="/services/multi-room-audio" data-i18n="services.audio_t">Multiroom-Audio</a></li>
+              <li><a href="/leistungen/netzwerk" class="drawer-link" data-href-de="/leistungen/netzwerk" data-href-en="/services/network" data-i18n="services.network_t">Professionelles Netzwerk</a></li>
+              <li><a href="/leistungen/heimkino" class="drawer-link" data-href-de="/leistungen/heimkino" data-href-en="/services/home-cinema" data-i18n="services.cinema_t">Heimkino</a></li>
+            </ul>
+          </li>
           <li><a href="/#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
           <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
           <li><a href="/#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
@@ -129,9 +146,9 @@
         </ul>
       </li>
       <li><a href="https://app.konihaus.ch" class="drawer-link" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
-      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" target="_blank" rel="noopener" data-i18n="nav.blog">Blog</a></li>
     </ul>
-    <a href="/#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
+    <a href="#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
   </div>
 
   <main class="nf">

@@ -156,6 +156,24 @@
             <li class="has-sub">
               <a href="#packages" class="nav__parent" aria-haspopup="true"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
               <ul class="nav__sub">
+                <li class="has-sub has-sub--nested">
+                  <a href="#services" class="nav__subparent" aria-haspopup="true"><span data-i18n="nav.services">Leistungen</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+                  <ul class="nav__sub nav__sub--nested">
+                    <li class="nav__sub-all"><a href="#services" data-i18n="nav.all_services">Alle Leistungen</a></li>
+                    <li><a href="/leistungen/hausautomation" data-href-de="/leistungen/hausautomation" data-href-en="/services/home-automation" data-i18n="services.automation_t">Hausautomation &amp; Nachrüsten</a></li>
+                    <li><a href="/leistungen/lichtsteuerung" data-href-de="/leistungen/lichtsteuerung" data-href-en="/services/lighting-control" data-i18n="services.light_t">Lichtsteuerung</a></li>
+                    <li><a href="/leistungen/storen-beschattung" data-href-de="/leistungen/storen-beschattung" data-href-en="/services/blinds-shading" data-i18n="services.shades_t">Storen &amp; Beschattung</a></li>
+                    <li><a href="/leistungen/zutritt-smarte-schloesser" data-href-de="/leistungen/zutritt-smarte-schloesser" data-href-en="/services/access-smart-locks" data-i18n="services.access_t">Zutritt &amp; smarte Schlösser</a></li>
+                    <li><a href="/leistungen/bewegung-praesenz-kameras" data-href-de="/leistungen/bewegung-praesenz-kameras" data-href-en="/services/motion-presence-cameras" data-i18n="services.surveillance_t">Bewegung, Präsenz &amp; Kameras</a></li>
+                    <li><a href="/leistungen/schadenerkennung" data-href-de="/leistungen/schadenerkennung" data-href-en="/services/damage-detection" data-i18n="services.hazard_t">Schadenerkennung</a></li>
+                    <li><a href="/leistungen/strom-monitoring" data-href-de="/leistungen/strom-monitoring" data-href-en="/services/power-monitoring" data-i18n="services.power_t">Strom-Monitoring</a></li>
+                    <li><a href="/leistungen/heizung" data-href-de="/leistungen/heizung" data-href-en="/services/heating" data-i18n="services.heating_t">Heizung: Überwachung &amp; Steuerung</a></li>
+                    <li><a href="/leistungen/raumklima" data-href-de="/leistungen/raumklima" data-href-en="/services/indoor-climate" data-i18n="services.climate_t">Klimaanlage &amp; Raumklima</a></li>
+                    <li><a href="/leistungen/multiroom-audio" data-href-de="/leistungen/multiroom-audio" data-href-en="/services/multi-room-audio" data-i18n="services.audio_t">Multiroom-Audio</a></li>
+                    <li><a href="/leistungen/netzwerk" data-href-de="/leistungen/netzwerk" data-href-en="/services/network" data-i18n="services.network_t">Professionelles Netzwerk</a></li>
+                    <li><a href="/leistungen/heimkino" data-href-de="/leistungen/heimkino" data-href-en="/services/home-cinema" data-i18n="services.cinema_t">Heimkino</a></li>
+                  </ul>
+                </li>
                 <li><a href="#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
                 <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
                 <li><a href="#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
@@ -164,37 +182,18 @@
               </ul>
             </li>
             <li><a href="https://app.konihaus.ch" class="nav__app" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
-            <li><a href="https://blog.konihaus.ch" data-i18n="nav.blog">Blog</a></li>
+            <li><a href="https://blog.konihaus.ch" target="_blank" rel="noopener" data-i18n="nav.blog">Blog</a></li>
           </ul>
         <div class="language-picker">
-          <button
-            type="button"
-            class="language-trigger"
-            aria-expanded="false"
-            aria-controls="language-options"
-            aria-label="Language: Deutsch"
-          >
+          <button type="button" class="language-trigger" aria-expanded="false" aria-controls="language-options" aria-label="Language: Deutsch">
             <span class="language-current">DE</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m6 9 6 6 6-6" />
-            </svg>
+            <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
           </button>
-
           <div id="language-options" class="language-options" hidden>
-            <button type="button" class="language-option" data-lang="de">
-              <span>Deutsch</span>
-              <span class="language-code">DE</span>
-            </button>
-            <button type="button" class="language-option" data-lang="en">
-              <span>English</span>
-              <span class="language-code">EN</span>
-            </button>
+            <button type="button" class="language-option" data-lang="de"><span>Deutsch</span><span class="language-code">DE</span></button>
+            <button type="button" class="language-option" data-lang="en"><span>English</span><span class="language-code">EN</span></button>
           </div>
-
-          <select id="lang-selector" hidden>
-            <option value="de">DE</option>
-            <option value="en">EN</option>
-          </select>
+          <select id="lang-selector" hidden><option value="de">DE</option><option value="en">EN</option></select>
         </div>
         <a href="#contact" class="btn nav__cta" data-i18n="nav.cta">Kostenlose Beratung</a>
         <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen">
@@ -219,6 +218,24 @@
       <li class="drawer-group">
         <button type="button" class="drawer-acc" aria-expanded="false" aria-controls="dg-service"><span data-i18n="nav.service">Service</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
         <ul class="drawer-sub" id="dg-service" hidden>
+          <li class="drawer-group drawer-group--nested">
+            <button type="button" class="drawer-acc drawer-acc--nested" aria-expanded="false" aria-controls="dg-services"><span data-i18n="nav.services">Leistungen</span><svg class="chev" width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+            <ul class="drawer-sub drawer-sub--nested" id="dg-services" hidden>
+              <li><a href="#services" class="drawer-link" data-i18n="nav.all_services">Alle Leistungen</a></li>
+              <li><a href="/leistungen/hausautomation" class="drawer-link" data-href-de="/leistungen/hausautomation" data-href-en="/services/home-automation" data-i18n="services.automation_t">Hausautomation &amp; Nachrüsten</a></li>
+              <li><a href="/leistungen/lichtsteuerung" class="drawer-link" data-href-de="/leistungen/lichtsteuerung" data-href-en="/services/lighting-control" data-i18n="services.light_t">Lichtsteuerung</a></li>
+              <li><a href="/leistungen/storen-beschattung" class="drawer-link" data-href-de="/leistungen/storen-beschattung" data-href-en="/services/blinds-shading" data-i18n="services.shades_t">Storen &amp; Beschattung</a></li>
+              <li><a href="/leistungen/zutritt-smarte-schloesser" class="drawer-link" data-href-de="/leistungen/zutritt-smarte-schloesser" data-href-en="/services/access-smart-locks" data-i18n="services.access_t">Zutritt &amp; smarte Schlösser</a></li>
+              <li><a href="/leistungen/bewegung-praesenz-kameras" class="drawer-link" data-href-de="/leistungen/bewegung-praesenz-kameras" data-href-en="/services/motion-presence-cameras" data-i18n="services.surveillance_t">Bewegung, Präsenz &amp; Kameras</a></li>
+              <li><a href="/leistungen/schadenerkennung" class="drawer-link" data-href-de="/leistungen/schadenerkennung" data-href-en="/services/damage-detection" data-i18n="services.hazard_t">Schadenerkennung</a></li>
+              <li><a href="/leistungen/strom-monitoring" class="drawer-link" data-href-de="/leistungen/strom-monitoring" data-href-en="/services/power-monitoring" data-i18n="services.power_t">Strom-Monitoring</a></li>
+              <li><a href="/leistungen/heizung" class="drawer-link" data-href-de="/leistungen/heizung" data-href-en="/services/heating" data-i18n="services.heating_t">Heizung: Überwachung &amp; Steuerung</a></li>
+              <li><a href="/leistungen/raumklima" class="drawer-link" data-href-de="/leistungen/raumklima" data-href-en="/services/indoor-climate" data-i18n="services.climate_t">Klimaanlage &amp; Raumklima</a></li>
+              <li><a href="/leistungen/multiroom-audio" class="drawer-link" data-href-de="/leistungen/multiroom-audio" data-href-en="/services/multi-room-audio" data-i18n="services.audio_t">Multiroom-Audio</a></li>
+              <li><a href="/leistungen/netzwerk" class="drawer-link" data-href-de="/leistungen/netzwerk" data-href-en="/services/network" data-i18n="services.network_t">Professionelles Netzwerk</a></li>
+              <li><a href="/leistungen/heimkino" class="drawer-link" data-href-de="/leistungen/heimkino" data-href-en="/services/home-cinema" data-i18n="services.cinema_t">Heimkino</a></li>
+            </ul>
+          </li>
           <li><a href="#devices" class="drawer-link" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
           <li><a href="/home-assistant-schweiz" data-ha-link class="drawer-link" data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
           <li><a href="#packages" class="drawer-link" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
@@ -227,7 +244,7 @@
         </ul>
       </li>
       <li><a href="https://app.konihaus.ch" class="drawer-link" target="_blank" rel="noopener"><span data-i18n="nav.app">App</span><span class="nav__badge" data-i18n="nav.new">Neu</span></a></li>
-      <li><a href="https://blog.konihaus.ch" class="drawer-link" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="https://blog.konihaus.ch" class="drawer-link" target="_blank" rel="noopener" data-i18n="nav.blog">Blog</a></li>
     </ul>
     <a href="#contact" class="drawer-cta drawer-link" data-i18n="nav.cta">Kostenlose Beratung →</a>
   </div>
@@ -257,7 +274,7 @@
     <div class="container">
       <div class="hero__bar">
         <div class="hero__bar-line"></div>
-        <span id="morestart" class="hero__bar-text" data-i18n="hero.bar">Mehr erfahren</span>
+        <span id="morestart" class="hero__bar-text" data-i18n="hero.bar">Sehen Sie, was Konihaus ist</span>
       </div>
     </div>
   </section>
@@ -273,8 +290,6 @@
         <p class="trust__item" data-i18n="trust.item3">✓ Persönlich betreut</p>
         <div class="trust__dot"></div>
         <p class="trust__item" data-i18n="trust.item4">✓ Entwickelt und betreut in der Schweiz</p>
-        <div class="trust__dot"></div>
-        <p class="trust__item" data-i18n="trust.item5">✓ Keine Eingriffe ins Mauerwerk</p>
       </div>
     </div>
   </div>
@@ -300,7 +315,7 @@
                 sie im Alltag kaum. Bei älteren Angehörigen zum Beispiel: Bleibt die Küche einen ganzen Tag ohne
                 Bewegung, obwohl die Person zu Hause ist, benachrichtigt das System automatisch Familie oder
                 Betreuungspersonen — sonst bleibt der Alltag einfach der Alltag.</p>
-          <a href="#examples" class="intro__link reveal d3"><span data-i18n="intro.link">Let me show some examples</span> <svg width="16"
+          <a href="#services" class="intro__link reveal d3"><span data-i18n="intro.link">Meine Leistungen ansehen</span> <svg width="16"
               height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
@@ -310,102 +325,106 @@
       </div>
     </div>
   </section>
-  <!-- EXAMPLES (illustrative scenarios, not documented case studies) -->
-  <section class="examples" id="examples">
+  <!-- SERVICES (examples wired into each service; scenarios are illustrative, not documented case studies) -->
+  <section class="services" id="services">
+    <span id="examples" class="services__anchor" aria-hidden="true"></span>
     <div class="container">
       <div class="sec-center">
-        <p class="sec-eye reveal" data-i18n="examples.eyebrow">Anwendungsbeispiele</p>
-        <h2 class="sec-h reveal d1" data-i18n="examples.h2" data-i18n-html="true">So könnte es<br><em>bei Ihnen
-            aussehen.</em></h2>
-        <p class="reveal d2" data-i18n="examples.sub">Illustrative Beispiele — keine dokumentierten
-          Kundengeschichten.</p>
+        <p class="sec-eye reveal" data-i18n="services.eyebrow">Leistungen</p>
+        <h2 class="sec-h reveal d1" data-i18n="services.h2" data-i18n-html="true">Was ich für<br><em><span class="rotword" data-words="Ihr Zuhause|Ihr Geschäft|Ihren Garten|Ihr Büro">Ihr Zuhause</span> mache.</em></h2>
+        <p class="reveal d2" data-i18n="services.sub">Von der einzelnen Automation bis zum vernetzten Haus. Zu jeder Leistung gibt es eine eigene Seite mit den Details und passenden Beispielen.</p>
       </div>
-      <div class="examples__grid reveal d2" id="examples-grid">
-          <a class="examples__card examples__card--marc" href="/zu-viele-apps">
-            <span class="examples__tag" data-i18n="examples.marc_tag">Smart Living</span>
-            <span class="examples__name">Marc</span>
-            <span class="examples__hook" data-i18n="examples.marc_hook">Wie ein Mieter ein Dutzend Geräte-Apps auf
-              eine gemeinsame Oberfläche bringen könnte — statt ständig Logins zu wechseln.</span>
-            <span class="examples__cta" data-i18n="examples.marc_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--luca" href="/barbershop">
-            <span class="examples__tag" data-i18n="examples.luca_tag">Barbershop</span>
-            <span class="examples__name">Luca</span>
-            <span class="examples__hook" data-i18n="examples.luca_hook">Wie ein kleiner Barbershop vom Öffnen bis zum Abschliessen entlastet werden könnte — ohne Kameras, ohne Bohren.</span>
-            <span class="examples__cta" data-i18n="examples.luca_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--inge" href="/ferienwohnung-management">
-            <span class="examples__tag" data-i18n="examples.inge_tag">Ferienwohnung</span>
-            <span class="examples__name">Inge</span>
-            <span class="examples__hook" data-i18n="examples.inge_hook">Wie eine Ferienwohnungsbesitzerin ihre
-              Wohnung aus der Ferne verwalten könnte — ohne ständige Sorgen.</span>
-            <span class="examples__cta" data-i18n="examples.inge_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--hans" href="/isolierter-senior">
-            <span class="examples__tag" data-i18n="examples.hans_tag">Isolierter Senior</span>
-            <span class="examples__name">Hans</span>
-            <span class="examples__hook" data-i18n="examples.hans_hook">Wie ein 84-jähriger Landwirt sicher allein
-              leben könnte — ohne dass seine Tochter sich ständig sorgen muss.</span>
-            <span class="examples__cta" data-i18n="examples.hans_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--rolf" href="/die-klingel-die-man-sieht">
-            <span class="examples__tag" data-i18n="examples.rolf_tag">Hörverlust</span>
-            <span class="examples__name">Rolf</span>
-            <span class="examples__hook" data-i18n="examples.rolf_hook">Wie ein schwerhöriger Rentner Klingel, Rauchmelder und Haushaltssignale sehen und spüren könnte — ohne Spezialgerät.</span>
-            <span class="examples__cta" data-i18n="examples.rolf_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--elsa" href="/wasserschaden">
-            <span class="examples__tag" data-i18n="examples.elsa_tag">Wasserschaden</span>
-            <span class="examples__name">Elsa</span>
-            <span class="examples__hook" data-i18n="examples.elsa_hook">Wie eine 79-jährige Mieterin einen
-              Wasserschaden in Sekunden erkennen könnte — statt erst am nächsten Morgen.</span>
-            <span class="examples__cta" data-i18n="examples.elsa_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--peter" href="/weltreise">
-            <span class="examples__tag" data-i18n="examples.peter_tag">Weltreise</span>
-            <span class="examples__name">Peter &amp; Helene</span>
-            <span class="examples__hook" data-i18n="examples.peter_hook">Wie ein Ehepaar sein leeres Haus während einer sechsmonatigen Weltreise im Blick behalten könnte.</span>
-            <span class="examples__cta" data-i18n="examples.peter_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-          <a class="examples__card examples__card--anna" href="/neue-eltern">
-            <span class="examples__tag" data-i18n="examples.anna_tag">Neue Eltern</span>
-            <span class="examples__name">Anna &amp; David</span>
-            <span class="examples__hook" data-i18n="examples.anna_hook">Wie junge Eltern in einer Mietwohnung mehr Überblick bekommen könnten — ganz ohne Bohren.</span>
-            <span class="examples__cta" data-i18n="examples.anna_cta">Beispiel ansehen
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg></span>
-          </a>
-
+      <div class="services__groups">
+        <div class="services__group reveal d2">
+          <h3 class="services__gh" data-i18n="services.g1">Smart Home &amp; Automation</h3>
+          <div class="services__grid">
+            <article class="svc svc--photo svc--automation">
+              <h4 class="svc__t" data-i18n="services.automation_t">Hausautomation &amp; Nachrüsten</h4>
+              <p class="svc__b" data-i18n="services.automation_b">Ihre Geräte, eine Zentrale: Licht, Storen, Heizung und Haushaltsgeräte arbeiten zusammen — lokal, ohne Ökosystem-Zwang. Bestehende Schalter und Storen rüste ich nach, statt alles neu zu kaufen.</p>
+              <span class="svc__badge" data-i18n="services.partner_badge">Mit Fachpartner</span>
+              <a class="svc__more" href="/leistungen/hausautomation" data-href-de="/leistungen/hausautomation" data-href-en="/services/home-automation"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--light">
+              <h4 class="svc__t" data-i18n="services.light_t">Lichtsteuerung</h4>
+              <p class="svc__b" data-i18n="services.light_b">Licht, das auf Anwesenheit, Tageszeit und Helligkeit reagiert — und bei Bedarf sichtbar meldet, wenn es klingelt oder der Rauchmelder anschlägt.</p>
+              <a class="svc__more" href="/leistungen/lichtsteuerung" data-href-de="/leistungen/lichtsteuerung" data-href-en="/services/lighting-control"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--shades">
+              <h4 class="svc__t" data-i18n="services.shades_t">Storen &amp; Beschattung</h4>
+              <p class="svc__b" data-i18n="services.shades_b">Storen und Rollläden fahren nach Sonne, Wind, Temperatur oder Abwesenheit — kühl im Sommer, bewohnt wirkend in den Ferien.</p>
+              <a class="svc__more" href="/leistungen/storen-beschattung" data-href-de="/leistungen/storen-beschattung" data-href-en="/services/blinds-shading"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+          </div>
+        </div>
+        <div class="services__group reveal d2">
+          <h3 class="services__gh" data-i18n="services.g2">Sicherheit &amp; Schutz</h3>
+          <div class="services__grid">
+            <article class="svc svc--photo svc--access">
+              <h4 class="svc__t" data-i18n="services.access_t">Zutritt &amp; smarte Schlösser</h4>
+              <p class="svc__b" data-i18n="services.access_b">Smarte Schlösser mit Codes oder zeitlich begrenztem Zugang für Gäste, Reinigung und Handwerker — dazu Tür- und Fenstersensoren, die zeigen, was offen steht, bevor Sie gehen.</p>
+              <a class="svc__more" href="/leistungen/zutritt-smarte-schloesser" data-href-de="/leistungen/zutritt-smarte-schloesser" data-href-en="/services/access-smart-locks"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--surveillance">
+              <h4 class="svc__t" data-i18n="services.surveillance_t">Bewegung, Präsenz &amp; Kameras</h4>
+              <p class="svc__b" data-i18n="services.surveillance_b">Bewegungs- und Präsenzmelder erkennen, ob jemand zu Hause ist — Kameras zeigen, was los ist. Mit klaren Regeln, wer was sieht und wann aufgezeichnet wird.</p>
+              <a class="svc__more" href="/leistungen/bewegung-praesenz-kameras" data-href-de="/leistungen/bewegung-praesenz-kameras" data-href-en="/services/motion-presence-cameras"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--hazard">
+              <h4 class="svc__t" data-i18n="services.hazard_t">Schadenerkennung</h4>
+              <p class="svc__b" data-i18n="services.hazard_b">Wasser-, Rauch- und CO-Melder, die nicht nur piepsen: Sie lösen Automationen aus — Licht an, Push-Nachricht an Ihre Kontakte, Wasserventil zu, wo vorhanden.</p>
+              <a class="svc__more" href="/leistungen/schadenerkennung" data-href-de="/leistungen/schadenerkennung" data-href-en="/services/damage-detection"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+          </div>
+        </div>
+        <div class="services__group reveal d2">
+          <h3 class="services__gh" data-i18n="services.g3">Energie &amp; Klima</h3>
+          <div class="services__grid">
+            <article class="svc svc--photo svc--power">
+              <h4 class="svc__t" data-i18n="services.power_t">Strom-Monitoring</h4>
+              <p class="svc__b" data-i18n="services.power_b">Sehen, was wie viel verbraucht — und eine Meldung, wenn ein Gerät ungewöhnlich lange läuft oder vergessen wurde.</p>
+              <a class="svc__more" href="/leistungen/strom-monitoring" data-href-de="/leistungen/strom-monitoring" data-href-en="/services/power-monitoring"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--heating">
+              <h4 class="svc__t" data-i18n="services.heating_t">Heizung: Überwachung &amp; Steuerung</h4>
+              <p class="svc__b" data-i18n="services.heating_b">Wärmepumpe, Öl- oder Gasheizung im Blick — Ausfälle und Frostgefahr fallen früh auf. Raum für Raum warm, wenn jemand da ist, sparsam, wenn nicht.</p>
+              <a class="svc__more" href="/leistungen/heizung" data-href-de="/leistungen/heizung" data-href-en="/services/heating"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--climate">
+              <h4 class="svc__t" data-i18n="services.climate_t">Klimaanlage &amp; Raumklima</h4>
+              <p class="svc__b" data-i18n="services.climate_b">Klimageräte, Temperatur, Luftfeuchtigkeit und CO₂ überwachen — mit einem Hinweis, wenn es im Kinderzimmer zu warm oder die Luft zu schwer wird.</p>
+              <a class="svc__more" href="/leistungen/raumklima" data-href-de="/leistungen/raumklima" data-href-en="/services/indoor-climate"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+          </div>
+        </div>
+        <div class="services__group reveal d2">
+          <h3 class="services__gh" data-i18n="services.g4">Audio, Video &amp; Netzwerk</h3>
+          <div class="services__grid">
+            <article class="svc svc--photo svc--audio">
+              <h4 class="svc__t" data-i18n="services.audio_t">Multiroom-Audio</h4>
+              <p class="svc__b" data-i18n="services.audio_b">Musik in jedem Raum, gemeinsam oder getrennt steuerbar — eingebunden ins Smart Home, etwa leiser, sobald es an der Tür klingelt.</p>
+              <span class="svc__badge" data-i18n="services.partner_badge">Mit Fachpartner</span>
+              <a class="svc__more" href="/leistungen/multiroom-audio" data-href-de="/leistungen/multiroom-audio" data-href-en="/services/multi-room-audio"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--network">
+              <h4 class="svc__t" data-i18n="services.network_t">Professionelles Netzwerk</h4>
+              <p class="svc__b" data-i18n="services.network_b">Stabiles WLAN in jedem Raum, getrennte Netze für Gäste und smarte Geräte, sauber verkabelt — das Fundament für alles andere.</p>
+              <span class="svc__badge" data-i18n="services.partner_badge">Mit Fachpartner</span>
+              <a class="svc__more" href="/leistungen/netzwerk" data-href-de="/leistungen/netzwerk" data-href-en="/services/network"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+            <article class="svc svc--photo svc--cinema">
+              <h4 class="svc__t" data-i18n="services.cinema_t">Heimkino</h4>
+              <p class="svc__b" data-i18n="services.cinema_b">Beamer oder TV, Leinwand und Surround-Sound, geplant für Ihren Raum — und eine Kinoszene, die Licht und Storen auf Knopfdruck mitnimmt.</p>
+              <span class="svc__badge" data-i18n="services.partner_badge">Mit Fachpartner</span>
+              <a class="svc__more" href="/leistungen/heimkino" data-href-de="/leistungen/heimkino" data-href-en="/services/home-cinema"><span data-i18n="services.more">Mehr erfahren</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+            </article>
+          </div>
+        </div>
       </div>
+      <aside class="services__partner reveal d2">
+        <h3 class="services__partner-t" data-i18n="services.partner_t">Ein Ansprechpartner — auch wenn Fachleute nötig sind.</h3>
+        <p class="services__partner-b" data-i18n="services.partner_b">Manche Arbeiten gehören in die Hände von Fachleuten: Anschlüsse an der festen Elektroinstallation, neue Leitungen oder bauliche Arbeiten. Dafür ziehe ich geprüfte Fachbetriebe bei, etwa konzessionierte Elektroinstallateure. Sie erhalten trotzdem eine Offerte, ich koordiniere alles, und Sie sprechen weiterhin nur mit mir.</p>
+        <p class="services__note" data-i18n="services.pricing_note" data-i18n-html="true">Viele dieser Leistungen stecken bereits in den <a href="#packages">Paketen</a>. Grössere Projekte wie Netzwerk, Multiroom-Audio oder Heimkino offeriere ich einzeln — auf Wunsch mit laufender Betreuung.</p>
+      </aside>
       <div style="text-align: center; margin-top: 2rem;">
       <a href="#process" class="examples__link reveal d3"><span data-i18n="examples.link">So funktioniert's</span> <svg width="16"
               height="16" viewBox="0 0 16 16" fill="none">
@@ -605,11 +624,11 @@
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row2_l">Protokolle</span><span class="hv"
                 data-i18n="devices.hub_row2_v">Zigbee · Matter · Thread</span></div>
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row3_l">Stromverbrauch</span><span class="hv"
-                data-i18n="devices.hub_row3_v">2-6 Watt</span></div>
+                data-i18n="devices.hub_row3_v">4–7 Watt</span></div>
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row4_l">Speicher</span><span class="hv"
-                data-i18n="devices.hub_row4_v">64-128 GB SD or SSD</span></div>
+                data-i18n="devices.hub_row4_v">64–256 GB SD oder SSD</span></div>
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row5_l">Fernzugriff</span><span class="hv"
-                data-i18n="devices.hub_row5_v">Verschlüsselt via Private VPN or Tailscale</span>
+                data-i18n="devices.hub_row5_v">Verschlüsselt via Tailscale VPN</span>
             </div>
             <div class="hub-row"><span class="hl" data-i18n="devices.hub_row6_l">Basis</span><span class="hv"
                 data-i18n="devices.hub_row6_v">Open Source (Home Assistant)</span></div>
@@ -1156,7 +1175,7 @@
         <div>
           <div class="fcol-title" data-i18n="footer.col1_title">Service</div>
           <ul class="flinks">
-            <li><a href="#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
+                <li><a href="#devices" data-i18n="footer.col1_l2">Geräte &amp; Technik</a></li>
             <li><a href="/home-assistant-schweiz" data-ha-link data-i18n="footer.col1_l5">Home Assistant Schweiz</a></li>
             <li><a href="#packages" data-i18n="footer.col1_l1">Pakete &amp; Preise</a></li>
             <li><a href="#faq" data-i18n="footer.col1_l3">Häufige Fragen</a></li>

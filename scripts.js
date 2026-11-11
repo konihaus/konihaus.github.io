@@ -146,10 +146,13 @@ const i18n = {
     setCookie(LANG_COOKIE, lang); 
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-ha-link]').forEach(function (el) { el.setAttribute('href', lang === 'en' ? '/home-assistant-switzerland' : '/home-assistant-schweiz'); });
+    /* links to pages that exist once per language (e.g. the service pages) */
+    document.querySelectorAll('[data-href-de]').forEach(function (el) { el.setAttribute('href', lang === 'en' ? el.dataset.hrefEn : el.dataset.hrefDe); });
     const hcaptcha = document.querySelector('.h-captcha');
     if (hcaptcha) hcaptcha.setAttribute('data-lang', lang);
     
     this.updatePageContent();
+    equalizeServiceCards();
     renderSafetyStatement();
     applyLanguageBlocks();
     if (typeof updateReadabilityLabels === 'function') updateReadabilityLabels();
@@ -347,6 +350,9 @@ function setupMobileMenu() {
       const open = btn.getAttribute('aria-expanded') !== 'true';
       document.querySelectorAll('.drawer-acc').forEach(b => {
         const isThis = b === btn;
+        /* keep the group that contains this button open (nested accordions, e.g. Service > Leistungen) */
+        const ctrl = document.getElementById(b.getAttribute('aria-controls'));
+        if (!isThis && ctrl && ctrl.contains(btn)) return;
         const on = isThis ? open : false;
         b.setAttribute('aria-expanded', String(on));
         const sub = document.getElementById(b.getAttribute('aria-controls'));
@@ -1181,7 +1187,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (moreStart) {
       moreStart.addEventListener('click', (e) => {
         e.preventDefault();
-        document.getElementById('trustsection').scrollIntoView();
+        const el = document.getElementById('trustsection');
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 77, behavior: 'smooth' });
+        //document.getElementById('trustsection').scrollIntoView();
       });
     }
   });
@@ -1202,3 +1210,38 @@ if ('serviceWorker' in navigator && !/^app\./.test(location.hostname)) { // the 
     console.log('Service Worker updated');
   });
 }
+
+/* Services section: every card is at least as tall as the tallest of all 12 (across groups),
+   re-measured when the text, the fonts or the width change */
+function equalizeServiceCards() {
+  const cards = document.querySelectorAll('.services .svc');
+  if (!cards.length) return;
+  cards.forEach((c) => { c.style.minHeight = ''; });
+  let max = 0;
+  cards.forEach((c) => { max = Math.max(max, c.offsetHeight); });
+  cards.forEach((c) => { c.style.minHeight = max + 'px'; });
+}
+(function () {
+  let t;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(equalizeServiceCards, 150); });
+  window.addEventListener('load', equalizeServiceCards);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(equalizeServiceCards);
+})();
+
+
+/* Services heading: the last words switch slowly (home -> business -> garden -> office).
+   The heading is re-rendered on language change, so each tick looks the element up again. */
+(function () {
+  const reduce = () => document.documentElement.getAttribute('data-motion') === 'reduce' ||
+    (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let i = 0;
+  setInterval(() => {
+    const el = document.querySelector('.rotword');
+    if (!el || reduce()) return;
+    const words = (el.dataset.words || '').split('|').filter(Boolean);
+    if (words.length < 2) return;
+    i = (words.indexOf(el.textContent) + 1) % words.length;
+    el.classList.add('rotword--out');
+    setTimeout(() => { el.textContent = words[i]; el.classList.remove('rotword--out'); }, 600);
+  }, 3200);
+})();

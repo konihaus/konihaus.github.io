@@ -12,7 +12,9 @@
     "blog": "Blog",
     "about": "Über Koni",
     "contact": "Kontakt",
-    "cta": "Kostenlose Beratung"
+    "cta": "Kostenlose Beratung",
+    "services": "Leistungen",
+    "all_services": "Alle Leistungen"
   },
   "a11y": {
     "title": "Lesbarkeit",
@@ -35,7 +37,7 @@
     "sub": "Konihaus installiert und betreut Ihr Smart Home — plattformunabhängig, lokal, ohne Ökosystem-Zwang. Für alle in der Schweiz, die es sich zu Hause einfacher wünschen: Mieter, Eigentümer, Familien, Senioren und Ferienhausbesitzer.",
     "cta1": "Kostenlose Beratung →",
     "cta2": "Pakete ansehen",
-    "bar": "Mehr erfahren"
+    "bar": "Sehen Sie, was Konihaus ist"
   },
   "trust": {
     "item1": "✓ Keine Cloud-Pflicht",
@@ -50,7 +52,7 @@
     "p1": "Die meisten Smart-Home-Lösungen zwingen Sie in ein proprietäres Ökosystem: Google, Amazon oder Apple. Konihaus macht das anders.",
     "p2": "Ich nutze Geräte, die Sie bereits besitzen, und ergänze sie mit bewährter Hardware führender Hersteller — Konihaus stellt selbst keine Geräte her. Alles läuft zusammen über Greenhub, die Zentrale Ihres Zuhauses.",
     "p3": "Der Mehrwert liegt in Automatisierungen, die einfach funktionieren: Bewässerung, Storen, Licht und Heizung passen sich von selbst an. Und wenn Sie doch einmal nachsehen oder eingreifen möchten, gibt es die Konihaus-App — eine App, die Sie nutzen können, aber nie nutzen müssen.",
-    "link": "Lassen Sie mich einige Beispiele zeigen",
+    "link": "Meine Leistungen ansehen",
     "card1_t": "Privatsphäre zuerst",
     "card1_b": "Ihre Daten werden lokal verarbeitet, Fernzugriff für den Support ist verschlüsselt, und Benachrichtigungen laufen optional über externe Dienste wie Apple oder Google.",
     "card2_t": "Bestehendes + Neues, vereint",
@@ -85,7 +87,7 @@
     "pkg1_tag_mieter": "Einfacher Einstieg ohne Umbau",
     "pkg1_tag_ferienhaus": "Präsenz und Zutritt im Blick",
     "pkg1_price": "39",
-    "pkg1_assume": "Typisch für eine 1–2-Zimmer-Wohnung · ca. 7 Geräte",
+    "pkg1_assume": "Typisch für eine 1-2-Zimmer-Wohnung · ca. 7 Geräte",
     "basis_pkg1_outcomes": [
       "Im Monatsbericht sehen, wie Ihr Zuhause genutzt wird",
       "Wissen, ob Türen und Fenster offen oder geschlossen sind",
@@ -93,7 +95,7 @@
     ],
     "basis_pkg1_features": [
       "Smart-Home-Zentrale",
-      "2–3× Bewegungs-/Präsenzmelder",
+      "2-3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Bericht",
@@ -106,7 +108,7 @@
     ],
     "senioren_pkg1_features": [
       "Smart-Home-Zentrale",
-      "2–3× Bewegungs-/Präsenzmelder",
+      "2-3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Aktivitätsbericht",
@@ -119,7 +121,7 @@
     ],
     "mieter_pkg1_features": [
       "Smart-Home-Zentrale",
-      "2–3× Bewegungs-/Präsenzmelder",
+      "2-3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Sicherheitsbericht",
@@ -132,7 +134,7 @@
     ],
     "ferienhaus_pkg1_features": [
       "Smart-Home-Zentrale",
-      "2–3× Bewegungs-/Präsenzmelder",
+      "2-3× Bewegungs-/Präsenzmelder",
       "Tür-/Fensterkontakt",
       "3× Smart Plug",
       "Monatlicher Abwesenheitsbericht",
@@ -234,7 +236,7 @@
     "pkg3_tag_mieter": "Kompletter Schutz und Überwachung",
     "pkg3_tag_ferienhaus": "Überwachung und Kontrolle",
     "pkg3_price": "139",
-    "pkg3_assume": "Typisch für ein Einfamilienhaus · ca. 12–15 Geräte",
+    "pkg3_assume": "Typisch für ein Einfamilienhaus · ca. 12-15 Geräte",
     "basis_pkg3_outcomes": [
       "Sehen, wer klingelt — auch von unterwegs",
       "Sie erfahren, wenn im Haus ungewöhnlich lange nichts passiert",
@@ -469,11 +471,11 @@
     "hub_row2_l": "Protokolle",
     "hub_row2_v": "Zigbee · Matter · Thread",
     "hub_row3_l": "Stromverbrauch",
-    "hub_row3_v": "2-6 Watt",
+    "hub_row3_v": "4-7 Watt",
     "hub_row4_l": "Speicher",
-    "hub_row4_v": "64-128 GB SD oder SSD",
+    "hub_row4_v": "64-256 GB SD oder SSD",
     "hub_row5_l": "Fernzugriff",
-    "hub_row5_v": "Verschlüsselt via Private VPN oder Tailscale",
+    "hub_row5_v": "Verschlüsselt via Tailscale VPN",
     "hub_row6_l": "Basis",
     "hub_row6_v": "Open Source (Home Assistant)",
     "ha_link": "Mehr zu Home Assistant in der Schweiz →",
@@ -642,7 +644,9 @@
     "imp_legalform": "Rechtsform",
     "imp_legalform_val": "Einzelunternehmen",
     "imp_register": "Handelsregister",
-    "imp_register_val": "Kanton Zürich"
+    "imp_register_val": "Kanton Zürich",
+    "imp_trademark": "Marke",
+    "imp_trademark_text": "Konihaus ist eine beim Eidgenössischen Institut für Geistiges Eigentum (IGE) angemeldete Wortmarke."
   },
   "faq": {
     "eye": "Häufige Fragen",
@@ -824,7 +828,7 @@
     "sol9_t": "Nachtschutz",
     "sol9_b": "Tür-, Hintertür- und Schaufenster-Sensoren, Bewegungsmelder und Sirene alarmieren aufs Handy, wenn nachts etwas nicht stimmt.",
     "sol10_t": "Zugangscodes auf Zeit",
-    "sol10_b": "Die Reinigungskraft erhält dienstags einen Code für 06:00–07:00 Uhr, Lieferanten ein einzelnes Zeitfenster. Kein Schlüssel wird mehr weitergereicht. Einbau in Absprache mit der Vermietung.",
+    "sol10_b": "Die Reinigungskraft erhält dienstags einen Code für 06:00-07:00 Uhr, Lieferanten ein einzelnes Zeitfenster. Kein Schlüssel wird mehr weitergereicht. Einbau in Absprache mit der Vermietung.",
     "sol11_t": "Frequenz-Wochenbericht",
     "sol11_b": "Der Türsensor zählt Besuche — ohne Kamera. Ein Wochenbericht zeigt Stosszeiten und ruhige Fenster.",
     "sol12_t": "Zugluft-Sparer + Standby-Aus",
@@ -1227,8 +1231,8 @@
     "banner": "🎁 10% Rabatt im 1. Jahr"
   },
   "app_page": {
-    "title": "Konihaus-App – Ihr Zuhause in einer ruhigen App | Konihaus",
-    "meta": "Die Konihaus-App zeigt Räume, Heizung, Sicherheit und Energie übersichtlich an – lokal in Ihrem System, ohne Cloud-Pflicht. Optional: Ihr Zuhause läuft auch ohne App von selbst.",
+    "title": "Konihaus-App - Ihr Zuhause in einer ruhigen App | Konihaus",
+    "meta": "Die Konihaus-App zeigt Räume, Heizung, Sicherheit und Energie übersichtlich an - lokal in Ihrem System, ohne Cloud-Pflicht. Optional: Ihr Zuhause läuft auch ohne App von selbst.",
     "eyebrow": "Die Konihaus-App",
     "h1": "Ihr Zuhause.<br><em>In Ihrer Hand.</em>",
     "sub": "Räume, Heizung, Sicherheit und Energie — ruhig und übersichtlich in einer App. Sie läuft lokal in Ihrem System, und Ihr Zuhause funktioniert auch dann, wenn Sie nie hineinschauen.",
@@ -1270,5 +1274,44 @@
     "h2": "Ihr Zuhause <em>auf jedem Bildschirm.</em>",
     "p": "Licht, Storen, Heizung, Sicherheit und Energie in einer ruhigen App für Smartphone, Tablet und Computer. Lokal in Ihrem System, ohne Cloud-Pflicht.",
     "btn": "App ansehen"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "h2": "Was ich für<br><em><span class=\"rotword\" data-words=\"Ihr Zuhause|Ihr Geschäft|Ihren Garten|Ihr Büro\">Ihr Zuhause</span> mache.</em>",
+    "sub": "Von der einzelnen Automation bis zum vernetzten Haus. Zu jeder Leistung gibt es eine eigene Seite mit den Details und passenden Beispielen.",
+    "examples_label": "Beispiele:",
+    "partner_badge": "Mit Fachpartner",
+    "g1": "Smart Home & Automation",
+    "g2": "Sicherheit & Schutz",
+    "g3": "Energie & Klima",
+    "g4": "Audio, Video & Netzwerk",
+    "automation_t": "Hausautomation & Nachrüsten",
+    "automation_b": "Ihre Geräte, eine Zentrale: Licht, Storen, Heizung und Haushaltsgeräte arbeiten zusammen — lokal, ohne Ökosystem-Zwang. Bestehende Schalter und Storen rüste ich nach, statt alles neu zu kaufen.",
+    "light_t": "Lichtsteuerung",
+    "light_b": "Licht, das auf Anwesenheit, Tageszeit und Helligkeit reagiert — und bei Bedarf sichtbar meldet, wenn es klingelt oder der Rauchmelder anschlägt.",
+    "shades_t": "Storen & Beschattung",
+    "shades_b": "Storen und Rollläden fahren nach Sonne, Wind, Temperatur oder Abwesenheit — kühl im Sommer, bewohnt wirkend in den Ferien.",
+    "hazard_t": "Schadenerkennung",
+    "hazard_b": "Wasser-, Rauch- und CO-Melder, die nicht nur piepsen: Sie lösen Automationen aus — Licht an, Push-Nachricht an Ihre Kontakte, Wasserventil zu, wo vorhanden.",
+    "power_t": "Strom-Monitoring",
+    "power_b": "Sehen, was wie viel verbraucht — und eine Meldung, wenn ein Gerät ungewöhnlich lange läuft oder vergessen wurde.",
+    "climate_t": "Klimaanlage & Raumklima",
+    "climate_b": "Klimageräte, Temperatur, Luftfeuchtigkeit und CO₂ überwachen — mit einem Hinweis, wenn es im Kinderzimmer zu warm oder die Luft zu schwer wird.",
+    "audio_t": "Multiroom-Audio",
+    "audio_b": "Musik in jedem Raum, gemeinsam oder getrennt steuerbar — eingebunden ins Smart Home, etwa leiser, sobald es an der Tür klingelt.",
+    "network_t": "Professionelles Netzwerk",
+    "network_b": "Stabiles WLAN in jedem Raum, getrennte Netze für Gäste und smarte Geräte, sauber verkabelt — das Fundament für alles andere.",
+    "cinema_t": "Heimkino",
+    "cinema_b": "Beamer oder TV, Leinwand und Surround-Sound, geplant für Ihren Raum — und eine Kinoszene, die Licht und Storen auf Knopfdruck mitnimmt.",
+    "partner_t": "Ein Ansprechpartner — auch wenn Fachleute nötig sind.",
+    "partner_b": "Manche Arbeiten gehören in die Hände von Fachleuten: Anschlüsse an der festen Elektroinstallation, neue Leitungen oder bauliche Arbeiten. Dafür ziehe ich geprüfte Fachbetriebe bei, etwa konzessionierte Elektroinstallateure. Sie erhalten trotzdem eine Offerte, ich koordiniere alles, und Sie sprechen weiterhin nur mit mir.",
+    "pricing_note": "Viele dieser Leistungen stecken bereits in den <a href=\"#packages\">Paketen</a>. Grössere Projekte wie Netzwerk, Multiroom-Audio oder Heimkino offeriere ich einzeln — auf Wunsch mit laufender Betreuung.",
+    "access_t": "Zutritt & smarte Schlösser",
+    "access_b": "Smarte Schlösser mit Codes oder zeitlich begrenztem Zugang für Gäste, Reinigung und Handwerker — dazu Tür- und Fenstersensoren, die zeigen, was offen steht, bevor Sie gehen.",
+    "surveillance_t": "Bewegung, Präsenz & Kameras",
+    "surveillance_b": "Bewegungs- und Präsenzmelder erkennen, ob jemand zu Hause ist — Kameras zeigen, was los ist. Mit klaren Regeln, wer was sieht und wann aufgezeichnet wird.",
+    "heating_t": "Heizung: Überwachung & Steuerung",
+    "heating_b": "Wärmepumpe, Öl- oder Gasheizung im Blick — Ausfälle und Frostgefahr fallen früh auf. Raum für Raum warm, wenn jemand da ist, sparsam, wenn nicht.",
+    "more": "Mehr erfahren"
   }
 }
