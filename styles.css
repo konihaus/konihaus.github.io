@@ -6000,3 +6000,5 @@ html[data-contrast="high"] .services__note {
   transition: opacity .6s var(--ease), transform .6s var(--ease), filter .6s var(--ease);
 }
 .rotword--out { opacity: 0; transform: translateY(.18em); filter: blur(2px); }
+
+.tm { font-size: .4em; font-weight: 400; letter-spacing: 0; vertical-align: super; line-height: 0; margin-left: .08em; }
