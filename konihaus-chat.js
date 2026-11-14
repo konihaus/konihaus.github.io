@@ -15,7 +15,7 @@
   var script = document.currentScript;
   var ENDPOINT = (script && script.getAttribute('data-endpoint')) || 'https://project-zovba.vercel.app/api/chat';
   var KEY = 'konihaus-chat';
-  var POLL_FAST = 5000, POLL_MID = 15000, WAIT_MS = 10 * 60 * 1000; // poll only for 10 minutes after the last activity
+  var POLL_FAST = 5000, POLL_MID = 15000, WAIT_MS = 10 * 60 * 1000, TYPING_MS = 25000; // poll only for 10 minutes after the last activity
 
   var T = {
     en: {
@@ -30,7 +30,7 @@
       sending: 'Sending…', failed: 'Could not send. Please try again or use the contact form.',
       tooMany: 'Too many messages in a short time. Please wait a minute.', badEmail: 'Please check the email address.',
       sentHint: 'Delivered. Replies appear here while this page is open.',
-      koni: 'Koni', you: 'You'
+      koni: 'Koni', you: 'You', typing: 'Koni is typing'
     },
     de: {
       title: 'Chat mit Koni', sub: 'Smart Homes in der Schweiz',
@@ -44,7 +44,7 @@
       sending: 'Wird gesendet…', failed: 'Senden fehlgeschlagen. Bitte erneut versuchen oder das Kontaktformular nutzen.',
       tooMany: 'Zu viele Nachrichten in kurzer Zeit. Bitte warten Sie eine Minute.', badEmail: 'Bitte prüfen Sie die E-Mail-Adresse.',
       sentHint: 'Zugestellt. Antworten erscheinen hier, solange diese Seite geöffnet ist.',
-      koni: 'Koni', you: 'Sie'
+      koni: 'Koni', you: 'Sie', typing: 'Koni schreibt'
     }
   };
   function pageLang() { return (document.documentElement.lang || 'en').toLowerCase().slice(0, 2) === 'de' ? 'de' : 'en'; }
@@ -52,7 +52,7 @@
   function t(k) { return T[lang][k]; }
 
   // ---- state ----
-  var state = { sid: null, last: 0, msgs: [], open: false, pollTimer: null, unread: 0, sentOnce: false, activeAt: 0 };
+  var state = { sid: null, last: 0, msgs: [], open: false, pollTimer: null, unread: 0, sentOnce: false, activeAt: 0, typingUntil: 0, typingTimer: null };
   try {
     var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
     if (saved && /^[a-f0-9]{12,32}$/.test(saved.sid)) {
@@ -91,6 +91,7 @@
 .kc-m.koni{align-self:flex-start;background:var(--kc-koni);border-bottom-left-radius:4px}\
 .kc-m.me{align-self:flex-end;background:var(--kc-me);color:#fff;border-bottom-right-radius:4px}\
 .kc-m.err{align-self:center;background:#f6e3e1;color:#7a2018;font-size:.85rem;max-width:95%}\
+.kc-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}.kc-typing i{width:7px;height:7px;border-radius:50%;background:#5d6678;opacity:.4;animation:kc-bounce 1.2s infinite}.kc-typing i:nth-child(2){animation-delay:.2s}.kc-typing i:nth-child(3){animation-delay:.4s}@keyframes kc-bounce{0%,60%,100%{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}\
 .kc-hint{align-self:center;color:var(--kc-muted);font-size:.78rem;text-align:center}\
 .kc-opt{border-top:1px solid var(--kc-line);padding:8px 12px 0;display:none}\
 .kc-opt.show{display:block}.kc-opt label{display:block;font-size:.78rem;color:var(--kc-muted);margin-bottom:4px}\
@@ -103,7 +104,7 @@
 .kc-foot a{color:inherit;text-decoration:underline}\
 .kc-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}\
 @media (max-width:520px){.kc-root{right:12px;bottom:12px}.kc-open{right:0;bottom:0;left:0;top:0}.kc-panel{position:fixed;inset:0;width:100%;max-width:none;height:100%;max-height:none;border-radius:0;border:0}.kc-fab span.kc-label{display:none}.kc-fab{padding:0 16px}}\
-@media (prefers-reduced-motion:reduce){.kc-fab,.kc-log{transition:none;scroll-behavior:auto}}\
+@media (prefers-reduced-motion:reduce){.kc-fab,.kc-log{transition:none;scroll-behavior:auto}.kc-typing i{animation:none;opacity:.7}}\
 @media print{.kc-root{display:none}}';
 
   var style = document.createElement('style');
@@ -160,6 +161,10 @@
     bubble('koni', t('hello'));
     state.msgs.forEach(function (m) { bubble(m.from === 'me' ? 'me' : 'koni', m.text); });
     if (state.sentOnce) { var h = document.createElement('div'); h.className = 'kc-hint'; h.textContent = t('sentHint'); log.appendChild(h); }
+    if (Date.now() < state.typingUntil) {
+      var ty = document.createElement('div'); ty.className = 'kc-m koni kc-typing'; ty.setAttribute('role', 'status'); ty.setAttribute('aria-label', t('typing'));
+      ty.innerHTML = '<i></i><i></i><i></i>'; log.appendChild(ty);
+    }
     optBox.classList.toggle('show', state.sentOnce && !state.emailGiven);
     scrollDown();
   }
@@ -215,10 +220,17 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
         if (!j || !j.messages || !j.messages.length) return;
-        j.messages.forEach(function (m) { state.msgs.push({ from: 'koni', text: m.text }); if (m.t > state.last) state.last = m.t; });
+        var real = 0, typing = false;
+        j.messages.forEach(function (m) {
+          if (m.t > state.last) state.last = m.t;
+          if (m.typing) { if (j.now && j.now - m.t < TYPING_MS) typing = true; return; } // "Koni is typing" marker, not a message
+          state.msgs.push({ from: 'koni', text: m.text }); real++;
+        });
         state.activeAt = Date.now();
-        save();
-        if (state.open) render(); else { state.unread += j.messages.length; root.classList.add('kc-has-unread'); root.querySelector('.kc-badge').textContent = String(state.unread); }
+        if (real) { state.typingUntil = 0; save(); } else if (typing) state.typingUntil = Date.now() + TYPING_MS;
+        clearTimeout(state.typingTimer);
+        if (state.typingUntil > Date.now()) state.typingTimer = setTimeout(function () { state.typingUntil = 0; if (state.open) render(); }, state.typingUntil - Date.now() + 50);
+        if (state.open) render(); else if (real) { state.unread += real; root.classList.add('kc-has-unread'); root.querySelector('.kc-badge').textContent = String(state.unread); }
       }).catch(function () { }).then(schedule);
   }
   function schedule() {
