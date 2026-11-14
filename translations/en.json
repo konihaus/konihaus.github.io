@@ -610,6 +610,7 @@
     "dur_persist": "Until deleted",
     "purpose_consent": "Stores your cookie choice.",
     "purpose_lang": "Stores your chosen language.",
+    "purpose_chat": "Remembers your conversation in the chat window (random conversation ID, latest messages). Only created when you send your first chat message.",
     "purpose_a11y": "Stores your readability settings (text size, contrast, animations).",
     "purpose_cache": "Stores page files for offline use.",
     "purpose_ga": "Distinguishes visitors using a random identifier to compile usage statistics.",

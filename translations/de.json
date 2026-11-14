@@ -610,6 +610,7 @@
     "dur_persist": "Bis zur Löschung",
     "purpose_consent": "Speichert Ihre Cookie-Auswahl.",
     "purpose_lang": "Speichert Ihre gewählte Sprache.",
+    "purpose_chat": "Merkt sich Ihr Gespräch im Chat-Fenster (zufällige Gesprächs-ID, letzte Nachrichten). Wird erst beim Senden der ersten Chat-Nachricht angelegt.",
     "purpose_a11y": "Speichert Ihre Lesbarkeits-Einstellungen (Schriftgrösse, Kontrast, Animationen).",
     "purpose_cache": "Speichert Seitendateien für die Offline-Nutzung.",
     "purpose_ga": "Unterscheidet Besucher anhand einer zufälligen Kennung, um Nutzungsstatistiken zu erstellen.",
