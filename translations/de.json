@@ -605,6 +605,8 @@
     "type_cookie": "Cookie",
     "type_local": "Lokaler Speicher",
     "type_cache": "Cache-Speicher",
+    "dur_30d": "30 Tage",
+    "purpose_chat_sid": "Merkt sich Ihre Chat-Gespräch-ID auf allen konihaus.ch-Seiten (Website, Blog, App), damit Sie das Gespräch dort fortsetzen können. Wird erst beim Senden der ersten Chat-Nachricht angelegt.",
     "dur_12m": "12 Monate",
     "dur_2y": "2 Jahre",
     "dur_persist": "Bis zur Löschung",

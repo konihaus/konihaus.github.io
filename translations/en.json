@@ -605,6 +605,8 @@
     "type_cookie": "Cookie",
     "type_local": "Local storage",
     "type_cache": "Cache storage",
+    "dur_30d": "30 days",
+    "purpose_chat_sid": "Remembers your chat conversation ID across all konihaus.ch sites (website, blog, app) so you can continue the conversation there. Only created when you send your first chat message.",
     "dur_12m": "12 months",
     "dur_2y": "2 years",
     "dur_persist": "Until deleted",

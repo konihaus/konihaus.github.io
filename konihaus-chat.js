@@ -60,6 +60,20 @@
       state.sentOnce = state.msgs.some(function (m) { return m.from === 'me'; });
     }
   } catch (e) { /* storage unavailable: chat still works for this page view */ }
+  // The conversation ID is also kept in a cookie for .konihaus.ch so that konihaus.ch, blog.konihaus.ch and app.konihaus.ch
+  // show the same conversation. Only created when the visitor sends a message; 30 days; the history itself is loaded from the server.
+  var COOKIE = 'konihaus-chat-sid', COOKIE_DAYS = 30;
+  function readCookie() { try { var m = document.cookie.match(/(?:^|; )konihaus-chat-sid=([a-f0-9]{12,32})/); return m ? m[1] : ''; } catch (e) { return ''; } } // cookies can be blocked: the chat then works with localStorage only
+  function writeCookie(sid) {
+    try {
+      var dom = /(^|\.)konihaus\.ch$/.test(location.hostname) ? '; Domain=.konihaus.ch' : '';
+      document.cookie = COOKIE + '=' + sid + '; Path=/; Max-Age=' + (COOKIE_DAYS * 86400) + dom + '; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
+    } catch (e) { }
+  }
+  (function () {
+    var cs = readCookie();
+    if (cs && cs !== state.sid) { state.sid = cs; state.last = 0; state.msgs = []; state.sentOnce = true; } // conversation started on another site: load it from the server when the window opens
+  })();
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify({ sid: state.sid, last: state.last, msgs: state.msgs.slice(-50), ts: Date.now() })); } catch (e) { }
   }
@@ -194,15 +208,16 @@
     var email = emailInput.value.trim();
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr(t('badEmail')); return; }
     if (!state.sid) state.sid = newSid();
+    var mid = newSid().slice(0, 12);
     sendBtn.disabled = true;
     fetch(ENDPOINT + '/send', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ sid: state.sid, text: text, email: email || undefined, lang: lang, page: location.href, website: hp.value })
+      body: JSON.stringify({ sid: state.sid, mid: mid, text: text, email: email || undefined, lang: lang, page: location.href, website: hp.value })
     }).then(function (r) {
       if (r.status === 429) throw new Error('many');
       return r.json().then(function (j) { if (!r.ok || !j.success) throw new Error('fail'); });
     }).then(function () {
-      state.msgs.push({ from: 'me', text: text }); state.sentOnce = true; if (email) state.emailGiven = true;
+      state.msgs.push({ from: 'me', text: text, mid: mid }); state.sentOnce = true; writeCookie(state.sid); if (email) state.emailGiven = true;
       input.value = ''; input.style.height = 'auto'; save(); render(); state.activeAt = Date.now(); schedule();
     }).catch(function (err) {
       showErr(err.message === 'many' ? t('tooMany') : t('failed'));
@@ -220,14 +235,20 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
         if (!j || !j.messages || !j.messages.length) return;
-        var real = 0, typing = false;
+        var real = 0, merged = 0, fresh = false, typing = false;
         j.messages.forEach(function (m) {
           if (m.t > state.last) state.last = m.t;
           if (m.typing) { if (j.now && j.now - m.t < TYPING_MS) typing = true; return; } // "Koni is typing" marker, not a message
+          if (m.from === 'me') { // visitor's own message: skip it if this page sent it, add it if it was written on another Konihaus site
+            if (!state.msgs.some(function (x) { return x.mid && x.mid === m.mid; })) { state.msgs.push({ from: 'me', text: m.text, mid: m.mid }); merged++; state.sentOnce = true; }
+            return;
+          }
           state.msgs.push({ from: 'koni', text: m.text }); real++;
+          if (!j.now || j.now - m.t < WAIT_MS) fresh = true; // only a recent reply keeps polling going, old history does not
         });
-        state.activeAt = Date.now();
-        if (real) { state.typingUntil = 0; save(); } else if (typing) state.typingUntil = Date.now() + TYPING_MS;
+        if (fresh) state.activeAt = Date.now();
+        if (real) { state.typingUntil = 0; } else if (typing) state.typingUntil = Date.now() + TYPING_MS;
+        if (real || merged) save();
         clearTimeout(state.typingTimer);
         if (state.typingUntil > Date.now()) state.typingTimer = setTimeout(function () { state.typingUntil = 0; if (state.open) render(); }, state.typingUntil - Date.now() + 50);
         if (state.open) render(); else if (real) { state.unread += real; root.classList.add('kc-has-unread'); root.querySelector('.kc-badge').textContent = String(state.unread); }
