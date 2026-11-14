@@ -15,7 +15,7 @@
   var script = document.currentScript;
   var ENDPOINT = (script && script.getAttribute('data-endpoint')) || 'https://project-zovba.vercel.app/api/chat';
   var KEY = 'konihaus-chat';
-  var POLL_FAST = 5000, POLL_SLOW = 30000;
+  var POLL_FAST = 5000, POLL_MID = 15000, WAIT_MS = 10 * 60 * 1000; // poll only for 10 minutes after the last activity
 
   var T = {
     en: {
@@ -52,7 +52,7 @@
   function t(k) { return T[lang][k]; }
 
   // ---- state ----
-  var state = { sid: null, last: 0, msgs: [], open: false, pollTimer: null, unread: 0, sentOnce: false };
+  var state = { sid: null, last: 0, msgs: [], open: false, pollTimer: null, unread: 0, sentOnce: false, activeAt: 0 };
   try {
     var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
     if (saved && /^[a-f0-9]{12,32}$/.test(saved.sid)) {
@@ -168,8 +168,8 @@
     state.open = v;
     root.classList.toggle('kc-open', v);
     fab.setAttribute('aria-expanded', String(v));
-    if (v) { state.unread = 0; root.classList.remove('kc-has-unread'); render(); setTimeout(function () { input.focus(); }, 50); startPoll(true); }
-    else { fab.focus(); startPoll(false); }
+    if (v) { state.unread = 0; root.classList.remove('kc-has-unread'); render(); setTimeout(function () { input.focus(); }, 50); checkNow(); }
+    else { clearTimeout(state.pollTimer); fab.focus(); }
   }
   fab.addEventListener('click', function () { setOpen(true); });
   $('.kc-x').addEventListener('click', function () { setOpen(false); });
@@ -198,26 +198,36 @@
       return r.json().then(function (j) { if (!r.ok || !j.success) throw new Error('fail'); });
     }).then(function () {
       state.msgs.push({ from: 'me', text: text }); state.sentOnce = true; if (email) state.emailGiven = true;
-      input.value = ''; input.style.height = 'auto'; save(); render(); startPoll(true);
+      input.value = ''; input.style.height = 'auto'; save(); render(); state.activeAt = Date.now(); schedule();
     }).catch(function (err) {
       showErr(err.message === 'many' ? t('tooMany') : t('failed'));
     }).then(function () { sendBtn.disabled = false; input.focus(); });
   });
 
-  // ---- polling for Koni's replies (only after the visitor has written; slows down when the panel is closed) ----
+  // ---- polling for Koni's replies ----
+  // Polling happens ONLY while the chat window is open (and the tab is visible, and the visitor has written at least once).
+  // One check when the window opens, then every 5 s for 2 minutes after the last activity, every 15 s after that,
+  // and it stops 10 minutes after the last activity. Closing the window or hiding the tab stops it at once.
   function poll() {
-    if (!state.sid || !state.sentOnce || document.hidden) return schedule();
+    clearTimeout(state.pollTimer);
+    if (!state.open || !state.sid || !state.sentOnce || document.hidden) return;
     fetch(ENDPOINT + '/poll?sid=' + state.sid + '&after=' + state.last)
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
         if (!j || !j.messages || !j.messages.length) return;
         j.messages.forEach(function (m) { state.msgs.push({ from: 'koni', text: m.text }); if (m.t > state.last) state.last = m.t; });
+        state.activeAt = Date.now();
         save();
         if (state.open) render(); else { state.unread += j.messages.length; root.classList.add('kc-has-unread'); root.querySelector('.kc-badge').textContent = String(state.unread); }
       }).catch(function () { }).then(schedule);
   }
-  function schedule() { clearTimeout(state.pollTimer); state.pollTimer = setTimeout(poll, state.open ? POLL_FAST : POLL_SLOW); }
-  function startPoll() { if (state.sid && state.sentOnce) { clearTimeout(state.pollTimer); state.pollTimer = setTimeout(poll, 800); } }
-  document.addEventListener('visibilitychange', function () { if (!document.hidden) startPoll(); });
-  startPoll();
+  function schedule() {
+    clearTimeout(state.pollTimer);
+    var idle = Date.now() - state.activeAt;
+    if (!state.open || !state.sid || !state.sentOnce || document.hidden || idle > WAIT_MS) return;
+    var d = idle < 120000 ? POLL_FAST : POLL_MID;
+    state.pollTimer = setTimeout(poll, d);
+  }
+  function checkNow() { poll(); }
+  document.addEventListener('visibilitychange', function () { if (!document.hidden && state.open) checkNow(); });
 })();
