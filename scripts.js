@@ -534,7 +534,7 @@ function applyLanguageBlocks() {
   if (titleKey) {
     const [section, key] = titleKey.split('.');
     const title = getLangPages() ? i18n.lookup(section, key) : i18n.getText(section, key);
-    if (title) document.title = title + ' \u2014 Konihaus';
+    if (title) document.title = /konihaus/i.test(title) ? title : title + ' | Konihaus Smarthome';
   }
 
   document.querySelectorAll('[data-legal-doc]').forEach((doc) => {
