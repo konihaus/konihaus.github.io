@@ -22,23 +22,27 @@
   <meta name="theme-color" content="#2a4a35">
   <meta charset="UTF-8">
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon_sm.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon_sm.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-  <title>Konihaus — Smart Home Schweiz | Zürich</title>
+  <title>Smarthome Schweiz | Konihaus: Smart Home von Koni</title>
   <meta name="description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
+    content="Konihaus: Smarthome von Koni. Smart Home in der Schweiz, persönlich betreut. Beratung, Installation und Fernbetreuung, plattformunabhängig, lokal, privat.">
   <meta name="keywords"
-    content="Smart Home Schweiz, Smart Home Zürich, Home Automation, Smart Home Installation, plattformunabhängig">
+    content="Smarthome Schweiz, Smart Home Schweiz, Smarthome Zürich, Smart Home Beratung, Smart Home Installation, Home Assistant, Konihaus, Koni, plattformunabhängig">
   <meta name="author" content="Konrad Hefelle">
   <meta name="language" content="de">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://konihaus.ch">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Konihaus — Smart Home Schweiz | Zürich">
+  <meta property="og:title" content="Smarthome Schweiz | Konihaus: Smart Home von Koni">
   <meta property="og:description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
+    content="Konihaus: Smarthome von Koni. Smart Home in der Schweiz, persönlich betreut. Beratung, Installation und Fernbetreuung, plattformunabhängig, lokal, privat.">
   <meta property="og:url" content="https://konihaus.ch">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_CH">
@@ -51,9 +55,9 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Konihaus — Smart Home Schweiz | Zürich">
+  <meta name="twitter:title" content="Smarthome Schweiz | Konihaus: Smart Home von Koni">
   <meta name="twitter:description"
-    content="Professionelle Smart Home Installation und Betreuung in der Schweiz. Plattformunabhängig, lokal, privat — für alle, die es zu Hause einfacher wollen.">
+    content="Konihaus: Smarthome von Koni. Smart Home in der Schweiz, persönlich betreut. Beratung, Installation und Fernbetreuung, plattformunabhängig, lokal, privat.">
   <meta name="twitter:image" content="https://konihaus.ch/images/og-image.jpg">
 
   <!-- PWA Manifest -->
@@ -85,33 +89,50 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Konihaus",
-  "description": "Persönlich betreutes Smart Home in der Schweiz — Installation, Einrichtung und laufende Fernbetreuung für Senioren, Mieter, Ferienhausbesitzer und Standardhaushalte.",
-  "url": "https://konihaus.ch",
-  "email": "hallo@konihaus.ch",
-  "address": {
-    "@type": "PostalAddress",
-    "postalCode": "8910",
-    "addressLocality": "Affoltern am Albis",
-    "addressRegion": "Zürich",
-    "addressCountry": "CH"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Switzerland"
-  },
-  "priceRange": "CHF 39-249",
-  "founder": {
-    "@type": "Person",
-    "name": "Konrad Hefelle"
-  },
-  "sameAs": [
-    "https://www.instagram.com/ch.konihaus/",
-    "https://www.facebook.com/konihaus.ch",
-    "https://x.com/konihaus",
-    "https://www.linkedin.com/company/konihaus",
-    "https://www.youtube.com/@Konihaus"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://konihaus.ch/#website",
+      "url": "https://konihaus.ch/",
+      "name": "Konihaus", 
+      "alternateName": ["Konihaus Smarthome Schweiz", "Konihaus.ch"],
+      "inLanguage": ["de-CH", "en"],
+      "publisher": { "@id": "https://konihaus.ch/#business" }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://konihaus.ch/#business",
+      "name": "Konihaus",
+      "alternateName": "Konihaus Smarthome Schweiz",
+      "legalName": "Hefelle Services",
+      "description": "Konihaus, Smarthome von Koni: Smart Home in der Schweiz, persönlich betreut. Koni berät, installiert, richtet ein und betreut Ihr Smarthome aus der Ferne, für Mieter, Eigentümer, Familien, Senioren und Ferienhausbesitzer.",
+      "url": "https://konihaus.ch",
+      "logo": "https://konihaus.ch/assets/icon-512.png",
+      "image": "https://konihaus.ch/images/og-image.jpg",
+      "email": "hallo@konihaus.ch",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "8910",
+        "addressLocality": "Affoltern am Albis",
+        "addressRegion": "Zürich",
+        "addressCountry": "CH"
+      },
+      "areaServed": { "@type": "Country", "name": "Switzerland" },
+      "knowsAbout": ["Koni", "Konihaus", "Smarthome", "Smart Home", "Home Assistant", "Hausautomation", "Matter", "Zigbee"],
+      "priceRange": "CHF 39-249",
+      "founder": {
+        "@type": "Person",
+        "name": "Konrad Hefelle",
+        "alternateName": "Koni"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ch.konihaus/",
+        "https://www.facebook.com/konihaus.ch",
+        "https://x.com/konihaus",
+        "https://www.linkedin.com/company/konihaus",
+        "https://www.youtube.com/@Konihaus"
+      ]
+    }
   ]
 }
   </script>
