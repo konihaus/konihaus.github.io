@@ -575,7 +575,8 @@
     "col3_l3": "Cookie-Erklärung",
     "col3_l4": "AGB",
     "copy": "© 2026 Konihaus™ · Affoltern am Albis, Schweiz",
-    "ch": "Betreut in der Schweiz"
+    "ch": "Betreut in der Schweiz",
+    "hosting": "Anmeldedaten in der Schweiz gespeichert bei"
   },
   "cookies": {
     "banner_title": "Diese Webseite verwendet Cookies",
@@ -650,7 +651,10 @@
     "imp_register": "Handelsregister",
     "imp_register_val": "Kanton Zürich",
     "imp_trademark": "Marke",
-    "imp_trademark_text": "Konihaus™ ist als Wortmarke beim Eidgenössischen Institut für Geistiges Eigentum (IGE) angemeldet (Gesuch Nr. 20076/2026, eingereicht am 10. November 2026, Klassen 9, 37 und 42)."
+    "imp_trademark_text": "Konihaus™ ist als Wortmarke beim Eidgenössischen Institut für Geistiges Eigentum (IGE) angemeldet (Gesuch Nr. 20076/2026, eingereicht am 10. November 2026, Klassen 9, 37 und 42).",
+    "imp_hosting": "Hosting und Datenspeicherung",
+    "imp_hosting_text": "Anmeldungen und Kundendaten werden in der Schweiz bei der Safe Swiss Cloud AG, Zürich, gespeichert.",
+    "imp_hosting_more": "Weitere Dienstleister: siehe Datenschutzerklärung"
   },
   "faq": {
     "eye": "Häufige Fragen",

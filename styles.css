@@ -6002,3 +6002,30 @@ html[data-contrast="high"] .services__note {
 .rotword--out { opacity: 0; transform: translateY(.18em); filter: blur(2px); }
 
 .tm { font-size: .4em; font-weight: 400; letter-spacing: 0; vertical-align: super; line-height: 0; margin-left: .08em; }
+
+
+/* Safe Swiss Cloud storage badge (footer, imprint) */
+.footer__host { display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:20px; font-size:.75rem; line-height:1.4; color:rgba(247,244,237,.72); text-decoration:none; }
+.footer__host:hover { color:rgba(247,244,237,.95); }
+.footer__host img { display:block; height:26px; width:auto; border-radius:4px; }
+.legal__partner { display:inline-block; margin-top:12px; }
+.legal__partner img { display:block; height:44px; width:auto; border-radius:6px; }
+
+
+/* Table of contents on the legal pages (AGB, Datenschutz) */
+.legal h2[id], .legal h3[id] { scroll-margin-top: 96px; }
+.legal__toc { margin: 24px 0 28px; padding: 20px 26px 22px; background: var(--cream); border: 1px solid var(--rule); border-left: 4px solid var(--forest); border-radius: 10px; }
+.legal__toc-title { margin: 0 0 10px; font-size: .8125em !important; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3) !important; }
+.legal__toc ol, .legal__toc ul { list-style: none; margin: 0; padding: 0; }
+.legal__toc ol { columns: 2; column-gap: 40px; }
+.legal__toc li { font-size: 1em !important; line-height: 1.4; margin: 0; padding: 4px 0; break-inside: avoid; }
+.legal__toc ul { padding-left: 16px; }
+.legal__toc ul li { font-size: .92em !important; padding: 2px 0; }
+.legal__toc a { text-decoration: none; }
+.legal__toc a:hover { text-decoration: underline; }
+@media (max-width: 720px) { .legal__toc ol { columns: 1; } }
+
+.legal__top { margin: 18px 0 0 !important; text-align: right; font-size: .875em !important; }
+.legal__top a { text-decoration: none; color: var(--ink-3); }
+.legal__top a:hover { text-decoration: underline; color: var(--forest); }
+.legal__toc { scroll-margin-top: 96px; }
