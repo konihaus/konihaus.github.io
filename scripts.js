@@ -243,6 +243,8 @@ const i18n = {
 
 const FORM_LOAD_TIME = Date.now();
 
+const CONTACT_RECORD_URL = 'https://project-zovba.vercel.app/api/contact';
+
 async function handleSubmit(event) {
   event.preventDefault();
 
@@ -313,6 +315,15 @@ async function handleSubmit(event) {
     const result = await response.json();
 
     if (result.success) {
+      // Keep a copy (name, email, message) in our own storage (shown in the Cockpit). Never blocks or fails the form.
+      try {
+        fetch(CONTACT_RECORD_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message, interest, language: i18n.currentLang }),
+          keepalive: true,
+        }).catch(() => {});
+      } catch (e) { /* ignore */ }
       showFormStatus(statusEl, i18n.getText('contact', 'form_success'), 'success');
       form.reset();
     } else {
