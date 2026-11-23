@@ -2352,6 +2352,10 @@ width: 60px;
 }
 
 @media (max-width: 600px) {
+
+  .footer__bottom {
+    padding-bottom: 76px; /* clears the floating chat button */
+  }
   .examples {
     padding: 64px 0;
   }
@@ -3226,7 +3230,7 @@ html[data-contrast="high"] .drawer-acc { color: var(--parchment); }
   }
 
   .fch {
-    display: none;
+    display: block;
   }
 }
 
