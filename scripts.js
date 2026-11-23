@@ -545,7 +545,7 @@ function applyLanguageBlocks() {
   if (titleKey) {
     const [section, key] = titleKey.split('.');
     const title = getLangPages() ? i18n.lookup(section, key) : i18n.getText(section, key);
-    if (title) document.title = /konihaus/i.test(title) ? title : title + ' | Konihaus Smarthome';
+    if (title) document.title = /koni smarthome/i.test(title) ? title : title + (i18n.currentLang === 'en' ? ' | Konihaus · Koni Smarthome Switzerland' : ' | Konihaus · Koni Smarthome Schweiz');
   }
 
   document.querySelectorAll('[data-legal-doc]').forEach((doc) => {
